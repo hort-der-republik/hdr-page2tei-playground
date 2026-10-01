@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://www.tei-c.org/ns/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="TEI">
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="NCName"/>
+      </attribute>
+      <element name="teiHeader">
+        <element name="fileDesc">
+          <element name="titleStmt">
+            <element name="title">
+              <text/>
+            </element>
+          </element>
+          <element name="publicationStmt">
+            <ref name="p"/>
+          </element>
+          <element name="sourceDesc">
+            <ref name="p"/>
+          </element>
+        </element>
+      </element>
+      <element name="facsimile">
+        <element name="graphic">
+          <attribute name="height">
+            <data type="NMTOKEN"/>
+          </attribute>
+          <attribute name="url">
+            <data type="NMTOKEN"/>
+          </attribute>
+          <attribute name="width">
+            <data type="NMTOKEN"/>
+          </attribute>
+        </element>
+        <ref name="surface"/>
+      </element>
+      <element name="text">
+        <element name="body">
+          <ref name="div"/>
+        </element>
+      </element>
+    </element>
+  </start>
+  <define name="p">
+    <element name="p">
+      <optional>
+        <attribute name="facs"/>
+      </optional>
+      <optional>
+        <attribute name="hand-medium">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="part">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="rendition">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="add"/>
+          <ref name="anchor"/>
+          <ref name="del"/>
+          <ref name="delSpan"/>
+          <ref name="gap"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="metamark"/>
+          <ref name="mod"/>
+          <ref name="subst"/>
+          <element name="choice">
+            <element name="sic">
+              <data type="NCName"/>
+            </element>
+            <element name="corr">
+              <data type="NCName"/>
+            </element>
+          </element>
+          <element name="seg">
+            <attribute name="type">
+              <data type="NCName"/>
+            </attribute>
+            <oneOrMore>
+              <choice>
+                <text/>
+                <ref name="del"/>
+                <ref name="mod"/>
+                <ref name="subst"/>
+              </choice>
+            </oneOrMore>
+          </element>
+          <element name="unclear">
+            <attribute name="cert">
+              <data type="NCName"/>
+            </attribute>
+            <attribute name="reason">
+              <data type="NCName"/>
+            </attribute>
+            <text/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="surface">
+    <element name="surface">
+      <attribute name="points"/>
+      <optional>
+        <attribute name="subtype">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <attribute name="type">
+        <data type="NCName"/>
+      </attribute>
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="NCName"/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <ref name="surface"/>
+          <ref name="zone"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="div">
+    <element name="div">
+      <optional>
+        <attribute name="facs"/>
+      </optional>
+      <optional>
+        <attribute name="subtype">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <ref name="gap"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="div"/>
+          <ref name="metamark"/>
+          <element name="fw">
+            <attribute name="facs"/>
+            <oneOrMore>
+              <choice>
+                <text/>
+                <ref name="lb"/>
+              </choice>
+            </oneOrMore>
+          </element>
+        </choice>
+      </zeroOrMore>
+      <zeroOrMore>
+        <element name="head">
+          <attribute name="facs"/>
+          <oneOrMore>
+            <choice>
+              <text/>
+              <ref name="anchor"/>
+              <ref name="delSpan"/>
+              <ref name="lb"/>
+            </choice>
+          </oneOrMore>
+        </element>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="p"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="delSpan">
+    <element name="delSpan">
+      <attribute name="spanTo"/>
+    </element>
+  </define>
+  <define name="subst">
+    <element name="subst">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="add"/>
+          <ref name="del"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="del">
+    <element name="del">
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="add"/>
+          <ref name="anchor"/>
+          <ref name="del"/>
+          <ref name="g"/>
+          <ref name="gap"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="metamark"/>
+          <ref name="subst"/>
+          <ref name="undo"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="mod">
+    <element name="mod">
+      <attribute name="style">
+        <data type="NCName"/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="anchor"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="undo"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="gap">
+    <element name="gap">
+      <optional>
+        <attribute name="extent">
+          <data type="integer"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="facs"/>
+      </optional>
+      <optional>
+        <attribute name="reason">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+    </element>
+  </define>
+  <define name="anchor">
+    <element name="anchor">
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="NCName"/>
+      </attribute>
+    </element>
+  </define>
+  <define name="lb">
+    <element name="lb">
+      <attribute name="facs"/>
+    </element>
+  </define>
+  <define name="hi">
+    <element name="hi">
+      <attribute name="style">
+        <data type="NCName"/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="add"/>
+          <ref name="lb"/>
+          <ref name="metamark"/>
+          <ref name="mod"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="add">
+    <element name="add">
+      <optional>
+        <attribute name="facs"/>
+      </optional>
+      <optional>
+        <attribute name="place">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="add"/>
+          <ref name="del"/>
+          <ref name="g"/>
+          <ref name="lb"/>
+          <ref name="metamark"/>
+          <ref name="subst"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="metamark">
+    <element name="metamark">
+      <optional>
+        <attribute name="facs"/>
+      </optional>
+      <optional>
+        <attribute name="function">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="anchor"/>
+          <ref name="g"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="metamark"/>
+          <ref name="undo"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="zone">
+    <element name="zone">
+      <attribute name="points"/>
+      <attribute name="type">
+        <data type="NCName"/>
+      </attribute>
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="NCName"/>
+      </attribute>
+      <zeroOrMore>
+        <ref name="zone"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="g">
+    <element name="g">
+      <attribute name="ref"/>
+    </element>
+  </define>
+  <define name="undo">
+    <element name="undo">
+      <optional>
+        <attribute name="rend">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <attribute name="spanTo"/>
+      <optional>
+        <attribute name="target"/>
+      </optional>
+    </element>
+  </define>
+</grammar>

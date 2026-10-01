@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Diplomatische Transkription: 0005_581.jpg</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Automatisch erzeugt aus PAGE-XML (eScriptorium-/Transkribus-Export) per XSLT.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>
+              Quelle: 0005_581.jpg.
+              Erstellt: 2026-09-14T12:23:49.012+02:00,
+              zuletzt geaendert: 2026-10-01T09:31:38.411+02:00.
+            </p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <facsimile>
+    <graphic url="0005_581.jpg" width="5198px" height="6817px"/>
+    <surface xml:id="surface_r_31" type="base" points="154,140 5068,101 5049,6647 131,6694">
+      <zone xml:id="zone_tr_3" type="fw" points="4588,219 4596,420 4922,397 4958,196">
+        <zone type="line" xml:id="zone_tr_3_tl_1" points="4578,418 4612,430 4637,404 4657,415 4700,401 4723,413 4774,410 4791,395 4836,410 4845,222 4788,228 4743,213 4717,219 4640,279 4632,270 4609,282 4583,267"/>
+      </zone>
+      <zone xml:id="zone_r_9" type="fw" points="4395,445 4666,445 4666,664 4395,664">
+        <zone type="line" xml:id="zone_l" points="4390,674 4433,683 4489,640 4538,623 4578,640 4629,637 4626,407 4589,407 4558,384 4461,438 4413,410 4387,413"/>
+      </zone>
+      <zone xml:id="zone_r_33" type="column-block" points="1611,1245 3902,1254 3877,5272 1596,5281">
+        <zone xml:id="zone_tr_2" type="paragraph" points="1642,1279 1605,5272 3867,5262 3890,1283">
+          <zone type="line" xml:id="zone_tr_2_tl_1" points="1667,1366 3855,1386 3855,1286 3386,1249 2942,1300 2475,1221 2356,1277 1667,1289"/>
+          <zone type="line" xml:id="zone_tr_2_tl_2" points="1656,1479 1824,1442 2250,1482 3858,1477 3838,1386 1656,1368"/>
+          <zone type="line" xml:id="zone_tr_2_tl_3" points="1673,1562 3846,1585 3829,1474 3280,1494 3064,1459 2896,1502 2652,1459 1673,1459"/>
+          <zone type="line" xml:id="zone_tr_2_tl_4" points="1676,1670 2654,1676 2765,1639 2888,1676 3164,1633 3320,1687 3485,1647 3855,1661 3852,1585 3673,1562 2834,1556 2760,1596 2691,1556 1673,1562"/>
+          <zone type="line" xml:id="zone_tr_2_tl_5" points="1656,1735 1790,1770 2395,1721 2484,1764 3161,1750 3209,1787 3266,1750 3394,1784 3852,1755 3849,1670 3690,1659 3263,1701 3053,1659 2003,1644 1656,1687"/>
+          <zone type="line" xml:id="zone_tr_2_tl_6" points="1656,1838 3701,1863 3844,1849 3844,1761 3329,1787 3269,1750 3209,1787 2970,1747 2922,1784 2817,1750 2771,1790 2726,1755 2273,1738 1775,1775 1653,1735"/>
+          <zone type="line" xml:id="zone_tr_2_tl_7" points="1656,1955 2031,1915 2105,1960 2441,1926 3613,1963 3821,1949 3844,1883 3764,1846 3272,1881 2447,1838 2242,1875 2162,1841 1653,1861"/>
+          <zone type="line" xml:id="zone_tr_2_tl_8" points="1656,2020 3807,2060 3835,1957 3585,1983 3468,1935 3405,1977 3110,1935 3038,1974 2913,1929 2529,1972 2262,1918 2165,1957 1653,1955"/>
+          <zone type="line" xml:id="zone_tr_2_tl_9" points="1661,2151 2546,2108 2964,2157 3323,2125 3414,2171 3471,2125 3866,2145 3864,2054 3673,2034 3511,2071 3434,2023 3366,2063 2441,2028 2347,2065 2179,2020 1949,2063 1659,2023"/>
+          <zone type="line" xml:id="zone_tr_2_tl_10" points="1656,2233 2464,2245 2871,2199 3036,2239 3844,2233 3844,2137 3775,2131 3471,2128 3411,2171 3323,2125 2851,2159 2102,2117 1656,2162"/>
+          <zone type="line" xml:id="zone_tr_2_tl_11" points="1673,2322 3861,2324 3858,2239 3818,2228 1670,2225"/>
+          <zone type="line" xml:id="zone_tr_2_tl_12" points="1656,2407 3073,2432 3152,2395 3528,2438 3704,2407 3755,2447 3832,2415 3798,2322 3570,2353 2942,2324 2819,2361 2686,2316 2250,2310 2108,2353 2000,2304 1906,2344 1656,2324"/>
+          <zone type="line" xml:id="zone_tr_2_tl_13" points="1667,2526 2071,2487 2310,2526 2390,2492 3861,2524 3861,2438 3679,2415 3613,2455 3366,2410 3260,2441 1667,2413"/>
+          <zone type="line" xml:id="zone_tr_2_tl_14" points="1667,2580 1915,2615 2654,2592 2777,2637 3021,2632 3067,2595 3869,2617 3869,2532 3627,2501 1667,2529"/>
+          <zone type="line" xml:id="zone_l_30" points="1667,2691 3861,2714 3861,2617 3801,2606 3699,2640 3067,2597 2774,2640 2657,2592 1775,2623 1667,2578"/>
+          <zone type="line" xml:id="zone_tr_2_tl_16" points="1644,2785 3229,2788 3411,2822 3696,2782 3878,2822 3878,2711 3795,2697 1644,2708"/>
+          <zone type="line" xml:id="zone_l_29" points="1656,2865 1986,2910 2341,2871 2592,2913 2922,2871 2990,2910 3858,2896 3858,2822 3809,2797 3497,2848 3374,2799 2626,2788 2526,2831 2464,2782 2336,2814 1656,2782"/>
+          <zone type="line" xml:id="zone_tr_2_tl_19" points="1650,2979 3861,2996 3861,2893 3824,2888 3104,2919 2945,2873 2765,2916 2546,2885 2438,2916 2356,2876 1650,2891"/>
+          <zone type="line" xml:id="zone_tr_2_tl_21" points="1656,3090 1858,3053 2171,3101 2370,3064 2615,3104 2683,3067 3861,3084 3858,2999 3625,2982 3525,3019 3206,2976 2822,3013 1653,2976"/>
+          <zone type="line" xml:id="zone_tr_2_tl_23" points="1650,3172 3855,3175 3855,3081 3747,3121 3525,3075 2967,3112 2859,3070 2157,3101 1852,3053 1795,3095 1650,3090"/>
+          <zone type="line" xml:id="zone_tr_2_tl_24" points="1644,3272 3849,3272 3846,3192 3551,3172 3149,3209 3041,3169 2842,3201 1895,3158 1642,3198"/>
+          <zone type="line" xml:id="zone_l_24" points="1650,3340 3684,3394 3852,3366 3852,3275 3221,3295 3090,3258 3007,3314 2620,3252 1647,3269"/>
+          <zone type="line" xml:id="zone_l_25" points="1647,3454 3852,3457 3852,3374 3249,3391 3078,3354 2552,3397 2421,3349 2014,3380 1647,3340"/>
+          <zone type="line" xml:id="zone_tr_2_tl_27" points="1644,3531 1815,3568 1915,3522 3849,3573 3846,3454 3650,3494 3377,3454 3289,3488 2546,3445 2253,3491 2111,3445 1644,3471"/>
+          <zone type="line" xml:id="zone_tr_2_tl_28" points="1644,3633 3849,3644 3849,3570 3627,3553 3095,3579 2865,3542 2586,3585 2387,3536 2304,3576 1644,3553"/>
+          <zone type="line" xml:id="zone_tr_2_tl_30" points="1661,3735 2128,3721 2302,3758 2376,3710 2802,3770 3118,3730 3838,3758 3835,3659 3593,3639 3155,3699 3030,3656 2854,3679 2799,3639 2364,3681 2003,3619 1661,3650"/>
+          <zone type="line" xml:id="zone_tr_2_tl_31" points="1647,3809 2094,3849 2452,3818 2521,3858 2731,3824 2899,3869 3036,3829 3835,3844 3852,3744 3431,3775 3346,3741 3198,3781 3098,3735 2856,3770 2415,3761 2339,3724 2299,3758 1644,3747"/>
+          <zone type="line" xml:id="zone_tr_2_tl_33" points="1593,3940 3872,3932 3869,3838 3801,3832 3693,3866 3391,3835 3314,3878 3218,3835 2899,3869 2845,3832 1590,3832"/>
+          <zone type="line" xml:id="zone_tr_2_tl_35" points="1644,4000 1815,4034 2236,3997 2666,4040 3849,4031 3849,3932 1644,3932"/>
+          <zone type="line" xml:id="zone_tr_2_tl_36" points="1661,4105 2908,4108 3033,4154 3144,4117 3849,4134 3849,4029 3633,4017 3474,4051 3349,4014 3266,4057 3053,4017 1661,4037"/>
+          <zone type="line" xml:id="zone_tr_2_tl_38" points="1644,4188 1903,4225 2842,4196 3132,4248 3198,4202 3292,4239 3383,4199 3835,4228 3861,4145 3283,4117 3027,4151 2896,4108 2831,4151 2660,4111 2569,4154 2310,4102 2100,4134 1642,4097"/>
+          <zone type="line" xml:id="zone_tr_2_tl_40" points="1661,4316 3864,4313 3864,4225 3804,4205 3647,4253 3377,4196 3127,4250 3058,4211 1661,4199"/>
+          <zone type="line" xml:id="zone_tr_2_tl_41" points="1644,4381 2182,4410 2313,4378 2438,4424 2822,4384 3098,4430 3164,4396 3846,4415 3846,4341 3747,4304 3573,4344 3149,4296 2928,4336 2435,4302 2245,4336 1832,4287 1644,4330"/>
+          <zone type="line" xml:id="zone_tr_2_tl_42" points="1644,4489 3855,4515 3852,4433 3764,4404 3300,4435 2871,4390 2387,4430 2302,4393 2128,4427 1642,4393"/>
+          <zone type="line" xml:id="zone_tr_2_tl_43" points="1644,4583 1866,4563 2361,4620 2569,4569 2748,4620 3849,4595 3849,4504 1642,4489"/>
+          <zone type="line" xml:id="zone_tr_2_tl_44" points="1642,4691 1977,4654 2341,4700 2646,4666 2942,4706 3010,4666 3892,4694 3889,4595 3625,4578 3056,4620 2748,4620 2566,4569 2361,4620 1639,4592"/>
+          <zone type="line" xml:id="zone_l_26" points="1656,4797 1937,4757 2256,4808 2549,4757 2728,4794 3337,4782 3391,4825 3465,4780 3846,4802 3844,4689 3511,4720 3297,4674 2805,4717 2654,4669 2498,4703 1957,4663 1653,4689"/>
+          <zone type="line" xml:id="zone_tr_2_tl_46" points="1644,4868 3849,4879 3849,4808 3721,4782 3579,4819 3465,4782 3388,4825 3263,4785 3195,4834 2834,4774 1644,4805"/>
+          <zone type="line" xml:id="zone_tr_2_tl_47" points="1650,4956 1946,4950 2051,4996 2168,4945 3007,4996 3050,4965 3602,4987 3636,4953 3852,4987 3849,4879 2990,4873 2925,4910 2487,4859 2302,4899 1647,4868"/>
+          <zone type="line" xml:id="zone_tr_2_tl_48" points="1644,5050 3855,5070 3855,5004 3690,4967 3380,5007 3249,4965 3030,5002 2939,4962 2566,4967 2481,5002 2327,4956 2262,5004 1644,4959"/>
+          <zone type="line" xml:id="zone_l_27" points="1650,5144 3838,5181 3815,5067 3442,5061 3320,5110 3232,5061 2745,5093 2569,5056 2361,5087 2285,5047 2120,5081 1650,5058"/>
+          <zone type="line" xml:id="zone_l_28" points="1647,5272 2176,5243 2279,5283 2364,5249 2768,5289 2967,5255 3110,5297 3209,5252 3849,5300 3849,5169 3775,5158 3360,5198 3226,5158 2774,5189 2697,5147 1647,5149"/>
+        </zone>
+      </zone>
+      <zone xml:id="zone_r_8" type="add" points="4047,1957 4298,1957 4298,2104 4047,2104">
+        <zone type="line" xml:id="zone_l_1" points="4043,2148 4165,2142 4194,2120 4233,2125 4262,2108 4282,2111 4282,1966 4259,1969 4242,1957 4228,1966 4202,1949 4171,1946 4142,1955 4125,1943 4074,1972 4043,1974"/>
+      </zone>
+      <zone xml:id="zone_r_6" type="metamark" points="1212,2519 1416,2519 1416,2660 1212,2660">
+        <zone type="line" xml:id="zone_l_23" points="1215,2689 1289,2691 1309,2680 1326,2697 1360,2686 1391,2700 1397,2504 1380,2498 1371,2506 1334,2506 1289,2543 1269,2543 1243,2518 1218,2515"/>
+      </zone>
+      <zone xml:id="zone_r_10" type="add" points="3912,2451 4052,2451 4052,2613 3912,2613">
+        <zone type="line" xml:id="zone_l_2" points="3929,2609 3974,2612 3986,2623 4011,2620 4017,2626 4034,2620 4026,2467 3977,2464 3966,2452 3918,2444"/>
+      </zone>
+      <zone xml:id="zone_r_12" type="metamark" points="4381,2426 4538,2426 4538,2597 4381,2597">
+        <zone type="line" xml:id="zone_l_4" points="4381,2597 4424,2597 4433,2606 4469,2580 4478,2586 4515,2586 4515,2430 4475,2427 4464,2435 4452,2427 4418,2450 4381,2447"/>
+      </zone>
+      <zone xml:id="zone_r_11" type="add" points="4150,2457 4240,2457 4240,2591 4150,2591">
+        <zone type="line" xml:id="zone_l_3" points="4142,2597 4159,2595 4176,2580 4182,2586 4196,2580 4211,2589 4231,2589 4228,2450 4196,2455 4182,2450 4162,2432 4159,2438 4137,2438"/>
+      </zone>
+      <zone xml:id="zone_r_14" type="metamark" points="4202,2604 4327,2604 4327,2754 4202,2754">
+        <zone type="line" xml:id="zone_l_5" points="4199,2780 4222,2774 4265,2802 4310,2799 4310,2606 4276,2612 4248,2626 4239,2620 4219,2634 4199,2632"/>
+      </zone>
+      <zone xml:id="zone_r_13" type="add" points="3886,2621 4018,2621 4018,2714 3886,2714">
+        <zone type="line" xml:id="zone_l_7" points="3881,2723 3898,2723 3906,2731 3923,2723 3932,2731 3957,2711 3974,2717 3983,2711 4000,2714 4000,2620 3960,2609 3949,2612 3943,2606 3906,2623 3881,2623"/>
+      </zone>
+      <zone xml:id="zone_r_15" type="metamark" points="3930,2722 4126,2722 4126,2804 3930,2804">
+        <zone type="line" xml:id="zone_l_6" points="3920,2802 3940,2799 3952,2811 3983,2805 4020,2819 4051,2797 4117,2794 4114,2691 4071,2697 4017,2740 4006,2728 3963,2720 3943,2734 3920,2734"/>
+      </zone>
+      <zone xml:id="zone_r_7" type="metamark" points="1314,2774 1472,2774 1472,2880 1314,2880">
+        <zone type="line" xml:id="zone_l_22" points="1309,2896 1343,2896 1351,2902 1374,2885 1388,2888 1408,2876 1417,2879 1457,2865 1457,2765 1397,2768 1383,2780 1309,2794"/>
+      </zone>
+      <zone xml:id="zone_r_16" type="add" points="3912,2812 4166,2817 4544,2805 4540,2862 4109,2891 3912,2907">
+        <zone type="line" xml:id="zone_l_8" points="3903,2913 3972,2910 4031,2945 4085,2916 4114,2928 4202,2868 4256,2885 4532,2859 4538,2794 4393,2791 4327,2814 4162,2799 4063,2834 3989,2805 3912,2814"/>
+      </zone>
+      <zone xml:id="zone_r_17" type="add" points="4223,2883 4788,2842 4785,2992 4218,2972">
+        <zone type="line" xml:id="zone_tr_2_tl_18" points="4185,2945 4245,2942 4324,2999 4390,2976 4489,3004 4546,2970 4615,2982 4723,2922 4768,2939 4771,2834 4706,2822 4580,2854 4518,2842 4188,2888"/>
+      </zone>
+      <zone xml:id="zone_r_4" type="add" points="945,2852 1241,2852 1241,2987 945,2987">
+        <zone type="line" xml:id="zone_l_21" points="964,2976 993,2984 1010,2973 1033,2990 1064,2964 1095,2990 1158,2973 1186,2990 1209,2984 1201,2891 1129,2902 1090,2871 1073,2865 1064,2873 1030,2845 1001,2851 964,2828 950,2831"/>
+      </zone>
+      <zone xml:id="zone_r_5" type="add" points="1263,2931 1378,2931 1378,3015 1263,3015">
+        <zone type="line" xml:id="zone_l_20" points="1243,3013 1263,3013 1269,3019 1286,3013 1294,3021 1317,3024 1343,3001 1363,3004 1366,2936 1349,2936 1340,2928 1329,2936 1312,2922 1303,2919 1294,2925 1263,2905 1246,2905"/>
+      </zone>
+      <zone xml:id="zone_r_3" type="add" points="1257,3129 1453,3129 1453,3264 1257,3264">
+        <zone type="line" xml:id="zone_l_19" points="1289,3277 1317,3280 1331,3266 1383,3292 1422,3258 1442,3260 1440,3121 1408,3115 1394,3127 1377,3110 1366,3110 1312,3147 1286,3152"/>
+      </zone>
+      <zone xml:id="zone_r_18" type="add" points="3978,2993 4847,3025 4844,3207 3976,3222">
+        <zone type="line" xml:id="zone_tr_2_tl_20" points="3994,3058 4128,3064 4228,3107 4299,3081 4344,3110 4606,3087 4603,3013 4430,3007 4387,2973 4324,2999 4276,2982 4228,3001 4174,2973 4111,3007 3994,2993"/>
+        <zone type="line" xml:id="zone_tr_2_tl_22" points="4048,3186 4185,3152 4236,3203 4336,3181 4509,3212 4666,3144 4822,3144 4822,3075 4777,3067 4708,3104 4609,3078 4393,3110 4296,3081 4236,3110 4048,3058"/>
+      </zone>
+      <zone xml:id="zone_r_19" type="add" points="3879,3247 4571,3247 4581,3347 4194,3349 3879,3369">
+        <zone type="line" xml:id="zone_l_9" points="3878,3371 4088,3394 4199,3346 4236,3374 4276,3340 4319,3363 4376,3329 4401,3354 4455,3331 4558,3351 4566,3201 4418,3198 4359,3238 4233,3258 4179,3226 4097,3255 3883,3235"/>
+      </zone>
+      <zone xml:id="zone_r_21" type="add" points="3878,3392 4201,3392 4201,3515 3878,3515">
+        <zone type="line" xml:id="zone_l_11" points="3883,3533 3906,3533 3932,3556 3969,3545 4009,3556 4026,3536 4066,3531 4088,3545 4165,3531 4151,3391 4105,3386 4077,3403 4040,3391 3974,3411 3955,3391 3912,3386 3869,3403"/>
+      </zone>
+      <zone xml:id="zone_r_20" type="add" points="4222,3356 4376,3356 4376,3445 4222,3445">
+        <zone type="line" xml:id="zone_l_10" points="4213,3479 4233,3474 4245,3479 4279,3462 4307,3460 4316,3451 4361,3451 4361,3374 4316,3363 4293,3343 4279,3346 4273,3340 4233,3377 4213,3374"/>
+      </zone>
+      <zone xml:id="zone_r_2" type="add" points="1054,3407 1363,3407 1363,3560 1054,3560">
+        <zone type="line" xml:id="zone_l_18" points="1081,3573 1118,3582 1147,3559 1175,3570 1201,3542 1255,3573 1320,3556 1292,3329 1240,3343 1203,3326 1129,3366 1112,3388 1081,3374 1058,3391"/>
+      </zone>
+      <zone xml:id="zone_r_22" type="add" points="4073,3539 4271,3539 4271,3639 4073,3639">
+        <zone type="line" xml:id="zone_tr_2_tl_29" points="4074,3650 4100,3647 4111,3636 4131,3639 4142,3630 4194,3659 4225,3639 4248,3642 4250,3562 4233,3562 4208,3548 4188,3562 4179,3551 4145,3542 4137,3533 4117,3539 4100,3556 4077,3551"/>
+      </zone>
+      <zone xml:id="zone_r_1" type="add" points="354,3652 1375,3652 1375,3828 354,3828">
+        <zone type="line" xml:id="zone_tr_1_tl_2" points="364,3795 657,3858 888,3801 996,3846 1229,3801 1343,3829 1357,3733 1141,3659 1016,3735 802,3659 358,3684"/>
+      </zone>
+      <zone xml:id="zone_r_23" type="add" points="3910,3816 4552,3780 4562,3872 4187,3926 3906,3940">
+        <zone type="line" xml:id="zone_tr_2_tl_32" points="3929,3915 4051,3946 4199,3926 4253,3952 4413,3889 4472,3920 4532,3895 4538,3821 4464,3775 4145,3841 4105,3809 3986,3824 3937,3804"/>
+      </zone>
+      <zone xml:id="zone_tr_1" type="add" points="1088,4325 1071,4043 236,3950 250,4958 1498,4958 1507,4384">
+        <zone type="line" xml:id="zone_tr_1_tl_3" points="361,4151 427,4159 469,4134 617,4168 731,4139 925,4199 990,4157 1030,4168 1027,4071 953,4040 731,4054 532,4011 358,4023"/>
+        <zone type="line" xml:id="zone_tr_1_tl_4" points="253,4239 339,4236 367,4216 469,4228 521,4256 649,4228 686,4245 751,4222 748,4139 578,4159 543,4194 486,4154 373,4148 353,4165 250,4122"/>
+        <zone type="line" xml:id="zone_tr_1_tl_5" points="236,4353 523,4341 663,4302 703,4341 959,4336 962,4250 817,4273 777,4242 640,4231 486,4242 421,4282 347,4236 316,4259 239,4248"/>
+        <zone type="line" xml:id="zone_tr_1_tl_6" points="239,4424 407,4467 435,4444 518,4458 609,4433 654,4450 757,4415 757,4316 703,4341 617,4322 455,4347 415,4333 327,4367 273,4347 239,4359"/>
+        <zone type="line" xml:id="zone_tr_1_tl_7" points="228,4552 486,4572 1053,4467 1337,4469 1309,4404 990,4370 871,4452 725,4467 239,4435"/>
+        <zone type="line" xml:id="zone_tr_1_tl_8" points="284,4683 333,4686 373,4652 486,4683 663,4623 688,4652 740,4626 873,4629 882,4521 780,4549 714,4521 652,4566 569,4583 464,4558 290,4586"/>
+        <zone type="line" xml:id="zone_tr_1_tl_9" points="267,4743 452,4794 640,4723 768,4751 1494,4626 1499,4561 1331,4521 939,4646 660,4623 523,4680 276,4683"/>
+        <zone type="line" xml:id="zone_tr_1_tl_10" points="296,4888 734,4814 905,4856 1155,4777 1226,4788 1235,4694 882,4708 620,4785 541,4754 467,4791 307,4768"/>
+        <zone type="line" xml:id="zone_tr_1_tl_11" points="373,4956 427,4942 469,4956 506,4942 589,4962 612,4942 632,4959 683,4962 683,4888 632,4893 606,4873 563,4882 509,4839 495,4851 481,4842 432,4851 373,4885"/>
+      </zone>
+      <zone xml:id="zone_r_32" type="add" points="3883,3944 4233,3926 4630,3878 4637,4018 4001,4039 3892,4073">
+        <zone type="line" xml:id="zone_tr_2_tl_34" points="3955,4071 4034,4023 4080,4037 4194,4006 4350,4051 4478,4003 4589,4037 4609,4031 4615,3935 4572,3943 4521,3903 4475,3918 4421,3889 4322,3912 4265,3957 4083,3932 3957,3963"/>
+      </zone>
+      <zone xml:id="zone_r" type="metamark" points="1359,4092 1511,4092 1511,4228 1359,4228">
+        <zone type="line" xml:id="zone_l_17" points="1377,4205 1403,4202 1414,4213 1434,4202 1442,4211 1451,4211 1459,4202 1468,4211 1488,4208 1485,4097 1465,4097 1428,4125 1422,4120 1403,4137 1377,4137"/>
+      </zone>
+      <zone xml:id="zone_r_24" type="add" points="3962,4047 4270,4047 4270,4142 3962,4142">
+        <zone type="line" xml:id="zone_tr_2_tl_37" points="3955,4145 3980,4137 4017,4154 4114,4142 4239,4174 4245,4031 4194,4009 4142,4031 4102,4026 3957,4068"/>
+      </zone>
+      <zone xml:id="zone_r_25" type="add" points="3972,4189 4481,4189 4481,4313 3972,4313">
+        <zone type="line" xml:id="zone_tr_2_tl_39" points="3966,4327 4057,4319 4091,4293 4219,4302 4239,4285 4290,4310 4327,4299 4373,4324 4424,4307 4461,4324 4461,4188 4430,4179 4370,4171 4333,4196 4250,4205 4128,4182 4043,4196 4000,4231 3966,4213"/>
+      </zone>
+      <zone xml:id="zone_r_26" type="add" points="3911,4468 4017,4468 4017,4605 3911,4605">
+        <zone type="line" xml:id="zone_l_12" points="3903,4580 3923,4578 3929,4583 3966,4566 3992,4569 3980,4421 3960,4427 3946,4421 3929,4444 3918,4435 3895,4441"/>
+      </zone>
+      <zone xml:id="zone_r_27" type="metamark" points="4051,4478 4210,4478 4210,4660 4051,4660">
+        <zone type="line" xml:id="zone_l_13" points="4040,4669 4054,4669 4083,4640 4097,4640 4128,4663 4162,4649 4194,4657 4188,4481 4154,4472 4111,4495 4083,4475 4057,4495 4034,4492"/>
+      </zone>
+      <zone xml:id="zone_r_28" type="add" points="3956,4664 4110,4664 4110,4815 3956,4815">
+        <zone type="line" xml:id="zone_l_14" points="3946,4780 3960,4780 3972,4791 3997,4780 4020,4800 4034,4794 4054,4811 4063,4808 4080,4825 4100,4822 4100,4663 4074,4657 4037,4674 3997,4646 3946,4663"/>
+      </zone>
+      <zone xml:id="zone_r_29" type="add" points="3941,5025 4146,5025 4146,5157 3941,5157">
+        <zone type="line" xml:id="zone_l_15" points="4148,5058 4125,5058 4094,5073 4071,5056 4040,5056 4009,5075 3989,5061 3946,5061 3946,5172 3980,5178 4020,5144 4046,5167 4085,5152 4105,5161 4148,5152"/>
+      </zone>
+      <zone xml:id="zone_r_30" type="metamark" points="3890,5164 4060,5164 4060,5302 3890,5302">
+        <zone type="line" xml:id="zone_l_16" points="3886,5306 3915,5306 3935,5286 3986,5269 4009,5289 4048,5292 4048,5155 4020,5144 3986,5169 3952,5161 3937,5147 3926,5149 3906,5130 3886,5130"/>
+      </zone>
+    </surface>
+  </facsimile>
+  <text>
+    <body>
+      <div facs="#surface_r_31" type="base">
+        <div>
+          <fw facs="#zone_tr_3">
+            <lb facs="#zone_tr_3_tl_1"/>287
+          </fw>
+        </div>
+        <div>
+          <fw facs="#zone_r_9">
+            <lb facs="#zone_l"/>21
+          </fw>
+        </div>
+        <div facs="#zone_r_33" type="column-block">
+          <p facs="#zone_tr_2">
+            <lb facs="#zone_tr_2_tl_1"/>andern Sprache gar nicht geben, und das Verhängnis
+            <lb facs="#zone_tr_2_tl_2"/>bei diesen Zusammenstößen zwischen mir und diesem
+            <lb facs="#zone_tr_2_tl_3"/>Wien ist nur, daß die Dummheit durch mich dümmer
+            <lb facs="#zone_tr_2_tl_4"/>wird, während sie mich zu stets neuen Einfällen
+            <lb facs="#zone_tr_2_tl_5"/>anfeuert. Da ist denn Beherrschung geboten und
+            <lb facs="#zone_tr_2_tl_6"/>bezüglich der ‚Reichspost‘, die geschrieben hat, »man
+            <lb facs="#zone_tr_2_tl_7"/>erinnere sich, daß ich einmal einem meiner Angriffs-
+            <lb facs="#zone_tr_2_tl_8"/>objekte das Diktum an den Kopf geworfen habe:
+            <lb facs="#zone_tr_2_tl_9"/>lch fordere Sie auf, sich zu erschießen!<subst><del>‘</del><add facs="#zone_r_8" xml:id="add-0581-0001"><lb facs="#zone_l_1"/><metamark function="correction"><g ref="#correction"/></metamark>‘«</add></subst>, darf ich
+            <lb facs="#zone_tr_2_tl_10"/>mir höchstens eine Glosse vorbehalten unter dem
+            <lb facs="#zone_tr_2_tl_11"/>Titel »Kasmader in der Schlinge oder: Man erinnert
+            <lb facs="#zone_tr_2_tl_12"/>sich«. Da wird man schon sehen, wie lustig es ist,
+            <lb facs="#zone_tr_2_tl_13"/>wenn die heilige Einfalt an mir satirisch wird. Denn
+            <lb facs="#zone_tr_2_tl_14"/>woran sich die Reichspost <metamark function="addition"/><add facs="#zone_r_10" xml:id="add-0581-0002"><lb facs="#zone_l_2"/><metamark function="correction"><g ref="#correction"/></metamark>,</add>feststellend, daß sich <metamark function="addition"/><add facs="#zone_r_11" xml:id="add-0581-0003"><lb facs="#zone_l_3"/><metamark function="correction"><g ref="#correction"/></metamark>» </add>die
+            <lb facs="#zone_l_30"/>Erde <metamark function="relocation" target="#456">l</metamark><del>seit damals</del> weiter<metamark function="kerning" target="#wer"><g ref="#correction"/></metamark>gedreht hat<metamark function="addition"/><add facs="#zone_r_13" xml:id="add-0581-0004"><lb facs="#zone_l_7"/><metamark function="correction"><g ref="#correction"/></metamark>«</add>, nicht erinnert,
+            <lb facs="#zone_tr_2_tl_16"/>ist die Tatsache, daß Sich auch die Reichspost <del>seit</del>
+            <lb facs="#zone_l_29"/><del><del>damals</del> <undo spanTo="#anchor-0581-0001" target="#tzu"/>g<anchor type="undo" xml:id="anchor-0581-0001"/></del>edreht hat, <subst><del>der <metamark function="addition"/><add facs="#zone_r_16" xml:id="add-0581-0005"><lb facs="#zone_l_8"/><del><g ref="#correction"/><gap reason="illegible" extent="3"/> <gap reason="illegible" extent="3"/> <gap reason="illegible" extent="8"/></del></add>das</del><add facs="#zone_r_17" xml:id="add-0581-0006"><lb facs="#zone_tr_2_tl_18"/><metamark function="correction"><g ref="#correction"/></metamark>die durch jenes,</add></subst> ganz anders geartete
+            <lb facs="#zone_tr_2_tl_19"/>Diktum <metamark function="addition"/><add facs="#zone_r_5" xml:id="add-0581-0008"><lb facs="#zone_l_20"/><metamark function="correction"><g ref="#correction"/></metamark>in</add><add facs="#zone_r_4" xml:id="add-0581-0007"><lb facs="#zone_l_21"/><del><gap reason="illegible" extent="7"/></del></add>einen Begeisterungstaumel <subst><del>verursacht hat.</del><add facs="#zone_r_18" xml:id="add-0581-0010"><lb facs="#zone_tr_2_tl_20"/><metamark function="correction"><g ref="#correction"/></metamark> versetzt war, woran<lb facs="#zone_tr_2_tl_22"/>ich mich wieder erinnern</add></subst>
+            <lb facs="#zone_tr_2_tl_21"/>Was die, Wiener Neuesten Nachrichten“, die in
+            <lb facs="#zone_tr_2_tl_23"/>großdeutscher Sprache verfaßte Zeitung, betrifft, so
+            <lb facs="#zone_tr_2_tl_24"/>möchte ich<subst><del>,</del><add facs="#zone_r_3" xml:id="add-0581-0009"><lb facs="#zone_l_19"/><metamark function="correction"><g ref="#correction"/></metamark> –</add></subst> wenn ich sicher wüßte, daß der Gewinst
+            <lb facs="#zone_l_24"/>nicht unter ihren <subst><del xml:id="del-0581-0001"><undo spanTo="#anchor-0581-0003" target="#del-0581-0001"/>Schrift<anchor type="undo" xml:id="anchor-0581-0003"/><subst><del>stellern</del><!-- unresolved add-id: rt (keine Region mit dieser Behelfs-ID im Export) --></subst></del><add facs="#zone_r_19" xml:id="add-0581-0011"><lb facs="#zone_l_9"/><subst><del><g ref="#correction"/></del><add place="overwritten"><g ref="#correction"/></add></subst><subst><del>Angehörigen</del> <add place="inline">leitern</add></subst></add></subst> aufgeteilt wird<subst><del>,</del><add facs="#zone_r_20" xml:id="add-0581-0013"><lb facs="#zone_l_10"/><metamark function="correction"><g ref="#correction"/></metamark> –</add></subst> ein
+            <lb facs="#zone_l_25"/>Preisrätsel aufstellen: wie sie zu der Version <subst><del>kommen</del><add facs="#zone_r_21" xml:id="add-0581-0012"><lb facs="#zone_l_11"/><metamark function="correction"><g ref="#correction"/></metamark>gelangt</add></subst>
+            <lb facs="#zone_tr_2_tl_27"/><metamark function="addition"/><add facs="#zone_r_2" xml:id="add-0581-0014"><lb facs="#zone_l_18"/><metamark function="correction"><g ref="#correction"/></metamark>sein </add>mag, daß ich »an Litfaßsäulen Maueranschläge« (da<subst><del>ß</del><add facs="#zone_r_22" xml:id="add-0581-0015"><lb facs="#zone_tr_2_tl_29"/>ls</add></subst>
+            <lb facs="#zone_tr_2_tl_28"/>kommt davon, wenn man das Fremdwort »Plakaté
+            <lb facs="#zone_tr_2_tl_30"/>vermeiden will) »angeblich sogar auch selbst an-
+            <lb facs="#zone_tr_2_tl_31"/>klebte«. Dies<subst><del>e Version ist</del><add facs="#zone_r_1" xml:id="add-0581-0016"><lb facs="#zone_tr_1_tl_2"/><metamark function="correction"><g ref="#correction"/></metamark>es Gerücht hat als perfekte Tatsache</add></subst> nunmehr auch unter den
+            <lb facs="#zone_tr_2_tl_33"/><metamark function="unknown"><g ref="#correction"/></metamark>Sudetendeutschen <subst><del>verbreitet</del><add facs="#zone_r_23" xml:id="add-0581-0017"><lb facs="#zone_tr_2_tl_32"/><metamark function="correction"><g ref="#correction"/></metamark>Eingang gefunden</add></subst> und die, Silesia“ hat
+            <lb facs="#zone_tr_2_tl_35"/>einen Bericht aus Wien, worin die Szene <metamark function="addition"/><add facs="#zone_r_32" xml:id="add-0581-0019"><lb facs="#zone_tr_2_tl_34"/><metamark function="correction"><g ref="#correction"/></metamark>genau und in Sperrdruck</add>beschrieben
+            <lb facs="#zone_tr_2_tl_36"/>wird<subst><del>,</del><add facs="#zone_tr_1" xml:id="add-0581-0018"><lb facs="#zone_tr_1_tl_3"/><metamark function="correction"><g ref="#correction"/></metamark> nebst dem Aufsehen,<lb facs="#zone_tr_1_tl_4"/>das unter der mich<lb facs="#zone_tr_1_tl_5"/>umgebenden Menschenmenge<lb facs="#zone_tr_1_tl_6"/>entstand, „so daß die<lb facs="#zone_tr_1_tl_7"/>Verkehrspolizei eniatniaenia<lb facs="#zone_tr_1_tl_8"/>eingreifen mußte“. Wenn’s<lb facs="#zone_tr_1_tl_9"/>nämlich der Setzmaschine in Sudetenländern<lb facs="#zone_tr_1_tl_10"/>zu dumm wird, beginnt sie zu<lb facs="#zone_tr_1_tl_11"/>lallen.</add></subst> Die <metamark function="unknown"><g ref="#correction"/></metamark>großdeutsche Zeitung<metamark function="addition"/><add facs="#zone_r_24" xml:id="add-0581-0020"><lb facs="#zone_tr_2_tl_37"/>Wiens</add> nennt diese <subst><del>Plaka</del><add facs="#zone_r_25" xml:id="add-0581-0021"><lb facs="#zone_tr_2_tl_39"/><metamark function="correction"><g ref="#correction"/></metamark> Anklebung,</add></subst>
+            <lb facs="#zone_tr_2_tl_38"/><del>tierung</del>, mit der ich der „Wipag« ins Handwerk-
+            <lb facs="#zone_tr_2_tl_40"/>gepiuscht habe, einen »Mißbrauch der Freiheit, sich
+            <lb facs="#zone_tr_2_tl_41"/>zu blamieren«, während sie vermutlich sagen wollte,
+            <lb facs="#zone_tr_2_tl_42"/>daß ich von dieser Freiheit Gebrauch gemacht habe.
+            <lb facs="#zone_tr_2_tl_43"/>Die Bezeichnung »Fackel-Kraus«<metamark function="addition"/><add facs="#zone_r_26" xml:id="add-0581-0022"><lb facs="#zone_l_12"/><metamark function="correction"><g ref="#correction"/></metamark>,</add><metamark function="relocation" target="#dc"><g ref="#correction"/></metamark> überrascht mich
+            <lb facs="#zone_tr_2_tl_44"/><seg type="relocation">als ein Stück aus dem Inventar der Wiener Geistig-)</seg>
+            <lb facs="#zone_l_26"/><seg type="relocation">kei<subst><del>t</del><add facs="#zone_r_28" xml:id="add-0581-0023"><lb facs="#zone_l_14"/><metamark function="correction"><g ref="#correction"/></metamark>t,</add></subst></seg> weniger als die eines »Reklame-Kraus«, da es
+            <lb facs="#zone_tr_2_tl_46"/>doch bisher nicht bekannt war, daß ich einen
+            <lb facs="#zone_tr_2_tl_47"/>Bestandteil der Welt bilde, deren Schreiber ihre
+            <lb facs="#zone_tr_2_tl_48"/>Existenz von der Möglichkeit fristen, daß dem
+            <lb facs="#zone_l_27"/>Essig-Huber eine Varia<subst><del>tion</del><add facs="#zone_r_29" xml:id="add-0581-0024"><lb facs="#zone_l_15"/><metamark function="correction"><g ref="#correction"/></metamark>nte</add></subst> zu Goethes »Über allen
+            <lb facs="#zone_l_28"/>Gipfeln« einfällt. Aber die großdeutsche Publizistik<del>,</del>
+          </p>
+        </div>
+        <metamark xml:id="metamark-0581-0001" facs="#zone_r_6" target="#890">
+          <lb facs="#zone_l_23"/><metamark function="correction"><g ref="#correction"/></metamark><metamark function="deletion"><g ref="#deleatur"/></metamark>
+        </metamark>
+        <metamark xml:id="metamark-0581-0002" facs="#zone_r_12" target="#456 #567">
+          <lb facs="#zone_l_4"/><metamark function="relocation"><g ref="#relocation"/></metamark>
+        </metamark>
+        <metamark xml:id="metamark-0581-0003" facs="#zone_r_14" target="#wer">
+          <lb facs="#zone_l_5"/><metamark function="kerning"><g ref="#kerning"/></metamark>
+        </metamark>
+        <metamark xml:id="metamark-0581-0004" facs="#zone_r_15" target="#ert">
+          <lb facs="#zone_l_6"/><metamark function="correction"><g ref="#correction"/></metamark> <metamark function="deletion"><g ref="#deleatur"/></metamark>
+        </metamark>
+        <metamark xml:id="metamark-0581-0005" facs="#zone_r_7" target="#rtz #tzu">
+          <lb facs="#zone_l_22"/><metamark function="correction"><g ref="#correction"/></metamark> <metamark function="deletion"><g ref="#deleatur"/></metamark>
+        </metamark>
+        <metamark xml:id="metamark-0581-0006" facs="#zone_r" target="#ay">
+          <lb facs="#zone_l_17"/><metamark function="correction"><g ref="#correction"/></metamark> <metamark function="deletion"><g ref="#deleatur"/></metamark>
+        </metamark>
+        <metamark xml:id="metamark-0581-0007" facs="#zone_r_27">
+          <lb facs="#zone_l_13"/>#trans
+        </metamark>
+        <metamark xml:id="metamark-0581-0008" facs="#zone_r_30" target="#nh">
+          <lb facs="#zone_l_16"/><metamark function="correction"><g ref="#correction"/></metamark> <metamark function="deletion"><g ref="#deleatur"/></metamark>
+        </metamark>
+      </div>
+    </body>
+  </text>
+</TEI>

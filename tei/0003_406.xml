@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Diplomatische Transkription: 0003_406.jpg</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Automatisch erzeugt aus PAGE-XML (eScriptorium-/Transkribus-Export) per XSLT.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>
+              Quelle: 0003_406.jpg.
+              Erstellt: 2026-09-14T12:23:48.771+02:00,
+              zuletzt geaendert: 2026-09-30T10:26:41.886+02:00.
+            </p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <facsimile>
+    <graphic url="0003_406.jpg" width="3936px" height="6183px"/>
+    <surface xml:id="surface_r_18" type="base" points="77,773 3834,889 3830,3420 105,3276">
+      <surface xml:id="surface_r_16" type="surface" points="166,91 3490,82 3465,1831 2956,1760 2204,1768 821,1765 195,1727">
+        <zone xml:id="zone_tr_2" type="fw" points="3073,138 3073,312 3330,312 3330,138">
+          <zone type="line" xml:id="zone_tr_2_tl_1" points="3058,283 3118,277 3165,300 3237,286 3257,271 3321,274 3332,136 3272,150 3191,116 3118,127 3069,113"/>
+        </zone>
+        <zone xml:id="zone_r_2" type="fw" points="2902,440 3271,440 3271,744 2902,744">
+          <zone type="line" xml:id="zone_l_13" points="2954,641 2983,653 2997,641 3012,655 3075,632 3144,655 3196,638 3228,647 3240,563 3208,543 3173,557 3124,502 3095,488 3069,505 3017,511 2983,534 2965,531"/>
+        </zone>
+        <zone xml:id="zone_r_3" type="fw" points="2441,744 2935,744 2935,974 2441,974">
+          <zone type="line" xml:id="zone_l_12" points="2515,970 2596,979 2740,933 2847,993 2850,783 2812,765 2720,762 2639,731 2550,765 2518,759"/>
+        </zone>
+        <zone xml:id="zone_r_1" type="fw" points="2285,386 2541,386 2541,670 2285,670">
+          <zone type="line" xml:id="zone_l_11" points="2319,586 2333,592 2342,612 2365,603 2374,624 2385,629 2460,635 2512,476 2486,462 2463,422 2443,413 2431,419 2414,404 2379,396"/>
+        </zone>
+        <zone xml:id="zone_r" type="fw" points="1987,613 2234,613 2234,956 1987,956">
+          <zone type="line" xml:id="zone_l_10" points="2001,866 2018,878 2027,875 2041,901 2088,930 2226,679 2183,658 2177,647 2160,653 2125,635"/>
+        </zone>
+        <zone xml:id="zone_r_4" type="metamark" points="1049,1252 1288,1252 1288,1417 1049,1417">
+          <zone type="line" xml:id="zone_l_4" points="1040,1444 1080,1435 1103,1444 1117,1432 1161,1438 1172,1426 1198,1441 1219,1424 1270,1412 1270,1236 1213,1219 1175,1239 1164,1230 1103,1233 1083,1253 1071,1247 1057,1262 1040,1259"/>
+        </zone>
+      </surface>
+      <surface xml:id="surface_r_19" type="surface" points="93,1727 572,1757 1769,1766 2972,1757 3827,1652 3817,2818 94,2707">
+        <zone xml:id="zone_r_5" type="metamark" points="3002,1691 3317,1691 3317,1788 3002,1788">
+          <zone type="line" xml:id="zone_l_5" points="3009,1764 3081,1773 3098,1758 3124,1776 3165,1764 3243,1808 3298,1799 3298,1675 3196,1686 3156,1669 3139,1681 3087,1672 3009,1701"/>
+        </zone>
+        <zone xml:id="zone_r_6" type="metamark" points="3035,2087 3313,2087 3313,2199 3035,2199">
+          <zone type="line" xml:id="zone_l_6" points="3026,2212 3046,2206 3072,2226 3110,2223 3127,2235 3142,2226 3150,2235 3173,2226 3231,2232 3257,2209 3274,2220 3298,2212 3298,2131 3139,2119 3064,2151 3026,2148"/>
+        </zone>
+        <zone xml:id="zone_r_7" type="metamark" points="3007,2398 3328,2398 3328,2511 3007,2511">
+          <zone type="line" xml:id="zone_l_7" points="3000,2550 3026,2558 3087,2521 3168,2529 3246,2489 3257,2501 3315,2498 3312,2397 3246,2420 3205,2397 3142,2440 3110,2437 3090,2417 3058,2431 3043,2417 2997,2426"/>
+        </zone>
+        <zone xml:id="zone_r_8" type="metamark" points="3027,2561 3350,2561 3350,2682 3027,2682">
+          <zone type="line" xml:id="zone_l_8" points="3020,2700 3101,2726 3127,2714 3153,2732 3217,2694 3260,2708 3335,2680 3335,2558 3263,2567 3228,2596 3142,2573 3110,2602 3020,2579"/>
+        </zone>
+        <zone xml:id="zone_r_9" type="add" points="3384,2571 3734,2571 3734,2727 3384,2727">
+          <zone type="line" xml:id="zone_l_9" points="3378,2717 3468,2729 3517,2703 3543,2711 3575,2697 3601,2711 3708,2711 3708,2544 3644,2535 3601,2561 3560,2538 3534,2555 3491,2535 3471,2541 3419,2509 3378,2518"/>
+        </zone>
+      </surface>
+      <surface xml:id="surface_r_17" type="surface" points="224,2749 816,2807 1291,2827 3083,2830 3485,2883 3447,6062 195,6042">
+        <zone xml:id="zone_r_14" type="metamark" points="517,3536 661,3536 661,3712 517,3712">
+          <zone type="line" xml:id="zone_l_1" points="508,3702 523,3702 537,3713 557,3710 563,3716 578,3716 595,3705 635,3708 635,3609 609,3604 595,3615 578,3598 569,3598 549,3615 543,3609 508,3604"/>
+        </zone>
+        <zone xml:id="zone_r_13" type="add" points="569,3933 696,3933 696,4103 569,4103">
+          <zone type="line" xml:id="zone_l_2" points="560,4138 592,4138 603,4126 627,4120 644,4129 676,4126 676,3866 650,3866 638,3858 612,3875 601,3866 583,3875 560,3872"/>
+        </zone>
+        <zone xml:id="zone_r_10" type="metamark" points="3004,3722 3347,3722 3347,3804 3004,3804">
+          <zone type="line" xml:id="zone_l_14" points="3007,3788 3338,3768 3336,3738 3005,3758"/>
+        </zone>
+        <zone xml:id="zone_r_11" type="metamark" points="3014,4034 3240,4034 3240,4152 3014,4152">
+          <zone type="line" xml:id="zone_l_15" points="3018,4132 3091,4134 3125,4093 3102,4074 3078,4105 3019,4102"/>
+        </zone>
+        <zone xml:id="zone_r_12" type="metamark" points="2622,4635 2965,4635 2965,4828 2622,4828">
+          <zone type="line" xml:id="zone_l_16" points="2643,4777 2940,4771 2939,4741 2642,4747"/>
+        </zone>
+      </surface>
+      <zone xml:id="zone_r_24" type="column-block" points="727,1657 2994,1657 2994,4638 727,4638">
+        <zone xml:id="zone_r_20" type="paragraph" points="764,1683 2953,1683 2953,1766 764,1766">
+          <zone type="line" xml:id="zone_tr_1_tl_3" points="892,1799 1129,1805 1178,1758 1418,1744 2402,1787 2905,1753 3110,1822 3208,1816 3208,1747 2989,1747 2746,1675 2024,1698 1900,1655 1715,1701 1496,1657 1302,1686 1161,1637 1074,1689 973,1620 889,1637"/>
+        </zone>
+        <zone xml:id="zone_r_21" type="paragraph" points="748,1760 2971,1760 2971,2733 2398,2756 1731,2757 958,2758 747,2758">
+          <zone type="line" xml:id="zone_tr_1_tl_4" points="1005,1828 2261,1851 2619,1808 2862,1842 2983,1802 2983,1761 2902,1753 1005,1770"/>
+          <zone type="line" xml:id="zone_tr_1_tl_5" points="731,1903 930,1938 1175,1900 1242,1932 2928,1903 2928,1836 2708,1819 2434,1857 1100,1834 1042,1877 731,1836"/>
+          <zone type="line" xml:id="zone_tr_1_tl_6" points="725,1992 2931,1969 2931,1909 2856,1888 2475,1935 2264,1897 725,1935"/>
+          <zone type="line" xml:id="zone_tr_1_tl_7" points="731,2065 1265,2096 1577,2056 2951,2047 2951,1972 731,2001"/>
+          <zone type="line" xml:id="zone_tr_1_tl_8" points="725,2125 1210,2163 1386,2125 2939,2137 2939,2065 2838,2044 2469,2041 2388,2082 1487,2056 1265,2096 725,2070"/>
+          <zone type="line" xml:id="zone_tr_1_tl_9" points="725,2218 2931,2200 2931,2125 2775,2119 725,2148"/>
+          <zone type="line" xml:id="zone_tr_1_tl_10" points="736,2275 1776,2307 1894,2264 2948,2275 2925,2189 910,2241 736,2212"/>
+          <zone type="line" xml:id="zone_tr_1_tl_11" points="748,2368 2934,2348 2916,2272 2602,2267 2529,2307 2475,2272 748,2287"/>
+          <zone type="line" xml:id="zone_tr_1_tl_12" points="736,2440 1579,2417 1669,2454 1787,2405 1819,2437 1966,2405 2013,2440 2740,2440 2934,2420 2937,2353 736,2374"/>
+          <zone type="line" xml:id="zone_tr_1_tl_13" points="725,2506 1478,2524 1704,2486 1906,2527 2529,2489 2708,2538 2902,2503 2902,2414 725,2443"/>
+          <zone type="line" xml:id="zone_tr_1_tl_14" points="742,2584 886,2616 1912,2558 2140,2596 2327,2558 2948,2581 2948,2509 2893,2501 742,2518"/>
+          <zone type="line" xml:id="zone_tr_1_tl_15" points="725,2651 2685,2642 2876,2694 2876,2567 2833,2561 1276,2576 1146,2616 725,2581"/>
+          <zone type="line" xml:id="zone_tr_1_tl_16" points="731,2769 1617,2708 2076,2743 2076,2642 941,2682 731,2648"/>
+          <zone type="line" xml:id="zone_tr_1_tl_17" points="1695,2769 2027,2784 2417,2758 2374,2726 2284,2737 2229,2694 2140,2737 1964,2749 1886,2717 1782,2749 1695,2740"/>
+        </zone>
+        <zone xml:id="zone_r_22" type="paragraph" points="740,3270 2986,3270 2986,3873 740,3873">
+          <zone type="line" xml:id="zone_tr_1_tl_24" points="938,3352 2957,3335 2931,3240 2810,3292 2541,3228 2431,3260 2119,3231 2070,3272 1972,3237 1834,3280 1646,3248 1487,3292 1403,3257 938,3263"/>
+          <zone type="line" xml:id="zone_tr_1_tl_25" points="736,3407 2957,3407 2957,3338 2876,3335 1149,3335 1094,3367 736,3335"/>
+          <zone type="line" xml:id="zone_tr_1_tl_26" points="748,3485 2971,3500 2971,3410 2931,3407 2830,3448 2648,3407 748,3419"/>
+          <zone type="line" xml:id="zone_tr_1_tl_27" points="742,3580 2963,3557 2963,3500 2836,3474 2446,3517 2348,3482 1724,3517 742,3485"/>
+          <zone type="line" xml:id="zone_tr_1_tl_28" points="754,3647 1871,3624 2521,3676 2616,3624 2697,3661 2974,3632 2974,3578 2763,3560 754,3580"/>
+          <zone type="line" xml:id="zone_tr_1_tl_29" points="736,3710 1025,3745 1207,3708 2957,3722 2957,3644 2913,3638 2622,3630 2532,3676 1917,3664 1871,3630 1458,3641 1418,3676 1305,3632 1207,3676 736,3647"/>
+          <zone type="line" xml:id="zone_l" points="745,3803 1386,3780 1556,3829 1683,3780 2954,3788 2922,3708 2688,3745 2648,3713 2024,3742 1308,3708 1025,3745 745,3705"/>
+          <zone type="line" xml:id="zone_tr_1_tl_31" points="748,3872 2053,3863 2053,3806 1906,3788 1556,3826 1415,3786 748,3803"/>
+        </zone>
+        <zone xml:id="zone_r_23" type="paragraph" points="738,3873 2986,3873 2986,4637 738,4637">
+          <zone type="line" xml:id="zone_tr_1_tl_32" points="927,3941 2954,3950 2954,3866 2902,3863 2775,3895 1865,3866 1796,3901 1652,3858 1386,3901 1279,3861 927,3875"/>
+          <zone type="line" xml:id="zone_tr_1_tl_33" points="754,4034 2974,4014 2974,3944 2893,3936 2746,3970 2428,3939 1383,3970 754,3927"/>
+          <zone type="line" xml:id="zone_tr_1_tl_34" points="736,4106 2971,4097 2971,4019 2743,4005 2688,4037 2056,4005 1966,4051 1782,4014 736,4034"/>
+          <zone type="line" xml:id="zone_tr_1_tl_35" points="736,4198 985,4158 1409,4204 1952,4161 2965,4172 2965,4100 2763,4086 736,4115"/>
+          <zone type="line" xml:id="zone_tr_1_tl_36" points="736,4250 2971,4248 2971,4172 2836,4164 2434,4201 2362,4158 2290,4196 1955,4164 736,4196"/>
+          <zone type="line" xml:id="zone_tr_1_tl_37" points="736,4308 2333,4354 2971,4320 2971,4245 2922,4242 2605,4279 736,4262"/>
+          <zone type="line" xml:id="zone_tr_1_tl_38" points="736,4409 1172,4375 1386,4421 2125,4377 2246,4412 2957,4398 2937,4308 2330,4354 736,4308"/>
+          <zone type="line" xml:id="zone_tr_1_tl_39" points="754,4479 2965,4473 2965,4392 2870,4386 2270,4429 1822,4383 1741,4418 754,4398"/>
+          <zone type="line" xml:id="zone_tr_1_tl_40" points="748,4545 1692,4580 1865,4528 2226,4568 2971,4542 2971,4461 2876,4458 2215,4496 748,4473"/>
+          <zone type="line" xml:id="zone_tr_1_tl_41" points="759,4643 907,4608 1002,4649 1063,4611 1320,4655 1698,4620 2656,4655 2708,4617 2836,4655 2836,4554 2708,4542 2004,4568 1865,4528 1718,4580 759,4542"/>
+        </zone>
+        <zone xml:id="zone_tr_1" type="paragraph" points="2668,2828 1919,2831 1155,2824 735,2806 745,3272 2978,3266 2973,2822">
+          <zone type="line" xml:id="zone_tr_1_tl_18" points="915,2876 2954,2888 2954,2781 2769,2807 2662,2763 2561,2815 2310,2772 2073,2827 1732,2784 1432,2827 1155,2763 915,2795"/>
+          <zone type="line" xml:id="zone_tr_1_tl_19" points="736,2968 2971,2960 2954,2882 2252,2882 2088,2922 736,2888"/>
+          <zone type="line" xml:id="zone_tr_1_tl_20" points="736,3049 2960,3035 2960,2977 2760,2954 736,2968"/>
+          <zone type="line" xml:id="zone_tr_1_tl_21" points="736,3133 2971,3118 2971,3035 736,3046"/>
+          <zone type="line" xml:id="zone_tr_1_tl_22" points="736,3202 910,3208 976,3168 1268,3214 1666,3191 1750,3231 1923,3185 2939,3211 2957,3130 2261,3101 2053,3147 1808,3110 1741,3144 1579,3113 1146,3144 820,3110 733,3144"/>
+          <zone type="line" xml:id="zone_tr_1_tl_23" points="748,3263 1097,3286 1288,3251 1311,3274 1400,3254 1490,3277 1487,3188 1282,3222 1184,3179 1161,3202 1051,3205 982,3170 898,3208 748,3196"/>
+        </zone>
+      </zone>
+      <zone xml:id="zone_r_15" type="add" points="479,2765 726,2765 726,2916 479,2916">
+        <zone type="line" xml:id="zone_l_3" points="485,2922 500,2922 537,2885 583,2882 603,2864 629,2864 655,2847 673,2853 681,2844 707,2844 707,2729 664,2734 641,2714 624,2720 606,2711 566,2729 528,2708 485,2717"/>
+      </zone>
+    </surface>
+  </facsimile>
+  <text>
+    <body>
+      <div facs="#surface_r_18" type="base">
+        <div facs="#surface_r_16" type="surface">
+          <fw facs="#zone_tr_2">
+            <lb facs="#zone_tr_2_tl_1"/>200
+          </fw>
+          <fw facs="#zone_r_2">
+            <lb facs="#zone_l_13"/>95
+          </fw>
+          <fw facs="#zone_r_3">
+            <lb facs="#zone_l_12"/>52
+          </fw>
+          <fw facs="#zone_r_1">
+            <lb facs="#zone_l_11"/>95
+          </fw>
+          <fw facs="#zone_r">
+            <lb facs="#zone_l_10"/>96
+          </fw>
+          <metamark xml:id="metamark-0406-0001" facs="#zone_r_4" function="deletion" target="#del1">
+            <lb facs="#zone_l_4"/><metamark function="correction"><g ref="#correction"/></metamark> <metamark function="deletion"><g ref="#deleatur"/></metamark>
+          </metamark>
+        </div>
+        <div facs="#surface_r_19" type="surface">
+          <metamark xml:id="metamark-0406-0002" facs="#zone_r_5" target="#asd">
+            <lb facs="#zone_l_5"/><metamark function="correction"><g ref="#correction"/></metamark> spat
+          </metamark>
+          <metamark xml:id="metamark-0406-0003" facs="#zone_r_6" target="#sdf">
+            <lb facs="#zone_l_6"/><metamark function="correction"><g ref="#correction"/></metamark> spa!
+          </metamark>
+          <metamark xml:id="metamark-0406-0004" facs="#zone_r_7" target="#mod2">
+            <lb facs="#zone_l_7"/><metamark function="correction"><g ref="#correction"/></metamark> spa!
+          </metamark>
+          <metamark xml:id="metamark-0406-0005" facs="#zone_r_8" target="#dfg">
+            <lb facs="#zone_l_8"/><metamark function="correction"><g ref="#correction"/></metamark> spa!
+          </metamark>
+        </div>
+        <div facs="#surface_r_17" type="surface">
+          <metamark xml:id="metamark-0406-0006" facs="#zone_r_14" function="font-kerning" target="#yxc">
+            <lb facs="#zone_l_1"/><metamark function="kerning"><g ref="#kerning"/></metamark>
+          </metamark>
+          <metamark xml:id="metamark-0406-0007" facs="#zone_r_10" target="#xcv">
+            <lb facs="#zone_l_14"/><metamark function="correction"><g ref="#correction"/></metamark> nicht spa!
+          </metamark>
+          <metamark xml:id="metamark-0406-0008" facs="#zone_r_11" target="#cvb">
+            <lb facs="#zone_l_15"/><metamark function="correction"><g ref="#correction"/></metamark> spat
+          </metamark>
+          <metamark xml:id="metamark-0406-0009" facs="#zone_r_12">
+            <lb facs="#zone_l_16"/><metamark function="line-spacing"><g ref="#line-spacing"/></metamark>
+          </metamark>
+        </div>
+        <div facs="#zone_r_24" type="column-block">
+          <p facs="#zone_r_20">
+            <lb facs="#zone_tr_1_tl_3"/><seg type="transposition"><del>Aus dem</del> <mod style="underline">Bericht der Untersuchungskommission des Gemeinderates</mod>:</seg>
+          </p>
+          <p facs="#zone_r_21">
+            <lb facs="#zone_tr_1_tl_4"/>Dieser Darstellung der Polizeidirektion stehen Aussagen
+            <lb facs="#zone_tr_1_tl_5"/>entgegen, die feststellen, daß es nach allerdings sehr großen Anstren-
+            <lb facs="#zone_tr_1_tl_6"/>gungen des Schutzbundes <hi style="letter-spacing">bereits gelungen war</hi>, der Feuerwehr
+            <lb facs="#zone_tr_1_tl_7"/>den Weg zu bahnen, und eben mit der Löscharbeit hätte begonnen
+            <lb facs="#zone_tr_1_tl_8"/>werden können, als <hi style="letter-spacing">die erste Salve krachte</hi>. Der Löschwagen
+            <lb facs="#zone_tr_1_tl_9"/>der <mod style="underline">Feuerwehr</mod> wurde <hi style="letter-spacing">selbst beschossen</hi> und zeigte Einschläge.
+            <lb facs="#zone_tr_1_tl_10"/>Was die zweite Begründung für das Schießen anlangt, daß die Gefahr
+            <lb facs="#zone_tr_1_tl_11"/>des Verbrennens der Wachleute im Justizpalast nicht anders abge-
+            <lb facs="#zone_tr_1_tl_12"/>wehrt werden konnte, so steht dem die entschiedene Aussage von
+            <lb facs="#zone_tr_1_tl_13"/>allem des Generals <hi style="letter-spacing">Körner</hi> entgegen, daß die Wachleute <mod style="underline">bereits in
+            <lb facs="#zone_tr_1_tl_14"/>Sicherheit</mod> gebracht waren, als das Schießen begann. Er selbst
+            <lb facs="#zone_tr_1_tl_15"/>hat es dem Kommandanten einer schießenden Wacheabteilung <mod style="underline">zuge
+            <lb facs="#zone_tr_1_tl_16"/>rufen</mod>, nachdem eine Salve vorüber war.<metamark function="correction"><g ref="#correction"/></metamark>
+            <lb facs="#zone_tr_1_tl_17"/><gap reason="cut" extent="3"/> <unclear reason="cut" cert="medium">fer sind zu beklagen</unclear>. <gap reason="cut" extent="6"/> <gap reason="cut" extent="3"/> <gap reason="cut" extent="3"/>
+          </p>
+          <p facs="#zone_r_22">
+            <lb facs="#zone_tr_1_tl_24"/>Der eine hält es so, als ob der Verschluß verrostet wäre; der
+            <lb facs="#zone_tr_1_tl_25"/>andere so wie eine Jagdflinte; der dritte hat das Gewehr fertig; der
+            <lb facs="#zone_tr_1_tl_26"/>vierte hat den Lauf nach aufwärts. Der fünfte hat es am Bauch und
+            <lb facs="#zone_tr_1_tl_27"/>beim Fuß, zwei Rückwärtige haben es geschultert, der rechts rück-
+            <lb facs="#zone_tr_1_tl_28"/>wärts hä<metamark function="kerning" target="#yxc"><g ref="#correction"/></metamark>lt den Lauf genau auf den Vordermann. Das heißt man
+            <lb facs="#zone_tr_1_tl_29"/>Fertignehmen. Das Fertignehmen sieht man, aber daß <hi style="letter-spacing">keine</hi>
+            <lb facs="#zone_l"/><hi style="letter-spacing">Menge vor ihnen <mod style="underline">ist</mod></hi>, sieht man auf den ersten Blick. Warum
+            <lb facs="#zone_tr_1_tl_31"/>die Leute fertig nehmen, ist unerklärlich.
+          </p>
+          <p facs="#zone_r_23">
+            <lb facs="#zone_tr_1_tl_32"/>lch habe es später beim Herübergehen gesehen, wie schon
+            <lb facs="#zone_tr_1_tl_33"/>die Menge gelaufen ist, und hatte genau denselben Eindruck: das ist
+            <lb facs="#zone_tr_1_tl_34"/>e<subst><del>e</del><add facs="#zone_r_13" xml:id="add-0406-0003"><lb facs="#zone_l_2"/><metamark function="correction"><g ref="#correction"/></metamark> i</add></subst>ne Horde, ein Rudel, und ich habe mich vor hingestellt und habe
+            <lb facs="#zone_tr_1_tl_35"/>gesagt, das ist <mod style="underline">ein Wahnsinn</mod>. . . .  Wenn man zwanzig Mann so
+            <lb facs="#zone_tr_1_tl_36"/>einsetzt, muß man sie in zwei Glieder ordnen, sie müßten Bajonett
+            <lb facs="#zone_tr_1_tl_37"/>auf haben und und ordentlich vormarschieren, dann würde die
+            <lb facs="#zone_tr_1_tl_38"/>Menge ohne Schuß laufen. <hi style="letter-spacing">Aber das war ein Rudel, das
+            <lb facs="#zone_tr_1_tl_39"/>gejagt hat,</hi> das nichts vor sich gehabt hat, und ich aller Soldat
+            <lb facs="#zone_tr_1_tl_40"/>habe vor Empörung aufgeschäumt. Ich habe gesagt, das ist Feigheit
+            <lb facs="#zone_tr_1_tl_41"/>von den Leuten, zu schießen. Ich habe vor innerer Wut gezittert.
+          </p>
+          <p facs="#zone_tr_1">
+            <lb facs="#zone_tr_1_tl_18"/><hi style="letter-spacing"><metamark function="addition"/><add facs="#zone_r_15" xml:id="add-0406-0002"><lb facs="#zone_l_3"/>– –</add>General Körner</hi> verwies in seiner Aussage auf das Bild
+            <lb facs="#zone_tr_1_tl_19"/>einer schießenden Wacheabteilung, das in der „Woche« vom 30. Juli
+            <lb facs="#zone_tr_1_tl_20"/>abgedruckt war, und schilderte, was auf diesem Bild zu sehen ist:
+            <lb facs="#zone_tr_1_tl_21"/>Da steht ein Rudel von zwanzig Mann, wobei ein Soldat von jedem
+            <lb facs="#zone_tr_1_tl_22"/>sagen kann, <hi style="letter-spacing">daß man dem Mann kein Gewehr in die
+            <lb facs="#zone_tr_1_tl_23"/>Hand geben soll.</hi>
+          </p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

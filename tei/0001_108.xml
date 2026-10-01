@@ -1,172 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Diplomatische Transkription: 0001_108.jpg</title>
-         </titleStmt>
-         <publicationStmt>
-            <p>Automatisch erzeugt aus PAGE-XML (eScriptorium-/Transkribus-Export) per XSLT.</p>
-         </publicationStmt>
-         <sourceDesc>
-            <p>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Diplomatische Transkription: 0001_108.jpg</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Automatisch erzeugt aus PAGE-XML (eScriptorium-/Transkribus-Export) per XSLT.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>
               Quelle: 0001_108.jpg.
               Erstellt: 2026-09-14T12:23:48.548+02:00,
-              zuletzt geaendert: 2026-09-22T14:02:14.241+02:00.
+              zuletzt geaendert: 2026-09-30T15:28:41.816+02:00.
             </p>
-         </sourceDesc>
-      </fileDesc>
-   </teiHeader>
-   <facsimile>
-      <graphic url="0001_108.jpg" width="2553px" height="3871px"/>
-      <surface xml:id="surface_r_5"
-               type="base"
-               subtype="base"
-               points="338,105 2398,84 2446,3742 402,3755">
-         <zone xml:id="zone_r_4"
-               type="fw"
-               points="1994,141 2232,141 2232,297 1994,297"/>
-         <zone xml:id="zone_r_3"
-               type="annotation"
-               points="1142,161 1406,161 1406,295 1142,295"/>
-         <surface xml:id="surface_r_6"
-                  type="surface"
-                  subtype="att"
-                  points="53,331 1885,301 2439,303 2446,3340 850,3377 194,3370 91,3340">
-            <zone xml:id="zone_r_12"
-                  type="column-block"
-                  points="708,301 2468,301 2468,3332 708,3332">
-               <zone xml:id="zone_tr_1"
-                     type="paragraph"
-                     points="721,315 721,607 2439,607 2439,301"/>
-               <zone xml:id="zone_r_7"
-                     type="paragraph"
-                     points="771,613 2432,613 2434,1768 771,1776"/>
-               <zone xml:id="zone_r_8"
-                     type="paragraph"
-                     points="773,1775 2435,1771 2432,2073 773,2073"/>
-               <zone xml:id="zone_r_9"
-                     type="paragraph"
-                     points="773,2066 2435,2067 2426,2877 773,2877"/>
-               <zone xml:id="zone_r_10"
-                     type="paragraph"
-                     points="775,2879 2433,2879 2430,3028 775,3028"/>
-               <zone xml:id="zone_r_11"
-                     type="paragraph"
-                     points="732,3029 2435,3034 2426,3299 732,3299"/>
-            </zone>
-            <zone xml:id="zone_r"
-                  type="add-block"
-                  points="134,518 619,513 608,986 123,1004">
-               <zone xml:id="zone_r_13"
-                     type="paragraph"
-                     points="142,530 592,530 592,968 142,968"/>
-            </zone>
-            <zone xml:id="zone_r_14"
-                  type="add-block"
-                  points="301,922 563,922 563,1148 301,1148">
-               <zone xml:id="zone_r_1"
-                     type="paragraph"
-                     points="332,943 544,943 544,1129 332,1129"/>
-            </zone>
-            <zone xml:id="zone_r_2"
-                  type="add"
-                  points="401,1469 674,1469 674,1606 401,1606"/>
-         </surface>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <facsimile>
+    <graphic url="0001_108.jpg" width="2553px" height="3871px"/>
+    <surface xml:id="surface_r_5" type="base" subtype="base" points="338,105 2398,84 2446,3742 402,3755">
+      <zone xml:id="zone_r_4" type="fw" points="1994,141 2232,141 2232,297 1994,297">
+        <zone type="line" xml:id="zone_l" points="1997,288 2018,295 2025,288 2048,303 2090,301 2112,290 2133,301 2192,284 2192,140 2171,140 2141,123 2097,136 2084,125 2035,125 2025,136 1997,131"/>
+      </zone>
+      <zone xml:id="zone_r_3" type="metamark" points="1142,161 1406,161 1406,295 1142,295">
+        <zone type="line" xml:id="zone_tr_1_tl_1" points="1143,259 1172,267 1187,254 1196,259 1217,248 1232,263 1247,265 1266,250 1274,259 1314,244 1319,165 1304,170 1291,159 1255,178 1234,165 1174,195 1147,184"/>
+      </zone>
+      <surface xml:id="surface_r_6" type="surface" subtype="att" points="53,331 1885,301 2439,303 2446,3340 850,3377 194,3370 91,3340">
+        <zone xml:id="zone_r_12" type="column-block" points="708,301 2468,301 2468,3332 708,3332">
+          <zone xml:id="zone_tr_1" type="paragraph" points="721,315 721,607 2439,607 2439,301">
+            <zone type="line" xml:id="zone_tr_1_tl_3" points="712,403 2413,396 2413,341 2192,324 712,352"/>
+            <zone type="line" xml:id="zone_tr_1_tl_4" points="710,462 2404,477 2404,399 2287,392 710,405"/>
+            <zone type="line" xml:id="zone_tr_1_tl_5" points="710,532 2415,532 2415,475 2351,462 710,473"/>
+            <zone type="line" xml:id="zone_tr_1_tl_6" points="714,644 784,608 2415,606 2415,534 2258,524 717,536"/>
+          </zone>
+          <zone xml:id="zone_r_7" type="paragraph" points="771,613 2432,613 2434,1768 771,1776">
+            <zone type="line" xml:id="zone_tr_1_tl_7" points="950,691 2410,681 2410,621 2287,598 950,608"/>
+            <zone type="line" xml:id="zone_tr_1_tl_8" points="782,744 2408,753 2408,685 2243,666 1461,697 1136,666 956,710 782,661"/>
+            <zone type="line" xml:id="zone_tr_1_tl_9" points="770,820 1721,848 2201,803 2307,861 2415,829 2415,765 2302,725 1813,772 770,748"/>
+            <zone type="line" xml:id="zone_tr_1_tl_10" points="787,905 1963,878 2413,918 2413,829 2307,861 2201,803 2105,842 1789,818 1715,859 1484,816 1266,850 787,825"/>
+            <zone type="line" xml:id="zone_tr_1_tl_11" points="778,982 2415,977 2415,916 2343,893 1955,926 1902,888 1501,918 1437,882 778,926"/>
+            <zone type="line" xml:id="zone_tr_1_tl_12" points="776,1043 1637,1041 1696,1075 1813,1032 1883,1066 2413,1043 2396,971 776,992"/>
+            <zone type="line" xml:id="zone_tr_1_tl_13" points="778,1130 2413,1126 2398,1041 2281,1077 1819,1032 1698,1075 1635,1041 1484,1073 1361,1037 1302,1077 778,1049"/>
+            <zone type="line" xml:id="zone_tr_1_tl_14" points="782,1200 2408,1208 2372,1119 782,1130"/>
+            <zone type="line" xml:id="zone_tr_1_tl_15" points="782,1268 2415,1268 2415,1213 2313,1187 782,1200"/>
+            <zone type="line" xml:id="zone_tr_1_tl_16" points="776,1346 2421,1346 2421,1257 776,1264"/>
+            <zone type="line" xml:id="zone_tr_1_tl_17" points="776,1423 2413,1403 2413,1327 776,1350"/>
+            <zone type="line" xml:id="zone_tr_1_tl_18" points="782,1499 2406,1480 2406,1427 2175,1401 782,1425"/>
+            <zone type="line" xml:id="zone_tr_1_tl_19" points="770,1560 2410,1548 2381,1476 770,1507"/>
+            <zone type="line" xml:id="zone_tr_1_tl_20" points="782,1628 2402,1626 2387,1545 2046,1588 1927,1552 782,1560"/>
+            <zone type="line" xml:id="zone_tr_1_tl_21" points="787,1704 2402,1704 2370,1615 787,1637"/>
+            <zone type="line" xml:id="zone_tr_1_tl_22" points="787,1783 2063,1787 2063,1715 1908,1690 1562,1730 787,1707"/>
+          </zone>
+          <zone xml:id="zone_r_8" type="paragraph" points="773,1775 2435,1771 2432,2073 773,2073">
+            <zone type="line" xml:id="zone_tr_1_tl_23" points="960,1851 2421,1857 2421,1751 2039,1796 960,1789"/>
+            <zone type="line" xml:id="zone_tr_1_tl_24" points="787,1919 2421,1936 2421,1872 2281,1844 1673,1838 1391,1880 893,1836 787,1870"/>
+            <zone type="line" xml:id="zone_tr_1_tl_25" points="784,1999 2421,1999 2421,1936 2266,1916 2184,1946 1957,1908 1802,1955 1558,1910 1064,1944 784,1916"/>
+            <zone type="line" xml:id="zone_tr_1_tl_26" points="797,2107 1380,2048 2379,2088 2423,1999 799,1995"/>
+          </zone>
+          <zone xml:id="zone_r_9" type="paragraph" points="773,2066 2435,2067 2426,2877 773,2877">
+            <zone type="line" xml:id="zone_tr_1_tl_27" points="962,2152 2415,2139 2415,2067 962,2061"/>
+            <zone type="line" xml:id="zone_tr_1_tl_28" points="787,2224 2417,2209 2417,2158 2330,2145 1211,2175 787,2143"/>
+            <zone type="line" xml:id="zone_tr_1_tl_29" points="782,2287 2368,2304 2423,2285 2425,2215 1221,2192 1052,2201 1003,2247 782,2228"/>
+            <zone type="line" xml:id="zone_tr_1_tl_30" points="787,2370 2421,2362 2421,2285 2116,2317 1963,2273 1851,2309 787,2287"/>
+            <zone type="line" xml:id="zone_tr_1_tl_31" points="787,2438 2421,2436 2421,2364 2311,2357 787,2374"/>
+            <zone type="line" xml:id="zone_tr_1_tl_32" points="787,2508 2421,2502 2400,2430 787,2438"/>
+            <zone type="line" xml:id="zone_tr_1_tl_33" points="791,2591 2415,2580 2415,2506 2302,2491 1766,2527 1645,2493 793,2506"/>
+            <zone type="line" xml:id="zone_tr_1_tl_34" points="797,2658 2417,2650 2385,2569 797,2597"/>
+            <zone type="line" xml:id="zone_tr_1_tl_35" points="791,2733 1584,2714 1641,2748 2137,2705 2421,2743 2402,2646 2080,2673 2018,2642 1948,2678 1791,2648 1732,2684 1658,2652 791,2663"/>
+            <zone type="line" xml:id="zone_tr_1_tl_36" points="787,2815 1624,2786 1891,2834 2413,2824 2413,2737 2355,2722 787,2733"/>
+            <zone type="line" xml:id="zone_tr_1_tl_37" points="797,2883 1844,2866 1844,2803 1609,2786 797,2813"/>
+          </zone>
+          <zone xml:id="zone_r_10" type="paragraph" points="775,2879 2433,2879 2430,3028 775,3028">
+            <zone type="line" xml:id="zone_tr_1_tl_38" points="977,2972 1376,2928 1490,2972 1601,2936 1961,2981 2417,2955 2417,2875 2292,2828 1997,2892 1855,2858 1715,2887 1673,2851 977,2877"/>
+            <zone type="line" xml:id="zone_tr_1_tl_39" points="793,3040 823,3027 916,3042 1022,3023 1039,3006 1096,3034 1113,3019 1230,3025 1230,2960 1200,2966 1172,2947 1151,2964 1096,2945 990,2972 905,2936 793,2968"/>
+          </zone>
+          <zone xml:id="zone_r_11" type="paragraph" points="732,3029 2435,3034 2426,3299 732,3299">
+            <zone type="line" xml:id="zone_tr_1_tl_40" points="869,3091 2408,3097 2408,3034 2364,3021 1524,3032 1295,2968 1187,3029 869,3042"/>
+            <zone type="line" xml:id="zone_tr_1_tl_41" points="738,3191 1660,3152 2402,3186 2402,3099 738,3116"/>
+            <zone type="line" xml:id="zone_tr_1_tl_42" points="746,3244 1437,3229 1537,3280 1694,3227 2408,3241 2408,3180 2256,3157 746,3184"/>
+            <zone type="line" xml:id="zone_tr_1_tl_43" points="738,3333 926,3305 971,3326 1189,3299 1327,3314 1346,3229 740,3241"/>
+          </zone>
+        </zone>
+        <zone xml:id="zone_r_13" type="metamark" points="142,530 592,530 592,968 142,968">
+          <zone type="line" xml:id="zone_l_1" points="176,970 516,628 495,607 155,949"/>
+        </zone>
+        <zone xml:id="zone_r_14" type="metamark" points="301,922 563,922 563,1148 301,1148">
+          <zone type="line" xml:id="zone_l_2" points="335,1128 350,1145 367,1147 382,1162 579,929 562,922 547,890 538,886"/>
+        </zone>
+        <zone xml:id="zone_r_2" type="add" points="401,1469 674,1469 674,1606 401,1606">
+          <zone type="line" xml:id="zone_l_3" points="409,1567 439,1577 469,1571 498,1592 522,1582 543,1598 579,1586 591,1596 647,1569 647,1509 594,1514 577,1499 541,1497 490,1518 441,1480 409,1480"/>
+        </zone>
+        <zone xml:id="zone_r_15" type="metamark" points="637,1768 900,1785 901,1870 788,1871 747,1965 630,1968">
+          <zone type="line" xml:id="zone_l_4" points="655,1891 756,1890 756,1860 655,1861"/>
+        </zone>
       </surface>
-   </facsimile>
-   <text>
-      <body>
-         <div facs="#surface_r_5" type="base" subtype="base">
-            <div>
-               <p>
-                  <lb/>##### ### ##### #### ############# ## #### ##### ######
+      <zone type="line" xml:id="zone_tr_1_tl_2" points="956,341 2421,337 2421,271 2048,303 1707,257 1560,303 956,276"/>
+    </surface>
+  </facsimile>
+  <text>
+    <body>
+      <div facs="#surface_r_5" type="base" subtype="base">
+        <div>
+          <p>
+            <lb facs="#zone_tr_1_tl_2"/><delSpan spanTo="#delSpan-0108-0001"/><gap reason="cut" extent="5"/> <gap reason="cut" extent="3"/> <gap reason="cut" extent="5"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="13"/> <gap reason="cut" extent="2"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="6"/>
           </p>
-            </div>
-            <div>
-               <fw facs="#zone_r_4">
-                  <lb/>53
+        </div>
+        <div>
+          <fw facs="#zone_r_4">
+            <lb facs="#zone_l"/>53
           </fw>
-            </div>
-            <metamark xml:id="metamark01080001" facs="#zone_r_3">
-               <lb/>col
+        </div>
+        <metamark xml:id="metamark-0108-0001" facs="#zone_r_3">
+          <lb facs="#zone_tr_1_tl_1"/>col
         </metamark>
-            <div facs="#surface_r_6" type="surface" subtype="att">
-               <div facs="#zone_r_12" type="column-block">
-                  <div type="article">
-                     <p facs="#zone_tr_1">
-                        <lb/>einzelne von ihnen eine lgute Anklage gegen die uner⸗
-                <lb/>hörte Unmenſchlichkeit der Polizei an dem Unglückstag
-                <lb/>iſt. Wie die Polizei <hi style="letter-spacing">auf ganz unſchuldige Per⸗
-                <lb/>ſonen Jagd gemacht</hi> hat, beſchreibt folgender Brief:
+        <div facs="#surface_r_6" type="surface" subtype="att">
+          <div facs="#zone_r_12" type="column-block">
+            <div type="article">
+              <p facs="#zone_tr_1" hand-medium="newspaper-print" part="F">
+                <lb facs="#zone_tr_1_tl_3"/>einzelne von ihnen eine <choice><sic>lgute</sic><corr>gute</corr></choice> Anklage gegen die uner⸗
+                <lb facs="#zone_tr_1_tl_4"/>hörte Unmenſchlichkeit der Polizei an dem Unglückstag
+                <lb facs="#zone_tr_1_tl_5"/>iſt. Wie die Polizei <hi style="letter-spacing">auf ganz unſchuldige Per⸗</hi>
+                <lb facs="#zone_tr_1_tl_6"/><hi style="letter-spacing">ſonen Jagd</hi> gemacht hat, beſchreibt folgender Brief:
               </p>
-                     <p facs="#zone_r_7" rendition="longQuote">
-                        <lb/>Unter den Augenblicksbildern, die Sie in den letzten
-                <lb/>Tagen von den blutigen Ereigniſſen gegeben haben — und
-                <lb/>die jene bedankte „maßvolle Pflichterfüllung“ der Wiener
-                <lb/>Polizei ins rechte Licht rücken —, blieb unerwähnt der
-                <lb/>
-                        <hi style="letter-spacing">grauenhafte Ueberfall</hi>, den die Polizei Freitag
-                <lb/>nach ½5 Uhr auf die Paſſanten des <hi style="letter-spacing">Burgringes</hi> voll⸗
-                <lb/>führte, die hier — teils zufällig, teils aus Neugier — die
-                <lb/>Bänke beſetzt hielten, in der Allee wandelten oder umher
-                <lb/>ſtanden, ohne ſich bis zur Bellaria vorzuwagen, wo indeſſen
-                <lb/>Ruhe eingetreten ſchien. Aus der Parlamentsgegend
-                <lb/>kommend hatte ich gerade die Höhe des äußeren Burgtor⸗
-                <lb/>erreicht, als von der Bellariaſeite wieder Schüſſe herüber⸗
-                <lb/>tönten. Mitten in einer Gruppe entſetzter Flüchtlinge duckte
-                <lb/>ich mich, ſo gut es ging, hinter dem ſteinern Unterſatz de
-                <lb/>Volksgartengitters, das hier zum Burgtor einſchwenkt. Die
-                <lb/>Eingänge waren geſchloſſen, Flucht unmöglich.
+              <p facs="#zone_r_7" rendition="longQuote" hand-medium="newspaper-print">
+                <lb facs="#zone_tr_1_tl_7"/>Unter den Augenblicksbildern, die Sie in den letzten
+                <lb facs="#zone_tr_1_tl_8"/>Tagen von den blutigen Ereigniſſen gegeben haben — und
+                <lb facs="#zone_tr_1_tl_9"/>die jene bedankte „maßvolle Pflichterfüllung“ der Wiener
+                <lb facs="#zone_tr_1_tl_10"/>Polizei ins rechte Licht rücken —, blieb unerwähnt der
+                <lb facs="#zone_tr_1_tl_11"/><hi style="letter-spacing">grauenhafte Ueberfall</hi>, den die Polizei Freitag
+                <lb facs="#zone_tr_1_tl_12"/>nach ½5 Uhr auf die Paſſanten des <hi style="letter-spacing">Burgringes</hi> voll⸗
+                <lb facs="#zone_tr_1_tl_13"/>führte, die hier — teils zufällig, teils aus Neugier — die
+                <lb facs="#zone_tr_1_tl_14"/>Bänke beſetzt hielten, in der Allee wandelten oder umher
+                <lb facs="#zone_tr_1_tl_15"/>ſtanden, ohne ſich bis zur Bellaria vorzuwagen, wo indeſſen
+                <lb facs="#zone_tr_1_tl_16"/>Ruhe eingetreten ſchien. Aus der Parlamentsgegend
+                <lb facs="#zone_tr_1_tl_17"/>kommend hatte ich gerade die Höhe des äußeren Burgtor⸗
+                <lb facs="#zone_tr_1_tl_18"/>erreicht, als von der Bellariaſeite wieder Schüſſe herüber⸗
+                <lb facs="#zone_tr_1_tl_19"/><subst><del>tönten</del><add facs="#zone_r_2" xml:id="add-0108-0001"><lb facs="#zone_l_3"/>— —</add></subst><anchor xml:id="delSpan-0108-0001"/><subst><del>.</del><add place="overwritten"><metamark function="selection"><g ref="#correction"/></metamark></add></subst> Mitten in einer Gruppe entſetzter Flüchtlinge duckte
+                <lb facs="#zone_tr_1_tl_20"/>ich mich, ſo gut es ging, hinter dem ſteinern Unterſatz des
+                <lb facs="#zone_tr_1_tl_21"/>Volksgartengitters, das hier zum Burgtor einſchwenkt. Die
+                <lb facs="#zone_tr_1_tl_22"/>Eingänge waren geſchloſſen, Flucht unmöglich.
               </p>
-                     <p facs="#zone_r_8" rendition="longQuote">
-                        <lb/>Plötzlich fahren hinter uns zwei <hi style="letter-spacing">Mannſchafts⸗
-                <lb/>autos</hi> auf, werfen etwa dreißig Mann Polizei aus, die
-                <lb/>das verängſtigte Häuflein Menſchen — unter ihnen mehrere
-                <lb/>Frauen mit Kindern — aus dem Unerwarteten anſpringen.
+              <p xml:id="p-0108-0001" facs="#zone_r_8" rendition="longQuote" hand-medium="newspaper-print">
+                <lb facs="#zone_tr_1_tl_23"/>Plötzlich fahren hinter uns zwei <hi style="letter-spacing">Mannſchafts⸗
+                <lb facs="#zone_tr_1_tl_24"/>autos</hi> auf, werfen etwa dreißig Mann Polizei aus, die
+                <lb facs="#zone_tr_1_tl_25"/>das verängſtigte Häuflein Menſchen — unter ihnen mehrere
+                <lb facs="#zone_tr_1_tl_26"/>Frauen mit Kindern — aus dem Unerwarteten anſpringen.
               </p>
-                     <p facs="#zone_r_9" rendition="longQuote">
-                        <lb/>
-                        <hi style="bold">Keine Warnung, keine Aufforderung, keine Ver⸗
-                <lb/>haftung, nur ein Kommando: „Feuer!“</hi> Zwei Salven
-                <lb/>krachen, ich ſehe, wie eine Bürgersfrau, die ſich hinter ihrem
-                <lb/>aufgeſpannten Regenſchirm zu decken verſucht — Tragikomik
-                <lb/>des Entſetzens! —, zuſammenbricht. Wir werfen uns hinter
-                <lb/>einem Haufen Feinſchotter, der zufällig entlang des Geh⸗
-                <lb/>ſteiges aufgeſchüttet iſt, über uns donnert minutenlang und
-                <lb/>ohne Pauſe Salve auf Salve, dann werden wir „Hände
-                <lb/>hoch“ mit geſchwungenen Kolben gegen den Opernring
-                <lb/>gejagt, immer wieder bedroht von Gewehren im Anſchlag
-                <lb/>Es war, was man eine „Hetz“ nennt.
+              <p facs="#zone_r_9" rendition="longQuote" hand-medium="newspaper-print">
+                <lb facs="#zone_tr_1_tl_27"/><hi style="bold">K<mod style="underline">eine Warnung, keine Aufforderung, <undo spanTo="#anchor-0108-0002" rend="wavy-line"/>keine Ver⸗<anchor type="undo" xml:id="anchor-0108-0002"/></mod></hi>
+                <lb facs="#zone_tr_1_tl_28"/><hi style="bold"><mod style="underline"><undo spanTo="#anchor-0108-0003" rend="wavy-line"/>haftung,<anchor type="undo" xml:id="anchor-0108-0003"/> nur ein Kommando: „Feuer</mod>!“</hi> Zwei Salven
+                <lb facs="#zone_tr_1_tl_29"/>krachen, ich ſehe, wie eine Bürgersfrau, die ſich hinter ihrem
+                <lb facs="#zone_tr_1_tl_30"/>aufgeſpannten Regenſchirm zu decken verſucht — Tragikomik
+                <lb facs="#zone_tr_1_tl_31"/>des Entſetzens! —, zuſammenbricht. Wir werfen uns hinter
+                <lb facs="#zone_tr_1_tl_32"/>einem Haufen Feinſchotter, der zufällig entlang des Geh⸗
+                <lb facs="#zone_tr_1_tl_33"/>ſteiges aufgeſchüttet iſt, über uns donnert minutenlang und
+                <lb facs="#zone_tr_1_tl_34"/>ohne Pauſe Salve auf Salve, dann werden wir „Hände
+                <lb facs="#zone_tr_1_tl_35"/>hoch“ mit geſchwungenen Kolben gegen den Opernring
+                <lb facs="#zone_tr_1_tl_36"/>gejagt, immer wieder bedroht von Gewehren im Anſchlag
+                <lb facs="#zone_tr_1_tl_37"/>Es war, was man eine „Hetz“ nennt.
               </p>
-                     <p facs="#zone_r_10" rendition="longQuote">
-                        <lb/>Drei Menſchen, verwundet oder ohnmächtig, blieben
-                <lb/>auf dem Platze.
+              <p facs="#zone_r_10" rendition="longQuote" hand-medium="newspaper-print">
+                <lb facs="#zone_tr_1_tl_38"/>Drei Menſchen, verwundet oder ohnmächtig, blieben
+                <lb facs="#zone_tr_1_tl_39"/>auf dem Platze.<metamark function="selection-end"><g ref="#correction"/></metamark>
               </p>
-                     <p facs="#zone_r_11">
-                        <lb/>So haben die Schober⸗Gardiſten ohne jeden Grund
-                <lb/>auf friedliche Paſſanten Jags gemacht! Und zu dieſen
-                <lb/>zariſtiſchen Polizeimethoden ſchweigt die ganze bürger⸗
-                <lb/>liche Oeffentlichkeit!
+              <p facs="#zone_r_11" hand-medium="newspaper-print">
+                <lb facs="#zone_tr_1_tl_40"/><del type="deselection">So haben die Schober⸗Gardiſten ohne jeden Grund
+                <lb facs="#zone_tr_1_tl_41"/>auf friedliche Paſſanten Jagd gemacht! Und zu dieſen
+                <lb facs="#zone_tr_1_tl_42"/>zariſtiſchen Polizeimethoden ſchweigt die ganze bürger⸗
+                <lb facs="#zone_tr_1_tl_43"/>liche Oeffentlichkeit!</del>
               </p>
-                  </div>
-               </div>
-               <div facs="#zone_r" type="add-block">
-                  <p facs="#zone_r_13">
-                     <lb/>29. Juli
-            </p>
-               </div>
-               <div facs="#zone_r_14" type="add-block">
-                  <p facs="#zone_r_1">
-                     <lb/>26.)
-            </p>
-               </div>
-               <div>
-                  <add facs="#zone_r_2">
-                     <lb/>— —</add>
-               </div>
             </div>
-         </div>
-      </body>
-   </text>
+          </div>
+          <metamark xml:id="metamark-0108-0002" facs="#zone_r_13">
+            <lb facs="#zone_l_1"/>29. Juli
+          </metamark>
+          <metamark xml:id="metamark-0108-0003" facs="#zone_r_14">
+            <lb facs="#zone_l_2"/>26.)
+          </metamark>
+          <metamark xml:id="metamark-0108-0004" facs="#zone_r_15" function="selection-start" target="#p-0108-0001">
+            <lb facs="#zone_l_4"/><undo spanTo="#anchor-0108-0001" rend="strike-out" target="#metamark-0108-0004"/><g ref="#correction"/><anchor type="undo" xml:id="anchor-0108-0001"/>
+          </metamark>
+        </div>
+      </div>
+    </body>
+  </text>
 </TEI>
