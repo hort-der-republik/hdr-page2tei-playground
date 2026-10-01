@@ -9,6 +9,21 @@ Creating a workflow that allows for seamless transformation without manual XML e
 
 Adding tags and attributes in Transkribus (sonme custom, some TEI) > XSLT > voilá. 
 
+## Status
+
+**Adding and transforming structural markup**, including
+
+- region nesting
+- assigning lines to regions
+- transforming regions to respective surface, zone, div, and metamark elements
+- relocating margin additions from outside the text column into the text flow while preserving coordinates
+
+works so far. Clean-up and testing ongoing.
+
+Next annotation layer: **Genetic markup** via change/hand etc. attributes.
+
+Not yet included: More or less the complete **TEI:header**.
+
 
 
 
