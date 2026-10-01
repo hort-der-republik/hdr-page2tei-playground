@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Diplomatische Transkription: 0001_108.jpg</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Automatisch erzeugt aus PAGE-XML (eScriptorium-/Transkribus-Export) per XSLT.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>
+              Quelle: 0001_108.jpg.
+              Erstellt: 2026-09-14T12:23:48.548+02:00,
+              zuletzt geaendert: 2026-09-22T14:02:14.241+02:00.
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <facsimile>
+      <graphic url="0001_108.jpg" width="2553px" height="3871px"/>
+      <surface xml:id="surface_r_5"
+               type="base"
+               subtype="base"
+               points="338,105 2398,84 2446,3742 402,3755">
+         <zone xml:id="zone_r_4"
+               type="fw"
+               points="1994,141 2232,141 2232,297 1994,297"/>
+         <zone xml:id="zone_r_3"
+               type="annotation"
+               points="1142,161 1406,161 1406,295 1142,295"/>
+         <surface xml:id="surface_r_6"
+                  type="surface"
+                  subtype="att"
+                  points="53,331 1885,301 2439,303 2446,3340 850,3377 194,3370 91,3340">
+            <zone xml:id="zone_r_12"
+                  type="column-block"
+                  points="708,301 2468,301 2468,3332 708,3332">
+               <zone xml:id="zone_tr_1"
+                     type="paragraph"
+                     points="721,315 721,607 2439,607 2439,301"/>
+               <zone xml:id="zone_r_7"
+                     type="paragraph"
+                     points="771,613 2432,613 2434,1768 771,1776"/>
+               <zone xml:id="zone_r_8"
+                     type="paragraph"
+                     points="773,1775 2435,1771 2432,2073 773,2073"/>
+               <zone xml:id="zone_r_9"
+                     type="paragraph"
+                     points="773,2066 2435,2067 2426,2877 773,2877"/>
+               <zone xml:id="zone_r_10"
+                     type="paragraph"
+                     points="775,2879 2433,2879 2430,3028 775,3028"/>
+               <zone xml:id="zone_r_11"
+                     type="paragraph"
+                     points="732,3029 2435,3034 2426,3299 732,3299"/>
+            </zone>
+            <zone xml:id="zone_r"
+                  type="add-block"
+                  points="134,518 619,513 608,986 123,1004">
+               <zone xml:id="zone_r_13"
+                     type="paragraph"
+                     points="142,530 592,530 592,968 142,968"/>
+            </zone>
+            <zone xml:id="zone_r_14"
+                  type="add-block"
+                  points="301,922 563,922 563,1148 301,1148">
+               <zone xml:id="zone_r_1"
+                     type="paragraph"
+                     points="332,943 544,943 544,1129 332,1129"/>
+            </zone>
+            <zone xml:id="zone_r_2"
+                  type="add"
+                  points="401,1469 674,1469 674,1606 401,1606"/>
+         </surface>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div facs="#surface_r_5" type="base" subtype="base">
+            <div>
+               <p>
+                  <lb/>##### ### ##### #### ############# ## #### ##### ######
+          </p>
+            </div>
+            <div>
+               <fw facs="#zone_r_4">
+                  <lb/>53
+          </fw>
+            </div>
+            <metamark xml:id="metamark01080001" facs="#zone_r_3">
+               <lb/>col
+        </metamark>
+            <div facs="#surface_r_6" type="surface" subtype="att">
+               <div facs="#zone_r_12" type="column-block">
+                  <div type="article">
+                     <p facs="#zone_tr_1">
+                        <lb/>einzelne von ihnen eine lgute Anklage gegen die uner⸗
+                <lb/>hörte Unmenſchlichkeit der Polizei an dem Unglückstag
+                <lb/>iſt. Wie die Polizei <hi style="letter-spacing">auf ganz unſchuldige Per⸗
+                <lb/>ſonen Jagd gemacht</hi> hat, beſchreibt folgender Brief:
+              </p>
+                     <p facs="#zone_r_7" rendition="longQuote">
+                        <lb/>Unter den Augenblicksbildern, die Sie in den letzten
+                <lb/>Tagen von den blutigen Ereigniſſen gegeben haben — und
+                <lb/>die jene bedankte „maßvolle Pflichterfüllung“ der Wiener
+                <lb/>Polizei ins rechte Licht rücken —, blieb unerwähnt der
+                <lb/>
+                        <hi style="letter-spacing">grauenhafte Ueberfall</hi>, den die Polizei Freitag
+                <lb/>nach ½5 Uhr auf die Paſſanten des <hi style="letter-spacing">Burgringes</hi> voll⸗
+                <lb/>führte, die hier — teils zufällig, teils aus Neugier — die
+                <lb/>Bänke beſetzt hielten, in der Allee wandelten oder umher
+                <lb/>ſtanden, ohne ſich bis zur Bellaria vorzuwagen, wo indeſſen
+                <lb/>Ruhe eingetreten ſchien. Aus der Parlamentsgegend
+                <lb/>kommend hatte ich gerade die Höhe des äußeren Burgtor⸗
+                <lb/>erreicht, als von der Bellariaſeite wieder Schüſſe herüber⸗
+                <lb/>tönten. Mitten in einer Gruppe entſetzter Flüchtlinge duckte
+                <lb/>ich mich, ſo gut es ging, hinter dem ſteinern Unterſatz de
+                <lb/>Volksgartengitters, das hier zum Burgtor einſchwenkt. Die
+                <lb/>Eingänge waren geſchloſſen, Flucht unmöglich.
+              </p>
+                     <p facs="#zone_r_8" rendition="longQuote">
+                        <lb/>Plötzlich fahren hinter uns zwei <hi style="letter-spacing">Mannſchafts⸗
+                <lb/>autos</hi> auf, werfen etwa dreißig Mann Polizei aus, die
+                <lb/>das verängſtigte Häuflein Menſchen — unter ihnen mehrere
+                <lb/>Frauen mit Kindern — aus dem Unerwarteten anſpringen.
+              </p>
+                     <p facs="#zone_r_9" rendition="longQuote">
+                        <lb/>
+                        <hi style="bold">Keine Warnung, keine Aufforderung, keine Ver⸗
+                <lb/>haftung, nur ein Kommando: „Feuer!“</hi> Zwei Salven
+                <lb/>krachen, ich ſehe, wie eine Bürgersfrau, die ſich hinter ihrem
+                <lb/>aufgeſpannten Regenſchirm zu decken verſucht — Tragikomik
+                <lb/>des Entſetzens! —, zuſammenbricht. Wir werfen uns hinter
+                <lb/>einem Haufen Feinſchotter, der zufällig entlang des Geh⸗
+                <lb/>ſteiges aufgeſchüttet iſt, über uns donnert minutenlang und
+                <lb/>ohne Pauſe Salve auf Salve, dann werden wir „Hände
+                <lb/>hoch“ mit geſchwungenen Kolben gegen den Opernring
+                <lb/>gejagt, immer wieder bedroht von Gewehren im Anſchlag
+                <lb/>Es war, was man eine „Hetz“ nennt.
+              </p>
+                     <p facs="#zone_r_10" rendition="longQuote">
+                        <lb/>Drei Menſchen, verwundet oder ohnmächtig, blieben
+                <lb/>auf dem Platze.
+              </p>
+                     <p facs="#zone_r_11">
+                        <lb/>So haben die Schober⸗Gardiſten ohne jeden Grund
+                <lb/>auf friedliche Paſſanten Jags gemacht! Und zu dieſen
+                <lb/>zariſtiſchen Polizeimethoden ſchweigt die ganze bürger⸗
+                <lb/>liche Oeffentlichkeit!
+              </p>
+                  </div>
+               </div>
+               <div facs="#zone_r" type="add-block">
+                  <p facs="#zone_r_13">
+                     <lb/>29. Juli
+            </p>
+               </div>
+               <div facs="#zone_r_14" type="add-block">
+                  <p facs="#zone_r_1">
+                     <lb/>26.)
+            </p>
+               </div>
+               <div>
+                  <add facs="#zone_r_2">
+                     <lb/>— —</add>
+               </div>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
