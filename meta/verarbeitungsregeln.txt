@@ -3,9 +3,7 @@ VERARBEITUNGSREGELN fuer pagexml-to-tei.xsl
 Stand: 2026-09-23
 
 Dies ist die lesbare Referenz fuer das, was das Stylesheet aktuell tut.
-Aenderungen/Ergaenzungen bitte hier eintragen (natuerliche Sprache reicht) -
-auf Zuruf wird das Stylesheet dann entsprechend angepasst.
-
+Aenderungen/Ergaenzungen bitte hier eintragen.
 
 1. GRUNDSTRUKTUR
 -----------------
@@ -159,6 +157,7 @@ zum Zeilentext, z.B. "spacing {offset:5; length:10;}"):
 
   metamark-add mit add-id  -> <metamark function="addition"/><add>-Element soll aus der in der add-id referenzierten region add gebaut werden, wobei zeilen- und regions-facs mitübernommen werden sollen
   metamark mit function insertion -> analog zu metamark-add, in target referenziertes Element wird hier eingefügt. Achtung: Es kann zu Ketten kommen: ein metamark mit function insertion verweist auf die id eines zweiten metamark function insertion, das auf die id eines add verweist. In diesem Fall ist das add an der Position des ersten, nicht des mittleren metamarks in der Kette einzufügen.
+                          Ausnahme dokumentübergreifender Verweis: enthält ein Wert in target den Teilstring ".xml#" (z.B. target:0003_406.xml#add-0003-0004), ist das ein bereits fertiger Verweis auf ein Element in einer ANDEREN Datei. Er wird NICHT als Behelfs-ID behandelt und nicht ersetzt, nichts wird eingesogen: die metamark bleibt als <metamark function="insertion" target="0003_406.xml#add-0003-0004"/> stehen, sonst alles wie gewohnt. (Mehrere durch \u0020 getrennte Werte: jeder Wert mit ".xml#" bleibt unverändert, die übrigen werden normal als Behelfs-IDs ersetzt.)
   unclear (mit reason/cert) -> <unclear reason="..." cert="...">
   subst              -> <subst>, automatisch erkannt als Container, wenn
                           ein del- und ein add-Block innerhalb derselben
@@ -219,6 +218,8 @@ Jedes <add> aus Regionstyp erhält eine eigene xml:id nach demselben Muster,
   Beispiel: add-0108-0001, add-0108-0002, ...
 
 Jede Behelfs-ID (kommen als Wert von Attribut "id" mit) werden nach demselben Muster ausgetauscht, sowohl dort, wo sie in xml:id stehen sollen, als auch dort, wo sie in anderen Attributen stehen (target, corresp, ...); in manchen Attributen (target) können mehrere, durch Leerzeichen getrennte Behelfs-IDs stehen.
+
+Ausnahme dokumentübergreifende ID: enthält ein Wert von "id" den Teilstring ".xml#" (z.B. id:0003_406.xml#add-0003-0004 auf einer Region add-block), ist das KEINE Behelfs-ID. Es wird nichts generiert und kein Zähler verbraucht; als xml:id wird einfach der Teil nach "#" übernommen (hier: xml:id="add-0003-0004"). So kann eine andere Datei per target="0003_406.xml#add-0003-0004" (siehe metamark insertion) genau auf dieses Element verweisen. Gilt für id auf Regionen (add-block, add, metamark, paragraph, ...) und auf Zeilen-Blöcken (add id, subst-del del-id). Die Eindeutigkeit der xml:id (und dass sie nicht mit generierten IDs wie add-0003-0004 kollidiert) liegt in der Verantwortung der Eingabe.
 
 
 9. FORMATIERUNG
