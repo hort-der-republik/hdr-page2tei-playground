@@ -3,7 +3,7 @@
   Wandelt PAGE-XML (eScriptorium/Transkribus) in TEI um.
 
   KURZFASSUNG (die ausfuehrliche, immer aktuell gehaltene Referenz aller
-  Regeln steht in verarbeitungsregeln.txt im selben Ordner; die Architektur-
+  Regeln steht in verarbeitungsregeln.md im selben Ordner; die Architektur-
   Erklaerung fuer Programmierer steht weiter unten, Abschnitt "WIE MAN DIESE
   DATEI LIEST"):
 
@@ -14,10 +14,9 @@
     - surface enthaelt zone, wenn zone zu >=95% in surface liegt und in
       keiner kleineren surface >=95% enthalten ist
     - surface enthaelt surface analog; die aeusserste surface ist immer
-      "base" (Marker structure{subtype:base;} oder structure{composit-order:base;}
-      in @custom; ohne solchen Marker: die einzige/groesste surface-Region;
-      gibt es gar keine surface-Region, wird eine synthetische Basis-Surface
-      in Bildgroesse erzeugt)
+      "base" (Marker structure{cat:base;} in @custom; ohne solchen Marker:
+      die einzige surface-Region; sonst wird eine synthetische Basis-
+      Surface in Bildgroesse erzeugt)
     - zone enthaelt zone analog (kleinste passende Elternzone gewinnt)
   Jede <TextLine> bekommt zusaetzlich eine eigene <zone type="line">,
   verschachtelt in der Zone/surface, der sie per $lineAssign zugeordnet ist
@@ -53,13 +52,19 @@
       ihre eigene Baumposition hier (siehe $consumedAddRegions)
     - zone type "fw" -> <fw>
     - zone type "advertisement" -> <div type="advertisement">
+    - Ausnahme zu "jede Zone mit Kind-Zonen -> <div>": hat eine Zone
+      long-quote-Kind-Zonen (und sonst nur metamark/gap), wird sie selbst
+      zu <p> mit den <quote> darin (siehe is-quote-host)
+    - zone type "long-quote-p" -> <quote><p rendition="long-quote">; "long-quote-lg"
+      -> <quote><lg rendition="long-quote"> mit <l facs> statt <lb/>; die
+      Relation "multi-p-quote" packt mehrere solche Regionen in EIN <quote>
     - alle anderen zones (paragraph, ohne type, ...) -> <p> (kein @type,
       TEI-All erlaubt das dort nicht; structure{rendition:[Wert];} wird
       generisch zu @rendition="[Wert]", "longquote" speziell zu "longQuote";
       hat die Region eine Behelfs-ID, bekommt das <p> zusaetzlich eine
       xml:id nach demselben Muster)
     - Transkribus-Relationen vom Typ "Article"/"montage-element": deren
-      Mitglieder (nur die vom Typ paragraph/head) werden zusaetzlich in ein
+      Mitglieder (nur die vom Typ paragraph/long-quote-*/head) werden zusaetzlich in ein
       <div type="article"|"montage-element"> gruppiert, das an der Stelle
       des zuerst gelesenen Mitglieds im umgebenden div steht
     - innerhalb einer Zeile koennen zeichenbasierte Annotationen stehen
@@ -217,7 +222,7 @@
        der <lb/>-Zeilen selbst kommt aus dem Template "indent" (siehe oben).
        xsltproc/libxslt ignoriert das Attribut (setzt dort ohnehin keine Umbrueche). -->
   <xsl:output method="xml" indent="yes" encoding="UTF-8"
-              suppress-indentation="p head fw add metamark"/>
+              suppress-indentation="p head fw add metamark l"/>
 
   <!-- ===================== globale Datenbasis ===================== -->
 
@@ -270,6 +275,8 @@
   </xsl:variable>
   <xsl:variable name="allLineRanges" select="exsl:node-set($allLineRangesRTF)/my:lr"/>
 
+  <xsl:param name="lineAssignTolerance" select="20"/>
+
   <xsl:variable name="lineAssignRTF">
     <xsl:for-each select="$allLines">
       <xsl:variable name="ln" select="."/>
@@ -301,8 +308,19 @@
           <xsl:if test="position()=1"><xsl:value-of select="@id"/></xsl:if>
         </xsl:for-each>
       </xsl:variable>
+      <!-- Toleranz-Ausnahme (Abschnitt 4): liegt der Mittelpunkt nur knapp
+           (<= $lineAssignTolerance Pixel) neben der Box der STRUKTURELLEN
+           Elternregion und wuerde die Zeile stattdessen einer GROESSEREN
+           Region zufallen, bleibt sie bei der Elternregion. Gilt bewusst
+           nur fuer die Elternregion, nicht allgemein fuer alle Regionen. -->
+      <xsl:variable name="parentRegion" select="$regions[@id=$parentRegionId]"/>
+      <xsl:variable name="parentNearHit" select="boolean($parentRegion) and $best != '' and $best != $parentRegionId
+          and number($parentRegion/@minX) - $lineAssignTolerance &lt;= $midX and $midX &lt;= number($parentRegion/@maxX) + $lineAssignTolerance
+          and number($parentRegion/@minY) - $lineAssignTolerance &lt;= $midY and $midY &lt;= number($parentRegion/@maxY) + $lineAssignTolerance
+          and number($parentRegion/@area) &lt;= number($regions[@id=$best]/@area)"/>
       <xsl:variable name="targetRegion">
         <xsl:choose>
+          <xsl:when test="$parentNearHit"><xsl:value-of select="$parentRegionId"/></xsl:when>
           <xsl:when test="$best != ''"><xsl:value-of select="$best"/></xsl:when>
           <xsl:otherwise><xsl:value-of select="$parentRegionId"/></xsl:otherwise>
         </xsl:choose>
@@ -316,30 +334,37 @@
 
   <xsl:variable name="baseId">
     <xsl:choose>
-      <xsl:when test="$surfaceRegions[@subtype='base']">
+      <!-- Abschnitt 2: 1. Region mit structure{cat:base;}, 2. sonst die einzige
+           surface-Region, 3. sonst eine synthetische Basis-Surface -->
+      <xsl:when test="$surfaceRegions[@cat='base']">
         <xsl:call-template name="pick-extreme-id">
-          <xsl:with-param name="nodes" select="$surfaceRegions[@subtype='base']"/>
-          <xsl:with-param name="order" select="'descending'"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="$surfaceRegions[@compositOrder='base']">
-        <xsl:call-template name="pick-extreme-id">
-          <xsl:with-param name="nodes" select="$surfaceRegions[@compositOrder='base']"/>
+          <xsl:with-param name="nodes" select="$surfaceRegions[@cat='base']"/>
           <xsl:with-param name="order" select="'descending'"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:when test="count($surfaceRegions) = 1">
         <xsl:value-of select="$surfaceRegions[1]/@id"/>
       </xsl:when>
-      <xsl:when test="$surfaceRegions">
-        <xsl:call-template name="pick-extreme-id">
-          <xsl:with-param name="nodes" select="$surfaceRegions"/>
-          <xsl:with-param name="order" select="'descending'"/>
-        </xsl:call-template>
-      </xsl:when>
       <xsl:otherwise>SYNTHETIC_BASE</xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
+
+  <!-- Relation "has-parent" (Abschnitt 6): ueberschreibt die geometrische
+       Eltern-Zuordnung - die ERSTE RegionRef ist das Kind, die ZWEITE die
+       Elternregion (child > has-parent > parent), in body UND facsimile. -->
+  <xsl:variable name="hasParentRTF">
+    <xsl:for-each select="$page//*[local-name()='Relation']">
+      <xsl:variable name="relNameRaw" select="substring-before(substring-after(@custom,'relationName {value:'),';')"/>
+      <xsl:if test="translate($relNameRaw,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')='has-parent'">
+        <xsl:variable name="childRef" select="string(*[local-name()='RegionRef'][1]/@regionRef)"/>
+        <xsl:variable name="parentRef" select="string(*[local-name()='RegionRef'][2]/@regionRef)"/>
+        <xsl:if test="$childRef != '' and $parentRef != '' and $childRef != $parentRef">
+          <my:hp child="{$childRef}" parent="{$parentRef}"/>
+        </xsl:if>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="hasParent" select="exsl:node-set($hasParentRTF)/my:hp"/>
 
   <xsl:variable name="parentsRTF">
     <xsl:for-each select="$regions">
@@ -372,7 +397,7 @@
                 <xsl:with-param name="key" select="'type'"/>
               </xsl:call-template>
             </xsl:variable>
-            <xsl:if test="$ttype='paragraph' or $ttype='head'">
+            <xsl:if test="starts-with($ttype,'paragraph') or $ttype='head' or $ttype='gap' or starts-with($ttype,'long-quote')">
               <my:relmember region="{$rid}" group="{$gid}" type="{$relNameLower}"/>
             </xsl:if>
           </xsl:if>
@@ -380,7 +405,98 @@
       </xsl:if>
     </xsl:for-each>
   </xsl:variable>
-  <xsl:variable name="relMembers" select="exsl:node-set($relMembersRTF)/my:relmember"/>
+  <!-- Eine Region kann in mehreren Relationen vorkommen (z.B. r_21 in zwei
+       article-Relationen). Sie wird nur zum Mitglied der ERSTEN - sonst
+       fehlte in der zweiten Gruppe ihr Anker, und die uebrigen Mitglieder
+       (z.B. ein gap) wuerden nirgends gerendert. -->
+  <xsl:variable name="relMembers" select="exsl:node-set($relMembersRTF)/my:relmember[not(@region = preceding-sibling::my:relmember/@region)]"/>
+
+  <!-- Abschnitt 6, Achtung: spannt eine article/montage-element-Relation ueber
+       Hierarchiegrenzen (ihre Mitglieder haben verschiedene Elternregionen,
+       z.B. mehrere column-blocks), entsteht pro Elternregion ein eigenes
+       <div type="article">. Diese Teil-<div>s bekommen eine xml:id
+       (div-PPPP-NNNN) sowie @prev/@next, die aufeinander verweisen (in
+       Lesereihenfolge, d.h. nach dem kleinsten readingOrder-Index der
+       Mitglieder je Elternregion). Elternregionen, die selbst ein <p> sind
+       (is-quote-host), rendern ihre Kinder inline ohne article-<div> und
+       zaehlen deshalb nicht mit. Die Nummerierung setzt nach den schon
+       vergebenen div-IDs (Regionen mit Behelfs-ID) fort. -->
+  <xsl:variable name="fragRawRTF">
+    <xsl:for-each select="$relMembers">
+      <xsl:variable name="par" select="string($parents[@id=current()/@region]/@of)"/>
+      <xsl:variable name="qh"><xsl:call-template name="is-quote-host"><xsl:with-param name="id" select="$par"/></xsl:call-template></xsl:variable>
+      <xsl:if test="$qh != 'yes'">
+        <my:fr group="{@group}" parent="{$par}" idx="{$regions[@id=current()/@region]/@index}"/>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="fragRaw" select="exsl:node-set($fragRawRTF)/my:fr"/>
+  <xsl:variable name="fragAllRTF">
+    <xsl:for-each select="$fragRaw">
+      <xsl:variable name="g" select="@group"/>
+      <xsl:variable name="pp" select="@parent"/>
+      <xsl:if test="not(preceding-sibling::my:fr[@group=$g and @parent=$pp])">
+        <xsl:variable name="minIdx">
+          <xsl:for-each select="$fragRaw[@group=$g and @parent=$pp]">
+            <xsl:sort select="@idx" data-type="number"/>
+            <xsl:if test="position()=1"><xsl:value-of select="@idx"/></xsl:if>
+          </xsl:for-each>
+        </xsl:variable>
+        <my:fa group="{$g}" parent="{$pp}" minIdx="{$minIdx}"/>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="fragAll" select="exsl:node-set($fragAllRTF)/my:fa"/>
+  <!-- nur Gruppen mit mindestens zwei Teil-<div>s -->
+  <xsl:variable name="fragMultiRTF">
+    <xsl:for-each select="$fragAll">
+      <xsl:variable name="g" select="@group"/>
+      <xsl:if test="count($fragAll[@group=$g]) &gt; 1"><xsl:copy-of select="."/></xsl:if>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="fragRankedRTF">
+    <xsl:for-each select="exsl:node-set($fragMultiRTF)/my:fa">
+      <xsl:variable name="g" select="@group"/>
+      <xsl:variable name="mi" select="number(@minIdx)"/>
+      <xsl:variable name="fragSeq" select="position()"/>
+      <my:fk group="{$g}" parent="{@parent}" seq="{$fragSeq}" rank="{count($fragAll[@group=$g and number(@minIdx) &lt; $mi]) + 1}">
+        <xsl:attribute name="genid">
+          <xsl:text>div-</xsl:text><xsl:value-of select="$pageNumPadded"/><xsl:text>-</xsl:text>
+          <xsl:call-template name="pad4"><xsl:with-param name="s" select="count($behelfsOrder[@tag='div']) + $fragSeq"/></xsl:call-template>
+        </xsl:attribute>
+      </my:fk>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="fragRanked" select="exsl:node-set($fragRankedRTF)/my:fk"/>
+  <xsl:variable name="articleFragmentsRTF">
+    <xsl:for-each select="$fragRanked">
+      <xsl:variable name="g" select="@group"/>
+      <xsl:variable name="r" select="number(@rank)"/>
+      <my:frag group="{$g}" parent="{@parent}" genid="{@genid}"
+               prev="{$fragRanked[@group=$g and number(@rank)=$r - 1]/@genid}"
+               next="{$fragRanked[@group=$g and number(@rank)=$r + 1]/@genid}"/>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="articleFragments" select="exsl:node-set($articleFragmentsRTF)/my:frag"/>
+
+  <!-- Relation "multi-p-quote" (Abschnitt 6): verbindet mehrere Regionen mit
+       "long-quote" im Typ (long-quote-p/long-quote-lg); die werden nicht in
+       je ein eigenes <quote>, sondern gemeinsam in EIN <quote> gepackt. -->
+  <xsl:variable name="quoteMembersRTF">
+    <xsl:for-each select="$page//*[local-name()='Relation']">
+      <xsl:variable name="relNameRaw" select="substring-before(substring-after(@custom,'relationName {value:'),';')"/>
+      <xsl:if test="translate($relNameRaw,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')='multi-p-quote'">
+        <xsl:variable name="gid" select="generate-id(.)"/>
+        <xsl:for-each select="*[local-name()='RegionRef']">
+          <xsl:variable name="rid" select="@regionRef"/>
+          <xsl:if test="starts-with($regions[@id=$rid]/@type,'long-quote')">
+            <my:qmember region="{$rid}" group="{$gid}"/>
+          </xsl:if>
+        </xsl:for-each>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="quoteMembers" select="exsl:node-set($quoteMembersRTF)/my:qmember"/>
 
   <!-- vierstellige Seitenzahl aus dem Dateinamen (ueber @imageFilename, das
        denselben Basisnamen traegt wie die PAGE-XML-Datei): der Teil nach dem
@@ -410,7 +526,7 @@
   <xsl:variable name="metamarkOrder" select="exsl:node-set($metamarkOrderRTF)/my:mm"/>
 
   <!-- laufende Nummer jeder add-Region (Regionstyp "add") in globaler
-       Lesereihenfolge, fuer die add-xml:id (siehe verarbeitungsregeln.txt
+       Lesereihenfolge, fuer die add-xml:id (siehe verarbeitungsregeln.md
        Abschnitt 8: JEDES <add> aus Regionstyp bekommt eine eigene xml:id,
        nicht nur die referenzierten) -->
   <xsl:variable name="addOrderRTF">
@@ -506,23 +622,36 @@
     </xsl:for-each>
   </xsl:variable>
 
-  <!-- dasselbe fuer "id" auf einem Zeilen-add-Block (Abschnitt 7/8): der
-       Zaehler setzt bewusst NACH dem hoechsten regionsbasierten $addOrder-
-       Wert fort (statt wieder bei 1 anzufangen), damit hier nie dieselbe
-       add-PPPP-NNNN-ID wie bei einer add-REGION vergeben wird. -->
+  <!-- dasselbe fuer "id" auf JEDEM anderen Zeilen-Block (add, del, mod/
+       mod-underline, seg, hi, unclear, metamark; Abschnitt 7/8): Praefix ist
+       der erzeugte Elementname, laufende Nummer pro Praefix in
+       Dokumentreihenfolge. Der Zaehler setzt bewusst NACH den schon
+       anderweitig vergebenen Nummern desselben Praefixes fort (add: nach
+       den add-REGIONEN, metamark: nach den metamark-Regionen, del: nach den
+       del-id-Eintraegen von subst-del), damit nie dieselbe ID zweimal
+       vergeben wird. -->
   <xsl:variable name="lineAddIdsRawRTF">
-    <xsl:for-each select="$allLineRanges[@element='add' and my:attr[@name='id']]">
-      <my:d behelfs="{my:attr[@name='id']/@value}"/>
+    <xsl:for-each select="$allLineRanges[my:attr[@name='id']]">
+      <my:d tag="{@element}" behelfs="{my:attr[@name='id']/@value}"/>
     </xsl:for-each>
   </xsl:variable>
   <xsl:variable name="lineAddIdsMapRTF">
     <xsl:for-each select="exsl:node-set($lineAddIdsRawRTF)/my:d">
-      <xsl:variable name="seqPadded"><xsl:call-template name="pad4"><xsl:with-param name="s" select="count($addOrder) + count(preceding-sibling::my:d[not(contains(@behelfs,'.xml#'))]) + 1"/></xsl:call-template></xsl:variable>
+      <xsl:variable name="tag" select="@tag"/>
+      <xsl:variable name="base">
+        <xsl:choose>
+          <xsl:when test="$tag='add'"><xsl:value-of select="count($addOrder)"/></xsl:when>
+          <xsl:when test="$tag='metamark'"><xsl:value-of select="count($metamarkOrder)"/></xsl:when>
+          <xsl:when test="$tag='del'"><xsl:value-of select="count(exsl:node-set($lineDeclaredIdsRawRTF)/my:d[not(contains(@behelfs,'.xml#'))])"/></xsl:when>
+          <xsl:otherwise>0</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:variable name="seqPadded"><xsl:call-template name="pad4"><xsl:with-param name="s" select="$base + count(preceding-sibling::my:d[@tag=$tag and not(contains(@behelfs,'.xml#'))]) + 1"/></xsl:call-template></xsl:variable>
       <my:b2r behelfs="{@behelfs}" region="">
         <xsl:attribute name="genid">
           <xsl:choose>
             <xsl:when test="contains(@behelfs,'.xml#')"><xsl:value-of select="substring-after(@behelfs,'.xml#')"/></xsl:when>
-            <xsl:otherwise><xsl:value-of select="concat('add-', $pageNumPadded, '-', $seqPadded)"/></xsl:otherwise>
+            <xsl:otherwise><xsl:value-of select="concat($tag, '-', $pageNumPadded, '-', $seqPadded)"/></xsl:otherwise>
           </xsl:choose>
         </xsl:attribute>
       </my:b2r>
@@ -625,6 +754,28 @@
     </xsl:call-template>
   </xsl:variable>
   <xsl:variable name="deselMarkers" select="exsl:node-set($deselMarkersRTF)/my:marker"/>
+
+  <!-- xml:id des <anchor> (Ende) jedes delSpan-Paars: traegt der letzte Block
+       des Paars (part F) eine eigene id (Behelfs-ID, auf die z.B. das next
+       des Start-Blocks verweist), ist das deren echte xml:id - sonst die
+       generierte delSpan-PPPP-NNNN. Zentral berechnet, damit delSpan/@spanTo,
+       <anchor> und nachgezogener <anchor> dieselbe ID verwenden. -->
+  <xsl:variable name="deselPairIdsRTF">
+    <xsl:for-each select="$deselMarkers[@role='end']">
+      <xsl:variable name="endR" select="$allLineRanges[@line=current()/@line and @offset=current()/@offset and @element='del' and my:attr[@name='part']][1]"/>
+      <xsl:variable name="endHit" select="$behelfsMap[@behelfs=$endR/my:attr[@name='id']/@value]"/>
+      <xsl:variable name="padded"><xsl:call-template name="pad4"><xsl:with-param name="s" select="@pairSeq"/></xsl:call-template></xsl:variable>
+      <my:pid seq="{@pairSeq}" line="{@line}" offset="{@offset}">
+        <xsl:attribute name="id">
+          <xsl:choose>
+            <xsl:when test="$endHit"><xsl:value-of select="$endHit[1]/@genid"/></xsl:when>
+            <xsl:otherwise><xsl:value-of select="concat('delSpan-', $pageNumPadded, '-', $padded)"/></xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
+      </my:pid>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="deselPairIds" select="exsl:node-set($deselPairIdsRTF)/my:pid"/>
 
   <!-- add-Regionen, deren Inhalt per add-id (subst-del/metamark-add, Abschnitt
        7) an anderer Stelle inline importiert wird (render-imported-add),
@@ -881,12 +1032,17 @@
        ganze Article/montage-element-Gruppe) rendern WIRD ("kind"); kommen
        div- und p/head-Einheiten gemischt vor, werden die p/head-Einheiten
        zusaetzlich in ein <div> gewickelt, damit alle Geschwister divLike
-       sind. <metamark> ist milestone-artig und braucht das nicht. -->
+       sind. <metamark>, <gap> und <fw> brauchen das nicht (dürfen direkt neben
+       <div> stehen). -->
   <xsl:template name="render-children-text">
     <xsl:param name="id"/>
     <xsl:param name="depth" select="4"/>
     <xsl:param name="ownText" select="false()"/>
     <xsl:param name="ownTextRegionId"/>
+    <!-- inlineMode: die Region ist selbst ein <p> (is-quote-host): eigener
+         Text steht direkt darin (ohne zusaetzliches <p>), Kinder werden nicht
+         zu article-Gruppen zusammengefasst und nie in <div> gewickelt. -->
+    <xsl:param name="inlineMode" select="false()"/>
     <xsl:variable name="childEntries" select="$parents[@of=$id]"/>
 
     <!-- Jede "Einheit" ist entweder: der eigene Zeilentext dieser Region
@@ -904,7 +1060,7 @@
         <xsl:variable name="childId" select="@id"/>
         <xsl:variable name="rel" select="$relMembers[@region=$childId]"/>
         <xsl:choose>
-          <xsl:when test="$rel">
+          <xsl:when test="$rel and not($inlineMode)">
             <xsl:variable name="groupKey" select="$rel/@group"/>
             <xsl:variable name="siblingGroupIds" select="$relMembers[@group=$groupKey][$childEntries/@id = @region]/@region"/>
             <xsl:variable name="isAnchor">
@@ -917,15 +1073,35 @@
               <my:unit id="{$childId}" kind="div" group="{$groupKey}" index="{$regions[@id=$childId]/@index}" own=""/>
             </xsl:if>
           </xsl:when>
+          <xsl:when test="$quoteMembers[@region=$childId]">
+            <!-- multi-p-quote: EIN Einheit fuer die ganze Gruppe, an der
+                 Stelle des zuerst gelesenen Mitglieds (wie bei article) -->
+            <xsl:variable name="qGroup" select="$quoteMembers[@region=$childId][1]/@group"/>
+            <xsl:variable name="qSiblingIds" select="$quoteMembers[@group=$qGroup][$childEntries/@id = @region]/@region"/>
+            <xsl:variable name="isQAnchor">
+              <xsl:for-each select="$qSiblingIds">
+                <xsl:sort select="$regions[@id=current()]/@index" data-type="number"/>
+                <xsl:if test="position()=1 and .=$childId">yes</xsl:if>
+              </xsl:for-each>
+            </xsl:variable>
+            <xsl:if test="$isQAnchor='yes'">
+              <my:unit id="{$childId}" kind="p" group="" qgroup="{$qGroup}" index="{$regions[@id=$childId]/@index}" own=""/>
+            </xsl:if>
+          </xsl:when>
           <xsl:otherwise>
             <xsl:variable name="kind"><xsl:call-template name="child-kind"><xsl:with-param name="id" select="$childId"/></xsl:call-template></xsl:variable>
-            <my:unit id="{$childId}" kind="{$kind}" group="" index="{$regions[@id=$childId]/@index}" own=""/>
+            <!-- single-p-article:y (Abschnitt 5): der <p> steht in einem
+                 <div type="article"> (zaehlt deshalb als div-Einheit) -->
+            <xsl:variable name="spa" select="$regions[@id=$childId]/@singlePArticle"/>
+            <my:unit id="{$childId}" index="{$regions[@id=$childId]/@index}" own="" group="" spa="{$spa}">
+              <xsl:attribute name="kind"><xsl:choose><xsl:when test="$spa='y' and $kind='p'">div</xsl:when><xsl:otherwise><xsl:value-of select="$kind"/></xsl:otherwise></xsl:choose></xsl:attribute>
+            </my:unit>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:for-each>
     </xsl:variable>
     <xsl:variable name="units" select="exsl:node-set($unitsRTF)/my:unit"/>
-    <xsl:variable name="mixed" select="boolean($units[@kind='div']) and boolean($units[@kind='p' or @kind='head'])"/>
+    <xsl:variable name="mixed" select="not($inlineMode) and boolean($units[@kind='div']) and boolean($units[@kind='p' or @kind='head'])"/>
 
     <xsl:for-each select="$units">
       <xsl:sort select="@index" data-type="number"/>
@@ -939,6 +1115,13 @@
       </xsl:variable>
       <xsl:variable name="rendered">
         <xsl:choose>
+          <xsl:when test="$u/@own='yes' and $inlineMode">
+            <xsl:call-template name="render-lines">
+              <xsl:with-param name="regionId" select="$ownTextRegionId"/>
+              <xsl:with-param name="depth" select="$unitDepth"/>
+              <xsl:with-param name="trailing" select="false()"/>
+            </xsl:call-template>
+          </xsl:when>
           <xsl:when test="$u/@own='yes'">
             <p>
               <xsl:call-template name="behelfs-id-attr-if-any"><xsl:with-param name="regionId" select="$ownTextRegionId"/></xsl:call-template>
@@ -955,12 +1138,29 @@
               <xsl:with-param name="groupKey" select="$u/@group"/>
               <xsl:with-param name="memberIds" select="$memberIds"/>
               <xsl:with-param name="depth" select="$unitDepth"/>
+              <xsl:with-param name="parentId" select="string($id)"/>
             </xsl:call-template>
+          </xsl:when>
+          <xsl:when test="$u/@qgroup != ''">
+            <xsl:call-template name="render-quote-group">
+              <xsl:with-param name="memberIds" select="$quoteMembers[@group=$u/@qgroup][$childEntries/@id = @region]/@region"/>
+              <xsl:with-param name="depth" select="$unitDepth"/>
+              <xsl:with-param name="manualIndent" select="$inlineMode"/>
+            </xsl:call-template>
+          </xsl:when>
+          <xsl:when test="$u/@spa='y'">
+            <div type="article">
+              <xsl:call-template name="render-child-text">
+                <xsl:with-param name="id" select="$u/@id"/>
+                <xsl:with-param name="depth" select="$unitDepth + 1"/>
+              </xsl:call-template>
+            </div>
           </xsl:when>
           <xsl:otherwise>
             <xsl:call-template name="render-child-text">
               <xsl:with-param name="id" select="$u/@id"/>
               <xsl:with-param name="depth" select="$unitDepth"/>
+              <xsl:with-param name="manualIndent" select="$inlineMode"/>
             </xsl:call-template>
           </xsl:otherwise>
         </xsl:choose>
@@ -970,22 +1170,51 @@
           <div><xsl:copy-of select="$rendered"/></div>
         </xsl:when>
         <xsl:otherwise>
+          <xsl:if test="$inlineMode and not($u/@own='yes')">
+            <xsl:text>&#10;</xsl:text>
+            <xsl:call-template name="indent"><xsl:with-param name="depth" select="$unitDepth"/></xsl:call-template>
+          </xsl:if>
           <xsl:copy-of select="$rendered"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:for-each>
+    <xsl:if test="$inlineMode and $units[not(@own='yes')]">
+      <xsl:text>&#10;</xsl:text>
+      <xsl:call-template name="indent"><xsl:with-param name="depth" select="$depth - 1"/></xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- Abschnitt 5, Ausnahme zur Regel "Zone mit Kind-Zonen -> <div>": hat die
+       Zone Kind-Zonen mit "long-quote" im Typ (und sonst hoechstens
+       metamark/gap bzw. per add-id verbrauchte add-Regionen), wird sie
+       selbst zu <p>, weil das verschachtelte <quote> in <p> erlaubt ist.
+       Liefert "yes" oder nichts. surface/column-block/add-block/
+       advertisement bleiben immer <div>. -->
+  <xsl:template name="is-quote-host">
+    <xsl:param name="id"/>
+    <xsl:variable name="type" select="$regions[@id=$id]/@type"/>
+    <xsl:if test="$type != 'surface' and $type != 'column-block' and $type != 'add-block' and $type != 'advertisement' and $type != 'masthead'">
+      <xsl:variable name="kids" select="$regions[@id=$parents[@of=$id]/@id][not(@id = $consumedAddRegions/@id)]"/>
+      <xsl:if test="$kids[starts-with(@type,'long-quote')] and not($kids[not(starts-with(@type,'long-quote') or @type='metamark' or @type='annotation' or @type='gap')])">yes</xsl:if>
+    </xsl:if>
   </xsl:template>
 
   <!-- welches Element eine Kind-Zone rendern wird (fuer die Mixing-Erkennung) -->
   <xsl:template name="child-kind">
     <xsl:param name="id"/>
     <xsl:variable name="region" select="$regions[@id=$id]"/>
+    <xsl:variable name="quoteHost"><xsl:call-template name="is-quote-host"><xsl:with-param name="id" select="$id"/></xsl:call-template></xsl:variable>
     <xsl:choose>
+      <xsl:when test="$quoteHost='yes'">p</xsl:when>
       <xsl:when test="$region/@type='surface'">div</xsl:when>
       <xsl:when test="$region/@type='annotation' or $region/@type='metamark'">metamark</xsl:when>
       <xsl:when test="$region/@type='gap'">gap</xsl:when>
       <xsl:when test="$region/@type='column-block' or $region/@type='add-block'">div</xsl:when>
       <xsl:when test="boolean($parents[@of=$id])">div</xsl:when>
+      <!-- <fw> darf in TEI direkt neben <div> stehen (wie metamark/gap) und
+           muss deshalb nicht in ein <div> gewickelt werden (siehe Mixing-
+           Regel in render-children-text) -->
+      <xsl:when test="$region/@type='fw'">fw</xsl:when>
       <xsl:when test="$region/@type='head'">head</xsl:when>
       <xsl:otherwise>p</xsl:otherwise>
     </xsl:choose>
@@ -1001,14 +1230,18 @@
     <xsl:variable name="region" select="$regions[@id=$id]"/>
     <xsl:variable name="type" select="$region/@type"/>
     <xsl:variable name="hasChildren" select="boolean($parents[@of=$id])"/>
+    <xsl:variable name="quoteHost"><xsl:call-template name="is-quote-host"><xsl:with-param name="id" select="$id"/></xsl:call-template></xsl:variable>
     <xsl:choose>
       <xsl:when test="$type='surface'">div</xsl:when>
       <xsl:when test="$type='annotation' or $type='metamark'">metamark</xsl:when>
       <xsl:when test="$type='gap'">gap</xsl:when>
+      <xsl:when test="$quoteHost='yes'">p</xsl:when>
+      <xsl:when test="$type='head' and not($hasChildren) and $region/@cat='cross'">p</xsl:when>
       <xsl:when test="$type='head' and not($hasChildren)">head</xsl:when>
-      <xsl:when test="$type='column-block' or $type='add-block' or $type='advertisement' or $hasChildren">div</xsl:when>
+      <xsl:when test="$type='column-block' or $type='add-block' or $type='advertisement' or $type='masthead' or $hasChildren">div</xsl:when>
       <xsl:when test="$type='add'">add</xsl:when>
       <xsl:when test="$type='fw'">fw</xsl:when>
+      <xsl:when test="$type='long-quote-lg'">lg</xsl:when>
       <xsl:otherwise>p</xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -1017,16 +1250,76 @@
     <xsl:param name="groupKey"/>
     <xsl:param name="memberIds"/>
     <xsl:param name="depth" select="4"/>
+    <xsl:param name="parentId" select="''"/>
+    <xsl:variable name="frag" select="$articleFragments[@group=$groupKey and @parent=$parentId]"/>
     <div>
+      <!-- ueber Hierarchiegrenzen verteilte Gruppen: xml:id + prev/next -->
+      <xsl:if test="$frag">
+        <xsl:attribute name="xml:id"><xsl:value-of select="$frag[1]/@genid"/></xsl:attribute>
+      </xsl:if>
       <xsl:attribute name="type"><xsl:value-of select="$relMembers[@group=$groupKey][1]/@type"/></xsl:attribute>
+      <xsl:if test="$frag[1]/@prev != ''"><xsl:attribute name="prev"><xsl:value-of select="concat('#',$frag[1]/@prev)"/></xsl:attribute></xsl:if>
+      <xsl:if test="$frag[1]/@next != ''"><xsl:attribute name="next"><xsl:value-of select="concat('#',$frag[1]/@next)"/></xsl:attribute></xsl:if>
       <xsl:for-each select="$memberIds">
         <xsl:sort select="$regions[@id=current()]/@index" data-type="number"/>
+        <xsl:variable name="mid" select="."/>
+        <xsl:variable name="qGroup" select="$quoteMembers[@region=$mid][1]/@group"/>
+        <xsl:choose>
+          <xsl:when test="$qGroup != ''">
+            <!-- multi-p-quote-Mitglieder innerhalb eines article: EIN <quote>
+                 an der Stelle des ersten Mitglieds, die uebrigen entfallen -->
+            <xsl:variable name="qIds" select="$memberIds[$quoteMembers[@group=$qGroup]/@region = .]"/>
+            <xsl:variable name="firstQ">
+              <xsl:for-each select="$qIds">
+                <xsl:sort select="$regions[@id=current()]/@index" data-type="number"/>
+                <xsl:if test="position()=1"><xsl:value-of select="."/></xsl:if>
+              </xsl:for-each>
+            </xsl:variable>
+            <xsl:if test="$firstQ=$mid">
+              <xsl:call-template name="render-quote-group">
+                <xsl:with-param name="memberIds" select="$qIds"/>
+                <xsl:with-param name="depth" select="$depth + 1"/>
+              </xsl:call-template>
+            </xsl:if>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="render-child-text">
+              <xsl:with-param name="id" select="$mid"/>
+              <xsl:with-param name="depth" select="$depth + 1"/>
+            </xsl:call-template>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>
+    </div>
+  </xsl:template>
+
+  <!-- multi-p-quote (Abschnitt 6): alle Mitglieder gemeinsam in EIN <quote>;
+       die einzelnen p/lg werden dabei ohne eigenes <quote> gerendert
+       (inQuoteGroup). -->
+  <xsl:template name="render-quote-group">
+    <xsl:param name="memberIds"/>
+    <xsl:param name="depth" select="4"/>
+    <!-- manualIndent: das <quote> steht in einem <p> (Saxon rueckt dort nicht
+         selbst ein), Umbrueche/Einrueckung werden daher hier erzeugt -->
+    <xsl:param name="manualIndent" select="false()"/>
+    <quote>
+      <xsl:for-each select="$memberIds">
+        <xsl:sort select="$regions[@id=current()]/@index" data-type="number"/>
+        <xsl:if test="$manualIndent">
+          <xsl:text>&#10;</xsl:text>
+          <xsl:call-template name="indent"><xsl:with-param name="depth" select="$depth + 1"/></xsl:call-template>
+        </xsl:if>
         <xsl:call-template name="render-child-text">
           <xsl:with-param name="id" select="."/>
           <xsl:with-param name="depth" select="$depth + 1"/>
+          <xsl:with-param name="inQuoteGroup" select="true()"/>
         </xsl:call-template>
       </xsl:for-each>
-    </div>
+      <xsl:if test="$manualIndent">
+        <xsl:text>&#10;</xsl:text>
+        <xsl:call-template name="indent"><xsl:with-param name="depth" select="$depth"/></xsl:call-template>
+      </xsl:if>
+    </quote>
   </xsl:template>
 
   <!-- Typ-Weiche fuer EIN einzelnes Kind (egal ob es aus render-children-text
@@ -1040,6 +1333,8 @@
   <xsl:template name="render-child-text">
     <xsl:param name="id"/>
     <xsl:param name="depth" select="4"/>
+    <xsl:param name="inQuoteGroup" select="false()"/>
+    <xsl:param name="manualIndent" select="false()"/>
     <xsl:variable name="region" select="$regions[@id=$id]"/>
     <xsl:choose>
       <xsl:when test="$region/@type='surface'">
@@ -1058,12 +1353,15 @@
         <gap>
           <xsl:call-template name="behelfs-id-attr-if-any"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
           <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
+          <xsl:if test="$region/@reason != ''"><xsl:attribute name="reason"><xsl:value-of select="$region/@reason"/></xsl:attribute></xsl:if>
         </gap>
       </xsl:when>
       <xsl:otherwise>
         <xsl:call-template name="render-zone-text">
           <xsl:with-param name="id" select="$id"/>
           <xsl:with-param name="depth" select="$depth"/>
+          <xsl:with-param name="inQuoteGroup" select="$inQuoteGroup"/>
+          <xsl:with-param name="manualIndent" select="$manualIndent"/>
         </xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>
@@ -1072,31 +1370,63 @@
   <xsl:template name="render-zone-text">
     <xsl:param name="id"/>
     <xsl:param name="depth" select="4"/>
+    <xsl:param name="inQuoteGroup" select="false()"/>
+    <xsl:param name="manualIndent" select="false()"/>
     <xsl:variable name="region" select="$regions[@id=$id]"/>
     <xsl:variable name="type" select="$region/@type"/>
     <xsl:variable name="hasChildren" select="boolean($parents[@of=$id])"/>
+    <xsl:variable name="quoteHost"><xsl:call-template name="is-quote-host"><xsl:with-param name="id" select="$id"/></xsl:call-template></xsl:variable>
     <xsl:variable name="hasOwnTextV">
       <xsl:call-template name="region-has-own-text"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
     </xsl:variable>
-    <!-- head-run-in (Abschnitt 7): Praesenz-Flag auf irgendeiner der Zeilen
-         dieser Region (nicht offset-basiert, da es das ganze <head> betrifft,
-         nicht einen Zeichenbereich) - macht aus <head> ein <head type="run-in">.
-         Ungetestet (keine Belegstelle in den vorliegenden Dateien), aber nach
-         bestem Verstaendnis der Regel umgesetzt. -->
-    <xsl:variable name="lineIds" select="$lineAssign[@region=$id]/@id"/>
-    <xsl:variable name="isRunIn" select="boolean($allLines[@id=$lineIds][contains(@custom,'head-run-in')])"/>
     <xsl:choose>
+      <!-- Abschnitt 5: head mit cat:cross -> <p rendition="crosshead">; mit
+           cat:main/cat:sub -> <head type="main|sub"> -->
+      <xsl:when test="$type='head' and not($hasChildren) and $region/@cat='cross'">
+        <p>
+          <xsl:call-template name="behelfs-id-attr-if-any"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
+          <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
+          <xsl:attribute name="rendition">#crosshead</xsl:attribute>
+          <xsl:call-template name="render-lines">
+            <xsl:with-param name="regionId" select="$id"/>
+            <xsl:with-param name="depth" select="$depth + 1"/>
+          </xsl:call-template>
+        </p>
+      </xsl:when>
       <xsl:when test="$type='head' and not($hasChildren)">
         <head>
+          <xsl:call-template name="behelfs-id-attr-if-any"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
           <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
-          <xsl:if test="$isRunIn"><xsl:attribute name="type">run-in</xsl:attribute></xsl:if>
+          <xsl:if test="$region/@cat='main' or $region/@cat='sub'"><xsl:attribute name="type"><xsl:value-of select="$region/@cat"/></xsl:attribute></xsl:if>
           <xsl:call-template name="render-lines">
             <xsl:with-param name="regionId" select="$id"/>
             <xsl:with-param name="depth" select="$depth + 1"/>
           </xsl:call-template>
         </head>
       </xsl:when>
-      <xsl:when test="$type='column-block' or $type='add-block' or $type='advertisement' or $hasChildren">
+      <xsl:when test="$quoteHost='yes'">
+        <!-- Abschnitt 5, Ausnahme: Zone mit long-quote-Kindern wird selbst zu
+             <p> (Attribute wie beim normalen <p>), die <quote> stehen darin. -->
+        <p>
+          <xsl:call-template name="behelfs-id-attr-if-any"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
+          <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
+          <xsl:call-template name="rendition-attr-if-any">
+            <xsl:with-param name="value" select="$region/@rendition"/>
+            <xsl:with-param name="extra"><xsl:if test="$type='paragraph-indent'">indent</xsl:if></xsl:with-param>
+          </xsl:call-template>
+          <xsl:if test="$type='paragraph' or $type='paragraph-indent'">
+            <xsl:call-template name="paragraph-extra-attrs"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
+          </xsl:if>
+          <xsl:call-template name="render-children-text">
+            <xsl:with-param name="id" select="$id"/>
+            <xsl:with-param name="depth" select="$depth + 1"/>
+            <xsl:with-param name="ownText" select="$hasOwnTextV='true'"/>
+            <xsl:with-param name="ownTextRegionId" select="$id"/>
+            <xsl:with-param name="inlineMode" select="true()"/>
+          </xsl:call-template>
+        </p>
+      </xsl:when>
+      <xsl:when test="$type='column-block' or $type='add-block' or $type='advertisement' or $type='masthead' or $hasChildren">
         <div>
           <xsl:call-template name="behelfs-id-attr-if-any"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
           <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
@@ -1108,6 +1438,36 @@
             <xsl:with-param name="ownTextRegionId" select="$id"/>
           </xsl:call-template>
         </div>
+      </xsl:when>
+      <xsl:when test="$type='long-quote-p' or $type='long-quote-lg'">
+        <!-- Abschnitt 5: long-quote-p -> <quote><p>, long-quote-lg ->
+             <quote><lg> mit <l> statt <lb/>. Gehoert die Region zu einer
+             multi-p-quote-Relation, steht das <quote> schon aussen
+             (render-quote-group). -->
+        <xsl:choose>
+          <xsl:when test="$inQuoteGroup">
+            <xsl:call-template name="render-quote-content">
+              <xsl:with-param name="id" select="$id"/>
+              <xsl:with-param name="depth" select="$depth"/>
+            </xsl:call-template>
+          </xsl:when>
+          <xsl:otherwise>
+            <quote>
+              <xsl:if test="$manualIndent">
+                <xsl:text>&#10;</xsl:text>
+                <xsl:call-template name="indent"><xsl:with-param name="depth" select="$depth + 1"/></xsl:call-template>
+              </xsl:if>
+              <xsl:call-template name="render-quote-content">
+                <xsl:with-param name="id" select="$id"/>
+                <xsl:with-param name="depth" select="$depth + 1"/>
+              </xsl:call-template>
+              <xsl:if test="$manualIndent">
+                <xsl:text>&#10;</xsl:text>
+                <xsl:call-template name="indent"><xsl:with-param name="depth" select="$depth"/></xsl:call-template>
+              </xsl:if>
+            </quote>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
       <xsl:when test="$type='add'">
         <!-- <add> validiert vermutlich nicht direkt in einem div (es ist als
@@ -1148,13 +1508,16 @@
         <p>
           <xsl:call-template name="behelfs-id-attr-if-any"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
           <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
-          <xsl:call-template name="rendition-attr-if-any"><xsl:with-param name="value" select="$region/@rendition"/></xsl:call-template>
+          <xsl:call-template name="rendition-attr-if-any">
+            <xsl:with-param name="value" select="$region/@rendition"/>
+            <xsl:with-param name="extra"><xsl:if test="$type='paragraph-indent'">indent</xsl:if></xsl:with-param>
+          </xsl:call-template>
           <!-- Abschnitt 5: bei type="paragraph" werden ALLE uebrigen
                structure{}-Schluessel/Werte (z.B. part; hand-medium wird ignoriert) 1:1 als
                Attribute uebernommen - anders als bei anderen Regionstypen,
                wo nur die einzeln aufgefuehrten Schluessel (rendition, id)
                durchgereicht werden. -->
-          <xsl:if test="$type='paragraph'">
+          <xsl:if test="$type='paragraph' or $type='paragraph-indent'">
             <xsl:call-template name="paragraph-extra-attrs"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
           </xsl:if>
           <xsl:call-template name="render-lines">
@@ -1166,19 +1529,115 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- das <p> bzw. <lg> einer long-quote-p/long-quote-lg-Region (ohne
+       umgebendes <quote>). rendition: der Wert aus structure{rendition:..},
+       sonst "long-quote". Bei long-quote-lg steht jede Zeile in einem <l
+       facs="..."> statt hinter einem <lb/>: die <lb/> der normal gerenderten
+       Zeilen werden dazu zu Zeilen-Containern umgebaut (reicht ein Lauf wie
+       del/hi ueber mehrere Zeilen, bleibt das <lb/> darin als Markup stehen,
+       weil ein Element nicht auf zwei <l> aufgeteilt werden kann). -->
+  <xsl:template name="render-quote-content">
+    <xsl:param name="id"/>
+    <xsl:param name="depth" select="4"/>
+    <xsl:variable name="region" select="$regions[@id=$id]"/>
+    <xsl:variable name="elName">
+      <xsl:choose>
+        <xsl:when test="$region/@type='long-quote-lg'">lg</xsl:when>
+        <xsl:otherwise>p</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:element name="{$elName}">
+      <xsl:call-template name="behelfs-id-attr-if-any"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
+      <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
+      <xsl:call-template name="rendition-attr-if-any"><xsl:with-param name="value" select="$region/@rendition"/></xsl:call-template>
+      <xsl:choose>
+        <xsl:when test="$elName='lg'">
+          <xsl:variable name="rawRTF">
+            <xsl:call-template name="render-lines">
+              <xsl:with-param name="regionId" select="$id"/>
+              <xsl:with-param name="depth" select="$depth + 1"/>
+              <xsl:with-param name="compact" select="true()"/>
+            </xsl:call-template>
+          </xsl:variable>
+          <xsl:variable name="nodes" select="exsl:node-set($rawRTF)/node()"/>
+          <xsl:for-each select="$nodes[self::*[local-name()='lb']]">
+            <xsl:variable name="n" select="position()"/>
+            <xsl:text>&#10;</xsl:text>
+            <xsl:call-template name="indent"><xsl:with-param name="depth" select="$depth + 1"/></xsl:call-template>
+            <l facs="{@facs}">
+              <xsl:copy-of select="$nodes[count(preceding-sibling::*[local-name()='lb']) = $n and not(self::*[local-name()='lb'])]"/>
+            </l>
+          </xsl:for-each>
+          <xsl:text>&#10;</xsl:text>
+          <xsl:call-template name="indent"><xsl:with-param name="depth" select="$depth"/></xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:call-template name="render-lines">
+            <xsl:with-param name="regionId" select="$id"/>
+            <xsl:with-param name="depth" select="$depth + 1"/>
+          </xsl:call-template>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:element>
+  </xsl:template>
+
   <!-- Generische Regel (Abschnitt 5): structure{rendition:[Wert];} -> zusaetzlich
-       @rendition=[Wert] auf dem <p>; "longquote" wird dabei speziell in die
-       TEI-eigene Gross-/Kleinschreibung "longQuote" umgewandelt (etablierter
-       TEI-Wert), alle anderen Werte werden unveraendert durchgereicht. -->
+       @rendition="#[Wert]" (Pointer auf die rendition-Definition, daher mit
+       vorangestelltem "#"). Mehrere Werte (durch \u0020 oder Leerzeichen
+       getrennt) werden einzeln mit "#" versehen. $extra ist ein Wert, der
+       automatisch ergaenzt wird (z.B. "indent" bei paragraph-indent), aber
+       nur einmal vorkommen darf, auch wenn er schon von Hand gesetzt wurde.
+       "longquote" wird speziell zu "longQuote". -->
   <xsl:template name="rendition-attr-if-any">
     <xsl:param name="value"/>
-    <xsl:if test="$value != ''">
+    <xsl:param name="extra" select="''"/>
+    <xsl:variable name="tokensRTF">
+      <xsl:call-template name="rendition-tokens"><xsl:with-param name="s" select="$value"/></xsl:call-template>
+      <xsl:if test="$extra != ''"><my:t v="{$extra}"/></xsl:if>
+    </xsl:variable>
+    <xsl:variable name="tokens" select="exsl:node-set($tokensRTF)/my:t"/>
+    <xsl:if test="$tokens">
       <xsl:attribute name="rendition">
-        <xsl:choose>
-          <xsl:when test="$value='longquote'">longQuote</xsl:when>
-          <xsl:otherwise><xsl:value-of select="$value"/></xsl:otherwise>
-        </xsl:choose>
+        <xsl:for-each select="$tokens">
+          <xsl:variable name="v" select="@v"/>
+          <xsl:if test="not(preceding-sibling::my:t[@v=$v])">
+            <xsl:if test="position() &gt; 1 and count(preceding-sibling::my:t[not(@v = preceding-sibling::my:t/@v)]) &gt; 0"><xsl:text> </xsl:text></xsl:if>
+            <xsl:text>#</xsl:text>
+            <xsl:choose>
+              <xsl:when test="$v='longquote'">longQuote</xsl:when>
+              <xsl:otherwise><xsl:value-of select="$v"/></xsl:otherwise>
+            </xsl:choose>
+          </xsl:if>
+        </xsl:for-each>
       </xsl:attribute>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- zerlegt einen rendition-Wert in Tokens (Trenner: Leerzeichen oder das
+       literale \u0020), fuehrendes "#" wird entfernt -->
+  <xsl:template name="rendition-tokens">
+    <xsl:param name="s"/>
+    <xsl:variable name="n" select="normalize-space(translate($s,'&#9;&#10;',' '))"/>
+    <xsl:if test="$n != ''">
+      <xsl:variable name="normSep">
+        <xsl:choose>
+          <xsl:when test="contains($n,$sepMarker)"><xsl:value-of select="concat(substring-before($n,$sepMarker),' ',substring-after($n,$sepMarker))"/></xsl:when>
+          <xsl:otherwise><xsl:value-of select="$n"/></xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:choose>
+        <xsl:when test="contains($n,$sepMarker)">
+          <xsl:call-template name="rendition-tokens"><xsl:with-param name="s" select="substring-before($n,$sepMarker)"/></xsl:call-template>
+          <xsl:call-template name="rendition-tokens"><xsl:with-param name="s" select="substring-after($n,$sepMarker)"/></xsl:call-template>
+        </xsl:when>
+        <xsl:when test="contains($n,' ')">
+          <xsl:call-template name="rendition-tokens"><xsl:with-param name="s" select="substring-before($n,' ')"/></xsl:call-template>
+          <xsl:call-template name="rendition-tokens"><xsl:with-param name="s" select="substring-after($n,' ')"/></xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+          <my:t v="{translate(substring($n, 1 + number(starts-with($n,'#'))), '#', '')}"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:if>
   </xsl:template>
 
@@ -1209,8 +1668,14 @@
     <xsl:variable name="pairsRTF">
       <xsl:call-template name="all-key-value-pairs"><xsl:with-param name="tokens" select="$inner"/></xsl:call-template>
     </xsl:variable>
-    <xsl:for-each select="exsl:node-set($pairsRTF)/my:kv[@name != 'type' and @name != 'subtype' and @name != 'composit-order' and @name != 'rendition' and @name != 'id' and @name != 'function' and @name != 'target' and @name != 'hand-medium']">
+    <xsl:for-each select="exsl:node-set($pairsRTF)/my:kv[@name != 'type' and @name != 'subtype' and @name != 'composit-order' and @name != 'rendition' and @name != 'id' and @name != 'function' and @name != 'target' and @name != 'hand-medium' and @name != 'single-p-article' and @name != 'prev' and @name != 'next']">
       <xsl:attribute name="{@name}"><xsl:value-of select="@value"/></xsl:attribute>
+    </xsl:for-each>
+    <!-- prev/next sind Behelfs-ID-Verweise (Abschnitt 8) -->
+    <xsl:for-each select="exsl:node-set($pairsRTF)/my:kv[@name='prev' or @name='next']">
+      <xsl:attribute name="{@name}">
+        <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="@value"/></xsl:call-template>
+      </xsl:attribute>
     </xsl:for-each>
   </xsl:template>
 
@@ -1332,6 +1797,9 @@
     <xsl:param name="regionId"/>
     <xsl:param name="depth" select="1"/>
     <xsl:param name="compact" select="false()"/>
+    <!-- trailing=false: kein Umbruch/Einrueckung nach der letzten Zeile (fuer
+         eigenen Text direkt in einem <p> mit nachfolgenden Kindern) -->
+    <xsl:param name="trailing" select="true()"/>
     <xsl:variable name="linesRTF">
       <xsl:call-template name="ordered-lines-for-region"><xsl:with-param name="regionId" select="$regionId"/></xsl:call-template>
     </xsl:variable>
@@ -1342,7 +1810,7 @@
       <xsl:with-param name="depth" select="$depth"/>
       <xsl:with-param name="compact" select="$compact"/>
     </xsl:call-template>
-    <xsl:if test="not($compact)">
+    <xsl:if test="not($compact) and $trailing">
       <xsl:text>&#10;</xsl:text>
       <xsl:call-template name="indent"><xsl:with-param name="depth" select="$depth - 1"/></xsl:call-template>
     </xsl:if>
@@ -1475,7 +1943,7 @@
     </xsl:variable>
     <xsl:variable name="blocks" select="exsl:node-set($blocksRTF)/my:block"/>
     <xsl:variable name="text" select="$line/*[local-name()='TextEquiv'][1]/*[local-name()='Unicode']"/>
-    <xsl:for-each select="$blocks[@name='spacing' or @name='hi-spacing' or @name='bold' or @name='hi-bold' or @name='underline' or @name='hi-underline' or @name='mod-underline' or @name='del' or @name='deselection' or @name='mod' or @name='seg-transposition' or @name='seg' or @name='gap' or @name='gap-cut' or @name='gap-ill' or @name='add' or @name='metamark' or @name='metamark-add' or @name='unclear' or @name='subst' or @name='subst-del' or @name='sic' or @name='undo']">
+    <xsl:for-each select="$blocks[not(@name='head-run-in' and not(contains(@content,'offset'))) and (@name='head-run-in' or @name='spacing' or @name='hi-spacing' or @name='bold' or @name='hi-bold' or @name='underline' or @name='hi-underline' or @name='mod-underline' or @name='del' or @name='deselection' or @name='mod' or @name='seg-transposition' or @name='seg' or @name='gap' or @name='gap-cut' or @name='gap-ill' or @name='add' or @name='metamark' or @name='metamark-add' or @name='unclear' or @name='subst' or @name='subst-del' or @name='sic' or @name='undo')]">
       <xsl:variable name="name" select="@name"/>
       <xsl:variable name="content" select="@content"/>
       <xsl:variable name="offset"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'offset'"/></xsl:call-template></xsl:variable>
@@ -1487,7 +1955,7 @@
           <xsl:when test="$name='mod-underline'">mod</xsl:when>
           <xsl:when test="$name='del' or $name='deselection'">del</xsl:when>
           <xsl:when test="$name='mod'">mod</xsl:when>
-          <xsl:when test="$name='seg' or $name='seg-transposition'">seg</xsl:when>
+          <xsl:when test="$name='seg' or $name='seg-transposition' or $name='head-run-in'">seg</xsl:when>
           <xsl:when test="$name='gap' or $name='gap-cut' or $name='gap-ill'">gap</xsl:when>
           <xsl:when test="$name='add'">add</xsl:when>
           <xsl:when test="$name='metamark'">metamark</xsl:when>
@@ -1525,6 +1993,8 @@
             <xsl:variable name="type"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'type'"/></xsl:call-template></xsl:variable>
             <xsl:if test="$type != ''"><my:attr name="type" value="{$type}"/></xsl:if>
           </xsl:when>
+          <!-- head-run-in (Abschnitt 7) -> <seg type="head-run-in"> -->
+          <xsl:when test="$name='head-run-in'"><my:attr name="type" value="head-run-in"/></xsl:when>
           <xsl:when test="$name='seg-transposition'">
             <my:attr name="type" value="transposition"/>
             <!-- Die volle listTranspose/ptr-Konstruktion (Abschnitt 7: nur
@@ -1605,6 +2075,22 @@
             <xsl:if test="$cert != ''"><my:attr name="cert" value="{$cert}"/></xsl:if>
           </xsl:when>
         </xsl:choose>
+        <!-- "id" (Behelfs-ID-Deklaration, Abschnitt 8) auch auf den uebrigen
+             Bloecken, die ueber die generische Weiche als Element ausgegeben
+             werden (add hat seinen eigenen Zweig oben); wird in
+             render-one-range zur echten xml:id. -->
+        <xsl:if test="contains(' spacing hi-spacing bold hi-bold underline hi-underline mod-underline mod del deselection seg seg-transposition unclear metamark ', concat(' ',$name,' '))">
+          <xsl:variable name="declaredIdOther"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'id'"/></xsl:call-template></xsl:variable>
+          <xsl:if test="$declaredIdOther != ''"><my:attr name="id" value="{$declaredIdOther}"/></xsl:if>
+        </xsl:if>
+        <!-- "prev"/"next": Verweise auf Behelfs-IDs, werden zu den gleichnamigen
+             TEI-Attributen (aufgeloest in resolved-ref-attrs) -->
+        <xsl:if test="contains(' spacing hi-spacing bold hi-bold underline hi-underline mod-underline mod del deselection seg seg-transposition unclear metamark add ', concat(' ',$name,' '))">
+          <xsl:variable name="prevV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'prev'"/></xsl:call-template></xsl:variable>
+          <xsl:variable name="nextV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'next'"/></xsl:call-template></xsl:variable>
+          <xsl:if test="$prevV != ''"><my:attr name="prev" value="{$prevV}"/></xsl:if>
+          <xsl:if test="$nextV != ''"><my:attr name="next" value="{$nextV}"/></xsl:if>
+        </xsl:if>
       </my:range>
     </xsl:for-each>
   </xsl:template>
@@ -1857,7 +2343,7 @@
             <xsl:with-param name="lineId" select="$lineId"/>
           </xsl:call-template>
         </xsl:variable>
-        <xsl:if test="$pendingAnchorId != ''"><anchor><xsl:attribute name="xml:id"><xsl:value-of select="$pendingAnchorId"/></xsl:attribute></anchor></xsl:if>
+        <xsl:if test="$pendingAnchorId != ''"><xsl:call-template name="desel-end-anchor"><xsl:with-param name="id" select="$pendingAnchorId"/></xsl:call-template></xsl:if>
       </xsl:when>
 
       <!-- metamark-add + add-id (Abschnitt 7): Meilenstein + importierte(s)
@@ -1998,8 +2484,7 @@
            eigene Ausgabe - der Inhalt fliesst unveraendert durch. -->
       <xsl:when test="$range/@element='del' and $range/my:attr[@name='part']">
         <xsl:variable name="marker" select="$deselMarkers[@line=$lineId and @offset=$range/@offset]"/>
-        <xsl:variable name="pairIdPadded"><xsl:call-template name="pad4"><xsl:with-param name="s" select="$marker/@pairSeq"/></xsl:call-template></xsl:variable>
-        <xsl:variable name="pairId" select="concat('delSpan-', $pageNumPadded, '-', $pairIdPadded)"/>
+        <xsl:variable name="pairId" select="string($deselPairIds[@seq=$marker/@pairSeq]/@id)"/>
         <!-- Korrektur: faellt das Ende dieses Bereichs mit dem Ende eines
              umschliessenden subst/subst-del-synth zusammen, wird der
              <anchor> NICHT hier ausgegeben, sondern von jenem subst-
@@ -2013,7 +2498,17 @@
           </xsl:call-template>
         </xsl:variable>
         <xsl:if test="$marker/@role='start'">
-          <delSpan spanTo="{concat('#',$pairId)}"/>
+          <!-- id/prev/next der deselection (Abschnitt 8) landen auf dem
+               <delSpan>, dem Startelement des Paars -->
+          <delSpan>
+            <xsl:if test="$range/my:attr[@name='id']">
+              <xsl:variable name="declHit" select="$behelfsMap[@behelfs=$range/my:attr[@name='id']/@value]"/>
+              <xsl:variable name="firstDecl" select="$allLineRanges[my:attr[@name='id']/@value=$range/my:attr[@name='id']/@value][1]"/>
+              <xsl:if test="$declHit and $firstDecl/@line=$lineId and $firstDecl/@offset=$range/@offset"><xsl:attribute name="xml:id"><xsl:value-of select="$declHit[1]/@genid"/></xsl:attribute></xsl:if>
+            </xsl:if>
+            <xsl:attribute name="spanTo"><xsl:value-of select="concat('#',$pairId)"/></xsl:attribute>
+            <xsl:call-template name="resolved-ref-attrs"><xsl:with-param name="attrs" select="$range/my:attr"/></xsl:call-template>
+          </delSpan>
         </xsl:if>
         <xsl:choose>
           <xsl:when test="$hasChildren">
@@ -2034,7 +2529,10 @@
           </xsl:otherwise>
         </xsl:choose>
         <xsl:if test="$marker/@role='end' and $relocTarget=''">
-          <anchor><xsl:attribute name="xml:id"><xsl:value-of select="$pairId"/></xsl:attribute></anchor>
+          <anchor>
+            <xsl:attribute name="xml:id"><xsl:value-of select="$pairId"/></xsl:attribute>
+            <xsl:call-template name="resolved-ref-attrs"><xsl:with-param name="attrs" select="$range/my:attr"/></xsl:call-template>
+          </anchor>
         </xsl:if>
       </xsl:when>
 
@@ -2067,11 +2565,16 @@
                sind reine Buchhaltung, nie ein Ausgabeattribut. -->
           <xsl:if test="$range/my:attr[@name='id']">
             <xsl:variable name="declHit" select="$behelfsMap[@behelfs=$range/my:attr[@name='id']/@value]"/>
-            <xsl:if test="$declHit"><xsl:attribute name="xml:id"><xsl:value-of select="$declHit[1]/@genid"/></xsl:attribute></xsl:if>
+            <!-- nur die ERSTE Deklaration einer ID bekommt die xml:id (ein
+                 "continued:true"-Lauf traegt dieselbe id auf jedem Zeilen-
+                 stueck, soll aber nur EINE xml:id ergeben) -->
+            <xsl:variable name="firstDecl" select="$allLineRanges[my:attr[@name='id']/@value=$range/my:attr[@name='id']/@value][1]"/>
+            <xsl:if test="$declHit and $firstDecl/@line=$lineId and $firstDecl/@offset=$range/@offset"><xsl:attribute name="xml:id"><xsl:value-of select="$declHit[1]/@genid"/></xsl:attribute></xsl:if>
           </xsl:if>
-          <xsl:for-each select="$range/my:attr[@name != 'add-id' and @name != 'del-id' and @name != 'id' and @name != 'target']">
+          <xsl:for-each select="$range/my:attr[@name != 'add-id' and @name != 'del-id' and @name != 'id' and @name != 'target' and @name != 'prev' and @name != 'next']">
             <xsl:attribute name="{@name}"><xsl:value-of select="@value"/></xsl:attribute>
           </xsl:for-each>
+          <xsl:call-template name="resolved-ref-attrs"><xsl:with-param name="attrs" select="$range/my:attr"/></xsl:call-template>
           <xsl:if test="$range/my:attr[@name='target']">
             <xsl:attribute name="target">
               <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="$range/my:attr[@name='target']/@value"/></xsl:call-template>
@@ -2121,7 +2624,7 @@
               <xsl:with-param name="lineId" select="$lineId"/>
             </xsl:call-template>
           </xsl:variable>
-          <xsl:if test="$pendingAnchorId != ''"><anchor><xsl:attribute name="xml:id"><xsl:value-of select="$pendingAnchorId"/></xsl:attribute></anchor></xsl:if>
+          <xsl:if test="$pendingAnchorId != ''"><xsl:call-template name="desel-end-anchor"><xsl:with-param name="id" select="$pendingAnchorId"/></xsl:call-template></xsl:if>
         </xsl:if>
       </xsl:otherwise>
     </xsl:choose>
@@ -2202,9 +2705,23 @@
     </xsl:variable>
     <xsl:variable name="endIndex" select="number($endIndexRTF)"/>
     <xsl:element name="{$element}">
-      <xsl:for-each select="$attrs">
+      <!-- wie in render-one-range (generische Weiche): "id" -> echte xml:id
+           ueber $behelfsMap, "target" -> aufgeloeste Behelfs-ID(s),
+           add-id/del-id sind reine Buchhaltung -->
+      <xsl:if test="$attrs[@name='id']">
+        <xsl:variable name="declHit" select="$behelfsMap[@behelfs=$attrs[@name='id']/@value]"/>
+        <xsl:variable name="firstDecl" select="$allLineRanges[my:attr[@name='id']/@value=$attrs[@name='id']/@value][1]"/>
+        <xsl:if test="$declHit and $firstDecl/@line=$lines[$index]/@id and $firstDecl/@offset=$startOffset"><xsl:attribute name="xml:id"><xsl:value-of select="$declHit[1]/@genid"/></xsl:attribute></xsl:if>
+      </xsl:if>
+      <xsl:for-each select="$attrs[@name != 'add-id' and @name != 'del-id' and @name != 'id' and @name != 'target' and @name != 'prev' and @name != 'next']">
         <xsl:attribute name="{@name}"><xsl:value-of select="@value"/></xsl:attribute>
       </xsl:for-each>
+      <xsl:call-template name="resolved-ref-attrs"><xsl:with-param name="attrs" select="$attrs"/></xsl:call-template>
+      <xsl:if test="$attrs[@name='target']">
+        <xsl:attribute name="target">
+          <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="$attrs[@name='target']/@value"/></xsl:call-template>
+        </xsl:attribute>
+      </xsl:if>
       <xsl:call-template name="run-span-body">
         <xsl:with-param name="lines" select="$lines"/>
         <xsl:with-param name="index" select="$index"/>
@@ -2333,12 +2850,20 @@
   </xsl:template>
 
 
-  <!-- $depth mal zwei Leerzeichen (fuer die manuelle Einrueckung von
+  <!-- Einrueckungseinheit pro Ebene fuer die manuelle Einrueckung. Muss zur
+       Einrueckung des Serialisierers passen, damit <lb/>-Zeilen und die
+       automatisch eingerueckten Tags (<p>, <metamark>, ...) buendig stehen:
+       Saxon (Oxygen) rueckt standardmaessig mit 3 Leerzeichen ein, xsltproc/
+       libxml2 mit 2 - fuer xsltproc daher
+       dem Parameter indentUnit zwei Leerzeichen uebergeben. -->
+  <xsl:param name="indentUnit" select="'   '"/>
+
+  <!-- $depth mal $indentUnit (fuer die manuelle Einrueckung von
        Mischinhalt, den der Serialisierer nicht automatisch einrueckt) -->
   <xsl:template name="indent">
     <xsl:param name="depth"/>
     <xsl:if test="$depth &gt; 0">
-      <xsl:text>  </xsl:text>
+      <xsl:value-of select="$indentUnit"/>
       <xsl:call-template name="indent"><xsl:with-param name="depth" select="$depth - 1"/></xsl:call-template>
     </xsl:if>
   </xsl:template>
@@ -2368,6 +2893,35 @@
         <xsl:with-param name="custom" select="@custom"/>
         <xsl:with-param name="block" select="'structure'"/>
         <xsl:with-param name="key" select="'subtype'"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:variable name="cat">
+      <xsl:call-template name="custom-value">
+        <xsl:with-param name="custom" select="@custom"/>
+        <xsl:with-param name="block" select="'structure'"/>
+        <xsl:with-param name="key" select="'cat'"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <!-- Ausgabe-@subtype der surface: der Wert aus structure{cat:..} (base/att);
+         fehlt cat, wie bisher structure{subtype:..} -->
+    <xsl:variable name="subtypeOut">
+      <xsl:choose>
+        <xsl:when test="$cat != ''"><xsl:value-of select="$cat"/></xsl:when>
+        <xsl:otherwise><xsl:value-of select="$subtype"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="singlePArticle">
+      <xsl:call-template name="custom-value">
+        <xsl:with-param name="custom" select="@custom"/>
+        <xsl:with-param name="block" select="'structure'"/>
+        <xsl:with-param name="key" select="'single-p-article'"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:variable name="reasonV">
+      <xsl:call-template name="custom-value">
+        <xsl:with-param name="custom" select="@custom"/>
+        <xsl:with-param name="block" select="'structure'"/>
+        <xsl:with-param name="key" select="'reason'"/>
       </xsl:call-template>
     </xsl:variable>
     <xsl:variable name="compositOrder">
@@ -2412,7 +2966,7 @@
         <xsl:with-param name="key" select="'id'"/>
       </xsl:call-template>
     </xsl:variable>
-    <my:region id="{@id}" type="{$type}" subtype="{$subtype}" compositOrder="{$compositOrder}" index="{$index}" rendition="{$rendition}"
+    <my:region id="{@id}" type="{$type}" cat="{$cat}" singlePArticle="{$singlePArticle}" reason="{$reasonV}" subtype="{$subtypeOut}" compositOrder="{$compositOrder}" index="{$index}" rendition="{$rendition}"
             function="{$function}" target="{$target}" behelfsId="{$behelfsId}"
             minX="{$minX}" minY="{$minY}" maxX="{$maxX}" maxY="{$maxY}"
             area="{($maxX - $minX) * ($maxY - $minY)}"/>
@@ -2474,6 +3028,11 @@
   <xsl:template name="determine-parent">
     <xsl:param name="me"/>
     <xsl:choose>
+      <!-- explizite has-parent-Relation hat Vorrang (nur wenn die Elternregion
+           existiert und nicht die aeusserste surface das Kind ist) -->
+      <xsl:when test="$hasParent[@child=$me/@id] and $regions[@id=$hasParent[@child=$me/@id][1]/@parent] and $me/@id != $baseId">
+        <xsl:value-of select="$hasParent[@child=$me/@id][1]/@parent"/>
+      </xsl:when>
       <xsl:when test="$me/@type='surface'">
         <xsl:variable name="candidates" select="$surfaceRegions[@id != $me/@id]"/>
         <xsl:variable name="found">
@@ -2489,7 +3048,7 @@
         </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
-        <!-- Sonderregel fuer metamark-Zonen mit @target (siehe verarbeitungsregeln.txt
+        <!-- Sonderregel fuer metamark-Zonen mit @target (siehe verarbeitungsregeln.md
              Abschnitt 3): eine metamark, die auf ein anderes Element verweist,
              wird NICHT in die kleinste umschliessende Zone genestet, sondern
              direkt Kind der (kleinsten passenden) surface. -->
@@ -2546,7 +3105,27 @@
              waehlen (Zyklus, beide wuerden dann nie erreicht). -->
         <xsl:variable name="sizeOk" select="number(@area) &gt; number($me/@area) or (number(@area) = number($me/@area) and @id &gt; $me/@id)"/>
         <xsl:if test="number($ratio) &gt;= 0.95 and $sizeOk">
-          <my:cand id="{@id}" area="{@area}"/>
+          <!-- Zusatzbedingung (Abschnitt 3): der Mittelpunkt der Bounding-Box von
+               $me muss im ECHTEN Polygon des Kandidaten liegen. Die reine
+               Bounding-Box-Naeherung rechnet schraege Polygone (z.B. eine
+               aufgeklebte, schief liegende surface) zu gross; so fiele eine
+               Zone am Rand faelschlich hinein. -->
+          <xsl:variable name="candPoints" select="string($allRegions[@id=current()/@id]/*[local-name()='Coords']/@points)"/>
+          <xsl:variable name="centerInside">
+            <xsl:choose>
+              <xsl:when test="$candPoints = ''">1</xsl:when>
+              <xsl:otherwise>
+                <xsl:call-template name="point-in-polygon">
+                  <xsl:with-param name="x" select="(number($me/@minX) + number($me/@maxX)) div 2"/>
+                  <xsl:with-param name="y" select="(number($me/@minY) + number($me/@maxY)) div 2"/>
+                  <xsl:with-param name="pts" select="$candPoints"/>
+                </xsl:call-template>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:if test="$centerInside = '1'">
+            <my:cand id="{@id}" area="{@area}"/>
+          </xsl:if>
         </xsl:if>
       </xsl:for-each>
     </xsl:variable>
@@ -2554,6 +3133,77 @@
       <xsl:sort select="@area" data-type="number" order="ascending"/>
       <xsl:if test="position()=1"><xsl:value-of select="@id"/></xsl:if>
     </xsl:for-each>
+  </xsl:template>
+
+  <!-- Punkt-im-Polygon (Strahlverfahren, Paritaet der Kantenschnitte):
+       liefert 1, wenn (x,y) im Polygon "x,y x,y ..." liegt, sonst 0. Laeuft
+       rekursiv ueber die Eckpunkte; px/py/count sind Hilfsparameter. -->
+  <xsl:template name="point-in-polygon">
+    <xsl:param name="x"/>
+    <xsl:param name="y"/>
+    <xsl:param name="pts"/>
+    <xsl:param name="firstX" select="''"/>
+    <xsl:param name="firstY" select="''"/>
+    <xsl:param name="px" select="''"/>
+    <xsl:param name="py" select="''"/>
+    <xsl:param name="count" select="0"/>
+    <xsl:variable name="rest" select="normalize-space($pts)"/>
+    <xsl:choose>
+      <xsl:when test="$rest = ''">
+        <!-- Schlusskante: letzter Punkt -> erster Punkt -->
+        <xsl:variable name="closing">
+          <xsl:call-template name="edge-crosses">
+            <xsl:with-param name="x" select="$x"/><xsl:with-param name="y" select="$y"/>
+            <xsl:with-param name="x1" select="$px"/><xsl:with-param name="y1" select="$py"/>
+            <xsl:with-param name="x2" select="$firstX"/><xsl:with-param name="y2" select="$firstY"/>
+          </xsl:call-template>
+        </xsl:variable>
+        <xsl:value-of select="($count + number($closing)) mod 2"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="tok">
+          <xsl:choose>
+            <xsl:when test="contains($rest,' ')"><xsl:value-of select="substring-before($rest,' ')"/></xsl:when>
+            <xsl:otherwise><xsl:value-of select="$rest"/></xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="cx" select="number(substring-before($tok,','))"/>
+        <xsl:variable name="cy" select="number(substring-after($tok,','))"/>
+        <xsl:variable name="edge">
+          <xsl:choose>
+            <xsl:when test="$px = ''">0</xsl:when>
+            <xsl:otherwise>
+              <xsl:call-template name="edge-crosses">
+                <xsl:with-param name="x" select="$x"/><xsl:with-param name="y" select="$y"/>
+                <xsl:with-param name="x1" select="$px"/><xsl:with-param name="y1" select="$py"/>
+                <xsl:with-param name="x2" select="$cx"/><xsl:with-param name="y2" select="$cy"/>
+              </xsl:call-template>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+        <xsl:call-template name="point-in-polygon">
+          <xsl:with-param name="x" select="$x"/>
+          <xsl:with-param name="y" select="$y"/>
+          <xsl:with-param name="pts" select="substring-after($rest,' ')"/>
+          <xsl:with-param name="firstX"><xsl:choose><xsl:when test="$firstX = ''"><xsl:value-of select="$cx"/></xsl:when><xsl:otherwise><xsl:value-of select="$firstX"/></xsl:otherwise></xsl:choose></xsl:with-param>
+          <xsl:with-param name="firstY"><xsl:choose><xsl:when test="$firstY = ''"><xsl:value-of select="$cy"/></xsl:when><xsl:otherwise><xsl:value-of select="$firstY"/></xsl:otherwise></xsl:choose></xsl:with-param>
+          <xsl:with-param name="px" select="$cx"/>
+          <xsl:with-param name="py" select="$cy"/>
+          <xsl:with-param name="count" select="$count + number($edge)"/>
+        </xsl:call-template>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- 1, wenn der waagrechte Strahl von (x,y) nach rechts die Kante
+       (x1,y1)-(x2,y2) schneidet, sonst 0 -->
+  <xsl:template name="edge-crosses">
+    <xsl:param name="x"/><xsl:param name="y"/>
+    <xsl:param name="x1"/><xsl:param name="y1"/><xsl:param name="x2"/><xsl:param name="y2"/>
+    <xsl:choose>
+      <xsl:when test="((number($y1) &gt; number($y)) != (number($y2) &gt; number($y))) and (number($x) &lt; (number($x2) - number($x1)) * (number($y) - number($y1)) div (number($y2) - number($y1)) + number($x1))">1</xsl:when>
+      <xsl:otherwise>0</xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <!-- Anteil von a, der innerhalb von b liegt (Bounding-Box-Naeherung) -->
@@ -2622,15 +3272,16 @@
        Faelle: eine annotation/metamark-Region, deren einzige Zeile nur "|"
        enthaelt, ggf. zusaetzlich von einem Meilenstein wie undo umschlossen
        - text-with-gaps bekommt dann als Leaf-Text genau "|" uebergeben) -
-       dann wird NUR das <g ref="#correction"/> eingesetzt, OHNE neue
+       dann wird NUR das <g ref="#intervention"/> eingesetzt, OHNE neue
        umschliessende metamark (die existiert ja schon aussenrum). In jedem
        anderen Fall (Text drumherum vorhanden) wird "|" wie #del/#ker/#lSpc/
-       #rel in eine eigene <metamark><g/></metamark> gepackt. -->
+       #rel/#trans in eine eigene <metamark function="intervention"><g/></metamark>
+       gepackt. -->
   <xsl:template name="text-with-gaps">
     <xsl:param name="txt"/>
     <xsl:choose>
       <xsl:when test="$txt = '|'">
-        <g ref="#correction"/>
+        <g ref="#intervention"/>
       </xsl:when>
       <xsl:when test="contains($txt,'#') or contains($txt,'|')">
         <xsl:variable name="hashPos">
@@ -2669,6 +3320,10 @@
                 <metamark function="relocation"><g ref="#relocation"/></metamark>
                 <xsl:call-template name="text-with-gaps"><xsl:with-param name="txt" select="substring($rest,5)"/></xsl:call-template>
               </xsl:when>
+              <xsl:when test="starts-with($rest,'#trans')">
+                <metamark function="transposition"><g ref="#transposition"/></metamark>
+                <xsl:call-template name="text-with-gaps"><xsl:with-param name="txt" select="substring($rest,7)"/></xsl:call-template>
+              </xsl:when>
               <xsl:when test="starts-with($rest,'##')">
                 <xsl:variable name="afterFirstTwo" select="substring($rest,3)"/>
                 <xsl:variable name="extraRTF">
@@ -2693,7 +3348,7 @@
             <xsl:variable name="before" select="substring($txt, 1, number($pipePos))"/>
             <xsl:variable name="rest" select="substring($txt, number($pipePos) + 2)"/>
             <xsl:value-of select="$before"/>
-            <metamark function="correction"><g ref="#correction"/></metamark>
+            <metamark function="intervention"><g ref="#intervention"/></metamark>
             <xsl:call-template name="text-with-gaps"><xsl:with-param name="txt" select="$rest"/></xsl:call-template>
           </xsl:otherwise>
         </xsl:choose>
@@ -2830,6 +3485,19 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- das Ende-<anchor> eines delSpan-Paars mit xml:id und - falls der
+       letzte Block des Paars sie traegt - prev/next -->
+  <xsl:template name="desel-end-anchor">
+    <xsl:param name="id"/>
+    <xsl:variable name="pid" select="$deselPairIds[@id=$id][1]"/>
+    <anchor>
+      <xsl:attribute name="xml:id"><xsl:value-of select="$id"/></xsl:attribute>
+      <xsl:call-template name="resolved-ref-attrs">
+        <xsl:with-param name="attrs" select="$allLineRanges[@line=$pid/@line and @offset=$pid/@offset and @element='del' and my:attr[@name='part']][1]/my:attr"/>
+      </xsl:call-template>
+    </anchor>
+  </xsl:template>
+
   <!-- Kehrseite von relocation-target-for: wird beim Rendern eines
        subst/subst-del-synth-Bereichs ($myIdx) aufgerufen, NACHDEM dessen
        </subst> bereits geschlossen ist. Durchsucht alle deselection-
@@ -2855,8 +3523,7 @@
             </xsl:call-template>
           </xsl:variable>
           <xsl:if test="$target=$myIdx">
-            <xsl:variable name="pairIdPadded"><xsl:call-template name="pad4"><xsl:with-param name="s" select="$marker/@pairSeq"/></xsl:call-template></xsl:variable>
-            <my:pending id="{concat('delSpan-', $pageNumPadded, '-', $pairIdPadded)}"/>
+            <my:pending id="{$deselPairIds[@seq=$marker/@pairSeq]/@id}"/>
           </xsl:if>
         </xsl:if>
       </xsl:for-each>
@@ -2898,6 +3565,17 @@
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+  <!-- "prev"/"next" (Behelfs-IDs) als gleichnamige TEI-Attribute, aufgeloest
+       wie target (Abschnitt 8) -->
+  <xsl:template name="resolved-ref-attrs">
+    <xsl:param name="attrs"/>
+    <xsl:for-each select="$attrs[@name='prev' or @name='next']">
+      <xsl:attribute name="{@name}">
+        <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="@value"/></xsl:call-template>
+      </xsl:attribute>
+    </xsl:for-each>
   </xsl:template>
 
   <!-- gibt @target nur aus, wenn mindestens ein Token ein dokumentuebergreifender

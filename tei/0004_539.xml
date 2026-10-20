@@ -12,7 +12,7 @@
             <p>
               Quelle: 0004_539.jpg.
               Erstellt: 2026-09-14T12:23:48.877+02:00,
-              zuletzt geaendert: 2026-10-01T11:06:22.560+02:00.
+              zuletzt geaendert: 2026-10-02T14:09:05.973+02:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -68,6 +68,9 @@
                      xml:id="zone_l_8"
                      points="439,940 1016,870 1166,852 1366,821 1514,825 1612,817 1782,785 1776,756 1608,787 1513,795 1364,791 1162,822 1012,840 435,910"/>
                <zone type="line"
+                     xml:id="zone_l_10"
+                     points="1415,980 1519,969 1553,962 1619,967 1621,937 1551,932 1514,939 1412,950"/>
+               <zone type="line"
                      xml:id="zone_l_9"
                      points="367,1054 607,1026 737,1014 910,987 1211,947 1614,924 1821,878 1814,849 1610,894 1208,917 906,957 733,984 604,996 364,1024"/>
                <zone type="line"
@@ -101,6 +104,9 @@
                      xml:id="zone_l_20"
                      points="588,2075 854,2026 1076,1993 1268,1967 1467,1924 1715,1894 1924,1842 2050,1819 2045,1789 1918,1813 1710,1864 1462,1894 1263,1937 1072,1963 849,1996 583,2045"/>
                <zone type="line"
+                     xml:id="zone_l_22"
+                     points="1434,1983 1492,1969 1485,1940 1427,1954"/>
+               <zone type="line"
                      xml:id="zone_l_21"
                      points="521,2168 1426,2041 1538,2016 1703,2002 1898,1944 2221,1897 2377,1882 2374,1852 2217,1867 1892,1915 1697,1973 1533,1986 1421,2011 517,2138"/>
                <zone type="line"
@@ -125,6 +131,9 @@
                      xml:id="zone_l_29"
                      points="840,2951 1103,2899 1309,2872 1643,2822 1929,2758 1922,2729 1638,2793 1305,2842 1098,2869 834,2922"/>
                <zone type="line"
+                     xml:id="zone_l_31"
+                     points="1165,2985 1228,2979 1275,2994 1284,2965 1231,2949 1162,2955"/>
+               <zone type="line"
                      xml:id="zone_l_30"
                      points="658,3163 1252,3082 1248,3052 654,3133"/>
             </zone>
@@ -136,14 +145,23 @@
                   xml:id="zone_l_32"
                   points="233,3417 410,3425 644,3434 1317,3389 1498,3353 1697,3327 2019,3291 2154,3265 2148,3236 2014,3261 1693,3297 1493,3323 1313,3359 644,3404 411,3395 234,3387"/>
             <zone type="line"
+                  xml:id="zone_l_39"
+                  points="240,3494 296,3492 295,3462 239,3464"/>
+            <zone type="line"
                   xml:id="zone_l_33"
                   points="311,3566 427,3562 553,3551 669,3551 785,3539 1043,3520 1266,3489 1403,3466 1540,3446 1874,3417 1938,3404 1932,3375 1870,3387 1537,3416 1398,3436 1261,3459 1040,3490 782,3509 667,3521 552,3521 425,3532 310,3536"/>
+            <zone type="line"
+                  xml:id="zone_l_40"
+                  points="1174,3561 1309,3555 1366,3530 1397,3527 1394,3497 1358,3501 1302,3526 1173,3531"/>
             <zone type="line"
                   xml:id="zone_l_34"
                   points="371,3686 623,3670 943,3664 1132,3652 1260,3640 1308,3616 1394,3622 1437,3605 1721,3585 1831,3569 2326,3491 2321,3461 1827,3539 1718,3555 1430,3576 1389,3592 1302,3587 1252,3611 1130,3622 942,3634 622,3640 369,3656"/>
             <zone type="line"
                   xml:id="zone_l_35"
                   points="451,3810 534,3808 797,3781 1462,3725 1582,3709 1724,3683 1774,3667 2105,3634 2102,3604 1768,3638 1717,3654 1577,3679 1459,3695 794,3751 532,3778 450,3780"/>
+            <zone type="line"
+                  xml:id="zone_l_41"
+                  points="1748,3757 1838,3755 1868,3760 2019,3741 2015,3711 1869,3730 1840,3725 1747,3727"/>
             <zone type="line"
                   xml:id="zone_l_36"
                   points="525,3903 812,3885 843,3873 1089,3855 1272,3844 1412,3839 1411,3809 1271,3814 1087,3825 836,3844 806,3856 523,3873"/>
@@ -159,48 +177,47 @@
    <text>
       <body>
          <div facs="#surface_r_5" type="base">
-            <div>
-               <fw facs="#zone_r_1">
-            <lb facs="#zone_l"/>45
-          </fw>
-            </div>
-            <div>
-               <fw facs="#zone_r_2">
-            <lb facs="#zone_l_1"/>266
-          </fw>
-            </div>
+            <fw facs="#zone_r_1">
+               <lb facs="#zone_l"/>45
+            </fw>
+            <fw facs="#zone_r_2">
+               <lb facs="#zone_l_1"/>266
+            </fw>
             <metamark xml:id="metamark-0539-0001" facs="#zone_r_3" function="insertion" target="#add-0539-0001">
-          <lb facs="#zone_l_2"/><g ref="#correction"/>
-        </metamark>
+               <lb facs="#zone_l_2"/><g ref="#intervention"/>
+            </metamark>
             <div facs="#zone_r" type="column-block">
-               <p facs="#zone_r_6" part="f">
-            <lb facs="#zone_l_3"/>Nicht auf <del>d<subst><add>ie</add><del>en</del></subst> <del>A</del> E<gap reason="illegible" extent="8"/>ung</del> den Ausgang kommt
-            <lb facs="#zone_l_4"/>es an, nur auf die Gelegenheit, der Welt zu sagen.
-            <lb facs="#zone_l_5"/>„wie alles dies geschah“, sie wieder einmal von Taten
-            <lb facs="#zone_l_6"/>hören zu lassen, fleischlich, blutig, unnatürlich, zufälligen
-            <lb facs="#zone_l_7"/><del><gap reason="illegible" extent="10"/></del> Gerichten, blindem Mord; von Planen, die 
-            <lb facs="#zone_l_8"/>verfehlt zurückgefallen auf den Erfinder Haupt. Und
-            <lb facs="#zone_l_9"/>von einem Aktenstück, <subst><del><gap reason="illegible" extent="8"/></del><add place="below">vor dem</add></subst> über das ihr
-            <lb facs="#zone_l_11"/>die Augen übergehen werden, wenn ich es mit einem
-            <lb facs="#zone_l_12"/>Steckbrief konfrontiere. <subst><del>Ei<gap reason="illegible" extent="3"/></del> <add place="inline">Die</add></subst> unbeglaubigte
-            <lb facs="#zone_l_13"/>Aussage des angeklagten Privatmanns will es mit einem
-            <lb facs="#zone_l_14"/>Amtseid aufnehmen, womöglich unter Zuziehung
-            <lb facs="#zone_l_15"/>eines ungarischen von gleichem Range.<metamark function="insertion"/><add facs="#zone_r_4" xml:id="add-0539-0001"><lb facs="#zone_l_32"/>die Wahrheit zu sagen in einer Welt der Lüge – wäre man<lb facs="#zone_l_33"/><subst><del><gap reason="illegible" extent="3"/></del><add place="above">es</add></subst> nicht den Toten schuldig, so <subst><del><gap reason="illegible" extent="4"/></del><add place="above">wäre sie</add></subst> doch die geringste<lb facs="#zone_l_34"/>Erkenntlichkeit für den Glücksfall, daß man nicht zu ihnen zählt. Und<lb facs="#zone_l_35"/>an derselben Stelle, wo die Menschen, die de<subst><del>n</del><add place="overwritten">m</add></subst> <metamark function="addition" target="#add-0539-0002"><g ref="#correction"/></metamark><add xml:id="add-0539-0002" place="below">Transport der </add>Verwundeten<lb facs="#zone_l_36"/>Automobile bestimmt hatten, als<lb facs="#zone_l_37"/>Erpresser gebrandmarkt wurden, dort will ich die<lb facs="#zone_l_38"/>Frage aufwerfen,</add> <del>Es gelüstet mich,</del>
-            <lb facs="#zone_l_16"/><del>vor der <gap reason="illegible" extent="8"/> Welt in die <gap reason="illegible" extent="10"/> einzugehen,</del>
-            <lb facs="#zone_l_17"/><del>zu derselben Stelle, wo Menschen,</del> die
-            <lb facs="#zone_l_18"/><del>Automobile für <gap reason="illegible" extent="10"/> <gap reason="illegible" extent="6"/> <gap reason="illegible" extent="7"/></del>
-            <lb facs="#zone_l_19"/><del><gap reason="illegible" extent="10"/> <gap reason="illegible" extent="3"/> gebrauchen wollten, als Erpresser</del>
-            <lb facs="#zone_l_20"/><del>gebrandmarkt wurden, <gap reason="illegible" extent="2"/> die Frage aufzuwerfen,</del>
-            <lb facs="#zone_l_21"/>ob die Polizei diesen Fall <subst><del><gap reason="illegible" extent="3"/></del><add place="above">als</add></subst> den ersten erkannt hat,
-            <lb facs="#zone_l_23"/><del><gap reason="illegible" extent="4"/>,</del> auf den die Verbrechensmerkmale zutreffen. <del>Wer d<gap reason="illegible" extent="2"/></del>
-            <lb facs="#zone_l_24"/><del>Ausgang betrifft, so mißlingt</del>
-            <lb facs="#zone_l_25"/>Mißlingt der Versuch, so werd ich es als 
-            <lb facs="#zone_l_26"/>eine Ehre betrachten, verglichen mit der
-            <lb facs="#zone_l_27"/>der Prytan<subst><del>ä</del><add place="overwritten">e</add></subst>ums, <del>in dem K<gap reason="illegible" extent="4"/> zu</del>
-            <lb facs="#zone_l_28"/><del><gap reason="illegible" extent="5"/>,</del> nur den Kerker geöffnet zu haben,
-            <lb facs="#zone_l_29"/>der <del>dem</del> <subst><del>Herrn</del><add place="below">dem</add></subst> Sandor Weiß
-            <lb facs="#zone_l_30"/>verschhlossen bleibt!
-          </p>
+               <p facs="#zone_r_6" part="F">
+                  <lb facs="#zone_l_3"/>Nicht auf <del xml:id="del-0539-0001">d<subst><add>ie</add><del xml:id="del-0539-0002">en</del></subst> <del xml:id="del-0539-0003">A</del> E<gap reason="illegible" extent="8"/>ung</del> den Ausgang kommt
+                  <lb facs="#zone_l_4"/>es an, nur auf die Gelegenheit, der Welt zu sagen.
+                  <lb facs="#zone_l_5"/>„wie alles dies geschah“, sie wieder einmal von Taten
+                  <lb facs="#zone_l_6"/>hören zu lassen, fleischlich, blutig, unnatürlich, zufälligen
+                  <lb facs="#zone_l_7"/><del><gap reason="illegible" extent="10"/></del> Gerichten, blindem Mord; von Planen, die 
+                  <lb facs="#zone_l_8"/>verfehlt zurückgefallen auf den Erfinder Haupt. Und
+                  <lb facs="#zone_l_10"/><add xml:id="add-0539-0002" place="below">vor dem</add>
+                  <lb facs="#zone_l_9"/>von einem Aktenstück, <gap reason="illegible" extent="8"/> über das ihr
+                  <lb facs="#zone_l_11"/>die Augen übergehen werden, wenn ich es mit einem
+                  <lb facs="#zone_l_12"/>Steckbrief konfrontiere. <subst><del>Ei<gap reason="illegible" extent="3"/></del> <add place="inline">Die</add></subst> unbeglaubigte
+                  <lb facs="#zone_l_13"/>Aussage des angeklagten Privatmanns will es mit einem
+                  <lb facs="#zone_l_14"/>Amtseid aufnehmen, womöglich unter Zuziehung
+                  <lb facs="#zone_l_15"/>eines ungarischen von gleichem Range.<metamark function="insertion"/><add facs="#zone_r_4" xml:id="add-0539-0001"><lb facs="#zone_l_32"/>Die Wahrheit zu sagen in einer Welt der Lüge – wäre man<lb facs="#zone_l_39"/><add xml:id="add-0539-0005" place="above">es</add><lb facs="#zone_l_33"/><gap reason="illegible" extent="3"/> nicht den Toten schuldig, so <gap reason="illegible" extent="4"/> doch die geringste<lb facs="#zone_l_40"/><add xml:id="add-0539-0006" place="below">wäre <del>sie</del> es</add><lb facs="#zone_l_34"/>Erkenntlichkeit für den Glücksfall, daß man nicht zu ihnen zählt. Und<lb facs="#zone_l_35"/>an derselben Stelle, wo die Menschen, die de<subst><del>n</del><add place="overwritten">m</add></subst> <metamark function="addition" target="#add-0539-0007"><g ref="#intervention"/></metamark>Verwundeten<lb facs="#zone_l_41"/><add xml:id="add-0539-0007" place="below">Transport der</add><lb facs="#zone_l_36"/>Automobile bestimmt hatten, als<lb facs="#zone_l_37"/>Erpresser gebrandmarkt wurden, dort will ich die<lb facs="#zone_l_38"/>Frage aufwerfen,</add> <del>Es gelüstet mich,</del>
+                  <lb facs="#zone_l_16"/><del>vor der <gap reason="illegible" extent="8"/> Welt in die <gap reason="illegible" extent="10"/> einzugehen,</del>
+                  <lb facs="#zone_l_17"/><del>zu derselben Stelle, wo Menschen,</del> die
+                  <lb facs="#zone_l_18"/><del>Automobile für <gap reason="illegible" extent="10"/> <gap reason="illegible" extent="6"/> <gap reason="illegible" extent="7"/></del>
+                  <lb facs="#zone_l_19"/><del><gap reason="illegible" extent="10"/> <gap reason="illegible" extent="3"/> gebrauchen wollten, als Erpresser</del>
+                  <lb facs="#zone_l_20"/><del>gebrandmarkt wurden, <gap reason="illegible" extent="2"/> die Frage aufzuwerfen,</del>
+                  <lb facs="#zone_l_22"/><add xml:id="add-0539-0003" place="above">als</add>
+                  <lb facs="#zone_l_21"/>ob die Polizei diesen Fall <gap reason="illegible" extent="3"/> den ersten erkannt hat,
+                  <lb facs="#zone_l_23"/><del><gap reason="illegible" extent="4"/>,</del> auf den die Verbrechensmerkmale zutreffen. <del>Wer d<gap reason="illegible" extent="2"/></del>
+                  <lb facs="#zone_l_24"/><del>Ausgang betrifft, so mißlingt</del>
+                  <lb facs="#zone_l_25"/>Mißlingt der Versuch, so werd ich es als 
+                  <lb facs="#zone_l_26"/>eine Ehre betrachten, verglichen mit der
+                  <lb facs="#zone_l_27"/>der Prytan<subst><del>ä</del><add place="overwritten">e</add></subst>ums, <del>in dem K<gap reason="illegible" extent="4"/> zu</del>
+                  <lb facs="#zone_l_28"/><del><gap reason="illegible" extent="5"/>,</del> nur den Kerker geöffnet zu haben,
+                  <lb facs="#zone_l_29"/>der <del>dem</del> <subst><del>Herrn</del><!-- unresolved add-id: rdfr (keine Region mit dieser Behelfs-ID im Export) --></subst> Sandor Weiß
+                  <lb facs="#zone_l_31"/><add xml:id="add-0539-0004" place="below">dem</add>
+                  <lb facs="#zone_l_30"/>verschlossen bleibt!
+               </p>
             </div>
          </div>
       </body>
