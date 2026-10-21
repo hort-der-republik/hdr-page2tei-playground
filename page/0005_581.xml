@@ -3,12 +3,12 @@
     <Metadata>
         <Creator>prov=READ-COOP:name=PyLaia@TranskribusPlatform:version=2.51.0:model_id=50870:lm=none:date=14_09_2026_14:17</Creator>
         <Created>2026-09-14T12:23:49.012+02:00</Created>
-        <LastChange>2026-10-01T09:31:38.411+02:00</LastChange>
-        <TranskribusMetadata docId="18855842" pageId="127360803" pageNr="5" tsid="305187853" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=LNTKTORFKTNNRQDBKJLULZWA" xmlUrl="https://files.transkribus.eu/Get?id=RBJLPQKWAVWIIYITYYQOJPTV" imageId="108583559"/>
+        <LastChange>2026-10-20T14:24:15.583+02:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="127360803" pageNr="5" tsid="307031232" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=LNTKTORFKTNNRQDBKJLULZWA" xmlUrl="https://files.transkribus.eu/Get?id=BHIGFGAPTLAKDEUKVBOZDNIW" imageId="108583559"/>
     </Metadata>
     <Page imageFilename="0005_581.jpg" imageWidth="5198" imageHeight="6817">
         <ReadingOrder>
-            <OrderedGroup id="ro_1790840035538" caption="Regions reading order">
+            <OrderedGroup id="ro_1792568340897" caption="Regions reading order">
                 <RegionRefIndexed index="0" regionRef="r_31"/>
                 <RegionRefIndexed index="1" regionRef="tr_3"/>
                 <RegionRefIndexed index="2" regionRef="r_9"/>
@@ -405,7 +405,7 @@
                 <Coords points="1215,2689 1289,2691 1309,2680 1326,2697 1360,2686 1391,2700 1397,2504 1380,2498 1371,2506 1334,2506 1289,2543 1269,2543 1243,2518 1218,2515"/>
                 <Baseline points="1231,2646 1397,2641"/>
                 <TextEquiv>
-                    <Unicode>|#del</Unicode>
+                    <Unicode>| #del</Unicode>
                 </TextEquiv>
             </TextLine>
             <TextEquiv>
@@ -457,7 +457,7 @@
                 <Coords points="4199,2780 4222,2774 4265,2802 4310,2799 4310,2606 4276,2612 4248,2626 4239,2620 4219,2634 4199,2632"/>
                 <Baseline points="4216,2734 4317,2734"/>
                 <TextEquiv>
-                    <Unicode>#ker</Unicode>
+                    <Unicode>#wSpc</Unicode>
                 </TextEquiv>
             </TextLine>
             <TextEquiv>

@@ -1,1 +1,468 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"><Metadata><Creator>prov=READ-COOP:name=PyLaia@TranskribusPlatform:version=2.51.0:model_id=55331:lm=none:date=14_09_2026_13:37</Creator><Created>2026-09-14T12:23:48.548+02:00</Created><LastChange>2026-10-19T09:46:06.034+02:00</LastChange><TranskribusMetadata docId="18855842" pageId="127360800" pageNr="1" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=XXCJSTVVGRGUASEBODJDYUZM" imageId="108583557"/></Metadata><Page imageFilename="108.jpg" imageWidth="2553" imageHeight="3871"><Relations><Relation custom="relationType {value:undefined;} relationName {value:multi-p-quote;} id {value:rel;}"><RegionRef regionRef="r_7"/><RegionRef regionRef="r_8"/><RegionRef regionRef="r_9"/><RegionRef regionRef="r_10"/></Relation><Relation custom="relationType {value:undefined;} relationName {value:article;} id {value:rel;}"><RegionRef regionRef="tr_1"/><RegionRef regionRef="r_11"/></Relation></Relations><TextRegion id="r_5" custom="readingOrder {index:0;} structure {type:surface;cat:base;}"><Coords points="338,105 2398,84 2446,3742 402,3755"/><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_4" custom="readingOrder {index:1;} structure {type:fw;}"><Coords points="1994,141 2232,141 2232,297 1994,297"/><TextLine id="l" custom="readingOrder {index:0;}"><Coords points="1997,288 2018,295 2025,288 2048,303 2090,301 2112,290 2133,301 2192,284 2192,140 2171,140 2141,123 2097,136 2084,125 2035,125 2025,136 1997,131"/><Baseline points="2009,278 2197,278"/><TextEquiv><Unicode>53</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_3" custom="readingOrder {index:2;} structure {type:metamark;function:font;}"><Coords points="1142,161 1406,161 1406,295 1142,295"/><TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}"><Coords points="1143,259 1172,267 1187,254 1196,259 1217,248 1232,263 1247,265 1266,250 1274,259 1314,244 1319,165 1304,170 1291,159 1255,178 1234,165 1174,195 1147,184"/><Baseline points="1155,235 1182,235 1210,233 1238,232 1266,232 1294,230 1322,226"/><TextEquiv><Unicode>col</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_6" custom="readingOrder {index:3;} structure {type:surface;subtype:att;cat:att;}"><Coords points="53,331 1885,301 2439,303 2446,3340 850,3377 194,3370 91,3340"/><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_12" custom="readingOrder {index:4;} structure {type:column-block;block-extent:1/3;}"><Coords points="704,250 2471,247 2468,3332 708,3332"/><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_13" custom="readingOrder {index:5;} structure {type:metamark;}"><Coords points="142,530 592,530 592,968 142,968"/><TextLine id="l_1" custom="readingOrder {index:0;} del {offset:0;length:8;}"><Coords points="176,970 516,628 495,607 155,949"/><Baseline points="176,970 516,628"/><TextEquiv><Unicode>29. Juli</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:6;} structure {type:paragraph;hand-medium:newspaper-print;part:F;}"><Coords points="725,261 729,3024 2434,3034 2446,255"/><TextLine id="tr_1_tl_2" custom="readingOrder {index:0;} deselection {offset:0;length:54;continued:true;part:I;id:bhuio;next:huiop;} gap-cut {offset:0;length:5;} gap-cut {offset:6;length:3;} gap-cut {offset:10;length:5;} gap-cut {offset:16;length:4;} gap-cut {offset:21;length:13;} gap-cut {offset:35;length:2;} gap-cut {offset:38;length:4;} gap-cut {offset:43;length:4;} gap-cut {offset:48;length:6;}"><Coords points="956,341 2421,337 2421,271 2048,303 1707,257 1560,303 956,276"/><Baseline points="967,328 1043,325 1120,325 1197,325 1274,323 1350,325 1427,325 1504,322 1581,322 1658,322 1734,322 1811,322 1888,322 1965,322 2042,319 2118,322 2195,319 2272,317 2349,316 2426,316"/><TextEquiv><Unicode>##### ### ##### #### ############# ## #### #### ######</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_3" custom="readingOrder {index:1;} deselection {offset:0;length:53;continued:true;part:I;id:bhuio;next:huiop;} sic {offset:24;length:5;correction:gute;}"><Coords points="712,403 2413,396 2413,341 2192,324 712,352"/><Baseline points="725,387 809,390 894,390 978,387 1063,387 1148,387 1232,387 1317,387 1401,387 1486,387 1571,387 1655,387 1740,387 1824,387 1909,387 1994,385 2078,385 2163,385 2247,383 2332,382 2417,376"/><TextEquiv><Unicode>einzelne von ihnen eine lgute Anklage gegen die uner⸗</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_4" custom="readingOrder {index:2;} deselection {offset:0;length:53;continued:true;part:I;id:bhuio;next:huiop;}"><Coords points="710,462 2404,477 2404,399 2287,392 710,405"/><Baseline points="722,453 806,456 890,456 974,456 1059,456 1143,456 1227,455 1312,456 1396,453 1480,456 1565,453 1649,456 1733,453 1817,453 1902,453 1986,453 2070,453 2155,450 2239,450 2323,450 2408,453"/><TextEquiv><Unicode>hörte Unmenſchlichkeit der Polizei an dem Unglückstag</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_5" custom="readingOrder {index:3;} deselection {offset:0;length:46;continued:true;part:I;id:bhuio;next:huiop;} hi-spacing {offset:21;length:25;continued:true;}"><Coords points="710,532 2415,532 2415,475 2351,462 710,473"/><Baseline points="722,525 806,525 891,522 976,525 1061,522 1145,521 1230,522 1315,525 1400,522 1484,519 1569,525 1654,525 1739,522 1823,520 1908,520 1993,520 2078,519 2162,519 2247,519 2332,519 2417,510"/><TextEquiv><Unicode>iſt. Wie die Polizei auf ganz unſchuldige Per⸗</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_6" custom="readingOrder {index:4;} deselection {offset:0;length:51;continued:true;part:I;id:bhuio;next:huiop;} hi-spacing {offset:0;length:10;continued:true;}"><Coords points="714,644 784,608 2415,606 2415,534 2258,524 717,536"/><Baseline points="728,596 812,593 897,593 981,593 1066,591 1151,590 1235,590 1320,590 1404,589 1489,589 1574,590 1658,590 1743,587 1827,587 1912,587 1997,587 2081,585 2166,586 2250,585 2335,587 2420,587"/><TextEquiv><Unicode>ſonen Jagd gemacht hat, beſchreibt folgender Brief:</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_7" custom="readingOrder {index:7;} structure {type:long-quote-p;}"><Coords points="771,613 2432,613 2434,1768 771,1776"/><TextLine id="tr_1_tl_7" custom="readingOrder {index:0;} deselection {offset:0;length:52;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="950,691 2410,681 2410,621 2287,598 950,608"/><Baseline points="961,659 1033,659 1106,659 1178,659 1251,659 1324,659 1396,657 1469,659 1542,659 1614,656 1687,656 1760,656 1832,656 1905,656 1978,656 2050,656 2123,656 2196,656 2268,656 2341,656 2414,656"/><TextEquiv><Unicode>Unter den Augenblicksbildern, die Sie in den letzten</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_8" custom="readingOrder {index:1;} deselection {offset:0;length:54;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="782,744 2408,753 2408,685 2243,666 1461,697 1136,666 956,710 782,661"/><Baseline points="793,737 874,734 955,734 1036,734 1117,731 1198,731 1279,733 1360,733 1441,733 1522,731 1603,731 1684,732 1765,732 1846,728 1927,731 2008,731 2089,728 2170,728 2251,724 2332,726 2414,731"/><TextEquiv><Unicode>Tagen von den blutigen Ereigniſſen gegeben haben — und</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_9" custom="readingOrder {index:2;} deselection {offset:0;length:56;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="770,820 1721,848 2201,803 2307,861 2415,829 2415,765 2302,725 1813,772 770,748"/><Baseline points="781,805 867,804 953,805 1039,805 1126,805 1212,805 1298,805 1384,805 1471,805 1557,805 1643,804 1729,805 1816,805 1902,803 1988,804 2074,800 2161,802 2247,802 2333,802 2420,802"/><TextEquiv><Unicode>die jene bedankte „maßvolle Pflichterfüllung“ der Wiener</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_10" custom="readingOrder {index:3;} deselection {offset:0;length:54;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="787,905 1963,878 2413,918 2413,829 2307,861 2201,803 2105,842 1789,818 1715,859 1484,816 1266,850 787,825"/><Baseline points="799,880 879,880 960,879 1041,879 1122,877 1203,877 1284,879 1365,877 1446,877 1527,877 1608,877 1688,874 1769,877 1850,877 1931,877 2012,874 2093,874 2174,877 2255,877 2336,877 2417,874"/><TextEquiv><Unicode>Polizei ins rechte Licht rücken —, blieb unerwähnt der</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_11" custom="readingOrder {index:4;} spacing {offset:0;length:21;} deselection {offset:0;length:46;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="778,982 2415,977 2415,916 2343,893 1955,926 1902,888 1501,918 1437,882 778,926"/><Baseline points="790,961 871,957 953,955 1034,955 1116,952 1197,952 1279,952 1360,952 1442,952 1523,952 1605,952 1686,950 1768,952 1849,949 1931,949 2012,949 2094,949 2175,950 2257,950 2338,952 2420,952"/><TextEquiv><Unicode>grauenhafte Ueberfall, den die Polizei Freitag</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_12" custom="readingOrder {index:5;} spacing {offset:34;length:10;} deselection {offset:0;length:50;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="776,1043 1637,1041 1696,1075 1813,1032 1883,1066 2413,1043 2396,971 776,992"/><Baseline points="787,1026 868,1026 950,1026 1031,1026 1113,1023 1194,1026 1276,1024 1357,1023 1439,1023 1520,1023 1602,1023 1683,1023 1765,1023 1846,1023 1928,1023 2009,1023 2091,1023 2172,1023 2254,1022 2335,1022 2417,1020"/><TextEquiv><Unicode>nach ½5 Uhr auf die Paſſanten des Burgringes voll⸗</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_13" custom="readingOrder {index:6;} deselection {offset:0;length:58;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="778,1130 2413,1126 2398,1041 2281,1077 1819,1032 1698,1075 1635,1041 1484,1073 1361,1037 1302,1077 778,1049"/><Baseline points="790,1101 871,1101 952,1103 1034,1101 1115,1098 1196,1099 1278,1095 1359,1098 1440,1100 1522,1098 1603,1098 1684,1098 1766,1098 1847,1098 1928,1095 2010,1098 2091,1098 2172,1097 2254,1094 2335,1093 2417,1098"/><TextEquiv><Unicode>führte, die hier — teils zufällig, teils aus Neugier — die</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_14" custom="readingOrder {index:7;} deselection {offset:0;length:56;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="782,1200 2408,1208 2372,1119 782,1130"/><Baseline points="793,1175 874,1174 955,1174 1036,1172 1117,1172 1198,1172 1279,1172 1360,1172 1441,1172 1522,1172 1603,1169 1684,1169 1765,1169 1846,1169 1927,1169 2008,1169 2089,1169 2170,1169 2251,1169 2332,1169 2414,1169"/><TextEquiv><Unicode>Bänke beſetzt hielten, in der Allee wandelten oder umher</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_15" custom="readingOrder {index:8;} deselection {offset:0;length:59;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="782,1268 2415,1268 2415,1213 2313,1187 782,1200"/><Baseline points="793,1247 874,1247 955,1247 1037,1247 1118,1247 1199,1247 1281,1247 1362,1246 1443,1244 1525,1244 1606,1244 1687,1244 1769,1244 1850,1244 1931,1244 2013,1244 2094,1244 2175,1244 2257,1244 2338,1244 2420,1244"/><TextEquiv><Unicode>ſtanden, ohne ſich bis zur Bellaria vorzuwagen, wo indeſſen</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_16" custom="readingOrder {index:9;} deselection {offset:0;length:49;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="776,1346 2421,1346 2421,1257 776,1264"/><Baseline points="787,1322 873,1319 959,1319 1045,1319 1132,1319 1218,1319 1304,1319 1390,1316 1477,1319 1563,1318 1649,1318 1735,1316 1822,1316 1908,1316 1994,1316 2080,1316 2167,1318 2253,1319 2339,1319 2426,1322"/><TextEquiv><Unicode>Ruhe eingetreten ſchien. Aus der Parlamentsgegend</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_17" custom="readingOrder {index:10;} deselection {offset:0;length:54;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="776,1423 2413,1403 2413,1327 776,1350"/><Baseline points="787,1393 868,1393 950,1391 1031,1390 1113,1390 1194,1392 1276,1393 1357,1391 1439,1390 1520,1390 1602,1390 1683,1389 1765,1388 1846,1390 1928,1390 2009,1390 2091,1390 2172,1390 2254,1390 2335,1390 2417,1390"/><TextEquiv><Unicode>kommend hatte ich gerade die Höhe des äußeren Burgtor⸗</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_18" custom="readingOrder {index:11;} deselection {offset:0;length:59;continued:true;part:F;id:huiop;prev:bhuio;}"><Coords points="782,1499 2406,1480 2406,1427 2175,1401 782,1425"/><Baseline points="793,1465 873,1465 954,1466 1035,1463 1116,1465 1197,1465 1278,1465 1359,1464 1440,1462 1521,1462 1602,1462 1682,1462 1763,1462 1844,1462 1925,1462 2006,1462 2087,1462 2168,1464 2249,1463 2330,1462 2411,1462"/><TextEquiv><Unicode>erreicht, als von der Bellariaſeite wieder Schüſſe herüber⸗</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_19" custom="readingOrder {index:12;} subst-del {offset:0;length:6;add-id:123;} subst {offset:6;length:2;} del {offset:6;length:1;} metamark {offset:7;length:1;function:selection-start;} deselection {offset:0;length:6;continued:true;part:F;id:huiop;prev:bhuio;} add {offset:7;length:1;place:overwritten;}"><Coords points="770,1560 2410,1548 2381,1476 770,1507"/><Baseline points="781,1537 862,1539 944,1540 1025,1537 1107,1537 1189,1540 1270,1537 1352,1537 1434,1537 1515,1537 1597,1536 1679,1537 1760,1537 1842,1537 1924,1537 2005,1537 2087,1537 2169,1537 2250,1537 2332,1537 2414,1537"/><TextEquiv><Unicode>tönten.| Mitten in einer Gruppe entſetzter Flüchtlinge duckte</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_20" custom="readingOrder {index:13;}"><Coords points="782,1628 2402,1626 2387,1545 2046,1588 1927,1552 782,1560"/><Baseline points="793,1614 873,1611 954,1612 1035,1611 1116,1614 1196,1614 1277,1613 1358,1611 1439,1613 1519,1608 1600,1611 1681,1611 1762,1610 1842,1608 1923,1608 2004,1611 2085,1608 2165,1610 2246,1609 2327,1608 2408,1608"/><TextEquiv><Unicode>ich mich, ſo gut es ging, hinter dem ſteinern Unterſatz des</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_21" custom="readingOrder {index:14;}"><Coords points="787,1704 2402,1704 2370,1615 787,1637"/><Baseline points="799,1683 879,1686 959,1685 1040,1686 1120,1683 1201,1683 1281,1684 1362,1683 1442,1683 1523,1683 1603,1683 1683,1683 1764,1683 1844,1683 1925,1683 2005,1683 2086,1683 2166,1683 2247,1683 2327,1683 2408,1683"/><TextEquiv><Unicode>Volksgartengitters, das hier zum Burgtor einſchwenkt. Die</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_22" custom="readingOrder {index:15;}"><Coords points="787,1783 2063,1787 2063,1715 1908,1690 1562,1730 787,1707"/><Baseline points="799,1757 862,1759 925,1757 989,1757 1052,1757 1116,1757 1179,1757 1243,1757 1306,1754 1370,1754 1433,1757 1496,1756 1560,1757 1623,1755 1687,1755 1750,1755 1814,1755 1877,1754 1941,1754 2004,1754 2068,1757"/><TextEquiv><Unicode>Eingänge waren geſchloſſen, Flucht unmöglich.</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_15" custom="readingOrder {index:8;} structure {type:metamark;function:selection-start;target:parag3;id:metam3;}"><Coords points="637,1768 900,1785 901,1870 788,1871 747,1965 630,1968"/><TextLine id="l_4" custom="readingOrder {index:0;} undo {offset:0;length:1;rend:strike-out;target:metam3;}"><Coords points="655,1891 756,1890 756,1860 655,1861"/><Baseline points="655,1891 756,1890"/><TextEquiv><Unicode>|</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_14" custom="readingOrder {index:9;} structure {type:metamark;}"><Coords points="301,922 563,922 563,1148 301,1148"/><TextLine id="l_2" custom="readingOrder {index:0;}"><Coords points="335,1128 350,1145 367,1147 382,1162 579,929 562,922 547,890 538,886"/><Baseline points="351,1129 544,966"/><TextEquiv><Unicode>26.)</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_2" custom="readingOrder {index:10;} structure {type:add;id:123;}"><Coords points="401,1469 674,1469 674,1606 401,1606"/><TextLine id="l_3" custom="readingOrder {index:0;}"><Coords points="409,1567 439,1577 469,1571 498,1592 522,1582 543,1598 579,1586 591,1596 647,1569 647,1509 594,1514 577,1499 541,1497 490,1518 441,1480 409,1480"/><Baseline points="421,1575 652,1573"/><TextEquiv><Unicode>— —</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_8" custom="readingOrder {index:11;} structure {type:long-quote-p;id:parag3;}"><Coords points="773,1775 2435,1771 2432,2073 773,2073"/><TextLine id="tr_1_tl_23" custom="readingOrder {index:0;} spacing {offset:33;length:12;continued:true;}"><Coords points="960,1851 2421,1857 2421,1751 2039,1796 960,1789"/><Baseline points="972,1829 1044,1830 1117,1832 1190,1829 1262,1829 1335,1829 1408,1829 1480,1829 1553,1829 1626,1829 1699,1829 1771,1826 1844,1827 1917,1829 1989,1829 2062,1829 2135,1832 2207,1829 2280,1831 2353,1829 2426,1829"/><TextEquiv><Unicode>Plötzlich fahren hinter uns zwei Mannſchafts⸗</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_24" custom="readingOrder {index:1;} spacing {offset:0;length:5;continued:true;}"><Coords points="787,1919 2421,1936 2421,1872 2281,1844 1673,1838 1391,1880 893,1836 787,1870"/><Baseline points="799,1907 880,1904 961,1904 1043,1904 1124,1904 1205,1904 1287,1901 1368,1903 1449,1901 1531,1901 1612,1901 1693,1901 1775,1901 1856,1901 1937,1904 2019,1901 2100,1902 2181,1904 2263,1902 2344,1904 2426,1901"/><TextEquiv><Unicode>autos auf, werfen etwa dreißig Mann Polizei aus, die</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_25" custom="readingOrder {index:2;}"><Coords points="784,1999 2421,1999 2421,1936 2266,1916 2184,1946 1957,1908 1802,1955 1558,1910 1064,1944 784,1916"/><Baseline points="796,1978 877,1978 959,1978 1040,1978 1122,1978 1203,1975 1285,1975 1366,1975 1448,1975 1529,1975 1611,1973 1692,1974 1774,1972 1855,1972 1937,1972 2018,1975 2100,1975 2181,1975 2263,1975 2344,1975 2426,1975"/><TextEquiv><Unicode>das verängſtigte Häuflein Menſchen — unter ihnen mehrere</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_26" custom="readingOrder {index:3;}"><Coords points="797,2107 1380,2048 2379,2088 2423,1999 799,1995"/><Baseline points="808,2059 888,2053 969,2053 1050,2050 1131,2050 1212,2050 1293,2047 1374,2046 1455,2045 1536,2047 1617,2047 1697,2047 1778,2047 1859,2047 1940,2047 2021,2047 2102,2047 2183,2047 2264,2050 2345,2048 2426,2053"/><TextEquiv><Unicode>Frauen mit Kindern — aus dem Unerwarteten anſpringen.</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_9" custom="readingOrder {index:12;} structure {type:long-quote-p;}"><Coords points="773,2066 2435,2067 2426,2877 773,2877"/><TextLine id="tr_1_tl_27" custom="readingOrder {index:0;} bold {offset:0;length:45;continued:true;} mod-underline {offset:1;length:44;continued:true;} undo {offset:35;length:10;continued:true;rend:wavy-line;}"><Coords points="962,2152 2415,2139 2415,2067 962,2061"/><Baseline points="975,2125 1047,2125 1119,2122 1191,2122 1264,2122 1336,2122 1408,2121 1480,2119 1553,2117 1625,2118 1697,2116 1769,2118 1842,2119 1914,2119 1986,2121 2058,2122 2131,2119 2203,2119 2275,2114 2347,2117 2420,2116"/><TextEquiv><Unicode>Keine Warnung, keine Aufforderung, keine Ver⸗</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_28" custom="readingOrder {index:1;} bold {offset:0;length:35;continued:true;} mod-underline {offset:0;length:33;continued:true;} undo {offset:0;length:8;continued:true;rend:wavy-line;}"><Coords points="787,2224 2417,2209 2417,2158 2330,2145 1211,2175 787,2143"/><Baseline points="799,2196 880,2199 961,2196 1042,2195 1123,2196 1205,2193 1286,2193 1367,2193 1448,2193 1529,2193 1611,2193 1692,2193 1773,2196 1854,2193 1935,2189 2017,2187 2098,2193 2179,2193 2260,2193 2341,2194 2423,2193"/><TextEquiv><Unicode>haftung, nur ein Kommando: „Feuer!“ Zwei Salven</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_29" custom="readingOrder {index:2;}"><Coords points="782,2287 2368,2304 2423,2285 2425,2215 1221,2192 1052,2201 1003,2247 782,2228"/><Baseline points="793,2271 874,2268 956,2270 1037,2271 1119,2268 1201,2268 1282,2268 1364,2268 1446,2265 1527,2267 1609,2265 1691,2265 1772,2265 1854,2267 1936,2266 2017,2265 2099,2265 2181,2268 2262,2268 2344,2268 2426,2271"/><TextEquiv><Unicode>krachen, ich ſehe, wie eine Bürgersfrau, die ſich hinter ihrem</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_30" custom="readingOrder {index:3;}"><Coords points="787,2370 2421,2362 2421,2285 2116,2317 1963,2273 1851,2309 787,2287"/><Baseline points="799,2345 880,2344 961,2342 1043,2342 1124,2339 1205,2342 1287,2339 1368,2339 1449,2339 1531,2339 1612,2336 1693,2336 1775,2339 1856,2336 1937,2339 2019,2339 2100,2336 2181,2339 2263,2340 2344,2342 2426,2342"/><TextEquiv><Unicode>aufgeſpannten Regenſchirm zu decken verſucht — Tragikomik</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_31" custom="readingOrder {index:4;}"><Coords points="787,2438 2421,2436 2421,2364 2311,2357 787,2374"/><Baseline points="799,2417 880,2414 961,2414 1043,2414 1124,2414 1205,2412 1287,2411 1368,2409 1449,2411 1531,2411 1612,2411 1693,2409 1775,2411 1856,2411 1937,2411 2019,2411 2100,2411 2181,2413 2263,2414 2344,2414 2426,2414"/><TextEquiv><Unicode>des Entſetzens! —, zuſammenbricht. Wir werfen uns hinter</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_32" custom="readingOrder {index:5;}"><Coords points="787,2508 2421,2502 2400,2430 787,2438"/><Baseline points="799,2489 880,2489 961,2489 1043,2486 1124,2486 1205,2487 1287,2485 1368,2483 1449,2486 1531,2486 1612,2485 1693,2484 1775,2484 1856,2485 1937,2486 2019,2486 2100,2486 2181,2486 2263,2486 2344,2486 2426,2486"/><TextEquiv><Unicode>einem Haufen Feinſchotter, der zufällig entlang des Geh⸗</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_33" custom="readingOrder {index:6;}"><Coords points="791,2591 2415,2580 2415,2506 2302,2491 1766,2527 1645,2493 793,2506"/><Baseline points="805,2563 885,2561 966,2562 1047,2562 1128,2560 1208,2557 1289,2557 1370,2555 1451,2554 1531,2557 1612,2557 1693,2555 1774,2557 1854,2557 1935,2557 2016,2557 2097,2557 2177,2559 2258,2559 2339,2560 2420,2560"/><TextEquiv><Unicode>ſteiges aufgeſchüttet iſt, über uns donnert minutenlang und</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_34" custom="readingOrder {index:7;}"><Coords points="797,2658 2417,2650 2385,2569 797,2597"/><Baseline points="808,2638 888,2635 969,2635 1050,2632 1131,2629 1211,2629 1292,2630 1373,2629 1454,2628 1534,2629 1615,2626 1696,2628 1777,2629 1857,2630 1938,2632 2019,2632 2100,2632 2180,2634 2261,2634 2342,2634 2423,2632"/><TextEquiv><Unicode>ohne Pauſe Salve auf Salve, dann werden wir „Hände</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_35" custom="readingOrder {index:8;}"><Coords points="791,2733 1584,2714 1641,2748 2137,2705 2421,2743 2402,2646 2080,2673 2018,2642 1948,2678 1791,2648 1732,2684 1658,2652 791,2663"/><Baseline points="802,2709 883,2708 964,2705 1045,2709 1126,2704 1208,2704 1289,2704 1370,2701 1451,2701 1532,2701 1614,2701 1695,2703 1776,2702 1857,2704 1938,2704 2020,2704 2101,2704 2182,2707 2263,2707 2344,2707 2426,2707"/><TextEquiv><Unicode>hoch“ mit geſchwungenen Kolben gegen den Opernring</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_36" custom="readingOrder {index:9;}"><Coords points="787,2815 1624,2786 1891,2834 2413,2824 2413,2737 2355,2722 787,2733"/><Baseline points="799,2787 879,2785 960,2783 1041,2781 1122,2781 1203,2778 1284,2776 1365,2775 1446,2775 1527,2772 1608,2772 1688,2775 1769,2775 1850,2775 1931,2775 2012,2778 2093,2777 2174,2778 2255,2778 2336,2781 2417,2784"/><TextEquiv><Unicode>gejagt, immer wieder bedroht von Gewehren im Anſchlag</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_37" custom="readingOrder {index:10;}"><Coords points="797,2883 1844,2866 1844,2803 1609,2786 797,2813"/><Baseline points="808,2850 860,2856 912,2856 964,2856 1016,2855 1068,2853 1120,2853 1172,2850 1224,2850 1276,2850 1329,2850 1381,2850 1433,2848 1485,2847 1537,2847 1589,2849 1641,2845 1693,2847 1745,2847 1797,2849 1850,2847"/><TextEquiv><Unicode>Es war, was man eine „Hetz“ nennt.</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_10" custom="readingOrder {index:13;} structure {type:long-quote-p;}"><Coords points="775,2879 2433,2879 2430,3028 775,3028"/><TextLine id="tr_1_tl_38" custom="readingOrder {index:0;}"><Coords points="977,2972 1376,2928 1490,2972 1601,2936 1961,2981 2417,2955 2417,2875 2292,2828 1997,2892 1855,2858 1715,2887 1673,2851 977,2877"/><Baseline points="990,2927 1061,2927 1133,2924 1204,2924 1276,2923 1348,2921 1419,2919 1491,2920 1563,2920 1634,2920 1706,2918 1778,2921 1849,2922 1921,2924 1993,2924 2064,2927 2136,2927 2208,2927 2279,2927 2351,2927 2423,2927"/><TextEquiv><Unicode>Drei Menſchen, verwundet oder ohnmächtig, blieben</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_39" custom="readingOrder {index:1;} metamark {offset:15;length:1;function:selection-end;}"><Coords points="793,3040 823,3027 916,3042 1022,3023 1039,3006 1096,3034 1113,3019 1230,3025 1230,2960 1200,2966 1172,2947 1151,2964 1096,2945 990,2972 905,2936 793,2968"/><Baseline points="805,3005 830,3002 855,3002 880,3002 906,3002 931,3002 956,3002 982,3002 1007,3002 1032,3001 1057,2999 1083,3001 1108,3002 1133,3000 1159,2999 1184,2999 1209,2999 1235,2999"/><TextEquiv><Unicode>auf dem Platze.|</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion><TextRegion id="r_11" custom="readingOrder {index:14;} structure {type:paragraph;hand-medium:newspaper-print;part:I;}"><Coords points="732,3029 2435,3034 2426,3299 732,3299"/><TextLine id="tr_1_tl_40" custom="readingOrder {index:0;} deselection {offset:0;length:47;continued:true;}"><Coords points="869,3091 2408,3097 2408,3034 2364,3021 1524,3032 1295,2968 1187,3029 869,3042"/><Baseline points="880,3080 956,3085 1033,3084 1110,3083 1186,3083 1263,3080 1340,3079 1416,3077 1493,3077 1570,3077 1647,3080 1723,3079 1800,3080 1877,3081 1953,3083 2030,3083 2107,3084 2183,3086 2260,3086 2337,3086 2414,3086"/><TextEquiv><Unicode>So haben die Schober⸗Gardiſten ohne jeden Grund</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_41" custom="readingOrder {index:1;} deselection {offset:0;length:52;continued:true;}"><Coords points="738,3191 1660,3152 2402,3186 2402,3099 738,3116"/><Baseline points="749,3157 836,3154 923,3154 1010,3152 1098,3151 1185,3148 1272,3148 1360,3146 1447,3145 1534,3145 1622,3145 1709,3145 1796,3148 1884,3151 1971,3151 2058,3151 2146,3154 2233,3151 2320,3154 2408,3154"/><TextEquiv><Unicode>auf friedliche Paſſanten Jagd gemacht! Und zu dieſen</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_42" custom="readingOrder {index:2;} deselection {offset:0;length:55;continued:true;}"><Coords points="746,3244 1437,3229 1537,3280 1694,3227 2408,3241 2408,3180 2256,3157 746,3184"/><Baseline points="758,3226 840,3223 923,3223 1006,3220 1089,3217 1172,3215 1254,3214 1337,3214 1420,3214 1503,3212 1586,3214 1668,3215 1751,3217 1834,3220 1917,3220 2000,3217 2082,3220 2165,3220 2248,3223 2331,3220 2414,3226"/><TextEquiv><Unicode>zariſtiſchen Polizeimethoden ſchweigt die ganze bürger⸗</Unicode></TextEquiv></TextLine><TextLine id="tr_1_tl_43" custom="readingOrder {index:3;} deselection {offset:0;length:22;continued:true;}"><Coords points="738,3333 926,3305 971,3326 1189,3299 1327,3314 1346,3229 740,3241"/><Baseline points="749,3291 779,3289 809,3289 839,3290 869,3291 899,3291 929,3291 959,3290 989,3289 1019,3287 1049,3286 1079,3286 1109,3286 1139,3286 1169,3286 1199,3284 1229,3283 1259,3283 1289,3283 1319,3282 1349,3280"/><TextEquiv><Unicode>liche Oeffentlichkeit!</Unicode></TextEquiv></TextLine><TextEquiv><Unicode></Unicode></TextEquiv></TextRegion></Page></PcGts>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>prov=READ-COOP:name=PyLaia@TranskribusPlatform:version=2.51.0:model_id=55331:lm=none:date=14_09_2026_13:37</Creator>
+        <Created>2026-09-14T12:23:48.548+02:00</Created>
+        <LastChange>2026-10-19T16:23:37.562+02:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="127360800" pageNr="1" tsid="306829911" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=XXCJSTVVGRGUASEBODJDYUZM" xmlUrl="https://files.transkribus.eu/Get?id=TPGZFJZNAOMOHUMLTYORAVMF" imageId="108583557"/>
+    </Metadata>
+    <Page imageFilename="0001_108.jpg" imageWidth="2553" imageHeight="3871">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1792568340725" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="r_5"/>
+                <RegionRefIndexed index="1" regionRef="r_4"/>
+                <RegionRefIndexed index="2" regionRef="r_3"/>
+                <RegionRefIndexed index="3" regionRef="r_6"/>
+                <RegionRefIndexed index="4" regionRef="r_12"/>
+                <RegionRefIndexed index="5" regionRef="r_13"/>
+                <RegionRefIndexed index="6" regionRef="tr_1"/>
+                <RegionRefIndexed index="7" regionRef="r_7"/>
+                <RegionRefIndexed index="8" regionRef="r_15"/>
+                <RegionRefIndexed index="9" regionRef="r_14"/>
+                <RegionRefIndexed index="10" regionRef="r_2"/>
+                <RegionRefIndexed index="11" regionRef="r_8"/>
+                <RegionRefIndexed index="12" regionRef="r_9"/>
+                <RegionRefIndexed index="13" regionRef="r_10"/>
+                <RegionRefIndexed index="14" regionRef="r_11"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <Relations>
+            <Relation custom="relationType {value:undefined;} relationName {value:multi-p-quote;} id {value:rel;}">
+                <RegionRef regionRef="r_7"/>
+                <RegionRef regionRef="r_8"/>
+                <RegionRef regionRef="r_9"/>
+                <RegionRef regionRef="r_10"/>
+            </Relation>
+            <Relation custom="relationType {value:undefined;} relationName {value:article;} id {value:rel;}">
+                <RegionRef regionRef="tr_1"/>
+                <RegionRef regionRef="r_11"/>
+            </Relation>
+        </Relations>
+        <TextRegion id="r_5" custom="readingOrder {index:0;} structure {cat:base; type:surface;}">
+            <Coords points="338,105 2398,84 2446,3742 402,3755"/>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_4" custom="readingOrder {index:1;} structure {type:fw;}">
+            <Coords points="1994,141 2232,141 2232,297 1994,297"/>
+            <TextLine id="l" custom="readingOrder {index:0;}">
+                <Coords points="1997,288 2018,295 2025,288 2048,303 2090,301 2112,290 2133,301 2192,284 2192,140 2171,140 2141,123 2097,136 2084,125 2035,125 2025,136 1997,131"/>
+                <Baseline points="2009,278 2197,278"/>
+                <TextEquiv>
+                    <Unicode>53</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_3" custom="readingOrder {index:2;} structure {function:font; type:metamark;}">
+            <Coords points="1142,161 1406,161 1406,295 1142,295"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="1143,259 1172,267 1187,254 1196,259 1217,248 1232,263 1247,265 1266,250 1274,259 1314,244 1319,165 1304,170 1291,159 1255,178 1234,165 1174,195 1147,184"/>
+                <Baseline points="1155,235 1182,235 1210,233 1238,232 1266,232 1294,230 1322,226"/>
+                <TextEquiv>
+                    <Unicode>col</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_6" custom="readingOrder {index:3;} structure {cat:att; subtype:att; type:surface;}">
+            <Coords points="53,331 1885,301 2439,303 2446,3340 850,3377 194,3370 91,3340"/>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_12" custom="readingOrder {index:4;} structure {block-extent:1/3; type:column-block;}">
+            <Coords points="704,250 2471,247 2468,3332 708,3332"/>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_13" custom="readingOrder {index:5;} structure {type:metamark;}">
+            <Coords points="142,530 592,530 592,968 142,968"/>
+            <TextLine id="l_1" custom="readingOrder {index:0;} del {offset:0; length:8;}">
+                <Coords points="176,970 516,628 495,607 155,949"/>
+                <Baseline points="176,970 516,628"/>
+                <TextEquiv>
+                    <Unicode>29. Juli</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:6;} structure {hand-medium:newspaper-print; part:F; type:paragraph;}">
+            <Coords points="725,261 729,3024 2434,3034 2446,255"/>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:0;} deselection {offset:0; length:54; continued:true;next:huiop; part:I; id:bhuio;} gap-cut {offset:0; length:5;} gap-cut {offset:6; length:3;} gap-cut {offset:10; length:5;} gap-cut {offset:16; length:4;} gap-cut {offset:21; length:13;} gap-cut {offset:35; length:2;} gap-cut {offset:38; length:4;} gap-cut {offset:43; length:4;} gap-cut {offset:48; length:6;}">
+                <Coords points="956,341 2421,337 2421,271 2048,303 1707,257 1560,303 956,276"/>
+                <Baseline points="967,328 1043,325 1120,325 1197,325 1274,323 1350,325 1427,325 1504,322 1581,322 1658,322 1734,322 1811,322 1888,322 1965,322 2042,319 2118,322 2195,319 2272,317 2349,316 2426,316"/>
+                <TextEquiv>
+                    <Unicode>##### ### ##### #### ############# ## #### #### ######</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:1;} deselection {offset:0; length:53; continued:true;next:huiop; part:I; id:bhuio;} sic {offset:24; length:5;correction:gute;}">
+                <Coords points="712,403 2413,396 2413,341 2192,324 712,352"/>
+                <Baseline points="725,387 809,390 894,390 978,387 1063,387 1148,387 1232,387 1317,387 1401,387 1486,387 1571,387 1655,387 1740,387 1824,387 1909,387 1994,385 2078,385 2163,385 2247,383 2332,382 2417,376"/>
+                <TextEquiv>
+                    <Unicode>einzelne von ihnen eine lgute Anklage gegen die uner⸗</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:2;} deselection {offset:0; length:53; continued:true;next:huiop; part:I; id:bhuio;}">
+                <Coords points="710,462 2404,477 2404,399 2287,392 710,405"/>
+                <Baseline points="722,453 806,456 890,456 974,456 1059,456 1143,456 1227,455 1312,456 1396,453 1480,456 1565,453 1649,456 1733,453 1817,453 1902,453 1986,453 2070,453 2155,450 2239,450 2323,450 2408,453"/>
+                <TextEquiv>
+                    <Unicode>hörte Unmenſchlichkeit der Polizei an dem Unglückstag</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:3;} deselection {offset:0; length:46; continued:true;next:huiop; part:I; id:bhuio;} hi-spacing {offset:21; length:25; continued:true;}">
+                <Coords points="710,532 2415,532 2415,475 2351,462 710,473"/>
+                <Baseline points="722,525 806,525 891,522 976,525 1061,522 1145,521 1230,522 1315,525 1400,522 1484,519 1569,525 1654,525 1739,522 1823,520 1908,520 1993,520 2078,519 2162,519 2247,519 2332,519 2417,510"/>
+                <TextEquiv>
+                    <Unicode>iſt. Wie die Polizei auf ganz unſchuldige Per⸗</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:4;} deselection {offset:0; length:51; continued:true;next:huiop; part:I; id:bhuio;} hi-spacing {offset:0; length:10; continued:true;}">
+                <Coords points="714,644 784,608 2415,606 2415,534 2258,524 717,536"/>
+                <Baseline points="728,596 812,593 897,593 981,593 1066,591 1151,590 1235,590 1320,590 1404,589 1489,589 1574,590 1658,590 1743,587 1827,587 1912,587 1997,587 2081,585 2166,586 2250,585 2335,587 2420,587"/>
+                <TextEquiv>
+                    <Unicode>ſonen Jagd gemacht hat, beſchreibt folgender Brief:</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_7" custom="readingOrder {index:7;} structure {rendition:#indent\u0020#left; type:long-quote-p;}">
+            <Coords points="771,613 2432,613 2434,1768 771,1776"/>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:0;} deselection {offset:0; length:52; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="950,691 2410,681 2410,621 2287,598 950,608"/>
+                <Baseline points="961,659 1033,659 1106,659 1178,659 1251,659 1324,659 1396,657 1469,659 1542,659 1614,656 1687,656 1760,656 1832,656 1905,656 1978,656 2050,656 2123,656 2196,656 2268,656 2341,656 2414,656"/>
+                <TextEquiv>
+                    <Unicode>Unter den Augenblicksbildern, die Sie in den letzten</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:1;} deselection {offset:0; length:54; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="782,744 2408,753 2408,685 2243,666 1461,697 1136,666 956,710 782,661"/>
+                <Baseline points="793,737 874,734 955,734 1036,734 1117,731 1198,731 1279,733 1360,733 1441,733 1522,731 1603,731 1684,732 1765,732 1846,728 1927,731 2008,731 2089,728 2170,728 2251,724 2332,726 2414,731"/>
+                <TextEquiv>
+                    <Unicode>Tagen von den blutigen Ereigniſſen gegeben haben — und</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:2;} deselection {offset:0; length:56; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="770,820 1721,848 2201,803 2307,861 2415,829 2415,765 2302,725 1813,772 770,748"/>
+                <Baseline points="781,805 867,804 953,805 1039,805 1126,805 1212,805 1298,805 1384,805 1471,805 1557,805 1643,804 1729,805 1816,805 1902,803 1988,804 2074,800 2161,802 2247,802 2333,802 2420,802"/>
+                <TextEquiv>
+                    <Unicode>die jene bedankte „maßvolle Pflichterfüllung“ der Wiener</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:3;} deselection {offset:0; length:54; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="787,905 1963,878 2413,918 2413,829 2307,861 2201,803 2105,842 1789,818 1715,859 1484,816 1266,850 787,825"/>
+                <Baseline points="799,880 879,880 960,879 1041,879 1122,877 1203,877 1284,879 1365,877 1446,877 1527,877 1608,877 1688,874 1769,877 1850,877 1931,877 2012,874 2093,874 2174,877 2255,877 2336,877 2417,874"/>
+                <TextEquiv>
+                    <Unicode>Polizei ins rechte Licht rücken —, blieb unerwähnt der</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:4;} deselection {offset:0; length:46; continued:true;part:F; prev:bhuio; id:huiop;} spacing {offset:0; length:21;}">
+                <Coords points="778,982 2415,977 2415,916 2343,893 1955,926 1902,888 1501,918 1437,882 778,926"/>
+                <Baseline points="790,961 871,957 953,955 1034,955 1116,952 1197,952 1279,952 1360,952 1442,952 1523,952 1605,952 1686,950 1768,952 1849,949 1931,949 2012,949 2094,949 2175,950 2257,950 2338,952 2420,952"/>
+                <TextEquiv>
+                    <Unicode>grauenhafte Ueberfall, den die Polizei Freitag</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:5;} deselection {offset:0; length:50; continued:true;part:F; prev:bhuio; id:huiop;} spacing {offset:34; length:10;}">
+                <Coords points="776,1043 1637,1041 1696,1075 1813,1032 1883,1066 2413,1043 2396,971 776,992"/>
+                <Baseline points="787,1026 868,1026 950,1026 1031,1026 1113,1023 1194,1026 1276,1024 1357,1023 1439,1023 1520,1023 1602,1023 1683,1023 1765,1023 1846,1023 1928,1023 2009,1023 2091,1023 2172,1023 2254,1022 2335,1022 2417,1020"/>
+                <TextEquiv>
+                    <Unicode>nach ½5 Uhr auf die Paſſanten des Burgringes voll⸗</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:6;} deselection {offset:0; length:58; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="778,1130 2413,1126 2398,1041 2281,1077 1819,1032 1698,1075 1635,1041 1484,1073 1361,1037 1302,1077 778,1049"/>
+                <Baseline points="790,1101 871,1101 952,1103 1034,1101 1115,1098 1196,1099 1278,1095 1359,1098 1440,1100 1522,1098 1603,1098 1684,1098 1766,1098 1847,1098 1928,1095 2010,1098 2091,1098 2172,1097 2254,1094 2335,1093 2417,1098"/>
+                <TextEquiv>
+                    <Unicode>führte, die hier — teils zufällig, teils aus Neugier — die</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:7;} deselection {offset:0; length:56; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="782,1200 2408,1208 2372,1119 782,1130"/>
+                <Baseline points="793,1175 874,1174 955,1174 1036,1172 1117,1172 1198,1172 1279,1172 1360,1172 1441,1172 1522,1172 1603,1169 1684,1169 1765,1169 1846,1169 1927,1169 2008,1169 2089,1169 2170,1169 2251,1169 2332,1169 2414,1169"/>
+                <TextEquiv>
+                    <Unicode>Bänke beſetzt hielten, in der Allee wandelten oder umher</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:8;} deselection {offset:0; length:59; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="782,1268 2415,1268 2415,1213 2313,1187 782,1200"/>
+                <Baseline points="793,1247 874,1247 955,1247 1037,1247 1118,1247 1199,1247 1281,1247 1362,1246 1443,1244 1525,1244 1606,1244 1687,1244 1769,1244 1850,1244 1931,1244 2013,1244 2094,1244 2175,1244 2257,1244 2338,1244 2420,1244"/>
+                <TextEquiv>
+                    <Unicode>ſtanden, ohne ſich bis zur Bellaria vorzuwagen, wo indeſſen</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:9;} deselection {offset:0; length:49; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="776,1346 2421,1346 2421,1257 776,1264"/>
+                <Baseline points="787,1322 873,1319 959,1319 1045,1319 1132,1319 1218,1319 1304,1319 1390,1316 1477,1319 1563,1318 1649,1318 1735,1316 1822,1316 1908,1316 1994,1316 2080,1316 2167,1318 2253,1319 2339,1319 2426,1322"/>
+                <TextEquiv>
+                    <Unicode>Ruhe eingetreten ſchien. Aus der Parlamentsgegend</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:10;} deselection {offset:0; length:54; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="776,1423 2413,1403 2413,1327 776,1350"/>
+                <Baseline points="787,1393 868,1393 950,1391 1031,1390 1113,1390 1194,1392 1276,1393 1357,1391 1439,1390 1520,1390 1602,1390 1683,1389 1765,1388 1846,1390 1928,1390 2009,1390 2091,1390 2172,1390 2254,1390 2335,1390 2417,1390"/>
+                <TextEquiv>
+                    <Unicode>kommend hatte ich gerade die Höhe des äußeren Burgtor⸗</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:11;} deselection {offset:0; length:59; continued:true;part:F; prev:bhuio; id:huiop;}">
+                <Coords points="782,1499 2406,1480 2406,1427 2175,1401 782,1425"/>
+                <Baseline points="793,1465 873,1465 954,1466 1035,1463 1116,1465 1197,1465 1278,1465 1359,1464 1440,1462 1521,1462 1602,1462 1682,1462 1763,1462 1844,1462 1925,1462 2006,1462 2087,1462 2168,1464 2249,1463 2330,1462 2411,1462"/>
+                <TextEquiv>
+                    <Unicode>erreicht, als von der Bellariaſeite wieder Schüſſe herüber⸗</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:12;} subst-del {offset:0; length:6;add-id:123;} deselection {offset:0; length:6; continued:true;part:F; prev:bhuio; id:huiop;} subst {offset:6; length:2;} del {offset:6; length:1;} metamark {offset:7; length:1;function:selection-start;} add {offset:7; length:1;place:overwritten;}">
+                <Coords points="770,1560 2410,1548 2381,1476 770,1507"/>
+                <Baseline points="781,1537 862,1539 944,1540 1025,1537 1107,1537 1189,1540 1270,1537 1352,1537 1434,1537 1515,1537 1597,1536 1679,1537 1760,1537 1842,1537 1924,1537 2005,1537 2087,1537 2169,1537 2250,1537 2332,1537 2414,1537"/>
+                <TextEquiv>
+                    <Unicode>tönten.| Mitten in einer Gruppe entſetzter Flüchtlinge duckte</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:13;}">
+                <Coords points="782,1628 2402,1626 2387,1545 2046,1588 1927,1552 782,1560"/>
+                <Baseline points="793,1614 873,1611 954,1612 1035,1611 1116,1614 1196,1614 1277,1613 1358,1611 1439,1613 1519,1608 1600,1611 1681,1611 1762,1610 1842,1608 1923,1608 2004,1611 2085,1608 2165,1610 2246,1609 2327,1608 2408,1608"/>
+                <TextEquiv>
+                    <Unicode>ich mich, ſo gut es ging, hinter dem ſteinern Unterſatz des</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:14;}">
+                <Coords points="787,1704 2402,1704 2370,1615 787,1637"/>
+                <Baseline points="799,1683 879,1686 959,1685 1040,1686 1120,1683 1201,1683 1281,1684 1362,1683 1442,1683 1523,1683 1603,1683 1683,1683 1764,1683 1844,1683 1925,1683 2005,1683 2086,1683 2166,1683 2247,1683 2327,1683 2408,1683"/>
+                <TextEquiv>
+                    <Unicode>Volksgartengitters, das hier zum Burgtor einſchwenkt. Die</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_22" custom="readingOrder {index:15;}">
+                <Coords points="787,1783 2063,1787 2063,1715 1908,1690 1562,1730 787,1707"/>
+                <Baseline points="799,1757 862,1759 925,1757 989,1757 1052,1757 1116,1757 1179,1757 1243,1757 1306,1754 1370,1754 1433,1757 1496,1756 1560,1757 1623,1755 1687,1755 1750,1755 1814,1755 1877,1754 1941,1754 2004,1754 2068,1757"/>
+                <TextEquiv>
+                    <Unicode>Eingänge waren geſchloſſen, Flucht unmöglich.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_15" custom="readingOrder {index:8;} structure {function:selection-start; id:metam3; target:parag3; type:metamark;}">
+            <Coords points="637,1768 900,1785 901,1870 788,1871 747,1965 630,1968"/>
+            <TextLine id="l_4" custom="readingOrder {index:0;} undo {offset:0; length:1;rend:strike-out; target:metam3;}">
+                <Coords points="655,1891 756,1890 756,1860 655,1861"/>
+                <Baseline points="655,1891 756,1890"/>
+                <TextEquiv>
+                    <Unicode>|</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_14" custom="readingOrder {index:9;} structure {type:metamark;}">
+            <Coords points="301,922 563,922 563,1148 301,1148"/>
+            <TextLine id="l_2" custom="readingOrder {index:0;}">
+                <Coords points="335,1128 350,1145 367,1147 382,1162 579,929 562,922 547,890 538,886"/>
+                <Baseline points="351,1129 544,966"/>
+                <TextEquiv>
+                    <Unicode>26.)</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_2" custom="readingOrder {index:10;} structure {id:123; type:add;}">
+            <Coords points="401,1469 674,1469 674,1606 401,1606"/>
+            <TextLine id="l_3" custom="readingOrder {index:0;}">
+                <Coords points="409,1567 439,1577 469,1571 498,1592 522,1582 543,1598 579,1586 591,1596 647,1569 647,1509 594,1514 577,1499 541,1497 490,1518 441,1480 409,1480"/>
+                <Baseline points="421,1575 652,1573"/>
+                <TextEquiv>
+                    <Unicode>— —</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_8" custom="readingOrder {index:11;} structure {rendition:#indent\u0020#left; id:parag3; type:long-quote-p;}">
+            <Coords points="773,1775 2435,1771 2432,2073 773,2073"/>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:0;} spacing {offset:33; length:12; continued:true;}">
+                <Coords points="960,1851 2421,1857 2421,1751 2039,1796 960,1789"/>
+                <Baseline points="972,1829 1044,1830 1117,1832 1190,1829 1262,1829 1335,1829 1408,1829 1480,1829 1553,1829 1626,1829 1699,1829 1771,1826 1844,1827 1917,1829 1989,1829 2062,1829 2135,1832 2207,1829 2280,1831 2353,1829 2426,1829"/>
+                <TextEquiv>
+                    <Unicode>Plötzlich fahren hinter uns zwei Mannſchafts⸗</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_24" custom="readingOrder {index:1;} spacing {offset:0; length:5; continued:true;}">
+                <Coords points="787,1919 2421,1936 2421,1872 2281,1844 1673,1838 1391,1880 893,1836 787,1870"/>
+                <Baseline points="799,1907 880,1904 961,1904 1043,1904 1124,1904 1205,1904 1287,1901 1368,1903 1449,1901 1531,1901 1612,1901 1693,1901 1775,1901 1856,1901 1937,1904 2019,1901 2100,1902 2181,1904 2263,1902 2344,1904 2426,1901"/>
+                <TextEquiv>
+                    <Unicode>autos auf, werfen etwa dreißig Mann Polizei aus, die</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_25" custom="readingOrder {index:2;}">
+                <Coords points="784,1999 2421,1999 2421,1936 2266,1916 2184,1946 1957,1908 1802,1955 1558,1910 1064,1944 784,1916"/>
+                <Baseline points="796,1978 877,1978 959,1978 1040,1978 1122,1978 1203,1975 1285,1975 1366,1975 1448,1975 1529,1975 1611,1973 1692,1974 1774,1972 1855,1972 1937,1972 2018,1975 2100,1975 2181,1975 2263,1975 2344,1975 2426,1975"/>
+                <TextEquiv>
+                    <Unicode>das verängſtigte Häuflein Menſchen — unter ihnen mehrere</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:3;}">
+                <Coords points="797,2107 1380,2048 2379,2088 2423,1999 799,1995"/>
+                <Baseline points="808,2059 888,2053 969,2053 1050,2050 1131,2050 1212,2050 1293,2047 1374,2046 1455,2045 1536,2047 1617,2047 1697,2047 1778,2047 1859,2047 1940,2047 2021,2047 2102,2047 2183,2047 2264,2050 2345,2048 2426,2053"/>
+                <TextEquiv>
+                    <Unicode>Frauen mit Kindern — aus dem Unerwarteten anſpringen.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_9" custom="readingOrder {index:12;} structure {rendition:#indent\u0020#left; type:long-quote-p;}">
+            <Coords points="773,2066 2435,2067 2426,2877 773,2877"/>
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:0;} bold {offset:0; length:45; continued:true;} mod-underline {offset:1; length:44; continued:true;} undo {offset:35; length:10; continued:true;rend:wavy-line;}">
+                <Coords points="962,2152 2415,2139 2415,2067 962,2061"/>
+                <Baseline points="975,2125 1047,2125 1119,2122 1191,2122 1264,2122 1336,2122 1408,2121 1480,2119 1553,2117 1625,2118 1697,2116 1769,2118 1842,2119 1914,2119 1986,2121 2058,2122 2131,2119 2203,2119 2275,2114 2347,2117 2420,2116"/>
+                <TextEquiv>
+                    <Unicode>Keine Warnung, keine Aufforderung, keine Ver⸗</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:1;} bold {offset:0; length:35; continued:true;} mod-underline {offset:0; length:33; continued:true;} undo {offset:0; length:8; continued:true;rend:wavy-line;}">
+                <Coords points="787,2224 2417,2209 2417,2158 2330,2145 1211,2175 787,2143"/>
+                <Baseline points="799,2196 880,2199 961,2196 1042,2195 1123,2196 1205,2193 1286,2193 1367,2193 1448,2193 1529,2193 1611,2193 1692,2193 1773,2196 1854,2193 1935,2189 2017,2187 2098,2193 2179,2193 2260,2193 2341,2194 2423,2193"/>
+                <TextEquiv>
+                    <Unicode>haftung, nur ein Kommando: „Feuer!“ Zwei Salven</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:2;}">
+                <Coords points="782,2287 2368,2304 2423,2285 2425,2215 1221,2192 1052,2201 1003,2247 782,2228"/>
+                <Baseline points="793,2271 874,2268 956,2270 1037,2271 1119,2268 1201,2268 1282,2268 1364,2268 1446,2265 1527,2267 1609,2265 1691,2265 1772,2265 1854,2267 1936,2266 2017,2265 2099,2265 2181,2268 2262,2268 2344,2268 2426,2271"/>
+                <TextEquiv>
+                    <Unicode>krachen, ich ſehe, wie eine Bürgersfrau, die ſich hinter ihrem</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_30" custom="readingOrder {index:3;}">
+                <Coords points="787,2370 2421,2362 2421,2285 2116,2317 1963,2273 1851,2309 787,2287"/>
+                <Baseline points="799,2345 880,2344 961,2342 1043,2342 1124,2339 1205,2342 1287,2339 1368,2339 1449,2339 1531,2339 1612,2336 1693,2336 1775,2339 1856,2336 1937,2339 2019,2339 2100,2336 2181,2339 2263,2340 2344,2342 2426,2342"/>
+                <TextEquiv>
+                    <Unicode>aufgeſpannten Regenſchirm zu decken verſucht — Tragikomik</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_31" custom="readingOrder {index:4;}">
+                <Coords points="787,2438 2421,2436 2421,2364 2311,2357 787,2374"/>
+                <Baseline points="799,2417 880,2414 961,2414 1043,2414 1124,2414 1205,2412 1287,2411 1368,2409 1449,2411 1531,2411 1612,2411 1693,2409 1775,2411 1856,2411 1937,2411 2019,2411 2100,2411 2181,2413 2263,2414 2344,2414 2426,2414"/>
+                <TextEquiv>
+                    <Unicode>des Entſetzens! —, zuſammenbricht. Wir werfen uns hinter</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:5;}">
+                <Coords points="787,2508 2421,2502 2400,2430 787,2438"/>
+                <Baseline points="799,2489 880,2489 961,2489 1043,2486 1124,2486 1205,2487 1287,2485 1368,2483 1449,2486 1531,2486 1612,2485 1693,2484 1775,2484 1856,2485 1937,2486 2019,2486 2100,2486 2181,2486 2263,2486 2344,2486 2426,2486"/>
+                <TextEquiv>
+                    <Unicode>einem Haufen Feinſchotter, der zufällig entlang des Geh⸗</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_33" custom="readingOrder {index:6;}">
+                <Coords points="791,2591 2415,2580 2415,2506 2302,2491 1766,2527 1645,2493 793,2506"/>
+                <Baseline points="805,2563 885,2561 966,2562 1047,2562 1128,2560 1208,2557 1289,2557 1370,2555 1451,2554 1531,2557 1612,2557 1693,2555 1774,2557 1854,2557 1935,2557 2016,2557 2097,2557 2177,2559 2258,2559 2339,2560 2420,2560"/>
+                <TextEquiv>
+                    <Unicode>ſteiges aufgeſchüttet iſt, über uns donnert minutenlang und</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:7;}">
+                <Coords points="797,2658 2417,2650 2385,2569 797,2597"/>
+                <Baseline points="808,2638 888,2635 969,2635 1050,2632 1131,2629 1211,2629 1292,2630 1373,2629 1454,2628 1534,2629 1615,2626 1696,2628 1777,2629 1857,2630 1938,2632 2019,2632 2100,2632 2180,2634 2261,2634 2342,2634 2423,2632"/>
+                <TextEquiv>
+                    <Unicode>ohne Pauſe Salve auf Salve, dann werden wir „Hände</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:8;}">
+                <Coords points="791,2733 1584,2714 1641,2748 2137,2705 2421,2743 2402,2646 2080,2673 2018,2642 1948,2678 1791,2648 1732,2684 1658,2652 791,2663"/>
+                <Baseline points="802,2709 883,2708 964,2705 1045,2709 1126,2704 1208,2704 1289,2704 1370,2701 1451,2701 1532,2701 1614,2701 1695,2703 1776,2702 1857,2704 1938,2704 2020,2704 2101,2704 2182,2707 2263,2707 2344,2707 2426,2707"/>
+                <TextEquiv>
+                    <Unicode>hoch“ mit geſchwungenen Kolben gegen den Opernring</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_36" custom="readingOrder {index:9;}">
+                <Coords points="787,2815 1624,2786 1891,2834 2413,2824 2413,2737 2355,2722 787,2733"/>
+                <Baseline points="799,2787 879,2785 960,2783 1041,2781 1122,2781 1203,2778 1284,2776 1365,2775 1446,2775 1527,2772 1608,2772 1688,2775 1769,2775 1850,2775 1931,2775 2012,2778 2093,2777 2174,2778 2255,2778 2336,2781 2417,2784"/>
+                <TextEquiv>
+                    <Unicode>gejagt, immer wieder bedroht von Gewehren im Anſchlag</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:10;}">
+                <Coords points="797,2883 1844,2866 1844,2803 1609,2786 797,2813"/>
+                <Baseline points="808,2850 860,2856 912,2856 964,2856 1016,2855 1068,2853 1120,2853 1172,2850 1224,2850 1276,2850 1329,2850 1381,2850 1433,2848 1485,2847 1537,2847 1589,2849 1641,2845 1693,2847 1745,2847 1797,2849 1850,2847"/>
+                <TextEquiv>
+                    <Unicode>Es war, was man eine „Hetz“ nennt.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_10" custom="readingOrder {index:13;} structure {rendition:#indent\u0020#left; type:long-quote-p;}">
+            <Coords points="775,2879 2433,2879 2430,3028 775,3028"/>
+            <TextLine id="tr_1_tl_38" custom="readingOrder {index:0;}">
+                <Coords points="977,2972 1376,2928 1490,2972 1601,2936 1961,2981 2417,2955 2417,2875 2292,2828 1997,2892 1855,2858 1715,2887 1673,2851 977,2877"/>
+                <Baseline points="990,2927 1061,2927 1133,2924 1204,2924 1276,2923 1348,2921 1419,2919 1491,2920 1563,2920 1634,2920 1706,2918 1778,2921 1849,2922 1921,2924 1993,2924 2064,2927 2136,2927 2208,2927 2279,2927 2351,2927 2423,2927"/>
+                <TextEquiv>
+                    <Unicode>Drei Menſchen, verwundet oder ohnmächtig, blieben</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:1;} metamark {offset:15; length:1;function:selection-end;}">
+                <Coords points="793,3040 823,3027 916,3042 1022,3023 1039,3006 1096,3034 1113,3019 1230,3025 1230,2960 1200,2966 1172,2947 1151,2964 1096,2945 990,2972 905,2936 793,2968"/>
+                <Baseline points="805,3005 830,3002 855,3002 880,3002 906,3002 931,3002 956,3002 982,3002 1007,3002 1032,3001 1057,2999 1083,3001 1108,3002 1133,3000 1159,2999 1184,2999 1209,2999 1235,2999"/>
+                <TextEquiv>
+                    <Unicode>auf dem Platze.|</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_11" custom="readingOrder {index:14;} structure {rendition:indent; type:paragraph;}">
+            <Coords points="732,3029 2435,3034 2426,3299 732,3299"/>
+            <TextLine id="tr_1_tl_40" custom="readingOrder {index:0;} deselection {offset:0; length:47; continued:true;}">
+                <Coords points="869,3091 2408,3097 2408,3034 2364,3021 1524,3032 1295,2968 1187,3029 869,3042"/>
+                <Baseline points="880,3080 956,3085 1033,3084 1110,3083 1186,3083 1263,3080 1340,3079 1416,3077 1493,3077 1570,3077 1647,3080 1723,3079 1800,3080 1877,3081 1953,3083 2030,3083 2107,3084 2183,3086 2260,3086 2337,3086 2414,3086"/>
+                <TextEquiv>
+                    <Unicode>So haben die Schober⸗Gardiſten ohne jeden Grund</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_41" custom="readingOrder {index:1;} deselection {offset:0; length:52; continued:true;}">
+                <Coords points="738,3191 1660,3152 2402,3186 2402,3099 738,3116"/>
+                <Baseline points="749,3157 836,3154 923,3154 1010,3152 1098,3151 1185,3148 1272,3148 1360,3146 1447,3145 1534,3145 1622,3145 1709,3145 1796,3148 1884,3151 1971,3151 2058,3151 2146,3154 2233,3151 2320,3154 2408,3154"/>
+                <TextEquiv>
+                    <Unicode>auf friedliche Paſſanten Jagd gemacht! Und zu dieſen</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:2;} deselection {offset:0; length:55; continued:true;}">
+                <Coords points="746,3244 1437,3229 1537,3280 1694,3227 2408,3241 2408,3180 2256,3157 746,3184"/>
+                <Baseline points="758,3226 840,3223 923,3223 1006,3220 1089,3217 1172,3215 1254,3214 1337,3214 1420,3214 1503,3212 1586,3214 1668,3215 1751,3217 1834,3220 1917,3220 2000,3217 2082,3220 2165,3220 2248,3223 2331,3220 2414,3226"/>
+                <TextEquiv>
+                    <Unicode>zariſtiſchen Polizeimethoden ſchweigt die ganze bürger⸗</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_43" custom="readingOrder {index:3;} deselection {offset:0; length:22; continued:true;}">
+                <Coords points="738,3333 926,3305 971,3326 1189,3299 1327,3314 1346,3229 740,3241"/>
+                <Baseline points="749,3291 779,3289 809,3289 839,3290 869,3291 899,3291 929,3291 959,3290 989,3289 1019,3287 1049,3286 1079,3286 1109,3286 1139,3286 1169,3286 1199,3284 1229,3283 1259,3283 1289,3283 1319,3282 1349,3280"/>
+                <TextEquiv>
+                    <Unicode>liche Oeffentlichkeit!</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

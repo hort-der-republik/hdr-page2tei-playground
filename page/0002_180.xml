@@ -3,7 +3,7 @@
     <Metadata>
         <Creator>prov=READ-COOP:name=TrHtr:version=2.51.0:model_id=579509:date=23_09_2026_16:04</Creator>
         <Created>2026-09-14T12:23:48.661+02:00</Created>
-        <LastChange>2026-10-19T10:31:57.670+02:00</LastChange>
+        <LastChange>2026-10-21T10:45:05.450+02:00</LastChange>
         <TranskribusMetadata docId="18855842" pageId="127360801" pageNr="2" userId="33174"
             imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=EORFRSHXNUNHFOBQGXRRGTVW"
             imageId="108583540"/>
@@ -55,7 +55,7 @@
                 <RegionRef regionRef="r_19"/>
                 <RegionRef regionRef="r_20"/>
                 <RegionRef regionRef="r"/>
-                <RegionRef regionRef="tr_1_tl_44"/>
+                <RegionRef regionRef="r_21"/>
                 <RegionRef regionRef="r_9"/>
             </Relation>
         </Relations>
@@ -70,6 +70,13 @@
                 <Baseline points="4198,775 4317,775"/>
                 <TextEquiv>
                     <Unicode>– –</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_92" custom="readingOrder {index:1;}">
+                <Coords points="4725,4585 5903,4576 5903,4546 4725,4555"/>
+                <Baseline points="4725,4585 5903,4576"/>
+                <TextEquiv>
+                    <Unicode>Waſſerkataſtrophe im Erzgebirge</Unicode>
                 </TextEquiv>
             </TextLine>
             <TextEquiv>
@@ -113,7 +120,7 @@
             </TextEquiv>
         </TextRegion>
         <TextRegion orientation="0.0" id="tr_1"
-            custom="readingOrder {index:5;} structure {type:head;level:1;}">
+            custom="readingOrder {index:5;} structure {type:head;level:1;rendition:#center #large #bold;cat:main;}">
             <Coords points="400,730 407,940 2335,957 2345,745"/>
             <TextLine id="tr_1_tl_4"
                 custom="readingOrder {index:0;} deselection {offset:0;length:39;part:i;}">
@@ -130,7 +137,7 @@
             </TextEquiv>
         </TextRegion>
         <TextRegion id="r_12"
-            custom="readingOrder {index:6;} structure {type:head;level:1;cat:subtitle;}">
+            custom="readingOrder {index:6;} structure {type:head;level:1;cat:sub;rendition:#bold #center;}">
             <Coords points="415,947 2329,957 2329,1170 409,1170"/>
             <TextLine id="tr_1_tl_6"
                 custom="readingOrder {index:0;} deselection {offset:0;length:54;continued:true;part:f;}">
@@ -155,7 +162,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_13" custom="readingOrder {index:7;} structure {type:paragraph;}">
+        <TextRegion id="r_13"
+            custom="readingOrder {index:7;} structure {type:paragraph;rendition:#indent;}">
             <Coords points="410,1173 2324,1166 2324,1379 403,1379"/>
             <TextLine id="tr_1_tl_11"
                 custom="readingOrder {index:0;} spacing {offset:10;length:29;} mod-underline {offset:10;length:28;}">
@@ -188,7 +196,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_14" custom="readingOrder {index:8;} structure {type:paragraph;}">
+        <TextRegion id="r_14" custom="readingOrder {index:8;} structure {type:paragraph-indent;}">
             <Coords points="406,1384 2329,1378 2329,2621 400,2621"/>
             <TextLine id="l_90" custom="readingOrder {index:0;} add {offset:0;length:2;id:1;}">
                 <Coords points="1296,1370 1357,1370 1357,1340 1296,1340"/>
@@ -363,7 +371,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_15" custom="readingOrder {index:9;} structure {type:paragraph;}">
+        <TextRegion id="r_15" custom="readingOrder {index:9;} structure {type:paragraph-indent;}">
             <Coords points="398,2612 2329,2621 2329,3106 389,3106"/>
             <TextLine id="tr_1_tl_60" custom="readingOrder {index:0;}">
                 <Coords points="511,2687 2283,2707 2283,2613 2212,2589 511,2620"/>
@@ -438,7 +446,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_17" custom="readingOrder {index:10;} structure {type:paragraph;}">
+        <TextRegion id="r_17" custom="readingOrder {index:10;} structure {type:paragraph-indent;}">
             <Coords points="384,3096 2327,3106 2327,4072 389,4072"/>
             <TextLine id="tr_1_tl_74"
                 custom="readingOrder {index:0;} add {offset:29;length:4;place:below;} deselection {offset:33;length:31;continued:true;}">
@@ -571,7 +579,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_18" custom="readingOrder {index:11;} structure {type:paragraph;}">
+        <TextRegion id="r_18" custom="readingOrder {index:11;} structure {type:paragraph-indent;}">
             <Coords points="390,4085 2341,4067 2369,6139 436,6180"/>
             <TextLine id="tr_1_tl_112" custom="readingOrder {index:0;}">
                 <Coords points="503,4129 2290,4133 2290,4039 503,4082"/>
@@ -848,7 +856,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_19" custom="readingOrder {index:12;} structure {type:paragraph;}">
+        <TextRegion id="r_19" custom="readingOrder {index:12;} structure {type:paragraph-indent;}">
             <Coords points="432,6175 2369,6145 2387,6767 461,6809"/>
             <TextLine id="tr_1_tl_211" custom="readingOrder {index:0;}">
                 <Coords
@@ -927,7 +935,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_20" custom="readingOrder {index:13;} structure {type:paragraph;part:I;}">
+        <TextRegion id="r_20" custom="readingOrder {index:13;} structure {type:paragraph-indent;}">
             <Coords points="460,6797 2380,6766 2384,7058 477,7093"/>
             <TextLine id="tr_1_tl_236" custom="readingOrder {index:0;}">
                 <Coords points="558,6871 2294,6840 2345,6765 558,6789"/>
@@ -1058,7 +1066,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_21" custom="readingOrder {index:18;} structure {type:paragraph;}">
+        <TextRegion id="r_21" custom="readingOrder {index:18;} structure {type:paragraph-indent;}">
             <Coords points="2357,1291 3425,1260 3659,1269 4250,1258 4246,2249 2357,2249"/>
             <TextLine id="tr_1_tl_14" custom="readingOrder {index:0;}">
                 <Coords
@@ -1188,7 +1196,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_8" custom="readingOrder {index:20;} structure {type:head;level:1;}">
+        <TextRegion id="r_8"
+            custom="readingOrder {index:20;} structure {type:head;level:1;rendition:#bold #center #large;cat:main;}">
             <Coords points="2653,4330 4092,4294 4090,4477 2648,4512"/>
             <TextLine id="tr_1_tl_124" custom="readingOrder {index:0;}">
                 <Coords
@@ -1203,7 +1212,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_22" custom="readingOrder {index:21;} structure {type:head;level:2;}">
+        <TextRegion id="r_22"
+            custom="readingOrder {index:21;} structure {type:head;level:2;cat:sub;rendition:#bold #center;}">
             <Coords points="2525,4522 4185,4489 4188,4581 2525,4605"/>
             <TextLine id="tr_1_tl_128" custom="readingOrder {index:0;}">
                 <Coords
@@ -1218,7 +1228,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_23" custom="readingOrder {index:22;} structure {type:paragraph-byline;}">
+        <TextRegion id="r_23"
+            custom="readingOrder {index:22;} structure {type:paragraph-byline;rendition:#center;}">
             <Coords points="2588,4623 4122,4595 4129,4675 2589,4697"/>
             <TextLine id="tr_1_tl_132" custom="readingOrder {index:0;}">
                 <Coords points="2577,4711 4086,4675 4086,4597 2577,4624"/>
@@ -1232,7 +1243,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_24" custom="readingOrder {index:23;} structure {type:paragraph-dateline;}">
+        <TextRegion id="r_24"
+            custom="readingOrder {index:23;} structure {type:paragraph-dateline;rendition:#right2;}">
             <Coords points="3555,4695 4213,4686 4208,4767 3556,4772"/>
             <TextLine id="tr_1_tl_138" custom="readingOrder {index:0;}">
                 <Coords
@@ -1247,7 +1259,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_25" custom="readingOrder {index:24;} structure {type:paragraph;}">
+        <TextRegion id="r_25" custom="readingOrder {index:24;} structure {type:paragraph-indent;}">
             <Coords points="2366,4781 4326,4762 4345,5692 2384,5709"/>
             <TextLine id="tr_1_tl_144" custom="readingOrder {index:0;}">
                 <Coords
@@ -1367,7 +1379,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_26" custom="readingOrder {index:25;} structure {type:paragraph;}">
+        <TextRegion id="r_26"
+            custom="readingOrder {index:25;} structure {type:paragraph-indent;single-p-article:y;}">
             <Coords points="2383,5738 4341,5729 4342,6138 2383,6145"/>
             <TextLine id="tr_1_tl_197" custom="readingOrder {index:0;}">
                 <Coords
@@ -1415,7 +1428,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_27" custom="readingOrder {index:26;} structure {type:paragraph;}">
+        <TextRegion id="r_27"
+            custom="readingOrder {index:26;} structure {type:paragraph-indent;single-p-article:y;}">
             <Coords points="2396,6155 4342,6160 4363,7027 2421,7052"/>
             <TextLine id="tr_1_tl_212" custom="readingOrder {index:0;}">
                 <Coords points="2518,6262 4294,6239 4294,6164 2754,6172 2656,6113 2518,6168"/>
@@ -1755,7 +1769,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_4" custom="readingOrder {index:29;} structure {type:paragraph;}">
+        <TextRegion id="r_4"
+            custom="readingOrder {index:29;} structure {type:paragraph;rendition:#center;}">
             <Coords points="4282,2239 6278,2187 6282,2338 4288,2381"/>
             <TextLine id="tr_1_tl_48" custom="readingOrder {index:0;}">
                 <Coords
@@ -1779,7 +1794,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_28" custom="readingOrder {index:30;} structure {type:paragraph;}">
+        <TextRegion id="r_28" custom="readingOrder {index:30;} structure {type:paragraph-indent;}">
             <Coords points="4287,2379 6283,2343 6290,2603 4299,2638"/>
             <TextLine id="tr_1_tl_52" custom="readingOrder {index:0;}">
                 <Coords points="4408,2448 6176,2420 6203,2306 5158,2385 4408,2369"/>
@@ -1817,7 +1832,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_29" custom="readingOrder {index:31;} structure {type:paragraph;}">
+        <TextRegion id="r_29" custom="readingOrder {index:31;} structure {type:paragraph-indent;}">
             <Coords points="4301,2633 6287,2603 6288,2725 4301,2761"/>
             <TextLine id="tr_1_tl_59" custom="readingOrder {index:0;}">
                 <Coords
@@ -1841,7 +1856,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_30" custom="readingOrder {index:32;} structure {type:paragraph;}">
+        <TextRegion id="r_30" custom="readingOrder {index:32;} structure {type:paragraph-indent;}">
             <Coords points="4302,2763 6288,2729 6291,2892 4302,2917"/>
             <TextLine id="tr_1_tl_63" custom="readingOrder {index:0;}">
                 <Coords
@@ -1865,7 +1880,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_31" custom="readingOrder {index:33;} structure {type:paragraph;}">
+        <TextRegion id="r_31"
+            custom="readingOrder {index:33;} structure {type:paragraph;rendition:#center;}">
             <Coords points="4413,2922 6167,2892 6175,3071 4413,3097"/>
             <TextLine id="tr_1_tl_68" custom="readingOrder {index:0;}">
                 <Coords
@@ -1890,7 +1906,7 @@
             </TextEquiv>
         </TextRegion>
         <TextRegion id="r_10"
-            custom="readingOrder {index:34;} structure {type:metamark;target:gap01;}">
+            custom="readingOrder {index:34;} structure {type:metamark;target:gap01;function:print-instruction;fixed-lines:y;}">
             <Coords points="4584,2789 5752,2808 5699,3246 4584,3246"/>
             <TextLine id="l_56" custom="readingOrder {index:0;}">
                 <Coords
@@ -1912,7 +1928,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_5" custom="readingOrder {index:35;} structure {type:paragraph;}">
+        <TextRegion id="r_5" custom="readingOrder {index:35;} structure {type:paragraph-indent;}">
             <Coords points="4305,3133 6289,3127 6290,3976 4325,4010"/>
             <TextLine id="l" custom="readingOrder {index:0;}">
                 <Coords
@@ -2039,7 +2055,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_32" custom="readingOrder {index:36;} structure {type:paragraph;}">
+        <TextRegion id="r_32"
+            custom="readingOrder {index:36;} structure {type:paragraph;rendition:#center;}">
             <Coords points="4325,4006 6288,3978 6294,4189 4323,4202"/>
             <TextLine id="l_77" custom="readingOrder {index:0;}">
                 <Coords points="4420,4141 6113,4113 6070,4051 4420,4086"/>
@@ -2052,7 +2069,8 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_33" custom="readingOrder {index:37;} structure {type:paragraph;}">
+        <TextRegion id="r_33"
+            custom="readingOrder {index:37;} structure {type:paragraph;rendition:#center;}">
             <Coords points="4320,4204 6301,4190 6292,4515 4320,4515"/>
             <TextLine id="tr_1_tl_117" custom="readingOrder {index:0;}">
                 <Coords
@@ -2067,8 +2085,16 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_34" custom="readingOrder {index:38;} structure {type:paragraph;}">
-            <Coords points="4331,4524 6292,4515 6292,5130 4345,5130"/>
+        <TextRegion id="r_34"
+            custom="readingOrder {index:38;} structure {type:head;cat:cross;rendition:#center #bold;}">
+            <Coords points="4331,4524 6292,4515 6285,4601 4316,4607"/>
+            <TextEquiv>
+                <Unicode/>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_43"
+            custom="readingOrder {index:39;} structure {type:paragraph;rendition:undefined;}">
+            <Coords points="4329,4611 6295,4611 6295,5130 4329,5130"/>
             <TextLine id="l_78" custom="readingOrder {index:0;}">
                 <Coords
                     points="4408,4671 5414,4648 5414,4601 5312,4620 5276,4593 4616,4624 4408,4597"/>
@@ -2153,26 +2179,28 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_35" custom="readingOrder {index:39;} structure {type:paragraph;}">
+        <TextRegion id="r_35"
+            custom="readingOrder {index:40;} structure {type:paragraph;rendition:undefined;}">
             <Coords points="4345,5130 6294,5130 6294,5434 4345,5434"/>
             <TextEquiv>
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_36" custom="readingOrder {index:40;} structure {type:head;}">
+        <TextRegion id="r_36"
+            custom="readingOrder {index:41;} structure {type:head;cat:main;rendition:#large #bold #center;}">
             <Coords points="4440,5519 6239,5519 6239,5800 4440,5800"/>
             <TextEquiv>
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_7" custom="readingOrder {index:41;} structure {type:paragraph;}">
+        <TextRegion id="r_7" custom="readingOrder {index:42;} structure {type:paragraph;}">
             <Coords points="4355,5805 6321,5798 6305,7058 4357,7058"/>
             <TextEquiv>
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
         <TextRegion id="r_40"
-            custom="readingOrder {index:42;} structure {type:column-block;block-extent:1-3/3;}">
+            custom="readingOrder {index:43;} structure {type:column-block;block-extent:1-3/3;}">
             <Coords points="503,7163 6289,7104 6291,9363 553,9453"/>
             <TextLine id="tr_1_tl_245" custom="readingOrder {index:0;}">
                 <Coords
@@ -3118,7 +3146,7 @@
                 <Unicode/>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_16" custom="readingOrder {index:43;} structure {type:advertisement;}">
+        <TextRegion id="r_16" custom="readingOrder {index:44;} structure {type:advertisement;}">
             <Coords points="590,7202 6227,7141 6259,9333 650,9420"/>
             <TextEquiv>
                 <Unicode/>

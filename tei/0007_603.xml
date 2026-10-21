@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Diplomatische Transkription: 0007_603.jpg</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Automatisch erzeugt aus PAGE-XML (eScriptorium-/Transkribus-Export) per XSLT.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>
+              Quelle: 0007_603.jpg.
+              Erstellt: 2026-10-02T15:12:25.729+02:00,
+              zuletzt geaendert: 2026-10-20T12:47:18.198+02:00.
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <facsimile>
+      <graphic url="0007_603.jpg" width="5194px" height="6837px"/>
+      <surface lrx="5194" lry="6837" xml:id="surface_0007_603.jpg" type="base">
+         <zone xml:id="zone_r_23"
+               type="fw"
+               points="4142,393 4547,393 4547,632 4142,632">
+            <zone type="line"
+                  xml:id="zone_r_23_tl_1"
+                  points="4172,604 4247,585 4308,604 4345,585 4389,607 4445,599 4456,440 4423,434 4406,446 4331,412 4317,421 4308,412 4289,432 4228,398 4186,407"/>
+         </zone>
+         <zone xml:id="zone_r_24"
+               type="fw"
+               points="4610,300 4983,300 4983,559 4610,559">
+            <zone type="line"
+                  xml:id="zone_r_24_tl_1"
+                  points="4581,490 4618,501 4640,526 4673,526 4721,565 4751,540 4857,535 4868,351 4812,326 4776,337 4751,323 4709,354 4662,362 4618,331 4590,329"/>
+         </zone>
+         <zone xml:id="zone_r_1"
+               type="add"
+               points="538,2049 987,2049 987,2188 538,2188">
+            <zone type="line"
+                  xml:id="zone_r_1_tl_1"
+                  points="532,2192 654,2170 719,2211 824,2153 886,2192 919,2178 925,2064 883,2066 861,2086 788,2050 688,2072 538,2041"/>
+         </zone>
+         <zone xml:id="zone_r_5"
+               type="add"
+               points="676,3625 892,3625 892,3742 676,3742">
+            <zone type="line"
+                  xml:id="zone_r_5_tl_1"
+                  points="677,3735 696,3740 724,3729 766,3740 785,3726 827,3743 858,3729 869,3740 897,3737 897,3615 880,3618 855,3601 813,3618 799,3612 730,3668 677,3676"/>
+         </zone>
+         <zone xml:id="zone_r_2"
+               type="add"
+               points="1031,2053 1171,2053 1171,2185 1031,2185">
+            <zone type="line"
+                  xml:id="zone_l_4"
+                  points="1033,2181 1072,2178 1078,2186 1111,2178 1142,2186 1147,2011 1125,2008 1100,2027 1083,2022 1069,2033 1058,2027 1036,2033"/>
+         </zone>
+         <zone xml:id="zone_r_3"
+               type="add"
+               points="890,2930 1127,2930 1127,3158 890,3158">
+            <zone type="line"
+                  xml:id="zone_r_3_tl_1"
+                  points="897,3144 966,3125 989,3139 1033,3114 1092,3130 1092,2955 1072,2958 1022,2941 1003,2958 969,2960 950,2941 897,2944"/>
+         </zone>
+         <zone xml:id="zone_r_4"
+               type="add"
+               points="817,3247 1041,3247 1041,3387 817,3387">
+            <zone type="line"
+                  xml:id="zone_r_4_tl_1"
+                  points="808,3359 824,3359 849,3381 861,3378 883,3398 916,3381 1005,3398 1011,3239 997,3236 983,3250 961,3239 930,3258 897,3261 861,3295 844,3289 808,3297"/>
+         </zone>
+         <zone xml:id="zone_r_6"
+               type="add"
+               points="590,4116 1170,4116 1168,4290 589,4285">
+            <zone type="line"
+                  xml:id="zone_r_6_tl_1"
+                  points="582,4242 727,4292 824,4250 877,4269 927,4239 1036,4281 1095,4236 1156,4239 1156,4116 1050,4127 1019,4155 966,4111 858,4161 769,4122 735,4150 685,4141 652,4113 582,4141"/>
+         </zone>
+         <zone xml:id="zone_r_7"
+               type="add"
+               points="612,4325 1043,4325 1043,4451 612,4451">
+            <zone type="line"
+                  xml:id="zone_r_7_tl_1"
+                  points="613,4442 671,4434 702,4409 749,4434 808,4423 855,4456 905,4431 961,4462 1003,4464 1000,4328 916,4350 880,4322 822,4331 797,4317 738,4356 693,4333 610,4328"/>
+         </zone>
+         <zone xml:id="zone_r_8"
+               type="add"
+               points="465,5512 1033,5512 1033,5678 465,5678">
+            <zone type="line"
+                  xml:id="zone_r_8_tl_1"
+                  points="460,5670 549,5673 613,5642 635,5656 682,5628 719,5642 783,5617 863,5648 1017,5628 1019,5559 958,5564 874,5517 830,5534 771,5484 610,5517 565,5559 532,5537 493,5564 465,5553"/>
+         </zone>
+         <zone xml:id="zone_r"
+               type="paragraph"
+               points="1197,1204 3479,1120 3569,5693 1294,5735">
+            <zone type="line"
+                  xml:id="zone_r_tl_1"
+                  points="1220,1306 3367,1295 3412,1175 3055,1184 2866,1095 2688,1198 1515,1172 1220,1231"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_2"
+                  points="1220,1392 3013,1390 3403,1356 3403,1281 1220,1306"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_3"
+                  points="1211,1512 2078,1504 2147,1445 3250,1473 3414,1462 3417,1379 1214,1420"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_4"
+                  points="1211,1599 3398,1560 3400,1457 1214,1512"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_5"
+                  points="1214,1696 2894,1685 3403,1654 3406,1571 1217,1599"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_6"
+                  points="1237,1780 3375,1760 3398,1657 1237,1704"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_7"
+                  points="1231,1905 1988,1833 3323,1860 3428,1835 3431,1735 1231,1810"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_8"
+                  points="1245,1972 2437,1913 2972,1966 3409,1936 3412,1846 1245,1899"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_9"
+                  points="1225,2078 2671,2058 2832,2005 3381,2044 3428,1947 1225,1983"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_10"
+                  points="1234,2158 3437,2131 3412,2030 3066,2005 2999,2058 1237,2078"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_11"
+                  points="1237,2256 3431,2211 3431,2136 3348,2114 1239,2158"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_12"
+                  points="1231,2356 3334,2320 3428,2295 3431,2214 1231,2256"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_13"
+                  points="1245,2451 3395,2415 3434,2314 1245,2353"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_14"
+                  points="1245,2554 3420,2498 3420,2412 3300,2395 1248,2451"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_15"
+                  points="1242,2651 2963,2626 3437,2590 3437,2504 1245,2551"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_16"
+                  points="1237,2735 3445,2682 3445,2612 1239,2651"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_17"
+                  points="1237,2813 3462,2810 3465,2685 1237,2735"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_18"
+                  points="1237,2902 3420,2880 3451,2799 1237,2849"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_19"
+                  points="1237,3008 3417,2983 3465,2885 1237,2919"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_20"
+                  points="1250,3108 3451,3086 3453,2977 1250,3030"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_21"
+                  points="1256,3217 3453,3164 3456,3080 1259,3116"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_22"
+                  points="1250,3300 3465,3253 3465,3167 1253,3231"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_23"
+                  points="1256,3375 3456,3350 3453,3272 3348,3250 1259,3289"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_24"
+                  points="1250,3481 3465,3439 3467,3353 1253,3378"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_25"
+                  points="1273,3568 3462,3556 3490,3445 1273,3478"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_26"
+                  points="1250,3668 3225,3607 3381,3654 3476,3634 3478,3554 1250,3568"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_27"
+                  points="1259,3788 2791,3707 3361,3760 3473,3743 3476,3634 1262,3668"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_28"
+                  points="1262,3857 3122,3849 3473,3824 3476,3740 1262,3785"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_29"
+                  points="1273,3955 3289,3946 3484,3913 3487,3827 1273,3891"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_30"
+                  points="1262,4047 3478,4027 3481,3924 1264,3955"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_31"
+                  points="1278,4141 3478,4122 3481,4030 1281,4055"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_32"
+                  points="1262,4230 3481,4200 3412,4100 3153,4155 2991,4102 2139,4169 1264,4136"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_33"
+                  points="1273,4333 3498,4297 3498,4203 1273,4236"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_34"
+                  points="1278,4445 3225,4406 3481,4389 3484,4311 1278,4333"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_35"
+                  points="1287,4523 3309,4506 3478,4492 3481,4389 1287,4445"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_36"
+                  points="1273,4606 3219,4576 3311,4623 3492,4573 3492,4506 1273,4512"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_37"
+                  points="1298,4721 3211,4690 3495,4670 3498,4581 1298,4623"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_38"
+                  points="1292,4804 3387,4782 3498,4765 3501,4676 1292,4723"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_39"
+                  points="1292,4899 3506,4868 3506,4785 1295,4838"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_40"
+                  points="1287,4994 3498,4966 3523,4857 1287,4916"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_41"
+                  points="1306,5113 3487,5063 3512,4966 1309,5013"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_42"
+                  points="1287,5175 3398,5175 3512,5149 3515,5071 1287,5130"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_43"
+                  points="1287,5264 3328,5258 3520,5247 3523,5152 1287,5208"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_44"
+                  points="1287,5378 3400,5361 3512,5347 3515,5244 1289,5297"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_45"
+                  points="1298,5450 3431,5453 3515,5425 3517,5344 1298,5389"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_46"
+                  points="1312,5573 2974,5559 3264,5500 3534,5545 3534,5436 3309,5425 1315,5489"/>
+            <zone type="line"
+                  xml:id="zone_r_tl_47"
+                  points="1303,5673 1574,5634 1810,5709 1961,5645 2866,5665 3013,5609 3504,5673 3506,5523 1303,5570"/>
+         </zone>
+         <zone xml:id="zone_r_9"
+               type="add"
+               points="1233,5993 2241,5990 2321,6379 2748,6361 2768,6469 1963,6558 1920,6658 1233,6642">
+            <zone type="line"
+                  xml:id="zone_r_9_tl_1"
+                  points="1379,6158 1443,6135 1696,6160 1810,6119 2030,6124 2094,6088 2158,6108 2197,6091 2206,5938 1972,6010 1927,5993 1629,6069 1579,6032 1381,6085"/>
+            <zone type="line"
+                  xml:id="zone_r_9_tl_2"
+                  points="1276,6277 1320,6250 1418,6286 1660,6266 1791,6213 2156,6236 2225,6213 2234,6099 2030,6146 1933,6102 1599,6177 1496,6141 1426,6177 1284,6152"/>
+            <zone type="line"
+                  xml:id="zone_l_8"
+                  points="1264,6355 2284,6294 2286,6236 2228,6208 2156,6236 1958,6208 1799,6263 1590,6250 1496,6297 1323,6250 1270,6280"/>
+            <zone type="line"
+                  xml:id="zone_l_7"
+                  points="1320,6444 1766,6458 2044,6397 2186,6450 2195,6300 1685,6361 1640,6330 1537,6389 1323,6378"/>
+            <zone type="line"
+                  xml:id="zone_r_9_tl_5"
+                  points="1376,6528 1490,6573 1657,6522 2348,6556 2437,6489 2688,6492 2696,6372 2621,6350 1827,6478 1710,6436 1587,6497 1379,6483"/>
+            <zone type="line"
+                  xml:id="zone_l_6"
+                  points="1615,6637 1746,6656 1824,6617 1863,6645 1897,6642 1899,6536 1858,6531 1838,6542 1813,6528 1768,6559 1735,6534 1713,6550 1660,6522 1618,6528"/>
+         </zone>
+         <zone xml:id="zone_r_25"
+               type="add"
+               points="2352,6209 2674,6209 2674,6307 2352,6307">
+            <zone type="line"
+                  xml:id="zone_l_9"
+                  points="2353,6314 2426,6319 2454,6336 2484,6316 2551,6311 2593,6328 2615,6305 2660,6300 2662,6191 2632,6194 2607,6177 2532,6219 2479,6188 2420,6222 2395,6202 2356,6216"/>
+         </zone>
+         <zone xml:id="zone_r_10"
+               type="add"
+               points="3506,1040 3990,1040 3990,1200 3506,1200">
+            <zone type="line"
+                  xml:id="zone_r_10_tl_1"
+                  points="3506,1184 3548,1161 3646,1209 3760,1206 3827,1172 3916,1200 3991,1184 3988,1106 3918,1075 3877,1081 3835,1120 3788,1100 3757,1111 3654,1030 3590,1056 3554,1036 3504,1050"/>
+         </zone>
+         <zone xml:id="zone_r_13"
+               type="add"
+               points="3509,2727 3737,2727 3737,2864 3509,2864">
+            <zone type="line"
+                  xml:id="zone_r_13_tl_1"
+                  points="3523,2852 3548,2860 3565,2843 3582,2849 3609,2841 3640,2852 3662,2838 3721,2827 3729,2724 3707,2727 3671,2701 3646,2707 3618,2693 3598,2704 3587,2696 3562,2701 3534,2688"/>
+         </zone>
+         <zone xml:id="zone_r_14"
+               type="add"
+               points="3605,3578 3937,3578 3937,3900 3605,3900">
+            <zone type="line"
+                  xml:id="zone_l_5"
+                  points="3598,3827 3646,3841 3721,3785 3735,3799 3760,3790 3813,3827 3874,3796 3896,3804 3899,3712 3868,3715 3838,3696 3804,3724 3774,3693 3757,3707 3724,3673 3687,3679 3634,3643 3604,3646"/>
+         </zone>
+         <zone xml:id="zone_r_15"
+               type="add"
+               points="3571,4126 4208,4126 4208,4308 3571,4308">
+            <zone type="line"
+                  xml:id="zone_r_15_tl_1"
+                  points="3565,4314 3710,4244 3807,4272 3966,4255 4136,4311 4189,4294 4197,4122 4010,4130 3985,4105 3802,4116 3774,4097 3657,4147 3570,4139"/>
+         </zone>
+         <zone xml:id="zone_r_17"
+               type="add"
+               points="3562,4342 4066,4342 4066,4496 3562,4496">
+            <zone type="line"
+                  xml:id="zone_r_17_tl_1"
+                  points="3573,4506 3643,4503 3704,4464 3827,4473 3871,4437 3996,4478 4044,4453 4044,4328 3996,4325 3949,4350 3874,4331 3768,4392 3737,4364 3685,4370 3657,4353 3573,4367"/>
+         </zone>
+         <zone xml:id="zone_r_18"
+               type="add"
+               points="3596,5177 4002,5177 4002,5329 3596,5329">
+            <zone type="line"
+                  xml:id="zone_r_18_tl_1"
+                  points="3584,5300 3648,5328 3788,5311 3854,5333 3913,5303 3946,5328 3988,5328 3991,5216 3893,5233 3841,5200 3799,5216 3779,5202 3754,5216 3701,5208 3587,5264"/>
+         </zone>
+         <zone xml:id="zone_r_11"
+               type="add"
+               points="3666,1198 3946,1197 4037,1181 4767,1157 4767,1286 3664,1322">
+            <zone type="line"
+                  xml:id="zone_r_11_tl_1"
+                  points="3673,1312 3785,1298 4005,1348 4127,1267 4205,1309 4333,1281 4484,1306 4565,1256 4631,1292 4654,1164 3676,1203"/>
+         </zone>
+         <zone xml:id="zone_r_12"
+               type="add"
+               points="3486,1766 4498,1699 4569,2430 3593,2648">
+            <zone type="line"
+                  xml:id="zone_r_12_tl_1"
+                  points="3531,1872 3637,1919 3971,1880 4122,1816 4197,1841 4470,1802 4492,1640 4361,1688 4194,1668 4072,1727 3545,1757"/>
+            <zone type="line"
+                  xml:id="zone_r_12_tl_2"
+                  points="3562,1994 3782,1975 3843,2005 4080,1911 4130,1944 4294,1888 4403,1927 4417,1810 4320,1835 4058,1827 3907,1891 3573,1905"/>
+            <zone type="line"
+                  xml:id="zone_r_12_tl_3"
+                  points="3601,2139 3776,2089 3896,2097 4030,2033 4189,2078 4214,1936 4122,1944 4080,1913 3849,2011 3779,1975 3620,2025"/>
+            <zone type="line"
+                  xml:id="zone_r_12_tl_5"
+                  points="3573,2214 3671,2231 3776,2175 3846,2186 3941,2139 4063,2147 4083,2050 4047,2033 3980,2044 3891,2097 3590,2139"/>
+            <zone type="line"
+                  xml:id="zone_r_12_tl_6"
+                  points="3531,2306 3687,2314 3838,2256 3921,2267 4144,2161 4253,2170 4281,2058 3885,2195 3632,2225 3562,2189"/>
+            <zone type="line"
+                  xml:id="zone_r_12_tl_8"
+                  points="3570,2395 3607,2406 3785,2342 3821,2353 4010,2320 4088,2278 4127,2286 4155,2189 4125,2172 3918,2270 3818,2259 3676,2309 3598,2292"/>
+            <zone type="line"
+                  xml:id="zone_l_2"
+                  points="3601,2498 3637,2518 3724,2504 3996,2390 4030,2398 4086,2370 4119,2387 4144,2295 4119,2281 3888,2364 3832,2364 3807,2342 3673,2403 3632,2390"/>
+            <zone type="line"
+                  xml:id="zone_l_3"
+                  points="3618,2587 3654,2610 3902,2543 4147,2440 4400,2456 4450,2247 4328,2298 4255,2292 3724,2501 3659,2470"/>
+         </zone>
+         <zone xml:id="zone_r_19"
+               type="add"
+               points="3590,5378 3981,5378 3981,5534 3590,5534">
+            <zone type="line"
+                  xml:id="zone_r_19_tl_1"
+                  points="3576,5528 3620,5525 3657,5553 3701,5559 3763,5523 3824,5525 3880,5492 3938,5503 3949,5372 3877,5395 3804,5361 3743,5397 3657,5411 3648,5400 3618,5425 3584,5422"/>
+         </zone>
+         <zone xml:id="zone_r_20"
+               type="add"
+               points="3611,5586 4617,5586 4617,6401 3611,6401">
+            <zone type="line"
+                  xml:id="zone_r_20_tl_1"
+                  points="3615,5701 3662,5718 3732,5665 3880,5723 3960,5695 4094,5729 4161,5695 4261,5723 4406,5687 4409,5617 4013,5631 3977,5606 3827,5640 3746,5626 3676,5570 3618,5592"/>
+            <zone type="line"
+                  xml:id="zone_r_20_tl_2"
+                  points="3746,5848 3832,5821 4005,5862 4063,5823 4205,5874 4325,5837 4384,5862 4386,5715 4314,5745 4164,5698 4100,5726 4022,5712 3966,5743 3910,5704 3746,5734"/>
+            <zone type="line"
+                  xml:id="zone_r_20_tl_3"
+                  points="3721,5960 3785,5993 3829,5965 3974,5952 4052,5996 4125,5974 4228,5996 4303,5963 4303,5904 4155,5848 4058,5885 3896,5837 3841,5865 3771,5840 3721,5874"/>
+            <zone type="line"
+                  xml:id="zone_r_20_tl_4"
+                  points="3704,6069 3785,6055 3804,6066 3846,6043 3866,6060 3918,6057 3944,6082 4027,6066 4066,6096 4105,6091 4108,5977 4047,5993 4013,5960 3927,5952 3877,5963 3804,6010 3760,5993 3707,5999"/>
+            <zone type="line"
+                  xml:id="zone_r_20_tl_5"
+                  points="3696,6166 3966,6172 4005,6146 4027,6172 4292,6121 4559,6163 4562,6021 4345,6004 4100,6096 3907,6055 3818,6102 3698,6085"/>
+            <zone type="line"
+                  xml:id="zone_r_20_tl_6"
+                  points="3696,6266 3868,6244 3944,6280 4063,6241 4164,6272 4222,6233 4359,6275 4475,6230 4576,6269 4579,6169 4361,6130 4286,6177 4216,6141 4077,6191 4005,6149 3698,6169"/>
+            <zone type="line"
+                  xml:id="zone_r_20_tl_7"
+                  points="3718,6383 3796,6383 3824,6358 3905,6341 4044,6406 4125,6406 4183,6380 4180,6269 4111,6244 3985,6250 3966,6272 3918,6272 3860,6302 3796,6269 3754,6277 3712,6258"/>
+         </zone>
+         <zone xml:id="zone_r_21"
+               type="add"
+               points="2219,6538 2726,6507 2942,6480 4404,6418 4419,6586 2187,6656">
+            <zone type="line"
+                  xml:id="zone_l_10"
+                  points="2281,6626 2749,6637 3097,6553 3609,6606 3735,6539 4386,6570 4392,6419 3930,6489 3804,6442 2490,6489 2284,6548"/>
+         </zone>
+         <zone xml:id="zone_r_16"
+               type="add"
+               points="4356,4091 4611,4091 4611,4235 4356,4235">
+            <zone type="line"
+                  xml:id="zone_r_16_tl_1"
+                  points="4342,4230 4378,4244 4403,4230 4414,4244 4473,4216 4526,4211 4542,4200 4562,4216 4581,4216 4592,4111 4567,4116 4548,4091 4437,4113 4411,4094 4359,4100"/>
+         </zone>
+         <zone xml:id="zone_r_22"
+               type="add"
+               points="4670,4709 4893,4709 4893,6004 4676,5994">
+            <zone type="line"
+                  xml:id="zone_l"
+                  points="4782,5974 4826,5857 4751,5372 4787,4996 4743,4751 4676,4748 4651,4860 4696,5091 4645,5286 4704,5478 4659,5553 4682,5971"/>
+            <zone type="line"
+                  xml:id="zone_l_1"
+                  points="4865,5807 4913,5542 4854,5422 4877,5330 4832,5058 4863,4838 4773,4863 4790,5007 4746,5110 4776,5161 4748,5194 4773,5503 4810,5548 4785,5804"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="base" facs="#surface_0007_603.jpg">
+            <fw facs="#zone_r_23">
+               <lb facs="#zone_r_23_tl_1"/>32
+            </fw>
+            <fw facs="#zone_r_24">
+               <lb facs="#zone_r_24_tl_1"/>298
+            </fw>
+            <add xml:id="add-0603-0001" facs="#zone_r_1"><lb facs="#zone_r_1_tl_1"/>+ den stärkste</add>
+            <add xml:id="add-0603-0002" facs="#zone_r_5"><lb facs="#zone_r_5_tl_1"/>D</add>
+            <add xml:id="add-0603-0003" facs="#zone_r_2"><lb facs="#zone_l_4"/>1d</add>
+            <add xml:id="add-0603-0004" facs="#zone_r_3"><lb facs="#zone_r_3_tl_1"/>Ich</add>
+            <add xml:id="add-0603-0005" facs="#zone_r_4"><lb facs="#zone_r_4_tl_1"/>et dù</add>
+            <add xml:id="add-0603-0006" facs="#zone_r_6"><lb facs="#zone_r_6_tl_1"/>4 ehmen konnte.</add>
+            <add xml:id="add-0603-0007" facs="#zone_r_7"><lb facs="#zone_r_7_tl_1"/>Herrschaffen</add>
+            <add xml:id="add-0603-0008" facs="#zone_r_8"><lb facs="#zone_r_8_tl_1"/>vollennen</add>
+            <p facs="#zone_r" part="M">
+               <lb facs="#zone_r_tl_1"/>seiner Milliardenerpressungen und Betrügereien,
+               <lb facs="#zone_r_tl_2"/>und dies alles im Höhepunkt eines Kampfes von
+               <lb facs="#zone_r_tl_3"/>titanischem Umfang und für die Zwecke eines
+               <lb facs="#zone_r_tl_4"/>Gerichtsverfahrens, dessen Ausgang unfehlbar die
+               <lb facs="#zone_r_tl_5"/>Befestigung der Erpressermacht herbeigeführt hätte,
+               <lb facs="#zone_r_tl_6"/>wäre die Zähigkeit des Alleinkämpfers nicht größer
+               <lb facs="#zone_r_tl_7"/>gewesen als der Verrat, Ähnliches ist nie erlebt
+               <lb facs="#zone_r_tl_8"/>worden, (nis ein Fall, wo die Verfolgung eines
+               <lb facs="#zone_r_tl_9"/>Erpressers, in dem Moment, da er der Behörde
+               <lb facs="#zone_r_tl_10"/>selbst einen Beweis seiner Fähigkeit liefert, in seine
+               <lb facs="#zone_r_tl_11"/>Ehrenrettung umschlägt. Von allen Erlebnissen des
+               <lb facs="#zone_r_tl_12"/>beispiellosen Kampfes war dieses das erschütterndste.
+               <lb facs="#zone_r_tl_13"/>und das lesende Auge wehrte sich, einem Aktenstück
+               <lb facs="#zone_r_tl_14"/>das vollkommene Gegenteil von dem zu glauben
+               <lb facs="#zone_r_tl_15"/>was ein glaubendes Ohr noch tagszuvor gehört hatte.
+               <lb facs="#zone_r_tl_16"/>Aber es war nicht anders: während ich mit Herrn
+               <lb facs="#zone_r_tl_17"/>Schober, der meinem gemeinnützigen Beginnen
+               <lb facs="#zone_r_tl_18"/>durch Monate mit aller Sympathie und Hilfsbereit-
+               <lb facs="#zone_r_tl_19"/>schaft folgte, die ihm die beschränkten Mittel der
+               <lb facs="#zone_r_tl_20"/>Amtlickeit und Persönlichkeit zu gewähren schienen,
+               <lb facs="#zone_r_tl_21"/>über die Möglichkeit beriet, den Aktenschiebereien
+               <lb facs="#zone_r_tl_22"/>des Erpressers auf die Spur zu kommen, hatte dieser
+               <lb facs="#zone_r_tl_23"/>eine Hintertreppe zu einem Funktionär gefunden,
+               <lb facs="#zone_r_tl_24"/>der offenbar Macht hat, die Entschließungen des
+               <lb facs="#zone_r_tl_25"/>Vorgesetzten zu beeinflussen. Genau vermöchte ich
+               <lb facs="#zone_r_tl_26"/>den Zeitpunkt und den Modus anzugeben, wann
+               <lb facs="#zone_r_tl_27"/>und wie der Erpresser von der Gefahr Kunde
+               <lb facs="#zone_r_tl_28"/>erhalten hat, daß die Polizei im Begrif sei, sich zu
+               <lb facs="#zone_r_tl_29"/>einer Ergänzung der Leumundsnote aufzuraffen, die
+               <lb facs="#zone_r_tl_30"/>durch die Mitteilung von Betrugsfakten an das
+               <lb facs="#zone_r_tl_31"/>Landesgericht für ihn einen unmittelbar katastrophalen
+               <lb facs="#zone_r_tl_32"/>Charakter annahm. Und es gelang ihm, dieser
+               <lb facs="#zone_r_tl_33"/>Ergänzung den Sinn/eines Widerrufs/der vorhandenen
+               <lb facs="#zone_r_tl_34"/>Feststellung zu geben, daß er ein bestechlicher
+               <lb facs="#zone_r_tl_35"/>Journalist sei. Es gelang ihm durch einen fried-
+               <lb facs="#zone_r_tl_36"/>fertigen Hinweis auf jene infame Bedrohung des
+               <lb facs="#zone_r_tl_37"/>Privatlebens von Funktionären, mit der er, wie
+               <lb facs="#zone_r_tl_38"/>später festgestellt werden konnte, in den Tagen
+               <lb facs="#zone_r_tl_39"/>erfolgreich operiert hat, als einer seiner Angestellten
+               <lb facs="#zone_r_tl_40"/>wegen des Verdachts der Erpressung in Haft
+               <lb facs="#zone_r_tl_41"/>genommen wurde. Die Lahmlegung der Autorität,
+               <lb facs="#zone_r_tl_42"/>nach dem erneuten Versuch, unter meinem Antrieb
+               <lb facs="#zone_r_tl_43"/>die Stadt vom Tyrannen zu befreien, bietet in
+               <lb facs="#zone_r_tl_44"/>diesem Zusammenhang wohl den traurigsten Aspekt,
+               <lb facs="#zone_r_tl_45"/>den menschliche Hinfälligkeit in Amtskleid jemals
+               <lb facs="#zone_r_tl_46"/>geboten hat, und der Zusammenhang des Herrn
+               <lb facs="#zone_r_tl_47"/>Bosel dürfte sich auch hier feststellen lassen<subst><del>.</del><add facs="#zone_r_20" xml:id="add-0603-0020"><lb facs="#zone_r_20_tl_1"/>I wie nicht minder<lb facs="#zone_r_20_tl_2"/>in der Möglichkeit,<lb facs="#zone_r_20_tl_3"/>Ich den trotz allem<lb facs="#zone_r_20_tl_4"/>von 1. Knall<lb facs="#zone_r_20_tl_5"/>vom Staatsanwalt versetzt.<lb facs="#zone_r_20_tl_6"/>über die Grenze gelangen<lb facs="#zone_r_20_tl_7"/>konnte. Ich führte <metamark function="addition"/><add facs="#zone_r_9" xml:id="add-0603-0009"><lb facs="#zone_r_9_tl_1"/>alles auf den leidigen<lb facs="#zone_r_9_tl_2"/>Zusatz zurück, der dem Herrn<lb facs="#zone_l_8"/>Ersel in einem Warteraum<lb facs="#zone_l_7"/>es ermöglichte, den<metamark function="addition"/><add facs="#zone_r_25" xml:id="add-0603-0010"><lb facs="#zone_l_9"/>hoffnungslich</add> Versuch<lb facs="#zone_r_9_tl_5"/>meiner Bekanntschaft zu machen, <metamark function="addition"/><add facs="#zone_r_21" xml:id="add-0603-0021"><lb facs="#zone_l_10"/>der über die Neuerung seines Namens nicht hinausgegangen ist. <metamark function="addition"/><add facs="#zone_r_22" xml:id="add-0603-0023"><lb facs="#zone_l"/>Da ahnte ich, welche Stunde es geschlagen hatte.<lb facs="#zone_l_1"/>und empfehl zwischen Sicherungen.</add></add><lb facs="#zone_l_6"/>Verkäufer</add></add></subst> Ich
+            </p>
+            <add xml:id="add-0603-0011" facs="#zone_r_10"><lb facs="#zone_r_10_tl_1"/>[insbesondere</add>
+            <add xml:id="add-0603-0012" facs="#zone_r_13"><lb facs="#zone_r_13_tl_1"/>x des</add>
+            <add xml:id="add-0603-0013" facs="#zone_r_14"><lb facs="#zone_l_5"/>1172</add>
+            <add xml:id="add-0603-0014" facs="#zone_r_15"><lb facs="#zone_r_15_tl_1"/>1 einer Berichtigung,</add>
+            <add xml:id="add-0603-0015" facs="#zone_r_17"><lb facs="#zone_r_17_tl_1"/>I, wie ich weiß,</add>
+            <add xml:id="add-0603-0016" facs="#zone_r_18"><lb facs="#zone_r_18_tl_1"/>+ Anblick</add>
+            <add xml:id="add-0603-0017" facs="#zone_r_11"><lb facs="#zone_r_11_tl_1"/>I. Deren Feststellung sie schuldig blieb.</add>
+            <add xml:id="add-0603-0018" facs="#zone_r_12"><lb facs="#zone_r_12_tl_1"/>mit ähnlichem Mut, durch die<lb facs="#zone_r_12_tl_2"/>Wendung zu entlassen, nach<lb facs="#zone_r_12_tl_3"/>ihr zu schweigen, der zu<lb facs="#zone_r_12_tl_5"/>währen, dass der<lb facs="#zone_r_12_tl_6"/>Verraten nur zufrieden<lb facs="#zone_r_12_tl_8"/>sein und wohl<lb facs="#zone_l_2"/>gleichfalls die Sache<lb facs="#zone_l_3"/>preisgeben werde. Nie noch</add>
+            <add xml:id="add-0603-0019" facs="#zone_r_19"><lb facs="#zone_r_19_tl_1"/>H. die Hand</add>
+            <add xml:id="add-0603-0022" facs="#zone_r_16"><lb facs="#zone_r_16_tl_1"/>I keep</add>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Diplomatische Transkription: 0006_459.jpg</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Automatisch erzeugt aus PAGE-XML (eScriptorium-/Transkribus-Export) per XSLT.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>
+              Quelle: 0006_459.jpg.
+              Erstellt: 2026-10-02T15:12:04.900+02:00,
+              zuletzt geaendert: 2026-10-20T12:21:17.548+02:00.
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <facsimile>
+      <graphic url="0006_459.jpg" width="2754px" height="4727px"/>
+      <surface xml:id="surface_r_5"
+               type="base"
+               subtype="base"
+               points="97,81 2648,78 2648,4609 85,4609">
+         <zone xml:id="zone_r_8"
+               type="fw"
+               points="2116,160 2255,160 2255,293 2116,293">
+            <zone type="line"
+                  xml:id="zone_l_25"
+                  points="2138,238 2228,232 2226,202 2136,208"/>
+         </zone>
+         <zone xml:id="zone_r_7"
+               type="fw"
+               points="2281,231 2557,231 2557,402 2281,402">
+            <zone type="line"
+                  xml:id="zone_l_26"
+                  points="2296,367 2536,374 2537,344 2297,337"/>
+         </zone>
+         <zone xml:id="zone_r_9"
+               type="metamark"
+               points="1855,2304 2000,2301 2000,2468 1841,2461">
+            <zone type="line"
+                  xml:id="zone_l_28"
+                  points="1852,2421 1972,2411 1970,2381 1850,2391"/>
+         </zone>
+         <zone xml:id="zone_r"
+               type="paragraph"
+               points="181,242 938,201 1602,176 2546,680 2155,894 2161,1171 2498,1528 2246,2016 2051,2263 1669,2415 628,2639 210,2683 181,2372">
+            <zone type="line"
+                  xml:id="zone_l"
+                  points="209,349 651,313 771,321 849,298 1326,266 1598,258 1597,228 1325,236 844,268 768,291 651,283 207,319"/>
+            <zone type="line"
+                  xml:id="zone_l_1"
+                  points="262,470 641,438 838,423 897,404 1065,395 1482,349 1479,319 1063,365 892,374 832,394 639,408 259,440"/>
+            <zone type="line"
+                  xml:id="zone_l_2"
+                  points="249,578 393,570 476,551 743,524 802,511 926,507 1093,466 1353,450 1351,420 1088,436 922,477 798,481 738,494 471,521 389,540 247,548"/>
+            <zone type="line"
+                  xml:id="zone_l_3"
+                  points="822,544 884,541 883,511 821,514"/>
+            <zone type="line"
+                  xml:id="zone_l_4"
+                  points="246,678 669,628 665,598 242,648"/>
+            <zone type="line"
+                  xml:id="zone_l_5"
+                  points="310,729 602,700 811,676 808,646 599,670 307,699"/>
+            <zone type="line"
+                  xml:id="zone_l_6"
+                  points="232,819 458,828 556,790 741,763 811,749 1122,690 1384,654 1415,625 1467,619 1519,599 1977,522 2039,517 2037,487 1973,492 1511,570 1460,590 1402,598 1371,627 1117,660 805,720 736,733 548,761 453,798 233,789"/>
+            <zone type="line"
+                  xml:id="zone_l_7"
+                  points="215,949 440,912 481,904 608,904 675,866 777,872 844,861 990,837 1072,801 1210,788 1265,762 1323,759 1489,728 1547,701 1672,683 1668,653 1538,672 1480,699 1319,729 1258,733 1202,759 1064,772 981,808 839,831 775,842 668,837 600,875 478,874 435,882 210,919"/>
+            <zone type="line"
+                  xml:id="zone_l_8"
+                  points="288,1052 445,1015 631,1002 727,959 926,934 991,909 1430,817 1655,755 1703,729 1939,694 1935,664 1694,701 1644,727 1423,788 983,880 919,905 719,930 624,973 440,985 281,1023"/>
+            <zone type="line"
+                  xml:id="zone_l_9"
+                  points="319,1130 493,1127 525,1109 880,1054 933,1043 1130,986 1196,981 1372,934 1401,910 1614,861 1643,856 1809,845 1918,811 2110,778 2148,776 2285,753 2313,732 2438,713 2433,683 2301,704 2273,725 2145,746 2107,748 1911,782 1804,816 1639,826 1608,832 1388,883 1358,907 1191,951 1125,956 926,1014 875,1024 515,1081 485,1098 318,1100"/>
+            <zone type="line"
+                  xml:id="zone_l_10"
+                  points="238,1246 378,1243 468,1225 682,1189 722,1173 1105,1104 1128,1090 1394,1041 1422,1014 1615,989 1680,963 1832,936 1915,913 2131,890 2128,860 1909,884 1825,907 1672,934 1607,960 1409,987 1380,1014 1117,1062 1094,1076 714,1144 674,1160 463,1195 375,1213 237,1216"/>
+            <zone type="line"
+                  xml:id="zone_l_11"
+                  points="269,1376 732,1282 840,1258 954,1226 1300,1156 1452,1114 1540,1087 1675,1042 1991,995 2132,964 2126,935 1986,965 1668,1013 1531,1058 1444,1085 1293,1127 947,1197 833,1229 726,1253 263,1347"/>
+            <zone type="line"
+                  xml:id="zone_l_12"
+                  points="280,1490 533,1439 609,1422 698,1408 752,1394 774,1373 1043,1324 1093,1319 1144,1291 1476,1211 1507,1185 1653,1166 1742,1142 1842,1127 1908,1111 1993,1095 1987,1066 1902,1082 1836,1098 1736,1113 1647,1137 1495,1158 1462,1184 1133,1263 1084,1290 1039,1294 760,1346 737,1368 692,1379 603,1393 527,1410 274,1461"/>
+            <zone type="line"
+                  xml:id="zone_l_13"
+                  points="215,1581 466,1564 553,1542 906,1460 1058,1426 1288,1358 1406,1352 1484,1322 1588,1288 1875,1213 2023,1179 2016,1150 1868,1184 1580,1259 1474,1294 1400,1323 1283,1328 1050,1397 899,1431 546,1513 461,1534 213,1551"/>
+            <zone type="line"
+                  xml:id="zone_l_15"
+                  points="642,1586 819,1549 813,1520 636,1557"/>
+            <zone type="line"
+                  xml:id="zone_l_14"
+                  points="304,1713 495,1688 635,1660 713,1665 949,1592 1093,1547 1208,1508 1551,1415 1699,1371 1756,1345 1916,1319 1911,1289 1747,1316 1688,1343 1543,1386 1199,1479 1084,1518 940,1563 709,1635 633,1630 490,1658 300,1683"/>
+            <zone type="line"
+                  xml:id="zone_l_16"
+                  points="331,1816 732,1736 779,1700 1305,1568 1401,1541 1516,1513 1737,1442 1805,1439 2004,1375 2141,1326 2169,1297 2222,1293 2220,1263 2156,1270 2125,1301 1994,1347 1800,1409 1732,1412 1508,1484 1393,1512 1297,1539 766,1673 720,1709 325,1787"/>
+            <zone type="line"
+                  xml:id="zone_l_17"
+                  points="196,1929 421,1885 524,1871 597,1848 822,1810 852,1771 1297,1687 1442,1618 1540,1592 1774,1527 1879,1499 2033,1465 2063,1420 2164,1383 2329,1383 2329,1353 2159,1353 2044,1396 2016,1440 1872,1470 1766,1498 1532,1563 1432,1590 1288,1658 836,1745 807,1784 590,1819 517,1842 416,1855 190,1900"/>
+            <zone type="line"
+                  xml:id="zone_l_18"
+                  points="264,2004 362,1999 398,1978 524,1960 652,1935 735,1904 937,1866 982,1849 1216,1767 1269,1791 1433,1718 1556,1677 1726,1627 1787,1611 2032,1541 2079,1501 2330,1445 2323,1416 2066,1474 2018,1515 1779,1582 1718,1598 1547,1648 1422,1690 1269,1760 1217,1737 972,1821 929,1837 727,1875 644,1906 519,1930 388,1950 353,1970 262,1974"/>
+            <zone type="line"
+                  xml:id="zone_l_19"
+                  points="266,2079 392,2070 707,2014 950,1950 1153,1922 1456,1836 1511,1784 1709,1755 1747,1726 1919,1689 2164,1602 2210,1564 2453,1514 2447,1485 2197,1537 2149,1576 1911,1660 1734,1699 1697,1727 1498,1757 1441,1810 1147,1893 944,1921 701,1985 388,2040 264,2049"/>
+            <zone type="line"
+                  xml:id="zone_l_20"
+                  points="292,2186 587,2138 652,2106 1119,2061 1512,1925 1552,1877 1811,1830 1959,1780 2176,1699 2166,1671 1949,1752 1804,1801 1537,1851 1495,1900 1113,2032 644,2077 578,2109 287,2156"/>
+            <zone type="line"
+                  xml:id="zone_l_21"
+                  points="349,2282 750,2234 775,2220 955,2201 996,2170 1191,2137 1223,2102 1304,2084 1363,2040 1656,2007 1920,1904 1954,1916 2024,1861 2064,1854 2100,1831 2140,1823 2174,1787 2268,1766 2261,1737 2159,1761 2125,1797 2089,1803 2053,1826 2012,1834 1949,1884 1920,1874 1649,1978 1352,2012 1292,2057 1208,2076 1177,2111 984,2142 944,2173 766,2191 741,2205 345,2252"/>
+            <zone type="line"
+                  xml:id="zone_l_22"
+                  points="298,2405 914,2328 984,2293 1121,2261 1150,2234 1571,2132 1645,2106 1855,2033 1893,2017 2037,1973 2052,1945 2167,1906 2157,1878 2033,1922 2018,1950 1883,1989 1844,2005 1635,2078 1562,2103 1136,2208 1107,2235 974,2265 905,2299 294,2375"/>
+            <zone type="line"
+                  xml:id="zone_l_23"
+                  points="302,2512 468,2505 513,2476 737,2461 747,2441 1118,2388 1147,2350 1363,2304 1691,2195 1742,2167 1955,2103 2202,1995 2190,1968 1945,2075 1730,2139 1679,2168 1355,2275 1131,2325 1103,2362 726,2412 719,2433 504,2448 459,2476 301,2482"/>
+            <zone type="line"
+                  xml:id="zone_l_24"
+                  points="355,2620 817,2528 853,2527 1309,2435 1351,2400 1721,2337 1716,2307 1338,2373 1296,2408 850,2497 814,2498 349,2591"/>
+         </zone>
+         <zone xml:id="zone_r_6"
+               type="metamark"
+               points="2170,948 2415,948 2415,1094 2170,1094">
+            <zone type="line"
+                  xml:id="zone_l_27"
+                  points="2184,1052 2392,1048 2391,1018 2183,1022"/>
+         </zone>
+         <zone xml:id="zone_r_2"
+               type="long-quote-lg"
+               points="787,2675 1524,2543 1760,2675 1889,3296 1760,3519 1011,3607 787,3519">
+            <zone type="line"
+                  xml:id="zone_l_30"
+                  points="810,2778 1514,2632 1508,2603 804,2749"/>
+            <zone type="line"
+                  xml:id="zone_l_31"
+                  points="820,2869 1500,2746 1495,2716 815,2839"/>
+            <zone type="line"
+                  xml:id="zone_l_32"
+                  points="821,2983 1554,2857 1549,2827 816,2953"/>
+            <zone type="line"
+                  xml:id="zone_l_33"
+                  points="840,3081 1563,2948 1632,2924 1774,2911 1771,2881 1626,2895 1555,2919 835,3051"/>
+            <zone type="line"
+                  xml:id="zone_l_34"
+                  points="840,3206 1118,3159 1351,3098 1652,3050 1647,3020 1345,3069 1112,3130 835,3176"/>
+            <zone type="line"
+                  xml:id="zone_l_35"
+                  points="868,3303 1202,3237 1498,3173 1649,3146 1644,3116 1492,3144 1196,3208 862,3274"/>
+            <zone type="line"
+                  xml:id="zone_l_36"
+                  points="791,3457 1420,3311 1827,3276 1824,3246 1415,3281 784,3428"/>
+            <zone type="line"
+                  xml:id="zone_l_37"
+                  points="937,3552 1238,3549 1470,3485 1725,3455 1721,3425 1464,3456 1234,3519 937,3522"/>
+         </zone>
+         <zone xml:id="zone_r_4"
+               type="metamark"
+               points="1854,3466 2100,3466 2100,3651 1854,3651">
+            <zone type="line"
+                  xml:id="zone_l_29"
+                  points="1868,3595 2079,3589 2078,3559 1867,3565"/>
+         </zone>
+         <zone xml:id="zone_r_1"
+               type="paragraph"
+               points="130,4282 159,3857 938,3769 981,3702 1134,3695 1156,3759 2387,3619 2640,3755 2449,4176 1906,4436 457,4574">
+            <zone type="line"
+                  xml:id="zone_l_45"
+                  points="983,3764 1119,3749 1116,3719 980,3734"/>
+            <zone type="line"
+                  xml:id="zone_l_40"
+                  points="175,3948 741,3901 866,3878 1274,3853 1542,3809 2239,3713 2235,3683 1538,3779 1271,3823 862,3848 737,3871 173,3918"/>
+            <zone type="line"
+                  xml:id="zone_l_41"
+                  points="335,4079 691,4066 768,4043 1006,3992 1339,3983 1391,3937 2183,3872 2264,3843 2590,3812 2587,3782 2257,3814 2177,3843 1379,3909 1328,3955 1002,3962 761,4014 686,4036 334,4049"/>
+            <zone type="line"
+                  xml:id="zone_l_42"
+                  points="179,4239 363,4206 576,4203 1371,4100 1864,4077 1892,4047 2278,3997 2274,3967 1878,4020 1851,4050 1368,4070 574,4173 360,4176 174,4209"/>
+            <zone type="line"
+                  xml:id="zone_l_43"
+                  points="333,4372 578,4363 626,4328 888,4280 1537,4234 1818,4192 2429,4116 2425,4086 1814,4162 1534,4204 884,4250 614,4300 568,4335 332,4342"/>
+            <zone type="line"
+                  xml:id="zone_l_44"
+                  points="485,4488 872,4480 897,4439 1837,4384 1835,4354 878,4408 856,4452 484,4458"/>
+         </zone>
+         <zone xml:id="zone_r_3"
+               type="add"
+               points="101,3623 510,3585 1347,3562 1325,3701 974,3709 942,3790 278,3817 135,3775">
+            <zone type="line"
+                  xml:id="zone_l_38"
+                  points="116,3702 1325,3639 1323,3609 114,3672"/>
+            <zone type="line"
+                  xml:id="zone_l_39"
+                  points="306,3777 613,3775 910,3757 908,3727 612,3745 306,3747"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div facs="#surface_r_5" type="base" subtype="base">
+            <fw facs="#zone_r_8" type="fol">
+               <lb facs="#zone_l_25"/>8
+            </fw>
+            <fw facs="#zone_r_7" type="fol">
+               <lb facs="#zone_l_26"/>226
+            </fw>
+            <p facs="#zone_r #zone_r_1" rendition="#handwritten" part="M">
+               <lb facs="#zone_l"/>das Beſtreben, dem Klaſſenkampf mit dem
+               <lb facs="#zone_l_1"/>Rüſtzeug der Taferlklaſſe zu begegnen,
+               <lb facs="#zone_l_2"/><gap reason="illegible" extent="2"/> die Dürftigkeit <gap reason="illegible" extent="4"/> parlamentarischen
+               <lb facs="#zone_l_3"/>der
+               <lb facs="#zone_l_4"/><gap reason="illegible" extent="4"/> <gap reason="illegible" extent="10"/>
+               <lb facs="#zone_l_5"/><gap reason="illegible" extent="13"/>
+               <lb facs="#zone_l_6"/>Behandlung <gap reason="illegible" extent="5"/> <gap reason="illegible" extent="4"/> <gap reason="illegible" extent="4"/>kataſtrophe, des Elemtaren, die
+               <lb facs="#zone_l_7"/><gap reason="illegible" extent="10"/> den Gehirnen nichts als das Wort
+               <lb facs="#zone_l_8"/>"Elemente" eingibtab <gap reason="illegible" extent="3"/> # <gap reason="illegible" extent="7"/> nebst der Mahnung,
+               <lb facs="#zone_l_9"/>einen "Trennungsſtrich" zu ziehen, den man doch nur <gap reason="illegible" extent="5"/> <gap reason="illegible" extent="6"/> <gap reason="illegible" extent="5"/> zwiſchen ſich und 
+               <lb facs="#zone_l_10"/>dieſer geiſtigen und <gap reason="illegible" extent="11"/> ſeeli‰chen Armut ziehen kann –
+               <lb facs="#zone_l_11"/>das alles iſt noch weitaus ſchlimmer als das Schlimmste, was
+               <lb facs="#zone_l_12"/>geschehen ist. <metamark function="insertion"><g ref="#intervention"/></metamark> Sich vorzustellen, daß es das <gap reason="illegible" extent="4"/> gleichzeitig mit
+               <lb facs="#zone_l_13"/>Ozeanflügen, <gap reason="illegible" extent="8"/>, Fernphotographie und einem Geſpräch mit
+               <lb facs="#zone_l_15"/>Radio
+               <lb facs="#zone_l_14"/>Tokio gibt, <gap reason="illegible" extent="4"/> muß auch den Freidenker an Gottes Wunder
+               <lb facs="#zone_l_16"/>glauben machen. <gap reason="illegible" extent="4"/> Wie ſollte man nicht in die Knie ſinken vor der
+               <lb facs="#zone_l_17"/>Ahnungslosigkeit, mit der das "Glockenkommitee der Votivkirche" am 6. Auguſt,
+               <lb facs="#zone_l_18"/>also drei Wochen nach dem 15. Juli, auch noch die Schuh anbraucht, mit denen
+               <lb facs="#zone_l_19"/>kein Staatswürdenträger den fünfundachtzig Leichen folgte, "an die Redaktion
+               <lb facs="#zone_l_20"/>der Zeitun die Fakel" – die in diesem Vorſatz, recht zu ſchreiben
+               <lb facs="#zone_l_21"/>und niemand zu ſcheuen, untrüglich den Kasmader erkennt, der auf ihre 
+               <lb facs="#zone_l_22"/>Sympatihien rechnet – eine <gap reason="illegible" extent="6"/> ſchlichte Gabe gelangen läßt: die 
+               <lb facs="#zone_l_23"/>endlich erſchaffene Volkshymne, nämlich den "Seipel-Marſch", der auf die
+               <lb facs="#zone_l_24"/>maßvollen und doch ???????? Worte komponiert ist:
+               <metamark xml:id="metamark-0459-0001" facs="#zone_r_9">
+                  <lb facs="#zone_l_28"/>col
+               </metamark>
+               <quote>
+                  <lg facs="#zone_r_2">
+                     <l facs="#zone_l_30">Unſer Seipel lebe hoch!</l>
+                     <l facs="#zone_l_31">Danken wir ihm alles doch,</l>
+                     <l facs="#zone_l_32">Aus dem tiefſten Mißgeſchick</l>
+                     <l facs="#zone_l_33">Führt’ er uns zu neuem Glück.</l>
+                     <l facs="#zone_l_34">Der ſein Leben uns geweiht,</l>
+                     <l facs="#zone_l_35">Unſer Land von Not befreit</l>
+                     <l facs="#zone_l_36">[: Gott erhalt’ ihn lang uns noch,</l>
+                     <l facs="#zone_l_37">Unſer Seipel lebe hoch. :]</l>
+                  </lg>
+               </quote>
+               <metamark xml:id="metamark-0459-0003" facs="#zone_r_4" function="font">
+                  <lb facs="#zone_l_29"/>garmd
+               </metamark>
+               <lb facs="#zone_l_45"/>
+               <lb facs="#zone_l_40"/><metamark function="addition"/><add facs="#zone_r_3" xml:id="add-0459-0001"><lb facs="#zone_l_38"/>Die Autoren gibt es: Die TÖne sind von R. H. Dietrich,<lb facs="#zone_l_39"/>die Wlrte von Anton Odič</add>Auf dem Titelblatt <metamark function="addition"/><add facs="#zone_l_45" xml:id="add-0459-0002" place="above">aber</add> die Reproduktion eines<gap reason="illegible" extent="1"/> mir <gap reason="illegible" extent="8"/> <gap reason="illegible" extent="4"/> die
+               <lb facs="#zone_l_41"/>Erläuterung, lange vor dem Scheitern des Mehlkartells verſichert <gap reason="illegible" extent="2"/> von Profeſſor Joſef
+               <lb facs="#zone_l_42"/>Engelhart "gemalenem Portrait" des Hochwürdigſten Hausprälaten
+               <lb facs="#zone_l_43"/>Seiner Heiligkeit, die doch immerhin den Verſuch unternommen hat,
+               <lb facs="#zone_l_44"/>für Sacco und Vanzetti zu intervenieren.
+            </p>
+            <metamark xml:id="metamark-0459-0002" facs="#zone_r_6" function="insertion" target="460.xml#add-0460-9001">
+               <lb facs="#zone_l_27"/><g ref="#intervention"/> 8a
+            </metamark>
+         </div>
+      </body>
+   </text>
+</TEI>

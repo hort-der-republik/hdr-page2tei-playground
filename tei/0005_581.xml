@@ -12,7 +12,7 @@
             <p>
               Quelle: 0005_581.jpg.
               Erstellt: 2026-09-14T12:23:49.012+02:00,
-              zuletzt geaendert: 2026-10-01T09:31:38.411+02:00.
+              zuletzt geaendert: 2026-10-20T14:24:15.583+02:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -432,75 +432,74 @@
             <fw facs="#zone_r_9">
                <lb facs="#zone_l"/>21
             </fw>
-            <div facs="#zone_r_33" type="column-block">
-               <p facs="#zone_tr_2">
-                  <lb facs="#zone_tr_2_tl_1"/>andern Sprache gar nicht geben, und das Verhängnis
-                  <lb facs="#zone_tr_2_tl_2"/>bei diesen Zusammenstößen zwischen mir und diesem
-                  <lb facs="#zone_tr_2_tl_3"/>Wien ist nur, daß die Dummheit durch mich dümmer
-                  <lb facs="#zone_tr_2_tl_4"/>wird, während sie mich zu stets neuen Einfällen
-                  <lb facs="#zone_tr_2_tl_5"/>anfeuert. Da ist denn Beherrschung geboten und
-                  <lb facs="#zone_tr_2_tl_6"/>bezüglich der ‚Reichspost‘, die geschrieben hat, »man
-                  <lb facs="#zone_tr_2_tl_7"/>erinnere sich, daß ich einmal einem meiner Angriffs-
-                  <lb facs="#zone_tr_2_tl_8"/>objekte das Diktum an den Kopf geworfen habe:
-                  <lb facs="#zone_tr_2_tl_9"/>lch fordere Sie auf, sich zu erschießen!<subst><del>‘</del><add facs="#zone_r_8" xml:id="add-0581-0001"><lb facs="#zone_l_1"/><metamark function="intervention"><g ref="#intervention"/></metamark>‘«</add></subst>, darf ich
-                  <lb facs="#zone_tr_2_tl_10"/>mir höchstens eine Glosse vorbehalten unter dem
-                  <lb facs="#zone_tr_2_tl_11"/>Titel »Kasmader in der Schlinge oder: Man erinnert
-                  <lb facs="#zone_tr_2_tl_12"/>sich«. Da wird man schon sehen, wie lustig es ist,
-                  <lb facs="#zone_tr_2_tl_13"/>wenn die heilige Einfalt an mir satirisch wird. Denn
-                  <lb facs="#zone_tr_2_tl_14"/>woran sich die Reichspost <metamark function="addition"/><add facs="#zone_r_10" xml:id="add-0581-0002"><lb facs="#zone_l_2"/><metamark function="intervention"><g ref="#intervention"/></metamark>,</add>feststellend, daß sich <metamark function="addition"/><add facs="#zone_r_11" xml:id="add-0581-0003"><lb facs="#zone_l_3"/><metamark function="intervention"><g ref="#intervention"/></metamark>» </add>die
-                  <lb facs="#zone_l_30"/>Erde <metamark xml:id="metamark-0581-0009" function="relocation" target="#456">l</metamark><del xml:id="del-0581-0002">seit damals</del> weiter<metamark xml:id="metamark-0581-0010" function="kerning" target="#metamark-0581-0010"><g ref="#intervention"/></metamark>gedreht hat<metamark function="addition"/><add facs="#zone_r_13" xml:id="add-0581-0004"><lb facs="#zone_l_7"/><metamark function="intervention"><g ref="#intervention"/></metamark>«</add>, nicht erinnert,
-                  <lb facs="#zone_tr_2_tl_16"/>ist die Tatsache, daß Sich auch die Reichspost <del xml:id="del-0581-0003">seit</del>
-                  <lb facs="#zone_l_29"/><del xml:id="del-0581-0004"><del xml:id="del-0581-0005">damals</del> <undo spanTo="#anchor-0581-0001" target="#del-0581-0004"/>g<anchor type="undo" xml:id="anchor-0581-0001"/></del>edreht hat, <subst><del>der <metamark function="addition"/><add facs="#zone_r_16" xml:id="add-0581-0005"><lb facs="#zone_l_8"/><del><g ref="#intervention"/><gap reason="illegible" extent="3"/> <gap reason="illegible" extent="3"/> <gap reason="illegible" extent="8"/></del></add>das</del><add facs="#zone_r_17" xml:id="add-0581-0006"><lb facs="#zone_tr_2_tl_18"/><metamark function="intervention"><g ref="#intervention"/></metamark>die durch jenes,</add></subst> ganz anders geartete
-                  <lb facs="#zone_tr_2_tl_19"/>Diktum <metamark function="addition"/><add facs="#zone_r_5" xml:id="add-0581-0008"><lb facs="#zone_l_20"/><metamark function="intervention"><g ref="#intervention"/></metamark>in</add><add facs="#zone_r_4" xml:id="add-0581-0007"><lb facs="#zone_l_21"/><del><gap reason="illegible" extent="7"/></del></add>einen Begeisterungstaumel <subst><del>verursacht hat.</del><add facs="#zone_r_18" xml:id="add-0581-0010"><lb facs="#zone_tr_2_tl_20"/><metamark function="intervention"><g ref="#intervention"/></metamark> versetzt war, woran<lb facs="#zone_tr_2_tl_22"/>ich mich wieder erinnern</add></subst>
-                  <lb facs="#zone_tr_2_tl_21"/>Was die, Wiener Neuesten Nachrichten“, die in
-                  <lb facs="#zone_tr_2_tl_23"/>großdeutscher Sprache verfaßte Zeitung, betrifft, so
-                  <lb facs="#zone_tr_2_tl_24"/>möchte ich<subst><del>,</del><add facs="#zone_r_3" xml:id="add-0581-0009"><lb facs="#zone_l_19"/><metamark function="intervention"><g ref="#intervention"/></metamark> –</add></subst> wenn ich sicher wüßte, daß der Gewinst
-                  <lb facs="#zone_l_24"/>nicht unter ihren <subst><del xml:id="del-0581-0001"><undo spanTo="#anchor-0581-0003" target="#del-0581-0001"/>Schrift<anchor type="undo" xml:id="anchor-0581-0003"/><subst><del>stellern</del><!-- unresolved add-id: rt (keine Region mit dieser Behelfs-ID im Export) --></subst></del><add facs="#zone_r_19" xml:id="add-0581-0011"><lb facs="#zone_l_9"/><subst><del><g ref="#intervention"/></del><add place="overwritten"><g ref="#intervention"/></add></subst><subst><del>Angehörigen</del> <add place="inline">leitern</add></subst></add></subst> aufgeteilt wird<subst><del>,</del><add facs="#zone_r_20" xml:id="add-0581-0013"><lb facs="#zone_l_10"/><metamark function="intervention"><g ref="#intervention"/></metamark> –</add></subst> ein
-                  <lb facs="#zone_l_25"/>Preisrätsel aufstellen: wie sie zu der Version <subst><del>kommen</del><add facs="#zone_r_21" xml:id="add-0581-0012"><lb facs="#zone_l_11"/><metamark function="intervention"><g ref="#intervention"/></metamark>gelangt</add></subst>
-                  <lb facs="#zone_tr_2_tl_27"/><metamark function="addition"/><add facs="#zone_r_2" xml:id="add-0581-0014"><lb facs="#zone_l_18"/><metamark function="intervention"><g ref="#intervention"/></metamark>sein </add>mag, daß ich »an Litfaßsäulen Maueranschläge« (da<subst><del>ß</del><add facs="#zone_r_22" xml:id="add-0581-0015"><lb facs="#zone_tr_2_tl_29"/>ls</add></subst>
-                  <lb facs="#zone_tr_2_tl_28"/>kommt davon, wenn man das Fremdwort »Plakaté
-                  <lb facs="#zone_tr_2_tl_30"/>vermeiden will) »angeblich sogar auch selbst an-
-                  <lb facs="#zone_tr_2_tl_31"/>klebte«. Dies<subst><del>e Version ist</del><add facs="#zone_r_1" xml:id="add-0581-0016"><lb facs="#zone_tr_1_tl_2"/><metamark function="intervention"><g ref="#intervention"/></metamark>es Gerücht hat als perfekte Tatsache</add></subst> nunmehr auch unter den
-                  <lb facs="#zone_tr_2_tl_33"/><metamark function="unknown"><g ref="#intervention"/></metamark>Sudetendeutschen <subst><del>verbreitet</del><add facs="#zone_r_23" xml:id="add-0581-0017"><lb facs="#zone_tr_2_tl_32"/><metamark function="intervention"><g ref="#intervention"/></metamark>Eingang gefunden</add></subst> und die, Silesia“ hat
-                  <lb facs="#zone_tr_2_tl_35"/>einen Bericht aus Wien, worin die Szene <metamark function="addition"/><add facs="#zone_r_32" xml:id="add-0581-0019"><lb facs="#zone_tr_2_tl_34"/><metamark function="intervention"><g ref="#intervention"/></metamark>genau und in Sperrdruck</add>beschrieben
-                  <lb facs="#zone_tr_2_tl_36"/>wird<subst><del>,</del><add facs="#zone_tr_1" xml:id="add-0581-0018"><lb facs="#zone_tr_1_tl_3"/><metamark function="intervention"><g ref="#intervention"/></metamark> nebst dem Aufsehen,<lb facs="#zone_tr_1_tl_4"/>das unter der mich<lb facs="#zone_tr_1_tl_5"/>umgebenden Menschenmenge<lb facs="#zone_tr_1_tl_6"/>entstand, „so daß die<lb facs="#zone_tr_1_tl_7"/>Verkehrspolizei eniatniaenia<lb facs="#zone_tr_1_tl_8"/>eingreifen mußte“. Wenn’s<lb facs="#zone_tr_1_tl_9"/>nämlich der Setzmaschine in Sudetenländern<lb facs="#zone_tr_1_tl_10"/>zu dumm wird, beginnt sie zu<lb facs="#zone_tr_1_tl_11"/>lallen.</add></subst> Die <metamark function="unknown"><g ref="#intervention"/></metamark>großdeutsche Zeitung<metamark function="addition"/><add facs="#zone_r_24" xml:id="add-0581-0020"><lb facs="#zone_tr_2_tl_37"/>Wiens</add> nennt diese <subst><del>Plaka</del><add facs="#zone_r_25" xml:id="add-0581-0021"><lb facs="#zone_tr_2_tl_39"/><metamark function="intervention"><g ref="#intervention"/></metamark> Anklebung,</add></subst>
-                  <lb facs="#zone_tr_2_tl_38"/><del xml:id="del-0581-0006">tierung</del>, mit der ich der „Wipag« ins Handwerk-
-                  <lb facs="#zone_tr_2_tl_40"/>gepiuscht habe, einen »Mißbrauch der Freiheit, sich
-                  <lb facs="#zone_tr_2_tl_41"/>zu blamieren«, während sie vermutlich sagen wollte,
-                  <lb facs="#zone_tr_2_tl_42"/>daß ich von dieser Freiheit Gebrauch gemacht habe.
-                  <lb facs="#zone_tr_2_tl_43"/>Die Bezeichnung »Fackel-Kraus«<metamark function="addition"/><add facs="#zone_r_26" xml:id="add-0581-0022"><lb facs="#zone_l_12"/><metamark function="intervention"><g ref="#intervention"/></metamark>,</add><metamark function="relocation" target="#seg-0581-0001"><g ref="#intervention"/></metamark> überrascht mich
-                  <lb facs="#zone_tr_2_tl_44"/><seg xml:id="seg-0581-0001" type="relocation">als ein Stück aus dem Inventar der Wiener Geistig-)</seg>
-                  <lb facs="#zone_l_26"/><seg type="relocation">kei<subst><del>t</del><add facs="#zone_r_28" xml:id="add-0581-0023"><lb facs="#zone_l_14"/><metamark function="intervention"><g ref="#intervention"/></metamark>t,</add></subst></seg> weniger als die eines »Reklame-Kraus«, da es
-                  <lb facs="#zone_tr_2_tl_46"/>doch bisher nicht bekannt war, daß ich einen
-                  <lb facs="#zone_tr_2_tl_47"/>Bestandteil der Welt bilde, deren Schreiber ihre
-                  <lb facs="#zone_tr_2_tl_48"/>Existenz von der Möglichkeit fristen, daß dem
-                  <lb facs="#zone_l_27"/>Essig-Huber eine Varia<subst><del>tion</del><add facs="#zone_r_29" xml:id="add-0581-0024"><lb facs="#zone_l_15"/><metamark function="intervention"><g ref="#intervention"/></metamark>nte</add></subst> zu Goethes »Über allen
-                  <lb facs="#zone_l_28"/>Gipfeln« einfällt. Aber die großdeutsche Publizistik<del xml:id="del-0581-0007">,</del>
-               </p>
-            </div>
-            <metamark xml:id="metamark-0581-0001" facs="#zone_r_6" target="#del-0581-0002">
-               <lb facs="#zone_l_23"/><metamark function="intervention"><g ref="#intervention"/></metamark><metamark function="deletion"><g ref="#deleatur"/></metamark>
+            <cb facs="#zone_r_33"/>
+            <p facs="#zone_tr_2">
+               <lb facs="#zone_tr_2_tl_1"/>andern Sprache gar nicht geben, und das Verhängnis
+               <lb facs="#zone_tr_2_tl_2"/>bei diesen Zusammenstößen zwischen mir und diesem
+               <lb facs="#zone_tr_2_tl_3"/>Wien ist nur, daß die Dummheit durch mich dümmer
+               <lb facs="#zone_tr_2_tl_4"/>wird, während sie mich zu stets neuen Einfällen
+               <lb facs="#zone_tr_2_tl_5"/>anfeuert. Da ist denn Beherrschung geboten und
+               <lb facs="#zone_tr_2_tl_6"/>bezüglich der ‚Reichspost‘, die geschrieben hat, »man
+               <lb facs="#zone_tr_2_tl_7"/>erinnere sich, daß ich einmal einem meiner Angriffs-
+               <lb facs="#zone_tr_2_tl_8"/>objekte das Diktum an den Kopf geworfen habe:
+               <lb facs="#zone_tr_2_tl_9"/>lch fordere Sie auf, sich zu erschießen!<subst><del>‘</del><add facs="#zone_r_8" xml:id="add-0581-0001"><lb facs="#zone_l_1"/><metamark function="intervention"><g ref="#intervention"/></metamark>‘«</add></subst>, darf ich
+               <lb facs="#zone_tr_2_tl_10"/>mir höchstens eine Glosse vorbehalten unter dem
+               <lb facs="#zone_tr_2_tl_11"/>Titel »Kasmader in der Schlinge oder: Man erinnert
+               <lb facs="#zone_tr_2_tl_12"/>sich«. Da wird man schon sehen, wie lustig es ist,
+               <lb facs="#zone_tr_2_tl_13"/>wenn die heilige Einfalt an mir satirisch wird. Denn
+               <lb facs="#zone_tr_2_tl_14"/>woran sich die Reichspost <metamark function="addition"/><add facs="#zone_r_10" xml:id="add-0581-0002"><lb facs="#zone_l_2"/><metamark function="intervention"><g ref="#intervention"/></metamark>,</add>feststellend, daß sich <metamark function="addition"/><add facs="#zone_r_11" xml:id="add-0581-0003"><lb facs="#zone_l_3"/><metamark function="intervention"><g ref="#intervention"/></metamark>» </add>die
+               <lb facs="#zone_l_30"/>Erde <metamark xml:id="metamark-0581-0009" function="relocation" target="#456">l</metamark><del xml:id="del-0581-0002">seit damals</del> weiter<metamark xml:id="metamark-0581-0010" function="kerning" target="#metamark-0581-0010"><g ref="#intervention"/></metamark>gedreht hat<metamark function="addition"/><add facs="#zone_r_13" xml:id="add-0581-0004"><lb facs="#zone_l_7"/><metamark function="intervention"><g ref="#intervention"/></metamark>«</add>, nicht erinnert,
+               <lb facs="#zone_tr_2_tl_16"/>ist die Tatsache, daß Sich auch die Reichspost <del xml:id="del-0581-0003">seit</del>
+               <lb facs="#zone_l_29"/><del xml:id="del-0581-0004"><del xml:id="del-0581-0005">damals</del> <undo spanTo="#anchor-0581-0001" target="#del-0581-0004"/>g<anchor type="undo" xml:id="anchor-0581-0001"/></del>edreht hat, <subst><del>der <metamark function="addition"/><add facs="#zone_r_16" xml:id="add-0581-0005"><lb facs="#zone_l_8"/><del><g ref="#intervention"/><gap reason="illegible" extent="3"/> <gap reason="illegible" extent="3"/> <gap reason="illegible" extent="8"/></del></add>das</del><add facs="#zone_r_17" xml:id="add-0581-0006"><lb facs="#zone_tr_2_tl_18"/><metamark function="intervention"><g ref="#intervention"/></metamark>die durch jenes,</add></subst> ganz anders geartete
+               <lb facs="#zone_tr_2_tl_19"/>Diktum <metamark function="addition"/><add facs="#zone_r_5" xml:id="add-0581-0008"><lb facs="#zone_l_20"/><metamark function="intervention"><g ref="#intervention"/></metamark>in</add><add facs="#zone_r_4" xml:id="add-0581-0007"><lb facs="#zone_l_21"/><del><gap reason="illegible" extent="7"/></del></add>einen Begeisterungstaumel <subst><del>verursacht hat.</del><add facs="#zone_r_18" xml:id="add-0581-0010"><lb facs="#zone_tr_2_tl_20"/><metamark function="intervention"><g ref="#intervention"/></metamark> versetzt war, woran<lb facs="#zone_tr_2_tl_22"/>ich mich wieder erinnern</add></subst>
+               <lb facs="#zone_tr_2_tl_21"/>Was die, Wiener Neuesten Nachrichten“, die in
+               <lb facs="#zone_tr_2_tl_23"/>großdeutscher Sprache verfaßte Zeitung, betrifft, so
+               <lb facs="#zone_tr_2_tl_24"/>möchte ich<subst><del>,</del><add facs="#zone_r_3" xml:id="add-0581-0009"><lb facs="#zone_l_19"/><metamark function="intervention"><g ref="#intervention"/></metamark> –</add></subst> wenn ich sicher wüßte, daß der Gewinst
+               <lb facs="#zone_l_24"/>nicht unter ihren <subst><del xml:id="del-0581-0001"><undo spanTo="#anchor-0581-0003" target="#del-0581-0001"/>Schrift<anchor type="undo" xml:id="anchor-0581-0003"/><subst><del>stellern</del><!-- unresolved add-id: rt (keine Region mit dieser Behelfs-ID im Export) --></subst></del><add facs="#zone_r_19" xml:id="add-0581-0011"><lb facs="#zone_l_9"/><subst><del><g ref="#intervention"/></del><add place="overwritten"><g ref="#intervention"/></add></subst><subst><del>Angehörigen</del> <add place="inline">leitern</add></subst></add></subst> aufgeteilt wird<subst><del>,</del><add facs="#zone_r_20" xml:id="add-0581-0013"><lb facs="#zone_l_10"/><metamark function="intervention"><g ref="#intervention"/></metamark> –</add></subst> ein
+               <lb facs="#zone_l_25"/>Preisrätsel aufstellen: wie sie zu der Version <subst><del>kommen</del><add facs="#zone_r_21" xml:id="add-0581-0012"><lb facs="#zone_l_11"/><metamark function="intervention"><g ref="#intervention"/></metamark>gelangt</add></subst>
+               <lb facs="#zone_tr_2_tl_27"/><metamark function="addition"/><add facs="#zone_r_2" xml:id="add-0581-0014"><lb facs="#zone_l_18"/><metamark function="intervention"><g ref="#intervention"/></metamark>sein </add>mag, daß ich »an Litfaßsäulen Maueranschläge« (da<subst><del>ß</del><add facs="#zone_r_22" xml:id="add-0581-0015"><lb facs="#zone_tr_2_tl_29"/>ls</add></subst>
+               <lb facs="#zone_tr_2_tl_28"/>kommt davon, wenn man das Fremdwort »Plakaté
+               <lb facs="#zone_tr_2_tl_30"/>vermeiden will) »angeblich sogar auch selbst an-
+               <lb facs="#zone_tr_2_tl_31"/>klebte«. Dies<subst><del>e Version ist</del><add facs="#zone_r_1" xml:id="add-0581-0016"><lb facs="#zone_tr_1_tl_2"/><metamark function="intervention"><g ref="#intervention"/></metamark>es Gerücht hat als perfekte Tatsache</add></subst> nunmehr auch unter den
+               <lb facs="#zone_tr_2_tl_33"/><metamark function="unknown"><g ref="#intervention"/></metamark>Sudetendeutschen <subst><del>verbreitet</del><add facs="#zone_r_23" xml:id="add-0581-0017"><lb facs="#zone_tr_2_tl_32"/><metamark function="intervention"><g ref="#intervention"/></metamark>Eingang gefunden</add></subst> und die, Silesia“ hat
+               <lb facs="#zone_tr_2_tl_35"/>einen Bericht aus Wien, worin die Szene <metamark function="addition"/><add facs="#zone_r_32" xml:id="add-0581-0019"><lb facs="#zone_tr_2_tl_34"/><metamark function="intervention"><g ref="#intervention"/></metamark>genau und in Sperrdruck</add>beschrieben
+               <lb facs="#zone_tr_2_tl_36"/>wird<subst><del>,</del><add facs="#zone_tr_1" xml:id="add-0581-0018"><lb facs="#zone_tr_1_tl_3"/><metamark function="intervention"><g ref="#intervention"/></metamark> nebst dem Aufsehen,<lb facs="#zone_tr_1_tl_4"/>das unter der mich<lb facs="#zone_tr_1_tl_5"/>umgebenden Menschenmenge<lb facs="#zone_tr_1_tl_6"/>entstand, „so daß die<lb facs="#zone_tr_1_tl_7"/>Verkehrspolizei eniatniaenia<lb facs="#zone_tr_1_tl_8"/>eingreifen mußte“. Wenn’s<lb facs="#zone_tr_1_tl_9"/>nämlich der Setzmaschine in Sudetenländern<lb facs="#zone_tr_1_tl_10"/>zu dumm wird, beginnt sie zu<lb facs="#zone_tr_1_tl_11"/>lallen.</add></subst> Die <metamark function="unknown"><g ref="#intervention"/></metamark>großdeutsche Zeitung<metamark function="addition"/><add facs="#zone_r_24" xml:id="add-0581-0020"><lb facs="#zone_tr_2_tl_37"/>Wiens</add> nennt diese <subst><del>Plaka</del><add facs="#zone_r_25" xml:id="add-0581-0021"><lb facs="#zone_tr_2_tl_39"/><metamark function="intervention"><g ref="#intervention"/></metamark> Anklebung,</add></subst>
+               <lb facs="#zone_tr_2_tl_38"/><del xml:id="del-0581-0006">tierung</del>, mit der ich der „Wipag« ins Handwerk-
+               <lb facs="#zone_tr_2_tl_40"/>gepiuscht habe, einen »Mißbrauch der Freiheit, sich
+               <lb facs="#zone_tr_2_tl_41"/>zu blamieren«, während sie vermutlich sagen wollte,
+               <lb facs="#zone_tr_2_tl_42"/>daß ich von dieser Freiheit Gebrauch gemacht habe.
+               <lb facs="#zone_tr_2_tl_43"/>Die Bezeichnung »Fackel-Kraus«<metamark function="addition"/><add facs="#zone_r_26" xml:id="add-0581-0022"><lb facs="#zone_l_12"/><metamark function="intervention"><g ref="#intervention"/></metamark>,</add><metamark function="relocation" target="#seg-0581-0001"><g ref="#intervention"/></metamark> überrascht mich
+               <lb facs="#zone_tr_2_tl_44"/><seg xml:id="seg-0581-0001" type="relocation">als ein Stück aus dem Inventar der Wiener Geistig-)</seg>
+               <lb facs="#zone_l_26"/><seg type="relocation">kei<subst><del>t</del><add facs="#zone_r_28" xml:id="add-0581-0023"><lb facs="#zone_l_14"/><metamark function="intervention"><g ref="#intervention"/></metamark>t,</add></subst></seg> weniger als die eines »Reklame-Kraus«, da es
+               <lb facs="#zone_tr_2_tl_46"/>doch bisher nicht bekannt war, daß ich einen
+               <lb facs="#zone_tr_2_tl_47"/>Bestandteil der Welt bilde, deren Schreiber ihre
+               <lb facs="#zone_tr_2_tl_48"/>Existenz von der Möglichkeit fristen, daß dem
+               <lb facs="#zone_l_27"/>Essig-Huber eine Varia<subst><del>tion</del><add facs="#zone_r_29" xml:id="add-0581-0024"><lb facs="#zone_l_15"/><metamark function="intervention"><g ref="#intervention"/></metamark>nte</add></subst> zu Goethes »Über allen
+               <lb facs="#zone_l_28"/>Gipfeln« einfällt. Aber die großdeutsche Publizistik<del xml:id="del-0581-0007">,</del>
+            </p>
+            <metamark xml:id="metamark-0581-0001" facs="#zone_r_6" function="deletion" target="#del-0581-0002">
+               <lb facs="#zone_l_23"/><g ref="#intervention"/> <g ref="#deleatur"/>
             </metamark>
-            <metamark xml:id="metamark-0581-0002" facs="#zone_r_12" target="#456 #metamark-0581-0009">
-               <lb facs="#zone_l_4"/><metamark function="relocation"><g ref="#relocation"/></metamark>
+            <metamark xml:id="metamark-0581-0002" facs="#zone_r_12" function="relocation" target="#456 #metamark-0581-0009">
+               <lb facs="#zone_l_4"/><g ref="#relocation"/>
             </metamark>
             <metamark xml:id="metamark-0581-0003" facs="#zone_r_14" target="#metamark-0581-0010">
-               <lb facs="#zone_l_5"/><metamark function="kerning"><g ref="#kerning"/></metamark>
+               <lb facs="#zone_l_5"/>#wSpc
             </metamark>
-            <metamark xml:id="metamark-0581-0004" facs="#zone_r_15" target="#del-0581-0003">
-               <lb facs="#zone_l_6"/><metamark function="intervention"><g ref="#intervention"/></metamark> <metamark function="deletion"><g ref="#deleatur"/></metamark>
+            <metamark xml:id="metamark-0581-0004" facs="#zone_r_15" function="deletion" target="#del-0581-0003">
+               <lb facs="#zone_l_6"/><g ref="#intervention"/> <g ref="#deleatur"/>
             </metamark>
-            <metamark xml:id="metamark-0581-0005" facs="#zone_r_7" target="#del-0581-0005 #del-0581-0004">
-               <lb facs="#zone_l_22"/><metamark function="intervention"><g ref="#intervention"/></metamark> <metamark function="deletion"><g ref="#deleatur"/></metamark>
+            <metamark xml:id="metamark-0581-0005" facs="#zone_r_7" function="deletion" target="#del-0581-0005 #del-0581-0004">
+               <lb facs="#zone_l_22"/><g ref="#intervention"/> <g ref="#deleatur"/>
             </metamark>
-            <metamark xml:id="metamark-0581-0006" facs="#zone_r" target="#del-0581-0006">
-               <lb facs="#zone_l_17"/><metamark function="intervention"><g ref="#intervention"/></metamark> <metamark function="deletion"><g ref="#deleatur"/></metamark>
+            <metamark xml:id="metamark-0581-0006" facs="#zone_r" function="deletion" target="#del-0581-0006">
+               <lb facs="#zone_l_17"/><g ref="#intervention"/> <g ref="#deleatur"/>
             </metamark>
-            <metamark xml:id="metamark-0581-0007" facs="#zone_r_27">
-               <lb facs="#zone_l_13"/><metamark function="transposition"><g ref="#transposition"/></metamark>
+            <metamark xml:id="metamark-0581-0007" facs="#zone_r_27" function="transposition">
+               <lb facs="#zone_l_13"/><g ref="#transposition"/>
             </metamark>
-            <metamark xml:id="metamark-0581-0008" facs="#zone_r_30" target="#del-0581-0007">
-               <lb facs="#zone_l_16"/><metamark function="intervention"><g ref="#intervention"/></metamark> <metamark function="deletion"><g ref="#deleatur"/></metamark>
+            <metamark xml:id="metamark-0581-0008" facs="#zone_r_30" function="deletion" target="#del-0581-0007">
+               <lb facs="#zone_l_16"/><g ref="#intervention"/> <g ref="#deleatur"/>
             </metamark>
          </div>
       </body>

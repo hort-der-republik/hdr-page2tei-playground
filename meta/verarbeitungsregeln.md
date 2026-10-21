@@ -32,24 +32,29 @@ Dies ist die lesbare Referenz für das, was das Stylesheet aktuell tut.
 
 ## 4. Zeilen-Zuordnung (welche TextRegion „besitzt“ eine Zeile)
 
+- Wenn eine Region das Attribut "fixed-lines" mit Wert "y" hat, bleiben die Zeilen in der Region dem aus dieser Region erstellten Element zugeordnet, im `<facsimile>` sowie im `<text>`. 
+
+In allen anderen Fällen gilt:
 - **Nicht** die PAGE-XML-Struktur wird vertraut (eine Zeile kann geometrisch in einer anderen Region liegen als der, in der sie in der Quelldatei steht).
 - **Regel:** jede Zeile gehört zur kleinsten Region, deren Bounding-Box den **Mittelpunkt** der Zeilen-Bounding-Box enthält.
   - Eine wörtliche 95-%-Flächenregel wurde getestet und verworfen: PAGE-Regionen sind oft schräge Polygone, deren eigene Bounding-Box dadurch aufgebläht ist. Bei kleinen Zeilen fiel das so stark ins Gewicht, dass zusammenhängender Fließtext auseinandergerissen wurde. Der Mittelpunkt-Test ist robust dagegen.
+- **Zusatzbedingung Polygon:** Eine Region, die nicht die strukturelle Elternregion der Zeile ist, zählt nur, wenn der Mittelpunkt auch im **echten Polygon** der Region liegt (nicht nur in ihrer Bounding-Box). Sonst „klaut“ eine Region mit gezackter/schräger Form, deren Bounding-Box viel zu groß ist, Zeilen aus ihrer Umgebung.
 - **Toleranz-Ausnahme:** liegt der Mittelpunkt nur knapp (höchstens 20 px, Parameter `lineAssignTolerance`) neben der Box der strukturellen Elternregion und würde die Zeile sonst einer **größeren** Region zufallen, bleibt sie bei ihrer Elternregion. Die Toleranz gilt nur für die Elternregion, nicht für beliebige Regionen.
 - Kein Treffer: Zeile bleibt bei ihrer strukturellen Elternregion aus der PAGE-XML.
 - **Reihenfolge** der Zeilen innerhalb einer Region: sortiert nach (Index der ursprünglichen/strukturellen Elternregion, dann eigener Zeilen-Index). Der Zeilen-Index in `@custom` ist nur pro Region relativ (fängt in jeder Region wieder bei 0 an), daher reicht er allein nicht als globaler Sortierschlüssel.
 - Für Zeilen selbst werden eigene `<zone>`-Elemente in `facsimile` angelegt, und zwar innerhalb der zone, der sie nach den Zeilenzuordnungsregeln zugeordnet werden.
 
-## 5. Regionstyp → TEI-Element (im Fließtext)
+
+## 5. Regionstyp → TEI-Element (in TEI/text/body)
 
 - `surface` → `<div>` (facs-Verweis auf die surface), äußerste mit `@type="base"`
-- `column-block` → immer `<div type="column-block">`
+- `column-block` → wird zu einem leeren tag **vor** den darin genesteten Regionen / Elementen, nämlich zu `<cb />`; es übernimmt den `block-extent`-Wert als TEI-Attribut `@n`.
 - `add-block` → immer `<div type="add-block">`
-- `head` (ohne Kind-Zonen) mit cat:main oder cat:sub  → `<head type="[cat-value]">`; mit cat:cross → `<p rendition="#crosshead">`
+- `head` (ohne Kind-Zonen) mit cat:main oder cat:sub  → `<head type="[cat-value]">`; mit cat:cross → `<p rendition="#crosshead">`; **alle** `rendition`-Werte der head-Region werden (jeweils mit "#") auf `<head>` bzw. `<p>` übernommen, bei cat:cross zusätzlich zu `#crosshead`
 - `annotation` **und** `metamark` → `<metamark>`, mit eigener xml:id (siehe Abschnitt 8)
 - `gap` → leeres `<gap/>` (kein Text-Inhalt; in den bisherigen Daten haben gap-Regionen ohnehin nie eigenen Text); Attribut `reason` inkl. Wert übernehmen
 - `add` → `<add>` (siehe unten)
-- `fw` → `<fw>`
+- `fw` → `<fw>`, der Wert von `cat` (z. B. `cat:fol`) wird als `@type` übernommen; innerhalb des `<div>`, dem es zugeordnet wird, steht es immer am **Anfang** (vor Text und den übrigen Kindern; mehrere `fw` untereinander in der bisherigen Reihenfolge)
 - `advertisement` → `<div type="advertisement">`
 - `long-quote-p` → tei:p in tei:quote; rendition wird bei p ergänzt (Attribut plus Wert mit vorangehendem "#");
 - `long-quote-lg` → tei:lg in tei:quote; rendition wird bei p ergänzt (Attribut plus Wert mit vorangehendem "#"). ACHTUNG: statt tei:lb werden hier öffnende/schließende tei:l verwendet. 
@@ -58,7 +63,8 @@ Dies ist die lesbare Referenz für das, was das Stylesheet aktuell tut.
 - `masthead` wird zu `<div type="masthead>`, darin die anderen Zonen genestet
 - alles andere (ohne Typangabe u. ä.) → `<p>`
 
-Zusätze:
+
+### Zusätze:
 
 - **Jede Zone MIT Kind-Zonen** wird zu `<div>` (auch wenn ihr eigener Typ sonst ein anderer wäre), sonst wäre Text direkt im div, was TEI nicht erlaubt; eigener Zeilentext (falls vorhanden) landet dann als `<p>` darin. AUSNAHME: wenn die Kind-Zone mit "long-quote" beginnt. Dann wird Zone selbst zu p, weil das verschachtelte quote darin in tei erlaubt ist.
 - **`add` (Regionstyp):** validiert **nicht** gegen TEI (add ist als phrasenwertiges/Inline-Element gedacht, nicht als Block-Kind eines div) – das ist bekannt und akzeptiert, wird manuell nachkorrigiert. Der Inhalt steht kompakt in einer Zeile (kein Umbruch/Einrückung direkt nach dem Start- bzw. vor dem Endtag), nur echte `<lb/>` bei mehreren TextLines bleiben erhalten.
@@ -67,13 +73,17 @@ Zusätze:
 
 **Geschwister-Regel:** TEI erlaubt in einem `<div>` **keine** Mischung von `<p>`/`<head>` und `<div>` als direkte Geschwister (Content-Model verlangt entweder nur divLike- oder nur Fließtext-Kinder). Kommen beide Arten unter demselben Elternteil vor, werden die `<p>`/`<head>`-Kinder zusätzlich in ein `<div>` gewickelt. `<metamark>`, `<gap>` und `<fw>` brauchen das nicht (dürfen direkt neben `<div>` stehen): `<fw>` wird also nie in ein eigenes `<div>` gewickelt.
 
+### metamark-shortcuts
+- `metamark-deleatur` bezeichnet die häufige Kombination aus Korrekturfähnchen + deleatur und wird zu `<metamark function="deletion">`, weitere Attribute werden wie gehabt übernommen: `@target`aus target, `@corresp`? aus corresp, id siehe unten; die Textzeile darin - wenn sie keinen Text enthält - kriegt automatisch diesen Inhalt: `<g ref="#intervention"/> <g ref="#deleatur"/>`
+
 ## 6. Transkribus-Relationen
 
-- Relationen vom Typ `article` oder `montage-element` gruppieren ihre Mitglieder (vom Regionstyp `paragraph`/`paragraph-*`/`long-quote-*`/`head`/`gap`; andere/ungültige Verweise werden stillschweigend ignoriert) zusätzlich in ein `<div type="article">` bzw. `<div type="montage-element">`, das an der Stelle des zuerst gelesenen Mitglieds im umgebenden div steht.
-- Die Relation `block-order` (verknüpft nur column-blocks) wird bewusst **nicht** verwendet – passt nicht ins Muster, wirkt wie reine Lesereihenfolge-Metadaten, die über den readingOrder-Index schon abgedeckt ist.
-- `multi-p-quote` – verbindet 2-n Regionen mit `long-quote` im Namen, die dann aber nicht in separate, sondern in ein gemeinsames `tei:quote` gepackt werden sollen. 
+- Relationen vom Typ `article` oder `montage-element` gruppieren ihre Mitglieder (vom Regionstyp `paragraph`/`paragraph-*`/`long-quote-*`/`head`/`gap`; andere/ungültige Verweise werden stillschweigend ignoriert) zusätzlich in ein `<div type="article">` bzw. `<div type="montage-element">`, das an der Stelle des zuerst gelesenen Mitglieds im umgebenden div steht. Die Relationen geben auch die Reihenfolge der verknüpften Elemente zueinander an.
+- Die Relation `block-order` (verknüpft nur column-blocks) gibt die Anordnung der column-block-Regionen an und legt fest, in welcher Reihenfolge deren Inhalte im TEI-XML angeordnet werden (column-block selbst wird ja nur zu einem `<cb n="..."/>`-tag, siehe oben).
+- `multi-p-quote` – verbindet 2-n Regionen mit `long-quote` im Namen, die dann aber nicht in separate, sondern in ein gemeinsames `tei:quote` gepackt werden sollen.
+- `paragraph` verbindet Regionen des Typ paragraph / paragraph-* / long-quote* / metamark, die nicht getrennt, sondern gemeinsam in ein `<p>`gepackt werden sollen - in der Reihenfolge wie durch die relation angegeben. Rendition der ersten paragraph / paragraph-* wird für den parent-p übernommen; andere renditions bei genesteten quote/p oder metamark werden wie gehabt behandelt.
 
-Achtung: Wenn sich `article` oder `montage-element`-Relationen über hierarchische Grenzen hinweg spannen – etwa `<div type="column-block">` – sie mit einer xml:id ausstatten sowie mit `@next`/`@prev`, wo die Elemente aufeinander verweisen.
+Achtung: Wenn sich `article` oder `montage-element`-Relationen über hierarchische Grenzen hinweg spannen – sie mit einer xml:id ausstatten sowie mit `@next`/`@prev`, wo die Elemente aufeinander verweisen.
 
 - `has-parent` – überschreibt die bisherige Zuordnung einer Region zu einer Elternregion (in body und in facsimile) und gibt stattdessen explizit an, in welche Region eine andere genestet werden soll (child > `has-parent` > parent)
 
@@ -100,6 +110,7 @@ Zeichenbasierte Blöcke in `@custom` von `<TextLine>` (offset/length relativ zum
 - `add` (mit place) → `<add place="...">`
 - `sic` (mit correction) → `<choice><sic>[Textknoten]</sic><corr>[Wert aus correction]</corr></choice>`
 - `metamark` (mit function) → `<metamark function="...">`
+
 - `head-run-in` → `<seg type="head-run-in">`
 - `unclear` (mit reason/cert) → `<unclear reason="..." cert="...">`
 
@@ -118,7 +129,7 @@ Wird zu zwei Elementen, die vor und nach dem Inhalt des Textknotens des ursprün
 
 ### `metamark-add` mit `add-id`
 
-→ `<metamark function="addition"/>` + `<add>`-Element. Das `add` wird aus der in `add-id` referenzierten Region `add` gebaut, wobei die Zeilen-`facs` und die Regions-`facs` mit übernommen werden.
+→ `<metamark function="addition"/>` + `<add>`-Element. Das `add` wird aus der in `add-id` referenzierten Region `add` gebaut, wobei die Zeilen-`facs` und die Regions-`facs` mit übernommen werden. Verweist `add-id` auf einen **Zeilen-`add`** (`add {offset:..; length:..; id:..}` in einer TextLine, keine Region), wird dessen Zeichenbereich an der Importstelle als `<add facs="#zone_[Quellzeile]">` ausgegeben und an seiner eigenen Stelle unterdrückt (gilt ebenso für `subst`/`subst-del` mit `add-id`).
 
 ### `metamark` mit `function="insertion"`
 
@@ -158,20 +169,23 @@ Wenn die del/add-Kinder eines `subst` nicht die ganze deklarierte subst-Spanne a
 
 ## 7a. Textstring-Transformationen
 
-### Metamarks
+### Metamark-Regionen plus Textstring-Kürzel
 
-Die beiden metamarks dürfen sich in ihrer function nicht widersprechen (sondern z. B. die eine hat keinen Wert).
-
-- `#del` → `<metamark function="deletion">`, darin ein `<g ref="#deleatur"/>` (die CharDecl dafür wird noch nachgereicht)
-- `#ker` → `<metamark function="kerning">`, darin ein `<g ref="#kerning"/>`
-- `#lSpc` → `<metamark function="line-spacing">`, darin ein `<g ref="#line-spacing"/>`
-- `#rel` → `<metamark function="relocation">`, darin ein `<g ref="#relocation"/>`
-- `#trans` → `<metamark function="transposition">`, darin ein `<g ref="#transposition"/>`
-- `|` → wenn es nicht onlychild eines als Textannotation angelegten metamark ist: `<metamark function="intervention">`, darin ein `<g ref="#intervention"/>`; ansonsten einfach nur `<g ref="#intervention"/>`.
+Die Metamark-Region enthält maximal einen pipe-Charakter mit  Leerzeichen danach und dann eines der folgenden Kürzel – pipe wird zu `<g ref="#intervention"/>`, das Kürzel wird folgendermaßen verarbeitet und hat folgenden EInfluss auf das aus der Region generierte `<metamark>`:
+- `#del` → Regionen-`<metamark>` wird `<metamark function="deletion">`, Kürzel selbst zu `<g ref="#deleatur"/>` (die CharDecl dafür wird noch nachgereicht)
+- `#ker` → Regionen-`<metamark>` wird `<metamark function="kerning">`, Kürzel selbst zu `<g ref="#kerning"/>`
+- `#lSpc`  → Regionen-`<metamark>` wird  `<metamark function="line-spacing">`, Kürzel selbst zu `<g ref="#line-spacing"/>`
+- `#rel` → Regionen-`<metamark>` wird `<metamark function="relocation">`, Kürzel selbst zu `<g ref="#relocation"/>`
+- `#trans` → Regionen-`<metamark>` wird `<metamark function="transposition">`, Kürzel selbst zu `<g ref="#transposition"/>`
+- `#spcIns` → Regionen-`<metamark>` wird  `<metamark function="space-insert">`, Kürzel selbst zu `<g ref="#space-insert"/>`
+- `|` → `<g ref="#intervention"/>`.
 
 ### Metamark-Grundregel
 
 Wenn eine metamark nichts als ein `lb` und eine weitere metamark enthält, und sich die beiden metamarks in ihren Attributwerten nicht widersprechen (sondern nur ergänzen), dann wird nur die äußere metamark gebaut, diese aber mit den Attributen von beiden ausgestattet. Das `lb` wird dann direkt vor das in der metamark gebildete `g` gesetzt.
+
+### gap aus `##``
+Wenn mehr als ein `#` aufeinanderfolgt, das nicht als gap annotiert ist, soll das automatisch als `<gap reason="illegible" extent="[Anzahl der #]"/>`ausgegeben werden.
 
 ## 8. Element-IDs
 

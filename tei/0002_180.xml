@@ -12,7 +12,7 @@
             <p>
               Quelle: 180.jpg.
               Erstellt: 2026-09-14T12:23:48.661+02:00,
-              zuletzt geaendert: 2026-10-19T10:31:57.670+02:00.
+              zuletzt geaendert: 2026-10-21T10:45:05.450+02:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -77,7 +77,7 @@
                      points="1296,1370 1357,1370 1357,1340 1296,1340"/>
             </zone>
             <zone xml:id="zone_r_14"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="406,1384 2329,1378 2329,2621 400,2621">
                <zone type="line"
                      xml:id="zone_tr_1_tl_17"
@@ -135,7 +135,7 @@
                      points="413,2640 1332,2620 1332,2534 1261,2569 1147,2534 986,2573 943,2546 413,2558"/>
             </zone>
             <zone xml:id="zone_r_15"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="398,2612 2329,2621 2329,3106 389,3106">
                <zone type="line"
                      xml:id="zone_tr_1_tl_60"
@@ -163,7 +163,7 @@
                      points="420,3096 515,3127 1261,3092 1261,3041 1230,3033 420,3037"/>
             </zone>
             <zone xml:id="zone_r_17"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="384,3096 2327,3106 2327,4072 389,4072">
                <zone type="line"
                      xml:id="zone_tr_1_tl_74"
@@ -209,7 +209,7 @@
                      points="424,4078 1583,4078 1583,4015 1473,3996 424,3996"/>
             </zone>
             <zone xml:id="zone_r_18"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="390,4085 2341,4067 2369,6139 436,6180">
                <zone type="line"
                      xml:id="zone_tr_1_tl_112"
@@ -306,7 +306,7 @@
                      points="440,6184 1285,6164 1285,6090 1261,6086 570,6121 444,6101"/>
             </zone>
             <zone xml:id="zone_r_19"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="432,6175 2369,6145 2387,6767 461,6809">
                <zone type="line"
                      xml:id="zone_tr_1_tl_211"
@@ -337,7 +337,7 @@
                      points="468,6836 621,6785 2290,6769 2342,6687 468,6726"/>
             </zone>
             <zone xml:id="zone_r_20"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="460,6797 2380,6766 2384,7058 477,7093">
                <zone type="line"
                      xml:id="zone_tr_1_tl_236"
@@ -387,13 +387,13 @@
                <zone type="line"
                      xml:id="zone_tr_1_tl_12"
                      points="2377,1293 3709,1269 3709,1206 3485,1171 2377,1222"/>
+            </zone>
+            <zone xml:id="zone_r_21"
+                  type="paragraph-indent"
+                  points="2357,1291 3425,1260 3659,1269 4250,1258 4246,2249 2357,2249">
                <zone type="line"
                      xml:id="zone_tr_1_tl_14"
                      points="2467,1355 3092,1359 3343,1304 4212,1332 4212,1265 3854,1222 3646,1281 2467,1281"/>
-            </zone>
-            <zone xml:id="zone_r_21"
-                  type="paragraph"
-                  points="2357,1291 3425,1260 3659,1269 4250,1258 4246,2249 2357,2249">
                <zone type="line"
                      xml:id="zone_tr_1_tl_16"
                      points="2377,1418 3115,1434 3442,1371 4208,1403 4208,1328 3347,1300 3241,1351 2943,1324 2652,1379 2377,1336"/>
@@ -466,7 +466,7 @@
                      points="3544,4773 3917,4773 3948,4746 4023,4762 4043,4742 4117,4773 4188,4758 4192,4675 4058,4671 4023,4703 3948,4679 3740,4703 3666,4675 3548,4675"/>
             </zone>
             <zone xml:id="zone_r_25"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="2366,4781 4326,4762 4345,5692 2384,5709">
                <zone type="line"
                      xml:id="zone_tr_1_tl_144"
@@ -512,7 +512,7 @@
                      points="2400,5705 3139,5740 3249,5677 3575,5716 3630,5669 4003,5748 4290,5708 4263,5598 2400,5622"/>
             </zone>
             <zone xml:id="zone_r_26"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="2383,5738 4341,5729 4342,6138 2383,6145">
                <zone type="line"
                      xml:id="zone_tr_1_tl_197"
@@ -531,7 +531,7 @@
                      points="2416,6145 2656,6117 2801,6160 2954,6121 3068,6160 3202,6105 3599,6141 3666,6101 3752,6152 3795,6137 3799,6042 2416,6058"/>
             </zone>
             <zone xml:id="zone_r_27"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="2396,6155 4342,6160 4363,7027 2421,7052">
                <zone type="line"
                      xml:id="zone_tr_1_tl_212"
@@ -590,26 +590,26 @@
                <zone type="line"
                      xml:id="zone_tr_1_tl_50"
                      points="4993,2369 5143,2369 5158,2385 5257,2349 5390,2373 5418,2353 5512,2353 5512,2294 5367,2314 5300,2290 5249,2306 5229,2287 4993,2314"/>
+            </zone>
+            <zone xml:id="zone_r_28"
+                  type="paragraph-indent"
+                  points="4287,2379 6283,2343 6290,2603 4299,2638">
                <zone type="line"
                      xml:id="zone_tr_1_tl_52"
                      points="4408,2448 6176,2420 6203,2306 5158,2385 4408,2369"/>
-            </zone>
-            <zone xml:id="zone_r_28"
-                  type="paragraph"
-                  points="4287,2379 6283,2343 6290,2603 4299,2638">
                <zone type="line"
                      xml:id="zone_tr_1_tl_54"
                      points="4384,2526 6200,2471 6200,2416 4384,2440"/>
                <zone type="line"
                      xml:id="zone_tr_1_tl_56"
                      points="4381,2581 5630,2550 5787,2613 6211,2554 6184,2467 4381,2526"/>
-            </zone>
-            <zone xml:id="zone_r_29"
-                  type="paragraph"
-                  points="4301,2633 6287,2603 6288,2725 4301,2761">
                <zone type="line"
                      xml:id="zone_tr_1_tl_58"
                      points="4357,2656 5488,2617 5461,2550 4361,2589"/>
+            </zone>
+            <zone xml:id="zone_r_29"
+                  type="paragraph-indent"
+                  points="4301,2633 6287,2603 6288,2725 4301,2761">
                <zone type="line"
                      xml:id="zone_tr_1_tl_59"
                      points="4416,2707 6050,2703 6200,2668 6203,2597 5987,2558 5775,2617 4416,2632"/>
@@ -618,7 +618,7 @@
                      points="4369,2758 4388,2758 4408,2778 4447,2762 4546,2778 4577,2754 4604,2766 4644,2758 4648,2687 4593,2699 4573,2691 4549,2703 4455,2707 4447,2699 4432,2707 4416,2695 4369,2707"/>
             </zone>
             <zone xml:id="zone_r_30"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="4302,2763 6288,2729 6291,2892 4302,2917">
                <zone type="line"
                      xml:id="zone_tr_1_tl_63"
@@ -636,13 +636,13 @@
                <zone type="line"
                      xml:id="zone_tr_1_tl_71"
                      points="4777,3092 4899,3147 4978,3100 5178,3123 5441,3060 5602,3143 5787,3076 5917,3096 5921,2978 5320,2974 5217,3013 4919,2974 4856,3029 4781,3017"/>
-               <zone type="line"
-                     xml:id="zone_l_56"
-                     points="4569,2943 4911,2939 4935,2958 5013,2939 5041,2962 5213,2947 5213,2899 5170,2884 5143,2907 5123,2888 5021,2915 4569,2899"/>
             </zone>
             <zone xml:id="zone_r_5"
-                  type="paragraph"
+                  type="paragraph-indent"
                   points="4305,3133 6289,3127 6290,3976 4325,4010">
+               <zone type="line"
+                     xml:id="zone_l"
+                     points="4432,3261 5889,3273 6117,3214 6215,3249 6219,3131 5378,3194 5072,3194 4758,3112 4436,3139"/>
                <zone type="line"
                      xml:id="zone_l_62"
                      points="4337,3328 4384,3336 4443,3308 4498,3328 4514,3312 4628,3324 4663,3308 4781,3328 4805,3304 4852,3308 4852,3253 4825,3249 4675,3261 4573,3241 4510,3265 4483,3245 4455,3265 4432,3241 4408,3261 4337,3249"/>
@@ -719,8 +719,15 @@
                      points="4593,4290 5217,4263 5422,4318 5465,4282 6015,4274 6015,4188 4593,4200"/>
             </zone>
             <zone xml:id="zone_r_34"
+                  type="head"
+                  points="4331,4524 6292,4515 6285,4601 4316,4607">
+               <zone type="line"
+                     xml:id="zone_l_92"
+                     points="4725,4585 5903,4576 5903,4546 4725,4555"/>
+            </zone>
+            <zone xml:id="zone_r_43"
                   type="paragraph"
-                  points="4331,4524 6292,4515 6292,5130 4345,5130">
+                  points="4329,4611 6295,4611 6295,5130 4329,5130">
                <zone type="line"
                      xml:id="zone_l_78"
                      points="4408,4671 5414,4648 5414,4601 5312,4620 5276,4593 4616,4624 4408,4597"/>
@@ -832,11 +839,11 @@
                type="metamark"
                points="4584,2789 5752,2808 5699,3246 4584,3246">
             <zone type="line"
+                  xml:id="zone_l_56"
+                  points="4569,2943 4911,2939 4935,2958 5013,2939 5041,2962 5213,2947 5213,2899 5170,2884 5143,2907 5123,2888 5021,2915 4569,2899"/>
+            <zone type="line"
                   xml:id="zone_l_57"
                   points="4703,3131 4754,3112 4864,3163 4950,3135 5064,3190 5257,3159 5367,3198 5610,3186 5602,3096 5508,3108 5445,3064 5174,3119 5139,3088 4954,3100 4911,3060 4793,3080 4695,3009"/>
-            <zone type="line"
-                  xml:id="zone_l"
-                  points="4432,3261 5889,3273 6117,3214 6215,3249 6219,3131 5378,3194 5072,3194 4758,3112 4436,3139"/>
          </zone>
          <zone xml:id="zone_r_40"
                type="column-block"
@@ -1184,324 +1191,321 @@
    <text>
       <body>
          <div facs="#surface_r_11" type="base">
+            <fw facs="#zone_r_6" type="fol">
+               <lb facs="#zone_l_59"/>89
+            </fw>
             <div facs="#zone_r_1" type="add-block">
                <metamark xml:id="metamark-0180-0001" facs="#zone_r_41" function="font">
-                  <lb facs="#zone_l_58"/><hi style="underline">col</hi>
+                  <lb facs="#zone_l_58"/><hi rend="underline">col</hi>
                </metamark>
                <p facs="#zone_r_42">
                   <lb facs="#zone_tr_1_tl_1"/>Berliner Tageblatt, 31. Juli:
                </p>
             </div>
-            <div facs="#zone_r_37" type="column-block">
-               <div xml:id="div-0180-0001" type="article" next="#div-0180-0002">
-                  <head facs="#zone_tr_1">
-                     <lb facs="#zone_tr_1_tl_4"/><delSpan spanTo="#delSpan-0180-0001"/>Die Wiener Polizei in den Aufruhrtagen.
-                  </head>
-                  <head facs="#zone_r_12">
-                     <lb facs="#zone_tr_1_tl_6"/>Urteil eines süddeutschen Fachmanns. — Die Toten Opfer
-                     <lb facs="#zone_tr_1_tl_9"/>schlechter Organisation.<anchor xml:id="delSpan-0180-0001"/>
-                  </head>
-                  <p facs="#zone_r_13">
-                     <lb facs="#zone_tr_1_tl_11"/>Von einem <hi style="letter-spacing"><mod style="underline">süddeutschen Polizeifachmann</mod>,</hi> der die
-                     <lb facs="#zone_tr_1_tl_13"/>Wiener Verhältnisse aus eigener Anschauung kennt, wird uns ge
-                     <lb facs="#zone_tr_1_tl_15"/>schrieben:
-                     <lb facs="#zone_l_90"/><add xml:id="add-0180-0002">..</add>
-                  </p>
-                  <p facs="#zone_r_14">
-                     <lb facs="#zone_tr_1_tl_17"/>„Die Toten von Wien<subst><del>, man zählte bis jetzt über hundert,</del><!-- unresolved add-id: 1 (keine Region mit dieser Behelfs-ID im Export) --></subst>
-                     <lb facs="#zone_tr_1_tl_19"/>sind in erster Linie die Opfer einer <hi style="letter-spacing"><mod style="underline">mangelhaften Polizei¬</mod></hi>
-                     <lb facs="#zone_tr_1_tl_21"/><mod style="underline"><hi style="letter-spacing">organisation</hi>.</mod> Die Wiener Tage haben bewiesen, daß die
-                     <lb facs="#zone_tr_1_tl_24"/>Polizei der österreichischen Hauptstadt zu den <hi style="letter-spacing"><mod style="underline">mittelalter</mod></hi>
-                     <lb facs="#zone_tr_1_tl_28"/><hi style="letter-spacing"><mod style="underline">lichsten Einrichtungen</mod></hi> gehört. <del>.</del> . Der international
-                     <lb facs="#zone_tr_1_tl_30"/><hi style="letter-spacing">Polizeikongreß,</hi> der vor einigen Jahren in Wien abgehalten
-                     <lb facs="#zone_tr_1_tl_34"/>wurde, und der die modernsten Polizeimänner Europas in Wien
-                     <lb facs="#zone_tr_1_tl_36"/>sah, ist praktisch für Wien ohne Bedeutung geblieben.<add place="inline"> . .</add> <del type="deselection">Damals
-                     <lb facs="#zone_tr_1_tl_39"/>schon wies in einer vertraulichen Unterredung mit dem Polizei¬</del>
-                     <lb facs="#zone_tr_1_tl_41"/><del type="deselection">präsidenten <hi style="letter-spacing">Schober</hi> einer der führenden Polizeimänner Deutsch</del>
-                     <lb facs="#zone_tr_1_tl_43"/><del type="deselection">lands auf die <hi style="letter-spacing">mangelhafte Organisation der Wiene</hi></del>
-                     <lb facs="#zone_tr_1_tl_45"/><del type="deselection"><hi style="letter-spacing">Polizei</hi> hin. Der Präsident erwiderte dem Gast, daß er die</del>
-                     <lb facs="#zone_tr_1_tl_47"/><del type="deselection">Mängel der Polizei wohl erkenne, daß sie aber nicht abzustellen
-                     <lb facs="#zone_tr_1_tl_49"/>seien, weil sie ihren Grund in den österreichischen Gesetzen haben</del>
-                     <lb facs="#zone_tr_1_tl_51"/><del type="deselection">Der Polizeipräsident von Wien sei als Instanz dem <hi style="letter-spacing">Landes</hi></del>
-                     <lb facs="#zone_tr_1_tl_53"/><del type="deselection"><hi style="letter-spacing">hauptmann</hi> untergeordnet, Landeshauptmann sei aber in Wien</del>
-                     <lb facs="#zone_tr_1_tl_55"/><del type="deselection">der <hi style="letter-spacing">Bürgermeister</hi>. Jede schnelle Entschließung sei also durch</del>
-                     <lb facs="#zone_tr_1_tl_57"/><del type="deselection">Kompetenzerwägungen erschwert.</del>
-                  </p>
-                  <p facs="#zone_r_15">
-                     <lb facs="#zone_tr_1_tl_60"/>Die Wiener Vorgänge aber haben bewiesen, daß der Grund für
-                     <lb facs="#zone_tr_1_tl_61"/>das Versagen der Polizei, denn es war <hi style="letter-spacing"><mod style="underline">ein Versagen auf der</mod></hi>
-                     <lb facs="#zone_tr_1_tl_64"/><hi style="letter-spacing"><mod style="underline">ganzen Linie</mod>,</hi> nicht in der gesetzmäßigen Verteilung der Macht
-                     <lb facs="#zone_tr_1_tl_65"/>befugnisse, sondern in dem Fehlen einer auf die Bedürfnisse einer
-                     <lb facs="#zone_l_91"/><add xml:id="add-0180-0003" place="above">. .</add>
-                     <lb facs="#zone_tr_1_tl_67"/>Großstadt zugeschnittenen Organisation liegt.<metamark function="add" target="#add-0180-0003"><g ref="#intervention"/></metamark> <del type="deselection">Hoffentlich ent¬</del>
-                     <lb facs="#zone_tr_1_tl_70"/><del type="deselection">schließt man sich jetzt dazu, die <hi style="letter-spacing">schweren Versäumnisse</hi> der</del>
-                     <lb facs="#zone_tr_1_tl_72"/><del type="deselection">Vergangenheit wettzumachen.</del>
-                  </p>
-                  <p facs="#zone_r_17">
-                     <lb facs="#zone_tr_1_tl_74"/>Die Mängel sind augenfällig. <add place="below">– – </add><del type="deselection">Erstens einmal fehlt es in Wien
-                     <lb facs="#zone_tr_1_tl_75"/>um bei der äußeren Organisation zu beginnen, an jeder Möglichkeit
-                     <lb facs="#zone_tr_1_tl_77"/>moderner Nachrichtenübermittlung. Man wird ant
-                     <lb facs="#zone_tr_1_tl_80"/>worten, auch Wien hat Telephonanlagen. Das ist richtig, aber die
-                     <lb facs="#zone_tr_1_tl_82"/>Polizei in Wien hat nicht ihre eigene, von jedem anderen
-                     <lb facs="#zone_tr_1_tl_85"/>Verkehr unabhängige Telephonanlage. In dem Moment also, in
-                     <lb facs="#zone_tr_1_tl_88"/>dem der Streik in Wien ausbrach, in dem das allgemeine öffentlich
-                     <lb facs="#zone_tr_1_tl_92"/>Telephon brachgelegt war, in diesem kritischsten Momen
-                     <lb facs="#zone_tr_1_tl_96"/>war auch die Polizei ohne Telephon. Die Stadt wäre ihr, auch wenn
-                     <lb facs="#zone_tr_1_tl_99"/>sie bis zu diesem Augenblick die Macht gehabt hätte, aus der Han¬
-                     <lb facs="#zone_tr_1_tl_103"/>geglitten. Leider war die Polizei schon vorher nicht mehr Herr
-                     <lb facs="#zone_tr_1_tl_106"/>der Verhältnisse. Ihre Unbrauchbarkeit hatte sich schon in der
-                     <lb facs="#zone_tr_1_tl_108"/>Morgenstunde von 8 bis 9 Uhr erwiesen, als es ihr nicht gelang
-                     <lb facs="#zone_tr_1_tl_110"/>die ersten Gewalttätigkeiten zu verhindern.</del>
-                  </p>
-                  <p facs="#zone_r_18">
-                     <lb facs="#zone_tr_1_tl_112"/>Alle europäischen Hauptstädte, die sich in Zeiten der Gefahr nicht
-                     <lb facs="#zone_tr_1_tl_115"/>auf das Militär verlassen, haben ihre besonderen Organisationen, die
-                     <lb facs="#zone_tr_1_tl_116"/>auf die Kontrolle großer Massenbewegungen abgestimmt sind. Der
-                     <lb facs="#zone_tr_1_tl_119"/>leitende Gedanke dabei ist: Möglichst wenig Blut ver¬
-                     <lb facs="#zone_tr_1_tl_121"/>gießen. Dieser Ueberlegung aber kann nur auf folgende Weise
-                     <lb facs="#zone_tr_1_tl_123"/>gedient werden: <del type="deselection">Die Polizei muß ein eigenes Nachrichtennet
-                     <lb facs="#zone_tr_1_tl_127"/>haben, das über die ganze Stadt gespannt ist. An kritischen Tagen
-                     <lb facs="#zone_tr_1_tl_130"/>ist dazu noch ein besonderer Postendienst einzurichten, der eben¬
-                     <lb facs="#zone_tr_1_tl_133"/>falls zur Unterstützung der Nachrichtenübermittelung und dazu ver
-                     <lb facs="#zone_tr_1_tl_136"/>wendet wird, die Menge dauernd in Fluß zu halten. Selbst wenn
-                     <lb facs="#zone_tr_1_tl_142"/>dieser besondere Postendienst versagt, ist die Nachrichten
-                     <lb facs="#zone_tr_1_tl_148"/>zentrale der großstädtischen Polizei spätestens zehn Minuten nach
-                     <lb facs="#zone_tr_1_tl_155"/>einem Zwischenfall benachrichtigt. Nun erst beginnt der eigentlich
-                     <lb facs="#zone_tr_1_tl_161"/>Apparat zu spielen. Die Nachrichtenstelle/leitet die Nachricht sofort
-                     <lb facs="#zone_tr_1_tl_165"/>zum Kommandeur und zu den ständig sich an solchen Tagen in
-                     <lb facs="#zone_tr_1_tl_168"/>erhöhter Alarmbereitſchaft befindenden Mannſchaftsquartier
-                     <lb facs="#zone_tr_1_tl_171"/>ren. Der Kommandeur dirigiert seine sofort zum Ausrücken
-                     <lb facs="#zone_tr_1_tl_173"/>bereiten Kadres an den Tatort. Auf äußerst schnellen Automobilen
-                     <lb facs="#zone_tr_1_tl_178"/>gelangt die betreffende Truppe zum Tatort. Die Mannschaften sind
-                     <lb facs="#zone_tr_1_tl_182"/>besonders auf das Zügeln von Massenbewegungen eingeübt, und
-                     <lb facs="#zone_tr_1_tl_185"/>der Leiter dieser Abteilungen hat nur zu entscheiden, in welchen
-                     <lb facs="#zone_tr_1_tl_187"/>Weise zugefaßt werden soll. Nur in den allergefährlichsten
-                     <lb facs="#zone_tr_1_tl_189"/>Situationen wird von der Waffe Gebrauch gemacht. Dann aber
-                     <lb facs="#zone_tr_1_tl_191"/>wenn es nötig ist, scheut man ein „frisches Zupacken“ nicht. Ein
-                     <lb facs="#zone_tr_1_tl_194"/>oder zwei Todesopfer, die es in den verzweifeltesten
-                     <lb facs="#zone_tr_1_tl_196"/>Fällen gibt, werden reichlich aufgewogen durch die zahllosen
-                     <lb facs="#zone_tr_1_tl_198"/>Menschenleben, die gerüttet werden.</del> Weil man in Wien
-                     <lb facs="#zone_tr_1_tl_201"/>eine solche Organisation nicht kannte, eine Organisation, die sich
-                     <lb facs="#zone_tr_1_tl_204"/>des hochwertigsten technischen Materials und der hochwertigsten
-                     <lb facs="#zone_tr_1_tl_207"/>Beamten bedient, darum hat man jetzt die hundert
-                     <lb facs="#zone_tr_1_tl_209"/>Todesopfer zu beklagen.
-                  </p>
-                  <p facs="#zone_r_19">
-                     <lb facs="#zone_tr_1_tl_211"/>Daß man in Wien über alle organisatorischen Fehler hinaus auch
-                     <lb facs="#zone_tr_1_tl_214"/>noch die Polizei mit sogenannter Uebungsmunition versorgte
-                     <lb facs="#zone_tr_1_tl_217"/>die eine dumdumgeschoßähnliche Wirkung hatte
-                     <lb facs="#zone_tr_1_tl_219"/>das spielt bei dieser Erörterung nur noch eine untergeordnete Rolle
-                     <lb facs="#zone_tr_1_tl_222"/>(Man kann dazu nur noch bemerken, daß man in Deutschlan
-                     <lb facs="#zone_tr_1_tl_225"/>diese Art von Halbmantelgeschossen überhaupt nich
-                     <lb facs="#zone_tr_1_tl_228"/>kennt und gebraucht. Die deutsche Polizei hat nur scharf¬
-                     <lb facs="#zone_tr_1_tl_230"/>Munition in Gebrauch. Zu Uebungszwecken wird ebenfalls die
-                     <lb facs="#zone_tr_1_tl_233"/>scharfe oder eine vollkommen leere Munition gebraucht.
-                  </p>
-                  <p facs="#zone_r_20" part="I">
-                     <lb facs="#zone_tr_1_tl_236"/>Soll ein moderner Polizeiapparat, wie er oben beschrieben
-                     <lb facs="#zone_tr_1_tl_238"/>wurde, auch wirklich funttioneren, so ist notwendig, daß
-                     <lb facs="#zone_tr_1_tl_241"/>die in den hohen Alarmzeiten in Aktion tretende
-                     <lb facs="#zone_l_60"/>Polizeitruppe eine andere ist als diejenige, die
-                  </p>
-               </div>
+            <cb facs="#zone_r_37" n="1/3"/>
+            <div xml:id="div-0180-0001" type="article" next="#div-0180-0002">
+               <head facs="#zone_tr_1" type="main" rendition="#center #large #bold">
+                  <lb facs="#zone_tr_1_tl_4"/><delSpan spanTo="#delSpan-0180-0001"/>Die Wiener Polizei in den Aufruhrtagen.
+               </head>
+               <head facs="#zone_r_12" type="sub" rendition="#bold #center">
+                  <lb facs="#zone_tr_1_tl_6"/>Urteil eines süddeutschen Fachmanns. — Die Toten Opfer
+                  <lb facs="#zone_tr_1_tl_9"/>schlechter Organisation.<anchor xml:id="delSpan-0180-0001"/>
+               </head>
+               <p facs="#zone_r_13" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_11"/>Von einem <hi rend="letter-spacing"><mod rend="underline">süddeutschen Polizeifachmann</mod>,</hi> der die
+                  <lb facs="#zone_tr_1_tl_13"/>Wiener Verhältnisse aus eigener Anschauung kennt, wird uns ge
+                  <lb facs="#zone_tr_1_tl_15"/>schrieben:
+                  <lb facs="#zone_l_90"/>
+               </p>
+               <p facs="#zone_r_14" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_17"/>„Die Toten von Wien<subst><del>, man zählte bis jetzt über hundert,</del><add facs="#zone_l_90" xml:id="add-0180-0002">..</add></subst>
+                  <lb facs="#zone_tr_1_tl_19"/>sind in erster Linie die Opfer einer <hi rend="letter-spacing"><mod rend="underline">mangelhaften Polizei¬</mod></hi>
+                  <lb facs="#zone_tr_1_tl_21"/><mod rend="underline"><hi rend="letter-spacing">organisation</hi>.</mod> Die Wiener Tage haben bewiesen, daß die
+                  <lb facs="#zone_tr_1_tl_24"/>Polizei der österreichischen Hauptstadt zu den <hi rend="letter-spacing"><mod rend="underline">mittelalter</mod></hi>
+                  <lb facs="#zone_tr_1_tl_28"/><hi rend="letter-spacing"><mod rend="underline">lichsten Einrichtungen</mod></hi> gehört. <del>.</del> . Der international
+                  <lb facs="#zone_tr_1_tl_30"/><hi rend="letter-spacing">Polizeikongreß,</hi> der vor einigen Jahren in Wien abgehalten
+                  <lb facs="#zone_tr_1_tl_34"/>wurde, und der die modernsten Polizeimänner Europas in Wien
+                  <lb facs="#zone_tr_1_tl_36"/>sah, ist praktisch für Wien ohne Bedeutung geblieben.<add place="inline"> . .</add> <del type="deselection">Damals
+                  <lb facs="#zone_tr_1_tl_39"/>schon wies in einer vertraulichen Unterredung mit dem Polizei¬</del>
+                  <lb facs="#zone_tr_1_tl_41"/><del type="deselection">präsidenten <hi rend="letter-spacing">Schober</hi> einer der führenden Polizeimänner Deutsch</del>
+                  <lb facs="#zone_tr_1_tl_43"/><del type="deselection">lands auf die <hi rend="letter-spacing">mangelhafte Organisation der Wiene</hi></del>
+                  <lb facs="#zone_tr_1_tl_45"/><del type="deselection"><hi rend="letter-spacing">Polizei</hi> hin. Der Präsident erwiderte dem Gast, daß er die</del>
+                  <lb facs="#zone_tr_1_tl_47"/><del type="deselection">Mängel der Polizei wohl erkenne, daß sie aber nicht abzustellen
+                  <lb facs="#zone_tr_1_tl_49"/>seien, weil sie ihren Grund in den österreichischen Gesetzen haben</del>
+                  <lb facs="#zone_tr_1_tl_51"/><del type="deselection">Der Polizeipräsident von Wien sei als Instanz dem <hi rend="letter-spacing">Landes</hi></del>
+                  <lb facs="#zone_tr_1_tl_53"/><del type="deselection"><hi rend="letter-spacing">hauptmann</hi> untergeordnet, Landeshauptmann sei aber in Wien</del>
+                  <lb facs="#zone_tr_1_tl_55"/><del type="deselection">der <hi rend="letter-spacing">Bürgermeister</hi>. Jede schnelle Entschließung sei also durch</del>
+                  <lb facs="#zone_tr_1_tl_57"/><del type="deselection">Kompetenzerwägungen erschwert.</del>
+               </p>
+               <p facs="#zone_r_15" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_60"/>Die Wiener Vorgänge aber haben bewiesen, daß der Grund für
+                  <lb facs="#zone_tr_1_tl_61"/>das Versagen der Polizei, denn es war <hi rend="letter-spacing"><mod rend="underline">ein Versagen auf der</mod></hi>
+                  <lb facs="#zone_tr_1_tl_64"/><hi rend="letter-spacing"><mod rend="underline">ganzen Linie</mod>,</hi> nicht in der gesetzmäßigen Verteilung der Macht
+                  <lb facs="#zone_tr_1_tl_65"/>befugnisse, sondern in dem Fehlen einer auf die Bedürfnisse einer
+                  <lb facs="#zone_l_91"/><add xml:id="add-0180-0003" place="above">. .</add>
+                  <lb facs="#zone_tr_1_tl_67"/>Großstadt zugeschnittenen Organisation liegt.<metamark function="add" target="#add-0180-0003"><g ref="#intervention"/></metamark> <del type="deselection">Hoffentlich ent¬</del>
+                  <lb facs="#zone_tr_1_tl_70"/><del type="deselection">schließt man sich jetzt dazu, die <hi rend="letter-spacing">schweren Versäumnisse</hi> der</del>
+                  <lb facs="#zone_tr_1_tl_72"/><del type="deselection">Vergangenheit wettzumachen.</del>
+               </p>
+               <p facs="#zone_r_17" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_74"/>Die Mängel sind augenfällig. <add place="below">– – </add><del type="deselection">Erstens einmal fehlt es in Wien
+                  <lb facs="#zone_tr_1_tl_75"/>um bei der äußeren Organisation zu beginnen, an jeder Möglichkeit
+                  <lb facs="#zone_tr_1_tl_77"/>moderner Nachrichtenübermittlung. Man wird ant
+                  <lb facs="#zone_tr_1_tl_80"/>worten, auch Wien hat Telephonanlagen. Das ist richtig, aber die
+                  <lb facs="#zone_tr_1_tl_82"/>Polizei in Wien hat nicht ihre eigene, von jedem anderen
+                  <lb facs="#zone_tr_1_tl_85"/>Verkehr unabhängige Telephonanlage. In dem Moment also, in
+                  <lb facs="#zone_tr_1_tl_88"/>dem der Streik in Wien ausbrach, in dem das allgemeine öffentlich
+                  <lb facs="#zone_tr_1_tl_92"/>Telephon brachgelegt war, in diesem kritischsten Momen
+                  <lb facs="#zone_tr_1_tl_96"/>war auch die Polizei ohne Telephon. Die Stadt wäre ihr, auch wenn
+                  <lb facs="#zone_tr_1_tl_99"/>sie bis zu diesem Augenblick die Macht gehabt hätte, aus der Han¬
+                  <lb facs="#zone_tr_1_tl_103"/>geglitten. Leider war die Polizei schon vorher nicht mehr Herr
+                  <lb facs="#zone_tr_1_tl_106"/>der Verhältnisse. Ihre Unbrauchbarkeit hatte sich schon in der
+                  <lb facs="#zone_tr_1_tl_108"/>Morgenstunde von 8 bis 9 Uhr erwiesen, als es ihr nicht gelang
+                  <lb facs="#zone_tr_1_tl_110"/>die ersten Gewalttätigkeiten zu verhindern.</del>
+               </p>
+               <p facs="#zone_r_18" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_112"/>Alle europäischen Hauptstädte, die sich in Zeiten der Gefahr nicht
+                  <lb facs="#zone_tr_1_tl_115"/>auf das Militär verlassen, haben ihre besonderen Organisationen, die
+                  <lb facs="#zone_tr_1_tl_116"/>auf die Kontrolle großer Massenbewegungen abgestimmt sind. Der
+                  <lb facs="#zone_tr_1_tl_119"/>leitende Gedanke dabei ist: Möglichst wenig Blut ver¬
+                  <lb facs="#zone_tr_1_tl_121"/>gießen. Dieser Ueberlegung aber kann nur auf folgende Weise
+                  <lb facs="#zone_tr_1_tl_123"/>gedient werden: <del type="deselection">Die Polizei muß ein eigenes Nachrichtennet
+                  <lb facs="#zone_tr_1_tl_127"/>haben, das über die ganze Stadt gespannt ist. An kritischen Tagen
+                  <lb facs="#zone_tr_1_tl_130"/>ist dazu noch ein besonderer Postendienst einzurichten, der eben¬
+                  <lb facs="#zone_tr_1_tl_133"/>falls zur Unterstützung der Nachrichtenübermittelung und dazu ver
+                  <lb facs="#zone_tr_1_tl_136"/>wendet wird, die Menge dauernd in Fluß zu halten. Selbst wenn
+                  <lb facs="#zone_tr_1_tl_142"/>dieser besondere Postendienst versagt, ist die Nachrichten
+                  <lb facs="#zone_tr_1_tl_148"/>zentrale der großstädtischen Polizei spätestens zehn Minuten nach
+                  <lb facs="#zone_tr_1_tl_155"/>einem Zwischenfall benachrichtigt. Nun erst beginnt der eigentlich
+                  <lb facs="#zone_tr_1_tl_161"/>Apparat zu spielen. Die Nachrichtenstelle/leitet die Nachricht sofort
+                  <lb facs="#zone_tr_1_tl_165"/>zum Kommandeur und zu den ständig sich an solchen Tagen in
+                  <lb facs="#zone_tr_1_tl_168"/>erhöhter Alarmbereitſchaft befindenden Mannſchaftsquartier
+                  <lb facs="#zone_tr_1_tl_171"/>ren. Der Kommandeur dirigiert seine sofort zum Ausrücken
+                  <lb facs="#zone_tr_1_tl_173"/>bereiten Kadres an den Tatort. Auf äußerst schnellen Automobilen
+                  <lb facs="#zone_tr_1_tl_178"/>gelangt die betreffende Truppe zum Tatort. Die Mannschaften sind
+                  <lb facs="#zone_tr_1_tl_182"/>besonders auf das Zügeln von Massenbewegungen eingeübt, und
+                  <lb facs="#zone_tr_1_tl_185"/>der Leiter dieser Abteilungen hat nur zu entscheiden, in welchen
+                  <lb facs="#zone_tr_1_tl_187"/>Weise zugefaßt werden soll. Nur in den allergefährlichsten
+                  <lb facs="#zone_tr_1_tl_189"/>Situationen wird von der Waffe Gebrauch gemacht. Dann aber
+                  <lb facs="#zone_tr_1_tl_191"/>wenn es nötig ist, scheut man ein „frisches Zupacken“ nicht. Ein
+                  <lb facs="#zone_tr_1_tl_194"/>oder zwei Todesopfer, die es in den verzweifeltesten
+                  <lb facs="#zone_tr_1_tl_196"/>Fällen gibt, werden reichlich aufgewogen durch die zahllosen
+                  <lb facs="#zone_tr_1_tl_198"/>Menschenleben, die gerüttet werden.</del> Weil man in Wien
+                  <lb facs="#zone_tr_1_tl_201"/>eine solche Organisation nicht kannte, eine Organisation, die sich
+                  <lb facs="#zone_tr_1_tl_204"/>des hochwertigsten technischen Materials und der hochwertigsten
+                  <lb facs="#zone_tr_1_tl_207"/>Beamten bedient, darum hat man jetzt die hundert
+                  <lb facs="#zone_tr_1_tl_209"/>Todesopfer zu beklagen.
+               </p>
+               <p facs="#zone_r_19" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_211"/>Daß man in Wien über alle organisatorischen Fehler hinaus auch
+                  <lb facs="#zone_tr_1_tl_214"/>noch die Polizei mit sogenannter Uebungsmunition versorgte
+                  <lb facs="#zone_tr_1_tl_217"/>die eine dumdumgeschoßähnliche Wirkung hatte
+                  <lb facs="#zone_tr_1_tl_219"/>das spielt bei dieser Erörterung nur noch eine untergeordnete Rolle
+                  <lb facs="#zone_tr_1_tl_222"/>(Man kann dazu nur noch bemerken, daß man in Deutschlan
+                  <lb facs="#zone_tr_1_tl_225"/>diese Art von Halbmantelgeschossen überhaupt nich
+                  <lb facs="#zone_tr_1_tl_228"/>kennt und gebraucht. Die deutsche Polizei hat nur scharf¬
+                  <lb facs="#zone_tr_1_tl_230"/>Munition in Gebrauch. Zu Uebungszwecken wird ebenfalls die
+                  <lb facs="#zone_tr_1_tl_233"/>scharfe oder eine vollkommen leere Munition gebraucht.
+               </p>
+               <p facs="#zone_r_20" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_236"/>Soll ein moderner Polizeiapparat, wie er oben beschrieben
+                  <lb facs="#zone_tr_1_tl_238"/>wurde, auch wirklich funttioneren, so ist notwendig, daß
+                  <lb facs="#zone_tr_1_tl_241"/>die in den hohen Alarmzeiten in Aktion tretende
+                  <lb facs="#zone_l_60"/>Polizeitruppe eine andere ist als diejenige, die
+               </p>
             </div>
-            <div facs="#zone_r_38" type="column-block">
-               <div xml:id="div-0180-0002" type="article" prev="#div-0180-0001">
-                  <p facs="#zone_r" part="F">
-                     <lb facs="#zone_tr_1_tl_2"/>den gewöhnlichen, den Publikumsdienst, ausübt.<metamark function="addition"/><add facs="#zone_r_2" xml:id="add-0180-0001"><lb facs="#zone_l_89"/>– –</add>
-                     <lb facs="#zone_tr_1_tl_3"/><del type="deselection">Diese Polizeitruppe muß von einer einheitlichen Staatsidee
-                     <lb facs="#zone_tr_1_tl_5"/>beseelt und scharf diszipliniert sein. An dieser besonderen Truppe, die
-                     <lb facs="#zone_tr_1_tl_7"/>in Fällen von ernsten Zusammenstößen einzusetzen ist, fehlt es in Wien,
-                     <lb facs="#zone_tr_1_tl_8"/>und das ist der eigentliche Grund, warum die anfangs
-                     <lb facs="#zone_tr_1_tl_10"/>harmlose Demonstration solche Dimensionen annehmen konnte und
-                     <lb facs="#zone_tr_1_tl_12"/>warum die Exzesse nicht im Keim erstickt wurden.</del>
-                     <lb facs="#zone_tr_1_tl_14"/>Die preußische Polizei, um nur von Norddeutschland zu
-                  </p>
-                  <gap xml:id="gap-0180-0001" facs="#zone_r_9"/>
-               </div>
-               <div>
-                  <p facs="#zone_r_21">
-                     <lb facs="#zone_tr_1_tl_16"/>sprechen, verwendet in den großen Städten, wie Berlin, die
-                     <lb facs="#zone_tr_1_tl_18"/>gewöhnliche Verkehrs= und Publikumspolizei und hat
-                     <lb facs="#zone_tr_1_tl_20"/>daneben außerdem sogenannte Hundertschaften, die im Gegen¬
-                     <lb facs="#zone_tr_1_tl_22"/>satz zu der ersten kaserniert leben. Diese Kasernierung ist eines der
-                     <lb facs="#zone_tr_1_tl_26"/>Mittel, um die Truppe fest zusammenzuhalten auch seelisch, und
-                     <lb facs="#zone_tr_1_tl_29"/>sie dauernd beweglich zur Verfügung zu haben. Aus meiner ge¬
-                     <lb facs="#zone_tr_1_tl_31"/>nauen Kenntnis der reichsdeutschen Polizeieinrichtungen glaube ich
-                     <lb facs="#zone_tr_1_tl_35"/>mit Bestimmtheit sagen zu können, daß man eine Revolte vom
-                     <lb facs="#zone_tr_1_tl_37"/>Umfang der in Wien vorgekommenen mit einer geringen Zahl von
-                     <lb facs="#zone_tr_1_tl_40"/>Toten hätte unterdrücken können. Als einen Erfolg für die
-                     <lb facs="#zone_tr_1_tl_42"/>Polizei aber kann man den Ausgang eines solchen, ja manch
-                     <lb facs="#zone_tr_1_tl_44"/>mal unvermeidlichen Zusammenstoßes nur dann ansehen, wenn
-                     <lb facs="#zone_tr_1_tl_46"/>überhaupt kein Todesopfer zu beklagen iſt.“
-                  </p>
-               </div>
-               <div type="article">
-                  <head facs="#zone_r_8">
-                     <lb facs="#zone_tr_1_tl_124"/>Neue Verhaftungen in Dublin.
-                  </head>
-                  <head facs="#zone_r_22">
-                     <lb facs="#zone_tr_1_tl_128"/>Im Zusammenhang mit der Ermordung O'Higgins'.
-                  </head>
-                  <p facs="#zone_r_25">
-                     <lb facs="#zone_tr_1_tl_144"/>In Dublin wurden gestern im Zusammenhang mit der Er¬
-                     <lb facs="#zone_tr_1_tl_151"/>mordung O'Higgins' wieder neue Verhaftungen vor¬
-                     <lb facs="#zone_tr_1_tl_157"/>genommen. Unter den Verhafteten befindet sich Owe
-                     <lb facs="#zone_tr_1_tl_162"/>Donnelly, ein 25jähriger Lederarbeiter, der bereits kurz nach
-                     <lb facs="#zone_tr_1_tl_166"/>der Ermordung O'Higgins' verhaftet worden war, dann aber End
-                     <lb facs="#zone_tr_1_tl_169"/>voriger Woche wieder entlassen wurde. Die Freistaatregierung hat
-                     <lb facs="#zone_tr_1_tl_172"/>de Valera mitteilen lassen, daß sie von einem Anschlag au
-                     <lb facs="#zone_tr_1_tl_175"/>sein Leben erfahren habe, und daß sie infolgedessen einen Polizei
-                     <lb facs="#zone_tr_1_tl_179"/>posten vor seiner Gartentür aufstellen werde. De Valera erklärte,
-                     <lb facs="#zone_tr_1_tl_183"/>daß er mit dieſen Anordnungen der Freiſtaatregierung nichts zu tun
-                     <lb facs="#zone_tr_1_tl_186"/>habe, und hat ſeine Verwunderung darüber zum Ausdruck gebracht,
-                     <lb facs="#zone_tr_1_tl_188"/>daß man ihn beschützen wolle, ohne, daß er darum gebeten habe. Ein
-                     <lb facs="#zone_tr_1_tl_190"/>irisches Truppenlager bei Tallaght wurde von Bewaffneten gestern
-                     <lb facs="#zone_tr_1_tl_192"/>beschossen, die etwa 50 bis 60 Schüsse auf das Lager abgaben
-                  </p>
-               </div>
-               <div>
-                  <p facs="#zone_r_23">
-                     <lb facs="#zone_tr_1_tl_132"/>(Telegramm unseres Korrespondenten.)
-                  </p>
-               </div>
-               <div>
-                  <p facs="#zone_r_24">
-                     <lb facs="#zone_tr_1_tl_138"/>O London, 30. Juli.
-                  </p>
-               </div>
-               <div>
-                  <p facs="#zone_r_26">
-                     <lb facs="#zone_tr_1_tl_197"/>X Paris, 30. Juli. (Privat.) Der Landesausschuß der fran¬
-                     <lb facs="#zone_tr_1_tl_200"/>zösischen Gewerkschaften trat heute vormittag zusammen, um die
-                     <lb facs="#zone_tr_1_tl_202"/>Neuwahl des Verwaltungsausschusses vorzunehmen. Jouhauz
-                     <lb facs="#zone_tr_1_tl_205"/>wurde einstimmig als Generalsekretär wiedergewählt. Auch die
-                     <lb facs="#zone_tr_1_tl_208"/>übrigen Mitglieder wurden von neuem bestätigt.
-                  </p>
-               </div>
-               <div>
-                  <p facs="#zone_r_27">
-                     <lb facs="#zone_tr_1_tl_212"/>Unsere Abonnenten, die verreisen, können sich das „Berliner
-                     <lb facs="#zone_tr_1_tl_215"/>Tageblatt“ auf kurze oder längere Zeit ins Bad oder in die Somme
-                     <lb facs="#zone_tr_1_tl_218"/>frische, nachsenden lassen. Der Nachsendungsantrag ist an die zu
-                     <lb facs="#zone_tr_1_tl_221"/>ständige Filiale (ersichtlich aus der Abonnementsquittung) unter gleich
-                     <lb facs="#zone_tr_1_tl_223"/>zeitiger Zahlung der Ueberweisungsgebühr zu richten. Post
-                     <lb facs="#zone_tr_1_tl_226"/>bezieher beantragen die Nachsendung bei ihren
-                     <lb facs="#zone_tr_1_tl_229"/>zuständigen Postamt. Es ist dringend ratsam, die Ueber
-                     <lb facs="#zone_tr_1_tl_232"/>weisung möglichst acht Tage vor der Abreise zu bestellen
-                     <lb facs="#zone_tr_1_tl_234"/>weil jeder Tag der Verzögerung sonst erhöhte Kosten für Kreuzband
-                     <lb facs="#zone_tr_1_tl_237"/>gebühren erfordert. Auskunft wird erteilt durch die Haupt-Expedition,
-                     <lb facs="#zone_tr_1_tl_240"/>Berlin SW. 19, Jerusalemer Straße 46—49, sowie die am Kopf
-                     <lb facs="#zone_l_61"/>dieses Blattes aufgeführten Filialen.
-                  </p>
-               </div>
+            <cb facs="#zone_r_38" n="2/3"/>
+            <div xml:id="div-0180-0002" type="article" prev="#div-0180-0001">
+               <p facs="#zone_r" part="F">
+                  <lb facs="#zone_tr_1_tl_2"/>den gewöhnlichen, den Publikumsdienst, ausübt.<metamark function="addition"/><add facs="#zone_r_2" xml:id="add-0180-0001"><lb facs="#zone_l_89"/>– –</add>
+                  <lb facs="#zone_tr_1_tl_3"/><del type="deselection">Diese Polizeitruppe muß von einer einheitlichen Staatsidee
+                  <lb facs="#zone_tr_1_tl_5"/>beseelt und scharf diszipliniert sein. An dieser besonderen Truppe, die
+                  <lb facs="#zone_tr_1_tl_7"/>in Fällen von ernsten Zusammenstößen einzusetzen ist, fehlt es in Wien,
+                  <lb facs="#zone_tr_1_tl_8"/>und das ist der eigentliche Grund, warum die anfangs
+                  <lb facs="#zone_tr_1_tl_10"/>harmlose Demonstration solche Dimensionen annehmen konnte und
+                  <lb facs="#zone_tr_1_tl_12"/>warum die Exzesse nicht im Keim erstickt wurden.</del>
+               </p>
+               <p facs="#zone_r_21" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_14"/>Die preußische Polizei, um nur von Norddeutschland zu
+                  <lb facs="#zone_tr_1_tl_16"/>sprechen, verwendet in den großen Städten, wie Berlin, die
+                  <lb facs="#zone_tr_1_tl_18"/>gewöhnliche Verkehrs= und Publikumspolizei und hat
+                  <lb facs="#zone_tr_1_tl_20"/>daneben außerdem sogenannte Hundertschaften, die im Gegen¬
+                  <lb facs="#zone_tr_1_tl_22"/>satz zu der ersten kaserniert leben. Diese Kasernierung ist eines der
+                  <lb facs="#zone_tr_1_tl_26"/>Mittel, um die Truppe fest zusammenzuhalten auch seelisch, und
+                  <lb facs="#zone_tr_1_tl_29"/>sie dauernd beweglich zur Verfügung zu haben. Aus meiner ge¬
+                  <lb facs="#zone_tr_1_tl_31"/>nauen Kenntnis der reichsdeutschen Polizeieinrichtungen glaube ich
+                  <lb facs="#zone_tr_1_tl_35"/>mit Bestimmtheit sagen zu können, daß man eine Revolte vom
+                  <lb facs="#zone_tr_1_tl_37"/>Umfang der in Wien vorgekommenen mit einer geringen Zahl von
+                  <lb facs="#zone_tr_1_tl_40"/>Toten hätte unterdrücken können. Als einen Erfolg für die
+                  <lb facs="#zone_tr_1_tl_42"/>Polizei aber kann man den Ausgang eines solchen, ja manch
+                  <lb facs="#zone_tr_1_tl_44"/>mal unvermeidlichen Zusammenstoßes nur dann ansehen, wenn
+                  <lb facs="#zone_tr_1_tl_46"/>überhaupt kein Todesopfer zu beklagen iſt.“
+               </p>
+               <gap xml:id="gap-0180-0001" facs="#zone_r_9" reason="cut"/>
             </div>
-            <fw facs="#zone_r_6">
-               <lb facs="#zone_l_59"/>89
-            </fw>
-            <div facs="#zone_r_39" type="column-block">
-               <div type="article">
-                  <p facs="#zone_r_4">
-                     <lb facs="#zone_tr_1_tl_48"/>Zillst du den Wunsch dieses armen, elenden Kindes
-                     <lb facs="#zone_tr_1_tl_50"/>erfüllen?
-                     <lb facs="#zone_tr_1_tl_52"/>Für 75 Mark können wir einem Kinde den Aufenthalt an der
-                  </p>
-                  <p facs="#zone_r_28">
-                     <lb facs="#zone_tr_1_tl_54"/>stsee oder im Gebirge, für 130 Mark den Aufenthalt an der Nordsee
-                     <lb facs="#zone_tr_1_tl_56"/>ir die Dauer von vier Wochen ermöglichen. Auch im August und
-                  </p>
-                  <p facs="#zone_r_30">
-                     <lb facs="#zone_tr_1_tl_63"/>Einzahlungen erbitten wir auf unser Postscheckkonto 117939; auch
-                     <lb facs="#zone_tr_1_tl_66"/>nehmen unsere Hauptkasse sowie sämtliche Filialen Spenden entgegen.
-                  </p>
-                  <p facs="#zone_r_31">
-                     <lb facs="#zone_tr_1_tl_68"/>Wohlfahrisabteilung des „Berliner Tageblatt“.
-                     <lb facs="#zone_tr_1_tl_71"/>a. S IV 19, Jerusalemer Straße 46/49.
-                     <lb facs="#zone_l_56"/>vorläufig
-                  </p>
-                  <p facs="#zone_r_5">
-                     <lb facs="#zone_l_62"/>die Ferienkolonien
-                     <lb facs="#zone_l_63"/>150.— M.: Zur Erinnerung an den Todestag unserer Mutter, Philipp
-                     <lb facs="#zone_l_64"/>Koſack⸗Nawitſcher
-                     <lb facs="#zone_l_65"/>§3.80 M.: Direktor Reichsbahnrat Stricker, den Haag.
-                     <lb facs="#zone_l_66"/>15.— M.: Ungenannt, Rheinland.
-                     <lb facs="#zone_l_69"/>Friedenau. — 20.— M.: Dr. Friedrich Simon, Berlin — Fr. Dir. Reimann,
-                     <lb facs="#zone_l_68"/>49.— M.: Christos Malakates, München. — 30.— M.: L. Schmidt,
-                     <lb facs="#zone_l_67"/>75.— M.: Adolf Syritz, Lissabon
-                     <lb facs="#zone_l_70"/>Bad <metamark function="intervention"><g ref="#intervention"/></metamark>Kissingen — Hermann Pelzer, Bitburg. — 10.— M.: Hans Sternberg —
-                     <lb facs="#zone_l_72"/>burg — Ein treuer Abonnent, Schweinfurt — Dr. Arthur Cohn, Glogau. —
-                     <lb facs="#zone_l_71"/>Dr. Marcuse, Potsdam — Löbri — Gerda Hanitsch, Berlin — L. P., Ham¬
-                     <lb facs="#zone_l_73"/>5.— M.: Unbekannt — K. Oppenheimer, Rotterdam — Elsa Salomon,
-                     <lb facs="#zone_l_74"/>Berlin —. Hans Heymann=Rheineck, Schlachtensee. — 2.— M.: H. P.,
-                     <lb facs="#zone_l_75"/>Halle a. S.
-                     <lb facs="#zone_l_76"/>Summa: 905.80 M. Vortrag: 20777.33 M. Gesamtsumme: 21683.13 M
-                  </p>
-                  <p facs="#zone_r_32">
-                     <lb facs="#zone_tr_1_tl_109"/>Für den Mittelstand und das Alter.
-                     <lb facs="#zone_tr_1_tl_114"/>Summa 10.— M. Vortrag: 2307.90 N. Gesamtsumme: 2317.90 M.
-                     <lb facs="#zone_l_77"/>5.— M.: M. G., Schöneberg — Amtsgerichtsrat Heck, Regenwalde.
-                  </p>
-                  <p facs="#zone_r_33">
-                     <lb facs="#zone_tr_1_tl_120"/>6.— M.: T. Schleich, Berlin. Summa: 6.— M.
-                     <lb facs="#zone_tr_1_tl_122"/>(Für Jablonski):
-                     <lb facs="#zone_tr_1_tl_126"/>3.— M.: Schelder, Berlin. Summa: 3.— M.
-                     <lb facs="#zone_tr_1_tl_117"/>Für verschiedene Zwecke. (Für Frau S.)
-                  </p>
-                  <p facs="#zone_r_34">
-                     <lb facs="#zone_l_78"/>200.— M.: S. Reichmann, Berlin.
-                     <lb facs="#zone_l_79"/>105.— M.: Patentberichterstatter, Berlin.
-                     <lb facs="#zone_l_81"/>Pineus. — 25.— M.: Ungenannt. Rheinland. — 20.— M.: Stammtisch
-                     <lb facs="#zone_l_80"/>50.— M.: Kaufmann, Berlin 0. 112. — 30.— M.: Bankhaus Siegm
-                     <lb facs="#zone_l_83"/>heim=Gäste U. O. B. B., Krummhübl i. Rabg., ges. im Logenheim. —
-                     <lb facs="#zone_l_82"/>Busch in Auerbachs Keller — Pension Heinsius, Berlin. — 17.— M.: Logen¬
-                     <lb facs="#zone_l_84"/>10.50 M.: Moritz Mädler, Berlin. — 10.— M.: W. B., Aachen — L. P.
-                     <lb facs="#zone_l_86"/>R. A. Dr. Schaefer, Hindenburg O.-G. — Frau Selma Steinitz, Breslau
-                     <lb facs="#zone_l_85"/>Hamburg. — 15.— M.: Schiedsmann Streibing — Ungenannt, Berlin N. —
-                     <lb facs="#zone_l_87"/>O. Z., Schönhausen. — 3.— M.: Eine Arbeiterin
-                     <lb facs="#zone_l_88"/>Summa: 525,50 M. Vortrag: 1311,76 M. Gesamtsumme: 1837,26 M.
-                  </p>
-                  <p facs="#zone_r_35">
-                     <lb facs="#zone_tr_1_tl_170"/>Sachspenden.
-                     <lb facs="#zone_tr_1_tl_174"/>(Wasserkatastrophe im Erzgebirge.)
-                     <lb facs="#zone_tr_1_tl_177"/>Paket: Alfred Buchholz u. Frau, W. 62 — Max Fuchs
-                     <lb facs="#zone_tr_1_tl_184"/>Frau M. Kirschstein, Nikolassee.
-                     <lb facs="#zone_tr_1_tl_180"/>alberstamm
-                     <lb facs="#zone_tr_1_tl_181"/>M. H. — Adolf Hirschel, Schöneberg
-                  </p>
-               </div>
-               <div>
-                  <p facs="#zone_r_29">
-                     <lb facs="#zone_tr_1_tl_58"/>September werden noch Kinder verschickt.
-                     <lb facs="#zone_tr_1_tl_59"/>Darum gebt, auch die kleinste Gabe wird dankbar, entgegen¬
-                     <lb facs="#zone_tr_1_tl_62"/>enommen.
-                  </p>
-               </div>
-               <div type="article">
-                  <head facs="#zone_r_36">
-                     <lb facs="#zone_tr_1_tl_195"/>Von der Reise zurück
-                  </head>
-                  <p facs="#zone_r_7">
-                     <lb facs="#zone_tr_1_tl_199"/>kommt die berühmte Haller=Revue „An und Aus“ und eröffnet
-                     <lb facs="#zone_tr_1_tl_203"/>morgen, pünktlich 8½ Uhr, die neue Spielzeit des Th. im
-                     <lb facs="#zone_tr_1_tl_206"/>Admiralspalast. Die oft kopierten — nie erreichten Original¬
-                     <lb facs="#zone_tr_1_tl_210"/>Lawrence=Tiller=Girls, die internationalen Tanz=Attrak
-                     <lb facs="#zone_tr_1_tl_213"/>tionen, Odéon mit seinem klugen Schwein, das Eduardowa=Ballett
-                     <lb facs="#zone_tr_1_tl_216"/>die schönen Admiral=Girls werden in dem von Ludwig Kaine;
-                     <lb facs="#zone_tr_1_tl_220"/>geschaffenen Rahmen dieser wahrhaften Weltstadtrevue aufs
-                     <lb facs="#zone_tr_1_tl_224"/>Neue faszinieren. Das beliebte Revue=Ensemble mit Trude Hester¬
-                     <lb facs="#zone_tr_1_tl_227"/>berg, Paul Morgan, Max Ehrlich, Kurt Lilien, Curt
-                     <lb facs="#zone_tr_1_tl_231"/>Fuß, Paul Cramer, Rolly Loose, Erwin Hartung usw.
-                     <lb facs="#zone_tr_1_tl_235"/>ist in der Haller=Revue wiederum vertreten. 400 Mitwirkende, 1500
-                     <lb facs="#zone_tr_1_tl_239"/>Kostüme. Das große Jazz-Symphonie=Orchester der Haller=Revue und
-                     <lb facs="#zone_tr_1_tl_242"/>Paul=Godwin=Band.
-                  </p>
-               </div>
+            <div type="article">
+               <head facs="#zone_r_8" type="main" rendition="#bold #center #large">
+                  <lb facs="#zone_tr_1_tl_124"/>Neue Verhaftungen in Dublin.
+               </head>
+               <head facs="#zone_r_22" type="sub" rendition="#bold #center">
+                  <lb facs="#zone_tr_1_tl_128"/>Im Zusammenhang mit der Ermordung O'Higgins'.
+               </head>
+               <p facs="#zone_r_23" rendition="#center">
+                  <lb facs="#zone_tr_1_tl_132"/>(Telegramm unseres Korrespondenten.)
+               </p>
+               <p facs="#zone_r_24" rendition="#right2">
+                  <lb facs="#zone_tr_1_tl_138"/>O London, 30. Juli.
+               </p>
+               <p facs="#zone_r_25" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_144"/>In Dublin wurden gestern im Zusammenhang mit der Er¬
+                  <lb facs="#zone_tr_1_tl_151"/>mordung O'Higgins' wieder neue Verhaftungen vor¬
+                  <lb facs="#zone_tr_1_tl_157"/>genommen. Unter den Verhafteten befindet sich Owe
+                  <lb facs="#zone_tr_1_tl_162"/>Donnelly, ein 25jähriger Lederarbeiter, der bereits kurz nach
+                  <lb facs="#zone_tr_1_tl_166"/>der Ermordung O'Higgins' verhaftet worden war, dann aber End
+                  <lb facs="#zone_tr_1_tl_169"/>voriger Woche wieder entlassen wurde. Die Freistaatregierung hat
+                  <lb facs="#zone_tr_1_tl_172"/>de Valera mitteilen lassen, daß sie von einem Anschlag au
+                  <lb facs="#zone_tr_1_tl_175"/>sein Leben erfahren habe, und daß sie infolgedessen einen Polizei
+                  <lb facs="#zone_tr_1_tl_179"/>posten vor seiner Gartentür aufstellen werde. De Valera erklärte,
+                  <lb facs="#zone_tr_1_tl_183"/>daß er mit dieſen Anordnungen der Freiſtaatregierung nichts zu tun
+                  <lb facs="#zone_tr_1_tl_186"/>habe, und hat ſeine Verwunderung darüber zum Ausdruck gebracht,
+                  <lb facs="#zone_tr_1_tl_188"/>daß man ihn beschützen wolle, ohne, daß er darum gebeten habe. Ein
+                  <lb facs="#zone_tr_1_tl_190"/>irisches Truppenlager bei Tallaght wurde von Bewaffneten gestern
+                  <lb facs="#zone_tr_1_tl_192"/>beschossen, die etwa 50 bis 60 Schüsse auf das Lager abgaben
+               </p>
             </div>
-            <metamark xml:id="metamark-0180-0002" facs="#zone_r_10" target="#gap-0180-0001">
-               <lb facs="#zone_l_57"/><hi style="underline">nicht</hi> zu setzen.
-               <lb facs="#zone_l"/>Mit verbindlichstem Dank quittieren wir folgende Eingänge für
+            <div type="article">
+               <p facs="#zone_r_26" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_197"/>X Paris, 30. Juli. (Privat.) Der Landesausschuß der fran¬
+                  <lb facs="#zone_tr_1_tl_200"/>zösischen Gewerkschaften trat heute vormittag zusammen, um die
+                  <lb facs="#zone_tr_1_tl_202"/>Neuwahl des Verwaltungsausschusses vorzunehmen. Jouhauz
+                  <lb facs="#zone_tr_1_tl_205"/>wurde einstimmig als Generalsekretär wiedergewählt. Auch die
+                  <lb facs="#zone_tr_1_tl_208"/>übrigen Mitglieder wurden von neuem bestätigt.
+               </p>
+            </div>
+            <div type="article">
+               <p facs="#zone_r_27" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_212"/>Unsere Abonnenten, die verreisen, können sich das „Berliner
+                  <lb facs="#zone_tr_1_tl_215"/>Tageblatt“ auf kurze oder längere Zeit ins Bad oder in die Somme
+                  <lb facs="#zone_tr_1_tl_218"/>frische, nachsenden lassen. Der Nachsendungsantrag ist an die zu
+                  <lb facs="#zone_tr_1_tl_221"/>ständige Filiale (ersichtlich aus der Abonnementsquittung) unter gleich
+                  <lb facs="#zone_tr_1_tl_223"/>zeitiger Zahlung der Ueberweisungsgebühr zu richten. Post
+                  <lb facs="#zone_tr_1_tl_226"/>bezieher beantragen die Nachsendung bei ihren
+                  <lb facs="#zone_tr_1_tl_229"/>zuständigen Postamt. Es ist dringend ratsam, die Ueber
+                  <lb facs="#zone_tr_1_tl_232"/>weisung möglichst acht Tage vor der Abreise zu bestellen
+                  <lb facs="#zone_tr_1_tl_234"/>weil jeder Tag der Verzögerung sonst erhöhte Kosten für Kreuzband
+                  <lb facs="#zone_tr_1_tl_237"/>gebühren erfordert. Auskunft wird erteilt durch die Haupt-Expedition,
+                  <lb facs="#zone_tr_1_tl_240"/>Berlin SW. 19, Jerusalemer Straße 46—49, sowie die am Kopf
+                  <lb facs="#zone_l_61"/>dieses Blattes aufgeführten Filialen.
+               </p>
+            </div>
+            <cb facs="#zone_r_39" n="3/3"/>
+            <div type="article">
+               <p facs="#zone_r_4" rendition="#center">
+                  <lb facs="#zone_tr_1_tl_48"/>Zillst du den Wunsch dieses armen, elenden Kindes
+                  <lb facs="#zone_tr_1_tl_50"/>erfüllen?
+               </p>
+               <p facs="#zone_r_28" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_52"/>Für 75 Mark können wir einem Kinde den Aufenthalt an der
+                  <lb facs="#zone_tr_1_tl_54"/>stsee oder im Gebirge, für 130 Mark den Aufenthalt an der Nordsee
+                  <lb facs="#zone_tr_1_tl_56"/>ir die Dauer von vier Wochen ermöglichen. Auch im August und
+                  <lb facs="#zone_tr_1_tl_58"/>September werden noch Kinder verschickt.
+               </p>
+               <p facs="#zone_r_30" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_63"/>Einzahlungen erbitten wir auf unser Postscheckkonto 117939; auch
+                  <lb facs="#zone_tr_1_tl_66"/>nehmen unsere Hauptkasse sowie sämtliche Filialen Spenden entgegen.
+               </p>
+               <p facs="#zone_r_31" rendition="#center">
+                  <lb facs="#zone_tr_1_tl_68"/>Wohlfahrisabteilung des „Berliner Tageblatt“.
+                  <lb facs="#zone_tr_1_tl_71"/>a. S IV 19, Jerusalemer Straße 46/49.
+               </p>
+               <p facs="#zone_r_5" rendition="#indent">
+                  <lb facs="#zone_l"/>Mit verbindlichstem Dank quittieren wir folgende Eingänge für
+                  <lb facs="#zone_l_62"/>die Ferienkolonien
+                  <lb facs="#zone_l_63"/>150.— M.: Zur Erinnerung an den Todestag unserer Mutter, Philipp
+                  <lb facs="#zone_l_64"/>Koſack⸗Nawitſcher
+                  <lb facs="#zone_l_65"/>§3.80 M.: Direktor Reichsbahnrat Stricker, den Haag.
+                  <lb facs="#zone_l_66"/>15.— M.: Ungenannt, Rheinland.
+                  <lb facs="#zone_l_69"/>Friedenau. — 20.— M.: Dr. Friedrich Simon, Berlin — Fr. Dir. Reimann,
+                  <lb facs="#zone_l_68"/>49.— M.: Christos Malakates, München. — 30.— M.: L. Schmidt,
+                  <lb facs="#zone_l_67"/>75.— M.: Adolf Syritz, Lissabon
+                  <lb facs="#zone_l_70"/>Bad <metamark function="intervention"><g ref="#intervention"/></metamark>Kissingen — Hermann Pelzer, Bitburg. — 10.— M.: Hans Sternberg —
+                  <lb facs="#zone_l_72"/>burg — Ein treuer Abonnent, Schweinfurt — Dr. Arthur Cohn, Glogau. —
+                  <lb facs="#zone_l_71"/>Dr. Marcuse, Potsdam — Löbri — Gerda Hanitsch, Berlin — L. P., Ham¬
+                  <lb facs="#zone_l_73"/>5.— M.: Unbekannt — K. Oppenheimer, Rotterdam — Elsa Salomon,
+                  <lb facs="#zone_l_74"/>Berlin —. Hans Heymann=Rheineck, Schlachtensee. — 2.— M.: H. P.,
+                  <lb facs="#zone_l_75"/>Halle a. S.
+                  <lb facs="#zone_l_76"/>Summa: 905.80 M. Vortrag: 20777.33 M. Gesamtsumme: 21683.13 M
+               </p>
+               <p facs="#zone_r_32" rendition="#center">
+                  <lb facs="#zone_tr_1_tl_109"/>Für den Mittelstand und das Alter.
+                  <lb facs="#zone_tr_1_tl_114"/>Summa 10.— M. Vortrag: 2307.90 N. Gesamtsumme: 2317.90 M.
+                  <lb facs="#zone_l_77"/>5.— M.: M. G., Schöneberg — Amtsgerichtsrat Heck, Regenwalde.
+               </p>
+               <p facs="#zone_r_33" rendition="#center">
+                  <lb facs="#zone_tr_1_tl_120"/>6.— M.: T. Schleich, Berlin. Summa: 6.— M.
+                  <lb facs="#zone_tr_1_tl_122"/>(Für Jablonski):
+                  <lb facs="#zone_tr_1_tl_126"/>3.— M.: Schelder, Berlin. Summa: 3.— M.
+                  <lb facs="#zone_tr_1_tl_117"/>Für verschiedene Zwecke. (Für Frau S.)
+               </p>
+               <p facs="#zone_r_34" rendition="#center #bold #crosshead">
+                  <lb facs="#zone_l_92"/>Waſſerkataſtrophe im Erzgebirge
+               </p>
+               <p facs="#zone_r_35" rendition="#undefined">
+                  <lb facs="#zone_tr_1_tl_170"/>Sachspenden.
+                  <lb facs="#zone_tr_1_tl_174"/>(Wasserkatastrophe im Erzgebirge.)
+                  <lb facs="#zone_tr_1_tl_177"/>Paket: Alfred Buchholz u. Frau, W. 62 — Max Fuchs
+                  <lb facs="#zone_tr_1_tl_184"/>Frau M. Kirschstein, Nikolassee.
+                  <lb facs="#zone_tr_1_tl_180"/>alberstamm
+                  <lb facs="#zone_tr_1_tl_181"/>M. H. — Adolf Hirschel, Schöneberg
+               </p>
+            </div>
+            <div>
+               <p facs="#zone_r_29" rendition="#indent">
+                  <lb facs="#zone_tr_1_tl_59"/>Darum gebt, auch die kleinste Gabe wird dankbar, entgegen¬
+                  <lb facs="#zone_tr_1_tl_62"/>enommen.
+               </p>
+            </div>
+            <div>
+               <p facs="#zone_r_43" rendition="#undefined">
+                  <lb facs="#zone_l_78"/>200.— M.: S. Reichmann, Berlin.
+                  <lb facs="#zone_l_79"/>105.— M.: Patentberichterstatter, Berlin.
+                  <lb facs="#zone_l_81"/>Pineus. — 25.— M.: Ungenannt. Rheinland. — 20.— M.: Stammtisch
+                  <lb facs="#zone_l_80"/>50.— M.: Kaufmann, Berlin 0. 112. — 30.— M.: Bankhaus Siegm
+                  <lb facs="#zone_l_83"/>heim=Gäste U. O. B. B., Krummhübl i. Rabg., ges. im Logenheim. —
+                  <lb facs="#zone_l_82"/>Busch in Auerbachs Keller — Pension Heinsius, Berlin. — 17.— M.: Logen¬
+                  <lb facs="#zone_l_84"/>10.50 M.: Moritz Mädler, Berlin. — 10.— M.: W. B., Aachen — L. P.
+                  <lb facs="#zone_l_86"/>R. A. Dr. Schaefer, Hindenburg O.-G. — Frau Selma Steinitz, Breslau
+                  <lb facs="#zone_l_85"/>Hamburg. — 15.— M.: Schiedsmann Streibing — Ungenannt, Berlin N. —
+                  <lb facs="#zone_l_87"/>O. Z., Schönhausen. — 3.— M.: Eine Arbeiterin
+                  <lb facs="#zone_l_88"/>Summa: 525,50 M. Vortrag: 1311,76 M. Gesamtsumme: 1837,26 M.
+               </p>
+            </div>
+            <div type="article">
+               <head facs="#zone_r_36" type="main" rendition="#large #bold #center">
+                  <lb facs="#zone_tr_1_tl_195"/>Von der Reise zurück
+               </head>
+               <p facs="#zone_r_7">
+                  <lb facs="#zone_tr_1_tl_199"/>kommt die berühmte Haller=Revue „An und Aus“ und eröffnet
+                  <lb facs="#zone_tr_1_tl_203"/>morgen, pünktlich 8½ Uhr, die neue Spielzeit des Th. im
+                  <lb facs="#zone_tr_1_tl_206"/>Admiralspalast. Die oft kopierten — nie erreichten Original¬
+                  <lb facs="#zone_tr_1_tl_210"/>Lawrence=Tiller=Girls, die internationalen Tanz=Attrak
+                  <lb facs="#zone_tr_1_tl_213"/>tionen, Odéon mit seinem klugen Schwein, das Eduardowa=Ballett
+                  <lb facs="#zone_tr_1_tl_216"/>die schönen Admiral=Girls werden in dem von Ludwig Kaine;
+                  <lb facs="#zone_tr_1_tl_220"/>geschaffenen Rahmen dieser wahrhaften Weltstadtrevue aufs
+                  <lb facs="#zone_tr_1_tl_224"/>Neue faszinieren. Das beliebte Revue=Ensemble mit Trude Hester¬
+                  <lb facs="#zone_tr_1_tl_227"/>berg, Paul Morgan, Max Ehrlich, Kurt Lilien, Curt
+                  <lb facs="#zone_tr_1_tl_231"/>Fuß, Paul Cramer, Rolly Loose, Erwin Hartung usw.
+                  <lb facs="#zone_tr_1_tl_235"/>ist in der Haller=Revue wiederum vertreten. 400 Mitwirkende, 1500
+                  <lb facs="#zone_tr_1_tl_239"/>Kostüme. Das große Jazz-Symphonie=Orchester der Haller=Revue und
+                  <lb facs="#zone_tr_1_tl_242"/>Paul=Godwin=Band.
+               </p>
+            </div>
+            <metamark xml:id="metamark-0180-0002" facs="#zone_r_10" function="print-instruction" target="#gap-0180-0001">
+               <lb facs="#zone_l_56"/>vorläufig
+               <lb facs="#zone_l_57"/><hi rend="underline">nicht</hi> zu setzen.
             </metamark>
-            <div facs="#zone_r_40" type="column-block">
+            <cb facs="#zone_r_40" n="1-3/3"/>
+            <div>
                <div facs="#zone_r_16" type="advertisement">
                   <p>
                      <lb facs="#zone_tr_1_tl_245"/>¶Meine
