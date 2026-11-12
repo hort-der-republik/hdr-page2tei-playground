@@ -3,12 +3,12 @@
     <Metadata>
         <Creator>prov=READ-COOP:name=TrHtr:version=2.52.0:model_id=579509:date=20_10_2026_13:34</Creator>
         <Created>2026-10-02T15:12:26.264+02:00</Created>
-        <LastChange>2026-10-20T13:34:49.162+02:00</LastChange>
-        <TranskribusMetadata docId="18855842" pageId="128809776" pageNr="8" tsid="307015932" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=MEJOPOMVWAAFIWAEYWPZKQAV" xmlUrl="https://files.transkribus.eu/Get?id=PTGWAIFDXJFDNAKHJZTPMFSU" imageId="109963899"/>
+        <LastChange>2026-10-21T11:35:48.627+02:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="128809776" pageNr="8" tsid="307118340" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=MEJOPOMVWAAFIWAEYWPZKQAV" xmlUrl="https://files.transkribus.eu/Get?id=RWSEUNCQXANPAQTVCAFPBEUY" imageId="109963899"/>
     </Metadata>
     <Page imageFilename="0008_609.jpg" imageWidth="5214" imageHeight="6805">
         <ReadingOrder>
-            <OrderedGroup id="ro_1792568340954" caption="Regions reading order">
+            <OrderedGroup id="ro_1794483648728" caption="Regions reading order">
                 <RegionRefIndexed index="0" regionRef="r"/>
                 <RegionRefIndexed index="1" regionRef="r_17"/>
                 <RegionRefIndexed index="2" regionRef="r_18"/>
@@ -405,7 +405,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_3" custom="readingOrder {index:26;} structure {type:add;}">
+        <TextRegion id="r_3" custom="readingOrder {index:26;} structure {id:add-l1; type:add;}">
             <Coords points="1087,963 1374,963 1374,1247 1087,1247"/>
             <TextLine id="r_3_tl_1" custom="readingOrder {index:0;}">
                 <Coords points="1119,1254 1164,1250 1213,1213 1229,1217 1237,1209 1303,1229 1311,1065 1262,1069 1250,1078 1237,1074 1201,1028 1184,1033 1135,1024"/>
@@ -687,7 +687,7 @@
                     <Unicode>journalistischen Freunden der Polizeidirektion schad-</Unicode>
                 </TextEquiv>
             </TextLine>
-            <TextLine id="r_2_tl_4" custom="readingOrder {index:3;}">
+            <TextLine id="r_2_tl_4" custom="readingOrder {index:3;} subst-del {offset:12; length:1;add-id:add-l1;}">
                 <Coords points="1446,1172 3659,1147 3659,1049 3364,1024 1451,1098"/>
                 <Baseline points="1468,1152 1516,1146 1605,1140 1695,1140 1784,1134 1874,1134 1963,1134 2053,1134 2142,1128 2232,1128 2322,1122 2411,1122 2501,1122 2590,1122 2680,1116 2769,1116 2859,1116 2948,1110 3038,1110 3127,1110 3217,1104 3306,1104 3396,1104 3486,1104 3575,1104 3665,1110"/>
                 <TextEquiv>

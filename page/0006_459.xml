@@ -3,12 +3,12 @@
     <Metadata>
         <Creator>Transkribus</Creator>
         <Created>2026-10-02T15:12:04.900+02:00</Created>
-        <LastChange>2026-10-20T12:21:17.548+02:00</LastChange>
-        <TranskribusMetadata docId="18855842" pageId="128809751" pageNr="6" tsid="307001421" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=PXLCCSIIQCFGJLQVDYXTPMRP" xmlUrl="https://files.transkribus.eu/Get?id=QPYIKGJUXDRCVMCHMATWQMOL" imageId="109963934"/>
+        <LastChange>2026-11-12T12:18:52.080+01:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="128809751" pageNr="6" tsid="309438127" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=PXLCCSIIQCFGJLQVDYXTPMRP" xmlUrl="https://files.transkribus.eu/Get?id=DOAOIQEWTPCBWNXMHACSFVCH" imageId="109963934"/>
     </Metadata>
     <Page imageFilename="0006_459.jpg" imageWidth="2754" imageHeight="4727">
         <ReadingOrder>
-            <OrderedGroup id="ro_1792568340917" caption="Regions reading order">
+            <OrderedGroup id="ro_1794483648626" caption="Regions reading order">
                 <RegionRefIndexed index="0" regionRef="r_8"/>
                 <RegionRefIndexed index="1" regionRef="r_7"/>
                 <RegionRefIndexed index="2" regionRef="r_5"/>
@@ -75,7 +75,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r" custom="readingOrder {index:4;} structure {rendition:handwritten; part:M; type:paragraph;}">
+        <TextRegion id="r" custom="readingOrder {index:4;} structure {rendition:handwritten; part:M; change:kk-ink-1; type:paragraph;}">
             <Coords points="181,242 938,201 1602,176 2546,680 2155,894 2161,1171 2498,1528 2246,2016 2051,2263 1669,2415 628,2639 210,2683 181,2372"/>
             <TextLine id="l" custom="readingOrder {index:0;}">
                 <Coords points="209,349 651,313 771,321 849,298 1326,266 1598,258 1597,228 1325,236 844,268 768,291 651,283 207,319"/>
@@ -313,7 +313,7 @@
                     <Unicode>Unſer Land von Not befreit</Unicode>
                 </TextEquiv>
             </TextLine>
-            <TextLine id="l_36" custom="readingOrder {index:6;}">
+            <TextLine id="l_36" custom="readingOrder {index:6;} hi-underline {offset:3; length:12;}">
                 <Coords points="791,3457 1420,3311 1827,3276 1824,3246 1415,3281 784,3428"/>
                 <Baseline points="791,3457 1420,3311 1827,3276"/>
                 <TextEquiv>
@@ -331,9 +331,9 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_4" custom="readingOrder {index:7;} structure {function:font; type:metamark;}">
+        <TextRegion id="r_4" custom="readingOrder {index:7;} structure {function:font; change:kk-ink-1; type:metamark;}">
             <Coords points="1854,3466 2100,3466 2100,3651 1854,3651"/>
-            <TextLine id="l_29" custom="readingOrder {index:0;}">
+            <TextLine id="l_29" custom="readingOrder {index:0;} hi-underline {offset:0; length:5;}">
                 <Coords points="1868,3595 2079,3589 2078,3559 1867,3565"/>
                 <Baseline points="1868,3595 2079,3589"/>
                 <TextEquiv>
@@ -357,7 +357,7 @@
                 <Coords points="175,3948 741,3901 866,3878 1274,3853 1542,3809 2239,3713 2235,3683 1538,3779 1271,3823 862,3848 737,3871 173,3918"/>
                 <Baseline points="175,3948 741,3901 866,3878 1274,3853 1542,3809 2239,3713"/>
                 <TextEquiv>
-                    <Unicode>| Auf dem Titelblatt | die Reproduktion eines# mir ######## #### die</Unicode>
+                    <Unicode>| Auf dem Titelblatt | die Reproduktion eines# wie ######## #### die</Unicode>
                 </TextEquiv>
             </TextLine>
             <TextLine id="l_41" custom="readingOrder {index:2;}">
@@ -398,14 +398,14 @@
                 <Coords points="116,3702 1325,3639 1323,3609 114,3672"/>
                 <Baseline points="116,3702 1325,3639"/>
                 <TextEquiv>
-                    <Unicode>Die Autoren gibt es: Die TÖne sind von R. H. Dietrich,</Unicode>
+                    <Unicode>Die Autoren gibt es: Die Töne sind von R. H. Dietrich,</Unicode>
                 </TextEquiv>
             </TextLine>
             <TextLine id="l_39" custom="readingOrder {index:1;}">
                 <Coords points="306,3777 613,3775 910,3757 908,3727 612,3745 306,3747"/>
                 <Baseline points="306,3777 613,3775 910,3757"/>
                 <TextEquiv>
-                    <Unicode>die Wlrte von Anton Odič</Unicode>
+                    <Unicode>die Worte von Anton Odič. </Unicode>
                 </TextEquiv>
             </TextLine>
             <TextEquiv>

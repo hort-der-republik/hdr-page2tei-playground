@@ -12,16 +12,35 @@
             <p>
               Quelle: 0001_108.jpg.
               Erstellt: 2026-09-14T12:23:48.548+02:00,
-              zuletzt geaendert: 2026-10-19T16:23:37.562+02:00.
+              zuletzt geaendert: 2026-11-12T09:50:12.310+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="archive-1">[tbd]</change>
+               <change xml:id="kk-1">[tbd]</change>
+               <change xml:id="kk-cut-1">[tbd]</change>
+               <change xml:id="kk-glue-1">[tbd]</change>
+               <change xml:id="kk-ink-1">[tbd]</change>
+               <change xml:id="kk-ink-2">[tbd]</change>
+               <change xml:id="kk-ink-3">[tbd]</change>
+               <change xml:id="kk-ink-4">[tbd]</change>
+               <change xml:id="kk-ink-5">[tbd]</change>
+               <change xml:id="kk-ink3">[tbd]</change>
+               <change xml:id="kk-pencil-1">[tbd]</change>
+               <change xml:id="kk-pencil-2">[tbd]</change>
+               <change xml:id="kk-pencil-4">[tbd]</change>
+               <change xml:id="newspaper-print-1">[tbd]</change>
+            </listChange>
+         </creation>
+      </profileDesc>
    </teiHeader>
    <facsimile>
       <graphic url="0001_108.jpg" width="2553px" height="3871px"/>
       <surface xml:id="surface_r_5"
-               type="base"
-               subtype="base"
+               type="notepad"
                points="338,105 2398,84 2446,3742 402,3755">
          <zone xml:id="zone_r_4"
                type="fw"
@@ -38,8 +57,7 @@
                   points="1143,259 1172,267 1187,254 1196,259 1217,248 1232,263 1247,265 1266,250 1274,259 1314,244 1319,165 1304,170 1291,159 1255,178 1234,165 1174,195 1147,184"/>
          </zone>
          <surface xml:id="surface_r_6"
-                  type="surface"
-                  subtype="att"
+                  type="newspaper-clipping"
                   points="53,331 1885,301 2439,303 2446,3340 850,3377 194,3370 91,3340">
             <zone xml:id="zone_r_12"
                   type="column-block"
@@ -228,22 +246,24 @@
    </facsimile>
    <text>
       <body>
-         <div facs="#surface_r_5" type="base" subtype="base">
-            <fw facs="#zone_r_4">
+         <div facs="#surface_r_5" type="notepad" change="#kk-1">
+            <fw facs="#zone_r_4" change="#archive-1" rendition="#latin">
                <lb facs="#zone_l"/>53
             </fw>
-            <metamark xml:id="metamark-0108-0001" facs="#zone_r_3" function="font">
+            <metamark xml:id="metamark-0108-0001" facs="#zone_r_3" change="#kk-ink-1" function="font" rendition="#kurrent">
                <lb facs="#zone_tr_1_tl_1"/>col
             </metamark>
-            <div facs="#surface_r_6" type="attached">
+            <div facs="#surface_r_6"
+                 type="newspaper-clipping"
+                 change="#kk-cut-1 #kk-glue-1">
                <cb facs="#zone_r_12" n="1/3"/>
                <div type="article">
-                  <p facs="#zone_tr_1" part="F">
-                     <lb facs="#zone_tr_1_tl_2"/><delSpan xml:id="del-0108-0001" spanTo="#del-0108-0006" next="#del-0108-0006"/><gap reason="cut" extent="5"/> <gap reason="cut" extent="3"/> <gap reason="cut" extent="5"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="13"/> <gap reason="cut" extent="2"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="6"/>
-                     <lb facs="#zone_tr_1_tl_3"/>einzelne von ihnen eine <choice><sic>lgute</sic><corr>gute</corr></choice> Anklage gegen die uner⸗
-                     <lb facs="#zone_tr_1_tl_4"/>hörte Unmenſchlichkeit der Polizei an dem Unglückstag
-                     <lb facs="#zone_tr_1_tl_5"/>iſt. Wie die Polizei <hi rend="letter-spacing">auf ganz unſchuldige Per⸗</hi>
-                     <lb facs="#zone_tr_1_tl_6"/><hi rend="letter-spacing">ſonen Jagd</hi> gemacht hat, beſchreibt folgender Brief:
+                  <p change="#newspaper-print-1" facs="#zone_tr_1" part="F" rendition="#latin">
+                     <lb facs="#zone_tr_1_tl_2"/><delSpan xml:id="del-0108-0001" type="deselection" change="#kk-ink-2" spanTo="#anchor-0108-0003"/><gap reason="cut" extent="5"/> <gap reason="cut" extent="3"/> <gap reason="cut" extent="5"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="13"/> <gap reason="cut" extent="2"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="6"/>
+                     <lb facs="#zone_tr_1_tl_3"/>einzelne von ihnen eine <choice><sic>lgute</sic><corr>gute</corr></choice> Anklage gegen die uner<pc force="weak">⸗</pc>
+                     <lb facs="#zone_tr_1_tl_4" break="no"/>hörte Unmenſchlichkeit der Polizei an dem Unglückstag
+                     <lb facs="#zone_tr_1_tl_5"/>iſt. Wie die Polizei <hi rend="letter-spacing">auf ganz unſchuldige Per<pc force="weak">⸗</pc></hi>
+                     <lb facs="#zone_tr_1_tl_6" break="no"/><hi rend="letter-spacing">ſonen Jagd gemacht</hi> hat, beſchreibt folgender Brief:
                      <quote>
                         <p facs="#zone_r_7" rendition="#indent #left">
                            <lb facs="#zone_tr_1_tl_7"/>Unter den Augenblicksbildern, die Sie in den letzten
@@ -251,32 +271,32 @@
                            <lb facs="#zone_tr_1_tl_9"/>die jene bedankte „maßvolle Pflichterfüllung“ der Wiener
                            <lb facs="#zone_tr_1_tl_10"/>Polizei ins rechte Licht rücken —, blieb unerwähnt der
                            <lb facs="#zone_tr_1_tl_11"/><hi rend="letter-spacing">grauenhafte Ueberfall</hi>, den die Polizei Freitag
-                           <lb facs="#zone_tr_1_tl_12"/>nach ½5 Uhr auf die Paſſanten des <hi rend="letter-spacing">Burgringes</hi> voll⸗
-                           <lb facs="#zone_tr_1_tl_13"/>führte, die hier — teils zufällig, teils aus Neugier — die
+                           <lb facs="#zone_tr_1_tl_12"/>nach ½5 Uhr auf die Paſſanten des <hi rend="letter-spacing">Burgringes</hi> voll<pc force="weak">⸗</pc>
+                           <lb facs="#zone_tr_1_tl_13" break="no"/>führte, die hier — teils zufällig, teils aus Neugier — die
                            <lb facs="#zone_tr_1_tl_14"/>Bänke beſetzt hielten, in der Allee wandelten oder umher
                            <lb facs="#zone_tr_1_tl_15"/>ſtanden, ohne ſich bis zur Bellaria vorzuwagen, wo indeſſen
                            <lb facs="#zone_tr_1_tl_16"/>Ruhe eingetreten ſchien. Aus der Parlamentsgegend
-                           <lb facs="#zone_tr_1_tl_17"/>kommend hatte ich gerade die Höhe des äußeren Burgtor⸗
-                           <lb facs="#zone_tr_1_tl_18"/>erreicht, als von der Bellariaſeite wieder Schüſſe herüber⸗
-                           <lb facs="#zone_tr_1_tl_19"/><subst><del>tönten</del><add facs="#zone_r_2" xml:id="add-0108-0001"><lb facs="#zone_l_3"/>— —</add></subst><anchor xml:id="del-0108-0006" prev="#del-0108-0001"/><subst><del>.</del><add place="overwritten"><metamark function="selection-start"><g ref="#intervention"/></metamark></add></subst> Mitten in einer Gruppe entſetzter Flüchtlinge duckte
+                           <lb facs="#zone_tr_1_tl_17"/>kommend hatte ich gerade die Höhe des äußeren Burgtor<pc force="weak">⸗</pc>
+                           <lb facs="#zone_tr_1_tl_18" break="no"/>erreicht, als von der Bellariaſeite wieder Schüſſe herüber<pc force="weak">⸗</pc>
+                           <lb facs="#zone_tr_1_tl_19" break="no"/><subst change="#kk-ink-4"><del>tönten</del><add facs="#zone_r_2" change="#kk-ink-3" xml:id="add-0108-0001" rendition="#kurrent"><lb facs="#zone_l_3"/>— —</add></subst><anchor xml:id="anchor-0108-0003"/><subst change="#kk-pencil-2"><del>.</del><add place="overwritten" rendition="#kurrent"><metamark function="selection-start" change="#kk-pencil-2" rendition="#kurrent"><g ref="#intervention"/></metamark></add></subst> Mitten in einer Gruppe entſetzter Flüchtlinge duckte
                            <lb facs="#zone_tr_1_tl_20"/>ich mich, ſo gut es ging, hinter dem ſteinern Unterſatz des
                            <lb facs="#zone_tr_1_tl_21"/>Volksgartengitters, das hier zum Burgtor einſchwenkt. Die
                            <lb facs="#zone_tr_1_tl_22"/>Eingänge waren geſchloſſen, Flucht unmöglich.
                         </p>
                         <p xml:id="p-0108-0001" facs="#zone_r_8" rendition="#indent #left">
-                           <lb facs="#zone_tr_1_tl_23"/>Plötzlich fahren hinter uns zwei <hi rend="letter-spacing">Mannſchafts⸗
-                           <lb facs="#zone_tr_1_tl_24"/>autos</hi> auf, werfen etwa dreißig Mann Polizei aus, die
+                           <lb facs="#zone_tr_1_tl_23"/>Plötzlich fahren hinter uns zwei <hi rend="letter-spacing">Mannſchafts<pc force="weak">⸗</pc>
+                           <lb facs="#zone_tr_1_tl_24" break="no"/>autos</hi> auf, werfen etwa dreißig Mann Polizei aus, die
                            <lb facs="#zone_tr_1_tl_25"/>das verängſtigte Häuflein Menſchen — unter ihnen mehrere
                            <lb facs="#zone_tr_1_tl_26"/>Frauen mit Kindern — aus dem Unerwarteten anſpringen.
                         </p>
                         <p facs="#zone_r_9" rendition="#indent #left">
-                           <lb facs="#zone_tr_1_tl_27"/><hi rend="bold">K<mod rend="underline">eine Warnung, keine Aufforderung, <undo spanTo="#anchor-0108-0002" rend="wavy-line"/>keine Ver⸗<anchor type="undo" xml:id="anchor-0108-0002"/></mod></hi>
-                           <lb facs="#zone_tr_1_tl_28"/><hi rend="bold"><mod rend="underline"><undo spanTo="#anchor-0108-0003" rend="wavy-line"/>haftung,<anchor type="undo" xml:id="anchor-0108-0003"/> nur ein Kommando: „Feuer</mod>!“</hi> Zwei Salven
+                           <lb facs="#zone_tr_1_tl_27"/><hi rend="bold">K<mod rend="underline" change="#kk-ink-4">eine Warnung, keine Aufforderung, <undo spanTo="#anchor-0108-0002" change="#kk-ink-5" rend="wavy-line"/>keine Ver<pc force="weak">⸗</pc>
+                           <lb facs="#zone_tr_1_tl_28" break="no"/>haftung,<anchor type="undo" xml:id="anchor-0108-0002"/> nur ein Kommando: „Feuer</mod>!“</hi> Zwei Salven
                            <lb facs="#zone_tr_1_tl_29"/>krachen, ich ſehe, wie eine Bürgersfrau, die ſich hinter ihrem
                            <lb facs="#zone_tr_1_tl_30"/>aufgeſpannten Regenſchirm zu decken verſucht — Tragikomik
                            <lb facs="#zone_tr_1_tl_31"/>des Entſetzens! —, zuſammenbricht. Wir werfen uns hinter
-                           <lb facs="#zone_tr_1_tl_32"/>einem Haufen Feinſchotter, der zufällig entlang des Geh⸗
-                           <lb facs="#zone_tr_1_tl_33"/>ſteiges aufgeſchüttet iſt, über uns donnert minutenlang und
+                           <lb facs="#zone_tr_1_tl_32"/>einem Haufen Feinſchotter, der zufällig entlang des Geh<pc force="weak">⸗</pc>
+                           <lb facs="#zone_tr_1_tl_33" break="no"/>ſteiges aufgeſchüttet iſt, über uns donnert minutenlang und
                            <lb facs="#zone_tr_1_tl_34"/>ohne Pauſe Salve auf Salve, dann werden wir „Hände
                            <lb facs="#zone_tr_1_tl_35"/>hoch“ mit geſchwungenen Kolben gegen den Opernring
                            <lb facs="#zone_tr_1_tl_36"/>gejagt, immer wieder bedroht von Gewehren im Anſchlag
@@ -284,24 +304,24 @@
                         </p>
                         <p facs="#zone_r_10" rendition="#indent #left">
                            <lb facs="#zone_tr_1_tl_38"/>Drei Menſchen, verwundet oder ohnmächtig, blieben
-                           <lb facs="#zone_tr_1_tl_39"/>auf dem Platze.<metamark function="selection-end"><g ref="#intervention"/></metamark>
+                           <lb facs="#zone_tr_1_tl_39"/>auf dem Platze.<metamark function="selection-end" change="#kk-pencil-4" rendition="#kurrent"><g ref="#intervention"/></metamark>
                         </p>
                      </quote>
                   </p>
                   <p facs="#zone_r_11" rendition="#indent">
-                     <lb facs="#zone_tr_1_tl_40"/><del type="deselection">So haben die Schober⸗Gardiſten ohne jeden Grund
+                     <lb facs="#zone_tr_1_tl_40"/><del type="deselection" change="#kk-ink-3 #kk-pencil-2">So haben die Schober⸗Gardiſten ohne jeden Grund
                      <lb facs="#zone_tr_1_tl_41"/>auf friedliche Paſſanten Jagd gemacht! Und zu dieſen
-                     <lb facs="#zone_tr_1_tl_42"/>zariſtiſchen Polizeimethoden ſchweigt die ganze bürger⸗
-                     <lb facs="#zone_tr_1_tl_43"/>liche Oeffentlichkeit!</del>
+                     <lb facs="#zone_tr_1_tl_42"/>zariſtiſchen Polizeimethoden ſchweigt die ganze bürger<pc force="weak">⸗</pc>
+                     <lb facs="#zone_tr_1_tl_43" break="no"/>liche Oeffentlichkeit!</del>
                   </p>
                </div>
-               <metamark xml:id="metamark-0108-0002" facs="#zone_r_13">
-                  <lb facs="#zone_l_1"/><del>29. Juli</del>
+               <metamark xml:id="metamark-0108-0002" facs="#zone_r_13" change="#kk-ink-2" rendition="#kurrent">
+                  <lb facs="#zone_l_1"/><del change="#kk-ink-2">29. Juli</del>
                </metamark>
-               <metamark xml:id="metamark-0108-0003" facs="#zone_r_15" function="selection-start" target="#p-0108-0001">
-                  <lb facs="#zone_l_4"/><undo spanTo="#anchor-0108-0001" rend="strike-out" target="#metamark-0108-0003"/><g ref="#intervention"/><anchor type="undo" xml:id="anchor-0108-0001"/>
+               <metamark xml:id="metamark-0108-0003" facs="#zone_r_15" change="#kk-pencil-2" function="selection-start" target="#p-0108-0001" rendition="#kurrent">
+                  <lb facs="#zone_l_4"/><undo spanTo="#anchor-0108-0001" change="#kk-pencil-4" rend="strike-out" target="#metamark-0108-0003"/><g ref="#intervention"/><anchor type="undo" xml:id="anchor-0108-0001"/>
                </metamark>
-               <metamark xml:id="metamark-0108-0004" facs="#zone_r_14">
+               <metamark xml:id="metamark-0108-0004" facs="#zone_r_14" change="#kk-pencil-1" rendition="#kurrent">
                   <lb facs="#zone_l_2"/>26.)
                </metamark>
             </div>

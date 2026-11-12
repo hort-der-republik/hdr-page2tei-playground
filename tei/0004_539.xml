@@ -12,16 +12,23 @@
             <p>
               Quelle: 0004_539.jpg.
               Erstellt: 2026-09-14T12:23:48.877+02:00,
-              zuletzt geaendert: 2026-10-20T09:20:47.956+02:00.
+              zuletzt geaendert: 2026-11-12T11:13:00.495+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="kk-ink-1">[tbd]</change>
+               <change xml:id="kk-ink-2">[tbd]</change>
+               <change xml:id="kk-ink-3">[tbd]</change>
+            </listChange>
+         </creation>
+      </profileDesc>
    </teiHeader>
    <facsimile>
       <graphic url="0004_539.jpg" width="2758px" height="4715px"/>
-      <surface xml:id="surface_r_5"
-               type="base"
-               points="95,94 2657,79 2641,4586 89,4596">
+      <surface xml:id="surface_r_5" points="95,94 2657,79 2641,4586 89,4596">
          <zone xml:id="zone_r_1"
                type="fw"
                points="2262,192 2451,192 2451,369 2262,369">
@@ -172,17 +179,17 @@
    </facsimile>
    <text>
       <body>
-         <div facs="#surface_r_5" type="base">
-            <fw facs="#zone_r_1">
+         <div facs="#surface_r_5">
+            <fw facs="#zone_r_1" change="#kk-ink-3" type="fol" rendition="#kurrent">
                <lb facs="#zone_l"/>45
             </fw>
-            <fw facs="#zone_r_2">
+            <fw facs="#zone_r_2" type="fol">
                <lb facs="#zone_l_1"/>266
             </fw>
-            <metamark xml:id="metamark-0539-0001" facs="#zone_r_3" function="insertion" target="#add-0539-0001">
+            <metamark xml:id="metamark-0539-0001" facs="#zone_r_3" change="#kk-ink-2" function="insertion" target="#add-0539-0001" rendition="#kurrent">
                <lb facs="#zone_l_2"/><g ref="#intervention"/>
             </metamark>
-            <p facs="#zone_r_6" part="F">
+            <p change="#kk-ink-1" facs="#zone_r_6" part="F" rendition="#kurrent">
                <lb facs="#zone_l_3"/>Nicht auf <del xml:id="del-0539-0001">d<subst><add>ie</add><del xml:id="del-0539-0002">en</del></subst> <del xml:id="del-0539-0003">A</del> E<gap reason="illegible" extent="8"/>ung</del> den Ausgang kommt
                <lb facs="#zone_l_4"/>es an, nur auf die Gelegenheit, der Welt zu sagen.
                <lb facs="#zone_l_5"/>„wie alles dies geschah“, sie wieder einmal von Taten
@@ -190,19 +197,19 @@
                <lb facs="#zone_l_7"/><del><gap reason="illegible" extent="10"/></del> Gerichten, blindem Mord; von Planen, die 
                <lb facs="#zone_l_8"/>verfehlt zurückgefallen auf den Erfinder Haupt. Und
                <lb facs="#zone_l_10"/>
-               <lb facs="#zone_l_9"/>von einem Aktenstück, <gap reason="illegible" extent="8"/> über das ihr
+               <lb facs="#zone_l_9"/>von einem Aktenstück, <subst><del><gap reason="illegible" extent="8"/></del><add facs="#zone_l_10" xml:id="add-0539-0002" place="below">vor dem</add></subst> über das ihr
                <lb facs="#zone_l_11"/>die Augen übergehen werden, wenn ich es mit einem
-               <lb facs="#zone_l_12"/>Steckbrief konfrontiere. <subst><del>Ei<gap reason="illegible" extent="3"/></del> <add place="inline">Die</add></subst> unbeglaubigte
+               <lb facs="#zone_l_12"/>Steckbrief konfrontiere. <subst><del>Ei<gap reason="illegible" extent="3"/></del><del subtype="implicit"> </del><add place="inline">Die</add></subst> unbeglaubigte
                <lb facs="#zone_l_13"/>Aussage des angeklagten Privatmanns will es mit einem
                <lb facs="#zone_l_14"/>Amtseid aufnehmen, womöglich unter Zuziehung
-               <lb facs="#zone_l_15"/>eines ungarischen von gleichem Range.<metamark function="insertion"/><add facs="#zone_r_4" xml:id="add-0539-0001"><lb facs="#zone_l_32"/>Die Wahrheit zu sagen in einer Welt der Lüge – wäre man<lb facs="#zone_l_39"/><lb facs="#zone_l_33"/><gap reason="illegible" extent="3"/> nicht den Toten schuldig, so <gap reason="illegible" extent="4"/> doch die geringste<lb facs="#zone_l_40"/><lb facs="#zone_l_34"/>Erkenntlichkeit für den Glücksfall, daß man nicht zu ihnen zählt. Und<lb facs="#zone_l_35"/>an derselben Stelle, wo die Menschen, die de<subst><del>n</del><add place="overwritten">m</add></subst> <metamark function="addition" target="#add-0539-0007"><g ref="#intervention"/></metamark>Verwundeten<lb facs="#zone_l_41"/><add xml:id="add-0539-0007" place="below">Transport der</add><lb facs="#zone_l_36"/>Automobile bestimmt hatten, als<lb facs="#zone_l_37"/>Erpresser gebrandmarkt wurden, dort will ich die<lb facs="#zone_l_38"/>Frage aufwerfen,</add> <del>Es gelüstet mich,</del>
+               <lb facs="#zone_l_15"/>eines ungarischen von gleichem Range.<metamark function="insertion" change="#kk-ink-2" rendition="#kurrent"/><add facs="#zone_r_4" change="#kk-ink-2" xml:id="add-0539-0001" rendition="#kurrent"><lb facs="#zone_l_32"/>Die Wahrheit zu sagen in einer Welt der Lüge – wäre man<lb facs="#zone_l_39"/><lb facs="#zone_l_33"/><subst><del><gap reason="illegible" extent="3"/></del><add facs="#zone_l_39" xml:id="add-0539-0005" place="above">es</add></subst> nicht den Toten schuldig, so <subst><del><gap reason="illegible" extent="4"/></del><add facs="#zone_l_40" xml:id="add-0539-0006" place="below">wäre <del>sie</del> es</add></subst> doch die geringste<lb facs="#zone_l_40"/><lb facs="#zone_l_34"/>Erkenntlichkeit für den Glücksfall, daß man nicht zu ihnen zählt. Und<lb facs="#zone_l_35"/>an derselben Stelle, wo die Menschen, die de<subst><del>n</del><add place="overwritten">m</add></subst> <metamark function="addition"><g ref="#intervention"/></metamark><add facs="#zone_l_41" xml:id="add-0539-0007" place="below">Transport der</add>Verwundeten<lb facs="#zone_l_41"/><lb facs="#zone_l_36"/>Automobile bestimmt hatten, als<lb facs="#zone_l_37"/>Erpresser gebrandmarkt wurden, dort will ich die<lb facs="#zone_l_38"/>Frage aufwerfen,</add> <del>Es gelüstet mich,</del>
                <lb facs="#zone_l_16"/><del>vor der <gap reason="illegible" extent="8"/> Welt in die <gap reason="illegible" extent="10"/> einzugehen,</del>
                <lb facs="#zone_l_17"/><del>zu derselben Stelle, wo Menschen,</del> die
                <lb facs="#zone_l_18"/><del>Automobile für <gap reason="illegible" extent="10"/> <gap reason="illegible" extent="6"/> <gap reason="illegible" extent="7"/></del>
                <lb facs="#zone_l_19"/><del><gap reason="illegible" extent="10"/> <gap reason="illegible" extent="3"/> gebrauchen wollten, als Erpresser</del>
                <lb facs="#zone_l_20"/><del>gebrandmarkt wurden, <gap reason="illegible" extent="2"/> die Frage aufzuwerfen,</del>
                <lb facs="#zone_l_22"/>
-               <lb facs="#zone_l_21"/>ob die Polizei diesen Fall <gap reason="illegible" extent="3"/> den ersten erkannt hat,
+               <lb facs="#zone_l_21"/>ob die Polizei diesen Fall <subst><del><gap reason="illegible" extent="3"/></del><add facs="#zone_l_22" xml:id="add-0539-0003" place="above">als</add></subst> den ersten erkannt hat,
                <lb facs="#zone_l_23"/><del><gap reason="illegible" extent="4"/>,</del> auf den die Verbrechensmerkmale zutreffen. <del>Wer d<gap reason="illegible" extent="2"/></del>
                <lb facs="#zone_l_24"/><del>Ausgang betrifft, so mißlingt</del>
                <lb facs="#zone_l_25"/>Mißlingt der Versuch, so werd ich es als 

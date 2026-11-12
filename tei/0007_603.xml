@@ -12,14 +12,23 @@
             <p>
               Quelle: 0007_603.jpg.
               Erstellt: 2026-10-02T15:12:25.729+02:00,
-              zuletzt geaendert: 2026-10-20T12:47:18.198+02:00.
+              zuletzt geaendert: 2026-11-12T12:40:30.407+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="ar-pencil-1">[tbd]</change>
+               <change xml:id="fp-1">[tbd]</change>
+               <change xml:id="kk-ink-3">[tbd]</change>
+            </listChange>
+         </creation>
+      </profileDesc>
    </teiHeader>
    <facsimile>
       <graphic url="0007_603.jpg" width="5194px" height="6837px"/>
-      <surface lrx="5194" lry="6837" xml:id="surface_0007_603.jpg" type="base">
+      <surface xml:id="surface_r_26" points="134,161 5069,122 5068,6685 137,6722">
          <zone xml:id="zone_r_23"
                type="fw"
                points="4142,393 4547,393 4547,632 4142,632">
@@ -42,14 +51,14 @@
                   points="532,2192 654,2170 719,2211 824,2153 886,2192 919,2178 925,2064 883,2066 861,2086 788,2050 688,2072 538,2041"/>
          </zone>
          <zone xml:id="zone_r_5"
-               type="add"
+               type="metamark"
                points="676,3625 892,3625 892,3742 676,3742">
             <zone type="line"
                   xml:id="zone_r_5_tl_1"
                   points="677,3735 696,3740 724,3729 766,3740 785,3726 827,3743 858,3729 869,3740 897,3737 897,3615 880,3618 855,3601 813,3618 799,3612 730,3668 677,3676"/>
          </zone>
          <zone xml:id="zone_r_2"
-               type="add"
+               type="metamark-deleatur"
                points="1031,2053 1171,2053 1171,2185 1031,2185">
             <zone type="line"
                   xml:id="zone_l_4"
@@ -401,32 +410,30 @@
    </facsimile>
    <text>
       <body>
-         <div type="base" facs="#surface_0007_603.jpg">
-            <fw facs="#zone_r_23">
+         <div facs="#surface_r_26">
+            <fw facs="#zone_r_23" type="fol">
                <lb facs="#zone_r_23_tl_1"/>32
             </fw>
-            <fw facs="#zone_r_24">
+            <fw facs="#zone_r_24" change="#ar-pencil-1" type="fol" rendition="#latin">
                <lb facs="#zone_r_24_tl_1"/>298
             </fw>
-            <add xml:id="add-0603-0001" facs="#zone_r_1"><lb facs="#zone_r_1_tl_1"/>+ den stärkste</add>
-            <add xml:id="add-0603-0002" facs="#zone_r_5"><lb facs="#zone_r_5_tl_1"/>D</add>
-            <add xml:id="add-0603-0003" facs="#zone_r_2"><lb facs="#zone_l_4"/>1d</add>
-            <add xml:id="add-0603-0004" facs="#zone_r_3"><lb facs="#zone_r_3_tl_1"/>Ich</add>
-            <add xml:id="add-0603-0005" facs="#zone_r_4"><lb facs="#zone_r_4_tl_1"/>et dù</add>
-            <add xml:id="add-0603-0006" facs="#zone_r_6"><lb facs="#zone_r_6_tl_1"/>4 ehmen konnte.</add>
-            <add xml:id="add-0603-0007" facs="#zone_r_7"><lb facs="#zone_r_7_tl_1"/>Herrschaffen</add>
-            <add xml:id="add-0603-0008" facs="#zone_r_8"><lb facs="#zone_r_8_tl_1"/>vollennen</add>
-            <p facs="#zone_r" part="M">
-               <lb facs="#zone_r_tl_1"/>seiner Milliardenerpressungen und Betrügereien,
+            <metamark xml:id="metamark-0603-0001" facs="#zone_r_5" function="unknown">
+               <lb facs="#zone_r_5_tl_1"/><del><g ref="#intervention"/> <gap reason="illegible" extent="2"/></del>
+            </metamark>
+            <metamark xml:id="metamark-0603-0002" facs="#zone_r_2" function="deletion" target="#del-0603-0001">
+               <lb facs="#zone_l_4"/><g ref="#intervention"/> <g ref="#deleatur"/>
+            </metamark>
+            <p change="#fp-1" facs="#zone_r" part="M" rendition="#antiqua">
+               <lb facs="#zone_r_tl_1"/>seiner Milliardenerpressungen und <metamark function="addition"/><add facs="#zone_r_10" xml:id="add-0603-0009"><lb facs="#zone_r_10_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> insbesondere</add> Betrügereien, <metamark function="addition"/><add facs="#zone_r_11" xml:id="add-0603-0015"><lb facs="#zone_r_11_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> deren Feststellung sie schuldig blieb<subst><del>,</del><add place="overwritten">–</add></subst></add>
                <lb facs="#zone_r_tl_2"/>und dies alles im Höhepunkt eines Kampfes von
                <lb facs="#zone_r_tl_3"/>titanischem Umfang und für die Zwecke eines
                <lb facs="#zone_r_tl_4"/>Gerichtsverfahrens, dessen Ausgang unfehlbar die
                <lb facs="#zone_r_tl_5"/>Befestigung der Erpressermacht herbeigeführt hätte,
                <lb facs="#zone_r_tl_6"/>wäre die Zähigkeit des Alleinkämpfers nicht größer
                <lb facs="#zone_r_tl_7"/>gewesen als der Verrat, Ähnliches ist nie erlebt
-               <lb facs="#zone_r_tl_8"/>worden, (nis ein Fall, wo die Verfolgung eines
+               <lb facs="#zone_r_tl_8"/>worden, <subst><del>nie</del><add facs="#zone_r_12" xml:id="add-0603-0016"><lb facs="#zone_r_12_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> mit ähnlichem Mut, durch die<lb facs="#zone_r_12_tl_2"/>Wendung zu entlassen, nach<lb facs="#zone_r_12_tl_3"/>ihr zu schweigen, der zu<lb facs="#zone_r_12_tl_5"/>währen, dass der<lb facs="#zone_r_12_tl_6"/>Verraten nur zufrieden<lb facs="#zone_r_12_tl_8"/>sein und wohl<lb facs="#zone_l_2"/>gleichfalls die Sache<lb facs="#zone_l_3"/>preisgeben werde. Nie noch</add></subst> ein Fall, wo die Verfolgung eines
                <lb facs="#zone_r_tl_9"/>Erpressers, in dem Moment, da er der Behörde
-               <lb facs="#zone_r_tl_10"/>selbst einen Beweis seiner Fähigkeit liefert, in seine
+               <lb facs="#zone_r_tl_10"/>selbst <subst><del>einen</del><add facs="#zone_r_1" xml:id="add-0603-0001"><lb facs="#zone_r_1_tl_1"/>+ den stärkste</add></subst> Beweis seiner Fähigkeit liefert, in <del xml:id="del-0603-0001">s</del>eine
                <lb facs="#zone_r_tl_11"/>Ehrenrettung umschlägt. Von allen Erlebnissen des
                <lb facs="#zone_r_tl_12"/>beispiellosen Kampfes war dieses das erschütterndste.
                <lb facs="#zone_r_tl_13"/>und das lesende Auge wehrte sich, einem Aktenstück
@@ -434,25 +441,25 @@
                <lb facs="#zone_r_tl_15"/>was ein glaubendes Ohr noch tagszuvor gehört hatte.
                <lb facs="#zone_r_tl_16"/>Aber es war nicht anders: während ich mit Herrn
                <lb facs="#zone_r_tl_17"/>Schober, der meinem gemeinnützigen Beginnen
-               <lb facs="#zone_r_tl_18"/>durch Monate mit aller Sympathie und Hilfsbereit-
-               <lb facs="#zone_r_tl_19"/>schaft folgte, die ihm die beschränkten Mittel der
-               <lb facs="#zone_r_tl_20"/>Amtlickeit und Persönlichkeit zu gewähren schienen,
+               <lb facs="#zone_r_tl_18"/>durch Monate mit <subst><del>aller</del><add facs="#zone_r_13" xml:id="add-0603-0010"><lb facs="#zone_r_13_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> der</add></subst> Sympathie und Hilfsbereit<pc force="weak">-</pc>
+               <lb facs="#zone_r_tl_19" break="no"/>schaft folgte, die ihm die beschränkten Mittel der
+               <lb facs="#zone_r_tl_20"/>Amtli<subst><del>c</del><add facs="#zone_r_3" xml:id="add-0603-0002"><lb facs="#zone_r_3_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark>ch</add></subst>keit und Persönlichkeit zu gewähren schienen,
                <lb facs="#zone_r_tl_21"/>über die Möglichkeit beriet, den Aktenschiebereien
                <lb facs="#zone_r_tl_22"/>des Erpressers auf die Spur zu kommen, hatte dieser
-               <lb facs="#zone_r_tl_23"/>eine Hintertreppe zu einem Funktionär gefunden,
+               <lb facs="#zone_r_tl_23"/><subst><del>eine</del><add facs="#zone_r_4" xml:id="add-0603-0003"><lb facs="#zone_r_4_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> die</add></subst> Hintertreppe zu einem Funktionär gefunden,
                <lb facs="#zone_r_tl_24"/>der offenbar Macht hat, die Entschließungen des
                <lb facs="#zone_r_tl_25"/>Vorgesetzten zu beeinflussen. Genau vermöchte ich
                <lb facs="#zone_r_tl_26"/>den Zeitpunkt und den Modus anzugeben, wann
-               <lb facs="#zone_r_tl_27"/>und wie der Erpresser von der Gefahr Kunde
-               <lb facs="#zone_r_tl_28"/>erhalten hat, daß die Polizei im Begrif sei, sich zu
+               <lb facs="#zone_r_tl_27"/>und wie der Erpresser <del xml:id="del-0603-0002"><undo spanTo="#anchor-0603-0001" target="#del-0603-0002"/>von der<anchor type="undo" xml:id="anchor-0603-0001"/></del> Gefahr <del xml:id="del-0603-0003"><undo spanTo="#anchor-0603-0002" target="#del-0603-0003"/>Kunde<anchor type="undo" xml:id="anchor-0603-0002"/></del>
+               <lb facs="#zone_r_tl_28"/>erhalten hat, daß die Polizei im Begri<subst><del>f</del><add facs="#zone_r_14" xml:id="add-0603-0011"><lb facs="#zone_l_5"/><metamark function="intervention"><g ref="#intervention"/></metamark>ff<add place="inline">e</add></add></subst> sei, sich zu
                <lb facs="#zone_r_tl_29"/>einer Ergänzung der Leumundsnote aufzuraffen, die
                <lb facs="#zone_r_tl_30"/>durch die Mitteilung von Betrugsfakten an das
                <lb facs="#zone_r_tl_31"/>Landesgericht für ihn einen unmittelbar katastrophalen
-               <lb facs="#zone_r_tl_32"/>Charakter annahm. Und es gelang ihm, dieser
-               <lb facs="#zone_r_tl_33"/>Ergänzung den Sinn/eines Widerrufs/der vorhandenen
-               <lb facs="#zone_r_tl_34"/>Feststellung zu geben, daß er ein bestechlicher
-               <lb facs="#zone_r_tl_35"/>Journalist sei. Es gelang ihm durch einen fried-
-               <lb facs="#zone_r_tl_36"/>fertigen Hinweis auf jene infame Bedrohung des
+               <lb facs="#zone_r_tl_32"/>Charakter ann<subst><del>ahm</del><add facs="#zone_r_6" xml:id="add-0603-0004"><lb facs="#zone_r_6_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> ehmen konnte.</add></subst>. Und es gelang ihm, dieser
+               <lb facs="#zone_r_tl_33"/>Ergänzung den Sinn <metamark function="addition"/><add facs="#zone_r_15" xml:id="add-0603-0012"><lb facs="#zone_r_15_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> einer Berichtigung,</add> eines Widerrufs <metamark function="addition"/><add facs="#zone_r_16" xml:id="add-0603-0020"><lb facs="#zone_r_16_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> selbst</add> der vorhandenen
+               <lb facs="#zone_r_tl_34"/>Feststellung zu <subst><del>geben</del><add facs="#zone_r_7" xml:id="add-0603-0005"><lb facs="#zone_r_7_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> verschaffen</add></subst>, daß er ein bestechlicher
+               <lb facs="#zone_r_tl_35"/>Journalist sei. Es gelang ihm <metamark function="addition"/><add facs="#zone_r_17" xml:id="add-0603-0013"><lb facs="#zone_r_17_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark>, wie ich weiß,</add> durch einen fried<pc force="weak">-</pc>
+               <lb facs="#zone_r_tl_36" break="no"/>fertigen Hinweis auf jene infame Bedrohung des
                <lb facs="#zone_r_tl_37"/>Privatlebens von Funktionären, mit der er, wie
                <lb facs="#zone_r_tl_38"/>später festgestellt werden konnte, in den Tagen
                <lb facs="#zone_r_tl_39"/>erfolgreich operiert hat, als einer seiner Angestellten
@@ -460,21 +467,11 @@
                <lb facs="#zone_r_tl_41"/>genommen wurde. Die Lahmlegung der Autorität,
                <lb facs="#zone_r_tl_42"/>nach dem erneuten Versuch, unter meinem Antrieb
                <lb facs="#zone_r_tl_43"/>die Stadt vom Tyrannen zu befreien, bietet in
-               <lb facs="#zone_r_tl_44"/>diesem Zusammenhang wohl den traurigsten Aspekt,
+               <lb facs="#zone_r_tl_44"/>diesem Zusammenhang wohl den traurigsten <subst><del>Aspekt</del><add facs="#zone_r_18" xml:id="add-0603-0014"><lb facs="#zone_r_18_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> Anblick</add></subst>,
                <lb facs="#zone_r_tl_45"/>den menschliche Hinfälligkeit in Amtskleid jemals
-               <lb facs="#zone_r_tl_46"/>geboten hat, und der Zusammenhang des Herrn
-               <lb facs="#zone_r_tl_47"/>Bosel dürfte sich auch hier feststellen lassen<subst><del>.</del><add facs="#zone_r_20" xml:id="add-0603-0020"><lb facs="#zone_r_20_tl_1"/>I wie nicht minder<lb facs="#zone_r_20_tl_2"/>in der Möglichkeit,<lb facs="#zone_r_20_tl_3"/>Ich den trotz allem<lb facs="#zone_r_20_tl_4"/>von 1. Knall<lb facs="#zone_r_20_tl_5"/>vom Staatsanwalt versetzt.<lb facs="#zone_r_20_tl_6"/>über die Grenze gelangen<lb facs="#zone_r_20_tl_7"/>konnte. Ich führte <metamark function="addition"/><add facs="#zone_r_9" xml:id="add-0603-0009"><lb facs="#zone_r_9_tl_1"/>alles auf den leidigen<lb facs="#zone_r_9_tl_2"/>Zusatz zurück, der dem Herrn<lb facs="#zone_l_8"/>Ersel in einem Warteraum<lb facs="#zone_l_7"/>es ermöglichte, den<metamark function="addition"/><add facs="#zone_r_25" xml:id="add-0603-0010"><lb facs="#zone_l_9"/>hoffnungslich</add> Versuch<lb facs="#zone_r_9_tl_5"/>meiner Bekanntschaft zu machen, <metamark function="addition"/><add facs="#zone_r_21" xml:id="add-0603-0021"><lb facs="#zone_l_10"/>der über die Neuerung seines Namens nicht hinausgegangen ist. <metamark function="addition"/><add facs="#zone_r_22" xml:id="add-0603-0023"><lb facs="#zone_l"/>Da ahnte ich, welche Stunde es geschlagen hatte.<lb facs="#zone_l_1"/>und empfehl zwischen Sicherungen.</add></add><lb facs="#zone_l_6"/>Verkäufer</add></add></subst> Ich
+               <lb facs="#zone_r_tl_46"/>geboten hat, und <metamark function="addition"/><add facs="#zone_r_19" xml:id="add-0603-0017"><lb facs="#zone_r_19_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> die Hand</add> des Herrn
+               <lb facs="#zone_r_tl_47"/>Bosel dürfte sich auch hier <subst><del>feststellen</del><add facs="#zone_r_8" xml:id="add-0603-0006"><lb facs="#zone_r_8_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> erkennen</add></subst> lassen<subst><del>.</del><add facs="#zone_r_20" xml:id="add-0603-0018"><lb facs="#zone_r_20_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark>, wie nicht minder<lb facs="#zone_r_20_tl_2"/>in der Möglichkeit,<lb facs="#zone_r_20_tl_3"/>daß der trotz allem<lb facs="#zone_r_20_tl_4"/><del>von der Staat</del><lb facs="#zone_r_20_tl_5"/>vom Staatsanwalt <gap reason="illegible" extent="2"/> verfolgten<lb facs="#zone_r_20_tl_6"/><gap reason="illegible" extent="6"/> über die Grenze gelangen<lb facs="#zone_r_20_tl_7"/>konnte. Ich führte <metamark function="addition"/><add facs="#zone_r_9" xml:id="add-0603-0007"><lb facs="#zone_r_9_tl_1"/><retrace change="#kk-ink-3" rendition="#kurrent">alles auf den leidigen<lb facs="#zone_r_9_tl_2"/>Zusatz zurück,</retrace> der dem Herrn<lb facs="#zone_l_8"/>Bosel in einem Warteraum<lb facs="#zone_l_7"/>es ermöglichte, den<metamark function="addition"/><add facs="#zone_r_25" xml:id="add-0603-0008"><lb facs="#zone_l_9"/>hoffnungslosen</add> Versuch<lb facs="#zone_r_9_tl_5"/>meiner Bekanntschaft zu machen, <metamark function="addition"/><add facs="#zone_r_21" xml:id="add-0603-0019"><lb facs="#zone_l_10"/><metamark function="intervention"><g ref="#intervention"/></metamark> der über die Nennung seines Namens nicht hinausgegangen ist. <metamark function="addition"/><add facs="#zone_r_22" xml:id="add-0603-0021"><lb facs="#zone_l"/>Da ahnte ich, welche Stunde es geschlagen hatte<subst><del>,</del><add place="overwritten">.</add></subst><lb facs="#zone_l_1"/><del>und empfahl gewiſſe Sicherungen.</del></add> <gap reason="illegible" extent="5"/> <gap reason="illegible" extent="6"/> <gap reason="illegible" extent="3"/> <gap reason="illegible" extent="6"/> <gap reason="illegible" extent="4"/>,</add> <gap reason="illegible" extent="3"/> <gap reason="illegible" extent="3"/> <gap reason="illegible" extent="3"/><lb facs="#zone_l_6"/><del>Verkäufer</del></add></add></subst> Ich
             </p>
-            <add xml:id="add-0603-0011" facs="#zone_r_10"><lb facs="#zone_r_10_tl_1"/>[insbesondere</add>
-            <add xml:id="add-0603-0012" facs="#zone_r_13"><lb facs="#zone_r_13_tl_1"/>x des</add>
-            <add xml:id="add-0603-0013" facs="#zone_r_14"><lb facs="#zone_l_5"/>1172</add>
-            <add xml:id="add-0603-0014" facs="#zone_r_15"><lb facs="#zone_r_15_tl_1"/>1 einer Berichtigung,</add>
-            <add xml:id="add-0603-0015" facs="#zone_r_17"><lb facs="#zone_r_17_tl_1"/>I, wie ich weiß,</add>
-            <add xml:id="add-0603-0016" facs="#zone_r_18"><lb facs="#zone_r_18_tl_1"/>+ Anblick</add>
-            <add xml:id="add-0603-0017" facs="#zone_r_11"><lb facs="#zone_r_11_tl_1"/>I. Deren Feststellung sie schuldig blieb.</add>
-            <add xml:id="add-0603-0018" facs="#zone_r_12"><lb facs="#zone_r_12_tl_1"/>mit ähnlichem Mut, durch die<lb facs="#zone_r_12_tl_2"/>Wendung zu entlassen, nach<lb facs="#zone_r_12_tl_3"/>ihr zu schweigen, der zu<lb facs="#zone_r_12_tl_5"/>währen, dass der<lb facs="#zone_r_12_tl_6"/>Verraten nur zufrieden<lb facs="#zone_r_12_tl_8"/>sein und wohl<lb facs="#zone_l_2"/>gleichfalls die Sache<lb facs="#zone_l_3"/>preisgeben werde. Nie noch</add>
-            <add xml:id="add-0603-0019" facs="#zone_r_19"><lb facs="#zone_r_19_tl_1"/>H. die Hand</add>
-            <add xml:id="add-0603-0022" facs="#zone_r_16"><lb facs="#zone_r_16_tl_1"/>I keep</add>
          </div>
       </body>
    </text>

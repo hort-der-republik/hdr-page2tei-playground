@@ -12,17 +12,21 @@
             <p>
               Quelle: 0006_459.jpg.
               Erstellt: 2026-10-02T15:12:04.900+02:00,
-              zuletzt geaendert: 2026-10-20T12:21:17.548+02:00.
+              zuletzt geaendert: 2026-11-12T12:18:52.080+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="kk-ink-1">[tbd]</change>
+            </listChange>
+         </creation>
+      </profileDesc>
    </teiHeader>
    <facsimile>
       <graphic url="0006_459.jpg" width="2754px" height="4727px"/>
-      <surface xml:id="surface_r_5"
-               type="base"
-               subtype="base"
-               points="97,81 2648,78 2648,4609 85,4609">
+      <surface xml:id="surface_r_5" points="97,81 2648,78 2648,4609 85,4609">
          <zone xml:id="zone_r_8"
                type="fw"
                points="2116,160 2255,160 2255,293 2116,293">
@@ -201,14 +205,14 @@
    </facsimile>
    <text>
       <body>
-         <div facs="#surface_r_5" type="base" subtype="base">
+         <div facs="#surface_r_5">
             <fw facs="#zone_r_8" type="fol">
                <lb facs="#zone_l_25"/>8
             </fw>
             <fw facs="#zone_r_7" type="fol">
                <lb facs="#zone_l_26"/>226
             </fw>
-            <p facs="#zone_r #zone_r_1" rendition="#handwritten" part="M">
+            <p change="#kk-ink-1" facs="#zone_r #zone_r_1" rendition="#handwritten #kurrent" part="M">
                <lb facs="#zone_l"/>das Beſtreben, dem Klaſſenkampf mit dem
                <lb facs="#zone_l_1"/>Rüſtzeug der Taferlklaſſe zu begegnen,
                <lb facs="#zone_l_2"/><gap reason="illegible" extent="2"/> die Dürftigkeit <gap reason="illegible" extent="4"/> parlamentarischen
@@ -245,15 +249,15 @@
                      <l facs="#zone_l_33">Führt’ er uns zu neuem Glück.</l>
                      <l facs="#zone_l_34">Der ſein Leben uns geweiht,</l>
                      <l facs="#zone_l_35">Unſer Land von Not befreit</l>
-                     <l facs="#zone_l_36">[: Gott erhalt’ ihn lang uns noch,</l>
+                     <l facs="#zone_l_36">[: <hi rend="underline">Gott erhalt’</hi> ihn lang uns noch,</l>
                      <l facs="#zone_l_37">Unſer Seipel lebe hoch. :]</l>
                   </lg>
                </quote>
-               <metamark xml:id="metamark-0459-0003" facs="#zone_r_4" function="font">
-                  <lb facs="#zone_l_29"/>garmd
+               <metamark xml:id="metamark-0459-0003" facs="#zone_r_4" change="#kk-ink-1" function="font" rendition="#kurrent">
+                  <lb facs="#zone_l_29"/><hi rend="underline">garmd</hi>
                </metamark>
                <lb facs="#zone_l_45"/>
-               <lb facs="#zone_l_40"/><metamark function="addition"/><add facs="#zone_r_3" xml:id="add-0459-0001"><lb facs="#zone_l_38"/>Die Autoren gibt es: Die TÖne sind von R. H. Dietrich,<lb facs="#zone_l_39"/>die Wlrte von Anton Odič</add>Auf dem Titelblatt <metamark function="addition"/><add facs="#zone_l_45" xml:id="add-0459-0002" place="above">aber</add> die Reproduktion eines<gap reason="illegible" extent="1"/> mir <gap reason="illegible" extent="8"/> <gap reason="illegible" extent="4"/> die
+               <lb facs="#zone_l_40"/><metamark function="addition"/><add facs="#zone_r_3" xml:id="add-0459-0001"><lb facs="#zone_l_38"/>Die Autoren gibt es: Die Töne sind von R. H. Dietrich,<lb facs="#zone_l_39"/>die Worte von Anton Odič. </add>Auf dem Titelblatt <metamark function="addition"/><add facs="#zone_l_45" xml:id="add-0459-0002" place="above">aber</add> die Reproduktion eines<gap reason="illegible" extent="1"/> wie <gap reason="illegible" extent="8"/> <gap reason="illegible" extent="4"/> die
                <lb facs="#zone_l_41"/>Erläuterung, lange vor dem Scheitern des Mehlkartells verſichert <gap reason="illegible" extent="2"/> von Profeſſor Joſef
                <lb facs="#zone_l_42"/>Engelhart "gemalenem Portrait" des Hochwürdigſten Hausprälaten
                <lb facs="#zone_l_43"/>Seiner Heiligkeit, die doch immerhin den Verſuch unternommen hat,

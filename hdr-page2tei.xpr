@@ -10,6 +10,66 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>tei/0007_603.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>page2tei</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>page/0002_180.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>page2tei</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>page/0003_406.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>page2tei</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>page/0007_603.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -111,46 +171,6 @@
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>tei/0003_406.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>page2tei</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>page/0003_406.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>page2tei</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>page/0002_180.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>

@@ -3,49 +3,48 @@
     <Metadata>
         <Creator>prov=READ-COOP:name=PyLaia@TranskribusPlatform:version=2.51.0:model_id=50870:lm=none:date=14_09_2026_14:17</Creator>
         <Created>2026-09-14T12:23:49.012+02:00</Created>
-        <LastChange>2026-10-20T14:24:15.583+02:00</LastChange>
-        <TranskribusMetadata docId="18855842" pageId="127360803" pageNr="5" tsid="307031232" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=LNTKTORFKTNNRQDBKJLULZWA" xmlUrl="https://files.transkribus.eu/Get?id=BHIGFGAPTLAKDEUKVBOZDNIW" imageId="108583559"/>
+        <LastChange>2026-11-12T12:07:43.663+01:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="127360803" pageNr="5" tsid="309433936" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=LNTKTORFKTNNRQDBKJLULZWA" xmlUrl="https://files.transkribus.eu/Get?id=KUKRFNBVTWAXDFAJBWSPCESB" imageId="108583559"/>
     </Metadata>
     <Page imageFilename="0005_581.jpg" imageWidth="5198" imageHeight="6817">
         <ReadingOrder>
-            <OrderedGroup id="ro_1792568340897" caption="Regions reading order">
+            <OrderedGroup id="ro_1794483648540" caption="Regions reading order">
                 <RegionRefIndexed index="0" regionRef="r_31"/>
                 <RegionRefIndexed index="1" regionRef="tr_3"/>
                 <RegionRefIndexed index="2" regionRef="r_9"/>
                 <RegionRefIndexed index="3" regionRef="r_33"/>
-                <RegionRefIndexed index="4" regionRef="tr_2"/>
-                <RegionRefIndexed index="5" regionRef="r_8"/>
-                <RegionRefIndexed index="6" regionRef="r_6"/>
-                <RegionRefIndexed index="7" regionRef="r_10"/>
-                <RegionRefIndexed index="8" regionRef="r_12"/>
-                <RegionRefIndexed index="9" regionRef="r_11"/>
-                <RegionRefIndexed index="10" regionRef="r_14"/>
-                <RegionRefIndexed index="11" regionRef="r_13"/>
-                <RegionRefIndexed index="12" regionRef="r_15"/>
-                <RegionRefIndexed index="13" regionRef="r_7"/>
-                <RegionRefIndexed index="14" regionRef="r_16"/>
-                <RegionRefIndexed index="15" regionRef="r_17"/>
-                <RegionRefIndexed index="16" regionRef="r_4"/>
-                <RegionRefIndexed index="17" regionRef="r_5"/>
-                <RegionRefIndexed index="18" regionRef="r_3"/>
-                <RegionRefIndexed index="19" regionRef="r_18"/>
-                <RegionRefIndexed index="20" regionRef="r_19"/>
-                <RegionRefIndexed index="21" regionRef="r_21"/>
-                <RegionRefIndexed index="22" regionRef="r_20"/>
-                <RegionRefIndexed index="23" regionRef="r_2"/>
-                <RegionRefIndexed index="24" regionRef="r_22"/>
-                <RegionRefIndexed index="25" regionRef="r_1"/>
-                <RegionRefIndexed index="26" regionRef="r_23"/>
-                <RegionRefIndexed index="27" regionRef="tr_1"/>
-                <RegionRefIndexed index="28" regionRef="r_32"/>
-                <RegionRefIndexed index="29" regionRef="r"/>
-                <RegionRefIndexed index="30" regionRef="r_24"/>
-                <RegionRefIndexed index="31" regionRef="r_25"/>
-                <RegionRefIndexed index="32" regionRef="r_26"/>
-                <RegionRefIndexed index="33" regionRef="r_27"/>
-                <RegionRefIndexed index="34" regionRef="r_28"/>
-                <RegionRefIndexed index="35" regionRef="r_29"/>
-                <RegionRefIndexed index="36" regionRef="r_30"/>
+                <RegionRefIndexed index="4" regionRef="r_8"/>
+                <RegionRefIndexed index="5" regionRef="r_6"/>
+                <RegionRefIndexed index="6" regionRef="r_10"/>
+                <RegionRefIndexed index="7" regionRef="r_12"/>
+                <RegionRefIndexed index="8" regionRef="r_11"/>
+                <RegionRefIndexed index="9" regionRef="r_14"/>
+                <RegionRefIndexed index="10" regionRef="r_13"/>
+                <RegionRefIndexed index="11" regionRef="r_15"/>
+                <RegionRefIndexed index="12" regionRef="r_7"/>
+                <RegionRefIndexed index="13" regionRef="r_16"/>
+                <RegionRefIndexed index="14" regionRef="r_17"/>
+                <RegionRefIndexed index="15" regionRef="r_4"/>
+                <RegionRefIndexed index="16" regionRef="r_5"/>
+                <RegionRefIndexed index="17" regionRef="r_3"/>
+                <RegionRefIndexed index="18" regionRef="r_18"/>
+                <RegionRefIndexed index="19" regionRef="r_19"/>
+                <RegionRefIndexed index="20" regionRef="r_21"/>
+                <RegionRefIndexed index="21" regionRef="r_20"/>
+                <RegionRefIndexed index="22" regionRef="r_2"/>
+                <RegionRefIndexed index="23" regionRef="r_22"/>
+                <RegionRefIndexed index="24" regionRef="r_1"/>
+                <RegionRefIndexed index="25" regionRef="r_23"/>
+                <RegionRefIndexed index="26" regionRef="tr_1"/>
+                <RegionRefIndexed index="27" regionRef="r_32"/>
+                <RegionRefIndexed index="28" regionRef="r"/>
+                <RegionRefIndexed index="29" regionRef="r_24"/>
+                <RegionRefIndexed index="30" regionRef="r_25"/>
+                <RegionRefIndexed index="31" regionRef="r_26"/>
+                <RegionRefIndexed index="32" regionRef="r_27"/>
+                <RegionRefIndexed index="33" regionRef="r_28"/>
+                <RegionRefIndexed index="34" regionRef="r_29"/>
+                <RegionRefIndexed index="35" regionRef="r_30"/>
             </OrderedGroup>
         </ReadingOrder>
         <TextRegion id="r_31" custom="readingOrder {index:0;} structure {type:surface;}">
@@ -54,7 +53,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion orientation="0.0" id="tr_3" custom="readingOrder {index:1;} structure {type:fw;}">
+        <TextRegion orientation="0.0" id="tr_3" custom="readingOrder {index:1;} structure {cat:fol; type:fw;}">
             <Coords points="4588,219 4596,420 4922,397 4958,196"/>
             <TextLine id="tr_3_tl_1" custom="readingOrder {index:0;}">
                 <Coords points="4578,418 4612,430 4637,404 4657,415 4700,401 4723,413 4774,410 4791,395 4836,410 4845,222 4788,228 4743,213 4717,219 4640,279 4632,270 4609,282 4583,267"/>
@@ -67,7 +66,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_9" custom="readingOrder {index:2;} structure {type:fw;}">
+        <TextRegion id="r_9" custom="readingOrder {index:2;} structure {cat:fol; type:fw;}">
             <Coords points="4395,445 4666,445 4666,664 4395,664"/>
             <TextLine id="l" custom="readingOrder {index:0;}">
                 <Coords points="4390,674 4433,683 4489,640 4538,623 4578,640 4629,637 4626,407 4589,407 4558,384 4461,438 4413,410 4387,413"/>
@@ -80,8 +79,8 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_33" custom="readingOrder {index:3;} structure {type:column-block;}">
-            <Coords points="1611,1245 3902,1254 3877,5272 1596,5281"/>
+        <TextRegion id="r_33" custom="readingOrder {index:3;} structure {part:M; change:pf-1; type:paragraph;}">
+            <Coords points="1638,1265 3902,1254 3877,5272 1596,5281"/>
             <TextLine id="tr_2_tl_1" custom="readingOrder {index:0;}">
                 <Coords points="1667,1366 3855,1386 3855,1286 3386,1249 2942,1300 2475,1221 2356,1277 1667,1289"/>
                 <Baseline points="1683,1355 1797,1343 1912,1343 2027,1343 2141,1343 2256,1343 2371,1343 2485,1343 2600,1344 2715,1349 2829,1349 2944,1349 3059,1349 3173,1349 3288,1349 3403,1350 3517,1355 3632,1355 3747,1355 3862,1361"/>
@@ -229,7 +228,7 @@
                     <Unicode>möchte ich, wenn ich sicher wüßte, daß der Gewinst</Unicode>
                 </TextEquiv>
             </TextLine>
-            <TextLine id="l_24" custom="readingOrder {index:21;} subst-del {offset:18; length:15;add-id:qw; del-id:er;} undo {offset:18; length:7;target:er;} subst-del {offset:25; length:8;add-id:rt;} subst-del {offset:49; length:1;add-id:asdf;}">
+            <TextLine id="l_24" custom="readingOrder {index:21;} subst-del {offset:18; length:15;add-id:qw1; del-id:er;} undo {offset:18; length:7;target:er;} del {offset:25; length:8;} subst-del {offset:49; length:1;add-id:asdf;}">
                 <Coords points="1650,3340 3684,3394 3852,3366 3852,3275 3221,3295 3090,3258 3007,3314 2620,3252 1647,3269"/>
                 <Baseline points="1666,3332 3858,3352"/>
                 <TextEquiv>
@@ -380,13 +379,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion orientation="0.0" id="tr_2" custom="readingOrder {index:4;} structure {type:paragraph;}">
-            <Coords points="1642,1279 1605,5272 3867,5262 3890,1283"/>
-            <TextEquiv>
-                <Unicode></Unicode>
-            </TextEquiv>
-        </TextRegion>
-        <TextRegion id="r_8" custom="readingOrder {index:5;} structure {id:asd; type:add;}">
+        <TextRegion id="r_8" custom="readingOrder {index:4;} structure {id:asd; type:add;}">
             <Coords points="4047,1957 4298,1957 4298,2104 4047,2104"/>
             <TextLine id="l_1" custom="readingOrder {index:0;}">
                 <Coords points="4043,2148 4165,2142 4194,2120 4233,2125 4262,2108 4282,2111 4282,1966 4259,1969 4242,1957 4228,1966 4202,1949 4171,1946 4142,1955 4125,1943 4074,1972 4043,1974"/>
@@ -399,7 +392,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_6" custom="readingOrder {index:6;} structure {target:890; type:metamark;}">
+        <TextRegion id="r_6" custom="readingOrder {index:5;} structure {target:890; type:metamark;}">
             <Coords points="1212,2519 1416,2519 1416,2660 1212,2660"/>
             <TextLine id="l_23" custom="readingOrder {index:0;}">
                 <Coords points="1215,2689 1289,2691 1309,2680 1326,2697 1360,2686 1391,2700 1397,2504 1380,2498 1371,2506 1334,2506 1289,2543 1269,2543 1243,2518 1218,2515"/>
@@ -412,7 +405,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_10" custom="readingOrder {index:7;} structure {id:234; type:add;}">
+        <TextRegion id="r_10" custom="readingOrder {index:6;} structure {id:234; type:add;}">
             <Coords points="3912,2451 4052,2451 4052,2613 3912,2613"/>
             <TextLine id="l_2" custom="readingOrder {index:0;}">
                 <Coords points="3929,2609 3974,2612 3986,2623 4011,2620 4017,2626 4034,2620 4026,2467 3977,2464 3966,2452 3918,2444"/>
@@ -425,7 +418,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_12" custom="readingOrder {index:8;} structure {target:456\u0020567; type:metamark;}">
+        <TextRegion id="r_12" custom="readingOrder {index:7;} structure {target:456\u0020567; type:metamark;}">
             <Coords points="4381,2426 4538,2426 4538,2597 4381,2597"/>
             <TextLine id="l_4" custom="readingOrder {index:0;}">
                 <Coords points="4381,2597 4424,2597 4433,2606 4469,2580 4478,2586 4515,2586 4515,2430 4475,2427 4464,2435 4452,2427 4418,2450 4381,2447"/>
@@ -438,7 +431,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_11" custom="readingOrder {index:9;} structure {id:789; type:add;}">
+        <TextRegion id="r_11" custom="readingOrder {index:8;} structure {id:789; type:add;}">
             <Coords points="4150,2457 4240,2457 4240,2591 4150,2591"/>
             <TextLine id="l_3" custom="readingOrder {index:0;}">
                 <Coords points="4142,2597 4159,2595 4176,2580 4182,2586 4196,2580 4211,2589 4231,2589 4228,2450 4196,2455 4182,2450 4162,2432 4159,2438 4137,2438"/>
@@ -451,7 +444,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_14" custom="readingOrder {index:10;} structure {target:wer; type:metamark;}">
+        <TextRegion id="r_14" custom="readingOrder {index:9;} structure {target:wer; type:metamark;}">
             <Coords points="4202,2604 4327,2604 4327,2754 4202,2754"/>
             <TextLine id="l_5" custom="readingOrder {index:0;}">
                 <Coords points="4199,2780 4222,2774 4265,2802 4310,2799 4310,2606 4276,2612 4248,2626 4239,2620 4219,2634 4199,2632"/>
@@ -464,7 +457,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_13" custom="readingOrder {index:11;} structure {id:qwe; type:add;}">
+        <TextRegion id="r_13" custom="readingOrder {index:10;} structure {id:qwe; type:add;}">
             <Coords points="3886,2621 4018,2621 4018,2714 3886,2714"/>
             <TextLine id="l_7" custom="readingOrder {index:0;}">
                 <Coords points="3881,2723 3898,2723 3906,2731 3923,2723 3932,2731 3957,2711 3974,2717 3983,2711 4000,2714 4000,2620 3960,2609 3949,2612 3943,2606 3906,2623 3881,2623"/>
@@ -477,7 +470,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_15" custom="readingOrder {index:12;} structure {target:ert; type:metamark;}">
+        <TextRegion id="r_15" custom="readingOrder {index:11;} structure {target:ert; type:metamark;}">
             <Coords points="3930,2722 4126,2722 4126,2804 3930,2804"/>
             <TextLine id="l_6" custom="readingOrder {index:0;}">
                 <Coords points="3920,2802 3940,2799 3952,2811 3983,2805 4020,2819 4051,2797 4117,2794 4114,2691 4071,2697 4017,2740 4006,2728 3963,2720 3943,2734 3920,2734"/>
@@ -490,7 +483,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_7" custom="readingOrder {index:13;} structure {target:rtz\u0020tzu; type:metamark;}">
+        <TextRegion id="r_7" custom="readingOrder {index:12;} structure {target:rtz\u0020tzu; type:metamark;}">
             <Coords points="1314,2774 1472,2774 1472,2880 1314,2880"/>
             <TextLine id="l_22" custom="readingOrder {index:0;}">
                 <Coords points="1309,2896 1343,2896 1351,2902 1374,2885 1388,2888 1408,2876 1417,2879 1457,2865 1457,2765 1397,2768 1383,2780 1309,2794"/>
@@ -503,7 +496,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_16" custom="readingOrder {index:14;} structure {id:qasd; type:add;}">
+        <TextRegion id="r_16" custom="readingOrder {index:13;} structure {id:qasd; type:add;}">
             <Coords points="3912,2812 4166,2817 4544,2805 4540,2862 4109,2891 3912,2907"/>
             <TextLine id="l_8" custom="readingOrder {index:0;} del {offset:0; length:17;} gap-ill {offset:1; length:3;} gap-ill {offset:5; length:3;} gap-ill {offset:9; length:8;}">
                 <Coords points="3903,2913 3972,2910 4031,2945 4085,2916 4114,2928 4202,2868 4256,2885 4532,2859 4538,2794 4393,2791 4327,2814 4162,2799 4063,2834 3989,2805 3912,2814"/>
@@ -516,7 +509,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_17" custom="readingOrder {index:15;} structure {id:sdf; type:add;}">
+        <TextRegion id="r_17" custom="readingOrder {index:14;} structure {id:sdf; type:add;}">
             <Coords points="4223,2883 4788,2842 4785,2992 4218,2972"/>
             <TextLine id="tr_2_tl_18" custom="readingOrder {index:0;}">
                 <Coords points="4185,2945 4245,2942 4324,2999 4390,2976 4489,3004 4546,2970 4615,2982 4723,2922 4768,2939 4771,2834 4706,2822 4580,2854 4518,2842 4188,2888"/>
@@ -529,7 +522,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_4" custom="readingOrder {index:16;} structure {id:fgh; type:add;}">
+        <TextRegion id="r_4" custom="readingOrder {index:15;} structure {id:fgh; type:add;}">
             <Coords points="945,2852 1241,2852 1241,2987 945,2987"/>
             <TextLine id="l_21" custom="readingOrder {index:0;} del {offset:0; length:7;} gap-ill {offset:0; length:7;}">
                 <Coords points="964,2976 993,2984 1010,2973 1033,2990 1064,2964 1095,2990 1158,2973 1186,2990 1209,2984 1201,2891 1129,2902 1090,2871 1073,2865 1064,2873 1030,2845 1001,2851 964,2828 950,2831"/>
@@ -542,7 +535,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_5" custom="readingOrder {index:17;} structure {id:dfg; type:add;}">
+        <TextRegion id="r_5" custom="readingOrder {index:16;} structure {id:dfg; type:add;}">
             <Coords points="1263,2931 1378,2931 1378,3015 1263,3015"/>
             <TextLine id="l_20" custom="readingOrder {index:0;}">
                 <Coords points="1243,3013 1263,3013 1269,3019 1286,3013 1294,3021 1317,3024 1343,3001 1363,3004 1366,2936 1349,2936 1340,2928 1329,2936 1312,2922 1303,2919 1294,2925 1263,2905 1246,2905"/>
@@ -555,7 +548,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_3" custom="readingOrder {index:18;} structure {id:ghjk; type:add;}">
+        <TextRegion id="r_3" custom="readingOrder {index:17;} structure {id:ghjk; type:add;}">
             <Coords points="1257,3129 1453,3129 1453,3264 1257,3264"/>
             <TextLine id="l_19" custom="readingOrder {index:0;}">
                 <Coords points="1289,3277 1317,3280 1331,3266 1383,3292 1422,3258 1442,3260 1440,3121 1408,3115 1394,3127 1377,3110 1366,3110 1312,3147 1286,3152"/>
@@ -568,7 +561,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_18" custom="readingOrder {index:19;} structure {id:fghj; type:add;}">
+        <TextRegion id="r_18" custom="readingOrder {index:18;} structure {id:fghj; type:add;}">
             <Coords points="3978,2993 4847,3025 4844,3207 3976,3222"/>
             <TextLine id="tr_2_tl_20" custom="readingOrder {index:0;}">
                 <Coords points="3994,3058 4128,3064 4228,3107 4299,3081 4344,3110 4606,3087 4603,3013 4430,3007 4387,2973 4324,2999 4276,2982 4228,3001 4174,2973 4111,3007 3994,2993"/>
@@ -588,7 +581,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_19" custom="readingOrder {index:20;} structure {id:qw; type:add;}">
+        <TextRegion id="r_19" custom="readingOrder {index:19;} structure {id:qw1; type:add;}">
             <Coords points="3879,3247 4571,3247 4581,3347 4194,3349 3879,3369"/>
             <TextLine id="l_9" custom="readingOrder {index:0;} subst {offset:0; length:2;} del {offset:0; length:1;} add {offset:1; length:1;place:overwritten;} subst {offset:2; length:19;} del {offset:2; length:11;} add {offset:14; length:7;place:inline;}">
                 <Coords points="3878,3371 4088,3394 4199,3346 4236,3374 4276,3340 4319,3363 4376,3329 4401,3354 4455,3331 4558,3351 4566,3201 4418,3198 4359,3238 4233,3258 4179,3226 4097,3255 3883,3235"/>
@@ -601,7 +594,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_21" custom="readingOrder {index:21;} structure {id:sdfg; type:add;}">
+        <TextRegion id="r_21" custom="readingOrder {index:20;} structure {id:sdfg; type:add;}">
             <Coords points="3878,3392 4201,3392 4201,3515 3878,3515"/>
             <TextLine id="l_11" custom="readingOrder {index:0;}">
                 <Coords points="3883,3533 3906,3533 3932,3556 3969,3545 4009,3556 4026,3536 4066,3531 4088,3545 4165,3531 4151,3391 4105,3386 4077,3403 4040,3391 3974,3411 3955,3391 3912,3386 3869,3403"/>
@@ -614,7 +607,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_20" custom="readingOrder {index:22;} structure {id:asdf; type:add;}">
+        <TextRegion id="r_20" custom="readingOrder {index:21;} structure {id:asdf; type:add;}">
             <Coords points="4222,3356 4376,3356 4376,3445 4222,3445"/>
             <TextLine id="l_10" custom="readingOrder {index:0;}">
                 <Coords points="4213,3479 4233,3474 4245,3479 4279,3462 4307,3460 4316,3451 4361,3451 4361,3374 4316,3363 4293,3343 4279,3346 4273,3340 4233,3377 4213,3374"/>
@@ -627,7 +620,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_2" custom="readingOrder {index:23;} structure {id:yxcv; type:add;}">
+        <TextRegion id="r_2" custom="readingOrder {index:22;} structure {id:yxcv; type:add;}">
             <Coords points="1054,3407 1363,3407 1363,3560 1054,3560"/>
             <TextLine id="l_18" custom="readingOrder {index:0;}">
                 <Coords points="1081,3573 1118,3582 1147,3559 1175,3570 1201,3542 1255,3573 1320,3556 1292,3329 1240,3343 1203,3326 1129,3366 1112,3388 1081,3374 1058,3391"/>
@@ -640,7 +633,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_22" custom="readingOrder {index:24;} structure {id:xcvb; type:add;}">
+        <TextRegion id="r_22" custom="readingOrder {index:23;} structure {id:xcvb; type:add;}">
             <Coords points="4073,3539 4271,3539 4271,3639 4073,3639"/>
             <TextLine id="tr_2_tl_29" custom="readingOrder {index:0;}">
                 <Coords points="4074,3650 4100,3647 4111,3636 4131,3639 4142,3630 4194,3659 4225,3639 4248,3642 4250,3562 4233,3562 4208,3548 4188,3562 4179,3551 4145,3542 4137,3533 4117,3539 4100,3556 4077,3551"/>
@@ -653,7 +646,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_1" custom="readingOrder {index:25;} structure {id:cvbn; type:add;}">
+        <TextRegion id="r_1" custom="readingOrder {index:24;} structure {id:cvbn; type:add;}">
             <Coords points="354,3652 1375,3652 1375,3828 354,3828"/>
             <TextLine id="tr_1_tl_2" custom="readingOrder {index:0;}">
                 <Coords points="364,3795 657,3858 888,3801 996,3846 1229,3801 1343,3829 1357,3733 1141,3659 1016,3735 802,3659 358,3684"/>
@@ -666,7 +659,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_23" custom="readingOrder {index:26;} structure {id:mn; type:add;}">
+        <TextRegion id="r_23" custom="readingOrder {index:25;} structure {id:mn; type:add;}">
             <Coords points="3910,3816 4552,3780 4562,3872 4187,3926 3906,3940"/>
             <TextLine id="tr_2_tl_32" custom="readingOrder {index:0;}">
                 <Coords points="3929,3915 4051,3946 4199,3926 4253,3952 4413,3889 4472,3920 4532,3895 4538,3821 4464,3775 4145,3841 4105,3809 3986,3824 3937,3804"/>
@@ -679,7 +672,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:27;} structure {id:gb; type:add;}">
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:26;} structure {id:gb; type:add;}">
             <Coords points="1088,4325 1071,4043 236,3950 250,4958 1498,4958 1507,4384"/>
             <TextLine id="tr_1_tl_3" custom="readingOrder {index:0;}">
                 <Coords points="361,4151 427,4159 469,4134 617,4168 731,4139 925,4199 990,4157 1030,4168 1027,4071 953,4040 731,4054 532,4011 358,4023"/>
@@ -748,7 +741,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_32" custom="readingOrder {index:28;} structure {id:nb; type:add;}">
+        <TextRegion id="r_32" custom="readingOrder {index:27;} structure {id:nb; type:add;}">
             <Coords points="3883,3944 4233,3926 4630,3878 4637,4018 4001,4039 3892,4073"/>
             <TextLine id="tr_2_tl_34" custom="readingOrder {index:0;}">
                 <Coords points="3955,4071 4034,4023 4080,4037 4194,4006 4350,4051 4478,4003 4589,4037 4609,4031 4615,3935 4572,3943 4521,3903 4475,3918 4421,3889 4322,3912 4265,3957 4083,3932 3957,3963"/>
@@ -761,7 +754,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r" custom="readingOrder {index:29;} structure {target:ay; type:metamark;}">
+        <TextRegion id="r" custom="readingOrder {index:28;} structure {target:ay; type:metamark;}">
             <Coords points="1359,4092 1511,4092 1511,4228 1359,4228"/>
             <TextLine id="l_17" custom="readingOrder {index:0;}">
                 <Coords points="1377,4205 1403,4202 1414,4213 1434,4202 1442,4211 1451,4211 1459,4202 1468,4211 1488,4208 1485,4097 1465,4097 1428,4125 1422,4120 1403,4137 1377,4137"/>
@@ -774,7 +767,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_24" custom="readingOrder {index:30;} structure {id:hn; type:add;}">
+        <TextRegion id="r_24" custom="readingOrder {index:29;} structure {id:hn; type:add;}">
             <Coords points="3962,4047 4270,4047 4270,4142 3962,4142"/>
             <TextLine id="tr_2_tl_37" custom="readingOrder {index:0;}">
                 <Coords points="3955,4145 3980,4137 4017,4154 4114,4142 4239,4174 4245,4031 4194,4009 4142,4031 4102,4026 3957,4068"/>
@@ -787,7 +780,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_25" custom="readingOrder {index:31;} structure {id:jm; type:add;}">
+        <TextRegion id="r_25" custom="readingOrder {index:30;} structure {id:jm; type:add;}">
             <Coords points="3972,4189 4481,4189 4481,4313 3972,4313"/>
             <TextLine id="tr_2_tl_39" custom="readingOrder {index:0;}">
                 <Coords points="3966,4327 4057,4319 4091,4293 4219,4302 4239,4285 4290,4310 4327,4299 4373,4324 4424,4307 4461,4324 4461,4188 4430,4179 4370,4171 4333,4196 4250,4205 4128,4182 4043,4196 4000,4231 3966,4213"/>
@@ -800,7 +793,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_26" custom="readingOrder {index:32;} structure {id:sx; type:add;}">
+        <TextRegion id="r_26" custom="readingOrder {index:31;} structure {id:sx; type:add;}">
             <Coords points="3911,4468 4017,4468 4017,4605 3911,4605"/>
             <TextLine id="l_12" custom="readingOrder {index:0;}">
                 <Coords points="3903,4580 3923,4578 3929,4583 3966,4566 3992,4569 3980,4421 3960,4427 3946,4421 3929,4444 3918,4435 3895,4441"/>
@@ -813,7 +806,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_27" custom="readingOrder {index:33;} structure {type:metamark;}">
+        <TextRegion id="r_27" custom="readingOrder {index:32;} structure {type:metamark;}">
             <Coords points="4051,4478 4210,4478 4210,4660 4051,4660"/>
             <TextLine id="l_13" custom="readingOrder {index:0;}">
                 <Coords points="4040,4669 4054,4669 4083,4640 4097,4640 4128,4663 4162,4649 4194,4657 4188,4481 4154,4472 4111,4495 4083,4475 4057,4495 4034,4492"/>
@@ -826,7 +819,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_28" custom="readingOrder {index:34;} structure {id:fv; type:add;}">
+        <TextRegion id="r_28" custom="readingOrder {index:33;} structure {id:fv; type:add;}">
             <Coords points="3956,4664 4110,4664 4110,4815 3956,4815"/>
             <TextLine id="l_14" custom="readingOrder {index:0;}">
                 <Coords points="3946,4780 3960,4780 3972,4791 3997,4780 4020,4800 4034,4794 4054,4811 4063,4808 4080,4825 4100,4822 4100,4663 4074,4657 4037,4674 3997,4646 3946,4663"/>
@@ -839,7 +832,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_29" custom="readingOrder {index:35;} structure {id:gbx; type:add;}">
+        <TextRegion id="r_29" custom="readingOrder {index:34;} structure {id:gbx; type:add;}">
             <Coords points="3941,5025 4146,5025 4146,5157 3941,5157"/>
             <TextLine id="l_15" custom="readingOrder {index:0;}">
                 <Coords points="4148,5058 4125,5058 4094,5073 4071,5056 4040,5056 4009,5075 3989,5061 3946,5061 3946,5172 3980,5178 4020,5144 4046,5167 4085,5152 4105,5161 4148,5152"/>
@@ -852,7 +845,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_30" custom="readingOrder {index:36;} structure {target:nh; type:metamark;}">
+        <TextRegion id="r_30" custom="readingOrder {index:35;} structure {target:nh; type:metamark;}">
             <Coords points="3890,5164 4060,5164 4060,5302 3890,5302"/>
             <TextLine id="l_16" custom="readingOrder {index:0;}">
                 <Coords points="3886,5306 3915,5306 3935,5286 3986,5269 4009,5289 4048,5292 4048,5155 4020,5144 3986,5169 3952,5161 3937,5147 3926,5149 3906,5130 3886,5130"/>

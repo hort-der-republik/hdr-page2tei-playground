@@ -3,12 +3,12 @@
     <Metadata>
         <Creator>Transkribus</Creator>
         <Created>2026-09-14T12:23:48.877+02:00</Created>
-        <LastChange>2026-10-20T09:20:47.956+02:00</LastChange>
-        <TranskribusMetadata docId="18855842" pageId="127360802" pageNr="4" tsid="306946431" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=OOWTVGUKTNQSJDVHWOYKJMMD" xmlUrl="https://files.transkribus.eu/Get?id=WUJQAPPCIEWTEWBVWGMMRCBG" imageId="108583558"/>
+        <LastChange>2026-11-12T11:13:00.495+01:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="127360802" pageNr="4" tsid="309411939" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=OOWTVGUKTNQSJDVHWOYKJMMD" xmlUrl="https://files.transkribus.eu/Get?id=GBDRCRYGKTRORRQETSDLPXMC" imageId="108583558"/>
     </Metadata>
     <Page imageFilename="0004_539.jpg" imageWidth="2758" imageHeight="4715">
         <ReadingOrder>
-            <OrderedGroup id="ro_1792568340880" caption="Regions reading order">
+            <OrderedGroup id="ro_1794483648476" caption="Regions reading order">
                 <RegionRefIndexed index="0" regionRef="r_5"/>
                 <RegionRefIndexed index="1" regionRef="r_1"/>
                 <RegionRefIndexed index="2" regionRef="r_2"/>
@@ -23,7 +23,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_1" custom="readingOrder {index:1;} structure {type:fw;}">
+        <TextRegion id="r_1" custom="readingOrder {index:1;} structure {cat:fol; change:kk-ink-3; type:fw;}">
             <Coords points="2262,192 2451,192 2451,369 2262,369"/>
             <TextLine id="l" custom="readingOrder {index:0;}">
                 <Coords points="2275,310 2417,290 2413,260 2271,280"/>
@@ -36,7 +36,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_2" custom="readingOrder {index:2;} structure {type:fw;}">
+        <TextRegion id="r_2" custom="readingOrder {index:2;} structure {cat:fol; type:fw; material-hand:ar-pencil-1;}">
             <Coords points="2312,392 2548,392 2548,548 2312,548"/>
             <TextLine id="l_1" custom="readingOrder {index:0;}">
                 <Coords points="2319,519 2532,522 2532,492 2319,489"/>
@@ -49,7 +49,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_3" custom="readingOrder {index:3;} structure {function:insertion; id:wer; target:qwe; type:metamark;}">
+        <TextRegion id="r_3" custom="readingOrder {index:3;} structure {function:insertion; change:kk-ink-2; id:wer; target:qwe; type:metamark;}">
             <Coords points="186,1460 277,1460 277,1564 186,1564"/>
             <TextLine id="l_2" custom="readingOrder {index:0;}">
                 <Coords points="202,1544 262,1543 262,1513 202,1514"/>
@@ -62,7 +62,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_6" custom="readingOrder {index:4;} structure {part:F; type:paragraph;}">
+        <TextRegion id="r_6" custom="readingOrder {index:4;} structure {part:F; change:kk-ink-1; type:paragraph;}">
             <Coords points="451,2348 353,1157 307,266 1683,175 2063,155 2378,1881 1973,3041 597,3225"/>
             <TextLine id="l_3" custom="readingOrder {index:0;} del {offset:10; length:20;id:qtqtqt;} subst {offset:11; length:4;} add {offset:11; length:2;} del {offset:13; length:2;id:qtt;} del {offset:16; length:1;id:qt;} gap-ill {offset:19; length:8;}">
                 <Coords points="325,361 1037,288 1597,259 2010,244 2009,214 1596,229 1035,258 322,331"/>
@@ -148,7 +148,7 @@
                     <Unicode>Amtseid aufnehmen, womöglich unter Zuziehung</Unicode>
                 </TextEquiv>
             </TextLine>
-            <TextLine id="l_15" custom="readingOrder {index:12;} metamark {offset:37; length:1;function:insertion; target:wer;} del {offset:39; length:17;}">
+            <TextLine id="l_15" custom="readingOrder {index:12;} metamark {offset:37; length:1;function:insertion; change:kk-ink-2; target:wer;} del {offset:39; length:17;}">
                 <Coords points="428,1551 596,1549 687,1541 1002,1503 1317,1462 1680,1421 1793,1394 2046,1360 2269,1369 2270,1339 2045,1330 1788,1365 1675,1391 1313,1432 998,1473 684,1511 595,1519 428,1521"/>
                 <Baseline points="428,1551 596,1549 687,1541 1002,1503 1317,1462 1680,1421 1793,1394 2046,1360 2269,1369"/>
                 <TextEquiv>
@@ -271,7 +271,7 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_4" custom="readingOrder {index:5;} structure {id:qwe; type:add;}">
+        <TextRegion id="r_4" custom="readingOrder {index:5;} structure {change:kk-ink-2; id:qwe; type:add;}">
             <Coords points="221,3495 212,3339 2174,3181 2366,3463 2213,3918 1187,4021 1085,4181 576,4232"/>
             <TextLine id="l_32" custom="readingOrder {index:0;}">
                 <Coords points="233,3417 410,3425 644,3434 1317,3389 1498,3353 1697,3327 2019,3291 2154,3265 2148,3236 2014,3261 1693,3297 1493,3323 1313,3359 644,3404 411,3395 234,3387"/>

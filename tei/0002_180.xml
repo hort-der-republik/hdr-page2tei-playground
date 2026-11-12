@@ -3,25 +3,34 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Diplomatische Transkription: 180.jpg</title>
+            <title>Diplomatische Transkription: 0002_180.jpg</title>
          </titleStmt>
          <publicationStmt>
             <p>Automatisch erzeugt aus PAGE-XML (eScriptorium-/Transkribus-Export) per XSLT.</p>
          </publicationStmt>
          <sourceDesc>
             <p>
-              Quelle: 180.jpg.
+              Quelle: 0002_180.jpg.
               Erstellt: 2026-09-14T12:23:48.661+02:00,
-              zuletzt geaendert: 2026-10-21T10:45:05.450+02:00.
+              zuletzt geaendert: 2026-11-12T10:49:39.143+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="ar-pencil-1">[tbd]</change>
+               <change xml:id="kk-cut-1">[tbd]</change>
+               <change xml:id="kk-ink-1">[tbd]</change>
+               <change xml:id="kk-ink-2">[tbd]</change>
+               <change xml:id="np-1">[tbd]</change>
+            </listChange>
+         </creation>
+      </profileDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="180.jpg" width="6792px" height="9961px"/>
-      <surface xml:id="surface_r_11"
-               type="base"
-               points="107,116 6672,108 6636,9831 119,9882">
+      <graphic url="0002_180.jpg" width="6792px" height="9961px"/>
+      <surface xml:id="surface_r_11" points="107,116 6672,108 6636,9831 119,9882">
          <zone xml:id="zone_r_1"
                type="add-block"
                points="624,232 1927,226 1932,623 619,615">
@@ -211,6 +220,9 @@
             <zone xml:id="zone_r_18"
                   type="paragraph-indent"
                   points="390,4085 2341,4067 2369,6139 436,6180">
+               <zone type="line"
+                     xml:id="zone_l_93"
+                     points="884,4497 984,4511 988,4481 888,4467"/>
                <zone type="line"
                      xml:id="zone_tr_1_tl_112"
                      points="503,4129 2290,4133 2290,4039 503,4082"/>
@@ -452,14 +464,14 @@
                      points="2526,4604 2919,4632 3787,4573 3992,4612 4141,4573 4145,4491 2530,4518"/>
             </zone>
             <zone xml:id="zone_r_23"
-                  type="paragraph-byline"
+                  type="byline"
                   points="2588,4623 4122,4595 4129,4675 2589,4697">
                <zone type="line"
                      xml:id="zone_tr_1_tl_132"
                      points="2577,4711 4086,4675 4086,4597 2577,4624"/>
             </zone>
             <zone xml:id="zone_r_24"
-                  type="paragraph-dateline"
+                  type="dateline"
                   points="3555,4695 4213,4686 4208,4767 3556,4772">
                <zone type="line"
                      xml:id="zone_tr_1_tl_138"
@@ -1190,62 +1202,65 @@
    </facsimile>
    <text>
       <body>
-         <div facs="#surface_r_11" type="base">
-            <fw facs="#zone_r_6" type="fol">
+         <div facs="#surface_r_11" change="#np-1">
+            <fw facs="#zone_r_6" change="#ar-pencil-1" type="fol" rendition="#latin">
                <lb facs="#zone_l_59"/>89
             </fw>
-            <div facs="#zone_r_1" type="add-block">
-               <metamark xml:id="metamark-0180-0001" facs="#zone_r_41" function="font">
+            <div change="#kk-ink-1" facs="#zone_r_1" type="add-block">
+               <metamark xml:id="metamark-0180-0001" facs="#zone_r_41" change="#kk-ink-1" function="font" rendition="#kurrent">
                   <lb facs="#zone_l_58"/><hi rend="underline">col</hi>
                </metamark>
-               <p facs="#zone_r_42">
+               <p change="#kk-ink-1" facs="#zone_r_42" rendition="#kurrent">
                   <lb facs="#zone_tr_1_tl_1"/>Berliner Tageblatt, 31. Juli:
                </p>
             </div>
             <cb facs="#zone_r_37" n="1/3"/>
-            <div xml:id="div-0180-0001" type="article" next="#div-0180-0002">
-               <head facs="#zone_tr_1" type="main" rendition="#center #large #bold">
-                  <lb facs="#zone_tr_1_tl_4"/><delSpan spanTo="#delSpan-0180-0001"/>Die Wiener Polizei in den Aufruhrtagen.
+            <div xml:id="div-0180-0001"
+                 type="article"
+                 next="#div-0180-0002"
+                 part="I">
+               <head change="#np-1" facs="#zone_tr_1" type="main" rendition="#center #large #bold #black-letter">
+                  <lb facs="#zone_tr_1_tl_4"/><delSpan xml:id="del-0180-0001" type="deselection" change="#kk-ink-2" spanTo="#anchor-0180-0001"/>Die Wiener Polizei in den Aufruhrtagen.
                </head>
-               <head facs="#zone_r_12" type="sub" rendition="#bold #center">
+               <head change="#np-1" facs="#zone_r_12" type="sub" rendition="#bold #center #black-letter">
                   <lb facs="#zone_tr_1_tl_6"/>Urteil eines süddeutschen Fachmanns. — Die Toten Opfer
-                  <lb facs="#zone_tr_1_tl_9"/>schlechter Organisation.<anchor xml:id="delSpan-0180-0001"/>
+                  <lb facs="#zone_tr_1_tl_9"/>schlechter Organisation.<anchor xml:id="anchor-0180-0001"/>
                </head>
                <p facs="#zone_r_13" rendition="#indent">
-                  <lb facs="#zone_tr_1_tl_11"/>Von einem <hi rend="letter-spacing"><mod rend="underline">süddeutschen Polizeifachmann</mod>,</hi> der die
+                  <lb facs="#zone_tr_1_tl_11"/>Von einem <hi rend="letter-spacing"><mod rend="underline" change="#kk-ink-2">süddeutschen Polizeifachmann</mod>,</hi> der die
                   <lb facs="#zone_tr_1_tl_13"/>Wiener Verhältnisse aus eigener Anschauung kennt, wird uns ge
                   <lb facs="#zone_tr_1_tl_15"/>schrieben:
                   <lb facs="#zone_l_90"/>
                </p>
                <p facs="#zone_r_14" rendition="#indent">
-                  <lb facs="#zone_tr_1_tl_17"/>„Die Toten von Wien<subst><del>, man zählte bis jetzt über hundert,</del><add facs="#zone_l_90" xml:id="add-0180-0002">..</add></subst>
-                  <lb facs="#zone_tr_1_tl_19"/>sind in erster Linie die Opfer einer <hi rend="letter-spacing"><mod rend="underline">mangelhaften Polizei¬</mod></hi>
-                  <lb facs="#zone_tr_1_tl_21"/><mod rend="underline"><hi rend="letter-spacing">organisation</hi>.</mod> Die Wiener Tage haben bewiesen, daß die
-                  <lb facs="#zone_tr_1_tl_24"/>Polizei der österreichischen Hauptstadt zu den <hi rend="letter-spacing"><mod rend="underline">mittelalter</mod></hi>
-                  <lb facs="#zone_tr_1_tl_28"/><hi rend="letter-spacing"><mod rend="underline">lichsten Einrichtungen</mod></hi> gehört. <del>.</del> . Der international
+                  <lb facs="#zone_tr_1_tl_17"/>„Die Toten von Wien<subst change="#kk-ink-2"><del>, man zählte bis jetzt über hundert,</del><add facs="#zone_l_90" xml:id="add-0180-0003" place="above" change="#kk-ink-2" rendition="#kurrent">..</add></subst>
+                  <lb facs="#zone_tr_1_tl_19"/>sind in erster Linie die Opfer einer <hi rend="letter-spacing"><mod rend="underline" change="#kk-ink-2">mangelhaften Polizei¬</mod></hi>
+                  <lb facs="#zone_tr_1_tl_21"/><mod rend="underline" change="#kk-ink-2"><hi rend="letter-spacing">organisation</hi>.</mod> Die Wiener Tage haben bewiesen, daß die
+                  <lb facs="#zone_tr_1_tl_24"/>Polizei der österreichischen Hauptstadt zu den <hi rend="letter-spacing"><mod rend="underline" change="#kk-ink-2">mittelalter
+                  <lb facs="#zone_tr_1_tl_28"/>lichsten Einrichtungen</mod></hi> gehört. <del change="#kk-ink-2">.</del> . Der international
                   <lb facs="#zone_tr_1_tl_30"/><hi rend="letter-spacing">Polizeikongreß,</hi> der vor einigen Jahren in Wien abgehalten
                   <lb facs="#zone_tr_1_tl_34"/>wurde, und der die modernsten Polizeimänner Europas in Wien
                   <lb facs="#zone_tr_1_tl_36"/>sah, ist praktisch für Wien ohne Bedeutung geblieben.<add place="inline"> . .</add> <del type="deselection">Damals
-                  <lb facs="#zone_tr_1_tl_39"/>schon wies in einer vertraulichen Unterredung mit dem Polizei¬</del>
-                  <lb facs="#zone_tr_1_tl_41"/><del type="deselection">präsidenten <hi rend="letter-spacing">Schober</hi> einer der führenden Polizeimänner Deutsch</del>
-                  <lb facs="#zone_tr_1_tl_43"/><del type="deselection">lands auf die <hi rend="letter-spacing">mangelhafte Organisation der Wiene</hi></del>
-                  <lb facs="#zone_tr_1_tl_45"/><del type="deselection"><hi rend="letter-spacing">Polizei</hi> hin. Der Präsident erwiderte dem Gast, daß er die</del>
-                  <lb facs="#zone_tr_1_tl_47"/><del type="deselection">Mängel der Polizei wohl erkenne, daß sie aber nicht abzustellen
-                  <lb facs="#zone_tr_1_tl_49"/>seien, weil sie ihren Grund in den österreichischen Gesetzen haben</del>
-                  <lb facs="#zone_tr_1_tl_51"/><del type="deselection">Der Polizeipräsident von Wien sei als Instanz dem <hi rend="letter-spacing">Landes</hi></del>
-                  <lb facs="#zone_tr_1_tl_53"/><del type="deselection"><hi rend="letter-spacing">hauptmann</hi> untergeordnet, Landeshauptmann sei aber in Wien</del>
-                  <lb facs="#zone_tr_1_tl_55"/><del type="deselection">der <hi rend="letter-spacing">Bürgermeister</hi>. Jede schnelle Entschließung sei also durch</del>
-                  <lb facs="#zone_tr_1_tl_57"/><del type="deselection">Kompetenzerwägungen erschwert.</del>
+                  <lb facs="#zone_tr_1_tl_39"/>schon wies in einer vertraulichen Unterredung mit dem Polizei¬
+                  <lb facs="#zone_tr_1_tl_41"/>präsidenten <hi rend="letter-spacing">Schober</hi> einer der führenden Polizeimänner Deutsch
+                  <lb facs="#zone_tr_1_tl_43"/>lands auf die <hi rend="letter-spacing">mangelhafte Organisation der Wiene
+                  <lb facs="#zone_tr_1_tl_45"/>Polizei</hi> hin. Der Präsident erwiderte dem Gast, daß er die
+                  <lb facs="#zone_tr_1_tl_47"/>Mängel der Polizei wohl erkenne, daß sie aber nicht abzustellen
+                  <lb facs="#zone_tr_1_tl_49"/>seien, weil sie ihren Grund in den österreichischen Gesetzen haben
+                  <lb facs="#zone_tr_1_tl_51"/>Der Polizeipräsident von Wien sei als Instanz dem <hi rend="letter-spacing">Landes
+                  <lb facs="#zone_tr_1_tl_53"/>hauptmann</hi> untergeordnet, Landeshauptmann sei aber in Wien
+                  <lb facs="#zone_tr_1_tl_55"/>der <hi rend="letter-spacing">Bürgermeister</hi>. Jede schnelle Entschließung sei also durch
+                  <lb facs="#zone_tr_1_tl_57"/>Kompetenzerwägungen erschwert.</del>
                </p>
                <p facs="#zone_r_15" rendition="#indent">
                   <lb facs="#zone_tr_1_tl_60"/>Die Wiener Vorgänge aber haben bewiesen, daß der Grund für
-                  <lb facs="#zone_tr_1_tl_61"/>das Versagen der Polizei, denn es war <hi rend="letter-spacing"><mod rend="underline">ein Versagen auf der</mod></hi>
-                  <lb facs="#zone_tr_1_tl_64"/><hi rend="letter-spacing"><mod rend="underline">ganzen Linie</mod>,</hi> nicht in der gesetzmäßigen Verteilung der Macht
+                  <lb facs="#zone_tr_1_tl_61"/>das Versagen der Polizei, denn es war <hi rend="letter-spacing"><mod rend="underline">ein Versagen auf der
+                  <lb facs="#zone_tr_1_tl_64"/>ganzen Linie</mod>,</hi> nicht in der gesetzmäßigen Verteilung der Macht
                   <lb facs="#zone_tr_1_tl_65"/>befugnisse, sondern in dem Fehlen einer auf die Bedürfnisse einer
-                  <lb facs="#zone_l_91"/><add xml:id="add-0180-0003" place="above">. .</add>
-                  <lb facs="#zone_tr_1_tl_67"/>Großstadt zugeschnittenen Organisation liegt.<metamark function="add" target="#add-0180-0003"><g ref="#intervention"/></metamark> <del type="deselection">Hoffentlich ent¬</del>
-                  <lb facs="#zone_tr_1_tl_70"/><del type="deselection">schließt man sich jetzt dazu, die <hi rend="letter-spacing">schweren Versäumnisse</hi> der</del>
-                  <lb facs="#zone_tr_1_tl_72"/><del type="deselection">Vergangenheit wettzumachen.</del>
+                  <lb facs="#zone_l_91"/>
+                  <lb facs="#zone_tr_1_tl_67"/>Großstadt zugeschnittenen Organisation liegt.<metamark function="add"><g ref="#intervention"/></metamark><add facs="#zone_l_91" xml:id="add-0180-0004" place="above">. .</add> <del type="deselection">Hoffentlich ent¬
+                  <lb facs="#zone_tr_1_tl_70"/>schließt man sich jetzt dazu, die <hi rend="letter-spacing">schweren Versäumnisse</hi> der
+                  <lb facs="#zone_tr_1_tl_72"/>Vergangenheit wettzumachen.</del>
                </p>
                <p facs="#zone_r_17" rendition="#indent">
                   <lb facs="#zone_tr_1_tl_74"/>Die Mängel sind augenfällig. <add place="below">– – </add><del type="deselection">Erstens einmal fehlt es in Wien
@@ -1264,12 +1279,13 @@
                   <lb facs="#zone_tr_1_tl_110"/>die ersten Gewalttätigkeiten zu verhindern.</del>
                </p>
                <p facs="#zone_r_18" rendition="#indent">
+                  <lb facs="#zone_l_93"/>
                   <lb facs="#zone_tr_1_tl_112"/>Alle europäischen Hauptstädte, die sich in Zeiten der Gefahr nicht
                   <lb facs="#zone_tr_1_tl_115"/>auf das Militär verlassen, haben ihre besonderen Organisationen, die
                   <lb facs="#zone_tr_1_tl_116"/>auf die Kontrolle großer Massenbewegungen abgestimmt sind. Der
                   <lb facs="#zone_tr_1_tl_119"/>leitende Gedanke dabei ist: Möglichst wenig Blut ver¬
                   <lb facs="#zone_tr_1_tl_121"/>gießen. Dieser Ueberlegung aber kann nur auf folgende Weise
-                  <lb facs="#zone_tr_1_tl_123"/>gedient werden: <del type="deselection">Die Polizei muß ein eigenes Nachrichtennet
+                  <lb facs="#zone_tr_1_tl_123"/>gedient werden: <subst><del type="deselection">Die Polizei muß ein eigenes Nachrichtennet
                   <lb facs="#zone_tr_1_tl_127"/>haben, das über die ganze Stadt gespannt ist. An kritischen Tagen
                   <lb facs="#zone_tr_1_tl_130"/>ist dazu noch ein besonderer Postendienst einzurichten, der eben¬
                   <lb facs="#zone_tr_1_tl_133"/>falls zur Unterstützung der Nachrichtenübermittelung und dazu ver
@@ -1290,7 +1306,7 @@
                   <lb facs="#zone_tr_1_tl_191"/>wenn es nötig ist, scheut man ein „frisches Zupacken“ nicht. Ein
                   <lb facs="#zone_tr_1_tl_194"/>oder zwei Todesopfer, die es in den verzweifeltesten
                   <lb facs="#zone_tr_1_tl_196"/>Fällen gibt, werden reichlich aufgewogen durch die zahllosen
-                  <lb facs="#zone_tr_1_tl_198"/>Menschenleben, die gerüttet werden.</del> Weil man in Wien
+                  <lb facs="#zone_tr_1_tl_198"/>Menschenleben, die gerüttet werden.</del><add facs="#zone_l_93" xml:id="add-0180-0002" change="#kk-ink-2" rendition="#kurrent">– –</add></subst> Weil man in Wien
                   <lb facs="#zone_tr_1_tl_201"/>eine solche Organisation nicht kannte, eine Organisation, die sich
                   <lb facs="#zone_tr_1_tl_204"/>des hochwertigsten technischen Materials und der hochwertigsten
                   <lb facs="#zone_tr_1_tl_207"/>Beamten bedient, darum hat man jetzt die hundert
@@ -1298,8 +1314,8 @@
                </p>
                <p facs="#zone_r_19" rendition="#indent">
                   <lb facs="#zone_tr_1_tl_211"/>Daß man in Wien über alle organisatorischen Fehler hinaus auch
-                  <lb facs="#zone_tr_1_tl_214"/>noch die Polizei mit sogenannter Uebungsmunition versorgte
-                  <lb facs="#zone_tr_1_tl_217"/>die eine dumdumgeschoßähnliche Wirkung hatte
+                  <lb facs="#zone_tr_1_tl_214"/>noch die Polizei mit sogenannter <hi rend="letter-spacing"><mod rend="underline" change="#kk-ink-2">Uebungsmunitio</mod>n</hi> versorgte
+                  <lb facs="#zone_tr_1_tl_217"/>die eine <hi rend="letter-spacing">dumdumgeschoßähnliche Wirkung</hi> hatte
                   <lb facs="#zone_tr_1_tl_219"/>das spielt bei dieser Erörterung nur noch eine untergeordnete Rolle
                   <lb facs="#zone_tr_1_tl_222"/>(Man kann dazu nur noch bemerken, daß man in Deutschlan
                   <lb facs="#zone_tr_1_tl_225"/>diese Art von Halbmantelgeschossen überhaupt nich
@@ -1315,9 +1331,12 @@
                </p>
             </div>
             <cb facs="#zone_r_38" n="2/3"/>
-            <div xml:id="div-0180-0002" type="article" prev="#div-0180-0001">
+            <div xml:id="div-0180-0002"
+                 type="article"
+                 prev="#div-0180-0001"
+                 part="F">
                <p facs="#zone_r" part="F">
-                  <lb facs="#zone_tr_1_tl_2"/>den gewöhnlichen, den Publikumsdienst, ausübt.<metamark function="addition"/><add facs="#zone_r_2" xml:id="add-0180-0001"><lb facs="#zone_l_89"/>– –</add>
+                  <lb facs="#zone_tr_1_tl_2"/>den gewöhnlichen, den Publikumsdienst, ausübt.<metamark function="addition" change="#kk-ink-2" rendition="#kurrent"/><add facs="#zone_r_2" change="#kk-ink-2" xml:id="add-0180-0001" rendition="#kurrent"><lb facs="#zone_l_89"/>– –</add>
                   <lb facs="#zone_tr_1_tl_3"/><del type="deselection">Diese Polizeitruppe muß von einer einheitlichen Staatsidee
                   <lb facs="#zone_tr_1_tl_5"/>beseelt und scharf diszipliniert sein. An dieser besonderen Truppe, die
                   <lb facs="#zone_tr_1_tl_7"/>in Fällen von ernsten Zusammenstößen einzusetzen ist, fehlt es in Wien,
@@ -1341,7 +1360,11 @@
                   <lb facs="#zone_tr_1_tl_44"/>mal unvermeidlichen Zusammenstoßes nur dann ansehen, wenn
                   <lb facs="#zone_tr_1_tl_46"/>überhaupt kein Todesopfer zu beklagen iſt.“
                </p>
-               <gap xml:id="gap-0180-0001" facs="#zone_r_9" reason="cut"/>
+               <gap xml:id="gap-0180-0001"
+                    change="#kk-cut-1"
+                    facs="#zone_r_9"
+                    reason="cut"
+                    rendition="#kurrent"/>
             </div>
             <div type="article">
                <head facs="#zone_r_8" type="main" rendition="#bold #center #large">
@@ -1350,12 +1373,12 @@
                <head facs="#zone_r_22" type="sub" rendition="#bold #center">
                   <lb facs="#zone_tr_1_tl_128"/>Im Zusammenhang mit der Ermordung O'Higgins'.
                </head>
-               <p facs="#zone_r_23" rendition="#center">
+               <byline facs="#zone_r_23">
                   <lb facs="#zone_tr_1_tl_132"/>(Telegramm unseres Korrespondenten.)
-               </p>
-               <p facs="#zone_r_24" rendition="#right2">
-                  <lb facs="#zone_tr_1_tl_138"/>O London, 30. Juli.
-               </p>
+               </byline>
+               <dateline facs="#zone_r_24">
+                  <lb facs="#zone_tr_1_tl_138"/>〇 London, 30. Juli.
+               </dateline>
                <p facs="#zone_r_25" rendition="#indent">
                   <lb facs="#zone_tr_1_tl_144"/>In Dublin wurden gestern im Zusammenhang mit der Er¬
                   <lb facs="#zone_tr_1_tl_151"/>mordung O'Higgins' wieder neue Verhaftungen vor¬
@@ -1375,7 +1398,7 @@
             </div>
             <div type="article">
                <p facs="#zone_r_26" rendition="#indent">
-                  <lb facs="#zone_tr_1_tl_197"/>X Paris, 30. Juli. (Privat.) Der Landesausschuß der fran¬
+                  <lb facs="#zone_tr_1_tl_197"/><hi rend="bold">X Paris, </hi>30. Juli. (Privat.) Der Landesausschuß der fran¬
                   <lb facs="#zone_tr_1_tl_200"/>zösischen Gewerkschaften trat heute vormittag zusammen, um die
                   <lb facs="#zone_tr_1_tl_202"/>Neuwahl des Verwaltungsausschusses vorzunehmen. Jouhauz
                   <lb facs="#zone_tr_1_tl_205"/>wurde einstimmig als Generalsekretär wiedergewählt. Auch die
@@ -1384,7 +1407,7 @@
             </div>
             <div type="article">
                <p facs="#zone_r_27" rendition="#indent">
-                  <lb facs="#zone_tr_1_tl_212"/>Unsere Abonnenten, die verreisen, können sich das „Berliner
+                  <lb facs="#zone_tr_1_tl_212"/><seg type="head-run-in">Unsere Abonnenten, die verreisen,</seg> können sich das „Berliner
                   <lb facs="#zone_tr_1_tl_215"/>Tageblatt“ auf kurze oder längere Zeit ins Bad oder in die Somme
                   <lb facs="#zone_tr_1_tl_218"/>frische, nachsenden lassen. Der Nachsendungsantrag ist an die zu
                   <lb facs="#zone_tr_1_tl_221"/>ständige Filiale (ersichtlich aus der Abonnementsquittung) unter gleich
@@ -1500,7 +1523,7 @@
                   <lb facs="#zone_tr_1_tl_242"/>Paul=Godwin=Band.
                </p>
             </div>
-            <metamark xml:id="metamark-0180-0002" facs="#zone_r_10" function="print-instruction" target="#gap-0180-0001">
+            <metamark xml:id="metamark-0180-0002" facs="#zone_r_10" change="#kk-ink-2" function="print-instruction" target="#gap-0180-0001" rendition="#kurrent">
                <lb facs="#zone_l_56"/>vorläufig
                <lb facs="#zone_l_57"/><hi rend="underline">nicht</hi> zu setzen.
             </metamark>
@@ -1536,14 +1559,14 @@
                      <lb facs="#zone_tr_1_tl_291"/>bestickt.
                      <lb facs="#zone_tr_1_tl_298"/>3150x250
                      <lb facs="#zone_l_14"/>Ses
-                     <lb facs="#zone_tr_1_tl_299"/>Metall-
-                     <lb facs="#zone_l_50"/>Bogenbettstelle
+                     <lb facs="#zone_tr_1_tl_299"/>Metall<pc force="weak">-</pc>
+                     <lb facs="#zone_l_50" break="no"/>Bogenbettstelle
                      <lb facs="#zone_l_51"/>mit Zugfederma
                      <lb facs="#zone_l_52"/>tratze, 26% Rohr,
                      <lb facs="#zone_l_53"/>weiß oder schwan
                      <lb facs="#zone_l_54"/>80*180
-                     <lb facs="#zone_tr_1_tl_248"/>zettfedern-
-                     <lb facs="#zone_l_18"/>Oberbett-Jnlett,
+                     <lb facs="#zone_tr_1_tl_248"/>zettfedern<pc force="weak">-</pc>
+                     <lb facs="#zone_l_18" break="no"/>Oberbett-Jnlett,
                      <lb facs="#zone_l_55"/>"O"
                      <lb facs="#zone_l_15"/>graurot
                      <lb facs="#zone_l_16"/>gestreift,
@@ -1579,8 +1602,8 @@
                      <lb facs="#zone_l_45"/>und
                      <lb facs="#zone_tr_1_tl_320"/>Stange
                      <lb facs="#zone_l_37"/>20.
-                     <lb facs="#zone_l_44"/>31-
-                     <lb facs="#zone_l_28"/>Bettlaken,
+                     <lb facs="#zone_l_44"/>31<pc force="weak">-</pc>
+                     <lb facs="#zone_l_28" break="no"/>Bettlaken,
                      <lb facs="#zone_tr_1_tl_256"/>Kräftige
                      <lb facs="#zone_tr_1_tl_259"/>Wäschestot
                      <lb facs="#zone_tr_1_tl_262"/>200cm

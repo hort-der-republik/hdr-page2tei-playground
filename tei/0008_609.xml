@@ -12,14 +12,14 @@
             <p>
               Quelle: 0008_609.jpg.
               Erstellt: 2026-10-02T15:12:26.264+02:00,
-              zuletzt geaendert: 2026-10-20T13:34:49.162+02:00.
+              zuletzt geaendert: 2026-10-21T11:35:48.627+02:00.
             </p>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
    <facsimile>
       <graphic url="0008_609.jpg" width="5214px" height="6805px"/>
-      <surface lrx="5214" lry="6805" xml:id="surface_0008_609.jpg" type="base">
+      <surface lrx="5214" lry="6805" xml:id="surface_0008_609.jpg">
          <zone xml:id="zone_r"
                type="fw"
                points="4272,254 4649,254 4649,549 4272,549">
@@ -514,7 +514,7 @@
    </facsimile>
    <text>
       <body>
-         <div type="base" facs="#surface_0008_609.jpg">
+         <div facs="#surface_0008_609.jpg">
             <fw facs="#zone_r">
                <lb facs="#zone_r_tl_1"/>1
             </fw>
@@ -535,23 +535,23 @@
             </metamark>
             <add xml:id="add-0609-0005" facs="#zone_r_25"><lb facs="#zone_l_12"/>tro</add>
             <add xml:id="add-0609-0006" facs="#zone_r_27"><lb facs="#zone_r_27_tl_1"/>N</add>
-            <p facs="#zone_r_29">
+            <metamark xml:id="metamark-0609-0004" facs="#zone_r_29" function="deletion">
                <lb facs="#zone_l_18"/>H d
-            </p>
+            </metamark>
             <add xml:id="add-0609-0007" facs="#zone_r_30"><lb facs="#zone_l_20"/>+ es</add>
-            <p facs="#zone_r_31">
+            <metamark xml:id="metamark-0609-0005" facs="#zone_r_31" function="deletion">
                <lb facs="#zone_l_19"/>m d
-            </p>
-            <p facs="#zone_r_33">
+            </metamark>
+            <metamark xml:id="metamark-0609-0006" facs="#zone_r_33" function="deletion">
                <lb facs="#zone_r_33_tl_1"/>4d
-            </p>
+            </metamark>
             <add xml:id="add-0609-0008" facs="#zone_r_34"/>
             <add xml:id="add-0609-0009" facs="#zone_r_35"><lb facs="#zone_r_35_tl_1"/>+ pågedonst</add>
             <add xml:id="add-0609-0010" facs="#zone_r_37"><lb facs="#zone_l_22"/>4 Verbrechens</add>
-            <metamark xml:id="metamark-0609-0004" facs="#zone_r_40">
+            <metamark xml:id="metamark-0609-0007" facs="#zone_r_40">
                <lb facs="#zone_l_23"/>+
             </metamark>
-            <metamark xml:id="metamark-0609-0005" facs="#zone_r_41">
+            <metamark xml:id="metamark-0609-0008" facs="#zone_r_41">
                <lb facs="#zone_l_24"/>.
             </metamark>
             <add xml:id="add-0609-0011" facs="#zone_r_38"/>
@@ -561,7 +561,6 @@
             <add xml:id="add-0609-0015" facs="#zone_r_28"><lb facs="#zone_r_28_tl_1"/>H H Schok.</add>
             <add xml:id="add-0609-0016" facs="#zone_r_24"><lb facs="#zone_l_13"/>1</add>
             <add xml:id="add-0609-0017" facs="#zone_r_26"><lb facs="#zone_l_14"/>th<lb facs="#zone_l_15"/>ersetze<lb facs="#zone_l_16"/>Naturempfindung</add>
-            <add xml:id="add-0609-0018" facs="#zone_r_3"><lb facs="#zone_r_3_tl_1"/>tu</add>
             <add xml:id="add-0609-0019" facs="#zone_r_4"><lb facs="#zone_r_4_tl_1"/>I wasklaps<lb facs="#zone_r_4_tl_2"/>Migill<lb facs="#zone_r_4_tl_3"/>entlichen<lb facs="#zone_r_4_tl_4"/>behördlichen</add>
             <add xml:id="add-0609-0020" facs="#zone_r_5"><lb facs="#zone_r_5_tl_1"/>V ist doch, nach dem<lb facs="#zone_r_5_tl_2"/>dreißigjährigen Krieg gehen.<lb facs="#zone_l_7"/>eine Gesellschaft, die dem<lb facs="#zone_l_8"/>Hohn et jene ihre Ordnung<lb facs="#zone_r_5_tl_6"/>dem hohen auf jene verdankt,<lb facs="#zone_r_5_tl_7"/>endlich eilennt eine<lb facs="#zone_r_5_tl_9"/>Entscheidung, für die in<lb facs="#zone_r_5_tl_10"/>Tag. In allen Stellungen<lb facs="#zone_r_5_tl_11"/>gerüstet bin wir am ersten<lb facs="#zone_r_5_tl_12"/>prìptit.</add>
             <add xml:id="add-0609-0021" facs="#zone_r_6"><lb facs="#zone_l_6"/>7,</add>
@@ -571,21 +570,21 @@
             <add xml:id="add-0609-0025" facs="#zone_r_13"><lb facs="#zone_r_13_tl_1"/>Hav Lignifidul</add>
             <add xml:id="add-0609-0026" facs="#zone_r_16"><lb facs="#zone_r_16_tl_1"/>4 nichter</add>
             <add xml:id="add-0609-0027" facs="#zone_r_14"><lb facs="#zone_l_4"/>4 fr.</add>
-            <p facs="#zone_r_15">
+            <metamark xml:id="metamark-0609-0009" facs="#zone_r_15" function="deletion">
                <lb facs="#zone_l_5"/>d
-            </p>
-            <p facs="#zone_r_9">
+            </metamark>
+            <metamark xml:id="metamark-0609-0010" facs="#zone_r_9" function="deletion">
                <lb facs="#zone_l_1"/>1d
-            </p>
+            </metamark>
             <add xml:id="add-0609-0028" facs="#zone_r_10"><lb facs="#zone_r_10_tl_1"/>N</add>
-            <p facs="#zone_r_7">
+            <metamark xml:id="metamark-0609-0011" facs="#zone_r_7" function="deletion">
                <lb facs="#zone_l_2"/>I don
-            </p>
+            </metamark>
             <p facs="#zone_r_2">
                <lb facs="#zone_r_2_tl_1"/>Luftgeschäfts viertausend Polizisten bereitet haben, die
                <lb facs="#zone_r_2_tl_2"/>ihre Tatkraft mangels anderer Enthusiasten an vierzig
-               <lb facs="#zone_r_2_tl_3"/>journalistischen Freunden der Polizeidirektion schad-
-               <lb facs="#zone_r_2_tl_4"/>los halten müßten. Sie haben es einer Amtsführung,
+               <lb facs="#zone_r_2_tl_3"/>journalistischen Freunden der Polizeidirektion schad<pc force="weak">-</pc>
+               <lb facs="#zone_r_2_tl_4" break="no"/>los halten m<subst><del>ü</del><add facs="#zone_r_3" xml:id="add-0609-0018"><lb facs="#zone_r_3_tl_1"/>tu</add></subst>ßten. Sie haben es einer Amtsführung,
                <lb facs="#zone_r_2_tl_5"/>die mit der Herstellung des Pallawatsch geradezu
                <lb facs="#zone_r_2_tl_6"/>begrifflich verbunden ist, nicht weiter übelgenommen
                <lb facs="#zone_r_2_tl_7"/>und sich nach dessen blutiger Fortsetzung versöhnt
@@ -621,10 +620,10 @@
                <lb facs="#zone_r_2_tl_37"/>verfehlt/zurückgefallen auf der Erfinder Haupt. Und
                <lb facs="#zone_r_2_tl_38"/>von einem Aktenstück, vor dem ihr die Augen über
                <lb facs="#zone_r_2_tl_39"/>gehen werden, wenn ich es mit einem Steckbrief
-               <lb facs="#zone_r_2_tl_40"/>konfrontiere. Die unbeglaubigte Aussage des ange-
-               <lb facs="#zone_r_2_tl_41"/>klagten Privatmannes will es mit einem Amtsheid
-               <lb facs="#zone_r_2_tl_42"/>aufnehmen, womöglich unter Zuziehung eines unga-
-               <lb facs="#zone_r_2_tl_43"/>rischen von gleichem Range. Die Wahrheit zu sagen
+               <lb facs="#zone_r_2_tl_40"/>konfrontiere. Die unbeglaubigte Aussage des ange<pc force="weak">-</pc>
+               <lb facs="#zone_r_2_tl_41" break="no"/>klagten Privatmannes will es mit einem Amtsheid
+               <lb facs="#zone_r_2_tl_42"/>aufnehmen, womöglich unter Zuziehung eines unga<pc force="weak">-</pc>
+               <lb facs="#zone_r_2_tl_43" break="no"/>rischen von gleichem Range. Die Wahrheit zu sagen
                <lb facs="#zone_r_2_tl_44"/>in einer Welt der Lüge — wäre man sie nicht den
                <lb facs="#zone_r_2_tl_45"/>Toten schuldig, so wäre sie doch die geringste
                <lb facs="#zone_r_2_tl_46"/>Erkenntlichkeit für den Glücksfall, daß man nicht
