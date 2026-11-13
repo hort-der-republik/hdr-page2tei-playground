@@ -12,7 +12,7 @@
             <p>
               Quelle: 0001_108.jpg.
               Erstellt: 2026-09-14T12:23:48.548+02:00,
-              zuletzt geaendert: 2026-11-12T09:50:12.310+01:00.
+              zuletzt geaendert: 2026-11-13T09:44:21.287+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -58,6 +58,7 @@
          </zone>
          <surface xml:id="surface_r_6"
                   type="newspaper-clipping"
+                  source="hdr_stages_id__0043"
                   points="53,331 1885,301 2439,303 2446,3340 850,3377 194,3370 91,3340">
             <zone xml:id="zone_r_12"
                   type="column-block"
@@ -241,7 +242,9 @@
                      xml:id="zone_l_3"
                      points="409,1567 439,1577 469,1571 498,1592 522,1582 543,1598 579,1586 591,1596 647,1569 647,1509 594,1514 577,1499 541,1497 490,1518 441,1480 409,1480"/>
             </zone>
+            <zone type="line" xml:id="zone_l_6" points="0,0 0,0 0,0 0,0"/>
          </surface>
+         <zone type="line" xml:id="zone_l_5" points="0,0 0,0 0,0 0,0"/>
       </surface>
    </facsimile>
    <text>

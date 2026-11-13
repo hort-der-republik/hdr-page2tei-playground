@@ -765,8 +765,14 @@
        del-id-Eintraegen von subst-del), damit nie dieselbe ID zweimal
        vergeben wird. -->
   <xsl:variable name="lineAddIdsRawRTF">
-    <xsl:for-each select="$allLineRanges[my:attr[@name='id']]">
-      <xsl:variable name="lnIdVal" select="string(my:attr[@name='id']/@value)"/>
+    <xsl:for-each select="$allLineRanges[my:attr[@name='id'] or (@element='subst-del-synth' and my:attr[@name='subst-id'])]">
+      <!-- subst-del: die Deklaration steht in subst-id (-> <subst>, Praefix "subst") -->
+      <xsl:variable name="lnIdVal">
+        <xsl:choose>
+          <xsl:when test="@element='subst-del-synth'"><xsl:value-of select="my:attr[@name='subst-id']/@value"/></xsl:when>
+          <xsl:otherwise><xsl:value-of select="my:attr[@name='id']/@value"/></xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
       <!-- metamark-add: traegt id denselben Wert wie die add-Region, auf die
            add-id zeigt (so in den Daten), ist das KEINE eigene Deklaration -
            sonst gaebe es zwei Elemente mit derselben xml:id -->
@@ -775,6 +781,7 @@
           <xsl:attribute name="tag">
             <xsl:choose>
               <xsl:when test="@element='metamark-add-synth'">metamark</xsl:when>
+              <xsl:when test="@element='subst-del-synth'">subst</xsl:when>
               <xsl:otherwise><xsl:value-of select="@element"/></xsl:otherwise>
             </xsl:choose>
           </xsl:attribute>
@@ -2212,6 +2219,7 @@
           <xsl:call-template name="region-change-attr"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
           <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
           <xsl:if test="$type != ''"><xsl:attribute name="type"><xsl:value-of select="$type"/></xsl:attribute></xsl:if>
+          <xsl:if test="$type='add-block'"><xsl:call-template name="rendition-attr-if-any"><xsl:with-param name="value" select="$region/@rendition"/></xsl:call-template></xsl:if>
           <xsl:call-template name="render-children-text">
             <xsl:with-param name="id" select="$id"/>
             <xsl:with-param name="depth" select="$depth + 1"/>
@@ -2289,6 +2297,7 @@
           </xsl:attribute>
           <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
           <xsl:call-template name="region-change-attr"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
+          <xsl:call-template name="rendition-attr-if-any"><xsl:with-param name="value" select="$region/@rendition"/></xsl:call-template>
           <xsl:call-template name="render-lines">
             <xsl:with-param name="regionId" select="$id"/>
             <xsl:with-param name="depth" select="$depth + 1"/>
@@ -2537,6 +2546,7 @@
         <metamark facs="{concat('#zone_',$id)}" function="insertion">
           <xsl:attribute name="xml:id"><xsl:value-of select="$ownId"/></xsl:attribute>
           <xsl:call-template name="region-change-attr"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
+          <xsl:call-template name="rendition-attr-if-any"><xsl:with-param name="value" select="$region/@rendition"/></xsl:call-template>
           <xsl:call-template name="foreign-target-attr"><xsl:with-param name="target" select="$region/@target"/></xsl:call-template>
         </metamark>
         <xsl:call-template name="render-imported-add">
@@ -2568,6 +2578,7 @@
           <xsl:attribute name="xml:id"><xsl:value-of select="$ownId"/></xsl:attribute>
           <xsl:attribute name="facs">#zone_<xsl:value-of select="$id"/></xsl:attribute>
           <xsl:call-template name="region-change-attr"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
+          <xsl:call-template name="rendition-attr-if-any"><xsl:with-param name="value" select="$region/@rendition"/></xsl:call-template>
           <xsl:choose>
             <xsl:when test="$region/@function != ''">
               <xsl:attribute name="function"><xsl:value-of select="$region/@function"/></xsl:attribute>
@@ -2832,10 +2843,10 @@
     <xsl:call-template name="build-range-parents"><xsl:with-param name="ranges" select="$mlRs"/></xsl:call-template>
   </xsl:template>
 
-  <!-- Attribut-Signatur eines Bereichs (ohne id/prev/next) -->
+  <!-- Attribut-Signatur eines Bereichs (ohne id/subst-id/del-id/prev/next) -->
   <xsl:template name="ml-sig">
     <xsl:param name="range"/>
-    <xsl:for-each select="$range/my:attr[@name != 'id' and @name != 'prev' and @name != 'next']">
+    <xsl:for-each select="$range/my:attr[@name != 'id' and @name != 'subst-id' and @name != 'del-id' and @name != 'prev' and @name != 'next']">
       <xsl:sort select="@name"/>
       <xsl:value-of select="concat(@name,'=',@value,';')"/>
     </xsl:for-each>
@@ -2955,6 +2966,7 @@
            (mehrzeiligen) <del> und dem importierten <add> nur EINMAL (am Ende) -->
       <xsl:when test="$mlRange/@element='subst-del-synth'">
         <subst>
+          <xsl:call-template name="subst-id-attr"><xsl:with-param name="range" select="$mlRange"/><xsl:with-param name="lineId" select="string($mlLine/@id)"/></xsl:call-template>
           <xsl:call-template name="range-change-attr"><xsl:with-param name="range" select="$mlRange"/></xsl:call-template>
           <del>
             <xsl:variable name="mlDelIdB" select="$mlAttrs[@name='del-id']/@value"/>
@@ -3323,9 +3335,12 @@
             <xsl:variable name="delId"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'del-id'"/></xsl:call-template></xsl:variable>
             <!-- del-cat wird als @type ans del uebergeben -->
             <xsl:variable name="delCat"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'del-cat'"/></xsl:call-template></xsl:variable>
+            <!-- subst-id: Behelfs-ID-Deklaration fuer das erzeugte <subst> (Praefix "subst") -->
+            <xsl:variable name="substIdV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'subst-id'"/></xsl:call-template></xsl:variable>
             <my:attr name="add-id" value="{$addId}"/>
             <xsl:if test="$delId != ''"><my:attr name="del-id" value="{$delId}"/></xsl:if>
             <xsl:if test="$delCat != ''"><my:attr name="del-cat" value="{$delCat}"/></xsl:if>
+            <xsl:if test="$substIdV != ''"><my:attr name="subst-id" value="{$substIdV}"/></xsl:if>
           </xsl:when>
           <xsl:when test="$name='subst'">
             <xsl:variable name="addId"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'add-id'"/></xsl:call-template></xsl:variable>
@@ -3338,8 +3353,10 @@
           <xsl:when test="$name='undo'">
             <xsl:variable name="rend"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rend'"/></xsl:call-template></xsl:variable>
             <xsl:variable name="target"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'target'"/></xsl:call-template></xsl:variable>
+            <xsl:variable name="undoCorresp"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'corresp'"/></xsl:call-template></xsl:variable>
             <xsl:if test="$rend != ''"><my:attr name="rend" value="{$rend}"/></xsl:if>
             <xsl:if test="$target != ''"><my:attr name="target" value="{$target}"/></xsl:if>
+            <xsl:if test="$undoCorresp != ''"><my:attr name="corresp" value="{$undoCorresp}"/></xsl:if>
           </xsl:when>
           <xsl:when test="$name='unclear'">
             <xsl:variable name="reason"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'reason'"/></xsl:call-template></xsl:variable>
@@ -3354,13 +3371,13 @@
              Bloecken, die ueber die generische Weiche als Element ausgegeben
              werden (add hat seinen eigenen Zweig oben); wird in
              render-one-range zur echten xml:id. -->
-        <xsl:if test="contains(' hi retrace spacing hi-spacing bold hi-bold underline hi-underline mod-underline mod del deselection seg seg-transposition seg-relocation dateline unclear metamark metamark-add ', concat(' ',$name,' '))">
+        <xsl:if test="contains(' hi retrace spacing hi-spacing bold hi-bold underline hi-underline mod-underline mod del deselection seg seg-transposition seg-relocation dateline unclear metamark metamark-add subst ', concat(' ',$name,' '))">
           <xsl:variable name="declaredIdOther"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'id'"/></xsl:call-template></xsl:variable>
           <xsl:if test="$declaredIdOther != ''"><my:attr name="id" value="{$declaredIdOther}"/></xsl:if>
         </xsl:if>
         <!-- "prev"/"next": Verweise auf Behelfs-IDs, werden zu den gleichnamigen
              TEI-Attributen (aufgeloest in resolved-ref-attrs) -->
-        <xsl:if test="contains(' hi retrace spacing hi-spacing bold hi-bold underline hi-underline mod-underline mod del deselection seg seg-transposition seg-relocation dateline unclear metamark add ', concat(' ',$name,' '))">
+        <xsl:if test="contains(' hi retrace spacing hi-spacing bold hi-bold underline hi-underline mod-underline mod del deselection seg seg-transposition seg-relocation dateline unclear metamark add subst ', concat(' ',$name,' '))">
           <xsl:variable name="prevV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'prev'"/></xsl:call-template></xsl:variable>
           <xsl:variable name="nextV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'next'"/></xsl:call-template></xsl:variable>
           <xsl:if test="$prevV != ''"><my:attr name="prev" value="{$prevV}"/></xsl:if>
@@ -3421,6 +3438,23 @@
       </xsl:when>
       <xsl:otherwise><xsl:value-of select="normalize-space($s)"/></xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+  <!-- subst-del (Abschnitt 7/8): subst-id wird zur xml:id des erzeugten <subst>
+       (nur an der ersten Deklaration der id) -->
+  <xsl:template name="subst-id-attr">
+    <xsl:param name="range"/>
+    <xsl:param name="lineId"/>
+    <xsl:if test="$range/my:attr[@name='subst-id']">
+      <xsl:variable name="sidV" select="string($range/my:attr[@name='subst-id']/@value)"/>
+      <!-- heisst die subst-id wie eine Region-Behelfs-ID (z.B. einer add-Region),
+           zaehlt hier die Zeilen-Deklaration (eigene subst-ID), nicht die der Region -->
+      <xsl:variable name="sidHit" select="$behelfsMap[@behelfs=$sidV and @region='']"/>
+      <xsl:variable name="sidFirst" select="$allLineRanges[my:attr[@name='subst-id']/@value=$sidV or my:attr[@name='id']/@value=$sidV][1]"/>
+      <xsl:if test="$sidHit and $sidFirst/@line=$lineId and $sidFirst/@offset=$range/@offset">
+        <xsl:attribute name="xml:id"><xsl:value-of select="$sidHit[1]/@genid"/></xsl:attribute>
+      </xsl:if>
+    </xsl:if>
   </xsl:template>
 
   <!-- gibt das @change eines Zeilen-Ranges aus (falls vorhanden) -->
@@ -3695,6 +3729,7 @@
            gewoehnliches Wrapper-Element. -->
       <xsl:when test="$range/@element='subst-del-synth'">
         <subst>
+          <xsl:call-template name="subst-id-attr"><xsl:with-param name="range" select="$range"/><xsl:with-param name="lineId" select="$lineId"/></xsl:call-template>
           <xsl:call-template name="range-change-attr"><xsl:with-param name="range" select="$range"/></xsl:call-template>
           <del>
             <xsl:variable name="delIdBehelfs" select="$range/my:attr[@name='del-id']/@value"/>
@@ -3889,12 +3924,17 @@
         <xsl:if test="$uqRole='single' or $uqRole='start'">
         <undo spanTo="{concat('#',$anchorId)}">
           <xsl:call-template name="range-change-attr"><xsl:with-param name="range" select="$range"/></xsl:call-template>
+          <xsl:if test="$range/my:attr[@name='corresp']">
+            <xsl:attribute name="corresp">
+              <xsl:call-template name="resolve-behelfs-local"><xsl:with-param name="behelfsId" select="$range/my:attr[@name='corresp']/@value"/><xsl:with-param name="lineId" select="$lineId"/></xsl:call-template>
+            </xsl:attribute>
+          </xsl:if>
           <xsl:if test="$range/my:attr[@name='rend']">
             <xsl:attribute name="rend"><xsl:value-of select="$range/my:attr[@name='rend']/@value"/></xsl:attribute>
           </xsl:if>
           <xsl:if test="$range/my:attr[@name='target']">
             <xsl:attribute name="target">
-              <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="$range/my:attr[@name='target']/@value"/></xsl:call-template>
+              <xsl:call-template name="resolve-behelfs-local"><xsl:with-param name="behelfsId" select="$range/my:attr[@name='target']/@value"/><xsl:with-param name="lineId" select="$lineId"/></xsl:call-template>
             </xsl:attribute>
           </xsl:if>
         </undo>
@@ -4013,7 +4053,9 @@
                aufgeloest statt roh kopiert (Abschnitt 8). add-id/del-id
                sind reine Buchhaltung, nie ein Ausgabeattribut. -->
           <xsl:if test="$range/my:attr[@name='id']">
-            <xsl:variable name="declHit" select="$behelfsMap[@behelfs=$range/my:attr[@name='id']/@value]"/>
+            <!-- <subst>: heisst die id wie eine Region-Behelfs-ID, zaehlt die
+                 Zeilen-Deklaration (eigene subst-ID) -->
+            <xsl:variable name="declHit" select="$behelfsMap[@behelfs=$range/my:attr[@name='id']/@value and (@region='' or $range/@element!='subst')]"/>
             <!-- nur die ERSTE Deklaration einer ID bekommt die xml:id (ein
                  "continued:true"-Lauf traegt dieselbe id auf jedem Zeilen-
                  stueck, soll aber nur EINE xml:id ergeben) -->
@@ -4209,6 +4251,7 @@
                fuer die Erstimport-Erkennung ($canonicalAddImport) gebraucht. -->
           <xsl:attribute name="facs"><xsl:value-of select="concat('#zone_', $resolvedAddRegionId)"/></xsl:attribute>
           <xsl:call-template name="region-change-attr"><xsl:with-param name="regionId" select="$resolvedAddRegionId"/></xsl:call-template>
+          <xsl:call-template name="rendition-attr-if-any"><xsl:with-param name="value" select="$regions[@id=$resolvedAddRegionId]/@rendition"/></xsl:call-template>
           <xsl:if test="$genIdHit and $isCanonicalImport">
             <xsl:attribute name="xml:id"><xsl:value-of select="$genIdHit[1]/@genid"/></xsl:attribute>
           </xsl:if>
@@ -4935,6 +4978,40 @@
           <xsl:when test="contains($behelfsId,'.xml#')"><xsl:value-of select="$behelfsId"/></xsl:when>
           <xsl:when test="$hit"><xsl:value-of select="concat('#', $hit[1]/@genid)"/></xsl:when>
           <xsl:otherwise><xsl:value-of select="concat('#', $behelfsId)"/></xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- wie resolve-behelfs, aber mit Zeilenbezug: ist ein Wert zugleich als
+       Region-Behelfs-ID UND an einem Block DERSELBEN Zeile deklariert (gleicher
+       Name, z.B. subst-id und add-Region), gilt die Deklaration auf dieser
+       Zeile. Sonst wie resolve-behelfs. -->
+  <xsl:template name="resolve-behelfs-local">
+    <xsl:param name="behelfsId"/>
+    <xsl:param name="lineId"/>
+    <xsl:choose>
+      <xsl:when test="contains($behelfsId,$sepMarker)">
+        <xsl:call-template name="resolve-behelfs-local">
+          <xsl:with-param name="behelfsId" select="substring-before($behelfsId,$sepMarker)"/>
+          <xsl:with-param name="lineId" select="$lineId"/>
+        </xsl:call-template>
+        <xsl:text> </xsl:text>
+        <xsl:call-template name="resolve-behelfs-local">
+          <xsl:with-param name="behelfsId" select="substring-after($behelfsId,$sepMarker)"/>
+          <xsl:with-param name="lineId" select="$lineId"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="rlRegionHit" select="$behelfsMap[@behelfs=$behelfsId and @region != '']"/>
+        <xsl:variable name="rlLineHit" select="$behelfsMap[@behelfs=$behelfsId and @region='']"/>
+        <xsl:choose>
+          <xsl:when test="$rlRegionHit and $rlLineHit and $allLineRanges[@line=$lineId and (my:attr[@name='id']/@value=$behelfsId or my:attr[@name='subst-id']/@value=$behelfsId)]">
+            <xsl:value-of select="concat('#', $rlLineHit[1]/@genid)"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="$behelfsId"/></xsl:call-template>
+          </xsl:otherwise>
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>

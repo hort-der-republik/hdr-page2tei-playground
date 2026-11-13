@@ -53,11 +53,11 @@ In allen anderen Fällen gilt:
     - Der `subcat`-Wert steht in `<surface @type>` und in `<div @type>`
     - Der `source`-Wert steht in `<surface @source>`
 - `column-block` → wird zu einem leeren tag **vor** den darin genesteten Regionen / Elementen, nämlich zu `<cb />`; es übernimmt den `block-extent`-Wert als TEI-Attribut `@n`.
-- `add-block` → immer `<div type="add-block">`; wird **nie** per `add-id` oder `target` in eine `metamark` „eingesogen“, sondern bleibt an seiner eigenen Stelle (siehe Abschnitt 7)
+- `add-block` → immer `<div type="add-block">`; wird **nie** per `add-id` oder `target` in eine `metamark` „eingesogen“, sondern bleibt an seiner eigenen Stelle (siehe Abschnitt 7); `rendition` der Region wird mit `#` übernommen
 - `head` (ohne Kind-Zonen) mit cat:main oder cat:sub  → `<head type="[cat-value]">`; mit cat:cross → `<p rendition="#crosshead">`; **alle** `rendition`-Werte der head-Region werden (jeweils mit "#") auf `<head>` bzw. `<p>` übernommen, bei cat:cross zusätzlich zu `#crosshead`
-- `annotation` **und** `metamark` → `<metamark>`, mit eigener xml:id (siehe Abschnitt 8)
+- `annotation` **und** `metamark` → `<metamark>`, mit eigener xml:id (siehe Abschnitt 8); `rendition` der Region wird (jeweils mit `#`) übernommen
 - `gap` → leeres `<gap/>` (kein Text-Inhalt; in den bisherigen Daten haben gap-Regionen ohnehin nie eigenen Text); Attribut `reason` inkl. Wert übernehmen
-- `add` → `<add>` (siehe unten)
+- `add` → `<add>` (siehe unten); `rendition` der Region wird (jeweils mit `#`) übernommen, auch am eingesogenen `<add>`
 - `fw` → `<fw>`, der Wert von `cat` (z. B. `cat:fol`) wird als `@type` übernommen; innerhalb des `<div>`, dem es zugeordnet wird, steht es immer am **Anfang** (vor Text und den übrigen Kindern; mehrere `fw` untereinander in der bisherigen Reihenfolge)
 - `advertisement` → `<div type="advertisement">`
 - `long-quote-p` → tei:p in tei:quote; rendition wird bei p ergänzt (Attribut plus Wert mit vorangehendem "#");
@@ -80,7 +80,7 @@ In allen anderen Fällen gilt:
 **Geschwister-Regel:** TEI erlaubt in einem `<div>` **keine** Mischung von `<p>`/`<head>` und `<div>` als direkte Geschwister (Content-Model verlangt entweder nur divLike- oder nur Fließtext-Kinder). Kommen beide Arten unter demselben Elternteil vor, werden die `<p>`/`<head>`-Kinder zusätzlich in ein `<div>` gewickelt. `<metamark>`, `<gap>` und `<fw>` brauchen das nicht (dürfen direkt neben `<div>` stehen): `<fw>` wird also nie in ein eigenes `<div>` gewickelt.
 
 ### metamark-shortcuts
-- `metamark-deleatur` bezeichnet die häufige Kombination aus Korrekturfähnchen + deleatur und wird zu `<metamark function="deletion">`, weitere Attribute werden wie gehabt übernommen: `@target`aus target, `@corresp` aus corresp, id siehe unten; die Textzeile darin - wenn sie keinen Text enthält - kriegt automatisch diesen Inhalt: `<g ref="#intervention"/> <g ref="#deleatur"/>`
+- `metamark-deleatur` bezeichnet die häufige Kombination aus Korrekturfähnchen + deleatur und wird zu `<metamark function="deletion">`, weitere Attribute werden wie gehabt übernommen: `@target`aus target, `@corresp` aus corresp, id siehe unten; die Textzeile darin - wenn sie keinen Text enthält - kriegt automatisch diesen Inhalt: `<g ref="#intervention"/> <g ref="#deleatur"/>` `rendition` der Region wird wie bei `metamark` übernommen.
 
 ## 6. Transkribus-Relationen
 
@@ -140,7 +140,7 @@ Wird zu zwei Elementen, die vor und nach dem Inhalt des Textknotens des ursprün
 - `id` wird generiert wie in Abschnitt 8.
 - **`continued:true`:** Setzt sich ein `undo` mit `continued:true` auf der nächsten Zeile (bei `offset:0`) mit einem weiteren `undo`-Block fort, bilden diese Stücke **ein** Paar: `<undo>` nur am Anfang des ersten Stücks, `<anchor>` nur am Ende des letzten (Attribute und `id` des Paars vom ersten Stück). Die anchor-Nummer zählt je Paar, nicht je Stück.
 - **Gleicher Bereich wie `metamark-add`:** Fällt ein `undo` exakt mit einer `metamark-add` zusammen, umschließt das `undo` die `metamark` samt dem eingefügten `add`: `<undo spanTo="#a"/><metamark function="addition"/><add>…</add><anchor type="undo" xml:id="a"/>`.
-- Das Attribut `rend` wird zu `@rend`, `target` zu `@target`, Wert jeweils identisch; in `target` steht eine Behelfs-ID, die nach Abschnitt 8 ersetzt wird, hier und im Ausgangs-Element.
+- Das Attribut `rend` wird zu `@rend`, `target` zu `@target` und `corresp` zu `@corresp`, Wert jeweils identisch; in `target` und `corresp` steht eine Behelfs-ID, die nach Abschnitt 8 ersetzt wird, hier und im Ausgangs-Element.
 
 ### `metamark-add` mit `add-id`
 
@@ -162,7 +162,7 @@ Analog zu `metamark-add`: die in `target` referenzierte `add`-Region wird hier a
 
 ### `subst`
 
-→ `<subst>`, Container, der zusammengehörige del und add umfasst (Standard-TEI-Muster für Streichung+Ersetzung: `<subst><del>..</del><add>..</add></subst>`).
+→ `<subst>`, Container, der zusammengehörige del und add umfasst (Standard-TEI-Muster für Streichung+Ersetzung: `<subst><del>..</del><add>..</add></subst>`). Eine `id` am `subst`-Block wird zur `xml:id` des `<subst>` (Behelfs-ID, Präfix `subst`, z. B. `subst-0108-0001`).
 
 Zusatzregel: wenn ein `add` und ein anderes Element als `del` dieselben Zeichen beinhalten (also vom Inhalt her identisch sind), ist immer das `add` das äußere.
 
@@ -170,9 +170,9 @@ Zusatzregel: wenn ein `add` und ein anderes Element als `del` dieselben Zeichen 
 
 Wie normales `subst`, bloß wird als `add` die Region `add` hereingeholt, die den entsprechenden Wert im Attribut `id` hat. `facs`-Wert der add-Region und Zeile sollen mit übernommen werden.
 
-### `subst-del` mit Attributen `add-id`, `del-id` und `del-cat`
+### `subst-del` mit Attributen `add-id`, `del-id`, `del-cat` und `subst-id`
 
-Wie normales `subst`, bloß wird als `add` die Region `add` hereingeholt, die den entsprechenden Wert im Attribut `id` hat. `facs`-Wert der add-Region und Zeile sollen mit übernommen werden; `del` kriegt `del-id` als xml:id und `del-cat` als `@type`.
+Wie normales `subst`, bloß wird als `add` die Region `add` hereingeholt, die den entsprechenden Wert im Attribut `id` hat. `facs`-Wert der add-Region und Zeile sollen mit übernommen werden; `del` kriegt `del-id` als xml:id und `del-cat` als `@type`; das erzeugte `<subst>` kriegt `subst-id` als xml:id (Behelfs-ID, Präfix `subst`, gemeinsamer Zähler mit den `subst`-Blöcken mit `id`).
 
 **Mehrzeilig** (`continued:true`, siehe „Mehrzeilige Läufe“): Die Zeilenstücke werden nicht zeilenweise verarbeitet, sondern ergeben **ein** `<subst>` mit **einem** mehrzeiligen `<del>` (die `<lb/>` stehen darin) und dem importierten `<add>` nur **einmal**, am Ende hinter dem `</del>`. Attribute (`change`, `del-id`, `del-cat`) kommen vom ersten Zeilenstück.
 
@@ -234,9 +234,11 @@ Gilt für die Zeichen „-“ (Bindestrich) und „⸗“ (doppelter Schrägstri
 
 **Behelfs-IDs** (kommen als Wert von Attribut `id` mit) werden nach demselben Muster ausgetauscht, sowohl dort, wo sie in xml:id stehen sollen, als auch dort, wo sie in anderen Attributen stehen (`target`, `corresp`, `next`, `prev` …). In manchen Attributen (`target`) können mehrere, durch Leerzeichen getrennte Behelfs-IDs stehen.
 
-Behelfs-IDs können auch an Zeilen-Blöcken deklariert sein (`add`, `del`, `mod`/`mod-underline`, `seg`, `hi`-Typen, `unclear`, `metamark`, `subst-del` als `del-id`). Der Präfix ist der erzeugte Elementname (`del-0406-0001`, `mod-0406-0002`, …), die laufende Nummer zählt je Präfix in Dokumentreihenfolge. Trägt ein `continued:true`-Lauf dieselbe `id` auf mehreren Zeilenstücken, bekommt nur das erste Stück die `xml:id`.
+Behelfs-IDs können auch an Zeilen-Blöcken deklariert sein (`add`, `del`, `mod`/`mod-underline`, `seg`, `hi`-Typen, `unclear`, `metamark`, `subst`, `subst-del` als `del-id` (für das `del`) und als `subst-id` (für das `subst`)). Der Präfix ist der erzeugte Elementname (`del-0406-0001`, `mod-0406-0002`, …), die laufende Nummer zählt je Präfix in Dokumentreihenfolge. Trägt ein `continued:true`-Lauf dieselbe `id` auf mehreren Zeilenstücken, bekommt nur das erste Stück die `xml:id`.
 
 **`add-block` mit Behelfs-ID:** Die Region wird nie als `<add>` eingesogen, sondern bleibt `<div type="add-block">` und bekommt als `xml:id` eine ID mit Präfix `div` (`div-0180-0001`); Verweise (`target`, `add-id`) lösen auf diese ID auf.
+
+**Gleicher Name an Region und Zeilen-Block:** Heißt eine am Zeilen-Block deklarierte ID (`subst`-`id`, `subst-id`) genauso wie die Behelfs-ID einer Region (z. B. einer `add`-Region), bekommt das Element seine **eigene** ID mit dem eigenen Elementnamen als Präfix (`subst-0609-0001`), nicht die der Region. Ein Verweis in `target`/`corresp` eines `undo` auf dieser Zeile gilt dann dem Element auf derselben Zeile; Verweise von anderswo (und `add-id`) lösen wie bisher auf die Region auf.
 
 **Ausnahme dokumentübergreifende ID:** enthält ein Wert von `id` den Teilstring `.xml#` (z. B. `id:0003_406.xml#add-0003-0004` auf einer Region `add-block`), ist das **keine** Behelfs-ID.
 
@@ -269,6 +271,8 @@ fp - antiqua
 op - antiqua
 
 Sonderfall `subst`: Das `subst` selbst bekommt keine change-abhängige rendition, nur das darin enthaltene `add`. Hat das `add` selbst ein change, gilt dieses (das change des `subst` fällt für die rendition raus); hat es keins, wird das change des `subst` herangezogen. Das `@change` selbst bleibt an `subst` und `add` unverändert.
+
+Eine an der Region (`add`, `add-block`, `metamark`, `metamark-deleatur`) angegebene `rendition` bleibt erhalten; die durch `change` ergänzten Werte kommen dahinter (oder entfallen, wenn schon ein Schriftwert in der `rendition` steht). Fehlt bei einem Wert das `#`, wird es ergänzt.
 
 ## 10. Formatierung
 

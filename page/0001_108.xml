@@ -3,12 +3,12 @@
     <Metadata>
         <Creator>prov=READ-COOP:name=PyLaia@TranskribusPlatform:version=2.51.0:model_id=55331:lm=none:date=14_09_2026_13:37</Creator>
         <Created>2026-09-14T12:23:48.548+02:00</Created>
-        <LastChange>2026-11-12T09:50:12.310+01:00</LastChange>
-        <TranskribusMetadata docId="18855842" pageId="127360800" pageNr="1" tsid="309375260" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=XXCJSTVVGRGUASEBODJDYUZM" xmlUrl="https://files.transkribus.eu/Get?id=HYAAXHITIUIALBZNNKCGGQUL" imageId="108583557"/>
+        <LastChange>2026-11-13T09:44:21.287+01:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="127360800" pageNr="1" tsid="309793464" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=XXCJSTVVGRGUASEBODJDYUZM" xmlUrl="https://files.transkribus.eu/Get?id=OMBWDRKVEFUQXSODJYLFBELL" imageId="108583557"/>
     </Metadata>
     <Page imageFilename="0001_108.jpg" imageWidth="2553" imageHeight="3871">
         <ReadingOrder>
-            <OrderedGroup id="ro_1794483648286" caption="Regions reading order">
+            <OrderedGroup id="ro_1794565589686" caption="Regions reading order">
                 <RegionRefIndexed index="0" regionRef="r_5"/>
                 <RegionRefIndexed index="1" regionRef="r_4"/>
                 <RegionRefIndexed index="2" regionRef="r_3"/>
@@ -40,6 +40,13 @@
         </Relations>
         <TextRegion id="r_5" custom="readingOrder {index:0;} structure {cat:base; change:kk-1; subcat:notepad; type:surface;}">
             <Coords points="338,105 2398,84 2446,3742 402,3755"/>
+            <TextLine id="l_5" custom="readingOrder {index:0;}">
+                <Coords points="0,0 0,0 0,0 0,0"/>
+                <Baseline points="0,0 0,0 0,0 0,0"/>
+                <TextEquiv>
+                    <Unicode></Unicode>
+                </TextEquiv>
+            </TextLine>
             <TextEquiv>
                 <Unicode></Unicode>
             </TextEquiv>
@@ -70,8 +77,15 @@
                 <Unicode></Unicode>
             </TextEquiv>
         </TextRegion>
-        <TextRegion id="r_6" custom="readingOrder {index:3;} structure {cat:attached; subtype:att; change:kk-cut-1\u0020kk-glue-1; text-change:np0; subcat:newspaper-clipping; type:surface;}">
+        <TextRegion id="r_6" custom="readingOrder {index:3;} structure {cat:attached; subtype:att; change:kk-cut-1\u0020kk-glue-1; text-change:np0; subcat:newspaper-clipping; source:hdr_stages_id__0043; type:surface;}">
             <Coords points="53,331 1885,301 2439,303 2446,3340 850,3377 194,3370 91,3340"/>
+            <TextLine id="l_6" custom="readingOrder {index:0;}">
+                <Coords points="0,0 0,0 0,0 0,0"/>
+                <Baseline points="0,0 0,0 0,0 0,0"/>
+                <TextEquiv>
+                    <Unicode></Unicode>
+                </TextEquiv>
+            </TextLine>
             <TextEquiv>
                 <Unicode></Unicode>
             </TextEquiv>

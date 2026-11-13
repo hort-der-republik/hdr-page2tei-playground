@@ -12,7 +12,7 @@
             <p>
               Quelle: 0004_539.jpg.
               Erstellt: 2026-09-14T12:23:48.877+02:00,
-              zuletzt geaendert: 2026-11-12T11:13:00.495+01:00.
+              zuletzt geaendert: 2026-11-13T09:10:01.382+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -216,7 +216,7 @@
                <lb facs="#zone_l_26"/>eine Ehre betrachten, verglichen mit der
                <lb facs="#zone_l_27"/>der Prytan<subst><del>ä</del><add place="overwritten">e</add></subst>ums, <del>in dem K<gap reason="illegible" extent="4"/> zu</del>
                <lb facs="#zone_l_28"/><del><gap reason="illegible" extent="5"/>,</del> nur den Kerker geöffnet zu haben,
-               <lb facs="#zone_l_29"/>der <del>dem</del> <subst><del>Herrn</del><add facs="#zone_l_31" xml:id="add-0539-0004" place="below">dem</add></subst> Sandor Weiß
+               <lb facs="#zone_l_29"/>der <del>dem</del> <subst><del>Herrn</del><add facs="#zone_l_31" xml:id="add-0539-0004" place="below">dem</add></subst> <hi rend="latin">Sandor Weiß</hi>
                <lb facs="#zone_l_31"/>
                <lb facs="#zone_l_30"/>verschlossen bleibt!
             </p>

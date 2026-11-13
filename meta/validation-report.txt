@@ -1,88 +1,89 @@
 VALIDIERUNGSREPORT
-Erstellt: 2026-11-12 12:53:50
+Erstellt: 2026-11-13 11:29:20
 Schema 1: Projekt-Schema (hdr-test-schema.rng)
 Schema 2: TEI-All (tei_all.rng)
 Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
 ==============================================================
 
 ### 0001_108.xml
-  --- gegen Projekt-Schema (hdr-test-schema.rng): 76 Verstoesse
+  --- gegen Projekt-Schema (hdr-test-schema.rng): 77 Verstoesse
       Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
-      Zeile 249:65     attribute "change" not allowed here; expected attribute "subtype"
-      Zeile 250:73     found attribute "change", but no attributes allowed here
-      Zeile 250:73     found attribute "rendition", but no attributes allowed here
-      Zeile 253:124    attribute "change" not allowed here; expected attribute "function" or "target"
-      Zeile 253:124    attribute "rendition" not allowed here; expected attribute "target"
-      Zeile 258:48     attribute "change" not allowed here; expected attribute "subtype"
-      Zeile 259:47     element "cb" not allowed anywhere; expected the element end-tag or element "div", "fw", "gap", "head", "metamark" or "p"
-      Zeile 261:96     attribute "change" not allowed here; expected attribute "facs", "hand-medium", "part", "rendition" or "xml:id"
-      Zeile 261:96     value of attribute "rendition" is invalid; must be an XML name without colons
-      Zeile 262:148    attribute "xml:id" not allowed here; expected attribute "spanTo"
-      Zeile 262:148    attribute "type" not allowed here; expected attribute "spanTo"
-      Zeile 262:148    attribute "change" not allowed here; expected attribute "spanTo"
-      Zeile 263:164    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
-      Zeile 264:61     found attribute "break", but no attributes allowed here
-      Zeile 265:97     attribute "rend" not allowed here; expected attribute "style"
-      Zeile 265:97     element "hi" missing required attribute "style"
-      Zeile 265:138    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "lb", "metamark" or "mod"
-      Zeile 266:61     found attribute "break", but no attributes allowed here
-      Zeile 266:87     attribute "rend" not allowed here; expected attribute "style"
-      Zeile 266:87     element "hi" missing required attribute "style"
-      Zeile 267:29     element "quote" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
-      Zeile 268:71     value of attribute "rendition" is invalid; must be an XML name without colons
-      Zeile 273:83     attribute "rend" not allowed here; expected attribute "style"
-      Zeile 273:83     element "hi" missing required attribute "style"
-      Zeile 274:117    attribute "rend" not allowed here; expected attribute "style"
-      Zeile 274:117    element "hi" missing required attribute "style"
-      Zeile 274:154    element "pc" not allowed anywhere; expected text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
-      Zeile 275:68     found attribute "break", but no attributes allowed here
-      Zeile 279:127    element "pc" not allowed anywhere; expected text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
-      Zeile 280:68     found attribute "break", but no attributes allowed here
-      Zeile 280:143    element "pc" not allowed anywhere; expected text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
-      Zeile 281:68     found attribute "break", but no attributes allowed here
-      Zeile 281:94     found attribute "change", but no attributes allowed here
-      Zeile 281:196    attribute "change" not allowed here; expected attribute "place" or "xml:id"
-      Zeile 281:196    attribute "rendition" not allowed here; expected attribute "place"
-      Zeile 281:299    found attribute "change", but no attributes allowed here
-      Zeile 281:357    attribute "rendition" not allowed here; expected attribute "facs" or "xml:id"
-      Zeile 281:437    attribute "change" not allowed here; expected attribute "facs", "target" or "xml:id"
-      Zeile 281:437    attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
-      Zeile 285:29     attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
-      Zeile 286:92     value of attribute "rendition" is invalid; must be an XML name without colons
-      Zeile 287:116    attribute "rend" not allowed here; expected attribute "style"
-      Zeile 287:116    element "hi" missing required attribute "style"
-      Zeile 287:144    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "lb", "metamark" or "mod"
-      Zeile 288:68     found attribute "break", but no attributes allowed here
-      Zeile 291:29     found attribute "break", but no attributes allowed here
-      Zeile 292:71     value of attribute "rendition" is invalid; must be an XML name without colons
-      Zeile 293:73     attribute "rend" not allowed here; expected attribute "style"
-      Zeile 293:73     element "hi" missing required attribute "style"
-      Zeile 293:115    attribute "rend" not allowed here; expected attribute "style"
-      Zeile 293:115    attribute "change" not allowed here; expected attribute "style"
-      Zeile 293:115    element "mod" missing required attribute "style"
-      Zeile 293:219    attribute "change" not allowed here; expected attribute "rend" or "target"
-      Zeile 293:245    element "pc" not allowed anywhere; expected the element end-tag, text or element "anchor", "hi", "lb" or "undo"
-      Zeile 294:68     found attribute "break", but no attributes allowed here
-      Zeile 298:129    element "pc" not allowed anywhere; expected text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
-      Zeile 299:68     found attribute "break", but no attributes allowed here
-      Zeile 304:29     found attribute "break", but no attributes allowed here
-      Zeile 305:72     value of attribute "rendition" is invalid; must be an XML name without colons
-      Zeile 307:150    attribute "change" not allowed here; expected attribute "facs", "target" or "xml:id"
-      Zeile 307:150    attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
-      Zeile 308:29     attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
-      Zeile 311:60     value of attribute "rendition" is invalid; must be an XML name without colons
-      Zeile 312:107    attribute "change" not allowed here; expected attribute "xml:id"
-      Zeile 314:122    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "del", "g", "gap", "hi", "lb", "metamark", "subst" or "undo"
-      Zeile 315:62     found attribute "break", but no attributes allowed here
-      Zeile 318:112    attribute "change" not allowed here; expected attribute "function" or "target"
-      Zeile 318:112    attribute "rendition" not allowed here; expected attribute "function" or "target"
-      Zeile 319:65     element "del" not allowed here; expected the element end-tag, text or element "anchor", "g", "hi", "lb", "metamark" or "undo"
-      Zeile 319:65     attribute "change" not allowed here; expected attribute "type" or "xml:id"
-      Zeile 321:164    attribute "change" not allowed here; expected attribute "function" or "target"
-      Zeile 321:164    found attribute "rendition", but no attributes allowed here
-      Zeile 322:144    attribute "change" not allowed here; expected attribute "rend" or "target"
-      Zeile 324:115    attribute "change" not allowed here; expected attribute "function" or "target"
-      Zeile 324:115    attribute "rendition" not allowed here; expected attribute "function" or "target"
+      Zeile 62:89      attribute "source" not allowed here; expected attribute "points" or "subtype"
+      Zeile 252:65     attribute "change" not allowed here; expected attribute "subtype"
+      Zeile 253:73     found attribute "change", but no attributes allowed here
+      Zeile 253:73     found attribute "rendition", but no attributes allowed here
+      Zeile 256:124    attribute "change" not allowed here; expected attribute "function" or "target"
+      Zeile 256:124    attribute "rendition" not allowed here; expected attribute "target"
+      Zeile 261:48     attribute "change" not allowed here; expected attribute "subtype"
+      Zeile 262:47     element "cb" not allowed anywhere; expected the element end-tag or element "div", "fw", "gap", "head", "metamark" or "p"
+      Zeile 264:96     attribute "change" not allowed here; expected attribute "facs", "hand-medium", "part", "rendition" or "xml:id"
+      Zeile 264:96     value of attribute "rendition" is invalid; must be an XML name without colons
+      Zeile 265:148    attribute "xml:id" not allowed here; expected attribute "spanTo"
+      Zeile 265:148    attribute "type" not allowed here; expected attribute "spanTo"
+      Zeile 265:148    attribute "change" not allowed here; expected attribute "spanTo"
+      Zeile 266:164    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
+      Zeile 267:61     found attribute "break", but no attributes allowed here
+      Zeile 268:97     attribute "rend" not allowed here; expected attribute "style"
+      Zeile 268:97     element "hi" missing required attribute "style"
+      Zeile 268:138    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "lb", "metamark" or "mod"
+      Zeile 269:61     found attribute "break", but no attributes allowed here
+      Zeile 269:87     attribute "rend" not allowed here; expected attribute "style"
+      Zeile 269:87     element "hi" missing required attribute "style"
+      Zeile 270:29     element "quote" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
+      Zeile 271:71     value of attribute "rendition" is invalid; must be an XML name without colons
+      Zeile 276:83     attribute "rend" not allowed here; expected attribute "style"
+      Zeile 276:83     element "hi" missing required attribute "style"
+      Zeile 277:117    attribute "rend" not allowed here; expected attribute "style"
+      Zeile 277:117    element "hi" missing required attribute "style"
+      Zeile 277:154    element "pc" not allowed anywhere; expected text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
+      Zeile 278:68     found attribute "break", but no attributes allowed here
+      Zeile 282:127    element "pc" not allowed anywhere; expected text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
+      Zeile 283:68     found attribute "break", but no attributes allowed here
+      Zeile 283:143    element "pc" not allowed anywhere; expected text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
+      Zeile 284:68     found attribute "break", but no attributes allowed here
+      Zeile 284:94     found attribute "change", but no attributes allowed here
+      Zeile 284:196    attribute "change" not allowed here; expected attribute "place" or "xml:id"
+      Zeile 284:196    attribute "rendition" not allowed here; expected attribute "place"
+      Zeile 284:299    found attribute "change", but no attributes allowed here
+      Zeile 284:357    attribute "rendition" not allowed here; expected attribute "facs" or "xml:id"
+      Zeile 284:437    attribute "change" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 284:437    attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 288:29     attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 289:92     value of attribute "rendition" is invalid; must be an XML name without colons
+      Zeile 290:116    attribute "rend" not allowed here; expected attribute "style"
+      Zeile 290:116    element "hi" missing required attribute "style"
+      Zeile 290:144    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "lb", "metamark" or "mod"
+      Zeile 291:68     found attribute "break", but no attributes allowed here
+      Zeile 294:29     found attribute "break", but no attributes allowed here
+      Zeile 295:71     value of attribute "rendition" is invalid; must be an XML name without colons
+      Zeile 296:73     attribute "rend" not allowed here; expected attribute "style"
+      Zeile 296:73     element "hi" missing required attribute "style"
+      Zeile 296:115    attribute "rend" not allowed here; expected attribute "style"
+      Zeile 296:115    attribute "change" not allowed here; expected attribute "style"
+      Zeile 296:115    element "mod" missing required attribute "style"
+      Zeile 296:219    attribute "change" not allowed here; expected attribute "rend" or "target"
+      Zeile 296:245    element "pc" not allowed anywhere; expected the element end-tag, text or element "anchor", "hi", "lb" or "undo"
+      Zeile 297:68     found attribute "break", but no attributes allowed here
+      Zeile 301:129    element "pc" not allowed anywhere; expected text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
+      Zeile 302:68     found attribute "break", but no attributes allowed here
+      Zeile 307:29     found attribute "break", but no attributes allowed here
+      Zeile 308:72     value of attribute "rendition" is invalid; must be an XML name without colons
+      Zeile 310:150    attribute "change" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 310:150    attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 311:29     attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 314:60     value of attribute "rendition" is invalid; must be an XML name without colons
+      Zeile 315:107    attribute "change" not allowed here; expected attribute "xml:id"
+      Zeile 317:122    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "del", "g", "gap", "hi", "lb", "metamark", "subst" or "undo"
+      Zeile 318:62     found attribute "break", but no attributes allowed here
+      Zeile 321:112    attribute "change" not allowed here; expected attribute "function" or "target"
+      Zeile 321:112    attribute "rendition" not allowed here; expected attribute "function" or "target"
+      Zeile 322:65     element "del" not allowed here; expected the element end-tag, text or element "anchor", "g", "hi", "lb", "metamark" or "undo"
+      Zeile 322:65     attribute "change" not allowed here; expected attribute "type" or "xml:id"
+      Zeile 324:164    attribute "change" not allowed here; expected attribute "function" or "target"
+      Zeile 324:164    found attribute "rendition", but no attributes allowed here
+      Zeile 325:144    attribute "change" not allowed here; expected attribute "rend" or "target"
+      Zeile 327:115    attribute "change" not allowed here; expected attribute "function" or "target"
+      Zeile 327:115    attribute "rendition" not allowed here; expected attribute "function" or "target"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
@@ -304,7 +305,7 @@ Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0004_539.xml
-  --- gegen Projekt-Schema (hdr-test-schema.rng): 15 Verstoesse
+  --- gegen Projekt-Schema (hdr-test-schema.rng): 17 Verstoesse
       Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
       Zeile 31:78      element "surface" missing required attribute "type"
       Zeile 183:85     found attribute "change", but no attributes allowed here
@@ -320,6 +321,8 @@ Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
       Zeile 205:148    attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
       Zeile 205:233    attribute "change" not allowed here; expected attribute "place" or "xml:id"
       Zeile 205:233    attribute "rendition" not allowed here; expected attribute "place"
+      Zeile 219:176    attribute "rend" not allowed here; expected attribute "style"
+      Zeile 219:176    element "hi" missing required attribute "style"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
@@ -374,7 +377,7 @@ Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
       Zeile 266        target="460.xml#add-0460-9001"  ->  Datei 460.xml nicht in tei/ vorhanden
 
 ### 0007_603.xml
-  --- gegen Projekt-Schema (hdr-test-schema.rng): 25 Verstoesse
+  --- gegen Projekt-Schema (hdr-test-schema.rng): 26 Verstoesse
       Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
       Zeile 31:83      element "surface" missing required attribute "type"
       Zeile 414:46     found attribute "type", but no attributes allowed here
@@ -392,116 +395,85 @@ Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
       Zeile 473:752    element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
       Zeile 473:976    element "retrace" not allowed anywhere; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
       Zeile 473:1025   element "retrace" not allowed anywhere; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
-      Zeile 473:1878   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
-      Zeile 473:1915   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
-      Zeile 473:1952   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
-      Zeile 473:1989   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
-      Zeile 473:2026   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
-      Zeile 473:2070   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
-      Zeile 473:2107   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
-      Zeile 473:2144   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+      Zeile 473:1667   attribute "rendition" not allowed here; expected attribute "place" or "xml:id"
+      Zeile 473:1901   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+      Zeile 473:1938   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+      Zeile 473:1975   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+      Zeile 473:2012   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+      Zeile 473:2049   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+      Zeile 473:2093   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+      Zeile 473:2130   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+      Zeile 473:2167   element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0008_609.xml
-  --- gegen Projekt-Schema (hdr-test-schema.rng): 37 Verstoesse
-      Zeile 22:68      attribute "lrx" not allowed here; expected attribute "points", "subtype", "type" or "xml:id"
-      Zeile 22:68      attribute "lry" not allowed here; expected attribute "points", "subtype", "type" or "xml:id"
-      Zeile 22:68      element "surface" missing required attributes "points" and "type"
-      Zeile 336:81     element "zone" missing required attribute "type"
-      Zeile 526:60     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 527:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 528:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 532:60     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 536:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 537:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 541:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 548:60     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 549:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 550:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 557:60     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 558:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 559:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 560:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 561:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 562:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 563:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 564:58     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 565:58     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 566:58     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 567:58     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 568:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 569:60     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 570:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 571:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 572:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 579:59     element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
-      Zeile 586:112    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
-      Zeile 587:54     found attribute "break", but no attributes allowed here
-      Zeile 623:109    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
-      Zeile 624:55     found attribute "break", but no attributes allowed here
-      Zeile 625:108    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
-      Zeile 626:55     found attribute "break", but no attributes allowed here
-  --- gegen TEI-All (tei_all.rng): 27 Verstoesse
-      Zeile 526:60     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 527:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 528:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 532:60     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 536:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 537:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 541:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 548:60     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 549:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 550:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 557:60     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 558:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 559:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 560:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 561:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 562:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 563:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 564:58     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 565:58     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 566:58     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 567:58     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 568:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 569:60     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 570:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 571:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 572:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-      Zeile 579:59     element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", " [...]
-  --- ins Leere zeigende Verweise / Behelfs-IDs: 0
+  --- gegen Projekt-Schema (hdr-test-schema.rng): 31 Verstoesse
+      Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
+      Zeile 31:68      attribute "lrx" not allowed here; expected attribute "points", "subtype", "type" or "xml:id"
+      Zeile 31:68      attribute "lry" not allowed here; expected attribute "points", "subtype", "type" or "xml:id"
+      Zeile 31:68      element "surface" missing required attributes "points" and "type"
+      Zeile 365:81     element "zone" missing required attribute "type"
+      Zeile 577:85     attribute "rend" not allowed here; expected attribute "style"
+      Zeile 577:85     element "hi" missing required attribute "style"
+      Zeile 591:112    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
+      Zeile 592:54     found attribute "break", but no attributes allowed here
+      Zeile 592:95     found attribute "change", but no attributes allowed here
+      Zeile 592:195    attribute "change" not allowed here; expected attribute "place" or "xml:id"
+      Zeile 592:195    attribute "rendition" not allowed here; expected attribute "place"
+      Zeile 601:133    attribute "change" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 601:133    attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 603:497    attribute "change" not allowed here; expected attribute "place" or "xml:id"
+      Zeile 603:497    attribute "rendition" not allowed here; expected attribute "place"
+      Zeile 603:640    attribute "subtype" not allowed here; expected attribute "type" or "xml:id"
+      Zeile 609:135    attribute "change" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 609:135    attribute "rendition" not allowed here; expected attribute "facs", "target" or "xml:id"
+      Zeile 610:193    attribute "change" not allowed here; expected attribute "type" or "xml:id"
+      Zeile 617:72     found attribute "change", but no attributes allowed here
+      Zeile 617:162    attribute "rendition" not allowed here; expected attribute "place"
+      Zeile 617:296    element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+      Zeile 617:448    attribute "change" not allowed here; expected attribute "place" or "xml:id"
+      Zeile 617:448    attribute "rendition" not allowed here; expected attribute "place"
+      Zeile 628:109    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
+      Zeile 629:55     found attribute "break", but no attributes allowed here
+      Zeile 630:108    element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
+      Zeile 631:55     found attribute "break", but no attributes allowed here
+      Zeile 632:564    found attribute "xml:id", but no attributes allowed here
+      Zeile 633:100    found attribute "xml:id", but no attributes allowed here
+  --- gegen TEI-All (tei_all.rng): 0 Verstoesse
+  --- ins Leere zeigende Verweise / Behelfs-IDs: 1
+      Zeile 576        target="0003_406.xml#add-0003-0004"  ->  ID add-0003-0004 existiert in 0003_406.xml nicht
 
 ==============================================================
 HAEUFIGSTE MELDUNGEN - Projekt-Schema (hdr-test-schema.rng)
-  40x  attribute "rend" not allowed here; expected attribute "style"
+  42x  attribute "rend" not allowed here; expected attribute "style"
   38x  value of attribute "rendition" is invalid; must be an XML name without colons
-  27x  element "add" not allowed here; expected the element end-tag or element "div", "fw", "head", "metamark" or "p"
+  28x  element "hi" missing required attribute "style"
   26x  found attribute "break", but no attributes allowed here
-  26x  element "hi" missing required attribute "style"
   19x  found attribute "type", but no attributes allowed here
   16x  found attribute "rendition", but no attributes allowed here
   15x  element "pc" not allowed anywhere; expected the element end-tag, text or element "add", "anchor", "choice", "del", "delSpan", "gap", "hi", "lb", "metamark", "mod", "seg", "subst" or "unclear"
   15x  element "mod" missing required attribute "style"
-  10x  found attribute "change", but no attributes allowed here
-  10x  element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
+  12x  found attribute "change", but no attributes allowed here
+  11x  element "gap" not allowed here; expected the element end-tag, text or element "add", "del", "g", "lb", "metamark" or "subst"
   10x  attribute "change" not allowed here; expected attribute "function" or "target"
   10x  attribute "change" not allowed here; expected attribute "facs", "hand-medium", "part", "rendition" or "xml:id"
   9x  element "surface" missing required attribute "type"
   9x  element "metamark" not allowed here; expected the element end-tag or element "p"
+  9x  attribute "rendition" not allowed here; expected attribute "place"
 
 HAEUFIGSTE MELDUNGEN - TEI-All (tei_all.rng)
-  27x  element "add" not allowed here; expected the element end-tag or element "ab", "addSpan", "address", "alt", "altGrp", "anchor", "annotationBlock", "app", "argument", "bibl", "biblFull", "biblStruct", "
+  keine
 
 ZUSAMMENFASSUNG (Verstoesse je Datei; in Klammern: Differenz zum letzten Durchgang)
   Datei                     Projekt        TEI-All       Verweise
-  0001_108.xml             76 (±0)        0 (±0)        0 (±0)
+  0001_108.xml             77 (±0)        0 (±0)        0 (±0)
   0002_180.xml            132 (±0)        0 (±0)        0 (±0)
-  0003_406.xml              75 (+1)        0 (±0)        0 (±0)
-  0004_539.xml             15 (±0)        0 (±0)        0 (±0)
-  0005_581.xml              24 (+3)        0 (±0)         0 (-1)
-  0006_459.xml              15 (+9)        0 (±0)        1 (±0)
-  0007_603.xml              25 (+5)        0 (±0)        0 (±0)
-  0008_609.xml             37 (±0)       27 (±0)        0 (±0)
+  0003_406.xml             75 (±0)        0 (±0)        0 (±0)
+  0004_539.xml             17 (±0)        0 (±0)        0 (±0)
+  0005_581.xml             24 (±0)        0 (±0)        0 (±0)
+  0006_459.xml             15 (±0)        0 (±0)        1 (±0)
+  0007_603.xml             26 (±0)        0 (±0)        0 (±0)
+  0008_609.xml              31 (-2)         0 (-2)         1 (-2)
   ------------------------------------------------------------
-  Summe                   399 (+18)       27 (±0)         1 (-1)
+  Summe                    397 (-2)         0 (-2)         2 (-2)

@@ -12,10 +12,19 @@
             <p>
               Quelle: 0008_609.jpg.
               Erstellt: 2026-10-02T15:12:26.264+02:00,
-              zuletzt geaendert: 2026-10-21T11:35:48.627+02:00.
+              zuletzt geaendert: 2026-11-13T11:24:57.246+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="fp-pencil-1">[tbd]</change>
+               <change xml:id="kk-ink-1">[tbd]</change>
+               <change xml:id="kk-ink-2">[tbd]</change>
+            </listChange>
+         </creation>
+      </profileDesc>
    </teiHeader>
    <facsimile>
       <graphic url="0008_609.jpg" width="5214px" height="6805px"/>
@@ -32,7 +41,11 @@
                points="3751,1038 3831,1038 3831,1117 3751,1117"/>
          <zone xml:id="zone_r_18"
                type="add"
-               points="3740,1460 3970,1460 3970,1600 3740,1600"/>
+               points="3740,1460 3970,1460 3970,1600 3740,1600">
+            <zone type="line"
+                  xml:id="zone_l_25"
+                  points="3754,1572 3956,1534 3950,1505 3748,1543"/>
+         </zone>
          <zone xml:id="zone_r_19"
                type="add"
                points="3759,1646 4096,1646 4096,1796 3759,1796">
@@ -56,7 +69,11 @@
          </zone>
          <zone xml:id="zone_r_22"
                type="add"
-               points="3743,1998 4817,1998 4817,2181 3743,2181"/>
+               points="3743,1998 4817,1998 4817,2181 3743,2181">
+            <zone type="line"
+                  xml:id="zone_l_26"
+                  points="3752,2036 4757,1991 4753,2131 4409,2168 3752,2172"/>
+         </zone>
          <zone xml:id="zone_r_23"
                type="metamark"
                points="3772,2635 3825,2635 3825,2716 3772,2716">
@@ -108,7 +125,11 @@
          </zone>
          <zone xml:id="zone_r_34"
                type="add"
-               points="3818,5186 4053,5186 4053,5283 3818,5283"/>
+               points="3818,5186 4053,5186 4053,5283 3818,5283">
+            <zone type="line"
+                  xml:id="zone_l_28"
+                  points="3810,5172 4011,5167 3983,5286 3810,5290"/>
+         </zone>
          <zone xml:id="zone_r_35"
                type="add"
                points="3839,5283 4170,5283 4170,5395 3839,5395">
@@ -139,9 +160,13 @@
          </zone>
          <zone xml:id="zone_r_38"
                type="add"
-               points="3957,5651 4091,5651 4091,5756 3957,5756"/>
+               points="3957,5651 4091,5651 4091,5756 3957,5756">
+            <zone type="line"
+                  xml:id="zone_l_30"
+                  points="4069,5725 3966,5730 3967,5760 4070,5755"/>
+         </zone>
          <zone xml:id="zone_r_36"
-               type="add"
+               type="metamark"
                points="4319,5467 4670,5467 4670,5689 4319,5689">
             <zone type="line"
                   xml:id="zone_l_21"
@@ -251,11 +276,11 @@
                   xml:id="zone_r_5_tl_9"
                   points="348,3573 418,3598 594,3540 623,3561 725,3553 840,3491 885,3512 955,3483 996,3499 1020,3385 783,3426 688,3483 623,3450 520,3512 365,3487"/>
             <zone type="line"
-                  xml:id="zone_r_5_tl_10"
-                  points="414,3749 496,3737 533,3774 647,3725 684,3753 996,3606 1229,3606 1258,3495 1086,3495 713,3651 672,3610 524,3684 434,3663"/>
-            <zone type="line"
                   xml:id="zone_r_5_tl_11"
                   points="373,3692 520,3680 631,3618 1028,3524 1119,3565 1151,3438 1106,3421 971,3491 729,3553 402,3573"/>
+            <zone type="line"
+                  xml:id="zone_r_5_tl_10"
+                  points="414,3749 496,3737 533,3774 647,3725 684,3753 996,3606 1229,3606 1258,3495 1086,3495 713,3651 672,3610 524,3684 434,3663"/>
             <zone type="line"
                   xml:id="zone_r_5_tl_12"
                   points="361,3860 402,3856 434,3880 455,3872 463,3884 504,3856 524,3860 537,3848 549,3856 582,3831 611,3839 623,3745 586,3741 537,3770 496,3737 455,3757 443,3749 430,3762 373,3729"/>
@@ -283,13 +308,17 @@
          </zone>
          <zone xml:id="zone_r_12"
                type="add"
-               points="773,5459 986,5459 986,5592 773,5592"/>
+               points="773,5459 986,5459 986,5592 773,5592">
+            <zone type="line"
+                  xml:id="zone_l_32"
+                  points="996,5579 983,5585 865,5556 766,5581 787,5384 897,5466 975,5446 996,5460"/>
+         </zone>
          <zone xml:id="zone_r_13"
                type="add"
                points="1011,5414 1423,5414 1423,5587 1011,5587">
             <zone type="line"
-                  xml:id="zone_r_13_tl_1"
-                  points="766,5581 865,5556 983,5585 1053,5552 1110,5581 1180,5540 1385,5593 1410,5368 1172,5437 1090,5405 1004,5466 975,5446 897,5466 787,5384"/>
+                  xml:id="zone_l_31"
+                  points="996,5460 1004,5466 1090,5405 1172,5437 1410,5368 1385,5593 1180,5540 1110,5581 1053,5552 996,5579"/>
          </zone>
          <zone xml:id="zone_r_16"
                type="add"
@@ -377,8 +406,8 @@
                   xml:id="zone_r_2_tl_14"
                   points="1471,2123 3684,2073 3684,1991 3585,1971 1475,2008"/>
             <zone type="line"
-                  xml:id="zone_r_2_tl_15"
-                  points="1471,2188 4409,2168 4753,2131 4757,1991 1471,2139"/>
+                  xml:id="zone_l_27"
+                  points="3752,2172 1471,2188 1471,2139 3752,2036"/>
             <zone type="line"
                   xml:id="zone_r_2_tl_16"
                   points="1471,2282 3671,2274 3704,2172 1471,2192"/>
@@ -476,8 +505,8 @@
                   xml:id="zone_r_2_tl_47"
                   points="1541,5220 1991,5208 2065,5282 2143,5216 2491,5196 3762,5192 3737,5085 1545,5138"/>
             <zone type="line"
-                  xml:id="zone_r_2_tl_48"
-                  points="1553,5339 3983,5286 4011,5167 1553,5233"/>
+                  xml:id="zone_l_29"
+                  points="3810,5290 1553,5339 1553,5233 3810,5172"/>
             <zone type="line"
                   xml:id="zone_r_2_tl_49"
                   points="1557,5417 3757,5392 3757,5282 1557,5343"/>
@@ -523,93 +552,69 @@
             </fw>
             <metamark xml:id="metamark-0609-0001" facs="#zone_r_17">
             </metamark>
-            <add xml:id="add-0609-0001" facs="#zone_r_18"/>
-            <add xml:id="add-0609-0002" facs="#zone_r_19"><lb facs="#zone_r_19_tl_1"/>Honnt</add>
-            <add xml:id="add-0609-0003" facs="#zone_r_21"><lb facs="#zone_l_10"/>1 olop</add>
-            <metamark xml:id="metamark-0609-0002" facs="#zone_r_20">
-               <lb facs="#zone_l_9"/>①
+            <metamark xml:id="metamark-0609-0002" facs="#zone_r_20" function="paragraph" target="#metamark-0609-0013">
+               <lb facs="#zone_l_9"/><g ref="#intervention"/>
             </metamark>
-            <add xml:id="add-0609-0004" facs="#zone_r_22"/>
             <metamark xml:id="metamark-0609-0003" facs="#zone_r_23">
                <lb facs="#zone_l_17"/>t
             </metamark>
-            <add xml:id="add-0609-0005" facs="#zone_r_25"><lb facs="#zone_l_12"/>tro</add>
-            <add xml:id="add-0609-0006" facs="#zone_r_27"><lb facs="#zone_r_27_tl_1"/>N</add>
-            <metamark xml:id="metamark-0609-0004" facs="#zone_r_29" function="deletion">
-               <lb facs="#zone_l_18"/>H d
+            <metamark xml:id="metamark-0609-0004" facs="#zone_r_29" function="deletion" target="#del-0609-0002">
+               <lb facs="#zone_l_18"/><g ref="#intervention"/> <g ref="#deleatur"/>
             </metamark>
-            <add xml:id="add-0609-0007" facs="#zone_r_30"><lb facs="#zone_l_20"/>+ es</add>
             <metamark xml:id="metamark-0609-0005" facs="#zone_r_31" function="deletion">
                <lb facs="#zone_l_19"/>m d
             </metamark>
             <metamark xml:id="metamark-0609-0006" facs="#zone_r_33" function="deletion">
                <lb facs="#zone_r_33_tl_1"/>4d
             </metamark>
-            <add xml:id="add-0609-0008" facs="#zone_r_34"/>
-            <add xml:id="add-0609-0009" facs="#zone_r_35"><lb facs="#zone_r_35_tl_1"/>+ pågedonst</add>
-            <add xml:id="add-0609-0010" facs="#zone_r_37"><lb facs="#zone_l_22"/>4 Verbrechens</add>
             <metamark xml:id="metamark-0609-0007" facs="#zone_r_40">
                <lb facs="#zone_l_23"/>+
             </metamark>
             <metamark xml:id="metamark-0609-0008" facs="#zone_r_41">
                <lb facs="#zone_l_24"/>.
             </metamark>
-            <add xml:id="add-0609-0011" facs="#zone_r_38"/>
-            <add xml:id="add-0609-0012" facs="#zone_r_36"><lb facs="#zone_l_21"/>(1)</add>
-            <add xml:id="add-0609-0013" facs="#zone_r_39"><lb facs="#zone_r_39_tl_1"/>H Ein Gelingen wird's<lb facs="#zone_r_39_tl_2"/>auch wenn’t<lb facs="#zone_r_39_tl_3"/>u. p. glückt. dann<lb facs="#zone_r_39_tl_4"/>(Reichsglückt.)<lb facs="#zone_r_39_tl_5"/>In diesem Fall</add>
-            <add xml:id="add-0609-0014" facs="#zone_r_32"><lb facs="#zone_r_32_tl_1"/>+ der mit dem Sonnenausgang<lb facs="#zone_r_32_tl_2"/>die trüge erspint</add>
-            <add xml:id="add-0609-0015" facs="#zone_r_28"><lb facs="#zone_r_28_tl_1"/>H H Schok.</add>
-            <add xml:id="add-0609-0016" facs="#zone_r_24"><lb facs="#zone_l_13"/>1</add>
-            <add xml:id="add-0609-0017" facs="#zone_r_26"><lb facs="#zone_l_14"/>th<lb facs="#zone_l_15"/>ersetze<lb facs="#zone_l_16"/>Naturempfindung</add>
-            <add xml:id="add-0609-0019" facs="#zone_r_4"><lb facs="#zone_r_4_tl_1"/>I wasklaps<lb facs="#zone_r_4_tl_2"/>Migill<lb facs="#zone_r_4_tl_3"/>entlichen<lb facs="#zone_r_4_tl_4"/>behördlichen</add>
-            <add xml:id="add-0609-0020" facs="#zone_r_5"><lb facs="#zone_r_5_tl_1"/>V ist doch, nach dem<lb facs="#zone_r_5_tl_2"/>dreißigjährigen Krieg gehen.<lb facs="#zone_l_7"/>eine Gesellschaft, die dem<lb facs="#zone_l_8"/>Hohn et jene ihre Ordnung<lb facs="#zone_r_5_tl_6"/>dem hohen auf jene verdankt,<lb facs="#zone_r_5_tl_7"/>endlich eilennt eine<lb facs="#zone_r_5_tl_9"/>Entscheidung, für die in<lb facs="#zone_r_5_tl_10"/>Tag. In allen Stellungen<lb facs="#zone_r_5_tl_11"/>gerüstet bin wir am ersten<lb facs="#zone_r_5_tl_12"/>prìptit.</add>
-            <add xml:id="add-0609-0021" facs="#zone_r_6"><lb facs="#zone_l_6"/>7,</add>
-            <add xml:id="add-0609-0022" facs="#zone_r_8"><lb facs="#zone_l"/>"gym</add>
-            <add xml:id="add-0609-0023" facs="#zone_r_11"><lb facs="#zone_l_3"/>+ diejenige.</add>
-            <add xml:id="add-0609-0024" facs="#zone_r_12"/>
-            <add xml:id="add-0609-0025" facs="#zone_r_13"><lb facs="#zone_r_13_tl_1"/>Hav Lignifidul</add>
-            <add xml:id="add-0609-0026" facs="#zone_r_16"><lb facs="#zone_r_16_tl_1"/>4 nichter</add>
-            <add xml:id="add-0609-0027" facs="#zone_r_14"><lb facs="#zone_l_4"/>4 fr.</add>
-            <metamark xml:id="metamark-0609-0009" facs="#zone_r_15" function="deletion">
-               <lb facs="#zone_l_5"/>d
+            <metamark xml:id="metamark-0609-0009" facs="#zone_r_36" function="insertion" target="0003_406.xml#add-0003-0004">
+               <lb facs="#zone_l_21"/><g ref="#intervention"/> <hi rend="underline">33</hi>
             </metamark>
-            <metamark xml:id="metamark-0609-0010" facs="#zone_r_9" function="deletion">
-               <lb facs="#zone_l_1"/>1d
+            <metamark xml:id="metamark-0609-0010" facs="#zone_r_15" function="deletion">
+               <lb facs="#zone_l_5"/><g ref="#intervention"/> <g ref="#deleatur"/>
             </metamark>
-            <add xml:id="add-0609-0028" facs="#zone_r_10"><lb facs="#zone_r_10_tl_1"/>N</add>
-            <metamark xml:id="metamark-0609-0011" facs="#zone_r_7" function="deletion">
-               <lb facs="#zone_l_2"/>I don
+            <metamark xml:id="metamark-0609-0011" facs="#zone_r_9" function="deletion" target="#del-0609-0003">
+               <lb facs="#zone_l_1"/><g ref="#intervention"/> <g ref="#deleatur"/>
+            </metamark>
+            <metamark xml:id="metamark-0609-0012" facs="#zone_r_7" function="deletion" target="#del-0609-0001">
+               <lb facs="#zone_l_2"/><g ref="#intervention"/> <g ref="#deleatur"/>
             </metamark>
             <p facs="#zone_r_2">
                <lb facs="#zone_r_2_tl_1"/>Luftgeschäfts viertausend Polizisten bereitet haben, die
                <lb facs="#zone_r_2_tl_2"/>ihre Tatkraft mangels anderer Enthusiasten an vierzig
                <lb facs="#zone_r_2_tl_3"/>journalistischen Freunden der Polizeidirektion schad<pc force="weak">-</pc>
-               <lb facs="#zone_r_2_tl_4" break="no"/>los halten m<subst><del>ü</del><add facs="#zone_r_3" xml:id="add-0609-0018"><lb facs="#zone_r_3_tl_1"/>tu</add></subst>ßten. Sie haben es einer Amtsführung,
+               <lb facs="#zone_r_2_tl_4" break="no"/>los halten m<subst change="#fp-pencil-1"><del>ü</del><add facs="#zone_r_3" change="#fp-pencil-1" xml:id="add-0609-0017" rendition="#antiqua"><lb facs="#zone_r_3_tl_1"/>tu</add></subst>ßten. Sie haben es einer Amtsführung,
                <lb facs="#zone_r_2_tl_5"/>die mit der Herstellung des Pallawatsch geradezu
                <lb facs="#zone_r_2_tl_6"/>begrifflich verbunden ist, nicht weiter übelgenommen
                <lb facs="#zone_r_2_tl_7"/>und sich nach dessen blutiger Fortsetzung versöhnt
                <lb facs="#zone_r_2_tl_8"/>gezeigt. Und wir haben es erlebt, daß eine Bestialität
-               <lb facs="#zone_r_2_tl_9"/>in Lettern gegossen werden konnte und zu ihrer
+               <lb facs="#zone_r_2_tl_9"/>in Lettern gegossen w<subst><del>erden konnte</del><add facs="#zone_r_18" xml:id="add-0609-0001"><lb facs="#zone_l_25"/><metamark function="intervention"><g ref="#intervention"/></metamark> ard</add></subst> und zu ihrer
                <lb facs="#zone_r_2_tl_10"/>Deckung eine Unwahrhaftigkeit, vor denen das
-               <lb facs="#zone_r_2_tl_11"/>Geistesarsenal des Weltkriegs zusperren kann Aber
+               <lb facs="#zone_r_2_tl_11"/>Geistesarsenal des Weltkriegs zusperren k<subst><del>ann.</del><add facs="#zone_r_19" xml:id="add-0609-0002"><lb facs="#zone_r_19_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> onnte.</add></subst> <metamark xml:id="metamark-0609-0013" function="paragraph"><g ref="#intervention"/></metamark> Aber
                <lb facs="#zone_r_2_tl_12"/>im Angesicht der Wortschande, die wie einst für
-               <lb facs="#zone_l_11"/>das Vaterland, nunmehr / für dessen Hotelgeschäft
+               <lb facs="#zone_l_11"/>das Vaterland, nunmehr <metamark function="addition" change="#kk-ink-2" rendition="#kurrent"/><add facs="#zone_r_21" xml:id="add-0609-0003"><lb facs="#zone_l_10"/><metamark function="intervention"><g ref="#intervention"/></metamark> bloß</add> für dessen Hotelgeschäft
                <lb facs="#zone_r_2_tl_14"/>dem Menschenmord zugejauchzt hat; im Milieu
-               <lb facs="#zone_r_2_tl_15"/>einer Geistesgegenwart, die durch die Konsulate 1) im Choros zu solchem Hauspiel
+               <lb facs="#zone_l_27"/>einer <metamark function="addition"/><add facs="#zone_r_4" xml:id="add-0609-0018"><lb facs="#zone_r_4_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> <del>wasklaps<lb facs="#zone_r_4_tl_2"/>Migill<lb facs="#zone_r_4_tl_3"/>entlichen</del><lb facs="#zone_r_4_tl_4"/>behördlichen</add> Geistesgegenwart, die <subst><del>durch die Konsulate</del><add facs="#zone_r_22" change="#kk-ink-1" xml:id="add-0609-0004" rendition="#kurrent"><lb facs="#zone_l_26"/><metamark function="intervention"><g ref="#intervention"/></metamark> <subst><del>im Chaos</del><del subtype="implicit"> </del><add>zu solche<del>r</del>m Schauspiel</add></subst></add></subst>
                <lb facs="#zone_r_2_tl_16"/>den Fremden köstlichen Frieden, heitere Geselligkeit,
                <lb facs="#zone_r_2_tl_17"/>bezaubernde österreichische Musik, Salzburger Fest
                <lb facs="#zone_r_2_tl_18"/>spiele, den Vollbetrieb eines Freudentags, schöne
                <lb facs="#zone_r_2_tl_19"/>Frauen und die feste Haltung der Bundesregierung
                <lb facs="#zone_r_2_tl_20"/>verhieß — an diesem Ende aller Scham gelüstet's
-               <lb facs="#zone_r_2_tl_21"/>mich, voll und ganz [die Gefahr einzugehen, die der
-               <lb facs="#zone_r_2_tl_22"/>Zustand dem Bewahrer eines natürlichen Gefühls
-               <lb facs="#zone_r_2_tl_23"/>eröffnet. /Als Ankläger werde ich mich dagegen zu
+               <lb facs="#zone_r_2_tl_21"/>mich, voll und ganz <metamark function="addition" change="#kk-ink-1" rendition="#kurrent"/><add facs="#zone_r_24" xml:id="add-0609-0015"><lb facs="#zone_l_13"/><metamark function="intervention"><g ref="#intervention"/></metamark> ,</add> die Gefahr einzugehen, die der
+               <lb facs="#zone_r_2_tl_22"/>Zustand dem Bewahrer <subst><del><subst><del>eines</del><add facs="#zone_r_25" xml:id="add-0609-0005"><lb facs="#zone_l_12"/><del change="#kk-ink-1"><metamark function="intervention"><g ref="#intervention"/></metamark> vo</del></add></subst> natürlichen Gefühls</del><add facs="#zone_r_26" xml:id="add-0609-0016"><lb facs="#zone_l_14"/>der<lb facs="#zone_l_15"/>ersetze<lb facs="#zone_l_16"/>Naturempfindung</add></subst>
+               <lb facs="#zone_r_2_tl_23"/>eröffnet. <metamark function="addition"/><add facs="#zone_r_5" xml:id="add-0609-0019"><lb facs="#zone_r_5_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> Es ist doch, nach dem<lb facs="#zone_r_5_tl_2"/>dreißigjährigen Krieg gegen<lb facs="#zone_l_7"/>eine Gesellschaft, die <del>dem<lb facs="#zone_l_8"/>Hohn auf jene</del> ihre Ordnung<lb facs="#zone_r_5_tl_6"/>dem Hohn auf jene verdankt,<lb facs="#zone_r_5_tl_7"/>endlich nimmt eine<lb facs="#zone_r_5_tl_9"/>Entscheidung, für die ich<lb facs="#zone_r_5_tl_11"/>gerüstet bin wie am ersten<lb facs="#zone_r_5_tl_10"/>Tag. In allen Stellungen<lb facs="#zone_r_5_tl_12"/>gerüstet.</add> Als Ankläger werde ich mich dagegen zu
                <lb facs="#zone_r_2_tl_24"/>schützen wissen, daß mein Wort angetastet wird
                <lb facs="#zone_r_2_tl_25"/>innerhalb und außerhalb der Grenzen dieses Staates,
                <lb facs="#zone_r_2_tl_26"/>und wenn's sein muß auf eine Art, die dem durch
                <lb facs="#zone_r_2_tl_27"/>die Ereignisse ungestörten Fremdenverkehr abträglich
                <lb facs="#zone_r_2_tl_28"/>wäre. Als Zeuge stehe ich jedem gekränkten Recht
-               <lb facs="#zone_r_2_tl_29"/>zur Verfügung Als Angeklager jedem Znrecht. Als
+               <lb facs="#zone_r_2_tl_29"/>zu<subst change="#kk-ink-1"><del>r Verfügung.</del><add facs="#zone_r_28" xml:id="add-0609-0014" rendition="#kurrent"><lb facs="#zone_r_28_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> <gap reason="illegible" extent="2"/> Gebote.</add></subst> Als Angeklager jedem <subst><del>Z</del><add facs="#zone_r_27" change="#fp-pencil-1" xml:id="add-0609-0006" rendition="#antiqua"><lb facs="#zone_r_27_tl_1"/>N</add></subst>nrecht. Als
                <lb facs="#zone_r_2_tl_30"/>Republikaner begehre ich, dem festes'en Hort der
                <lb facs="#zone_r_2_tl_31"/>Republik gegenüberzustehen. Meinetwegen vor den
                <lb facs="#zone_r_2_tl_32"/>Schattendorfer Geschwornen. Nicht auf den Ausgang
@@ -617,24 +622,24 @@
                <lb facs="#zone_r_2_tl_34"/>sagen, » wie alles dies geschah«, sie wieder einmal von
                <lb facs="#zone_r_2_tl_35"/>Taten hören zu lassen, fleischlich, blutig, unnatürlich
                <lb facs="#zone_r_2_tl_36"/>zufälligen Gerichten, blindem Mord; von Planen, die
-               <lb facs="#zone_r_2_tl_37"/>verfehlt/zurückgefallen auf der Erfinder Haupt. Und
+               <lb facs="#zone_r_2_tl_37"/>verfehlt <metamark function="addition"/><add facs="#zone_r_6" xml:id="add-0609-0020"><lb facs="#zone_l_6"/><metamark function="intervention"><g ref="#intervention"/></metamark> ,</add> zurückgefallen auf der Erfinder Haupt. Und
                <lb facs="#zone_r_2_tl_38"/>von einem Aktenstück, vor dem ihr die Augen über
                <lb facs="#zone_r_2_tl_39"/>gehen werden, wenn ich es mit einem Steckbrief
                <lb facs="#zone_r_2_tl_40"/>konfrontiere. Die unbeglaubigte Aussage des ange<pc force="weak">-</pc>
-               <lb facs="#zone_r_2_tl_41" break="no"/>klagten Privatmannes will es mit einem Amtsheid
+               <lb facs="#zone_r_2_tl_41" break="no"/>klagten Privatmann<del xml:id="del-0609-0001">e</del>s will es mit einem Amts<del xml:id="del-0609-0002">kl</del>eid
                <lb facs="#zone_r_2_tl_42"/>aufnehmen, womöglich unter Zuziehung eines unga<pc force="weak">-</pc>
                <lb facs="#zone_r_2_tl_43" break="no"/>rischen von gleichem Range. Die Wahrheit zu sagen
-               <lb facs="#zone_r_2_tl_44"/>in einer Welt der Lüge — wäre man sie nicht den
-               <lb facs="#zone_r_2_tl_45"/>Toten schuldig, so wäre sie doch die geringste
+               <lb facs="#zone_r_2_tl_44"/><subst><del>in</del><add facs="#zone_r_8" xml:id="add-0609-0021"><lb facs="#zone_l"/><metamark function="intervention"><g ref="#intervention"/></metamark> gegen</add></subst> eine<del xml:id="del-0609-0003">r </del>Welt <subst><del>der Lüge</del><add facs="#zone_r_32" xml:id="add-0609-0013"><lb facs="#zone_r_32_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark>, der mit dem Sonnenaufgang<lb facs="#zone_r_32_tl_2"/>die Lüge erscheint</add></subst> — wäre man <subst xml:id="subst-0609-0001"><del><undo spanTo="#anchor-0609-0001" rend="dotted-underline" target="#subst-0609-0001"/>sie<anchor type="undo" xml:id="anchor-0609-0001"/></del><add facs="#zone_r_30" xml:id="add-0609-0007"><lb facs="#zone_l_20"/><del><metamark function="intervention"><g ref="#intervention"/></metamark> es</del></add></subst> nicht den
+               <lb facs="#zone_r_2_tl_45"/>Toten schuldig, so wäre <subst xml:id="subst-0609-0002"><del><undo spanTo="#anchor-0609-0002" rend="dotted-line" target="#subst-0609-0002"/>sie<anchor type="undo" xml:id="anchor-0609-0002"/></del><add facs="#zone_r_10" xml:id="add-0609-0027"><lb facs="#zone_r_10_tl_1"/><del><metamark function="intervention"><g ref="#intervention"/></metamark> <gap reason="illegible" extent="2"/></del></add></subst> doch die geringste
                <lb facs="#zone_r_2_tl_46"/>Erkenntlichkeit für den Glücksfall, daß man nicht
                <lb facs="#zone_r_2_tl_47"/>zu ihnen zählt. Und an derselben Stelle, wo die
-               <lb facs="#zone_r_2_tl_48"/>Menschen die dem Transport der Verwundeten
-               <lb facs="#zone_r_2_tl_49"/>Automobile bestimmt hatten, als Erpresser gebrand¬
+               <lb facs="#zone_l_29"/><subst><del>Menschen,</del><add facs="#zone_r_11" xml:id="add-0609-0022"><lb facs="#zone_l_3"/><metamark function="intervention"><g ref="#intervention"/></metamark> diejenige,</add></subst> die <subst><del>dem Transport der</del><add facs="#zone_r_34" xml:id="add-0609-0008"><lb facs="#zone_l_28"/>den</add></subst> Verwundeten
+               <lb facs="#zone_r_2_tl_49"/>Automobile <subst><del>bestimmt</del><add facs="#zone_r_35" xml:id="add-0609-0009"><lb facs="#zone_r_35_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> zugedacht</add></subst> hatten, als Erpresser gebrand¬
                <lb facs="#zone_r_2_tl_50"/>markt wurden, dort will ich die Frage aufwerfen,
-               <lb facs="#zone_r_2_tl_51"/>ob die Polizei diesen Fall als den ersten erkannt
-               <lb facs="#zone_r_2_tl_52"/>hat, auf den die Gesetzesmerkmale zutreffen
+               <lb facs="#zone_r_2_tl_51"/>ob d<subst><del>ie</del><add facs="#zone_r_12" xml:id="add-0609-0023"><lb facs="#zone_l_32"/><metamark function="intervention"><g ref="#intervention"/></metamark> er</add></subst> Polize<subst><del>i</del><add facs="#zone_r_13" xml:id="add-0609-0024"><lb facs="#zone_l_31"/><metamark function="intervention"><g ref="#intervention"/></metamark> izeipräsident</add></subst> diesen Fall als den ersten erkannt
+               <lb facs="#zone_r_2_tl_52"/>hat, <subst><del>auf</del><add facs="#zone_r_14" xml:id="add-0609-0026"><lb facs="#zone_l_4"/><metamark function="intervention"><g ref="#intervention"/></metamark> für</add></subst> den die <subst><del>Gesetzes</del><add facs="#zone_r_37" xml:id="add-0609-0010"><lb facs="#zone_l_22"/><metamark function="intervention"><g ref="#intervention"/></metamark> Verbrechens</add></subst>merkmale zutreffen. <metamark function="insertion"><g ref="#intervention"/></metamark><subst><del> Mißling<subst><del>t</del><add facs="#zone_r_38" xml:id="add-0609-0011"><lb facs="#zone_l_30"/><del><metamark function="intervention"><g ref="#intervention"/></metamark> t’s</del></add></subst></del><add facs="#zone_r_39" xml:id="add-0609-0012"><lb facs="#zone_r_39_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> <del>Es wird</del> Gelingen wird's<lb facs="#zone_r_39_tl_2"/>auch wenn’s<lb facs="#zone_r_39_tl_3"/><subst><del>nicht glückt. Dann</del><add facs="#zone_r_39_tl_4" xml:id="add-0609-0028" place="below">mißglückt. <metamark function="addition"/><add facs="#zone_r_39_tl_5" xml:id="add-0609-0029" place="below">In diesem Fall</add> <del>Dann</del></add></subst><lb facs="#zone_r_39_tl_4"/><lb facs="#zone_r_39_tl_5"/></add></subst>
                <lb facs="#zone_r_2_tl_53"/>der Versuch, so werde ich es als eine Ehre betrachten,
-               <lb facs="#zone_r_2_tl_54"/>verglich mit der des Prytaneums, mir den Kerker
+               <lb facs="#zone_r_2_tl_54"/>verg<subst><del>lichen</del><add facs="#zone_r_16" xml:id="add-0609-0025"><lb facs="#zone_r_16_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> eichbar</add></subst> mit der des Prytaneums, mir den Kerker
                <lb facs="#zone_r_2_tl_55"/>geöffnet zu sehen, der dem Sandor Weiß verschlossen
                <lb facs="#zone_r_2_tl_56"/>bleibt!
             </p>
