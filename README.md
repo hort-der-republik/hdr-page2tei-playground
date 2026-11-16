@@ -7,7 +7,7 @@ Creating a workflow that allows for seamless transformation without manual XML e
 
 ## Work Flow
 
-Adding tags and attributes in Transkribus (sonme custom, some TEI) > XSLT > voilá. 
+Adding tags and attributes in Transkribus (some custom, some TEI) > XSLT > voilá. 
 
 ## Status
 
