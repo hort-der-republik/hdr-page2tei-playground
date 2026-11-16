@@ -43,6 +43,7 @@ In allen anderen Fällen gilt:
 - **Toleranz-Ausnahme:** liegt der Mittelpunkt nur knapp (höchstens 20 px, Parameter `lineAssignTolerance`) neben der Box der strukturellen Elternregion und würde die Zeile sonst einer **größeren** Region zufallen, bleibt sie bei ihrer Elternregion. Die Toleranz gilt nur für die Elternregion, nicht für beliebige Regionen.
 - Kein Treffer: Zeile bleibt bei ihrer strukturellen Elternregion aus der PAGE-XML.
 - **Reihenfolge** der Zeilen innerhalb einer Region: sortiert nach (Index der ursprünglichen/strukturellen Elternregion, dann eigener Zeilen-Index). Der Zeilen-Index in `@custom` ist nur pro Region relativ (fängt in jeder Region wieder bei 0 an), daher reicht er allein nicht als globaler Sortierschlüssel.
+- Regionen werden zu `<zone>` **ohne `@type`** (der Regionstyp wird nicht mehr übernommen; nur die Zeilen-zones behalten `type="line"`).
 - Für Zeilen selbst werden eigene `<zone>`-Elemente in `facsimile` angelegt, und zwar innerhalb der zone, der sie nach den Zeilenzuordnungsregeln zugeordnet werden.
 
 
@@ -74,7 +75,7 @@ In allen anderen Fällen gilt:
 
 - **Jede Zone MIT Kind-Zonen** wird zu `<div>` (auch wenn ihr eigener Typ sonst ein anderer wäre), sonst wäre Text direkt im div, was TEI nicht erlaubt; eigener Zeilentext (falls vorhanden) landet dann als `<p>` darin. AUSNAHME: wenn die Kind-Zone mit "long-quote" beginnt. Dann wird Zone selbst zu p, weil das verschachtelte quote darin in tei erlaubt ist.
 - **`add` (Regionstyp):** validiert **nicht** gegen TEI (add ist als phrasenwertiges/Inline-Element gedacht, nicht als Block-Kind eines div) – das ist bekannt und akzeptiert, wird manuell nachkorrigiert. Der Inhalt steht kompakt in einer Zeile (kein Umbruch/Einrückung direkt nach dem Start- bzw. vor dem Endtag), nur echte `<lb/>` bei mehreren TextLines bleiben erhalten.
-- **Alles andere → `<p>`:** kein `@type`-Attribut (TEI-All erlaubt das auf `<p>` nicht); der Regionstyp bleibt über `@facs` an der entsprechenden `<zone type="...">` im facsimile nachvollziehbar.
+- **Alles andere → `<p>`:** kein `@type`-Attribut (TEI-All erlaubt das auf `<p>` nicht); `@facs` verweist auf die entsprechende `<zone>` im facsimile.
 - **Generische Regel:** Regionen mit `structure{rendition:[Wert];}` → zusätzlich `@rendition="#[Wert]"` auf dem `<p>`.
 
 **Geschwister-Regel:** TEI erlaubt in einem `<div>` **keine** Mischung von `<p>`/`<head>` und `<div>` als direkte Geschwister (Content-Model verlangt entweder nur divLike- oder nur Fließtext-Kinder). Kommen beide Arten unter demselben Elternteil vor, werden die `<p>`/`<head>`-Kinder zusätzlich in ein `<div>` gewickelt. `<metamark>`, `<gap>` und `<fw>` brauchen das nicht (dürfen direkt neben `<div>` stehen): `<fw>` wird also nie in ein eigenes `<div>` gewickelt.
@@ -105,10 +106,11 @@ Zeichenbasierte Blöcke in `@custom` von `<TextLine>` (offset/length relativ zum
 - `hi-spacing` → `<hi rend="letter-spacing">`
 - `hi-bold` → `<hi rend="bold">`
 - `hi-underline` → `<hi rend="underline">`
+- `hi-latin` → `<hi rend="latin">`
 - `hi` mit Attr. `rend` →  übernehmen als `<hi rend="[rend]">`
 - `mod-underline` → `<mod rend="underline">` (siehe Hinweis unten)
-- `del` (mit cat) → `<del type="...">`; wenn mit id und next > stattdessen zu Beginn des Textknotens ein delSpan, nach dem Textknoten einen `<anchor>`  setzen (in delSpan selben type übernehmen, target zeigt auf anchor-id, diese nach Schema s.u. vergeben)
-- `deselection` → `<del type="deselection">`; wenn mit id und next > stattdessen zu Beginn des Textknotens ein delSpan, nach dem Textknoten einen `<anchor>`  setzen (in delSpan selben type übernehmen, target zeigt auf anchor-id, diese nach Schema s.u. vergeben)
+- `del` (mit cat) → `<del type="...">`; wenn mit id und next > stattdessen zu Beginn des Textknotens ein delSpan, nach dem Textknoten einen `<anchor>`  setzen (in delSpan und im `<anchor>` selben type übernehmen, target zeigt auf anchor-id, diese nach Schema s.u. vergeben)
+- `deselection` → `<del type="deselection">`; wenn mit id und next > stattdessen zu Beginn des Textknotens ein delSpan, nach dem Textknoten einen `<anchor>`  setzen (in delSpan und im `<anchor>` selben type übernehmen, target zeigt auf anchor-id, diese nach Schema s.u. vergeben)
 Wenn del oder deselection über id/next verbunden sind, aber unterschiedliche change-Werte haben, wird im delSpan der des ersten übernommen, der zweite entfällt.
 - `mod` → `<mod rend="...">` (rend aus dem Block, wenn angegeben, sonst Default `underline`)
 - `seg` (mit cat) → `<seg type="...">`; rend übernehmen, id siehe Behelfs-ids
@@ -119,12 +121,16 @@ Wenn del oder deselection über id/next verbunden sind, aber unterschiedliche ch
 - `gap-ill` → `<gap reason="illegible" extent="[Zahl der "#" im gap]"/>`
   - Achtung: wenn in Ausdehnung identisch mit `del`, dann immer innerhalb des `del`; das gilt auch für `subst-del` (das gap steht dann im `del` des `subst`).
 - `add` (ggf. mit place) → `<add place="...">`
-- `sic` (mit correction) → `<choice><sic>[Textknoten]</sic><corr>[Wert aus correction]</corr></choice>`
+- `sic` (mit correction) → `<choice resp="#edHdR"><sic>[Textknoten]</sic><corr type="[cat des sic, sonst emen]">[Wert aus correction]</corr></choice>`
+  - `choice` bekommt immer `resp="#edHdR"`; der `cat`-Wert des `sic`-Blocks wird als `@type` an `corr` übernommen, ohne `cat` ist `type="emen"` (Default).
+  - `choice`, `sic` und `corr` bekommen kein `@change` (und damit auch keine change-abhängige rendition).
 - `metamark` (mit function, target, id, corresp) → `<metamark function="..." target="[siehe ID-Regeln]" xml:id="[siehe ID-Regeln]" corresp="[siehe ID-Regeln]">`
 
 - `head-run-in` → `<seg type="head-run-in">`, ggf. auch rendition übernehmen
 - 'dateline'  → `<seg type="dateline">`, ggf. auch rendition übernehmen
 - `unclear` (mit reason/cert/resp) → `<unclear reason="..." cert="..." resp="...">`
+  - Wenn nicht anders angegeben, gelten die Defaults `reason="illegible"`, `cert="medium"` und `resp="#edHdR"`.
+  - `unclear` bekommt keine change-abhängige `rendition` (nur das `@change` selbst bleibt).
 - `retrace` (mit change) → `<retrace change="[siehe Abschnitt change-Werte unten]">...</retrace>`
 
 ### `seg-transposition`
@@ -256,7 +262,7 @@ Für jeden distinct-value aus den change-Werten (ggf. auch mehrere, leerzeicheng
 #### change selbst
 In den jeweiligen Elementen werden die change-Werte (ggf. auch mehrere pro Attribut!) beibehalten, davor aber jeweils ein # eingefügt
 ##### Zusätzlich: change-abhängige renditions
-Enthält ein Element (außer mod, undo, del, delSpan, div, subst) in change den hier erstgenannten Wert, erhält es im Attribut "rendition" zusätzlich den hier zweitgenannten Wert (immer mit # davor) – außer, in rendition steht schon einer der hier angegebenen Werte (dann passiert nix):
+Enthält ein Element (außer mod, undo, del, delSpan, div, subst, gap, unclear, seg) in change den hier erstgenannten Wert, erhält es im Attribut "rendition" zusätzlich den hier zweitgenannten Wert (immer mit # davor) – außer, in rendition steht schon einer der hier angegebenen Werte (dann passiert nix):
 
 kk - kurrent
 

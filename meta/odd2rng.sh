@@ -14,4 +14,7 @@ W="$(mktemp -d "${TMPDIR:-/tmp}/odd2rng.XXXXXX")"; trap 'rm -rf "$W"' EXIT
 sed "s#source=\"tei:current\"#source=\"file://${P5// /%20}\"#" "$DIR/hdr-documentary-schema.odd" > "$W/in.odd"
 saxon -s:"$W/in.odd" -xsl:"$S/odd2odd.xsl" -o:"$W/compiled.odd" || exit 1
 saxon -s:"$W/compiled.odd" -xsl:"$S/odd2relax.xsl" -o:"$OUT" || exit 1
+# Whitespace-Folgen in den Schematron-test-Attributen (stammen aus den TEI-Constraints, z.B. bei p)
+# auf ein Leerzeichen reduzieren - in XPath bedeutungslos.
+perl -0pi -e 's/(test="[^"]*")/my $t=$1; $t=~s{\s+}{ }g; $t/ge' "$OUT" || exit 1
 echo "geschrieben: $OUT"

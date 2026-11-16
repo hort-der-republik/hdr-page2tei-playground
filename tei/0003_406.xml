@@ -33,51 +33,37 @@
       <surface xml:id="surface_r_26" points="80,767 3829,891 3820,3424 90,3296">
          <surface xml:id="surface_r_23"
                   points="177,87 3469,87 3469,1836 3021,1795 2857,1772 2545,1764 2077,1764 1070,1782 576,1753 194,1723">
-            <zone xml:id="zone_r_10"
-                  type="fw"
-                  points="1982,626 2249,626 2249,961 1982,961">
+            <zone xml:id="zone_r_10" points="1982,626 2249,626 2249,961 1982,961">
                <zone type="line"
                      xml:id="zone_l_3"
                      points="1958,978 2025,969 2039,980 2083,950 2147,969 2170,958 2209,975 2225,813 2197,802 2181,819 2144,827 2080,780 2033,797 1977,794"/>
             </zone>
-            <zone xml:id="zone_r_7"
-                  type="fw"
-                  points="2294,376 2570,376 2570,685 2294,685">
+            <zone xml:id="zone_r_7" points="2294,376 2570,376 2570,685 2294,685">
                <zone type="line"
                      xml:id="zone_l"
                      points="2312,568 2337,574 2373,554 2384,571 2420,568 2434,588 2476,582 2495,588 2526,487 2495,473 2448,409 2398,423 2387,401 2364,398"/>
             </zone>
-            <zone xml:id="zone_r_9"
-                  type="fw"
-                  points="2462,732 2961,732 2961,992 2462,992">
+            <zone xml:id="zone_r_9" points="2462,732 2961,732 2961,992 2462,992">
                <zone type="line"
                      xml:id="zone_l_2"
                      points="2465,1000 2573,991 2654,950 2738,936 2841,983 2908,969 2913,758 2857,780 2623,730 2601,710 2473,724"/>
             </zone>
-            <zone xml:id="zone_r_6"
-                  type="fw"
-                  points="3050,115 3346,115 3346,287 3050,287">
+            <zone xml:id="zone_r_6" points="3050,115 3346,115 3346,287 3050,287">
                <zone type="line"
                      xml:id="zone_r_6_tl_1"
                      points="3055,281 3125,284 3155,267 3183,281 3214,259 3228,273 3286,251 3320,262 3331,128 3261,156 3206,114 3175,128 3130,114 3116,128 3069,120"/>
             </zone>
-            <zone xml:id="zone_r_8"
-                  type="fw"
-                  points="2904,417 3282,417 3282,746 2904,746">
+            <zone xml:id="zone_r_8" points="2904,417 3282,417 3282,746 2904,746">
                <zone type="line"
                      xml:id="zone_l_1"
                      points="2955,602 2983,610 3022,588 3058,632 3128,660 3186,646 3245,657 3267,535 3197,504 3180,479 3116,507 3055,504 3025,521 2977,482"/>
             </zone>
-            <zone xml:id="zone_r_11"
-                  type="metamark"
-                  points="1031,1236 1286,1236 1286,1443 1031,1443">
+            <zone xml:id="zone_r_11" points="1031,1236 1286,1236 1286,1443 1031,1443">
                <zone type="line"
                      xml:id="zone_l_4"
                      points="1044,1443 1089,1448 1125,1431 1142,1445 1175,1423 1195,1429 1270,1412 1270,1262 1231,1259 1192,1231 1181,1239 1153,1228 1142,1234 1117,1214 1089,1223 1067,1209 1042,1217"/>
             </zone>
-            <zone xml:id="zone_r"
-                  type="paragraph-indent"
-                  points="749,1671 2936,1671 2936,1763 749,1763">
+            <zone xml:id="zone_r" points="749,1671 2936,1671 2936,1763 749,1763">
                <zone type="line"
                      xml:id="zone_l_7"
                      points="916,1799 1136,1802 1245,1749 2401,1791 2515,1749 2919,1752 2919,1696 2727,1677 1975,1690 1908,1652 1707,1699 916,1649"/>
@@ -85,44 +71,32 @@
          </surface>
          <surface xml:id="surface_r_24"
                   points="87,1722 731,1773 894,1774 3470,1669 3828,1650 3818,2828 2961,2733 2493,2767 1895,2781 1250,2754 647,2775 91,2705">
-            <zone xml:id="zone_r_12"
-                  type="metamark"
-                  points="3015,1664 3352,1664 3352,1794 3015,1794">
+            <zone xml:id="zone_r_12" points="3015,1664 3352,1664 3352,1794 3015,1794">
                <zone type="line"
                      xml:id="zone_l_5"
                      points="3008,1824 3083,1827 3141,1807 3311,1838 3320,1668 3292,1663 3217,1688 3167,1671 3089,1693 3072,1685 3013,1713"/>
             </zone>
-            <zone xml:id="zone_r_13"
-                  type="metamark"
-                  points="3010,2072 3328,2072 3328,2238 3010,2238">
+            <zone xml:id="zone_r_13" points="3010,2072 3328,2072 3328,2238 3010,2238">
                <zone type="line"
                      xml:id="zone_l_6"
                      points="3002,2217 3061,2220 3125,2245 3164,2242 3189,2222 3292,2231 3303,2133 3270,2128 3253,2111 3219,2122 3200,2100 3061,2150 3011,2133"/>
             </zone>
-            <zone xml:id="zone_r_14"
-                  type="metamark"
-                  points="2989,2374 3351,2374 3351,2529 2989,2529">
+            <zone xml:id="zone_r_14" points="2989,2374 3351,2374 3351,2529 2989,2529">
                <zone type="line"
                      xml:id="zone_l_8"
                      points="2986,2529 3041,2540 3136,2495 3200,2520 3258,2476 3284,2493 3317,2487 3317,2398 3264,2429 3203,2401 3122,2451 3080,2423 3047,2445 3030,2431 2986,2442"/>
             </zone>
-            <zone xml:id="zone_r_15"
-                  type="metamark"
-                  points="3008,2561 3368,2561 3372,2690 3011,2694">
+            <zone xml:id="zone_r_15" points="3008,2561 3368,2561 3372,2690 3011,2694">
                <zone type="line"
                      xml:id="zone_l_9"
                      points="3011,2699 3050,2699 3116,2668 3147,2690 3206,2654 3275,2657 3345,2682 3348,2559 3300,2571 3239,2557 3206,2582 3161,2584 3094,2545 3016,2579"/>
             </zone>
-            <zone xml:id="zone_r_16"
-                  type="add"
-                  points="3377,2569 3725,2569 3725,2731 3377,2731">
+            <zone xml:id="zone_r_16" points="3377,2569 3725,2569 3725,2731 3377,2731">
                <zone type="line"
                      xml:id="zone_l_10"
                      points="3370,2724 3412,2715 3426,2729 3459,2727 3504,2688 3556,2693 3598,2662 3701,2690 3701,2568 3604,2532 3568,2543 3545,2534 3509,2557 3406,2501 3373,2506"/>
             </zone>
-            <zone xml:id="zone_r_1"
-                  type="paragraph-indent"
-                  points="732,1758 2957,1758 2943,2714 739,2753">
+            <zone xml:id="zone_r_1" points="732,1758 2957,1758 2943,2714 739,2753">
                <zone type="line"
                      xml:id="zone_l_18"
                      points="939,1838 2938,1813 2938,1783 939,1808"/>
@@ -163,9 +137,7 @@
                      xml:id="zone_r_1_tl_13"
                      points="730,2768 1267,2721 2078,2743 2078,2640 1911,2674 730,2660"/>
             </zone>
-            <zone xml:id="zone_r_2"
-                  type="paragraph-indent"
-                  points="748,2740 2965,2715 2965,2821 762,2821">
+            <zone xml:id="zone_r_2" points="748,2740 2965,2715 2965,2821 762,2821">
                <zone type="line"
                      xml:id="zone_l_17"
                      points="2944,2793 778,2804 778,2834 2944,2823"/>
@@ -173,51 +145,37 @@
          </surface>
          <surface xml:id="surface_r_25"
                   points="211,2757 571,2759 786,2810 3003,2825 3497,2865 3452,6052 211,6052">
-            <zone xml:id="zone_r_20"
-                  type="metamark"
-                  points="2998,3721 3370,3721 3370,3815 2998,3815">
+            <zone xml:id="zone_r_20" points="2998,3721 3370,3721 3370,3815 2998,3815">
                <zone type="line"
                      xml:id="zone_l_14"
                      points="2991,3799 3044,3818 3108,3802 3130,3818 3183,3802 3206,3779 3261,3804 3336,3788 3336,3685 3261,3690 3236,3712 3208,3707 3180,3726 3125,3707 3097,3726 3041,3721 3022,3698 2994,3701"/>
             </zone>
-            <zone xml:id="zone_r_21"
-                  type="metamark"
-                  points="3008,4011 3259,4011 3259,4152 3008,4152">
+            <zone xml:id="zone_r_21" points="3008,4011 3259,4011 3259,4152 3008,4152">
                <zone type="line"
                      xml:id="zone_l_15"
                      points="2994,4169 3047,4175 3075,4152 3094,4158 3108,4144 3158,4152 3175,4136 3231,4141 3245,4024 3192,4008 3169,4022 3150,4019 3111,4047 3089,4035 3055,4047 3036,4030 3008,4033"/>
             </zone>
-            <zone xml:id="zone_r_22"
-                  type="metamark"
-                  points="2627,4629 2970,4629 2970,4852 2627,4852">
+            <zone xml:id="zone_r_22" points="2627,4629 2970,4629 2970,4852 2627,4852">
                <zone type="line"
                      xml:id="zone_l_16"
                      points="2621,4838 2707,4812 2763,4840 2793,4826 2816,4840 2846,4829 2938,4840 2944,4662 2902,4679 2818,4659 2738,4721 2693,4734 2674,4721 2623,4723"/>
             </zone>
-            <zone xml:id="zone_r_17"
-                  type="add"
-                  points="474,2769 722,2769 722,2931 474,2931">
+            <zone xml:id="zone_r_17" points="474,2769 722,2769 722,2931 474,2931">
                <zone type="line"
                      xml:id="zone_l_11"
                      points="487,2921 504,2921 540,2888 576,2874 604,2891 635,2869 663,2894 699,2891 699,2727 666,2735 641,2718 554,2732 529,2710 512,2721 487,2718"/>
             </zone>
-            <zone xml:id="zone_r_18"
-                  type="metamark"
-                  points="493,3526 687,3526 687,3728 493,3728">
+            <zone xml:id="zone_r_18" points="493,3526 687,3526 687,3728 493,3728">
                <zone type="line"
                      xml:id="zone_l_12"
                      points="501,3707 538,3712 546,3704 579,3718 607,3698 615,3707 652,3712 652,3607 632,3609 610,3601 599,3612 574,3595 538,3626 515,3612 501,3612"/>
             </zone>
-            <zone xml:id="zone_r_19"
-                  type="add"
-                  points="550,3930 708,3930 708,4149 550,4149">
+            <zone xml:id="zone_r_19" points="550,3930 708,3930 708,4149 550,4149">
                <zone type="line"
                      xml:id="zone_l_13"
                      points="549,4144 582,4144 624,4116 674,4102 677,3916 654,3913 638,3927 621,3930 610,3918 579,3924 568,3910 554,3910"/>
             </zone>
-            <zone xml:id="zone_r_3"
-                  type="paragraph-indent"
-                  points="756,2819 2985,2819 2985,3269 756,3269">
+            <zone xml:id="zone_r_3" points="756,2819 2985,2819 2985,3269 756,3269">
                <zone type="line"
                      xml:id="zone_r_3_tl_1"
                      points="849,2888 2025,2880 2089,2921 2534,2869 2952,2885 2952,2754 2771,2807 2668,2768 2298,2827 1950,2832 1780,2782 1557,2827 1370,2760 983,2810 849,2785"/>
@@ -237,9 +195,7 @@
                      xml:id="zone_r_3_tl_6"
                      points="746,3281 822,3256 863,3284 983,3256 1042,3284 1111,3256 1172,3278 1490,3261 1468,3197 1273,3219 1209,3186 1072,3208 994,3183 933,3211 746,3192"/>
             </zone>
-            <zone xml:id="zone_r_4"
-                  type="paragraph-indent"
-                  points="752,3269 2985,3269 2985,3875 752,3875">
+            <zone xml:id="zone_r_4" points="752,3269 2985,3269 2985,3875 752,3875">
                <zone type="line"
                      xml:id="zone_r_4_tl_2"
                      points="735,3414 2952,3420 2952,3334 2598,3367 1746,3325 735,3350"/>
@@ -265,9 +221,7 @@
                      xml:id="zone_r_4_tl_8"
                      points="746,3877 2053,3874 2053,3790 1755,3818 1679,3785 1532,3827 1434,3788 746,3799"/>
             </zone>
-            <zone xml:id="zone_r_5"
-                  type="paragraph-indent"
-                  points="752,3875 2983,3875 2983,4639 752,4639">
+            <zone xml:id="zone_r_5" points="752,3875 2983,3875 2983,4639 752,4639">
                <zone type="line"
                      xml:id="zone_r_5_tl_1"
                      points="927,3941 1242,3966 1395,3921 1565,3960 1615,3924 2072,3971 2286,3930 2373,3969 2952,3935 2952,3860 2278,3899 2164,3857 1281,3899 927,3868"/>
@@ -325,7 +279,7 @@
                   <lb facs="#zone_l_4"/><g ref="#intervention"/><g ref="#deleatur"/>
                </metamark>
                <p change="#fp-1" facs="#zone_r" rendition="#indent #antiqua">
-                  <lb facs="#zone_l_7"/><seg xml:id="seg-0406-0001" type="relocation" change="#kk-pencil-1" rendition="#kurrent"><undo spanTo="#anchor-0406-0001" change="#kk-pencil-2" rend="wavy-line" target="#seg-0406-0001"/>Aus dem Bericht der Untersuchungskommission des Gemeinderates:<anchor type="undo" xml:id="anchor-0406-0001"/><del xml:id="del-0406-0001" change="#kk-ink-1">Aus dem</del> <mod xml:id="mod-0406-0001" rend="underline" change="#kk-ink-1">Bericht der Untersuchungskommission des Gemeinderates</mod>:</seg>
+                  <lb facs="#zone_l_7"/><seg xml:id="seg-0406-0001" type="relocation" change="#kk-pencil-1"><undo spanTo="#anchor-0406-0001" change="#kk-pencil-2" rend="wavy-line" target="#seg-0406-0001"/>Aus dem Bericht der Untersuchungskommission des Gemeinderates:<anchor type="undo" xml:id="anchor-0406-0001"/><del xml:id="del-0406-0001" change="#kk-ink-1">Aus dem</del> <mod xml:id="mod-0406-0001" rend="underline" change="#kk-ink-1">Bericht der Untersuchungskommission des Gemeinderates</mod>:</seg>
                </p>
             </div>
             <div facs="#surface_r_24">

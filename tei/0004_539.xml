@@ -29,29 +29,22 @@
    <facsimile>
       <graphic url="0004_539.jpg" width="2758px" height="4715px"/>
       <surface xml:id="surface_r_5" points="95,94 2657,79 2641,4586 89,4596">
-         <zone xml:id="zone_r_1"
-               type="fw"
-               points="2262,192 2451,192 2451,369 2262,369">
+         <zone xml:id="zone_r_1" points="2262,192 2451,192 2451,369 2262,369">
             <zone type="line"
                   xml:id="zone_l"
                   points="2275,310 2417,290 2413,260 2271,280"/>
          </zone>
-         <zone xml:id="zone_r_2"
-               type="fw"
-               points="2312,392 2548,392 2548,548 2312,548">
+         <zone xml:id="zone_r_2" points="2312,392 2548,392 2548,548 2312,548">
             <zone type="line"
                   xml:id="zone_l_1"
                   points="2319,519 2532,522 2532,492 2319,489"/>
          </zone>
-         <zone xml:id="zone_r_3"
-               type="metamark"
-               points="186,1460 277,1460 277,1564 186,1564">
+         <zone xml:id="zone_r_3" points="186,1460 277,1460 277,1564 186,1564">
             <zone type="line"
                   xml:id="zone_l_2"
                   points="202,1544 262,1543 262,1513 202,1514"/>
          </zone>
          <zone xml:id="zone_r_6"
-               type="paragraph"
                points="451,2348 353,1157 307,266 1683,175 2063,155 2378,1881 1973,3041 597,3225">
             <zone type="line"
                   xml:id="zone_l_3"
@@ -142,7 +135,6 @@
                   points="658,3163 1252,3082 1248,3052 654,3133"/>
          </zone>
          <zone xml:id="zone_r_4"
-               type="add"
                points="221,3495 212,3339 2174,3181 2366,3463 2213,3918 1187,4021 1085,4181 576,4232">
             <zone type="line"
                   xml:id="zone_l_32"

@@ -1016,7 +1016,10 @@
        anchor-PPPP-NNNN, Nummer nach den undo-Ankern fortgesetzt -->
   <xsl:variable name="deselPairIdsRTF">
     <xsl:for-each select="$deselMarkers[@role='end']">
+      <xsl:variable name="pidStart" select="$deselMarkers[@role='start' and @pairSeq=current()/@pairSeq][1]"/>
       <my:pid seq="{@pairSeq}" line="{@line}" offset="{@offset}">
+        <!-- type des delSpan (= type des ersten Kettenglieds) fuer den <anchor> -->
+        <xsl:attribute name="type"><xsl:value-of select="$allLineRanges[@element='del' and @line=$pidStart/@line and number(@offset)=number($pidStart/@offset)][1]/my:attr[@name='type']/@value"/></xsl:attribute>
         <xsl:attribute name="id">
           <xsl:text>anchor-</xsl:text><xsl:value-of select="$pageNumPadded"/><xsl:text>-</xsl:text>
           <xsl:call-template name="pad4"><xsl:with-param name="s" select="count($undoOrder) + number(@pairSeq)"/></xsl:call-template>
@@ -1263,7 +1266,7 @@
   <!-- Abschnitt 9 "change-abhaengige renditions": enthaelt das change den
        Kuerzel-Wert (links), bekommt das Element zusaetzlich die zugehoerige
        rendition (rechts, mit "#") - ausser in rendition steht schon einer
-       der Zielwerte (dann passiert nichts). Gilt nicht fuer <div>/<mod>/<undo>/<del>/<delSpan>/<subst> (im <subst>
+       der Zielwerte (dann passiert nichts). Gilt nicht fuer <div>/<mod>/<undo>/<del>/<delSpan>/<gap>/<unclear>/<seg>/<subst> (im <subst>
        nur das <add>, siehe unten). -->
   <xsl:variable name="changeScriptMapRTF">
     <my:m code="kk" val="kurrent"/>
@@ -1293,11 +1296,11 @@
     </xsl:if>
   </xsl:template>
 
-  <!-- <div>, <mod>, <undo>, <del>, <delSpan> und <subst> sind ausgenommen
+  <!-- <div>, <mod>, <undo>, <del>, <delSpan>, <gap>, <unclear>, <seg> und <subst> sind ausgenommen
        (bekommen keine change-abhaengige rendition). Im <subst> bekommt nur
        das <add> sie: hat das add ein eigenes change, zaehlt dieses (das des
        subst faellt raus), sonst das change des subst. -->
-  <xsl:template match="*[@change and local-name()!='div' and local-name()!='mod' and local-name()!='undo' and local-name()!='del' and local-name()!='delSpan' and local-name()!='subst']" mode="tp-post">
+  <xsl:template match="*[@change and local-name()!='div' and local-name()!='mod' and local-name()!='undo' and local-name()!='del' and local-name()!='delSpan' and local-name()!='subst' and local-name()!='gap' and local-name()!='unclear' and local-name()!='seg']" mode="tp-post">
     <xsl:call-template name="copy-with-change-rendition">
       <xsl:with-param name="change" select="string(@change)"/>
     </xsl:call-template>
@@ -1507,6 +1510,8 @@
     <xsl:for-each select="$behelfsDups">
       <xsl:message>WARNUNG: Behelfs-ID "<xsl:value-of select="@v"/>" ist mehrfach vergeben: <xsl:value-of select="@where"/></xsl:message>
     </xsl:for-each>
+    <!-- Schema-Verknuepfung (Pfad relativ zu tei/) -->
+    <xsl:processing-instruction name="xml-model">href="../meta/hdr-documentary-schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:processing-instruction>
     <xsl:choose>
       <!-- seg-transposition mit gueltiger Gruppe (listTranspose an die richtige
            Stelle setzen), change-abhaengige rendition ergaenzen (Abschnitt 9),
@@ -1636,9 +1641,7 @@
       <xsl:otherwise>
         <zone>
           <xsl:attribute name="xml:id">zone_<xsl:value-of select="$id"/></xsl:attribute>
-          <xsl:if test="$region/@rawType != ''">
-            <xsl:attribute name="type"><xsl:value-of select="$region/@rawType"/></xsl:attribute>
-          </xsl:if>
+          <!-- kein @type an der zone (frueher: Regionstyp aus rawType) -->
           <xsl:if test="$src/*[local-name()='Coords']/@points">
             <xsl:attribute name="points"><xsl:value-of select="$src/*[local-name()='Coords']/@points"/></xsl:attribute>
           </xsl:if>
@@ -2369,7 +2372,7 @@
       </xsl:when>
       <xsl:otherwise>
         <!-- TEI-All erlaubt @type auf <p> nicht; der Regionstyp bleibt ueber
-             @facs an der entsprechenden <zone type="..."> im facsimile nachvollziehbar. -->
+             @facs an der entsprechenden <zone> im facsimile (Regionstyp dort nicht mehr als @type) nachvollziehbar. -->
         <p>
           <xsl:call-template name="behelfs-id-attr-if-any"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
           <xsl:call-template name="region-change-attr"><xsl:with-param name="regionId" select="$id"/></xsl:call-template>
@@ -3223,7 +3226,7 @@
     </xsl:variable>
     <xsl:variable name="blocks" select="exsl:node-set($blocksRTF)/my:block"/>
     <xsl:variable name="text" select="$line/*[local-name()='TextEquiv'][1]/*[local-name()='Unicode']"/>
-    <xsl:for-each select="$blocks[not(@name='head-run-in' and not(contains(@content,'offset'))) and (@name='head-run-in' or @name='dateline' or @name='seg-relocation' or @name='hi' or @name='retrace' or @name='spacing' or @name='hi-spacing' or @name='bold' or @name='hi-bold' or @name='underline' or @name='hi-underline' or @name='mod-underline' or @name='del' or @name='deselection' or @name='mod' or @name='seg-transposition' or @name='seg' or @name='gap' or @name='gap-cut' or @name='gap-ill' or @name='add' or @name='metamark' or @name='metamark-add' or @name='unclear' or @name='subst' or @name='subst-del' or @name='sic' or @name='undo')]">
+    <xsl:for-each select="$blocks[not(@name='head-run-in' and not(contains(@content,'offset'))) and (@name='head-run-in' or @name='dateline' or @name='seg-relocation' or @name='hi' or @name='retrace' or @name='spacing' or @name='hi-spacing' or @name='bold' or @name='hi-bold' or @name='underline' or @name='hi-underline' or @name='hi-latin' or @name='mod-underline' or @name='del' or @name='deselection' or @name='mod' or @name='seg-transposition' or @name='seg' or @name='gap' or @name='gap-cut' or @name='gap-ill' or @name='add' or @name='metamark' or @name='metamark-add' or @name='unclear' or @name='subst' or @name='subst-del' or @name='sic' or @name='undo')]">
       <xsl:variable name="name" select="@name"/>
       <xsl:variable name="content" select="@content"/>
       <xsl:variable name="offset"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'offset'"/></xsl:call-template></xsl:variable>
@@ -3231,7 +3234,7 @@
       <xsl:variable name="continued"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'continued'"/></xsl:call-template></xsl:variable>
       <xsl:variable name="element">
         <xsl:choose>
-          <xsl:when test="$name='hi' or $name='spacing' or $name='hi-spacing' or $name='bold' or $name='hi-bold' or $name='underline' or $name='hi-underline'">hi</xsl:when>
+          <xsl:when test="$name='hi' or $name='spacing' or $name='hi-spacing' or $name='bold' or $name='hi-bold' or $name='underline' or $name='hi-underline' or $name='hi-latin'">hi</xsl:when>
           <xsl:when test="$name='retrace'">retrace</xsl:when>
           <xsl:when test="$name='mod-underline'">mod</xsl:when>
           <xsl:when test="$name='del' or $name='deselection'">del</xsl:when>
@@ -3266,6 +3269,7 @@
           <xsl:when test="$name='spacing' or $name='hi-spacing'"><my:attr name="rend" value="letter-spacing"/></xsl:when>
           <xsl:when test="$name='bold' or $name='hi-bold'"><my:attr name="rend" value="bold"/></xsl:when>
           <xsl:when test="$name='underline' or $name='hi-underline'"><my:attr name="rend" value="underline"/></xsl:when>
+          <xsl:when test="$name='hi-latin'"><my:attr name="rend" value="latin"/></xsl:when>
           <xsl:when test="$name='mod-underline'"><my:attr name="rend" value="underline"/></xsl:when>
           <xsl:when test="$name='mod'">
             <!-- Abschnitt 7: rend aus dem Block (frueher "style" - bleibt als
@@ -3399,6 +3403,9 @@
           <xsl:when test="$name='sic'">
             <xsl:variable name="correction"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'correction'"/></xsl:call-template></xsl:variable>
             <my:attr name="correction" value="{$correction}"/>
+            <!-- cat des sic wird als @type an corr uebergeben -->
+            <xsl:variable name="sicCat"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'cat'"/></xsl:call-template></xsl:variable>
+            <xsl:if test="$sicCat != ''"><my:attr name="cat" value="{$sicCat}"/></xsl:if>
           </xsl:when>
           <xsl:when test="$name='undo'">
             <xsl:variable name="rend"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rend'"/></xsl:call-template></xsl:variable>
@@ -3412,22 +3419,23 @@
             <xsl:variable name="reason"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'reason'"/></xsl:call-template></xsl:variable>
             <xsl:variable name="cert"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'cert'"/></xsl:call-template></xsl:variable>
             <xsl:variable name="resp"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'resp'"/></xsl:call-template></xsl:variable>
-            <xsl:if test="$reason != ''"><my:attr name="reason" value="{$reason}"/></xsl:if>
-            <xsl:if test="$cert != ''"><my:attr name="cert" value="{$cert}"/></xsl:if>
-            <xsl:if test="$resp != ''"><my:attr name="resp" value="{$resp}"/></xsl:if>
+            <!-- Defaults, wenn nicht angegeben: reason=illegible, cert=medium, resp=#edHdR -->
+            <my:attr name="reason"><xsl:attribute name="value"><xsl:choose><xsl:when test="$reason != ''"><xsl:value-of select="$reason"/></xsl:when><xsl:otherwise>illegible</xsl:otherwise></xsl:choose></xsl:attribute></my:attr>
+            <my:attr name="cert"><xsl:attribute name="value"><xsl:choose><xsl:when test="$cert != ''"><xsl:value-of select="$cert"/></xsl:when><xsl:otherwise>medium</xsl:otherwise></xsl:choose></xsl:attribute></my:attr>
+            <my:attr name="resp"><xsl:attribute name="value"><xsl:choose><xsl:when test="$resp != ''"><xsl:value-of select="$resp"/></xsl:when><xsl:otherwise>#edHdR</xsl:otherwise></xsl:choose></xsl:attribute></my:attr>
           </xsl:when>
         </xsl:choose>
         <!-- "id" (Behelfs-ID-Deklaration, Abschnitt 8) auch auf den uebrigen
              Bloecken, die ueber die generische Weiche als Element ausgegeben
              werden (add hat seinen eigenen Zweig oben); wird in
              render-one-range zur echten xml:id. -->
-        <xsl:if test="contains(' hi retrace spacing hi-spacing bold hi-bold underline hi-underline mod-underline mod del deselection seg seg-transposition seg-relocation dateline unclear metamark metamark-add subst ', concat(' ',$name,' '))">
+        <xsl:if test="contains(' hi retrace spacing hi-spacing bold hi-bold underline hi-underline hi-latin mod-underline mod del deselection seg seg-transposition seg-relocation dateline unclear metamark metamark-add subst ', concat(' ',$name,' '))">
           <xsl:variable name="declaredIdOther"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'id'"/></xsl:call-template></xsl:variable>
           <xsl:if test="$declaredIdOther != ''"><my:attr name="id" value="{$declaredIdOther}"/></xsl:if>
         </xsl:if>
         <!-- "prev"/"next": Verweise auf Behelfs-IDs, werden zu den gleichnamigen
              TEI-Attributen (aufgeloest in resolved-ref-attrs) -->
-        <xsl:if test="contains(' hi retrace spacing hi-spacing bold hi-bold underline hi-underline mod-underline mod del deselection seg seg-transposition seg-relocation dateline unclear metamark add subst ', concat(' ',$name,' '))">
+        <xsl:if test="contains(' hi retrace spacing hi-spacing bold hi-bold underline hi-underline hi-latin mod-underline mod del deselection seg seg-transposition seg-relocation dateline unclear metamark add subst ', concat(' ',$name,' '))">
           <xsl:variable name="prevV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'prev'"/></xsl:call-template></xsl:variable>
           <xsl:variable name="nextV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'next'"/></xsl:call-template></xsl:variable>
           <xsl:if test="$prevV != ''"><my:attr name="prev" value="{$prevV}"/></xsl:if>
@@ -3934,8 +3942,7 @@
 
       <!-- sic mit correction (Abschnitt 7) -->
       <xsl:when test="$range/@element='choice-sic-synth'">
-        <choice>
-          <xsl:call-template name="range-change-attr"><xsl:with-param name="range" select="$range"/></xsl:call-template>
+        <choice resp="#edHdR">
           <sic>
             <xsl:choose>
               <xsl:when test="$hasChildren">
@@ -3956,7 +3963,11 @@
               </xsl:otherwise>
             </xsl:choose>
           </sic>
-          <corr><xsl:value-of select="$range/my:attr[@name='correction']/@value"/></corr>
+          <corr>
+            <!-- type aus cat des sic; ohne cat Default "emen" -->
+            <xsl:attribute name="type"><xsl:choose><xsl:when test="$range/my:attr[@name='cat']"><xsl:value-of select="$range/my:attr[@name='cat']/@value"/></xsl:when><xsl:otherwise>emen</xsl:otherwise></xsl:choose></xsl:attribute>
+            <xsl:value-of select="$range/my:attr[@name='correction']/@value"/>
+          </corr>
         </choice>
       </xsl:when>
 
@@ -4069,7 +4080,10 @@
           </xsl:otherwise>
         </xsl:choose>
         <xsl:if test="$marker/@role='end' and $relocTarget=''">
-          <anchor><xsl:attribute name="xml:id"><xsl:value-of select="$pairId"/></xsl:attribute></anchor>
+          <anchor>
+            <xsl:if test="string($deselPairIds[@id=$pairId]/@type) != ''"><xsl:attribute name="type"><xsl:value-of select="$deselPairIds[@id=$pairId]/@type"/></xsl:attribute></xsl:if>
+            <xsl:attribute name="xml:id"><xsl:value-of select="$pairId"/></xsl:attribute>
+          </anchor>
         </xsl:if>
       </xsl:when>
 
@@ -4958,10 +4972,13 @@
     </xsl:choose>
   </xsl:template>
 
-  <!-- das Ende-<anchor> einer del/deselection-Kette (nur xml:id) -->
+  <!-- das Ende-<anchor> einer del/deselection-Kette (xml:id, type vom delSpan) -->
   <xsl:template name="desel-end-anchor">
     <xsl:param name="id"/>
-    <anchor><xsl:attribute name="xml:id"><xsl:value-of select="$id"/></xsl:attribute></anchor>
+    <anchor>
+      <xsl:if test="string($deselPairIds[@id=$id]/@type) != ''"><xsl:attribute name="type"><xsl:value-of select="$deselPairIds[@id=$id]/@type"/></xsl:attribute></xsl:if>
+      <xsl:attribute name="xml:id"><xsl:value-of select="$id"/></xsl:attribute>
+    </anchor>
   </xsl:template>
 
   <!-- Kehrseite von relocation-target-for: wird beim Rendern eines

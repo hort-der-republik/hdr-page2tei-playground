@@ -7,7 +7,7 @@
         <title>hdr-documentary-schema: Schema für die diplomatische TEI-Ausgabe von pagexml-to-tei.xsl</title>
       </titleStmt>
       <publicationStmt>
-        <p>Projektintern. Aus diesem ODD wird meta/hdr-documentary-schema.rng erzeugt.</p>
+        <p>Aus diesem ODD wird meta/hdr-documentary-schema.rng erzeugt.</p>
       </publicationStmt>
       <sourceDesc>
         <p>Born digital; Anpassung von TEI P5 (tei:current).</p>
@@ -62,17 +62,16 @@
               <elementRef key="quote"/>
             </alternate>
           </content>
-        </macroSpec>
+        </macroSpec> 
+        
         <elementSpec ident="teiHeader" module="header" mode="change">
           <classes mode="replace"/>
           <content>
-            <sequence>
-              <elementRef key="fileDesc"/>
-              <elementRef key="profileDesc"/>
-            </sequence>
+            <elementRef key="fileDesc"/>
+            <elementRef key="profileDesc"/>
           </content>
-          
         </elementSpec>
+          
         <elementSpec ident="fileDesc" module="header" mode="change">
           <classes mode="replace"/>
           <content>
@@ -82,70 +81,81 @@
               <elementRef key="sourceDesc"/>
             </sequence>
           </content>
-          
         </elementSpec>
+
         <elementSpec ident="titleStmt" module="header" mode="change">
           <classes mode="replace"/>
           <content>
             <elementRef key="title"/>
           </content>
-          
         </elementSpec>
+
         <elementSpec ident="publicationStmt" module="header" mode="change">
           <classes mode="replace"/>
           <content>
+            <alternate minOccurs="1" maxOccurs="unbounded">
             <elementRef key="p"/>
+            </alternate>
           </content>
-          
         </elementSpec>
+
         <elementSpec ident="sourceDesc" module="header" mode="change">
           <classes mode="replace"/>
           <content>
             <elementRef key="p"/>
           </content>
-          
         </elementSpec>
+
         <elementSpec ident="profileDesc" module="header" mode="change">
           <classes mode="replace"/>
           <content>
             <elementRef key="creation"/>
           </content>
-          
         </elementSpec>
+          
         <elementSpec ident="creation" module="header" mode="change">
           <classes mode="replace"/>
           <content>
             <elementRef key="listChange"/>
           </content>
-          
         </elementSpec>
+          
         <elementSpec ident="change" module="header" mode="change">
           <classes mode="replace"/>
           <content>
             <textNode/>
           </content>
           <attList>
-            <attDef ident="xml:id" mode="replace" usage="req">
+            <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
-            <attDef ident="target" mode="delete"/>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="listChange" module="header" mode="change">
           <classes mode="replace"/>
           <content>
-            <elementRef key="change" minOccurs="1" maxOccurs="unbounded"/>
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <elementRef key="change"/>
+            </alternate>
           </content>
-          <attList>
-            <attDef ident="ordered" mode="delete"/>
-          </attList>
         </elementSpec>
+        
+        
         <elementSpec ident="p" module="core" mode="change">
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
           </content>
-          <attList>
+          <constraintSpec ident="p-attribute-im-text" scheme="schematron">
+            <desc xml:lang="de">p braucht @change, @facs und @rendition nur innerhalb von text (nicht im teiHeader).</desc>
+            <constraint>
+              <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:text//tei:p">
+                <sch:assert test="@change and @facs and @rendition">p innerhalb von text braucht @change, @facs und @rendition.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+        <attList>
             <attDef ident="change" mode="replace" usage="opt">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
@@ -153,16 +163,35 @@
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="part" mode="replace" usage="opt">
-              <datatype><dataRef name="NCName"/></datatype>
+              <datatype><dataRef name="NCName"/></datatype>  
+              <valList type="closed">
+                <valItem ident="I"/>
+                <valItem ident="F"/>
+                <valItem ident="M"/>
+              </valList>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
+              <valList type="closed">
+                <valItem ident="#antiqua"/>
+                <valItem ident="#bold"/>
+                <valItem ident="#center"/>
+                <valItem ident="#crosshead"/>
+                <valItem ident="#handwritten"/>
+                <valItem ident="#indent"/>
+                <valItem ident="#kurrent"/>
+                <valItem ident="#latin"/>
+                <valItem ident="#left"/>
+                <valItem ident="#undefined"/>
+                <!-- add more values -->
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="hi" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -171,33 +200,65 @@
           <attList>
             <attDef ident="rend" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="bold"/>
+                <valItem ident="latin"/>
+                <valItem ident="letter-spacing"/>
+                <valItem ident="underline"/>
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="quote" module="core" mode="change">
           <classes mode="replace"/>
           <content>
             <alternate>
-              <elementRef key="lg"/>
+              <elementRef key="lg" minOccurs="1" maxOccurs="unbounded"/>
               <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
             </alternate>
           </content>
-          
+          <attList>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+          </attList>
         </elementSpec>
+        
         <elementSpec ident="sic" module="core" mode="change">
           <classes mode="replace"/>
           <content>
-            <dataRef name="NCName"/>
-          </content>
-          
+            <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
+          </content>  
+          <attList>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+          </attList>
         </elementSpec>
+        
         <elementSpec ident="corr" module="core" mode="change">
           <classes mode="replace"/>
           <content>
-            <dataRef name="NCName"/>
+            <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
           </content>
-          
+          <attList>
+            <attDef ident="type" mode="replace" usage="req">
+              <datatype><dataRef name="string"/></datatype>
+              <valList type="closed">
+                <valItem ident="emen"/>
+                <valItem ident="norm"/>
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+          </attList>
         </elementSpec>
+        
         <elementSpec ident="choice" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -206,8 +267,19 @@
               <elementRef key="corr"/>
             </sequence>
           </content>
-          
+          <attList>
+            <attDef ident="resp" mode="replace" usage="req">
+              <datatype><dataRef name="string"/></datatype>
+              <valList type="open">
+                <valItem ident="#edHdR"/>
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+          </attList>
         </elementSpec>
+        
         <elementSpec ident="gap" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -225,16 +297,20 @@
             </attDef>
             <attDef ident="reason" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
-            </attDef>
-            <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <valList type="open">
+                <valItem ident="cut"/>
+                <valItem ident="illegible"/>
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
-            <attDef ident="agent" mode="delete"/>
+            <attDef ident="agent" mode="replace" usage="opt">
+              <datatype><dataRef name="string"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="add" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -249,15 +325,28 @@
             </attDef>
             <attDef ident="place" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="above"/>
+                <valItem ident="below"/>
+                <valItem ident="inline"/>
+                <valItem ident="overwritten"/>
+              </valList>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
+              <valList type="open">
+                <valItem ident="#antiqua"/>
+                <valItem ident="#kurrent"/>
+                <valItem ident="#latin"/>
+                <valItem ident="#rotate270"/>
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="del" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -269,42 +358,52 @@
             </attDef>
             <attDef ident="subtype" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="implicit"/>
+              </valList>
             </attDef>
             <attDef ident="type" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="deselection"/>
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="unclear" module="core" mode="change">
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
           </content>
           <attList>
-            <attDef ident="reason" mode="replace" usage="opt">
+            <attDef ident="reason" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
-            <attDef ident="cert" mode="replace" usage="opt">
+            <attDef ident="cert" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
-            <attDef ident="resp" mode="replace" usage="opt">
+            <attDef ident="resp" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="change" mode="replace" usage="opt">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
-            <attDef ident="agent" mode="delete"/>
+            <attDef ident="agent" mode="replace" usage="opt">
+              <datatype><dataRef name="string"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="ptr" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -314,28 +413,47 @@
             <attDef ident="target" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="head" module="core" mode="change">
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
           </content>
           <attList>
-            <attDef ident="change" mode="replace" usage="opt">
+            <attDef ident="change" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="facs" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="req">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
+              <valList type="closed">
+                <valItem ident="#black-letter"/>
+                <valItem ident="#bold"/>
+                <valItem ident="#center"/>
+                <valItem ident="#large"/>
+                <!-- add more values -->
+              </valList>
             </attDef>
             <attDef ident="type" mode="replace" usage="req">
+              <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="main"/>
+                <valItem ident="sub"/>
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="graphic" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -351,8 +469,12 @@
             <attDef ident="width" mode="replace" usage="req">
               <datatype><dataRef name="NMTOKEN"/></datatype>
             </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="lb" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -361,12 +483,25 @@
           <attList>
             <attDef ident="break" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="no"/>
+              </valList>
             </attDef>
             <attDef ident="facs" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
+            <attDef ident="type" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef><!-- for required lb-s, etc. -->
+            <attDef ident="subtype" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="cb" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -379,18 +514,19 @@
             <attDef ident="n" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="title" module="core" mode="change">
           <classes mode="replace"/>
           <content>
             <textNode/>
           </content>
-          <attList>
-            <attDef ident="level" mode="delete"/>
-            <attDef ident="type" mode="delete"/>
-          </attList>
         </elementSpec>
+        
         <elementSpec ident="l" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -400,8 +536,15 @@
             <attDef ident="facs" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
+            <attDef ident="rend" mode="replace" usage="opt">
+              <datatype><dataRef name="string"/></datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="lg" module="core" mode="change">
           <classes mode="replace"/>
           <content>
@@ -411,8 +554,15 @@
             <attDef ident="facs" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
+            <attDef ident="rendition" mode="replace" usage="req">
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="TEI" module="textstructure" mode="change">
           <classes mode="replace"/>
           <content>
@@ -425,24 +575,41 @@
           <attList>
             <attDef ident="xml:lang" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="de"/>
+              </valList>
             </attDef>
-            <attDef ident="version" mode="delete"/>
+            <attDef ident="version" mode="replace" usage="opt"/>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="text" module="textstructure" mode="change">
           <classes mode="replace"/>
           <content>
             <elementRef key="body"/>
           </content>
           
+          <attList>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+          </attList>
         </elementSpec>
         <elementSpec ident="body" module="textstructure" mode="change">
           <classes mode="replace"/>
           <content>
             <elementRef key="div"/>
-          </content>
-          
+          </content>  
+          <attList>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+          </attList>
         </elementSpec>
+        
         <elementSpec ident="div" module="textstructure" mode="change">
           <classes mode="replace"/>
           <content>
@@ -456,11 +623,8 @@
               <elementRef key="fw"/>
               <elementRef key="head"/>
               <elementRef key="anchor"/>
-              <elementRef key="delSpan"/>
-              <elementRef key="lb"/>
               <elementRef key="gap"/>
               <elementRef key="quote"/>
-              <elementRef key="listTranspose"/>
             </alternate>
           </content>
           <attList>
@@ -475,18 +639,33 @@
             </attDef>
             <attDef ident="part" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="closed">
+                <valItem ident="F"/>
+                <valItem ident="M"/>
+                <valItem ident="I"/>
+              </valList>
             </attDef>
             <attDef ident="prev" mode="replace" usage="opt">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="type" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="add-block"/>
+                <valItem ident="advertisement"/>
+                <valItem ident="article"/>
+                <valItem ident="newspaper-clipping"/>
+                <valItem ident="notepad-paper"/>
+                <valItem ident="print-proof"/>
+                <valItem ident="print-publ"/>
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="byline" module="textstructure" mode="change">
           <classes mode="replace"/>
           <content>
@@ -500,13 +679,14 @@
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="dateline" module="textstructure" mode="change">
           <classes mode="replace"/>
           <content>
@@ -520,13 +700,14 @@
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="g" module="gaiji" mode="change">
           <classes mode="replace"/>
           <content>
@@ -535,9 +716,20 @@
           <attList>
             <attDef ident="ref" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
+              <valList type="open">
+                <valItem ident="#deleatur"/>
+                <valItem ident="#intervention"/>
+                <valItem ident="#kerning"/>
+                <valItem ident="#relocation"/>
+                <valItem ident="#transposition"/>
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="facsimile" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -546,8 +738,13 @@
               <elementRef key="surface"/>
             </sequence>
           </content>
-          
+          <attList>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+          </attList>
         </elementSpec>
+        
         <elementSpec ident="surface" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -571,14 +768,20 @@
             </attDef>
             <attDef ident="type" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="newspaper-clipping"/>
+                <valItem ident="notepad-paper"/>
+                <valItem ident="print-proof"/>
+                <valItem ident="print-publ"/>
+                <valItem ident="other"/>
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
-            <attDef ident="attachment" mode="delete"/>
-            <attDef ident="flipping" mode="delete"/>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="zone" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -588,15 +791,14 @@
             <attDef ident="points" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
-            <attDef ident="type" mode="replace" usage="opt">
-              <datatype><dataRef name="NCName"/></datatype>
-            </attDef>
             <attDef ident="xml:id" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
-            <attDef ident="rotate" mode="delete"/>
+            <attDef ident="rotate" mode="replace" usage="opt"/>
+            <attDef ident="type" mode="replace" usage="opt"/>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="delSpan" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -611,12 +813,16 @@
             </attDef>
             <attDef ident="type" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="deselection"/>
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="fw" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -630,9 +836,21 @@
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
+              <valList type="closed">
+                <valItem ident="#kurrent"/>
+                <valItem ident="#latin"/>
+                <valItem ident="#black-letter"/>
+              </valList>
             </attDef>
             <attDef ident="type" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="fol"/>
+                <valItem ident="order"/>
+              </valList>
+            </attDef>
+            <attDef ident="n" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
@@ -640,6 +858,7 @@
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="subst" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -657,13 +876,19 @@
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="listTranspose" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
             <elementRef key="transpose"/>
           </content>
-          
+          <attList>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+          </attList>
         </elementSpec>
+        
         <elementSpec ident="metamark" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -678,9 +903,33 @@
             </attDef>
             <attDef ident="function" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="closed">
+                <valItem ident="add"/>
+                <valItem ident="addition"/>
+                <valItem ident="deletion"/>
+                <valItem ident="font"/>
+                <valItem ident="insertion"/>
+                <valItem ident="intervention"/>
+                <valItem ident="kerning"/>
+                <valItem ident="letter-spacing"/>
+                <valItem ident="line-spacing"/>
+                <valItem ident="no-spacing"/>
+                <valItem ident="paragraph"/>
+                <valItem ident="print-instruction"/>
+                <valItem ident="relocation"/>
+                <valItem ident="selection"/>
+                <valItem ident="selection-end"/>
+                <valItem ident="selection-start"/>
+                <valItem ident="transposition"/>
+                <valItem ident="unknown"/>
+              </valList>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
+              <valList type="closed">
+                <valItem ident="#kurrent"/>
+                <valItem ident="#latin"/>
+              </valList>
             </attDef>
             <attDef ident="target" mode="replace" usage="opt">
               <datatype><dataRef name="string"/></datatype>
@@ -693,6 +942,7 @@
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="mod" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -704,12 +954,16 @@
             </attDef>
             <attDef ident="rend" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="underline"/>
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="retrace" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -720,13 +974,17 @@
               <datatype><dataRef name="string"/></datatype>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
+              <valList type="open">
+                <valItem ident="#kurrent"/>
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="transpose" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -735,8 +993,13 @@
               <elementRef key="ptr" minOccurs="1" maxOccurs="unbounded"/>
             </sequence>
           </content>
-          
+          <attList>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
+          </attList>
         </elementSpec>
+        
         <elementSpec ident="undo" module="transcr" mode="change">
           <classes mode="replace"/>
           <content>
@@ -748,6 +1011,11 @@
             </attDef>
             <attDef ident="rend" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="dotted-underline"/>
+                <valItem ident="strike-out"/>
+                <valItem ident="wavy-line"/>
+              </valList>
             </attDef>
             <attDef ident="spanTo" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
@@ -758,8 +1026,12 @@
             <attDef ident="corresp" mode="replace" usage="opt">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="anchor" module="linking" mode="change">
           <classes mode="replace"/>
           <content>
@@ -768,12 +1040,17 @@
           <attList>
             <attDef ident="type" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="deselection"/>
+                <valItem ident="undo"/>
+              </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="seg" module="linking" mode="change">
           <classes mode="replace"/>
           <content>
@@ -785,12 +1062,19 @@
             </attDef>
             <attDef ident="rend" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="encircled"/>
+              </valList>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
             </attDef>
             <attDef ident="type" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="head-run-in"/>
+                <valItem ident="relocation"/>
+              </valList>
             </attDef>
             <attDef ident="subtype" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
@@ -803,6 +1087,7 @@
             </attDef>
           </attList>
         </elementSpec>
+        
         <elementSpec ident="pc" module="analysis" mode="change">
           <classes mode="replace"/>
           <content>
@@ -811,9 +1096,15 @@
           <attList>
             <attDef ident="force" mode="replace" usage="req">
               <datatype><dataRef name="NCName"/></datatype>
+              <valList type="open">
+                <valItem ident="weak"/>
+              </valList>
             </attDef>
-            <attDef ident="unit" mode="delete"/>
-            <attDef ident="pre" mode="delete"/>
+            <attDef ident="unit" mode="replace" usage="opt"/>
+            <attDef ident="pre"  mode="replace" usage="opt"/>
+            <attDef ident="xml:id" mode="replace" usage="opt">
+              <datatype><dataRef name="NCName"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
       </schemaSpec>
