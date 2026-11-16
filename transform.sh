@@ -5,7 +5,7 @@
 # schreibt das Ergebnis unter demselben Dateinamen nach ./tei (vorhandene
 # gleichnamige Dateien werden ersetzt). Danach wird jede erzeugte Datei mit
 # jing gegen ZWEI Schemata geprueft - getrennt ausgewiesen:
-#   1. das Projekt-Schema   meta/hdr-test-schema.rng
+#   1. das Projekt-Schema   meta/hdr-documentary-schema.rng
 #   2. TEI-All              meta/tei_all.rng
 # Zusaetzlich prueft der Report, welche Verweise (target, corresp, next, prev,
 # spanTo sowie "unresolved add-id"-Kommentare) ins Leere zeigen, d.h. auf eine
@@ -32,7 +32,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PAGE_DIR="$SCRIPT_DIR/page"
 TEI_DIR="$SCRIPT_DIR/tei"
 XSL="$SCRIPT_DIR/xsl/pagexml-to-tei.xsl"
-RNG_PROJECT="$SCRIPT_DIR/meta/hdr-test-schema.rng"
+RNG_PROJECT="$SCRIPT_DIR/meta/hdr-documentary-schema.rng"
 RNG_TEIALL="$SCRIPT_DIR/meta/tei_all.rng"
 REPORT="$SCRIPT_DIR/meta/validation-report.txt"
 VALIDATE=1
@@ -132,7 +132,13 @@ for src in "${FILES[@]}"; do
   rc=$?
   if [ "$rc" -eq 0 ] && [ -s "$TMP/$name" ]; then
     mv "$TMP/$name" "$out"      # erst jetzt wird eine vorhandene Datei ersetzt
-    echo "ok"
+    nwarn="$(grep -c 'WARNUNG' "$TMP/$name.log" 2>/dev/null)"
+    if [ "${nwarn:-0}" -gt 0 ]; then
+      echo "ok  ($nwarn Warnung(en))"
+      grep 'WARNUNG' "$TMP/$name.log" | cut -c1-200 | sed 's/^/    /'
+    else
+      echo "ok"
+    fi
     OKFILES+=("$name")
   else
     echo "FEHLER"
@@ -261,6 +267,14 @@ if [ "$REPORT_ON" = "1" ] && [ "${#OKFILES[@]}" -gt 0 ]; then
       cut -f3 "$TMP/$name.$tag.msgs" | cut -c1-"$MAXLEN" >>"$TMP/allmsgs.$tag.txt"
       i=$((i + 1))
     done
+    # Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs)
+    nw="$(grep -c 'WARNUNG' "$TMP/$name.log" 2>/dev/null)"
+    {
+      echo "  --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): ${nw:-0}"
+      if [ "${nw:-0}" -gt 0 ]; then
+        grep 'WARNUNG' "$TMP/$name.log" | cut -c1-"$MAXLEN" | sed 's/^/      /'
+      fi
+    } >>"$TMP/report.txt"
     check_refs "$name"
     nr="$(wc -l <"$TMP/$name.refs" | tr -d ' ')"
     {

@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<grammar ns="http://www.tei-c.org/ns/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<?xml version='1.0' encoding='UTF-8'?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" ns="http://www.tei-c.org/ns/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <start>
     <element name="TEI">
       <attribute>
         <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
       <element name="teiHeader">
         <element name="fileDesc">
           <element name="titleStmt">
             <element name="title">
-              <text/>
+              <text />
             </element>
           </element>
           <element name="publicationStmt">
-            <ref name="p"/>
+            <ref name="p" />
           </element>
           <element name="sourceDesc">
-            <ref name="p"/>
+            <ref name="p" />
           </element>
         </element>
         <element name="profileDesc">
@@ -27,9 +27,9 @@
                 <element name="change">
                   <attribute>
                     <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-                    <data type="NCName"/>
+                    <data type="NCName" />
                   </attribute>
-                  <text/>
+                  <text />
                 </element>
               </oneOrMore>
             </element>
@@ -39,123 +39,54 @@
       <element name="facsimile">
         <element name="graphic">
           <attribute name="height">
-            <data type="NMTOKEN"/>
+            <data type="NMTOKEN" />
           </attribute>
           <attribute name="url">
-            <data type="NMTOKEN"/>
+            <data type="NMTOKEN" />
           </attribute>
           <attribute name="width">
-            <data type="NMTOKEN"/>
+            <data type="NMTOKEN" />
           </attribute>
         </element>
-        <ref name="surface"/>
+        <ref name="surface" />
       </element>
       <element name="text">
         <element name="body">
-          <ref name="div"/>
+          <ref name="div" />
         </element>
       </element>
     </element>
   </start>
+  <define name="inline">
+    <choice>
+      <ref name="inlineCore" />
+      <ref name="quote" />
+    </choice>
+  </define>
   <define name="p">
     <element name="p">
       <optional>
-        <attribute name="change"/>
+        <attribute name="change" />
       </optional>
       <optional>
-        <attribute name="facs"/>
+        <attribute name="facs" />
       </optional>
       <optional>
         <attribute name="part">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <optional>
-        <attribute name="rendition"/>
+        <attribute name="rendition" />
       </optional>
       <optional>
         <attribute>
           <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="add"/>
-          <ref name="anchor"/>
-          <ref name="del"/>
-          <ref name="delSpan"/>
-          <ref name="gap"/>
-          <ref name="hi"/>
-          <ref name="lb"/>
-          <ref name="metamark"/>
-          <ref name="mod"/>
-          <ref name="pc"/>
-          <ref name="subst"/>
-          <element name="choice">
-            <element name="sic">
-              <data type="NCName"/>
-            </element>
-            <element name="corr">
-              <data type="NCName"/>
-            </element>
-          </element>
-          <element name="quote">
-            <choice>
-              <element name="lg">
-                <attribute name="facs"/>
-                <oneOrMore>
-                  <element name="l">
-                    <attribute name="facs"/>
-                    <oneOrMore>
-                      <choice>
-                        <text/>
-                        <ref name="hi"/>
-                      </choice>
-                    </oneOrMore>
-                  </element>
-                </oneOrMore>
-              </element>
-              <oneOrMore>
-                <ref name="p"/>
-              </oneOrMore>
-            </choice>
-          </element>
-          <element name="seg">
-            <optional>
-              <attribute name="change"/>
-            </optional>
-            <optional>
-              <attribute name="rend">
-                <data type="NCName"/>
-              </attribute>
-            </optional>
-            <optional>
-              <attribute name="rendition"/>
-            </optional>
-            <attribute name="type">
-              <data type="NCName"/>
-            </attribute>
-            <optional>
-              <attribute>
-                <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-                <data type="NCName"/>
-              </attribute>
-            </optional>
-            <oneOrMore>
-              <choice>
-                <text/>
-                <ref name="anchor"/>
-                <ref name="del"/>
-                <ref name="lb"/>
-                <ref name="mod"/>
-                <ref name="subst"/>
-                <ref name="undo"/>
-              </choice>
-            </oneOrMore>
-          </element>
-        </choice>
+        <ref name="inline" />
       </oneOrMore>
     </element>
   </define>
@@ -163,35 +94,35 @@
     <element name="surface">
       <optional>
         <attribute name="lrx">
-          <data type="integer"/>
+          <data type="integer" />
         </attribute>
       </optional>
       <optional>
         <attribute name="lry">
-          <data type="integer"/>
+          <data type="integer" />
         </attribute>
       </optional>
       <optional>
-        <attribute name="points"/>
+        <attribute name="points" />
       </optional>
       <optional>
         <attribute name="source">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <optional>
         <attribute name="type">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <attribute>
         <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
       <zeroOrMore>
         <choice>
-          <ref name="surface"/>
-          <ref name="zone"/>
+          <ref name="surface" />
+          <ref name="zone" />
         </choice>
       </zeroOrMore>
     </element>
@@ -199,121 +130,68 @@
   <define name="div">
     <element name="div">
       <optional>
-        <attribute name="change"/>
+        <attribute name="change" />
       </optional>
       <optional>
-        <attribute name="facs"/>
+        <attribute name="facs" />
       </optional>
       <optional>
-        <attribute name="next"/>
+        <attribute name="next" />
       </optional>
       <optional>
         <attribute name="part">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <optional>
-        <attribute name="prev"/>
+        <attribute name="prev" />
       </optional>
       <optional>
         <attribute name="type">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <optional>
         <attribute>
           <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <zeroOrMore>
         <choice>
-          <ref name="div"/>
-          <ref name="metamark"/>
-          <ref name="p"/>
-          <element name="byline">
-            <attribute name="facs"/>
-            <oneOrMore>
-              <choice>
-                <text/>
-                <ref name="lb"/>
-              </choice>
-            </oneOrMore>
-          </element>
-          <element name="cb">
-            <attribute name="facs"/>
-            <attribute name="n"/>
-          </element>
-          <element name="dateline">
-            <attribute name="facs"/>
-            <oneOrMore>
-              <choice>
-                <text/>
-                <ref name="lb"/>
-              </choice>
-            </oneOrMore>
-          </element>
-          <element name="fw">
-            <optional>
-              <attribute name="change"/>
-            </optional>
-            <attribute name="facs"/>
-            <optional>
-              <attribute name="rendition"/>
-            </optional>
-            <optional>
-              <attribute name="type">
-                <data type="NCName"/>
-              </attribute>
-            </optional>
-            <oneOrMore>
-              <choice>
-                <text/>
-                <ref name="del"/>
-                <ref name="lb"/>
-              </choice>
-            </oneOrMore>
-          </element>
-          <element name="head">
-            <optional>
-              <attribute name="change"/>
-            </optional>
-            <attribute name="facs"/>
-            <attribute name="rendition"/>
-            <attribute name="type">
-              <data type="NCName"/>
-            </attribute>
-            <oneOrMore>
-              <choice>
-                <text/>
-                <ref name="anchor"/>
-                <ref name="delSpan"/>
-                <ref name="lb"/>
-              </choice>
-            </oneOrMore>
-          </element>
+          <ref name="div" />
+          <ref name="metamark" />
+          <ref name="p" />
+          <ref name="byline" />
+          <ref name="cb" />
+          <ref name="dateline" />
+          <ref name="fw" />
+          <ref name="head" />
+          <ref name="anchor" />
+          <ref name="delSpan" />
+          <ref name="lb" />
+          <ref name="gap" />
+          <ref name="quote" />
+          <ref name="listTranspose" />
         </choice>
       </zeroOrMore>
-      <optional>
-        <ref name="gap"/>
-      </optional>
     </element>
   </define>
   <define name="subst">
     <element name="subst">
       <optional>
-        <attribute name="change"/>
+        <attribute name="change" />
       </optional>
       <optional>
         <attribute>
           <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <zeroOrMore>
         <choice>
-          <ref name="add"/>
-          <ref name="del"/>
+          <ref name="add" />
+          <ref name="del" />
         </choice>
       </zeroOrMore>
     </element>
@@ -321,39 +199,26 @@
   <define name="del">
     <element name="del">
       <optional>
-        <attribute name="change"/>
+        <attribute name="change" />
       </optional>
       <optional>
         <attribute name="subtype">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <optional>
         <attribute name="type">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <optional>
         <attribute>
           <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="add"/>
-          <ref name="anchor"/>
-          <ref name="del"/>
-          <ref name="g"/>
-          <ref name="gap"/>
-          <ref name="hi"/>
-          <ref name="lb"/>
-          <ref name="metamark"/>
-          <ref name="pc"/>
-          <ref name="subst"/>
-          <ref name="undo"/>
-        </choice>
+        <ref name="inline" />
       </oneOrMore>
     </element>
   </define>
@@ -361,12 +226,12 @@
     <element name="anchor">
       <optional>
         <attribute name="type">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <attribute>
         <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
     </element>
   </define>
@@ -374,90 +239,86 @@
     <element name="lb">
       <optional>
         <attribute name="break">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
-      <attribute name="facs"/>
+      <attribute name="facs" />
     </element>
   </define>
   <define name="mod">
     <element name="mod">
       <optional>
-        <attribute name="change"/>
+        <attribute name="change" />
       </optional>
       <attribute name="rend">
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
       <optional>
         <attribute>
           <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="anchor"/>
-          <ref name="hi"/>
-          <ref name="lb"/>
-          <ref name="pc"/>
-          <ref name="undo"/>
-        </choice>
+        <ref name="inline" />
       </oneOrMore>
     </element>
   </define>
   <define name="undo">
     <element name="undo">
       <optional>
-        <attribute name="change"/>
+        <attribute name="change" />
       </optional>
       <optional>
         <attribute name="rend">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
-      <attribute name="spanTo"/>
+      <attribute name="spanTo" />
       <optional>
-        <attribute name="target"/>
+        <attribute name="target" />
+      </optional>
+      <optional>
+        <attribute name="corresp" />
       </optional>
     </element>
   </define>
   <define name="delSpan">
     <element name="delSpan">
-      <attribute name="change"/>
-      <attribute name="spanTo"/>
+      <attribute name="change" />
+      <attribute name="spanTo" />
       <attribute name="type">
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
       <attribute>
         <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
     </element>
   </define>
   <define name="gap">
     <element name="gap">
       <optional>
-        <attribute name="change"/>
+        <attribute name="change" />
       </optional>
       <optional>
         <attribute name="extent">
-          <data type="integer"/>
+          <data type="integer" />
         </attribute>
       </optional>
       <optional>
-        <attribute name="facs"/>
+        <attribute name="facs" />
       </optional>
       <attribute name="reason">
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
       <optional>
-        <attribute name="rendition"/>
+        <attribute name="rendition" />
       </optional>
       <optional>
         <attribute>
           <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
     </element>
@@ -465,130 +326,337 @@
   <define name="pc">
     <element name="pc">
       <attribute name="force">
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
-      <text/>
+      <text />
     </element>
   </define>
   <define name="hi">
     <element name="hi">
       <attribute name="rend">
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
       <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="lb"/>
-          <ref name="mod"/>
-          <ref name="pc"/>
-        </choice>
+        <ref name="inline" />
       </oneOrMore>
     </element>
   </define>
   <define name="add">
     <element name="add">
       <optional>
-        <attribute name="change"/>
+        <attribute name="change" />
       </optional>
       <optional>
-        <attribute name="facs"/>
+        <attribute name="facs" />
       </optional>
       <optional>
         <attribute name="place">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <optional>
-        <attribute name="rendition"/>
+        <attribute name="rendition" />
       </optional>
       <optional>
         <attribute>
           <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="add"/>
-          <ref name="del"/>
-          <ref name="g"/>
-          <ref name="gap"/>
-          <ref name="lb"/>
-          <ref name="metamark"/>
-          <ref name="subst"/>
-          <element name="retrace">
-            <attribute name="change"/>
-            <attribute name="rendition"/>
-            <oneOrMore>
-              <choice>
-                <text/>
-                <ref name="lb"/>
-              </choice>
-            </oneOrMore>
-          </element>
-        </choice>
+        <ref name="inline" />
       </oneOrMore>
     </element>
   </define>
   <define name="metamark">
     <element name="metamark">
       <optional>
-        <attribute name="change"/>
+        <attribute name="change" />
       </optional>
       <optional>
-        <attribute name="facs"/>
+        <attribute name="facs" />
       </optional>
       <optional>
         <attribute name="function">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <optional>
-        <attribute name="rendition"/>
+        <attribute name="rendition" />
       </optional>
       <optional>
-        <attribute name="target"/>
+        <attribute name="target" />
       </optional>
       <optional>
         <attribute>
           <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
+      <optional>
+        <attribute name="corresp" />
+      </optional>
       <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="anchor"/>
-          <ref name="del"/>
-          <ref name="g"/>
-          <ref name="hi"/>
-          <ref name="lb"/>
-          <ref name="undo"/>
-        </choice>
+        <ref name="inline" />
       </oneOrMore>
     </element>
   </define>
   <define name="zone">
     <element name="zone">
-      <attribute name="points"/>
+      <attribute name="points" />
       <optional>
         <attribute name="type">
-          <data type="NCName"/>
+          <data type="NCName" />
         </attribute>
       </optional>
       <attribute>
         <name ns="http://www.w3.org/XML/1998/namespace">id</name>
-        <data type="NCName"/>
+        <data type="NCName" />
       </attribute>
       <zeroOrMore>
-        <ref name="zone"/>
+        <ref name="zone" />
       </zeroOrMore>
     </element>
   </define>
   <define name="g">
     <element name="g">
-      <attribute name="ref"/>
+      <attribute name="ref" />
+    </element>
+  </define>
+  <define name="inlineCore">
+    <choice>
+      <text />
+      <ref name="add" />
+      <ref name="anchor" />
+      <ref name="del" />
+      <ref name="delSpan" />
+      <ref name="gap" />
+      <ref name="hi" />
+      <ref name="lb" />
+      <ref name="metamark" />
+      <ref name="mod" />
+      <ref name="pc" />
+      <ref name="subst" />
+      <ref name="choiceSicCorr" />
+      <ref name="seg" />
+      <ref name="undo" />
+      <ref name="g" />
+      <ref name="retrace" />
+      <ref name="unclear" />
+      <ref name="listTranspose" />
+    </choice>
+  </define>
+  <define name="choiceSicCorr">
+    <element name="choice">
+      <element name="sic">
+        <data type="NCName" />
+      </element>
+      <element name="corr">
+        <data type="NCName" />
+      </element>
+    </element>
+  </define>
+  <define name="quote">
+    <element name="quote">
+      <choice>
+        <element name="lg">
+          <attribute name="facs" />
+          <oneOrMore>
+            <element name="l">
+              <attribute name="facs" />
+              <oneOrMore>
+                <ref name="inline" />
+              </oneOrMore>
+            </element>
+          </oneOrMore>
+        </element>
+        <oneOrMore>
+          <ref name="p" />
+        </oneOrMore>
+      </choice>
+    </element>
+  </define>
+  <define name="seg">
+    <element name="seg">
+      <optional>
+        <attribute name="change" />
+      </optional>
+      <optional>
+        <attribute name="rend">
+          <data type="NCName" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="rendition" />
+      </optional>
+      <attribute name="type">
+        <data type="NCName" />
+      </attribute>
+      <optional>
+        <attribute name="subtype">
+          <data type="NCName" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="corresp" />
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName" />
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <ref name="inline" />
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="retrace">
+    <element name="retrace">
+      <optional>
+        <attribute name="change" />
+      </optional>
+      <optional>
+        <attribute name="rendition" />
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName" />
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <ref name="inline" />
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="unclear">
+    <element name="unclear">
+      <optional>
+        <attribute name="reason" />
+      </optional>
+      <optional>
+        <attribute name="cert" />
+      </optional>
+      <optional>
+        <attribute name="resp" />
+      </optional>
+      <optional>
+        <attribute name="change" />
+      </optional>
+      <optional>
+        <attribute name="rendition" />
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName" />
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <ref name="inline" />
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ptr">
+    <element name="ptr">
+      <attribute name="target" />
+    </element>
+  </define>
+  <define name="listTranspose">
+    <element name="listTranspose">
+      <element name="transpose">
+        <ref name="ptr" />
+        <oneOrMore>
+          <ref name="ptr" />
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="fw">
+    <element name="fw">
+      <optional>
+        <attribute name="change" />
+      </optional>
+      <attribute name="facs" />
+      <optional>
+        <attribute name="rendition" />
+      </optional>
+      <optional>
+        <attribute name="type">
+          <data type="NCName" />
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName" />
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <ref name="inline" />
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="head">
+    <element name="head">
+      <optional>
+        <attribute name="change" />
+      </optional>
+      <attribute name="facs" />
+      <attribute name="rendition" />
+      <attribute name="type">
+        <data type="NCName" />
+      </attribute>
+      <oneOrMore>
+        <ref name="inline" />
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="byline">
+    <element name="byline">
+      <optional>
+        <attribute name="change" />
+      </optional>
+      <attribute name="facs" />
+      <optional>
+        <attribute name="rendition" />
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName" />
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <ref name="inlineCore" />
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="dateline">
+    <element name="dateline">
+      <optional>
+        <attribute name="change" />
+      </optional>
+      <attribute name="facs" />
+      <optional>
+        <attribute name="rendition" />
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="NCName" />
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <ref name="inlineCore" />
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="cb">
+    <element name="cb">
+      <attribute name="facs" />
+      <attribute name="n" />
     </element>
   </define>
 </grammar>

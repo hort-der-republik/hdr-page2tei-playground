@@ -238,7 +238,7 @@ Behelfs-IDs können auch an Zeilen-Blöcken deklariert sein (`add`, `del`, `mod`
 
 **`add-block` mit Behelfs-ID:** Die Region wird nie als `<add>` eingesogen, sondern bleibt `<div type="add-block">` und bekommt als `xml:id` eine ID mit Präfix `div` (`div-0180-0001`); Verweise (`target`, `add-id`) lösen auf diese ID auf.
 
-**Gleicher Name an Region und Zeilen-Block:** Heißt eine am Zeilen-Block deklarierte ID (`subst`-`id`, `subst-id`) genauso wie die Behelfs-ID einer Region (z. B. einer `add`-Region), bekommt das Element seine **eigene** ID mit dem eigenen Elementnamen als Präfix (`subst-0609-0001`), nicht die der Region. Ein Verweis in `target`/`corresp` eines `undo` auf dieser Zeile gilt dann dem Element auf derselben Zeile; Verweise von anderswo (und `add-id`) lösen wie bisher auf die Region auf.
+**Doppelt vergebene Behelfs-IDs:** Wird derselbe Wert mehrfach deklariert (an Regionen per `structure{id}`, an Zeilen-Blöcken per `id`, `subst-id`, `del-id`), entscheidet das Stylesheet **nicht**, worauf sich ein Verweis bezieht (`target`/`corresp`/`add-id` lösen wie bisher auf die erste Deklaration auf, Regionen vor Zeilen-Blöcken). Stattdessen gibt die Transformation eine Warnung aus (`WARNUNG: Behelfs-ID "…" ist mehrfach vergeben: …`), die `transform.sh` im Terminal und im Report ausweist. Ausnahme: Stücke eines `continued:true`-Laufs mit derselben `id` zählen als eine Deklaration. Das `<subst>` aus `subst-id`/`id` bekommt dabei trotzdem seine eigene ID mit Präfix `subst`.
 
 **Ausnahme dokumentübergreifende ID:** enthält ein Wert von `id` den Teilstring `.xml#` (z. B. `id:0003_406.xml#add-0003-0004` auf einer Region `add-block`), ist das **keine** Behelfs-ID.
 
@@ -281,6 +281,8 @@ Eine an der Region (`add`, `add-block`, `metamark`, `metamark-deleatur`) angegeb
 - Ausnahme: `<add>` steht kompakt in einer Zeile (siehe Abschnitt 5), nur echte `<lb/>` zwischen mehreren TextLines bleiben als Markup erhalten, ohne Zeilenumbruch/Einrückung drumherum.
 
 ## 11. Bekannte, akzeptierte Validierungslücken
+
+Das Projekt-Schema `meta/hdr-documentary-schema.rng` wird aus `meta/hdr-documentary-schema.odd` erzeugt (`meta/odd2rng.sh`); gearbeitet wird nur am ODD, das `.rng` nicht von Hand bearbeiten. `transform.sh` prüft gegen dieses Schema und gegen `tei_all.rng`.
 
 Gegen `tei_all.rng` geprüft (jing). Diese Fälle validieren **nicht**, sind aber bewusst so gewünscht bzw. Datenlücken, keine Stylesheet-Fehler:
 

@@ -1454,9 +1454,59 @@
   <xsl:variable name="changeTokens" select="exsl:node-set($changeTokensRTF)/my:cv"/>
   <xsl:variable name="changeValues" select="$changeTokens[@v != '' and not(@v = preceding-sibling::my:cv/@v)]"/>
 
+  <!-- ===================== Warnung: doppelt vergebene Behelfs-IDs =====================
+       Wird derselbe Behelfs-ID-Wert mehrfach deklariert (Region-structure{id},
+       Zeilen-Block id/subst-id/del-id), ist unklar, worauf sich Verweise
+       (target/corresp/add-id) beziehen. Das Stylesheet entscheidet das NICHT,
+       sondern meldet es (xsl:message "WARNUNG: ..."; transform.sh uebernimmt die
+       Meldungen in den Report). Stuecke eines continued:true-Laufs, die dieselbe
+       id auf mehreren Zeilen tragen, zaehlen als eine Deklaration. -->
+  <xsl:variable name="behelfsDeclsRawRTF">
+    <xsl:for-each select="$regions[@behelfsId != '' and not(contains(@behelfsId,'.xml#'))]">
+      <my:dd v="{@behelfsId}" kind="region" el="{@type}" continued="false" where="Region {@id} ({@type})"/>
+    </xsl:for-each>
+    <xsl:for-each select="$allLineRanges[my:attr[@name='id' or @name='subst-id' or @name='del-id']]">
+      <xsl:variable name="ddR" select="."/>
+      <xsl:for-each select="my:attr[@name='id' or @name='subst-id' or @name='del-id']">
+        <xsl:if test="@value != '' and not(contains(@value,'.xml#'))">
+          <my:dd v="{@value}" kind="line" el="{$ddR/@element}" continued="{$ddR/@continued}" where="Zeile {$ddR/@line} ({$ddR/@element}, {@name})"/>
+        </xsl:if>
+      </xsl:for-each>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="behelfsDeclsRTF">
+    <xsl:for-each select="exsl:node-set($behelfsDeclsRawRTF)/my:dd">
+      <my:dd v="{@v}" where="{@where}">
+        <xsl:attribute name="benign">
+          <xsl:value-of select="boolean(@kind='line' and preceding-sibling::my:dd[@v=current()/@v][1][@kind='line' and @el=current()/@el and @continued='true'])"/>
+        </xsl:attribute>
+      </my:dd>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="behelfsDecls" select="exsl:node-set($behelfsDeclsRTF)/my:dd"/>
+  <xsl:variable name="behelfsDupsRTF">
+    <xsl:for-each select="$behelfsDecls[not(@v = preceding-sibling::my:dd/@v)]">
+      <xsl:variable name="ddV" select="@v"/>
+      <xsl:if test="count($behelfsDecls[@v=$ddV and @benign='false']) &gt; 1">
+        <my:dup v="{$ddV}">
+          <xsl:attribute name="where">
+            <xsl:for-each select="$behelfsDecls[@v=$ddV and @benign='false']">
+              <xsl:if test="position() &gt; 1"><xsl:text>; </xsl:text></xsl:if>
+              <xsl:value-of select="@where"/>
+            </xsl:for-each>
+          </xsl:attribute>
+        </my:dup>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="behelfsDups" select="exsl:node-set($behelfsDupsRTF)/my:dup"/>
+
   <!-- ===================== Haupteinstieg ===================== -->
 
   <xsl:template match="/*[local-name()='PcGts']">
+    <xsl:for-each select="$behelfsDups">
+      <xsl:message>WARNUNG: Behelfs-ID "<xsl:value-of select="@v"/>" ist mehrfach vergeben: <xsl:value-of select="@where"/></xsl:message>
+    </xsl:for-each>
     <xsl:choose>
       <!-- seg-transposition mit gueltiger Gruppe (listTranspose an die richtige
            Stelle setzen), change-abhaengige rendition ergaenzen (Abschnitt 9),
@@ -3926,7 +3976,7 @@
           <xsl:call-template name="range-change-attr"><xsl:with-param name="range" select="$range"/></xsl:call-template>
           <xsl:if test="$range/my:attr[@name='corresp']">
             <xsl:attribute name="corresp">
-              <xsl:call-template name="resolve-behelfs-local"><xsl:with-param name="behelfsId" select="$range/my:attr[@name='corresp']/@value"/><xsl:with-param name="lineId" select="$lineId"/></xsl:call-template>
+              <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="$range/my:attr[@name='corresp']/@value"/></xsl:call-template>
             </xsl:attribute>
           </xsl:if>
           <xsl:if test="$range/my:attr[@name='rend']">
@@ -3934,7 +3984,7 @@
           </xsl:if>
           <xsl:if test="$range/my:attr[@name='target']">
             <xsl:attribute name="target">
-              <xsl:call-template name="resolve-behelfs-local"><xsl:with-param name="behelfsId" select="$range/my:attr[@name='target']/@value"/><xsl:with-param name="lineId" select="$lineId"/></xsl:call-template>
+              <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="$range/my:attr[@name='target']/@value"/></xsl:call-template>
             </xsl:attribute>
           </xsl:if>
         </undo>
@@ -4978,40 +5028,6 @@
           <xsl:when test="contains($behelfsId,'.xml#')"><xsl:value-of select="$behelfsId"/></xsl:when>
           <xsl:when test="$hit"><xsl:value-of select="concat('#', $hit[1]/@genid)"/></xsl:when>
           <xsl:otherwise><xsl:value-of select="concat('#', $behelfsId)"/></xsl:otherwise>
-        </xsl:choose>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <!-- wie resolve-behelfs, aber mit Zeilenbezug: ist ein Wert zugleich als
-       Region-Behelfs-ID UND an einem Block DERSELBEN Zeile deklariert (gleicher
-       Name, z.B. subst-id und add-Region), gilt die Deklaration auf dieser
-       Zeile. Sonst wie resolve-behelfs. -->
-  <xsl:template name="resolve-behelfs-local">
-    <xsl:param name="behelfsId"/>
-    <xsl:param name="lineId"/>
-    <xsl:choose>
-      <xsl:when test="contains($behelfsId,$sepMarker)">
-        <xsl:call-template name="resolve-behelfs-local">
-          <xsl:with-param name="behelfsId" select="substring-before($behelfsId,$sepMarker)"/>
-          <xsl:with-param name="lineId" select="$lineId"/>
-        </xsl:call-template>
-        <xsl:text> </xsl:text>
-        <xsl:call-template name="resolve-behelfs-local">
-          <xsl:with-param name="behelfsId" select="substring-after($behelfsId,$sepMarker)"/>
-          <xsl:with-param name="lineId" select="$lineId"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:variable name="rlRegionHit" select="$behelfsMap[@behelfs=$behelfsId and @region != '']"/>
-        <xsl:variable name="rlLineHit" select="$behelfsMap[@behelfs=$behelfsId and @region='']"/>
-        <xsl:choose>
-          <xsl:when test="$rlRegionHit and $rlLineHit and $allLineRanges[@line=$lineId and (my:attr[@name='id']/@value=$behelfsId or my:attr[@name='subst-id']/@value=$behelfsId)]">
-            <xsl:value-of select="concat('#', $rlLineHit[1]/@genid)"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="$behelfsId"/></xsl:call-template>
-          </xsl:otherwise>
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
