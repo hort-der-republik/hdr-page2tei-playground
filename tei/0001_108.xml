@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../meta/hdr-documentary-schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
    <teiHeader>
       <fileDesc>
@@ -256,7 +257,7 @@
                            <lb facs="#zone_tr_1_tl_16"/>Ruhe eingetreten ſchien. Aus der Parlamentsgegend
                            <lb facs="#zone_tr_1_tl_17"/>kommend hatte ich gerade die Höhe des äußeren Burgtor<pc force="weak">⸗</pc>
                            <lb facs="#zone_tr_1_tl_18" break="no"/>erreicht, als von der Bellariaſeite wieder Schüſſe herüber<pc force="weak">⸗</pc>
-                           <lb facs="#zone_tr_1_tl_19" break="no"/><subst change="#kk-ink-4"><del>tönten</del><add facs="#zone_r_2" change="#kk-ink-3" xml:id="add-0108-0001" rendition="#kurrent"><lb facs="#zone_l_3"/>— —</add></subst><anchor xml:id="anchor-0108-0003"/><subst change="#kk-pencil-2"><del>.</del><add place="overwritten" rendition="#kurrent"><metamark function="selection-start" change="#kk-pencil-2" rendition="#kurrent"><g ref="#intervention"/></metamark></add></subst> Mitten in einer Gruppe entſetzter Flüchtlinge duckte
+                           <lb facs="#zone_tr_1_tl_19" break="no"/><subst change="#kk-ink-4"><del>tönten</del><add facs="#zone_r_2" change="#kk-ink-3" xml:id="add-0108-0001" rendition="#kurrent"><lb facs="#zone_l_3"/>— —</add></subst><anchor type="deselection" xml:id="anchor-0108-0003"/><subst change="#kk-pencil-2"><del>.</del><add place="overwritten" rendition="#kurrent"><metamark function="selection-start" change="#kk-pencil-2" rendition="#kurrent"><g ref="#intervention"/></metamark></add></subst> Mitten in einer Gruppe entſetzter Flüchtlinge duckte
                            <lb facs="#zone_tr_1_tl_20"/>ich mich, ſo gut es ging, hinter dem ſteinern Unterſatz des
                            <lb facs="#zone_tr_1_tl_21"/>Volksgartengitters, das hier zum Burgtor einſchwenkt. Die
                            <lb facs="#zone_tr_1_tl_22"/>Eingänge waren geſchloſſen, Flucht unmöglich.

@@ -1144,7 +1144,7 @@
                </head>
                <head change="#np-1" facs="#zone_r_12" type="sub" rendition="#bold #center #black-letter">
                   <lb facs="#zone_tr_1_tl_6"/>Urteil eines süddeutschen Fachmanns. — Die Toten Opfer
-                  <lb facs="#zone_tr_1_tl_9"/>schlechter Organisation.<anchor xml:id="anchor-0180-0001"/>
+                  <lb facs="#zone_tr_1_tl_9"/>schlechter Organisation.<anchor type="deselection" xml:id="anchor-0180-0001"/>
                </head>
                <p facs="#zone_r_13" rendition="#indent">
                   <lb facs="#zone_tr_1_tl_11"/>Von einem <hi rend="letter-spacing"><mod rend="underline" change="#kk-ink-2">süddeutschen Polizeifachmann</mod>,</hi> der die

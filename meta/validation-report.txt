@@ -1,157 +1,73 @@
 VALIDIERUNGSREPORT
-Erstellt: 2026-11-16 13:23:00
+Erstellt: 2026-11-16 15:18:20
 Schema 1: Projekt-Schema (hdr-documentary-schema.rng)
 Schema 2: TEI-All (tei_all.rng)
 Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
 ==============================================================
 
 ### 0001_108.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 11 Verstoesse
-      Zeile 6:61       text not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 12:16      element "p" not allowed here; expected the element end-tag
-      Zeile 12:16      element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
-      Zeile 246:71     element "p" missing required attribute "change"
-      Zeile 264:92     element "p" missing required attribute "change"
-      Zeile 270:71     element "p" missing required attribute "change"
-      Zeile 283:72     element "p" missing required attribute "change"
-      Zeile 289:60     element "p" missing required attribute "change"
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 0 Verstoesse
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0002_180.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 34 Verstoesse
-      Zeile 6:61       text not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 12:16      element "p" not allowed here; expected the element end-tag
-      Zeile 12:16      element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
-      Zeile 1148:57    element "p" missing required attribute "change"
-      Zeile 1154:57    element "p" missing required attribute "change"
-      Zeile 1174:57    element "p" missing required attribute "change"
-      Zeile 1184:57    element "p" missing required attribute "change"
-      Zeile 1200:57    element "p" missing required attribute "change"
-      Zeile 1234:57    element "p" missing required attribute "change"
-      Zeile 1245:57    element "p" missing required attribute "change"
-      Zeile 1257:43    element "p" missing required attributes "change" and "rendition"
-      Zeile 1266:57    element "p" missing required attribute "change"
-      Zeile 1288:84    element "head" missing required attribute "change"
-      Zeile 1291:77    element "head" missing required attribute "change"
-      Zeile 1300:57    element "p" missing required attribute "change"
-      Zeile 1318:57    element "p" missing required attribute "change"
-      Zeile 1327:57    element "p" missing required attribute "change"
-      Zeile 1344:56    element "p" missing required attribute "change"
-      Zeile 1348:57    element "p" missing required attribute "change"
-      Zeile 1354:57    element "p" missing required attribute "change"
-      Zeile 1358:57    element "p" missing required attribute "change"
-      Zeile 1362:56    element "p" missing required attribute "change"
-      Zeile 1380:57    element "p" missing required attribute "change"
-      Zeile 1385:57    element "p" missing required attribute "change"
-      Zeile 1391:74    element "p" missing required attribute "change"
-      Zeile 1394:60    element "p" missing required attribute "change"
-      Zeile 1404:57    element "p" missing required attribute "change"
-      Zeile 1410:60    element "p" missing required attribute "change"
-      Zeile 1425:85    element "head" missing required attribute "change"
-      Zeile 1428:36    element "p" missing required attributes "change" and "rendition"
-      Zeile 1451:22    element "p" missing required attributes "change", "facs" and "rendition"
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 3 Verstoesse
+      Zeile 1289:84    element "head" missing required attribute "change"
+      Zeile 1292:77    element "head" missing required attribute "change"
+      Zeile 1426:85    element "head" missing required attribute "change"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0003_406.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 7 Verstoesse
-      Zeile 6:61       text not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 12:16      element "p" not allowed here; expected the element end-tag
-      Zeile 12:16      element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
-      Zeile 313:56     element "p" missing required attribute "change"
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 3 Verstoesse
+      Zeile 293:130    value of attribute "function" is invalid; must be equal to "add", "addition", "deletion", "font", "insertion", "intervention", "kerning", "letter-spacing", "line-spacing", "no-spacing", "paragraph", " [...]
+      Zeile 296:130    value of attribute "function" is invalid; must be equal to "add", "addition", "deletion", "font", "insertion", "intervention", "kerning", "letter-spacing", "line-spacing", "no-spacing", "paragraph", " [...]
+      Zeile 322:115    value of attribute "function" is invalid; must be equal to "add", "addition", "deletion", "font", "insertion", "intervention", "kerning", "letter-spacing", "line-spacing", "no-spacing", "paragraph", " [...]
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 1
       WARNUNG: Behelfs-ID "zui" ist mehrfach vergeben: Region r_17 (add); Zeile r_3_tl_1 (metamark-add-synth, id)
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0004_539.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 6 Verstoesse
-      Zeile 6:61       text not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 12:16      element "p" not allowed here; expected the element end-tag
-      Zeile 12:16      element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 0 Verstoesse
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0005_581.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 7 Verstoesse
-      Zeile 6:61       text not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 12:16      element "p" not allowed here; expected the element end-tag
-      Zeile 12:16      element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
-      Zeile 371:58     element "p" missing required attribute "rendition"
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 0 Verstoesse
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0006_459.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 7 Verstoesse
-      Zeile 6:61       text not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 12:16      element "p" not allowed here; expected the element end-tag
-      Zeile 12:16      element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
-      Zeile 231:40     element "lg" missing required attribute "rendition"
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 1 Verstoesse
+      Zeile 232:40     element "lg" missing required attribute "rendition"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 1
-      Zeile 252        target="460.xml#add-0460-9001"  ->  Datei 460.xml nicht in tei/ vorhanden
+      Zeile 253        target="460.xml#add-0460-9001"  ->  Datei 460.xml nicht in tei/ vorhanden
 
 ### 0007_603.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 6 Verstoesse
-      Zeile 6:61       text not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 12:16      element "p" not allowed here; expected the element end-tag
-      Zeile 12:16      element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 0 Verstoesse
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0008_609.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 7 Verstoesse
-      Zeile 6:61       text not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" not allowed here; expected the element end-tag
-      Zeile 9:16       element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 12:16      element "p" not allowed here; expected the element end-tag
-      Zeile 12:16      element "p" missing required attributes "change", "facs" and "rendition"
-      Zeile 19:20      element "profileDesc" not allowed anywhere; expected the element end-tag
-      Zeile 509:33     element "p" missing required attributes "change" and "rendition"
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 0 Verstoesse
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 1
       WARNUNG: Behelfs-ID "fghjfghj" ist mehrfach vergeben: Region r_28 (add); Zeile r_2_tl_44 (subst-del-synth, subst-id)
   --- ins Leere zeigende Verweise / Behelfs-IDs: 1
-      Zeile 497        target="0003_406.xml#add-0003-0004"  ->  ID add-0003-0004 existiert in 0003_406.xml nicht
+      Zeile 498        target="0003_406.xml#add-0003-0004"  ->  ID add-0003-0004 existiert in 0003_406.xml nicht
 
 ==============================================================
 HAEUFIGSTE MELDUNGEN - Projekt-Schema (hdr-documentary-schema.rng)
-  28x  element "p" missing required attribute "change"
-  17x  element "p" missing required attributes "change", "facs" and "rendition"
-  16x  element "p" not allowed here; expected the element end-tag
-  8x  text not allowed here; expected the element end-tag
-  8x  element "profileDesc" not allowed anywhere; expected the element end-tag
-  3x  element "p" missing required attributes "change" and "rendition"
+  3x  value of attribute "function" is invalid; must be equal to "add", "addition", "deletion", "font", "insertion", "intervention", "kerning", "letter-spacing", "line-spacing", "no-spacing", "paragraph", "
   3x  element "head" missing required attribute "change"
-  1x  element "p" missing required attribute "rendition"
   1x  element "lg" missing required attribute "rendition"
 
 HAEUFIGSTE MELDUNGEN - TEI-All (tei_all.rng)
@@ -159,13 +75,13 @@ HAEUFIGSTE MELDUNGEN - TEI-All (tei_all.rng)
 
 ZUSAMMENFASSUNG (Verstoesse je Datei; in Klammern: Differenz zum letzten Durchgang)
   Datei                     Projekt        TEI-All       Verweise
-  0001_108.xml             11 (neu)        0 (neu)        0 (±0)
-  0002_180.xml             34 (neu)        0 (neu)        0 (±0)
-  0003_406.xml              7 (neu)        0 (neu)        0 (±0)
-  0004_539.xml              6 (neu)        0 (neu)        0 (±0)
-  0005_581.xml              7 (neu)        0 (neu)        0 (±0)
-  0006_459.xml              7 (neu)        0 (neu)        1 (±0)
-  0007_603.xml              6 (neu)        0 (neu)        0 (±0)
-  0008_609.xml              7 (neu)        0 (neu)        1 (±0)
+  0001_108.xml              0 (-11)        0 (±0)        0 (±0)
+  0002_180.xml              3 (-31)        0 (±0)        0 (±0)
+  0003_406.xml               3 (-4)        0 (±0)        0 (±0)
+  0004_539.xml               0 (-6)        0 (±0)        0 (±0)
+  0005_581.xml               0 (-7)        0 (±0)        0 (±0)
+  0006_459.xml               1 (-6)        0 (±0)        1 (±0)
+  0007_603.xml               0 (-6)        0 (±0)        0 (±0)
+  0008_609.xml               0 (-7)        0 (±0)        1 (±0)
   ------------------------------------------------------------
-  Summe                    85 (neu)        0 (neu)        2 (±0)
+  Summe                     7 (-78)        0 (±0)        2 (±0)
