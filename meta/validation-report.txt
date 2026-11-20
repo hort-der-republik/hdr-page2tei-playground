@@ -1,5 +1,5 @@
 VALIDIERUNGSREPORT
-Erstellt: 2026-11-16 15:18:20
+Erstellt: 2026-11-20 08:38:42
 Schema 1: Projekt-Schema (hdr-documentary-schema.rng)
 Schema 2: TEI-All (tei_all.rng)
 Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
@@ -75,13 +75,13 @@ HAEUFIGSTE MELDUNGEN - TEI-All (tei_all.rng)
 
 ZUSAMMENFASSUNG (Verstoesse je Datei; in Klammern: Differenz zum letzten Durchgang)
   Datei                     Projekt        TEI-All       Verweise
-  0001_108.xml              0 (-11)        0 (±0)        0 (±0)
-  0002_180.xml              3 (-31)        0 (±0)        0 (±0)
-  0003_406.xml               3 (-4)        0 (±0)        0 (±0)
-  0004_539.xml               0 (-6)        0 (±0)        0 (±0)
-  0005_581.xml               0 (-7)        0 (±0)        0 (±0)
-  0006_459.xml               1 (-6)        0 (±0)        1 (±0)
-  0007_603.xml               0 (-6)        0 (±0)        0 (±0)
-  0008_609.xml               0 (-7)        0 (±0)        1 (±0)
+  0001_108.xml              0 (±0)        0 (±0)        0 (±0)
+  0002_180.xml              3 (±0)        0 (±0)        0 (±0)
+  0003_406.xml              3 (±0)        0 (±0)        0 (±0)
+  0004_539.xml              0 (±0)        0 (±0)        0 (±0)
+  0005_581.xml              0 (±0)        0 (±0)        0 (±0)
+  0006_459.xml              1 (±0)        0 (±0)        1 (±0)
+  0007_603.xml              0 (±0)        0 (±0)        0 (±0)
+  0008_609.xml              0 (±0)        0 (±0)        1 (±0)
   ------------------------------------------------------------
-  Summe                     7 (-78)        0 (±0)        2 (±0)
+  Summe                     7 (±0)        0 (±0)        2 (±0)

@@ -198,11 +198,11 @@
             </zone>
             <zone xml:id="zone_r_4" points="752,3269 2985,3269 2985,3875 752,3875">
                <zone type="line"
-                     xml:id="zone_r_4_tl_2"
-                     points="735,3414 2952,3420 2952,3334 2598,3367 1746,3325 735,3350"/>
-               <zone type="line"
                      xml:id="zone_r_4_tl_1"
                      points="939,3348 2955,3336 2955,3225 2632,3222 2337,3286 2273,3236 2167,3264 2122,3231 1933,3286 1780,3239 1607,3289 939,3272"/>
+               <zone type="line"
+                     xml:id="zone_r_4_tl_2"
+                     points="735,3414 2952,3420 2952,3334 2598,3367 1746,3325 735,3350"/>
                <zone type="line"
                      xml:id="zone_r_4_tl_3"
                      points="746,3495 2972,3484 2972,3406 2838,3445 2306,3409 1030,3431 969,3398 746,3431"/>
@@ -337,8 +337,8 @@
                   <lb facs="#zone_r_3_tl_6"/>Hand geben soll.
                </p>
                <p change="#fp-1" facs="#zone_r_4" rendition="#indent #antiqua">
-                  <lb facs="#zone_r_4_tl_2"/>andere so wie eine Jagdflinte; der dritte hat das Gewehr fertig; der
                   <lb facs="#zone_r_4_tl_1"/>Der eine hält es so, als ob der Verschluß verrostet wäre; der
+                  <lb facs="#zone_r_4_tl_2"/>andere so wie eine Jagdflinte; der dritte hat das Gewehr fertig; der
                   <lb facs="#zone_r_4_tl_3"/>vierte hat den Lauf nach aufwärts. Der fünfte hat es am Bauch und
                   <lb facs="#zone_r_4_tl_4"/>beim Fuß, zwei Rückwärtige haben es geschultert, der rechts rück<pc force="weak">-</pc>
                   <lb facs="#zone_r_4_tl_5" break="no"/>wärts hä<metamark xml:id="metamark-0406-0010" function="kerning" change="#pr-pencil-1" target="#metamark-0406-0010" rendition="#latin"><g ref="#intervention"/></metamark>lt den Lauf genau auf den Vordermann. Das heißt man

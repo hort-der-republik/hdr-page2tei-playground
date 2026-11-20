@@ -277,7 +277,7 @@
 
   <xsl:param name="lineAssignTolerance" select="20"/>
 
-  <xsl:variable name="lineAssignRTF">
+  <xsl:variable name="lineAssignRawRTF">
     <xsl:for-each select="$allLines">
       <xsl:variable name="ln" select="."/>
       <xsl:variable name="bboxRTF">
@@ -352,7 +352,202 @@
           <xsl:otherwise><xsl:value-of select="$parentRegionId"/></xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
-      <my:la id="{$ln/@id}" region="{$targetRegion}" pindex="{$parentRegionIndex}" oindex="{$ownIndex}"/>
+      <my:la id="{$ln/@id}" region="{$targetRegion}" parent="{$parentRegionId}" pindex="{$parentRegionIndex}" oindex="{$ownIndex}"/>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="lineAssignRaw" select="exsl:node-set($lineAssignRawRTF)/my:la"/>
+
+  <!-- ===== Zeilenreihenfolge innerhalb einer Region =====
+       Grundsatz: die Annotationsreihenfolge (Elternregion/readingOrder) bleibt
+       erhalten. Nur Zeilen, die per Geometrie aus einer FREMDEN Elternregion in
+       eine Region gewandert sind, werden nach ihrer Lage einsortiert:
+         - y' = y - m*x an der Mitte der Baseline (erster/letzter Punkt), m = Median
+           der Baseline-Steigungen der Zielregion (Schraglage-Korrektur; |m| > 1 -> 0)
+         - unterscheiden sich zwei Zeilen unterschiedlicher Elternregionen in y' um
+           mehr als $lineRowTolerance * (Median der Zeilen-Bounding-Box-Hoehe der
+           Region), gilt die kleinere y' als frueher; sonst ("gleiche Reihe")
+           entscheidet x (links vor rechts), dann pindex/oindex
+         - Zeilen derselben Elternregion: weiter nach oindex
+         - ein continued:true-Lauf (Folgezeilen derselben Elternregion) wird als
+           Einheit behandelt: er nimmt y'/x seiner Kopfzeile, so dass keine fremde
+           Zeile mitten in den Lauf einsortiert wird
+       Ergebnis: @rank (Anzahl der Zeilen der Region, die vor dieser Zeile stehen);
+       sortiert wird nach rank, dann pindex, dann oindex. -->
+  <xsl:param name="lineRowTolerance" select="0.3"/>
+
+  <xsl:template name="last-token">
+    <xsl:param name="s"/>
+    <xsl:choose>
+      <xsl:when test="contains($s,' ')"><xsl:call-template name="last-token"><xsl:with-param name="s" select="substring-after($s,' ')"/></xsl:call-template></xsl:when>
+      <xsl:otherwise><xsl:value-of select="$s"/></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- Kopf eines continued:true-Laufs: die Zeile, deren Block (continued:true) bis
+       hierher durchgelaufen ist, wird rueckwaerts (je Elternregion nach oindex)
+       verfolgt. Ein solcher Lauf muss in der Ausgabe zusammenhaengend bleiben und
+       wird deshalb als EINE Einheit einsortiert (gemeinsamer Schluessel = Kopfzeile). -->
+  <xsl:variable name="contLinesRTF">
+    <xsl:for-each select="$allLineRanges[@continued='true' and not(@line = preceding-sibling::*[@continued='true']/@line)]">
+      <my:c id="{@line}"/>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="contLines" select="exsl:node-set($contLinesRTF)/my:c"/>
+  <!-- Elternregionen, in denen mindestens eine Zeile einen continued-Block hat -->
+  <xsl:variable name="contParentsRTF">
+    <xsl:for-each select="$lineAssignRaw[@id = $contLines/@id and not(@parent = preceding-sibling::*[@id = $contLines/@id]/@parent)]">
+      <my:cp id="{@parent}"/>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="contParents" select="exsl:node-set($contParentsRTF)/my:cp"/>
+
+  <xsl:template name="run-head">
+    <xsl:param name="id"/>
+    <xsl:variable name="me" select="$lineAssignRaw[@id=$id]"/>
+    <xsl:choose>
+      <!-- schneller Ausgang: keine Zeile der Elternregion hat einen continued-Block -->
+      <xsl:when test="not($contParents[@id=$me/@parent])"><xsl:value-of select="$id"/></xsl:when>
+      <xsl:otherwise>
+    <xsl:variable name="predRTF">
+      <xsl:for-each select="$lineAssignRaw[@parent=$me/@parent and number(@oindex) &lt; number($me/@oindex)]">
+        <xsl:sort select="number(@oindex)" data-type="number" order="descending"/>
+        <xsl:if test="position()=1"><xsl:value-of select="@id"/></xsl:if>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:variable name="pred" select="string($predRTF)"/>
+    <xsl:choose>
+      <!-- nur ein ECHTER Lauf: die Vorgaengerzeile hat einen continued:true-Block UND
+           diese Zeile setzt ihn (gleiches Element) bei offset:0 fort -->
+      <xsl:when test="$pred != '' and $allLineRanges[@line=$pred and @continued='true' and @element = $allLineRanges[@line=$id and number(@offset)=0]/@element]">
+        <xsl:call-template name="run-head"><xsl:with-param name="id" select="$pred"/></xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise><xsl:value-of select="$id"/></xsl:otherwise>
+    </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- Regionen, in die mindestens eine Zeile aus einer FREMDEN Elternregion gewandert
+       ist; nur dort ist die Geometrie-Einsortierung noetig (alle anderen behalten
+       rank 0, d.h. die Reihenfolge nach pindex/oindex wie bisher) -->
+  <xsl:variable name="mixedRegionsRTF">
+    <xsl:for-each select="$lineAssignRaw[@parent != @region and not(@region = preceding-sibling::*[@parent != @region]/@region)]">
+      <my:mx id="{@region}"/>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="mixedRegions" select="exsl:node-set($mixedRegionsRTF)/my:mx"/>
+
+  <!-- Stufe 1: je Zeile Mittelpunkt (xm,ym) der Baseline, Steigung, Boxhoehe h -->
+  <xsl:variable name="lineGeoRTF">
+    <xsl:for-each select="$lineAssignRaw[@region = $mixedRegions/@id]">
+      <xsl:variable name="la" select="."/>
+      <xsl:variable name="ln" select="$allLines[@id=$la/@id]"/>
+      <xsl:variable name="bboxRTF"><xsl:call-template name="bbox"><xsl:with-param name="points" select="$ln/*[local-name()='Coords']/@points"/></xsl:call-template></xsl:variable>
+      <xsl:variable name="bb" select="exsl:node-set($bboxRTF)"/>
+      <xsl:variable name="bl" select="normalize-space($ln/*[local-name()='Baseline']/@points)"/>
+      <xsl:variable name="firstPair" select="substring-before(concat($bl,' '),' ')"/>
+      <xsl:variable name="lastPair"><xsl:call-template name="last-token"><xsl:with-param name="s" select="$bl"/></xsl:call-template></xsl:variable>
+      <xsl:variable name="x1" select="number(substring-before($firstPair,','))"/>
+      <xsl:variable name="y1" select="number(substring-after($firstPair,','))"/>
+      <xsl:variable name="x2" select="number(substring-before($lastPair,','))"/>
+      <xsl:variable name="y2" select="number(substring-after($lastPair,','))"/>
+      <xsl:variable name="hasBl" select="$bl != '' and $x1 = $x1 and $y1 = $y1 and $x2 = $x2 and $y2 = $y2"/>
+      <xsl:variable name="bmx" select="(number($bb/my:minX) + number($bb/my:maxX)) div 2"/>
+      <xsl:variable name="bmy" select="(number($bb/my:minY) + number($bb/my:maxY)) div 2"/>
+      <xsl:variable name="hRaw" select="number($bb/my:maxY) - number($bb/my:minY)"/>
+      <my:la>
+        <xsl:copy-of select="@*"/>
+        <xsl:attribute name="head"><xsl:call-template name="run-head"><xsl:with-param name="id" select="@id"/></xsl:call-template></xsl:attribute>
+        <xsl:attribute name="xm"><xsl:choose><xsl:when test="$hasBl"><xsl:value-of select="($x1 + $x2) div 2"/></xsl:when><xsl:when test="$bmx = $bmx"><xsl:value-of select="$bmx"/></xsl:when><xsl:otherwise>0</xsl:otherwise></xsl:choose></xsl:attribute>
+        <xsl:attribute name="ym"><xsl:choose><xsl:when test="$hasBl"><xsl:value-of select="($y1 + $y2) div 2"/></xsl:when><xsl:when test="$bmy = $bmy"><xsl:value-of select="$bmy"/></xsl:when><xsl:otherwise>0</xsl:otherwise></xsl:choose></xsl:attribute>
+        <xsl:attribute name="slope"><xsl:if test="$hasBl and $x2 != $x1"><xsl:value-of select="($y2 - $y1) div ($x2 - $x1)"/></xsl:if></xsl:attribute>
+        <xsl:attribute name="h"><xsl:choose><xsl:when test="$hRaw = $hRaw"><xsl:value-of select="$hRaw"/></xsl:when><xsl:otherwise>0</xsl:otherwise></xsl:choose></xsl:attribute>
+      </my:la>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="lineGeo" select="exsl:node-set($lineGeoRTF)/my:la"/>
+
+  <!-- Stufe 2: je Zielregion Median-Steigung m und Zeilen-Reihen-Toleranz tol -->
+  <xsl:variable name="lineRegionStatsRTF">
+    <xsl:for-each select="$lineGeo[not(@region = preceding-sibling::*/@region)]">
+      <xsl:variable name="rg" select="@region"/>
+      <xsl:variable name="slopesRTF">
+        <xsl:for-each select="$lineGeo[@region=$rg and @slope != '']">
+          <xsl:sort select="number(@slope)" data-type="number"/>
+          <my:v><xsl:value-of select="@slope"/></my:v>
+        </xsl:for-each>
+      </xsl:variable>
+      <xsl:variable name="sl" select="exsl:node-set($slopesRTF)/my:v"/>
+      <xsl:variable name="ns" select="count($sl)"/>
+      <xsl:variable name="mRaw">
+        <xsl:choose>
+          <xsl:when test="$ns = 0">0</xsl:when>
+          <xsl:otherwise><xsl:value-of select="(number($sl[floor(($ns + 1) div 2)]) + number($sl[ceiling(($ns + 1) div 2)])) div 2"/></xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:variable name="hsRTF">
+        <xsl:for-each select="$lineGeo[@region=$rg]">
+          <xsl:sort select="number(@h)" data-type="number"/>
+          <my:v><xsl:value-of select="@h"/></my:v>
+        </xsl:for-each>
+      </xsl:variable>
+      <xsl:variable name="hs" select="exsl:node-set($hsRTF)/my:v"/>
+      <xsl:variable name="nh" select="count($hs)"/>
+      <my:rs region="{$rg}">
+        <xsl:attribute name="m"><xsl:choose><xsl:when test="number($mRaw) &gt; 1 or number($mRaw) &lt; -1">0</xsl:when><xsl:otherwise><xsl:value-of select="$mRaw"/></xsl:otherwise></xsl:choose></xsl:attribute>
+        <xsl:attribute name="tol"><xsl:value-of select="$lineRowTolerance * ((number($hs[floor(($nh + 1) div 2)]) + number($hs[ceiling(($nh + 1) div 2)])) div 2)"/></xsl:attribute>
+      </my:rs>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="lineRegionStats" select="exsl:node-set($lineRegionStatsRTF)/my:rs"/>
+
+  <!-- Stufe 3: entzerrtes y' je Zeile -->
+  <xsl:variable name="lineYpRTF">
+    <xsl:for-each select="$lineGeo">
+      <xsl:variable name="st" select="$lineRegionStats[@region=current()/@region]"/>
+      <xsl:variable name="hd" select="$lineGeo[@id=current()/@head]"/>
+      <my:la>
+        <xsl:copy-of select="@*"/>
+        <xsl:attribute name="xmh"><xsl:value-of select="$hd/@xm"/></xsl:attribute>
+        <xsl:attribute name="yp"><xsl:value-of select="number($hd/@ym) - number($st/@m) * number($hd/@xm)"/></xsl:attribute>
+        <xsl:attribute name="tol"><xsl:value-of select="$st/@tol"/></xsl:attribute>
+      </my:la>
+    </xsl:for-each>
+  </xsl:variable>
+  <xsl:variable name="lineYp" select="exsl:node-set($lineYpRTF)/my:la"/>
+
+  <!-- Stufe 4: @rank = Zahl der Zeilen derselben Region, die vor dieser stehen -->
+  <xsl:variable name="lineAssignRTF">
+    <xsl:for-each select="$lineAssignRaw[not(@region = $mixedRegions/@id)]">
+      <my:la rank="0">
+        <xsl:copy-of select="@id|@region|@parent|@pindex|@oindex"/>
+      </my:la>
+    </xsl:for-each>
+    <xsl:for-each select="$lineYp[not(@region = preceding-sibling::*/@region)]">
+     <xsl:variable name="rg" select="@region"/>
+     <xsl:variable name="regionLines" select="$lineYp[@region=$rg]"/>
+     <xsl:for-each select="$regionLines">
+      <xsl:variable name="myId" select="@id"/>
+      <xsl:variable name="lp" select="string(@parent)"/>
+      <xsl:variable name="lpi" select="number(@pindex)"/>
+      <xsl:variable name="lo" select="number(@oindex)"/>
+      <xsl:variable name="ly" select="number(@yp)"/>
+      <xsl:variable name="lx" select="number(@xmh)"/>
+      <xsl:variable name="lt" select="number(@tol)"/>
+      <my:la>
+        <xsl:copy-of select="@id|@region|@parent|@pindex|@oindex"/>
+        <xsl:attribute name="rank"><xsl:value-of select="count($regionLines[@id != $myId and (
+            (@parent = $lp and number(@oindex) &lt; $lo)
+            or (@parent != $lp and (
+                 number(@yp) &lt; $ly - $lt
+                 or (number(@yp) &lt;= $ly + $lt and number(@yp) &gt;= $ly - $lt and (
+                      number(@xmh) &lt; $lx
+                      or (number(@xmh) = $lx and (number(@pindex) &lt; $lpi or (number(@pindex) = $lpi and number(@oindex) &lt; $lo)))
+                    ))
+               ))
+          )])"/></xsl:attribute>
+      </my:la>
+     </xsl:for-each>
     </xsl:for-each>
   </xsl:variable>
   <xsl:variable name="lineAssign" select="exsl:node-set($lineAssignRTF)/my:la"/>
@@ -877,6 +1072,7 @@
       <xsl:variable name="uqRg" select="@region"/>
       <my:rg id="{$uqRg}">
         <xsl:for-each select="$lineAssign[@region=$uqRg]">
+          <xsl:sort select="number(@rank)" data-type="number"/>
           <xsl:sort select="number(@pindex)" data-type="number"/>
           <xsl:sort select="number(@oindex)" data-type="number"/>
           <my:l id="{@id}"/>
@@ -1661,6 +1857,7 @@
   <xsl:template name="render-line-zones-for-region">
     <xsl:param name="regionId"/>
     <xsl:for-each select="$lineAssign[@region=$regionId]">
+      <xsl:sort select="number(@rank)" data-type="number"/>
       <xsl:sort select="number(@pindex)" data-type="number"/>
       <xsl:sort select="number(@oindex)" data-type="number"/>
       <xsl:variable name="line" select="$allLines[@id=current()/@id]"/>
@@ -2688,6 +2885,7 @@
   <xsl:template name="ordered-lines-for-region">
     <xsl:param name="regionId"/>
     <xsl:for-each select="$lineAssign[@region=$regionId]">
+      <xsl:sort select="number(@rank)" data-type="number"/>
       <xsl:sort select="number(@pindex)" data-type="number"/>
       <xsl:sort select="number(@oindex)" data-type="number"/>
       <xsl:copy-of select="$allLines[@id=current()/@id]"/>

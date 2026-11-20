@@ -201,9 +201,6 @@
             </zone>
             <zone xml:id="zone_r_18" points="390,4085 2341,4067 2369,6139 436,6180">
                <zone type="line"
-                     xml:id="zone_l_93"
-                     points="884,4497 984,4511 988,4481 888,4467"/>
-               <zone type="line"
                      xml:id="zone_tr_1_tl_112"
                      points="503,4129 2290,4133 2290,4039 503,4082"/>
                <zone type="line"
@@ -284,6 +281,9 @@
                <zone type="line"
                      xml:id="zone_tr_1_tl_198"
                      points="448,5909 2247,5873 2330,5866 2334,5807 448,5834"/>
+               <zone type="line"
+                     xml:id="zone_l_93"
+                     points="884,4497 984,4511 988,4481 888,4467"/>
                <zone type="line"
                      xml:id="zone_tr_1_tl_201"
                      points="444,5980 2326,5944 2326,5866 444,5905"/>
@@ -646,13 +646,16 @@
                      xml:id="zone_tr_1_tl_109"
                      points="4636,4082 5956,4058 5956,3996 5771,3968 4636,4007"/>
                <zone type="line"
-                     xml:id="zone_tr_1_tl_114"
-                     points="4361,4219 6255,4200 6258,4058 6078,4125 5465,4137 4451,4145 4365,4086"/>
-               <zone type="line"
                      xml:id="zone_l_77"
                      points="4420,4141 6113,4113 6070,4051 4420,4086"/>
+               <zone type="line"
+                     xml:id="zone_tr_1_tl_114"
+                     points="4361,4219 6255,4200 6258,4058 6078,4125 5465,4137 4451,4145 4365,4086"/>
             </zone>
             <zone xml:id="zone_r_33" points="4320,4204 6301,4190 6292,4515 4320,4515">
+               <zone type="line"
+                     xml:id="zone_tr_1_tl_117"
+                     points="4593,4290 5217,4263 5422,4318 5465,4282 6015,4274 6015,4188 4593,4200"/>
                <zone type="line"
                      xml:id="zone_tr_1_tl_120"
                      points="4408,4365 5496,4326 5705,4384 5854,4333 6231,4365 6231,4271 4408,4298"/>
@@ -662,9 +665,6 @@
                <zone type="line"
                      xml:id="zone_tr_1_tl_126"
                      points="4420,4518 5555,4483 5976,4502 6082,4557 6231,4506 6231,4412 5925,4384 5465,4455 5092,4455 4864,4392 4420,4416"/>
-               <zone type="line"
-                     xml:id="zone_tr_1_tl_117"
-                     points="4593,4290 5217,4263 5422,4318 5465,4282 6015,4274 6015,4188 4593,4200"/>
             </zone>
             <zone xml:id="zone_r_34" points="4331,4524 6292,4515 6285,4601 4316,4607">
                <zone type="line"
@@ -1199,7 +1199,6 @@
                   <lb facs="#zone_tr_1_tl_110"/>die ersten Gewalttätigkeiten zu verhindern.</del>
                </p>
                <p facs="#zone_r_18" rendition="#indent">
-                  <lb facs="#zone_l_93"/>
                   <lb facs="#zone_tr_1_tl_112"/>Alle europäischen Hauptstädte, die sich in Zeiten der Gefahr nicht
                   <lb facs="#zone_tr_1_tl_115"/>auf das Militär verlassen, haben ihre besonderen Organisationen, die
                   <lb facs="#zone_tr_1_tl_116"/>auf die Kontrolle großer Massenbewegungen abgestimmt sind. Der
@@ -1227,6 +1226,7 @@
                   <lb facs="#zone_tr_1_tl_194"/>oder zwei Todesopfer, die es in den verzweifeltesten
                   <lb facs="#zone_tr_1_tl_196"/>Fällen gibt, werden reichlich aufgewogen durch die zahllosen
                   <lb facs="#zone_tr_1_tl_198"/>Menschenleben, die gerüttet werden.</del><add facs="#zone_l_93" xml:id="add-0180-0002" change="#kk-ink-2" rendition="#kurrent">– –</add></subst> Weil man in Wien
+                  <lb facs="#zone_l_93"/>
                   <lb facs="#zone_tr_1_tl_201"/>eine solche Organisation nicht kannte, eine Organisation, die sich
                   <lb facs="#zone_tr_1_tl_204"/>des hochwertigsten technischen Materials und der hochwertigsten
                   <lb facs="#zone_tr_1_tl_207"/>Beamten bedient, darum hat man jetzt die hundert
@@ -1380,14 +1380,14 @@
                </p>
                <p facs="#zone_r_32" rendition="#center">
                   <lb facs="#zone_tr_1_tl_109"/>Für den Mittelstand und das Alter.
-                  <lb facs="#zone_tr_1_tl_114"/>Summa 10.— M. Vortrag: 2307.90 N. Gesamtsumme: 2317.90 M.
                   <lb facs="#zone_l_77"/>5.— M.: M. G., Schöneberg — Amtsgerichtsrat Heck, Regenwalde.
+                  <lb facs="#zone_tr_1_tl_114"/>Summa 10.— M. Vortrag: 2307.90 N. Gesamtsumme: 2317.90 M.
                </p>
                <p facs="#zone_r_33" rendition="#center">
+                  <lb facs="#zone_tr_1_tl_117"/>Für verschiedene Zwecke. (Für Frau S.)
                   <lb facs="#zone_tr_1_tl_120"/>6.— M.: T. Schleich, Berlin. Summa: 6.— M.
                   <lb facs="#zone_tr_1_tl_122"/>(Für Jablonski):
                   <lb facs="#zone_tr_1_tl_126"/>3.— M.: Schelder, Berlin. Summa: 3.— M.
-                  <lb facs="#zone_tr_1_tl_117"/>Für verschiedene Zwecke. (Für Frau S.)
                </p>
                <p facs="#zone_r_34" rendition="#center #bold #crosshead">
                   <lb facs="#zone_l_92"/>Waſſerkataſtrophe im Erzgebirge
