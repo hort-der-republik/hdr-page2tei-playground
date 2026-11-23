@@ -3846,7 +3846,10 @@
       <xsl:for-each select="exsl:node-set($candidatesRTF)/my:pidx">
         <xsl:sort select="number(@size)" data-type="number" order="ascending"/>
         <xsl:sort select="number(@priority)" data-type="number" order="ascending"/>
-        <xsl:sort select="number(@val)" data-type="number" order="ascending"/>
+        <!-- gleich grosse Kandidaten mit gleicher Prioritaet (Bloecke mit 
+          exakt gleichem Bereich): der zuletzt deklarierte ist der INNERSTE 
+          und damit das unmittelbare Elternelement -->
+        <xsl:sort select="number(@val)" data-type="number" order="descending"/> 
         <xsl:if test="position()=1"><my:winner val="{@val}"/></xsl:if>
       </xsl:for-each>
     </xsl:variable>

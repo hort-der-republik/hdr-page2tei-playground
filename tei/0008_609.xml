@@ -4,16 +4,16 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Diplomatische Transkription: 0008_609.jpg</title>
+            <title>Diplomatische Transkription: 609.jpg</title>
          </titleStmt>
          <publicationStmt>
             <p>Automatisch erzeugt aus PAGE-XML (eScriptorium-/Transkribus-Export) per XSLT.</p>
          </publicationStmt>
          <sourceDesc>
             <p>
-              Quelle: 0008_609.jpg.
+              Quelle: 609.jpg.
               Erstellt: 2026-10-02T15:12:26.264+02:00,
-              zuletzt geaendert: 2026-11-13T11:24:57.246+01:00.
+              zuletzt geaendert: 2026-11-13T11:51:09.757+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -28,8 +28,8 @@
       </profileDesc>
    </teiHeader>
    <facsimile>
-      <graphic url="0008_609.jpg" width="5214px" height="6805px"/>
-      <surface lrx="5214" lry="6805" xml:id="surface_0008_609.jpg">
+      <graphic url="609.jpg" width="5214px" height="6805px"/>
+      <surface lrx="5214" lry="6805" xml:id="surface_609.jpg">
          <zone xml:id="zone_r" points="4272,254 4649,254 4649,549 4272,549">
             <zone type="line"
                   xml:id="zone_r_tl_1"
@@ -465,7 +465,7 @@
    </facsimile>
    <text>
       <body>
-         <div facs="#surface_0008_609.jpg">
+         <div facs="#surface_609.jpg">
             <fw facs="#zone_r">
                <lb facs="#zone_r_tl_1"/>1
             </fw>
@@ -522,7 +522,7 @@
                <lb facs="#zone_r_2_tl_12"/>im Angesicht der Wortschande, die wie einst für
                <lb facs="#zone_l_11"/>das Vaterland, nunmehr <metamark function="addition" change="#kk-ink-2" rendition="#kurrent"/><add facs="#zone_r_21" xml:id="add-0609-0003"><lb facs="#zone_l_10"/><metamark function="intervention"><g ref="#intervention"/></metamark> bloß</add> für dessen Hotelgeschäft
                <lb facs="#zone_r_2_tl_14"/>dem Menschenmord zugejauchzt hat; im Milieu
-               <lb facs="#zone_l_27"/>einer <metamark function="addition"/><add facs="#zone_r_4" xml:id="add-0609-0018"><lb facs="#zone_r_4_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> <del>wasklaps<lb facs="#zone_r_4_tl_2"/>Migill<lb facs="#zone_r_4_tl_3"/>entlichen</del><lb facs="#zone_r_4_tl_4"/>behördlichen</add> Geistesgegenwart, die <subst><del>durch die Konsulate</del><add facs="#zone_r_22" change="#kk-ink-1" xml:id="add-0609-0004" rendition="#kurrent"><lb facs="#zone_l_26"/><metamark function="intervention"><g ref="#intervention"/></metamark> <subst><del>im Chaos</del><del subtype="implicit"> </del><add>zu solche<del>r</del>m Schauspiel</add></subst></add></subst>
+               <lb facs="#zone_l_27"/>einer <metamark function="addition"/><add facs="#zone_r_4" xml:id="add-0609-0018"><lb facs="#zone_r_4_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark> <del>wasklaps<lb facs="#zone_r_4_tl_2"/>Migill<lb facs="#zone_r_4_tl_3"/>entlichen</del><lb facs="#zone_r_4_tl_4"/>behördlichen</add> Geistesgegenwart, die <subst><del>durch die Konsulate</del><add facs="#zone_r_22" change="#kk-ink-1" xml:id="add-0609-0004" rendition="#kurrent"><lb facs="#zone_l_26"/><metamark function="intervention"><g ref="#intervention"/></metamark> <subst><del>im Chaos</del><del subtype="implicit"> </del><add>zu solche<subst><del>r</del><add>m</add></subst> Schauspiel</add></subst></add></subst>
                <lb facs="#zone_r_2_tl_16"/>den Fremden köstlichen Frieden, heitere Geselligkeit,
                <lb facs="#zone_r_2_tl_17"/>bezaubernde österreichische Musik, Salzburger Fest
                <lb facs="#zone_r_2_tl_18"/>spiele, den Vollbetrieb eines Freudentags, schöne

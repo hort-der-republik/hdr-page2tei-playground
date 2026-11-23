@@ -188,7 +188,7 @@ Wie normales `subst`, bloß wird als `add` die Region `add` hereingeholt, die de
 
 ### Verschachtelung
 
-Blöcke können sich überlappen/verschachteln (z. B. ein `del` innerhalb eines `seg-transposition`, oder `del`+`add` gemeinsam unter `subst`, oder mehrere `metamark` auf einer Zeile). Das wird als Baum über Zeichenbereiche behandelt: die kleinste andere Angabe, die einen Bereich vollständig umschließt, wird dessen Elternelement; Geschwister werden nach Offset sortiert mit dazwischenliegendem Klartext ausgegeben.
+Blöcke können sich überlappen/verschachteln (z. B. ein `del` innerhalb eines `seg-transposition`, oder `del`+`add` gemeinsam unter `subst`, oder mehrere `metamark` auf einer Zeile). Das wird als Baum über Zeichenbereiche behandelt: die kleinste andere Angabe, die einen Bereich vollständig umschließt, wird dessen Elternelement; haben mehrere Angaben exakt denselben Bereich, gilt die Reihenfolge in `@custom`: die zuerst genannte ist außen, die zuletzt genannte innen, und ein weiterer Block in diesem Bereich hängt am innersten (zuletzt genannten); (davon unberührt bleiben die Sonderregeln für `add`, `gap`/`del` und `undo`/`metamark-add`); Geschwister werden nach Offset sortiert mit dazwischenliegendem Klartext ausgegeben. 
 
 ### Mehrzeilige Läufe
 
