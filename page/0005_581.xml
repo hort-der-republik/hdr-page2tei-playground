@@ -3,12 +3,12 @@
     <Metadata>
         <Creator>prov=READ-COOP:name=PyLaia@TranskribusPlatform:version=2.51.0:model_id=50870:lm=none:date=14_09_2026_14:17</Creator>
         <Created>2026-09-14T12:23:49.012+02:00</Created>
-        <LastChange>2026-11-12T12:07:43.663+01:00</LastChange>
-        <TranskribusMetadata docId="18855842" pageId="127360803" pageNr="5" tsid="309433936" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=LNTKTORFKTNNRQDBKJLULZWA" xmlUrl="https://files.transkribus.eu/Get?id=KUKRFNBVTWAXDFAJBWSPCESB" imageId="108583559"/>
+        <LastChange>2026-11-20T13:31:42.873+01:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="127360803" pageNr="5" tsid="312390870" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=LNTKTORFKTNNRQDBKJLULZWA" xmlUrl="https://files.transkribus.eu/Get?id=HTKOIVBKXRWQXINVXUTHBVBO" imageId="108583559"/>
     </Metadata>
     <Page imageFilename="0005_581.jpg" imageWidth="5198" imageHeight="6817">
         <ReadingOrder>
-            <OrderedGroup id="ro_1794565590147" caption="Regions reading order">
+            <OrderedGroup id="ro_1795178386575" caption="Regions reading order">
                 <RegionRefIndexed index="0" regionRef="r_31"/>
                 <RegionRefIndexed index="1" regionRef="tr_3"/>
                 <RegionRefIndexed index="2" regionRef="r_9"/>
@@ -172,7 +172,7 @@
                     <Unicode>wenn die heilige Einfalt an mir satirisch wird. Denn</Unicode>
                 </TextEquiv>
             </TextLine>
-            <TextLine id="tr_2_tl_14" custom="readingOrder {index:13;} metamark-add {offset:26; length:1;add-id:234;} seg-relocation {offset:45; length:4;id:456; rend:encircled;} metamark-add {offset:50; length:1;add-id:789;}">
+            <TextLine id="tr_2_tl_14" custom="readingOrder {index:13;} metamark-add {offset:26; length:1;add-id:234;} seg-relocation {offset:45; length:4;rendition:encircled; id:456; rend:encircled;} metamark-add {offset:50; length:1;add-id:789;}">
                 <Coords points="1667,2580 1915,2615 2654,2592 2777,2637 3021,2632 3067,2595 3869,2617 3869,2532 3627,2501 1667,2529"/>
                 <Baseline points="1683,2578 1792,2572 1902,2572 2011,2572 2121,2572 2230,2572 2340,2572 2449,2572 2559,2577 2668,2572 2778,2578 2888,2578 2997,2578 3107,2578 3216,2584 3326,2584 3435,2584 3545,2584 3654,2584 3764,2585 3874,2590"/>
                 <TextEquiv>

@@ -1,37 +1,126 @@
 VALIDIERUNGSREPORT
-Erstellt: 2026-11-20 08:38:42
+Erstellt: 2026-11-20 13:57:48
 Schema 1: Projekt-Schema (hdr-documentary-schema.rng)
 Schema 2: TEI-All (tei_all.rng)
 Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
 ==============================================================
 
 ### 0001_108.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 0 Verstoesse
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 16 Verstoesse
+      Zeile 244:103    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 244:103    element "hi" missing required attribute "rend"
+      Zeile 245:93     attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 245:93     element "hi" missing required attribute "rend"
+      Zeile 252:89     attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 252:89     element "hi" missing required attribute "rend"
+      Zeile 253:123    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 253:123    element "hi" missing required attribute "rend"
+      Zeile 266:122    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 266:122    element "hi" missing required attribute "rend"
+      Zeile 272:79     attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 272:79     element "hi" missing required attribute "rend"
+      Zeile 272:127    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 272:127    element "mod" missing required attribute "rend"
+      Zeile 272:237    attribute "rendition" not allowed here; expected attribute "corresp", "rend", "target" or "xml:id"
+      Zeile 301:150    attribute "rendition" not allowed here; expected attribute "corresp", "rend", "target" or "xml:id"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0002_180.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 3 Verstoesse
-      Zeile 1289:84    element "head" missing required attribute "change"
-      Zeile 1292:77    element "head" missing required attribute "change"
-      Zeile 1426:85    element "head" missing required attribute "change"
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 59 Verstoesse
+      Zeile 1131:69    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1131:69    element "hi" missing required attribute "rend"
+      Zeile 1149:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1150:90    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1150:90    element "hi" missing required attribute "rend"
+      Zeile 1150:137   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1150:137   element "mod" missing required attribute "rend"
+      Zeile 1155:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1157:117   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1157:117   element "hi" missing required attribute "rend"
+      Zeile 1157:164   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1157:164   element "mod" missing required attribute "rend"
+      Zeile 1158:95    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1158:95    element "mod" missing required attribute "rend"
+      Zeile 1158:127   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1158:127   element "hi" missing required attribute "rend"
+      Zeile 1159:127   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1159:127   element "hi" missing required attribute "rend"
+      Zeile 1159:174   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1159:174   element "mod" missing required attribute "rend"
+      Zeile 1161:80    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1161:80    element "hi" missing required attribute "rend"
+      Zeile 1165:92    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1165:92    element "hi" missing required attribute "rend"
+      Zeile 1166:94    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1166:94    element "hi" missing required attribute "rend"
+      Zeile 1170:130   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1170:130   element "hi" missing required attribute "rend"
+      Zeile 1172:84    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1172:84    element "hi" missing required attribute "rend"
+      Zeile 1175:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1177:118   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1177:118   element "hi" missing required attribute "rend"
+      Zeile 1177:146   attribute "rendition" not allowed here; expected attribute "change", "rend" or "xml:id"
+      Zeile 1177:146   element "mod" missing required attribute "rend"
+      Zeile 1182:114   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1182:114   element "hi" missing required attribute "rend"
+      Zeile 1185:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1235:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1237:114   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1237:114   element "hi" missing required attribute "rend"
+      Zeile 1237:161   attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1237:161   element "mod" missing required attribute "rend"
+      Zeile 1238:90    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1238:90    element "hi" missing required attribute "rend"
+      Zeile 1246:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1258:84    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1301:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1320:71    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1320:71    element "hi" missing required attribute "rend"
+      Zeile 1345:85    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1349:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1355:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1363:85    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1381:86    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1395:89    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1411:89    value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u [...]
+      Zeile 1447:66    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 1447:66    element "hi" missing required attribute "rend"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0003_406.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 3 Verstoesse
-      Zeile 293:130    value of attribute "function" is invalid; must be equal to "add", "addition", "deletion", "font", "insertion", "intervention", "kerning", "letter-spacing", "line-spacing", "no-spacing", "paragraph", " [...]
-      Zeile 296:130    value of attribute "function" is invalid; must be equal to "add", "addition", "deletion", "font", "insertion", "intervention", "kerning", "letter-spacing", "line-spacing", "no-spacing", "paragraph", " [...]
-      Zeile 322:115    value of attribute "function" is invalid; must be equal to "add", "addition", "deletion", "font", "insertion", "intervention", "kerning", "letter-spacing", "line-spacing", "no-spacing", "paragraph", " [...]
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 19 Verstoesse
+      Zeile 283:212    attribute "rendition" not allowed here; expected attribute "corresp", "rend", "target" or "xml:id"
+      Zeile 283:452    attribute "rendition" not allowed here; expected attribute "rend"
+      Zeile 283:452    element "mod" missing required attribute "rend"
+      Zeile 302:113    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 302:113    element "hi" missing required attribute "rend"
+      Zeile 305:101    attribute "rendition" not allowed here; expected attribute "change" or "rend"
+      Zeile 305:101    element "mod" missing required attribute "rend"
+      Zeile 309:152    attribute "rendition" not allowed here; expected attribute "change" or "rend"
+      Zeile 309:152    element "mod" missing required attribute "rend"
+      Zeile 310:98     attribute "rendition" not allowed here; expected attribute "change" or "rend"
+      Zeile 310:98     element "mod" missing required attribute "rend"
+      Zeile 311:155    attribute "rendition" not allowed here; expected attribute "change" or "rend"
+      Zeile 311:155    element "mod" missing required attribute "rend"
+      Zeile 312:109    attribute "rendition" not allowed here; expected attribute "change" or "rend"
+      Zeile 312:109    element "mod" missing required attribute "rend"
+      Zeile 346:113    attribute "rendition" not allowed here; expected attribute "change" or "rend"
+      Zeile 346:113    element "mod" missing required attribute "rend"
+      Zeile 353:113    attribute "rendition" not allowed here; expected attribute "change" or "rend"
+      Zeile 353:113    element "mod" missing required attribute "rend"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
-  --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 1
-      WARNUNG: Behelfs-ID "zui" ist mehrfach vergeben: Region r_17 (add); Zeile r_3_tl_1 (metamark-add-synth, id)
+  --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0004_539.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 0 Verstoesse
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 2 Verstoesse
+      Zeile 212:182    attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 212:182    element "hi" missing required attribute "rend"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
@@ -43,8 +132,12 @@ Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0006_459.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 1 Verstoesse
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 5 Verstoesse
       Zeile 232:40     element "lg" missing required attribute "rendition"
+      Zeile 239:73     attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 239:73     element "hi" missing required attribute "rend"
+      Zeile 244:69     attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 244:69     element "hi" missing required attribute "rend"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
   --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 1
@@ -57,31 +150,41 @@ Verweis-Pruefung: ins Leere zeigende Behelfs-IDs
   --- ins Leere zeigende Verweise / Behelfs-IDs: 0
 
 ### 0008_609.xml
-  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 0 Verstoesse
+  --- gegen Projekt-Schema (hdr-documentary-schema.rng): 4 Verstoesse
+      Zeile 499:91     attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+      Zeile 499:91     element "hi" missing required attribute "rend"
+      Zeile 554:654    attribute "rendition" not allowed here; expected attribute "change", "corresp", "rend", "target" or "xml:id"
+      Zeile 555:190    attribute "rendition" not allowed here; expected attribute "change", "corresp", "rend", "target" or "xml:id"
   --- gegen TEI-All (tei_all.rng): 0 Verstoesse
-  --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 1
-      WARNUNG: Behelfs-ID "fghjfghj" ist mehrfach vergeben: Region r_28 (add); Zeile r_2_tl_44 (subst-del-synth, subst-id)
+  --- Warnungen der Transformation (z.B. doppelt vergebene Behelfs-IDs): 0
   --- ins Leere zeigende Verweise / Behelfs-IDs: 1
       Zeile 498        target="0003_406.xml#add-0003-0004"  ->  ID add-0003-0004 existiert in 0003_406.xml nicht
 
 ==============================================================
 HAEUFIGSTE MELDUNGEN - Projekt-Schema (hdr-documentary-schema.rng)
-  3x  value of attribute "function" is invalid; must be equal to "add", "addition", "deletion", "font", "insertion", "intervention", "kerning", "letter-spacing", "line-spacing", "no-spacing", "paragraph", "
-  3x  element "head" missing required attribute "change"
+  33x  attribute "rendition" not allowed here; expected attribute "rend" or "xml:id"
+  27x  element "hi" missing required attribute "rend"
+  15x  value of attribute "rendition" is invalid; token "#black-letter" invalid; must be equal to "#antiqua", "#bold", "#center", "#crosshead", "#handwritten", "#indent", "#kurrent", "#latin", "#left" or "#u
+  15x  element "mod" missing required attribute "rend"
+  7x  attribute "rendition" not allowed here; expected attribute "change" or "rend"
+  3x  attribute "rendition" not allowed here; expected attribute "corresp", "rend", "target" or "xml:id"
+  2x  attribute "rendition" not allowed here; expected attribute "change", "corresp", "rend", "target" or "xml:id"
   1x  element "lg" missing required attribute "rendition"
+  1x  attribute "rendition" not allowed here; expected attribute "rend"
+  1x  attribute "rendition" not allowed here; expected attribute "change", "rend" or "xml:id"
 
 HAEUFIGSTE MELDUNGEN - TEI-All (tei_all.rng)
   keine
 
 ZUSAMMENFASSUNG (Verstoesse je Datei; in Klammern: Differenz zum letzten Durchgang)
   Datei                     Projekt        TEI-All       Verweise
-  0001_108.xml              0 (±0)        0 (±0)        0 (±0)
-  0002_180.xml              3 (±0)        0 (±0)        0 (±0)
-  0003_406.xml              3 (±0)        0 (±0)        0 (±0)
-  0004_539.xml              0 (±0)        0 (±0)        0 (±0)
+  0001_108.xml             16 (+16)        0 (±0)        0 (±0)
+  0002_180.xml             59 (+44)        0 (±0)        0 (±0)
+  0003_406.xml             19 (+19)        0 (±0)        0 (±0)
+  0004_539.xml               2 (+2)        0 (±0)        0 (±0)
   0005_581.xml              0 (±0)        0 (±0)        0 (±0)
-  0006_459.xml              1 (±0)        0 (±0)        1 (±0)
+  0006_459.xml               5 (+4)        0 (±0)        1 (±0)
   0007_603.xml              0 (±0)        0 (±0)        0 (±0)
-  0008_609.xml              0 (±0)        0 (±0)        1 (±0)
+  0008_609.xml               4 (+4)        0 (±0)        1 (±0)
   ------------------------------------------------------------
-  Summe                     7 (±0)        0 (±0)        2 (±0)
+  Summe                   105 (+89)        0 (±0)        2 (±0)

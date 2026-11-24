@@ -13,7 +13,7 @@
             <p>
               Quelle: 0003_406.jpg.
               Erstellt: 2026-09-14T12:23:48.771+02:00,
-              zuletzt geaendert: 2026-11-12T11:43:19.017+01:00.
+              zuletzt geaendert: 2026-11-20T13:29:50.066+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -280,7 +280,7 @@
                   <lb facs="#zone_l_4"/><g ref="#intervention"/><g ref="#deleatur"/>
                </metamark>
                <p change="#fp-1" facs="#zone_r" rendition="#indent #antiqua">
-                  <lb facs="#zone_l_7"/><seg xml:id="seg-0406-0001" type="relocation" change="#kk-pencil-1"><undo spanTo="#anchor-0406-0001" change="#kk-pencil-2" rend="wavy-line" target="#seg-0406-0001"/>Aus dem Bericht der Untersuchungskommission des Gemeinderates:<anchor type="undo" xml:id="anchor-0406-0001"/><del xml:id="del-0406-0001" change="#kk-ink-1">Aus dem</del> <mod xml:id="mod-0406-0001" rend="underline" change="#kk-ink-1">Bericht der Untersuchungskommission des Gemeinderates</mod>:</seg>
+                  <lb facs="#zone_l_7"/><seg xml:id="seg-0406-0001" type="relocation" change="#kk-pencil-1"><undo spanTo="#anchor-0406-0001" change="#kk-pencil-2" rendition="#wavy-line" target="#seg-0406-0001"/>Aus dem Bericht der Untersuchungskommission des Gemeinderates:<anchor type="undo" xml:id="anchor-0406-0001"/><del xml:id="del-0406-0001" change="#kk-ink-1">Aus dem</del> <mod xml:id="mod-0406-0001" change="#kk-ink-1" rendition="#underline">Bericht der Untersuchungskommission des Gemeinderates</mod>:</seg>
                </p>
             </div>
             <div facs="#surface_r_24">
@@ -290,26 +290,26 @@
                <metamark xml:id="metamark-0406-0002" facs="#zone_r_13" function="letter-spacing" target="#mod-0406-0002">
                   <lb facs="#zone_l_6"/><g ref="#intervention"/>spa!
                </metamark>
-               <metamark xml:id="metamark-0406-0003" facs="#zone_r_14" function="spacing" target="#mod-0406-0003 #mod-0406-0004">
+               <metamark xml:id="metamark-0406-0003" facs="#zone_r_14" function="letter-spacing" target="#mod-0406-0003 #mod-0406-0004">
                   <lb facs="#zone_l_8"/><g ref="#intervention"/>spa!
                </metamark>
-               <metamark xml:id="metamark-0406-0004" facs="#zone_r_15" function="spacing" target="#mod-0406-0005 #mod-0406-0006">
+               <metamark xml:id="metamark-0406-0004" facs="#zone_r_15" function="letter-spacing" target="#mod-0406-0005 #mod-0406-0006">
                   <lb facs="#zone_l_9"/><g ref="#intervention"/>spa!
                </metamark>
                <p change="#fp-1" facs="#zone_r_1" rendition="#indent #antiqua">
                   <lb facs="#zone_l_18"/>– – Dieser Darstellung der Polizeidirektion stehen Aussagen
                   <lb facs="#zone_r_1_tl_2"/>entgegen, die feststellen, daß es nach allerdings sehr großen Anstren<pc force="weak">-</pc>
-                  <lb facs="#zone_r_1_tl_3" break="no"/>gungen des Schutzbundes <hi rend="letter-spacing">bereits gelungen</hi> war, der Feuerwehr
+                  <lb facs="#zone_r_1_tl_3" break="no"/>gungen des Schutzbundes <hi rendition="#letter-spacing">bereits gelungen</hi> war, der Feuerwehr
                   <lb facs="#zone_r_1_tl_4"/>den Weg zu bahnen, und eben mit der Löscharbeit hätte begonnen
                   <lb facs="#zone_r_1_tl_5"/>werden können, als die erste Salve krachte. Der Löschwagen
-                  <lb facs="#zone_r_1_tl_6"/>der <mod xml:id="mod-0406-0002" rend="underline">Feuerwehr</mod> wurde selbst beschossen und zeigte Einschläge.
+                  <lb facs="#zone_r_1_tl_6"/>der <mod xml:id="mod-0406-0002" rendition="#underline">Feuerwehr</mod> wurde selbst beschossen und zeigte Einschläge.
                   <lb facs="#zone_r_1_tl_7"/>Was die zweite Begründung für das Schießen anlangt, daß die Gefahr
                   <lb facs="#zone_r_1_tl_8"/>des Verbrennens der Wachleute im Justizpalast nicht anders abge<pc force="weak">-</pc>
                   <lb facs="#zone_r_1_tl_9" break="no"/>wehrt werden konnte, so steht dem die entschiedene Aussage von
-                  <lb facs="#zone_r_1_tl_10"/>allem des Generals Körner entgegen, daß die Wachleute <mod xml:id="mod-0406-0003" rend="underline">bereits in</mod>
-                  <lb facs="#zone_r_1_tl_11"/><mod xml:id="mod-0406-0004" rend="underline">Sicherheit</mod> gebracht waren, als das Schießen begann. Er selbs
-                  <lb facs="#zone_r_1_tl_12"/>hat es dem Kommandanten einer schießenden Wacheabteilung <mod xml:id="mod-0406-0005" rend="underline">zuge<pc force="weak">-</pc></mod>
-                  <lb facs="#zone_r_1_tl_13" break="no"/><mod xml:id="mod-0406-0006" rend="underline">tufen</mod>, nachdem eine Salve vorüber war.<metamark function="addition"/><add facs="#zone_r_16" xml:id="add-0406-0001"><lb facs="#zone_l_10"/><metamark function="intervention"><g ref="#intervention"/></metamark>– –</add>
+                  <lb facs="#zone_r_1_tl_10"/>allem des Generals Körner entgegen, daß die Wachleute <mod xml:id="mod-0406-0003" rendition="#underline">bereits in</mod>
+                  <lb facs="#zone_r_1_tl_11"/><mod xml:id="mod-0406-0004" rendition="#underline">Sicherheit</mod> gebracht waren, als das Schießen begann. Er selbs
+                  <lb facs="#zone_r_1_tl_12"/>hat es dem Kommandanten einer schießenden Wacheabteilung <mod xml:id="mod-0406-0005" rendition="#underline">zuge<pc force="weak">-</pc></mod>
+                  <lb facs="#zone_r_1_tl_13" break="no"/><mod xml:id="mod-0406-0006" rendition="#underline">tufen</mod>, nachdem eine Salve vorüber war.<metamark function="addition"/><add facs="#zone_r_16" xml:id="add-0406-0001"><lb facs="#zone_l_10"/><metamark function="intervention"><g ref="#intervention"/></metamark>– –</add>
                </p>
                <p facs="#zone_r_2" rendition="#indent">
                   <lb facs="#zone_l_17"/>
@@ -319,17 +319,17 @@
                <metamark xml:id="metamark-0406-0005" facs="#zone_r_20" function="no-spacing" target="#mod-0406-0007">
                   <lb facs="#zone_l_14"/><g ref="#intervention"/>nicht spa!
                </metamark>
-               <metamark xml:id="metamark-0406-0006" facs="#zone_r_21" function="spacing" target="#mod-0406-0008">
+               <metamark xml:id="metamark-0406-0006" facs="#zone_r_21" function="letter-spacing" target="#mod-0406-0008">
                   <lb facs="#zone_l_15"/><g ref="#intervention"/>spa
                </metamark>
                <metamark xml:id="metamark-0406-0007" facs="#zone_r_22" function="line-spacing" target="#p-0406-0001">
                   <lb facs="#zone_l_16"/><g ref="#intervention"/>
                </metamark>
-               <metamark xml:id="metamark-0406-0009" facs="#zone_r_18" function="kerning" target="#metamark-0406-0010">
+               <metamark xml:id="metamark-0406-0009" facs="#zone_r_18" function="kerning" target="#metamark-0406-0011">
                   <lb facs="#zone_l_12"/><g ref="#kerning"/>
                </metamark>
                <p change="#fp-1" facs="#zone_r_3" rendition="#indent #antiqua">
-                  <lb facs="#zone_r_3_tl_1"/><metamark function="addition"/><add facs="#zone_r_17" xml:id="add-0406-0002"><lb facs="#zone_l_11"/><metamark function="intervention"><g ref="#intervention"/></metamark> – –</add>General Körner verwies in seiner Aussage auf das Bild
+                  <lb facs="#zone_r_3_tl_1"/><metamark function="addition" xml:id="metamark-0406-0010"/><add facs="#zone_r_17" xml:id="add-0406-0002"><lb facs="#zone_l_11"/><metamark function="intervention"><g ref="#intervention"/></metamark> – –</add>General Körner verwies in seiner Aussage auf das Bild
                   <lb facs="#zone_r_3_tl_2"/>einer schießenden Wacheabteilung, das in der »Woche« vom 30. Juli
                   <lb facs="#zone_r_3_tl_3"/>abgedruckt war, und schilderte, was auf diesem Bild zu sehen ist:
                   <lb facs="#zone_r_3_tl_4"/>Da steht ein Rudel von zwanzig Mann, wobei ein Soldat von jedem
@@ -341,16 +341,16 @@
                   <lb facs="#zone_r_4_tl_2"/>andere so wie eine Jagdflinte; der dritte hat das Gewehr fertig; der
                   <lb facs="#zone_r_4_tl_3"/>vierte hat den Lauf nach aufwärts. Der fünfte hat es am Bauch und
                   <lb facs="#zone_r_4_tl_4"/>beim Fuß, zwei Rückwärtige haben es geschultert, der rechts rück<pc force="weak">-</pc>
-                  <lb facs="#zone_r_4_tl_5" break="no"/>wärts hä<metamark xml:id="metamark-0406-0010" function="kerning" change="#pr-pencil-1" target="#metamark-0406-0010" rendition="#latin"><g ref="#intervention"/></metamark>lt den Lauf genau auf den Vordermann. Das heißt man
+                  <lb facs="#zone_r_4_tl_5" break="no"/>wärts hä<metamark xml:id="metamark-0406-0011" function="kerning" change="#pr-pencil-1" target="#metamark-0406-0011" rendition="#latin"><g ref="#intervention"/></metamark>lt den Lauf genau auf den Vordermann. Das heißt man
                   <lb facs="#zone_r_4_tl_6"/>Fertignehmen. Das Fertignehmen sieht man, aber daß keine
-                  <lb facs="#zone_r_4_tl_7"/>Menge vor ihnen <mod xml:id="mod-0406-0007" rend="underline">ist</mod>, sieht man auf den ersten Blick. Warum
+                  <lb facs="#zone_r_4_tl_7"/>Menge vor ihnen <mod xml:id="mod-0406-0007" rendition="#underline">ist</mod>, sieht man auf den ersten Blick. Warum
                   <lb facs="#zone_r_4_tl_8"/>die Leute fertig nehmen, ist unerklärlich.
                </p>
                <p xml:id="p-0406-0001" change="#fp-1" facs="#zone_r_5" rendition="#indent #antiqua">
                   <lb facs="#zone_r_5_tl_1"/>lch habe es später beim Herübergehen gesehen, wie schon
                   <lb facs="#zone_r_5_tl_2"/>die Menge gelaufen ist, und hatte genau denselben Eindruck: das ist
                   <lb facs="#zone_r_5_tl_3"/>e<subst change="#pr-pencil-1"><del>e</del><add facs="#zone_r_19" change="#pr-pencil-1" xml:id="add-0406-0003" rendition="#latin"><lb facs="#zone_l_13"/><metamark function="intervention"><g ref="#intervention"/></metamark>i</add></subst>ne Horde, ein Rudel, und ich habe mich vor hingestellt und habe
-                  <lb facs="#zone_r_5_tl_4"/>gesagt, das ist <mod xml:id="mod-0406-0008" rend="underline">ein Wahnsinn</mod>. ... Wenn man zwanzig Mann so
+                  <lb facs="#zone_r_5_tl_4"/>gesagt, das ist <mod xml:id="mod-0406-0008" rendition="#underline">ein Wahnsinn</mod>. ... Wenn man zwanzig Mann so
                   <lb facs="#zone_r_5_tl_5"/>einsetzt, muß man sie in zwei Glieder ordnen, sie müßten Bajonett
                   <lb facs="#zone_r_5_tl_6"/>auf haben und und ordentlich vormarschieren, dann würde die
                   <lb facs="#zone_r_5_tl_7"/>Menge ohne Schuß laufen. Aber das war ein Rudel, das

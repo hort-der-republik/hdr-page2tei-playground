@@ -13,7 +13,7 @@
             <p>
               Quelle: 0001_108.jpg.
               Erstellt: 2026-09-14T12:23:48.548+02:00,
-              zuletzt geaendert: 2026-11-13T09:44:21.287+01:00.
+              zuletzt geaendert: 2026-11-20T13:28:03.343+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -241,16 +241,16 @@
                      <lb facs="#zone_tr_1_tl_2"/><delSpan xml:id="del-0108-0001" type="deselection" change="#kk-ink-2" spanTo="#anchor-0108-0003"/><gap reason="cut" extent="5"/> <gap reason="cut" extent="3"/> <gap reason="cut" extent="5"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="13"/> <gap reason="cut" extent="2"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="4"/> <gap reason="cut" extent="6"/>
                      <lb facs="#zone_tr_1_tl_3"/>einzelne von ihnen eine <choice resp="#edHdR"><sic>lgute</sic><corr type="emen">gute</corr></choice> Anklage gegen die uner<pc force="weak">⸗</pc>
                      <lb facs="#zone_tr_1_tl_4" break="no"/>hörte Unmenſchlichkeit der Polizei an dem Unglückstag
-                     <lb facs="#zone_tr_1_tl_5"/>iſt. Wie die Polizei <hi rend="letter-spacing">auf ganz unſchuldige Per<pc force="weak">⸗</pc></hi>
-                     <lb facs="#zone_tr_1_tl_6" break="no"/><hi rend="letter-spacing">ſonen Jagd gemacht</hi> hat, beſchreibt folgender Brief:
+                     <lb facs="#zone_tr_1_tl_5"/>iſt. Wie die Polizei <hi rendition="#letter-spacing">auf ganz unſchuldige Per<pc force="weak">⸗</pc></hi>
+                     <lb facs="#zone_tr_1_tl_6" break="no"/><hi rendition="#letter-spacing">ſonen Jagd gemacht</hi> hat, beſchreibt folgender Brief:
                      <quote>
                         <p facs="#zone_r_7" rendition="#indent #left">
                            <lb facs="#zone_tr_1_tl_7"/>Unter den Augenblicksbildern, die Sie in den letzten
                            <lb facs="#zone_tr_1_tl_8"/>Tagen von den blutigen Ereigniſſen gegeben haben — und
                            <lb facs="#zone_tr_1_tl_9"/>die jene bedankte „maßvolle Pflichterfüllung“ der Wiener
                            <lb facs="#zone_tr_1_tl_10"/>Polizei ins rechte Licht rücken —, blieb unerwähnt der
-                           <lb facs="#zone_tr_1_tl_11"/><hi rend="letter-spacing">grauenhafte Ueberfall</hi>, den die Polizei Freitag
-                           <lb facs="#zone_tr_1_tl_12"/>nach ½5 Uhr auf die Paſſanten des <hi rend="letter-spacing">Burgringes</hi> voll<pc force="weak">⸗</pc>
+                           <lb facs="#zone_tr_1_tl_11"/><hi rendition="#letter-spacing">grauenhafte Ueberfall</hi>, den die Polizei Freitag
+                           <lb facs="#zone_tr_1_tl_12"/>nach ½5 Uhr auf die Paſſanten des <hi rendition="#letter-spacing">Burgringes</hi> voll<pc force="weak">⸗</pc>
                            <lb facs="#zone_tr_1_tl_13" break="no"/>führte, die hier — teils zufällig, teils aus Neugier — die
                            <lb facs="#zone_tr_1_tl_14"/>Bänke beſetzt hielten, in der Allee wandelten oder umher
                            <lb facs="#zone_tr_1_tl_15"/>ſtanden, ohne ſich bis zur Bellaria vorzuwagen, wo indeſſen
@@ -263,13 +263,13 @@
                            <lb facs="#zone_tr_1_tl_22"/>Eingänge waren geſchloſſen, Flucht unmöglich.
                         </p>
                         <p xml:id="p-0108-0001" facs="#zone_r_8" rendition="#indent #left">
-                           <lb facs="#zone_tr_1_tl_23"/>Plötzlich fahren hinter uns zwei <hi rend="letter-spacing">Mannſchafts<pc force="weak">⸗</pc>
+                           <lb facs="#zone_tr_1_tl_23"/>Plötzlich fahren hinter uns zwei <hi rendition="#letter-spacing">Mannſchafts<pc force="weak">⸗</pc>
                            <lb facs="#zone_tr_1_tl_24" break="no"/>autos</hi> auf, werfen etwa dreißig Mann Polizei aus, die
                            <lb facs="#zone_tr_1_tl_25"/>das verängſtigte Häuflein Menſchen — unter ihnen mehrere
                            <lb facs="#zone_tr_1_tl_26"/>Frauen mit Kindern — aus dem Unerwarteten anſpringen.
                         </p>
                         <p facs="#zone_r_9" rendition="#indent #left">
-                           <lb facs="#zone_tr_1_tl_27"/><hi rend="bold">K<mod rend="underline" change="#kk-ink-4">eine Warnung, keine Aufforderung, <undo spanTo="#anchor-0108-0002" change="#kk-ink-5" rend="wavy-line"/>keine Ver<pc force="weak">⸗</pc>
+                           <lb facs="#zone_tr_1_tl_27"/><hi rendition="#bold">K<mod change="#kk-ink-4" rendition="#underline">eine Warnung, keine Aufforderung, <undo spanTo="#anchor-0108-0002" change="#kk-ink-5" rendition="#wavy-line"/>keine Ver<pc force="weak">⸗</pc>
                            <lb facs="#zone_tr_1_tl_28" break="no"/>haftung,<anchor type="undo" xml:id="anchor-0108-0002"/> nur ein Kommando: „Feuer</mod>!“</hi> Zwei Salven
                            <lb facs="#zone_tr_1_tl_29"/>krachen, ich ſehe, wie eine Bürgersfrau, die ſich hinter ihrem
                            <lb facs="#zone_tr_1_tl_30"/>aufgeſpannten Regenſchirm zu decken verſucht — Tragikomik
@@ -298,7 +298,7 @@
                   <lb facs="#zone_l_1"/><del change="#kk-ink-2">29. Juli</del>
                </metamark>
                <metamark xml:id="metamark-0108-0003" facs="#zone_r_15" change="#kk-pencil-2" function="selection-start" target="#p-0108-0001" rendition="#kurrent">
-                  <lb facs="#zone_l_4"/><undo spanTo="#anchor-0108-0001" change="#kk-pencil-4" rend="strike-out" target="#metamark-0108-0003"/><g ref="#intervention"/><anchor type="undo" xml:id="anchor-0108-0001"/>
+                  <lb facs="#zone_l_4"/><undo spanTo="#anchor-0108-0001" change="#kk-pencil-4" rendition="#strike-out" target="#metamark-0108-0003"/><g ref="#intervention"/><anchor type="undo" xml:id="anchor-0108-0001"/>
                </metamark>
                <metamark xml:id="metamark-0108-0004" facs="#zone_r_14" change="#kk-pencil-1" rendition="#kurrent">
                   <lb facs="#zone_l_2"/>26.)

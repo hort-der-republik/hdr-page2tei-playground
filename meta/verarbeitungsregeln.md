@@ -70,8 +70,8 @@ In allen anderen Fällen gilt:
 - `paragraph` (ev. mit `part` und anderen Attributen) → `<p>`, Attribute und Werte werden 1:1 übernommen, außer: `hand-medium`, das ignoriert wird; single-p-article – bei Wert "y" erhält das den p umfassende `<div>´ den `@type` "article".
 - `paragraph-indent`– genauso wie `paragraph`, aber in der rendition wird automatisch "#indent" ergänzt (wenn das händisch auch ergänzt wird, Wert nur einmal setzen)
 - `masthead` wird zu `<div type="masthead">`, darin die anderen Zonen genestet
-- `byline`wird zu `<byline>`, rendition wird übernommen, id als xml:id
-- `dateline`wird zu `<dateline>`, rendition wird übernommen, id als xml:id
+- `byline` wird zu `<byline>`, rendition wird übernommen, id als xml:id; `change` aus der Region wird als `@change` übernommen und liefert wie bei den anderen Elementen die change-abhängige `rendition` (Abschnitt 9, z. B. `#black-letter`)
+- `dateline` wird zu `<dateline>`, rendition wird übernommen, id als xml:id; `change` aus der Region wird als `@change` übernommen und liefert wie bei den anderen Elementen die change-abhängige `rendition` (Abschnitt 9, z. B. `#black-letter`)
 - alles andere (ohne Typangabe u. ä.) → `<p>`
 
 
@@ -106,20 +106,22 @@ Zeichenbasierte Blöcke in `@custom` von `<TextLine>` (offset/length relativ zum
 
 ### Einfache Abbildungen
 
-- `spacing` → `<hi rend="letter-spacing">`
-- `hi-spacing` → `<hi rend="letter-spacing">`
-- `hi-bold` → `<hi rend="bold">`
-- `hi-underline` → `<hi rend="underline">`
-- `hi-latin` → `<hi rend="latin">`
-- `hi` mit Attr. `rend` →  übernehmen als `<hi rend="[rend]">`
-- `mod-underline` → `<mod rend="underline">` (siehe Hinweis unten)
+**Zum Attribut `rendition` in den Inline-Blöcken (gilt für `hi`, `mod`, `seg`, `undo` usw.):** Der Block-Schlüssel `rendition` wird als TEI-Attribut `@rendition` ausgegeben, **jeder** Wert mit vorangestelltem `#` (Pointer auf die rendition-Definition). Mehrere Werte sind durch `\u0020` oder Leerzeichen getrennt; ein bereits vorhandenes `#` wird nicht verdoppelt. Der frühere Schlüssel `rend` wird **nicht mehr gelesen** (und nicht mehr als `@rend` ausgegeben).
+
+- `spacing` → `<hi rendition="#letter-spacing">`
+- `hi-spacing` → `<hi rendition="#letter-spacing">`
+- `hi-bold` → `<hi rendition="#bold">`
+- `hi-underline` → `<hi rendition="#underline">`
+- `hi-latin` → `<hi rendition="#latin">`
+- `hi` mit Attr. `rendition` →  übernehmen als `<hi rendition="#[rendition]">`
+- `mod-underline` → `<mod rendition="#underline">` (siehe Hinweis unten)
 - `del` (mit cat) → `<del type="...">`; wenn mit id und next > stattdessen zu Beginn des Textknotens ein delSpan, nach dem Textknoten einen `<anchor>`  setzen (in delSpan und im `<anchor>` selben type übernehmen, target zeigt auf anchor-id, diese nach Schema s.u. vergeben)
 - `deselection` → `<del type="deselection">`; wenn mit id und next > stattdessen zu Beginn des Textknotens ein delSpan, nach dem Textknoten einen `<anchor>`  setzen (in delSpan und im `<anchor>` selben type übernehmen, target zeigt auf anchor-id, diese nach Schema s.u. vergeben)
 Wenn del oder deselection über id/next verbunden sind, aber unterschiedliche change-Werte haben, wird im delSpan der des ersten übernommen, der zweite entfällt.
-- `mod` → `<mod rend="...">` (rend aus dem Block, wenn angegeben, sonst Default `underline`)
-- `seg` (mit cat) → `<seg type="...">`; rend übernehmen, id siehe Behelfs-ids
-- `seg-relocation` → `<seg type="relocation">`; rend übernehmen, id siehe Behelfs-ids
-- `seg-transposition` → `<seg type="transposition">`; `subcat` → `@subtype`; rend übernehmen, wenn keines eingetragen ist: standardmäßig "transposition-sign"; id siehe Behelfs-ids
+- `mod` → `<mod rendition="...">` (rendition aus dem Block, wenn angegeben, sonst Default `#underline`)
+- `seg` (mit cat) → `<seg type="...">`; rendition übernehmen, id siehe Behelfs-ids
+- `seg-relocation` → `<seg type="relocation">`; rendition übernehmen, id siehe Behelfs-ids
+- `seg-transposition` → `<seg type="transposition">`; `subcat` → `@subtype`; rendition übernehmen, wenn keine eingetragen ist: standardmäßig `#transposition-sign`; id siehe Behelfs-ids
 - `gap` (mit reason/extent) → `<gap reason="..." extent="...">`
 - `gap-cut` → `<gap reason="cut" extent="[Zahl der "#" im gap]"/>`
 - `gap-ill` → `<gap reason="illegible" extent="[Zahl der "#" im gap]"/>`
@@ -150,7 +152,7 @@ Wird zu zwei Elementen, die vor und nach dem Inhalt des Textknotens des ursprün
 - `id` wird generiert wie in Abschnitt 8.
 - **`continued:true`:** Setzt sich ein `undo` mit `continued:true` auf der nächsten Zeile (bei `offset:0`) mit einem weiteren `undo`-Block fort, bilden diese Stücke **ein** Paar: `<undo>` nur am Anfang des ersten Stücks, `<anchor>` nur am Ende des letzten (Attribute und `id` des Paars vom ersten Stück). Die anchor-Nummer zählt je Paar, nicht je Stück.
 - **Gleicher Bereich wie `metamark-add`:** Fällt ein `undo` exakt mit einer `metamark-add` zusammen, umschließt das `undo` die `metamark` samt dem eingefügten `add`: `<undo spanTo="#a"/><metamark function="addition"/><add>…</add><anchor type="undo" xml:id="a"/>`.
-- Das Attribut `rend` wird zu `@rend`, `target` zu `@target` und `corresp` zu `@corresp`, Wert jeweils identisch; in `target` und `corresp` steht eine Behelfs-ID, die nach Abschnitt 8 ersetzt wird, hier und im Ausgangs-Element.
+- Das Attribut `rendition` wird zu `@rendition` (jeder Wert mit `#` davor, z. B. `rendition:wavy-line` → `rendition="#wavy-line"`), `target` zu `@target` und `corresp` zu `@corresp`, Wert jeweils identisch (außer dem `#` bei `rendition`); in `target` und `corresp` steht eine Behelfs-ID, die nach Abschnitt 8 ersetzt wird, hier und im Ausgangs-Element.
 
 ### `metamark-add` mit `add-id`
 

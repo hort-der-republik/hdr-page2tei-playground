@@ -3,12 +3,12 @@
     <Metadata>
         <Creator>Transkribus</Creator>
         <Created>2026-09-14T12:23:48.877+02:00</Created>
-        <LastChange>2026-11-13T09:10:01.382+01:00</LastChange>
-        <TranskribusMetadata docId="18855842" pageId="127360802" pageNr="4" tsid="309779968" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=OOWTVGUKTNQSJDVHWOYKJMMD" xmlUrl="https://files.transkribus.eu/Get?id=LGCQIQRCBIYNKEZRVSOMAWQD" imageId="108583558"/>
+        <LastChange>2026-11-20T13:31:04.253+01:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="127360802" pageNr="4" tsid="312390490" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=OOWTVGUKTNQSJDVHWOYKJMMD" xmlUrl="https://files.transkribus.eu/Get?id=GHMBFKVFERXWCAMNVAZDEUTC" imageId="108583558"/>
     </Metadata>
     <Page imageFilename="0004_539.jpg" imageWidth="2758" imageHeight="4715">
         <ReadingOrder>
-            <OrderedGroup id="ro_1794565590120" caption="Regions reading order">
+            <OrderedGroup id="ro_1795178386502" caption="Regions reading order">
                 <RegionRefIndexed index="0" regionRef="r_5"/>
                 <RegionRefIndexed index="1" regionRef="r_1"/>
                 <RegionRefIndexed index="2" regionRef="r_2"/>
@@ -246,7 +246,7 @@
                     <Unicode>#####, nur den Kerker geöffnet zu haben,</Unicode>
                 </TextEquiv>
             </TextLine>
-            <TextLine id="l_29" custom="readingOrder {index:26;} del {offset:4; length:3;} subst-del {offset:8; length:5;add-id:rdfr;} hi {offset:14; length:11;rend:latin;}">
+            <TextLine id="l_29" custom="readingOrder {index:26;} del {offset:4; length:3;} subst-del {offset:8; length:5;add-id:rdfr;} hi {offset:14; length:11;rendition:latin; rend:latin;}">
                 <Coords points="840,2951 1103,2899 1309,2872 1643,2822 1929,2758 1922,2729 1638,2793 1305,2842 1098,2869 834,2922"/>
                 <Baseline points="840,2951 1103,2899 1309,2872 1643,2822 1929,2758"/>
                 <TextEquiv>

@@ -68,7 +68,7 @@
       <div type="article"|"montage-element"> gruppiert, das an der Stelle
       des zuerst gelesenen Mitglieds im umgebenden div steht
     - innerhalb einer Zeile koennen zeichenbasierte Annotationen stehen
-      (hi mit rend/spacing/hi-*/bold/underline/retrace/mod/mod-underline/del/deselection/seg/
+      (hi mit rendition/spacing/hi-*/bold/underline/retrace/mod/mod-underline/del/deselection/seg/
       seg-transposition/gap/gap-cut/add/metamark/metamark-add/unclear/
       subst/subst-del/sic/undo), die zu Inline-Elementen wie <hi>/<del>/
       <add>/<subst>/<choice><sic>/<corr>/<undo>...<anchor> werden, ggf.
@@ -3459,20 +3459,20 @@
           <xsl:attribute name="otherSeg"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'other-seg'"/></xsl:call-template></xsl:attribute>
         </xsl:if>
         <xsl:choose>
-          <!-- generisches hi (Abschnitt 7): rend aus dem Block uebernehmen -->
+          <!-- generisches hi (Abschnitt 7): rendition aus dem Block uebernehmen (ausgegeben mit "#") -->
           <xsl:when test="$name='hi'">
-            <xsl:variable name="hiRend"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rend'"/></xsl:call-template></xsl:variable>
-            <xsl:if test="$hiRend != ''"><my:attr name="rend" value="{$hiRend}"/></xsl:if>
+            <xsl:variable name="hiRend"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rendition'"/></xsl:call-template></xsl:variable>
+            <xsl:if test="$hiRend != ''"><my:attr name="rendition" value="{$hiRend}"/></xsl:if>
           </xsl:when>
-          <xsl:when test="$name='spacing' or $name='hi-spacing'"><my:attr name="rend" value="letter-spacing"/></xsl:when>
-          <xsl:when test="$name='bold' or $name='hi-bold'"><my:attr name="rend" value="bold"/></xsl:when>
-          <xsl:when test="$name='underline' or $name='hi-underline'"><my:attr name="rend" value="underline"/></xsl:when>
-          <xsl:when test="$name='hi-latin'"><my:attr name="rend" value="latin"/></xsl:when>
-          <xsl:when test="$name='mod-underline'"><my:attr name="rend" value="underline"/></xsl:when>
+          <xsl:when test="$name='spacing' or $name='hi-spacing'"><my:attr name="rendition" value="letter-spacing"/></xsl:when>
+          <xsl:when test="$name='bold' or $name='hi-bold'"><my:attr name="rendition" value="bold"/></xsl:when>
+          <xsl:when test="$name='underline' or $name='hi-underline'"><my:attr name="rendition" value="underline"/></xsl:when>
+          <xsl:when test="$name='hi-latin'"><my:attr name="rendition" value="latin"/></xsl:when>
+          <xsl:when test="$name='mod-underline'"><my:attr name="rendition" value="underline"/></xsl:when>
           <xsl:when test="$name='mod'">
-            <!-- Abschnitt 7: rend aus dem Block (frueher "style" - bleibt als
+            <!-- Abschnitt 7: rendition aus dem Block (frueher "style" - bleibt als
                  Rueckfall lesbar), sonst Default underline -->
-            <xsl:variable name="rendOverrideRaw"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rend'"/></xsl:call-template></xsl:variable>
+            <xsl:variable name="rendOverrideRaw"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rendition'"/></xsl:call-template></xsl:variable>
             <xsl:variable name="styleOverride">
               <xsl:choose>
                 <xsl:when test="$rendOverrideRaw != ''"><xsl:value-of select="$rendOverrideRaw"/></xsl:when>
@@ -3480,8 +3480,8 @@
               </xsl:choose>
             </xsl:variable>
             <xsl:choose>
-              <xsl:when test="$styleOverride != ''"><my:attr name="rend" value="{$styleOverride}"/></xsl:when>
-              <xsl:otherwise><my:attr name="rend" value="underline"/></xsl:otherwise>
+              <xsl:when test="$styleOverride != ''"><my:attr name="rendition" value="{$styleOverride}"/></xsl:when>
+              <xsl:otherwise><my:attr name="rendition" value="underline"/></xsl:otherwise>
             </xsl:choose>
           </xsl:when>
           <xsl:when test="$name='del'">
@@ -3497,20 +3497,20 @@
             <my:attr name="type" value="deselection"/>
           </xsl:when>
           <xsl:when test="$name='seg'">
-            <!-- cat wird zu @type (frueher "type" - bleibt als Rueckfall lesbar); rend uebernehmen -->
+            <!-- cat wird zu @type (frueher "type" - bleibt als Rueckfall lesbar); rendition uebernehmen -->
             <xsl:variable name="catV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'cat'"/></xsl:call-template></xsl:variable>
             <xsl:variable name="typeV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'type'"/></xsl:call-template></xsl:variable>
-            <xsl:variable name="rendV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rend'"/></xsl:call-template></xsl:variable>
+            <xsl:variable name="rendV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rendition'"/></xsl:call-template></xsl:variable>
             <xsl:choose>
               <xsl:when test="$catV != ''"><my:attr name="type" value="{$catV}"/></xsl:when>
               <xsl:when test="$typeV != ''"><my:attr name="type" value="{$typeV}"/></xsl:when>
             </xsl:choose>
-            <xsl:if test="$rendV != ''"><my:attr name="rend" value="{$rendV}"/></xsl:if>
+            <xsl:if test="$rendV != ''"><my:attr name="rendition" value="{$rendV}"/></xsl:if>
           </xsl:when>
           <xsl:when test="$name='seg-relocation'">
             <my:attr name="type" value="relocation"/>
-            <xsl:variable name="rendV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rend'"/></xsl:call-template></xsl:variable>
-            <xsl:if test="$rendV != ''"><my:attr name="rend" value="{$rendV}"/></xsl:if>
+            <xsl:variable name="rendV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rendition'"/></xsl:call-template></xsl:variable>
+            <xsl:if test="$rendV != ''"><my:attr name="rendition" value="{$rendV}"/></xsl:if>
           </xsl:when>
           <!-- Inline-Annotation dateline (Abschnitt 7) -> <seg type="dateline">, rendition uebernehmen -->
           <xsl:when test="$name='dateline'">
@@ -3525,14 +3525,14 @@
             <!-- corresp bleibt ein gewoehnliches Attribut (aufgeloest in
                  resolved-ref-attrs); other-seg/new-order (listTranspose,
                  Abschnitt 7) siehe $tpSegs/$transposeLists und werden NICHT
-                 ausgegeben; rend uebernehmen, sonst Default "transposition-sign" -->
+                 ausgegeben; rendition uebernehmen, sonst Default "transposition-sign" -->
             <xsl:variable name="corresp"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'corresp'"/></xsl:call-template></xsl:variable>
             <xsl:if test="$corresp != ''"><my:attr name="corresp" value="{$corresp}"/></xsl:if>
             <!-- subcat wird 1:1 zu @subtype -->
             <xsl:variable name="tpSubcat"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'subcat'"/></xsl:call-template></xsl:variable>
             <xsl:if test="$tpSubcat != ''"><my:attr name="subtype" value="{$tpSubcat}"/></xsl:if>
-            <xsl:variable name="rendV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rend'"/></xsl:call-template></xsl:variable>
-            <my:attr name="rend">
+            <xsl:variable name="rendV"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rendition'"/></xsl:call-template></xsl:variable>
+            <my:attr name="rendition">
               <xsl:attribute name="value">
                 <xsl:choose>
                   <xsl:when test="$rendV != ''"><xsl:value-of select="$rendV"/></xsl:when>
@@ -3606,10 +3606,10 @@
             <xsl:if test="$sicCat != ''"><my:attr name="cat" value="{$sicCat}"/></xsl:if>
           </xsl:when>
           <xsl:when test="$name='undo'">
-            <xsl:variable name="rend"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rend'"/></xsl:call-template></xsl:variable>
+            <xsl:variable name="undoRendition"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'rendition'"/></xsl:call-template></xsl:variable>
             <xsl:variable name="target"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'target'"/></xsl:call-template></xsl:variable>
             <xsl:variable name="undoCorresp"><xsl:call-template name="token-value"><xsl:with-param name="tokens" select="$content"/><xsl:with-param name="key" select="'corresp'"/></xsl:call-template></xsl:variable>
-            <xsl:if test="$rend != ''"><my:attr name="rend" value="{$rend}"/></xsl:if>
+            <xsl:if test="$undoRendition != ''"><my:attr name="rendition" value="{$undoRendition}"/></xsl:if>
             <xsl:if test="$target != ''"><my:attr name="target" value="{$target}"/></xsl:if>
             <xsl:if test="$undoCorresp != ''"><my:attr name="corresp" value="{$undoCorresp}"/></xsl:if>
           </xsl:when>
@@ -4191,8 +4191,8 @@
               <xsl:call-template name="resolve-behelfs"><xsl:with-param name="behelfsId" select="$range/my:attr[@name='corresp']/@value"/></xsl:call-template>
             </xsl:attribute>
           </xsl:if>
-          <xsl:if test="$range/my:attr[@name='rend']">
-            <xsl:attribute name="rend"><xsl:value-of select="$range/my:attr[@name='rend']/@value"/></xsl:attribute>
+          <xsl:if test="$range/my:attr[@name='rendition']">
+            <xsl:call-template name="rendition-attr-if-any"><xsl:with-param name="value" select="$range/my:attr[@name='rendition']/@value"/></xsl:call-template>
           </xsl:if>
           <xsl:if test="$range/my:attr[@name='target']">
             <xsl:attribute name="target">

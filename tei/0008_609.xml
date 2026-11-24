@@ -13,7 +13,7 @@
             <p>
               Quelle: 609.jpg.
               Erstellt: 2026-10-02T15:12:26.264+02:00,
-              zuletzt geaendert: 2026-11-13T11:51:09.757+01:00.
+              zuletzt geaendert: 2026-11-20T13:34:43.662+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -496,7 +496,7 @@
                <lb facs="#zone_l_24"/>.
             </metamark>
             <metamark xml:id="metamark-0609-0009" facs="#zone_r_36" function="insertion" target="0003_406.xml#add-0003-0004">
-               <lb facs="#zone_l_21"/><g ref="#intervention"/> <hi rend="underline">33</hi>
+               <lb facs="#zone_l_21"/><g ref="#intervention"/> <hi rendition="#underline">33</hi>
             </metamark>
             <metamark xml:id="metamark-0609-0010" facs="#zone_r_15" function="deletion">
                <lb facs="#zone_l_5"/><g ref="#intervention"/> <g ref="#deleatur"/>
@@ -551,8 +551,8 @@
                <lb facs="#zone_r_2_tl_41" break="no"/>klagten Privatmann<del xml:id="del-0609-0001">e</del>s will es mit einem Amts<del xml:id="del-0609-0002">kl</del>eid
                <lb facs="#zone_r_2_tl_42"/>aufnehmen, womöglich unter Zuziehung eines unga<pc force="weak">-</pc>
                <lb facs="#zone_r_2_tl_43" break="no"/>rischen von gleichem Range. Die Wahrheit zu sagen
-               <lb facs="#zone_r_2_tl_44"/><subst><del>in</del><add facs="#zone_r_8" xml:id="add-0609-0021"><lb facs="#zone_l"/><metamark function="intervention"><g ref="#intervention"/></metamark> gegen</add></subst> eine<del xml:id="del-0609-0003">r </del>Welt <subst><del>der Lüge</del><add facs="#zone_r_32" xml:id="add-0609-0013"><lb facs="#zone_r_32_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark>, der mit dem Sonnenaufgang<lb facs="#zone_r_32_tl_2"/>die Lüge erscheint</add></subst> — wäre man <subst xml:id="subst-0609-0001"><del><undo spanTo="#anchor-0609-0001" rend="dotted-underline" target="#add-0609-0014"/>sie<anchor type="undo" xml:id="anchor-0609-0001"/></del><add facs="#zone_r_30" xml:id="add-0609-0007"><lb facs="#zone_l_20"/><del><metamark function="intervention"><g ref="#intervention"/></metamark> es</del></add></subst> nicht den
-               <lb facs="#zone_r_2_tl_45"/>Toten schuldig, so wäre <subst xml:id="subst-0609-0002"><del><undo spanTo="#anchor-0609-0002" rend="dotted-line" target="#subst-0609-0002"/>sie<anchor type="undo" xml:id="anchor-0609-0002"/></del><add facs="#zone_r_10" xml:id="add-0609-0027"><lb facs="#zone_r_10_tl_1"/><del><metamark function="intervention"><g ref="#intervention"/></metamark> <gap reason="illegible" extent="2"/></del></add></subst> doch die geringste
+               <lb facs="#zone_r_2_tl_44"/><subst><del>in</del><add facs="#zone_r_8" xml:id="add-0609-0021"><lb facs="#zone_l"/><metamark function="intervention"><g ref="#intervention"/></metamark> gegen</add></subst> eine<del xml:id="del-0609-0003">r </del>Welt <subst><del>der Lüge</del><add facs="#zone_r_32" xml:id="add-0609-0013"><lb facs="#zone_r_32_tl_1"/><metamark function="intervention"><g ref="#intervention"/></metamark>, der mit dem Sonnenaufgang<lb facs="#zone_r_32_tl_2"/>die Lüge erscheint</add></subst> — wäre man <subst xml:id="subst-0609-0001"><del><undo spanTo="#anchor-0609-0001" rendition="#dotted-line" target="#subst-0609-0001"/>sie<anchor type="undo" xml:id="anchor-0609-0001"/></del><add facs="#zone_r_30" xml:id="add-0609-0007"><lb facs="#zone_l_20"/><del><metamark function="intervention"><g ref="#intervention"/></metamark> es</del></add></subst> nicht den
+               <lb facs="#zone_r_2_tl_45"/>Toten schuldig, so wäre <subst xml:id="subst-0609-0002"><del><undo spanTo="#anchor-0609-0002" rendition="#dotted-line" target="#subst-0609-0002"/>sie<anchor type="undo" xml:id="anchor-0609-0002"/></del><add facs="#zone_r_10" xml:id="add-0609-0027"><lb facs="#zone_r_10_tl_1"/><del><metamark function="intervention"><g ref="#intervention"/></metamark> <gap reason="illegible" extent="2"/></del></add></subst> doch die geringste
                <lb facs="#zone_r_2_tl_46"/>Erkenntlichkeit für den Glücksfall, daß man nicht
                <lb facs="#zone_r_2_tl_47"/>zu ihnen zählt. Und an derselben Stelle, wo die
                <lb facs="#zone_l_29"/><subst><del>Menschen,</del><add facs="#zone_r_11" xml:id="add-0609-0022"><lb facs="#zone_l_3"/><metamark function="intervention"><g ref="#intervention"/></metamark> diejenige,</add></subst> die <subst><del>dem Transport der</del><add facs="#zone_r_34" xml:id="add-0609-0008"><lb facs="#zone_l_28"/>den</add></subst> Verwundeten

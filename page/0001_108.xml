@@ -3,12 +3,12 @@
     <Metadata>
         <Creator>prov=READ-COOP:name=PyLaia@TranskribusPlatform:version=2.51.0:model_id=55331:lm=none:date=14_09_2026_13:37</Creator>
         <Created>2026-09-14T12:23:48.548+02:00</Created>
-        <LastChange>2026-11-13T09:44:21.287+01:00</LastChange>
-        <TranskribusMetadata docId="18855842" pageId="127360800" pageNr="1" tsid="309793464" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=XXCJSTVVGRGUASEBODJDYUZM" xmlUrl="https://files.transkribus.eu/Get?id=OMBWDRKVEFUQXSODJYLFBELL" imageId="108583557"/>
+        <LastChange>2026-11-20T13:28:03.343+01:00</LastChange>
+        <TranskribusMetadata docId="18855842" pageId="127360800" pageNr="1" tsid="312388762" status="IN_PROGRESS" userId="33174" imgUrl="https://files.transkribus.eu/Get?fileType=view&amp;id=XXCJSTVVGRGUASEBODJDYUZM" xmlUrl="https://files.transkribus.eu/Get?id=JCTWMTXWYJMHDSPTRSNRPGOV" imageId="108583557"/>
     </Metadata>
     <Page imageFilename="0001_108.jpg" imageWidth="2553" imageHeight="3871">
         <ReadingOrder>
-            <OrderedGroup id="ro_1794565589686" caption="Regions reading order">
+            <OrderedGroup id="ro_1795178385312" caption="Regions reading order">
                 <RegionRefIndexed index="0" regionRef="r_5"/>
                 <RegionRefIndexed index="1" regionRef="r_4"/>
                 <RegionRefIndexed index="2" regionRef="r_3"/>
@@ -270,7 +270,7 @@
         </TextRegion>
         <TextRegion id="r_15" custom="readingOrder {index:8;} structure {function:selection-start; change:kk-pencil-2; id:metam3; target:parag3; type:metamark;}">
             <Coords points="637,1768 900,1785 901,1870 788,1871 747,1965 630,1968"/>
-            <TextLine id="l_4" custom="readingOrder {index:0;} undo {offset:0; length:1;change:kk-pencil-4; rend:strike-out; target:metam3;}">
+            <TextLine id="l_4" custom="readingOrder {index:0;} undo {offset:0; length:1;rendition:strike-out; change:kk-pencil-4; rend:strike-out; target:metam3;}">
                 <Coords points="655,1891 756,1890 756,1860 655,1861"/>
                 <Baseline points="655,1891 756,1890"/>
                 <TextEquiv>
@@ -343,14 +343,14 @@
         </TextRegion>
         <TextRegion id="r_9" custom="readingOrder {index:12;} structure {rendition:#indent\u0020#left; type:long-quote-p;}">
             <Coords points="773,2066 2435,2067 2426,2877 773,2877"/>
-            <TextLine id="tr_1_tl_27" custom="readingOrder {index:0;} bold {offset:0; length:45; continued:true;} mod-underline {offset:1; length:44; continued:true;change:kk-ink-4;} undo {offset:35; length:10; continued:true;change:kk-ink-5; rend:wavy-line;}">
+            <TextLine id="tr_1_tl_27" custom="readingOrder {index:0;} bold {offset:0; length:45; continued:true;} mod-underline {offset:1; length:44; continued:true;change:kk-ink-4;} undo {offset:35; length:10; continued:true;rendition:wavy-line; change:kk-ink-5; rend:wavy-line;}">
                 <Coords points="962,2152 2415,2139 2415,2067 962,2061"/>
                 <Baseline points="975,2125 1047,2125 1119,2122 1191,2122 1264,2122 1336,2122 1408,2121 1480,2119 1553,2117 1625,2118 1697,2116 1769,2118 1842,2119 1914,2119 1986,2121 2058,2122 2131,2119 2203,2119 2275,2114 2347,2117 2420,2116"/>
                 <TextEquiv>
                     <Unicode>Keine Warnung, keine Aufforderung, keine Ver⸗</Unicode>
                 </TextEquiv>
             </TextLine>
-            <TextLine id="tr_1_tl_28" custom="readingOrder {index:1;} bold {offset:0; length:35; continued:true;} mod-underline {offset:0; length:33; continued:true;change:kk-ink-4;} undo {offset:0; length:8; continued:true;change:kk-ink-5; rend:wavy-line;}">
+            <TextLine id="tr_1_tl_28" custom="readingOrder {index:1;} bold {offset:0; length:35; continued:true;} mod-underline {offset:0; length:33; continued:true;change:kk-ink-4;} undo {offset:0; length:8; continued:true;rendition:wavy-line; change:kk-ink-5; rend:wavy-line;}">
                 <Coords points="787,2224 2417,2209 2417,2158 2330,2145 1211,2175 787,2143"/>
                 <Baseline points="799,2196 880,2199 961,2196 1042,2195 1123,2196 1205,2193 1286,2193 1367,2193 1448,2193 1529,2193 1611,2193 1692,2193 1773,2196 1854,2193 1935,2189 2017,2187 2098,2193 2179,2193 2260,2193 2341,2194 2423,2193"/>
                 <TextEquiv>

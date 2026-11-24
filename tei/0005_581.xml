@@ -13,7 +13,7 @@
             <p>
               Quelle: 0005_581.jpg.
               Erstellt: 2026-09-14T12:23:49.012+02:00,
-              zuletzt geaendert: 2026-11-12T12:07:43.663+01:00.
+              zuletzt geaendert: 2026-11-20T13:31:42.873+01:00.
             </p>
          </sourceDesc>
       </fileDesc>
@@ -383,7 +383,7 @@
                <lb facs="#zone_tr_2_tl_11"/>Titel »Kasmader in der Schlinge oder: Man erinnert
                <lb facs="#zone_tr_2_tl_12"/>sich«. Da wird man schon sehen, wie lustig es ist,
                <lb facs="#zone_tr_2_tl_13"/>wenn die heilige Einfalt an mir satirisch wird. Denn
-               <lb facs="#zone_tr_2_tl_14"/>woran sich die Reichspost <metamark function="addition"/><add facs="#zone_r_10" xml:id="add-0581-0002"><lb facs="#zone_l_2"/><metamark function="intervention"><g ref="#intervention"/></metamark>,</add>feststellend, daß <seg xml:id="seg-0581-0001" type="relocation" rend="encircled">sich</seg> <metamark function="addition"/><add facs="#zone_r_11" xml:id="add-0581-0003"><lb facs="#zone_l_3"/><metamark function="intervention"><g ref="#intervention"/></metamark>» </add>die
+               <lb facs="#zone_tr_2_tl_14"/>woran sich die Reichspost <metamark function="addition"/><add facs="#zone_r_10" xml:id="add-0581-0002"><lb facs="#zone_l_2"/><metamark function="intervention"><g ref="#intervention"/></metamark>,</add>feststellend, daß <seg xml:id="seg-0581-0001" type="relocation" rendition="#encircled">sich</seg> <metamark function="addition"/><add facs="#zone_r_11" xml:id="add-0581-0003"><lb facs="#zone_l_3"/><metamark function="intervention"><g ref="#intervention"/></metamark>» </add>die
                <lb facs="#zone_l_30"/>Erde <metamark xml:id="metamark-0581-0009" function="relocation" target="#seg-0581-0001">l</metamark><del xml:id="del-0581-0002">seit damals</del> weiter<metamark xml:id="metamark-0581-0010" function="kerning" target="#metamark-0581-0010"><g ref="#intervention"/></metamark>gedreht hat<metamark function="addition"/><add facs="#zone_r_13" xml:id="add-0581-0004"><lb facs="#zone_l_7"/><metamark function="intervention"><g ref="#intervention"/></metamark>«</add>, nicht erinnert,
                <lb facs="#zone_tr_2_tl_16"/>ist die Tatsache, daß Sich auch die Reichspost <del xml:id="del-0581-0003">seit</del>
                <lb facs="#zone_l_29"/><del xml:id="del-0581-0004"><del xml:id="del-0581-0005">damals</del> <undo spanTo="#anchor-0581-0001" target="#del-0581-0004"/>g<anchor type="undo" xml:id="anchor-0581-0001"/></del>edreht hat, <subst><del>der <undo spanTo="#anchor-0581-0002" target="#metamark-0581-0011"/><metamark function="addition" xml:id="metamark-0581-0011"/><add facs="#zone_r_16" xml:id="add-0581-0005"><lb facs="#zone_l_8"/><del><g ref="#intervention"/><gap reason="illegible" extent="3"/> <gap reason="illegible" extent="3"/> <gap reason="illegible" extent="8"/></del></add><anchor type="undo" xml:id="anchor-0581-0002"/>das</del><add facs="#zone_r_17" xml:id="add-0581-0006"><lb facs="#zone_tr_2_tl_18"/><metamark function="intervention"><g ref="#intervention"/></metamark>die durch jenes,</add></subst> ganz anders geartete
