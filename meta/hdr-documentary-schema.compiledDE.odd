@@ -1,0 +1,1700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:base="file:/C:/Users/ksramo/Documents/HdR/hdr-page2tei-playground/meta/hdr-documentary-schema.odd">
+  <?TEIVERSION P5 Version 4.12.0. Last updated on
+        28th July 2026, revision 113e933e2?>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>
+                    hdr-documentary-schema: Schema für die diplomatische TEI-Ausgabe von
+                    pagexml-to-tei.xsl
+                </title>
+      </titleStmt>
+      <publicationStmt>
+        <p part="N">Aus diesem ODD wird meta/hdr-documentary-schema.rng erzeugt.</p>
+      </publicationStmt>
+      <sourceDesc default="false">
+        <p part="N">Born digital; Anpassung von TEI P5 (tei:current).</p>
+      </sourceDesc>
+    </fileDesc>
+    <tei:encodingDesc xmlns:tei="http://www.tei-c.org/ns/1.0">
+      <tei:constraintDecl scheme="schematron" queryBinding="xslt2">
+        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="tei" uri="http://www.tei-c.org/ns/1.0" />
+        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="xs" uri="http://www.w3.org/2001/XMLSchema" />
+        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="rng" uri="http://relaxng.org/ns/structure/1.0" />
+        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="rna" uri="http://relaxng.org/ns/compatibility/annotations/1.0" />
+        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="sch" uri="http://purl.oclc.org/dsdl/schematron" />
+        <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="sch1x" uri="http://www.ascc.net/xml/schematron" />
+      </tei:constraintDecl>
+    </tei:encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <head>hdr-documentary-schema</head>
+      <p part="N">
+                Eng geführtes Dokumentations-Schema: Es lässt nur zu, was das Stylesheet
+                erzeugt. Jedes Element ist eine Einschränkung des TEI-Elements gleichen Namens
+                (Klassenzugehörigkeiten entfernt, Attribute und Inhalt explizit festgelegt), die
+                erlaubte Sprache ist damit eine Teilmenge von TEI-All.
+            </p>
+      <schemaSpec ident="hdr-documentary-schema" start="TEI" source="tei:current" ns="http://www.tei-c.org/ns/1.0" status="draft" mode="add" predeclare="false" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML">
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-p" ident="p" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-24" xml:lang="de">Absatz</gloss>
+          <desc versionDate="2016-11-24" xml:lang="de">markiert einen Absatz in einem
+            Prosatext.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <constraintSpec ident="p-attribute-im-text" scheme="schematron" mode="add" predeclare="false">
+            <constraint>
+              <sch:rule context="tei:text//tei:p">
+                <sch:assert test="@change and @facs and @rendition">
+                                    p innerhalb von
+                                    text braucht @change, @facs und @rendition.
+                                </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="abstractModel-structure-p-in-ab-or-p" scheme="schematron" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:p">
+                <sch:report test="(ancestor::tei:ab or ancestor::tei:p) and                        not( ancestor::tei:floatingText                           | parent::tei:exemplum                           | parent::tei:item                           | parent::tei:note                           | parent::tei:q                           | parent::tei:quote                           | parent::tei:remarks                           | parent::tei:said                           | parent::tei:sp                           | parent::tei:stage                           | parent::tei:cell                           | parent::tei:figure )">
+                                    Abstract model violation: Paragraphs may not occur inside
+                                    other paragraphs or &lt;ab&gt; elements.
+                                </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="abstractModel-structure-p-in-l" scheme="schematron" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:l//tei:p">
+                <sch:assert test="ancestor::tei:floatingText | parent::tei:figure | parent::tei:note">
+                                    Abstract model violation: Metrical lines (&lt;l&gt; elements)
+                                    may not contain higher-level structural elements such as
+                                    &lt;div&gt;, &lt;p&gt;, or &lt;ab&gt;, unless &lt;p&gt; is a
+                                    child of &lt;figure&gt; or &lt;note&gt;, or is a descendant of
+                                    &lt;floatingText&gt;.
+                                </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="part" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="closed" mode="add">
+                <valItem ident="I" mode="add" />
+                <valItem ident="F" mode="add" />
+                <valItem ident="M" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="closed" mode="add">
+                <valItem ident="#antiqua" mode="add" />
+                <valItem ident="#black-letter" mode="add" />
+                <valItem ident="#bold" mode="add" />
+                <valItem ident="#center" mode="add" />
+                <valItem ident="#crosshead" mode="add" />
+                <valItem ident="#handwritten" mode="add" />
+                <valItem ident="#indent" mode="add" />
+                <valItem ident="#kurrent" mode="add" />
+                <valItem ident="#latin" mode="add" />
+                <valItem ident="#left" mode="add" />
+                <valItem ident="#undefined" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-hi" ident="hi" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-24" xml:lang="de">hervorgehoben</gloss>
+          <desc versionDate="2016-11-24" xml:lang="de">markiert ein Wort oder eine Textpassage,
+            das/die sich grafisch vom umgebenden Text abhebt, ohne dass ein inhaltlicher Grund dafür
+            angegeben wird.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="rendition" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="#bold" mode="add" />
+                <valItem ident="#latin" mode="add" />
+                <valItem ident="#letter-spacing" mode="add" />
+                <valItem ident="#underline" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-quote" ident="quote" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="1">
+              <elementRef key="lg" minOccurs="1" maxOccurs="unbounded" />
+              <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-sic" ident="sic" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-24" xml:lang="de">Lateinisch für 'auf diese Weise',
+            'so'</gloss>
+          <desc versionDate="2016-11-24" xml:lang="de">enthält Text, wie er in der Vorlage steht,
+            obwohl er offensichtlich fehlerhaft ist.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-corr" ident="corr" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-24" xml:lang="de">Korrektur</gloss>
+          <desc versionDate="2016-11-24" xml:lang="de">enthält die korrekte Form einer offenbar
+            fehlerhaften Textstelle in der Vorlage.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="type" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+              <valList type="closed" mode="add">
+                <valItem ident="emen" mode="add" />
+                <valItem ident="norm" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-choice" ident="choice" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-25" xml:lang="de">Alternative</gloss>
+          <desc versionDate="2016-11-24" xml:lang="de">gruppiert alternative Kodierungen für eine
+            Stelle im Text.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <sequence minOccurs="1" maxOccurs="1">
+              <elementRef key="sic" minOccurs="1" maxOccurs="1" />
+              <elementRef key="corr" minOccurs="1" maxOccurs="1" />
+            </sequence>
+          </content>
+          <attList org="group">
+            <attDef ident="resp" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="#edHdR" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-gap" ident="gap" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-25" xml:lang="de">Auslassung</gloss>
+          <desc versionDate="2016-11-25" xml:lang="de">weist in einer Transkription auf eine Stelle
+            hin, in der Text aus der Vorlage ausgelassen worden ist, sei es aus editorischen
+            Gründen, die im TEI-Header beschrieben werden, sei es auf Grund der Auswahlpraxis, sei
+            es weil das Material nicht lesbar, nicht sichtbar oder nicht hörbar ist.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <empty />
+          </content>
+          <attList org="group">
+            <attDef ident="reason" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="cut" mode="add" />
+                <valItem ident="illegible" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="agent" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="extent" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="integer" />
+              </datatype>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-add" ident="add" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-24" xml:lang="de">Hinzufügung</gloss>
+          <desc versionDate="2016-11-24" xml:lang="de"> enthält Buchstaben, Wörter oder Phrasen, die
+            in den Ausgangstext von einem Autor, einem Schreiber oder im Rahmen einer zuvor
+            erfolgten Annotation oder Korrektur in den Ausgangstext eingefügt wurden </desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="place" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="above" mode="add" />
+                <valItem ident="below" mode="add" />
+                <valItem ident="inline" mode="add" />
+                <valItem ident="overwritten" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="#antiqua" mode="add" />
+                <valItem ident="#kurrent" mode="add" />
+                <valItem ident="#latin" mode="add" />
+                <valItem ident="#rotate270" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-del" ident="del" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-04" xml:lang="de">Streichung</gloss>
+          <desc versionDate="2017-06-04" xml:lang="de">enthält Buchstaben, Wörter oder Textpassagen,
+            die in der Vorlage von einem Autor, einem Schreiber oder im Rahmen einer zuvor erfolgten
+            Annotation oder Korrektur gelöscht wurden oder als gelöscht bzw. gegenstandslos
+            gekennzeichnet wurden.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="subtype" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="implicit" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="type" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="deselection" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-unclear" ident="unclear" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2024-06-05" xml:lang="de">unklar</gloss>
+          <desc versionDate="2016-11-24" xml:lang="de">enthält ein Wort, einen Satz oder eine
+            Textpassage, welche in der Quelle nicht oder nur schwer lesbar bzw. hörbar ist.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="reason" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="agent" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="cert" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="resp" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-ptr" ident="ptr" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <empty />
+          </content>
+          <constraintSpec scheme="schematron" ident="ptrAtts" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:ptr">
+                <sch:report test="@target and @cRef">
+                                    Only one of the attributes
+                                    @target and @cRef may be supplied on
+                                    &lt;
+                                    <sch:name />&gt;.
+                                </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <attList org="group">
+            <attDef ident="target" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-head" ident="head" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-29" xml:lang="de">Überschrift</gloss>
+          <desc versionDate="2016-11-29" xml:lang="de">enthält eine beliebige Art von Überschrift,
+            z. B. eines Kapitels, einer Liste, eines Glossars oder einer
+            Handschriftenbeschreibung.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="closed" mode="add">
+                <valItem ident="#black-letter" mode="add" />
+                <valItem ident="#bold" mode="add" />
+                <valItem ident="#center" mode="add" />
+                <valItem ident="#large" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="type" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="main" mode="add" />
+                <valItem ident="sub" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="GRAPHIC" ident="graphic" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-29" xml:lang="de">Abbildung</gloss>
+          <desc versionDate="2016-11-29" xml:lang="de">gibt den Ort einer Bildressource an, die
+            entweder Teil eines Texts oder ein Abbild dessen ist.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <empty />
+          </content>
+          <attList org="group">
+            <attDef ident="height" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NMTOKEN" />
+              </datatype>
+            </attDef>
+            <attDef ident="url" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NMTOKEN" />
+              </datatype>
+            </attDef>
+            <attDef ident="width" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NMTOKEN" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-lb" ident="lb" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-25" xml:lang="de">Zeilenanfang</gloss>
+          <desc versionDate="2017-06-25" xml:lang="de">markiert den Anfang einer neuen
+            typographischen Zeile in einer bestimmten Auflage oder Version eines Textes.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <empty />
+          </content>
+          <attList org="group">
+            <attDef ident="break" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="no" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="type" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+            <attDef ident="subtype" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-cb" ident="cb" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <empty />
+          </content>
+          <attList org="group">
+            <attDef ident="facs" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="n" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-title" ident="title" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-04" xml:lang="de">Titel</gloss>
+          <desc versionDate="2017-06-04" xml:lang="de">beinhaltet einen Titel eines beliebigen
+            Werks.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <textNode />
+          </content>
+          <attList>
+            <attDef ident="level" usage="opt">
+              <datatype>
+                <dataRef key="teidata.enumerated" />
+              </datatype>
+              <valList type="closed">
+                <valItem ident="a" />
+                <valItem ident="m" />
+                <valItem ident="j" />
+                <valItem ident="s" />
+                <valItem ident="u" />
+              </valList>
+            </attDef>
+            <attDef ident="type" mode="change">
+              <datatype>
+                <dataRef key="teidata.enumerated" />
+              </datatype>
+              <valList type="open">
+                <valItem ident="main" />
+                <valItem ident="sub" />
+                <valItem ident="alt" />
+                <valItem ident="short" />
+                <valItem ident="desc" />
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-l" ident="l" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-13" xml:lang="de">Vers(zeile)</gloss>
+          <desc versionDate="2017-06-13" xml:lang="de">enthält eine einzelne, möglicherweise
+            unvollständige, Verszeile.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <constraintSpec ident="abstractModel-structure-l-in-l" scheme="schematron" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:l">
+                <sch:report test="ancestor::tei:l[not(.//tei:note//tei:l[. = current()])]">
+                                    Abstract model violation: Metrical lines (&lt;l&gt; elements)
+                                    may not contain &lt;l&gt; or &lt;lg&gt; elements.
+                                </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <attList org="group">
+            <attDef ident="facs" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="core" xml:id="gi-lg" ident="lg" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-13" xml:lang="de">Gruppe von Vers(zeil)en</gloss>
+          <desc versionDate="2017-06-13" xml:lang="de">enthält eine oder mehrere Verse bzw.
+            Verszeilen, die zusammen eine formale Einheit (z. B. Strophe, Refrain) bilden.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <elementRef key="l" minOccurs="1" maxOccurs="unbounded" />
+          </content>
+          <constraintSpec scheme="schematron" ident="atleast1oflggapl" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:lg">
+                <sch:assert test="count(descendant::tei:lg|descendant::tei:l|descendant::tei:gap) &gt; 0">
+                                    An &lt;lg&gt; element must contain at least one child
+                                    &lt;l&gt;, &lt;lg&gt;, or &lt;gap&gt; element.
+                                </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="abstractModel-structure-lg-in-l" scheme="schematron" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:lg">
+                <sch:report test="ancestor::tei:l[not(.//tei:note//tei:lg[. = current()])]">
+                                    Abstract model violation: Lines may not contain line
+                                    groups.
+                                </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <attList org="group">
+            <attDef ident="facs" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="header" xml:id="gi-teiHeader" ident="teiHeader" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2006-10-18" xml:lang="de">TEI-Header (elektronische
+            Titelseite)</gloss>
+          <desc versionDate="2016-11-25" xml:lang="de">beinhaltet beschreibende und erklärende
+            Metadaten, die einer digitalen Ressource oder einer Sammlung von Ressourcen
+            vorangestellt sind.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <sequence minOccurs="1" maxOccurs="1">
+              <elementRef key="fileDesc" minOccurs="1" maxOccurs="1" />
+              <elementRef key="profileDesc" minOccurs="1" maxOccurs="1" />
+            </sequence>
+          </content>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="header" xml:id="gi-fileDesc" ident="fileDesc" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2006-10-18" xml:lang="de">Dateibeschreibung</gloss>
+          <desc versionDate="2016-11-17" xml:lang="de">enthält die vollständige bibliografische
+            Beschreibung einer elektronischen Datei.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <sequence minOccurs="1" maxOccurs="1">
+              <elementRef key="titleStmt" minOccurs="1" maxOccurs="1" />
+              <elementRef key="publicationStmt" minOccurs="1" maxOccurs="1" />
+              <elementRef key="sourceDesc" minOccurs="1" maxOccurs="1" />
+            </sequence>
+          </content>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="header" xml:id="gi-titleStmt" ident="titleStmt" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-17" xml:lang="de">Angaben zum Titel</gloss>
+          <desc versionDate="2018-07-18" xml:lang="de">umfasst Angaben zum Titel eines Werks und zu
+            den für seinen Inhalt Verantwortlichen.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <elementRef key="title" minOccurs="1" maxOccurs="1" />
+          </content>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="header" xml:id="gi-publicationStmt" ident="publicationStmt" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-17" xml:lang="de">Angaben zur Veröffentlichung</gloss>
+          <desc versionDate="2016-11-17" xml:lang="de">umfasst Angaben zu Veröffentlichung oder
+            Vertrieb eines elektronischen oder sonstigen Textes.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <elementRef key="p" minOccurs="1" maxOccurs="1" />
+            </alternate>
+          </content>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="header" xml:id="gi-sourceDesc" ident="sourceDesc" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-17" xml:lang="de">Beschreibung der Quellen</gloss>
+          <desc versionDate="2016-11-17" xml:lang="de">beschreibt die Quelle, von der sich der
+            elektronische Text ableitet. Üblicherweise eine bibliografische Beschreibung im Falle
+            eines digitalisierten Textes oder eine Bezeichnung wie <q>born digital</q> für einen nur
+            in elektronischer Form vorliegenden Text.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <elementRef key="p" minOccurs="1" maxOccurs="1" />
+          </content>
+          <constraintSpec ident="sourceDesc-is-declarable" scheme="schematron" xml:lang="en">
+            <constraint>
+              <sch:pattern is-a="declarable">
+                <sch:param name="tde" value="tei:sourceDesc" />
+              </sch:pattern>
+            </constraint>
+          </constraintSpec>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="header" xml:id="gi-profileDesc" ident="profileDesc" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2006-10-18" xml:lang="de">Beschreibung des Textprofils</gloss>
+          <desc versionDate="2016-11-17" xml:lang="de">enthält eine detaillierte Beschreibung der
+            nicht-bibliografischen Merkmale des Textes, besonders der verwendeten Sprachen und
+            Subsprachen, der Entstehungsbedingungen eines Textes sowie der Beteiligten und deren
+            Umfeld.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <elementRef key="creation" minOccurs="1" maxOccurs="1" />
+          </content>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="header" xml:id="gi-creation" ident="creation" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-17" xml:lang="de">Entstehung</gloss>
+          <desc versionDate="2016-11-17" xml:lang="de">beinhaltet Informationen zur Entstehung eines
+            Textes.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <elementRef key="listChange" minOccurs="1" maxOccurs="1" />
+          </content>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="header" xml:id="gi-change" ident="change" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2016-11-25" xml:lang="de">Änderung</gloss>
+          <desc versionDate="2016-11-25" xml:lang="de">verzeichnet Änderungen oder Korrekturen
+            während der Erstellung eines Basisdokuments oder während der Überarbeitung einer
+            elektronischen Datei.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <textNode />
+          </content>
+          <attList org="group">
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+            <attDef ident="target">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef key="teidata.pointer" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="listChange" xml:id="gi-listChange" module="header" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <elementRef key="change" minOccurs="1" maxOccurs="1" />
+            </alternate>
+          </content>
+          <attList>
+            <attDef ident="ordered">
+              <datatype>
+                <dataRef key="teidata.truthValue" />
+              </datatype>
+              <defaultVal>true</defaultVal>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="textstructure" xml:id="gi-TEI" ident="TEI" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2006-10-18" xml:lang="de">TEI-Dokument</gloss>
+          <desc versionDate="2017-06-13" xml:lang="de">enthält ein einzelnes TEI-konformes Dokument,
+            das aus einem einzigen TEI-Header und einem oder mehreren Mitgliedern der <ident type="class">model.resource</ident>-Klasse besteht. Mehrere <gi>TEI</gi>-Elemente
+            können in einem <gi>teiCorpus</gi>-Element zusammengefasst werden.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <sequence minOccurs="1" maxOccurs="1">
+              <elementRef key="teiHeader" minOccurs="1" maxOccurs="1" />
+              <elementRef key="facsimile" minOccurs="1" maxOccurs="1" />
+              <elementRef key="text" minOccurs="1" maxOccurs="1" />
+            </sequence>
+          </content>
+          <attList org="group">
+            <attDef ident="version" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0" />
+            <attDef ident="xml:lang" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="de" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="textstructure" xml:id="gi-text" ident="text" ns="http://www.tei-c.org/ns/1.0">
+          <desc versionDate="2017-06-25" xml:lang="de">enthält einen einzelnen, eigenständigen oder
+            kompilierten Text, zum Beispiel ein Gedicht oder Drama, eine Sammlung von Aufsätzen,
+            einen Roman, ein Wörterbuch oder ein Korpus-Sample.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <elementRef key="body" minOccurs="1" maxOccurs="1" />
+          </content>
+          <attList org="group">
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="textstructure" xml:id="gi-body" ident="body" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-13" xml:lang="de">Textkörper</gloss>
+          <desc versionDate="2017-06-13" xml:lang="de">enthält den gesamten Textkörper eines
+            eigenständigen Textes, außer den Vorspann (front) und Nachspann (back).</desc>
+          <classes />
+          <content autoPrefix="true">
+            <elementRef key="div" minOccurs="1" maxOccurs="1" />
+          </content>
+          <attList org="group">
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="textstructure" xml:id="gi-div" ident="div" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-13" xml:lang="de">Textabschnitt</gloss>
+          <desc versionDate="2017-06-13" xml:lang="de">enthält einen Unterabschnitt in Vorspann
+            (front), Textkörper oder Nachspann (back) eines Textes.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="0" maxOccurs="unbounded">
+              <elementRef key="div" minOccurs="1" maxOccurs="1" />
+              <elementRef key="metamark" minOccurs="1" maxOccurs="1" />
+              <elementRef key="p" minOccurs="1" maxOccurs="1" />
+              <elementRef key="byline" minOccurs="1" maxOccurs="1" />
+              <elementRef key="cb" minOccurs="1" maxOccurs="1" />
+              <elementRef key="dateline" minOccurs="1" maxOccurs="1" />
+              <elementRef key="fw" minOccurs="1" maxOccurs="1" />
+              <elementRef key="head" minOccurs="1" maxOccurs="1" />
+              <elementRef key="anchor" minOccurs="1" maxOccurs="1" />
+              <elementRef key="gap" minOccurs="1" maxOccurs="1" />
+              <elementRef key="quote" minOccurs="1" maxOccurs="1" />
+            </alternate>
+          </content>
+          <constraintSpec ident="abstractModel-structure-div-in-l" scheme="schematron" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:l//tei:div">
+                <sch:assert test="ancestor::tei:floatingText">
+                                    Abstract model
+                                    violation: Metrical lines (&lt;l&gt; elements) may not contain
+                                    higher-level structural elements such as &lt;div&gt;, unless
+                                    &lt;div&gt; is a descendant of &lt;floatingText&gt;.
+                                </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="abstractModel-structure-div-in-ab-or-p" scheme="schematron" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:div">
+                <sch:report test="(ancestor::tei:p or ancestor::tei:ab) and not(ancestor::tei:floatingText)">
+                                    Abstract model violation: &lt;p&gt; and &lt;ab&gt; may not
+                                    contain higher-level structural elements such as &lt;div&gt;,
+                                    unless &lt;div&gt; is a descendant of &lt;floatingText&gt;.
+                                </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="next" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="part" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="closed" mode="add">
+                <valItem ident="F" mode="add" />
+                <valItem ident="M" mode="add" />
+                <valItem ident="I" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="prev" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="type" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="add-block" mode="add" />
+                <valItem ident="advertisement" mode="add" />
+                <valItem ident="article" mode="add" />
+                <valItem ident="newspaper-clipping" mode="add" />
+                <valItem ident="notepad-paper" mode="add" />
+                <valItem ident="print-proof" mode="add" />
+                <valItem ident="print-publ" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="textstructure" xml:id="gi-byline" ident="byline" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-13" xml:lang="de">Verfasserzeile</gloss>
+          <desc versionDate="2017-06-13" xml:lang="de">enthält Angaben zur Hauptverantwortlichkeit
+            eines Werks, entweder auf der Titelseite oder am Anfang oder Ende des Werks.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inlineCore" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="textstructure" xml:id="gi-dateline" ident="dateline" ns="http://www.tei-c.org/ns/1.0">
+          <desc versionDate="2017-06-13" xml:lang="de">enthält kurze Angaben zu Entstehungsort,
+            -datum, -zeit, usw. eines Briefs, Zeitungsartikels oder anderen Werks. Diese können als
+            Überschrift oder Nachsatz dem Text voran- bzw. nachgestellt werden.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inlineCore" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="gaiji" ident="g" xml:id="G" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <empty />
+          </content>
+          <attList org="group">
+            <attDef ident="ref" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="#deleatur" mode="add" />
+                <valItem ident="#intervention" mode="add" />
+                <valItem ident="#kerning" mode="add" />
+                <valItem ident="#relocation" mode="add" />
+                <valItem ident="#transposition" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="facsimile" xml:id="gi-facsimile" module="transcr" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <sequence minOccurs="1" maxOccurs="1">
+              <elementRef key="graphic" minOccurs="1" maxOccurs="1" />
+              <elementRef key="surface" minOccurs="1" maxOccurs="1" />
+            </sequence>
+          </content>
+          <constraintSpec scheme="schematron" ident="no_facsimile_text_nodes" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:facsimile//tei:line | tei:facsimile//tei:zone">
+                <sch:report test="child::text()[ normalize-space(.) ne '']">
+                                    A
+                                    &lt;facsimile&gt; element represents a text with images, thus
+                                    transcribed text should not be present within it.
+                                </sch:report>
+              </sch:rule>
+            </constraint>
+            <!-- What about:
+         * ellipses/supplied/text()
+         * writing
+         * label, formula, app, witDetail, metamark?
+         * notatedMusic?
+         * figure/[all-sorts-of-crazy-stuff-e.g.-entry]
+         * addSpan, damageSpan, delSpan
+         Or the fact that <front> and <back> (but not <body>) are
+         permitted inside <facsimile>, and thus *anything* can be
+         inside ther?
+         See https://github.com/TEIC/TEI/issues/2363 -->
+          </constraintSpec>
+          <attList org="group">
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="surface" xml:id="gi-surface" module="transcr" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="0" maxOccurs="unbounded">
+              <elementRef key="surface" minOccurs="1" maxOccurs="1" />
+              <elementRef key="zone" minOccurs="1" maxOccurs="1" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="lrx" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="integer" />
+              </datatype>
+            </attDef>
+            <attDef ident="lry" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="integer" />
+              </datatype>
+            </attDef>
+            <attDef ident="points" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="source" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+            <attDef ident="type" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="newspaper-clipping" mode="add" />
+                <valItem ident="notepad-paper" mode="add" />
+                <valItem ident="print-proof" mode="add" />
+                <valItem ident="print-publ" mode="add" />
+                <valItem ident="other" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+            <attDef ident="attachment">
+              <datatype>
+                <dataRef key="teidata.enumerated" />
+              </datatype>
+              <valList type="open">
+                <valItem ident="glued" />
+                <valItem ident="pinned" />
+                <valItem ident="sewn" />
+              </valList>
+            </attDef>
+            <attDef ident="flipping">
+              <datatype>
+                <dataRef key="teidata.truthValue" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="zone" xml:id="gi-zone" module="transcr" ns="http://www.tei-c.org/ns/1.0">
+          <desc versionDate="2018-04-15" xml:lang="de">beschreibt eine beliebige zweidimensionale
+            Fläche innerhalb eines <gi>surface</gi>-Elements.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <elementRef key="zone" minOccurs="0" maxOccurs="unbounded" />
+          </content>
+          <attList org="group">
+            <attDef ident="rotate" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0" />
+            <attDef ident="points" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+            <attDef ident="type" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0" />
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="transcr" xml:id="gi-delSpan" ident="delSpan" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <empty />
+          </content>
+          <constraintSpec ident="delSpan-requires-spanTo" scheme="schematron" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:delSpan">
+                <sch:assert test="@spanTo">
+                                    The @spanTo attribute of
+                                    &lt;
+                                    <sch:name />&gt; is required.
+                                </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="delSpan-requires-spanTo-fr" scheme="schematron" xml:lang="fr">
+            <constraint>
+              <sch:rule context="tei:delSpan">
+                <sch:assert test="@spanTo">
+                                    L'attribut spanTo est
+                                    requis.
+                                </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="spanTo" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="type" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="deselection" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="transcr" xml:id="gi-fw" ident="fw" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="type" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="fol" mode="add" />
+                <valItem ident="order" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="closed" mode="add">
+                <valItem ident="#kurrent" mode="add" />
+                <valItem ident="#latin" mode="add" />
+                <valItem ident="#black-letter" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="n" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="transcr" xml:id="gi-subst" ident="subst" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="0" maxOccurs="unbounded">
+              <elementRef key="add" minOccurs="1" maxOccurs="1" />
+              <elementRef key="del" minOccurs="1" maxOccurs="1" />
+            </alternate>
+          </content>
+          <constraintSpec ident="substContents1" scheme="schematron" xml:lang="en">
+            <constraint>
+              <sch:rule context="tei:subst">
+                <sch:assert test="child::tei:add and (child::tei:del or child::tei:surplus)"> &lt; <sch:name />
+                                    &gt; must have at least one child &lt;add&gt;
+                                    and at least one child &lt;del&gt; or &lt;surplus&gt;.
+                                </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="listTranspose" xml:id="gi-listTranspose" module="transcr" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <elementRef key="transpose" minOccurs="1" maxOccurs="1" />
+          </content>
+          <attList org="group">
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="metamark" xml:id="gi-metamark" module="transcr" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="function" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="closed" mode="add">
+                <valItem ident="add" mode="add" />
+                <valItem ident="addition" mode="add" />
+                <valItem ident="deletion" mode="add" />
+                <valItem ident="font" mode="add" />
+                <valItem ident="insertion" mode="add" />
+                <valItem ident="intervention" mode="add" />
+                <valItem ident="kerning" mode="add" />
+                <valItem ident="letter-spacing" mode="add" />
+                <valItem ident="line-spacing" mode="add" />
+                <valItem ident="no-spacing" mode="add" />
+                <valItem ident="paragraph" mode="add" />
+                <valItem ident="print-instruction" mode="add" />
+                <valItem ident="relocation" mode="add" />
+                <valItem ident="selection" mode="add" />
+                <valItem ident="selection-end" mode="add" />
+                <valItem ident="selection-start" mode="add" />
+                <valItem ident="transposition" mode="add" />
+                <valItem ident="unknown" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="target" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="facs" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="closed" mode="add">
+                <valItem ident="#kurrent" mode="add" />
+                <valItem ident="#latin" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+            <attDef ident="corresp" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="mod" xml:id="gi-mod" module="transcr" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="#underline" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="retrace" xml:id="gi-retrace" module="transcr" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="#kurrent" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="transpose" xml:id="gi-transpose" module="transcr" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <sequence minOccurs="1" maxOccurs="1">
+              <elementRef key="ptr" minOccurs="1" maxOccurs="1" />
+              <elementRef key="ptr" minOccurs="1" maxOccurs="unbounded" />
+            </sequence>
+          </content>
+          <attList org="group">
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" ident="undo" xml:id="gi-undo" module="transcr" ns="http://www.tei-c.org/ns/1.0">
+          <classes />
+          <content autoPrefix="true">
+            <empty />
+          </content>
+          <attList org="group">
+            <attDef ident="target" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="#dotted-underline" mode="add" />
+                <valItem ident="#strike-out" mode="add" />
+                <valItem ident="#wavy-line" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="spanTo" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="corresp" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="linking" xml:id="gi-anchor" ident="anchor" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-19" xml:lang="de">Ankerpunkt</gloss>
+          <desc versionDate="2017-06-19" xml:lang="de">fügt an einer Stelle im Text eine Kennung
+            ein, unabhängig von der Textstruktur.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <empty />
+          </content>
+          <attList org="group">
+            <attDef ident="type" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="deselection" mode="add" />
+                <valItem ident="undo" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="linking" xml:id="gi-seg" ident="seg" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-19" xml:lang="de">arbiträres Segment</gloss>
+          <desc versionDate="2017-06-19" xml:lang="de">beschreibt Segmente eines Texts unterhalb des
+              <soCalled>Chunk-Level</soCalled>.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="unbounded">
+              <macroRef key="hdr.inline" />
+            </alternate>
+          </content>
+          <attList org="group">
+            <attDef ident="change" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="#encircled" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="rendition" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef name="token" />
+              </datatype>
+            </attDef>
+            <attDef ident="type" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="head-run-in" mode="add" />
+                <valItem ident="relocation" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="subtype" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+            <attDef ident="corresp" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" rend="change" module="analysis" xml:id="gi-pc" ident="pc" ns="http://www.tei-c.org/ns/1.0">
+          <gloss versionDate="2017-06-19" xml:lang="de">Interpunktionszeichen</gloss>
+          <desc versionDate="2017-06-19" xml:lang="de">enthält ein Zeichen oder eine Zeichenkette,
+            die ein einzelnes Interpunktionszeichen repräsentiert.</desc>
+          <classes />
+          <content autoPrefix="true">
+            <textNode />
+          </content>
+          <attList org="group">
+            <attDef ident="force" mode="replace" usage="req" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+              <valList type="open" mode="add">
+                <valItem ident="weak" mode="add" />
+              </valList>
+            </attDef>
+            <attDef ident="unit" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0" />
+            <attDef ident="pre" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0" />
+            <attDef ident="xml:id" mode="replace" usage="opt" predeclare="false" ns="http://www.tei-c.org/ns/1.0">
+              <datatype minOccurs="1" maxOccurs="1">
+                <dataRef name="NCName" />
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <macroSpec rend="add" ident="hdr.inlineCore" mode="add" module="tei" predeclare="false">
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="1">
+              <textNode />
+              <elementRef key="add" minOccurs="1" maxOccurs="1" />
+              <elementRef key="anchor" minOccurs="1" maxOccurs="1" />
+              <elementRef key="del" minOccurs="1" maxOccurs="1" />
+              <elementRef key="delSpan" minOccurs="1" maxOccurs="1" />
+              <elementRef key="gap" minOccurs="1" maxOccurs="1" />
+              <elementRef key="hi" minOccurs="1" maxOccurs="1" />
+              <elementRef key="lb" minOccurs="1" maxOccurs="1" />
+              <elementRef key="metamark" minOccurs="1" maxOccurs="1" />
+              <elementRef key="mod" minOccurs="1" maxOccurs="1" />
+              <elementRef key="pc" minOccurs="1" maxOccurs="1" />
+              <elementRef key="subst" minOccurs="1" maxOccurs="1" />
+              <elementRef key="choice" minOccurs="1" maxOccurs="1" />
+              <elementRef key="seg" minOccurs="1" maxOccurs="1" />
+              <elementRef key="undo" minOccurs="1" maxOccurs="1" />
+              <elementRef key="g" minOccurs="1" maxOccurs="1" />
+              <elementRef key="retrace" minOccurs="1" maxOccurs="1" />
+              <elementRef key="unclear" minOccurs="1" maxOccurs="1" />
+              <elementRef key="listTranspose" minOccurs="1" maxOccurs="1" />
+            </alternate>
+          </content>
+        </macroSpec>
+        <macroSpec rend="add" ident="hdr.inline" mode="add" module="tei" predeclare="false">
+          <content autoPrefix="true">
+            <alternate minOccurs="1" maxOccurs="1">
+              <macroRef key="hdr.inlineCore" />
+              <elementRef key="quote" minOccurs="1" maxOccurs="1" />
+            </alternate>
+          </content>
+        </macroSpec>
+        <moduleSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" n="CO" xml:id="DCO" ident="core" />
+        <moduleSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" n="HD" xml:id="DHD" ident="header" />
+        <moduleSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" n="DS" xml:id="DDS" ident="textstructure" />
+        <moduleSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" n="WD" xml:id="DWD" ident="gaiji" />
+        <moduleSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" n="PH" xml:id="DPH" ident="transcr" />
+        <moduleSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" n="SA" xml:id="DSA" ident="linking" />
+        <moduleSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" n="AI" xml:id="DAI" ident="analysis" />
+        <moduleSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" n="ST" xml:id="DSTTEI2" ident="tei" type="core" />
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
