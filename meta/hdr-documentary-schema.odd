@@ -186,7 +186,6 @@
             <attDef ident="rendition" mode="replace" usage="opt">
               <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="closed">
-<<<<<<< HEAD
                 <valItem ident="#antiqua">
                   <gloss xml:lang="de">Antiqua</gloss>
                   <desc xml:lang="de">In Antiqua gesetzter Drucktext</desc>
@@ -231,19 +230,6 @@
                   <gloss xml:lang="de">[Glosse: p/@rendition = #undefined]</gloss>
                   <desc xml:lang="de">[Beschreibung: p/@rendition = #undefined]</desc>
                 </valItem>
-=======
-                <valItem ident="#antiqua"/>
-                <valItem ident="#black-letter"/>
-                <valItem ident="#bold"/>
-                <valItem ident="#center"/>
-                <valItem ident="#crosshead"/>
-                <valItem ident="#handwritten"/>
-                <valItem ident="#indent"/>
-                <valItem ident="#kurrent"/>
-                <valItem ident="#latin"/>
-                <valItem ident="#left"/>
-                <valItem ident="#undefined"/>
->>>>>>> d720f3a (minor)
                 <!-- add more values -->
               </valList>
             </attDef>
@@ -264,7 +250,6 @@
             <attDef ident="rendition" mode="replace" usage="req">
               <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="open">
-<<<<<<< HEAD
                 <valItem ident="#bold">
                   <gloss xml:lang="de">Fettdruck</gloss>
                   <desc xml:lang="de">Hervorhebung durch Fettdruck</desc>
@@ -281,12 +266,6 @@
                   <gloss xml:lang="de">Unterstreichung</gloss>
                   <desc xml:lang="de">Hervorhebung / Markierung durch Unterstreichung</desc>
                 </valItem>
-=======
-                <valItem ident="#bold"/>
-                <valItem ident="#latin"/>
-                <valItem ident="#letter-spacing"/>
-                <valItem ident="#underline"/>
->>>>>>> d720f3a (minor)
               </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
@@ -1278,14 +1257,10 @@
             <attDef ident="rendition" mode="replace" usage="req">
               <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="open">
-<<<<<<< HEAD
                 <valItem ident="#underline">
                   <gloss xml:lang="de">[Glosse: mod/@rendition = #underline]</gloss>
                   <desc xml:lang="de">[Beschreibung: mod/@rendition = #underline]</desc>
                 </valItem>
-=======
-                <valItem ident="#underline"/>
->>>>>>> d720f3a (minor)
               </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
@@ -1351,7 +1326,6 @@
             <attDef ident="rendition" mode="replace" usage="opt">
               <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="open">
-<<<<<<< HEAD
                 <valItem ident="#dotted-underline">
                   <gloss xml:lang="de">[Glosse: undo/@rendition = #dotted-underline]</gloss>
                   <desc xml:lang="de">[Beschreibung: undo/@rendition = #dotted-underline]</desc>
@@ -1364,11 +1338,6 @@
                   <gloss xml:lang="de">[Glosse: undo/@rendition = #wavy-line]</gloss>
                   <desc xml:lang="de">[Beschreibung: undo/@rendition = #wavy-line]</desc>
                 </valItem>
-=======
-                <valItem ident="#dotted-underline"/>
-                <valItem ident="#strike-out"/>
-                <valItem ident="#wavy-line"/>
->>>>>>> d720f3a (minor)
               </valList>
             </attDef>
             <attDef ident="spanTo" mode="replace" usage="req">
@@ -1424,7 +1393,6 @@
             <attDef ident="change" mode="replace" usage="opt">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
-<<<<<<< HEAD
             <attDef ident="rendition" mode="replace" usage="opt">
               <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="open">
@@ -1434,8 +1402,6 @@
                 </valItem>
               </valList>
             </attDef>
-=======
->>>>>>> d720f3a (minor)
             <attDef ident="rendition" mode="replace" usage="opt">
               <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="open">
