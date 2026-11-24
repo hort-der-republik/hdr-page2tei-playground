@@ -67,8 +67,10 @@
         <elementSpec ident="teiHeader" module="header" mode="change">
           <classes mode="replace"/>
           <content>
+            <sequence>
             <elementRef key="fileDesc"/>
             <elementRef key="profileDesc"/>
+            </sequence>
           </content>
         </elementSpec>
           
@@ -198,13 +200,13 @@
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
           </content>
           <attList>
-            <attDef ident="rend" mode="replace" usage="req">
-              <datatype><dataRef name="NCName"/></datatype>
+            <attDef ident="rendition" mode="replace" usage="req">
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="open">
-                <valItem ident="bold"/>
-                <valItem ident="latin"/>
-                <valItem ident="letter-spacing"/>
-                <valItem ident="underline"/>
+                <valItem ident="#bold"/>
+                <valItem ident="#latin"/>
+                <valItem ident="#letter-spacing"/>
+                <valItem ident="#underline"/>
               </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
@@ -536,8 +538,8 @@
             <attDef ident="facs" mode="replace" usage="req">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
-            <attDef ident="rend" mode="replace" usage="opt">
-              <datatype><dataRef name="string"/></datatype>
+            <attDef ident="rendition" mode="replace" usage="opt">
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
@@ -952,10 +954,10 @@
             <attDef ident="change" mode="replace" usage="opt">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
-            <attDef ident="rend" mode="replace" usage="req">
-              <datatype><dataRef name="NCName"/></datatype>
+            <attDef ident="rendition" mode="replace" usage="req">
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="open">
-                <valItem ident="underline"/>
+                <valItem ident="#underline"/>
               </valList>
             </attDef>
             <attDef ident="xml:id" mode="replace" usage="opt">
@@ -1009,12 +1011,12 @@
             <attDef ident="change" mode="replace" usage="opt">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
-            <attDef ident="rend" mode="replace" usage="opt">
-              <datatype><dataRef name="NCName"/></datatype>
+            <attDef ident="rendition" mode="replace" usage="opt">
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="open">
-                <valItem ident="dotted-underline"/>
-                <valItem ident="strike-out"/>
-                <valItem ident="wavy-line"/>
+                <valItem ident="#dotted-underline"/>
+                <valItem ident="#strike-out"/>
+                <valItem ident="#wavy-line"/>
               </valList>
             </attDef>
             <attDef ident="spanTo" mode="replace" usage="req">
@@ -1060,10 +1062,10 @@
             <attDef ident="change" mode="replace" usage="opt">
               <datatype><dataRef name="string"/></datatype>
             </attDef>
-            <attDef ident="rend" mode="replace" usage="opt">
-              <datatype><dataRef name="NCName"/></datatype>
+            <attDef ident="rendition" mode="replace" usage="opt">
+              <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="open">
-                <valItem ident="encircled"/>
+                <valItem ident="#encircled"/>
               </valList>
             </attDef>
             <attDef ident="rendition" mode="replace" usage="opt">
