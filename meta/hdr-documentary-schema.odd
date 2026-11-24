@@ -176,6 +176,7 @@
               <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
               <valList type="closed">
                 <valItem ident="#antiqua"/>
+                <valItem ident="#black-letter"/>
                 <valItem ident="#bold"/>
                 <valItem ident="#center"/>
                 <valItem ident="#crosshead"/>
