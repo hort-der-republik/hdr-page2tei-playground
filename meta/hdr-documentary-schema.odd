@@ -135,6 +135,8 @@
         </elementSpec>
         
         <elementSpec ident="listChange" module="header" mode="change">
+          <gloss xml:lang="de">Liste von Überarbeitungsschritten</gloss>
+          <desc xml:lang="de">Enthält die am Quelldokument oder an dessen digitaler Repräsentation durchgeführten Überarbeitungsschritte.</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded">
@@ -146,7 +148,7 @@
         
         <elementSpec ident="p" module="core" mode="change">
           <gloss xml:lang="de">Absatz</gloss>
-          <desc xml:lang="de">Formal/visuell und semantisch abgesetzte Einheit</desc>
+          <desc xml:lang="de">Formal/visuell und semantisch abgesetzter Textabschnitt.</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
@@ -171,15 +173,15 @@
               <valList type="closed">
                 <valItem ident="I">
                   <gloss xml:lang="de">Initial</gloss>
-                  <desc xml:lang="de">Erster Abschnitt eines geteilten Absatzes</desc>
+                  <desc xml:lang="de">Erster Abschnitt eines geteilten Absatzes.</desc>
                 </valItem>
                 <valItem ident="F">
                   <gloss xml:lang="de">Final</gloss>
-                  <desc xml:lang="de">Letzter Abschnitt eines geteilten Absatzes</desc>
+                  <desc xml:lang="de">Letzter Abschnitt eines geteilten Absatzes.</desc>
                 </valItem>
                 <valItem ident="M">
                   <gloss xml:lang="de">Mittig</gloss>
-                  <desc xml:lang="de">Mittlerer Abschnitt eines geteilten Absatzes</desc>
+                  <desc xml:lang="de">Mittlerer Abschnitt eines geteilten Absatzes.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -188,43 +190,43 @@
               <valList type="closed">
                 <valItem ident="#antiqua">
                   <gloss xml:lang="de">Antiqua</gloss>
-                  <desc xml:lang="de">In Antiqua gesetzter Drucktext</desc>
+                  <desc xml:lang="de">In Antiqua gesetzter Drucktext.</desc>
                 </valItem>
                 <valItem ident="#black-letter">
                   <gloss xml:lang="de">Fraktur</gloss>
-                  <desc xml:lang="de">In Fraktur gesetzter Drucktext</desc>
+                  <desc xml:lang="de">In Fraktur gesetzter Drucktext.</desc>
                 </valItem>
                 <valItem ident="#bold">
                   <gloss xml:lang="de">Fettdruck</gloss>
-                  <desc xml:lang="de">In Fettdruck gesetzter Drucktext</desc>
+                  <desc xml:lang="de">In Fettdruck gesetzter Drucktext.</desc>
                 </valItem>
                 <valItem ident="#center">
                   <gloss xml:lang="de">Zentriert</gloss>
-                  <desc xml:lang="de">Zentriert gesetzter Text</desc>
+                  <desc xml:lang="de">Zentriert gesetzter Text.</desc>
                 </valItem>
                 <valItem ident="#handwritten">
                   <gloss xml:lang="de">Handgeschrieben</gloss>
-                  <desc xml:lang="de">Handgeschriebener Text</desc><!-- Streichkandidat -->
+                  <desc xml:lang="de">Handgeschriebener Text.</desc><!-- Streichkandidat -->
                 </valItem>
                 <valItem ident="#indent">
                   <gloss xml:lang="de">Einzug der ersten Zeile</gloss>
-                  <desc xml:lang="de">Absatz mit Einzug der ersten Zeile</desc>
+                  <desc xml:lang="de">Absatz mit Einzug der ersten Zeile.</desc>
                 </valItem>
                 <valItem ident="#kurrent">
                   <gloss xml:lang="de">Kurrent</gloss>
-                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift</desc>
+                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift.</desc>
                 </valItem>
                 <valItem ident="#latin">
                   <gloss xml:lang="de">Lateinschrift</gloss>
-                  <desc xml:lang="de">Handschriftlicher Text in Lateinschrift</desc>
+                  <desc xml:lang="de">Handschriftlicher Text in Lateinschrift.</desc>
                 </valItem>
                 <valItem ident="#left">
                   <gloss xml:lang="de">Abstand links</gloss>
-                  <desc xml:lang="de">Absatz mit erhöhtem Randabstand links</desc>
+                  <desc xml:lang="de">Absatz mit erhöhtem Randabstand links.</desc>
                 </valItem>
                 <valItem ident="#undefined">
                   <gloss xml:lang="de">undefiniert</gloss>
-                  <desc xml:lang="de">undefiniert</desc>
+                  <desc xml:lang="de">undefiniert.</desc>
                 </valItem>
                 <!-- add more values -->
               </valList>
@@ -237,7 +239,7 @@
         
         <elementSpec ident="hi" module="core" mode="change">
           <gloss xml:lang="de">Hervorhebung</gloss>
-          <desc xml:lang="de">Hervorgehobene oder visuell unterschiedene Passage</desc>
+          <desc xml:lang="de">Hervorgehobene oder visuell unterschiedene Passage.</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
@@ -248,19 +250,19 @@
               <valList type="open">
                 <valItem ident="#bold">
                   <gloss xml:lang="de">Fettdruck</gloss>
-                  <desc xml:lang="de">Hervorhebung durch Fettdruck</desc>
+                  <desc xml:lang="de">Hervorhebung durch Fettdruck.</desc>
                 </valItem>
                 <valItem ident="#latin">
                   <gloss xml:lang="de">Lateinschrift</gloss>
-                  <desc xml:lang="de">Passage in Lateinschrift (im Kontext von z. B. kurrent)</desc>
+                  <desc xml:lang="de">Passage in Lateinschrift (im Kontext von z. B. kurrent).</desc>
                 </valItem>
                 <valItem ident="#letter-spacing">
                   <gloss xml:lang="de">Spationierung</gloss>
-                  <desc xml:lang="de">Hervorhebung durch erhöhten Zeichenabstand</desc>
+                  <desc xml:lang="de">Hervorhebung durch erhöhten Zeichenabstand.</desc>
                 </valItem>
                 <valItem ident="#underline">
                   <gloss xml:lang="de">Unterstreichung</gloss>
-                  <desc xml:lang="de">Hervorhebung / Markierung durch Unterstreichung</desc>
+                  <desc xml:lang="de">Hervorhebung / Markierung durch Unterstreichung.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -310,11 +312,11 @@
               <valList type="closed">
                 <valItem ident="emen">
                   <gloss xml:lang="de">Emendation</gloss>
-                  <desc xml:lang="de">Korrigierender Eingriff des Editionsteams</desc>
+                  <desc xml:lang="de">Korrigierender Eingriff des Editionsteams.</desc>
                 </valItem>
                 <valItem ident="norm">
                   <gloss xml:lang="de">Normierung</gloss>
-                  <desc xml:lang="de">Normierender Eingriff des Editionsteams</desc>
+                  <desc xml:lang="de">Normierender Eingriff des Editionsteams.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -367,11 +369,11 @@
               <valList type="open">
                 <valItem ident="cut">
                   <gloss xml:lang="de">Schnitt</gloss>
-                  <desc xml:lang="de">Lacuna auf Grund von Beschneidung des Trägers</desc>
+                  <desc xml:lang="de">Lacuna auf Grund von Beschneidung des Trägers.</desc>
                 </valItem>
                 <valItem ident="illegible">
                   <gloss xml:lang="de">Unleserlich</gloss>
-                  <desc xml:lang="de">Lacuna auf Grund von Unleserlichkeit</desc>
+                  <desc xml:lang="de">Lacuna auf Grund von Unleserlichkeit.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -418,19 +420,19 @@
               <valList type="open">
                 <valItem ident="#antiqua">
                   <gloss xml:lang="de">Antiqua</gloss>
-                  <desc xml:lang="de">In Antiqua gesetzter Drucktext</desc>
+                  <desc xml:lang="de">In Antiqua gesetzter Drucktext.</desc>
                 </valItem>
                 <valItem ident="#kurrent">
                   <gloss xml:lang="de">Kurrent</gloss>
-                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift</desc>
+                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift.</desc>
                 </valItem>
                 <valItem ident="#latin">
                   <gloss xml:lang="de">Lateinschrift</gloss>
-                  <desc xml:lang="de">Handschriftlicher Text in Lateinschrift</desc>
+                  <desc xml:lang="de">Handschriftlicher Text in Lateinschrift.</desc>
                 </valItem>
                 <valItem ident="#rotate270">
                   <gloss xml:lang="de">Rotation nach links</gloss>
-                  <desc xml:lang="de">Rotation um 270° im Uhrzeigersinn</desc>
+                  <desc xml:lang="de">Rotation um 270° im Uhrzeigersinn.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -454,7 +456,7 @@
               <valList type="open">
                 <valItem ident="implicit">
                   <gloss xml:lang="de">implizit</gloss>
-                  <desc xml:lang="de">Streichung, die z. B. grammatikalisch nötig ist, aber nicht durchgeführt wurde (womöglich aufgrund einer Konvention/Gewohnheit)</desc>
+                  <desc xml:lang="de">Streichung, die z. B. grammatikalisch nötig ist, aber nicht durchgeführt wurde (womöglich aufgrund einer Konvention/Gewohnheit).</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -463,7 +465,7 @@
               <valList type="open">
                 <valItem ident="deselection">
                   <gloss xml:lang="de">Aussonderung</gloss>
-                  <desc xml:lang="de">Aussonderung einer Passage im Selektionsprozess - ‚De-Selektion‘</desc>
+                  <desc xml:lang="de">Aussonderung einer Passage im Selektionsprozess - ‚De-Selektion‘.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -504,6 +506,8 @@
         </elementSpec>
         
         <elementSpec ident="ptr" module="core" mode="change">
+          <gloss xml:lang="de">Pointer</gloss>
+          <desc xml:lang="de">Enthält einen Verweis auf eine andere Stelle.</desc>
           <classes mode="replace"/>
           <content>
             <empty/>
@@ -535,19 +539,19 @@
               <valList type="closed">
                 <valItem ident="#black-letter">
                   <gloss xml:lang="de">Fraktur</gloss>
-                  <desc xml:lang="de">In Fraktur gesetzter Drucktext</desc>
+                  <desc xml:lang="de">In Fraktur gesetzter Drucktext.</desc>
                 </valItem>
                 <valItem ident="#bold">
                   <gloss xml:lang="de">Fettdruck</gloss>
-                  <desc xml:lang="de">In Fettdruck gesetzter Titel</desc>
+                  <desc xml:lang="de">In Fettdruck gesetzter Titel.</desc>
                 </valItem>
                 <valItem ident="#center">
                   <gloss xml:lang="de">Zentriert</gloss>
-                  <desc xml:lang="de">Zentriert gesetzter Titel</desc>
+                  <desc xml:lang="de">Zentriert gesetzter Titel.</desc>
                 </valItem>
                 <valItem ident="#large">
                   <gloss xml:lang="de">Schriftgröße erhöht</gloss>
-                  <desc xml:lang="de">In größerer Type gesetzter Titel</desc>
+                  <desc xml:lang="de">In größerer Type gesetzter Titel.</desc>
                 </valItem>
                 <!-- add more values -->
               </valList>
@@ -557,11 +561,11 @@
               <valList type="open">
                 <valItem ident="main">
                   <gloss xml:lang="de">Hauptüberschrift</gloss>
-                  <desc xml:lang="de">Hauptsächliche Überschrift eines Texts im Gegensatz zu Unterüberschriften oder Zwischenüberschriften</desc>
+                  <desc xml:lang="de">Hauptsächliche Überschrift eines Texts im Gegensatz zu Unterüberschriften oder Zwischenüberschriften.</desc>
                 </valItem>
                 <valItem ident="sub">
                   <gloss xml:lang="de">Unterüberschrift</gloss>
-                  <desc xml:lang="de">[Beschreibung: head/@type = sub]</desc>
+                  <desc xml:lang="de">[Beschreibung: head/@type = sub].</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -603,7 +607,7 @@
               <valList type="open">
                 <valItem ident="no">
                   <gloss xml:lang="de">Zeilenumbruch ohne Worttrennung</gloss>
-                  <desc xml:lang="de">Meist durch Trennstrich angezeigte Worttrennung am Zeilenende</desc>
+                  <desc xml:lang="de">Meist durch Trennstrich angezeigte Worttrennung am Zeilenende.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -623,6 +627,8 @@
         </elementSpec>
         
         <elementSpec ident="cb" module="core" mode="change">
+          <gloss xml:lang="de">Spaltenbeginn</gloss>
+          <desc xml:lang="de">Markiert den Beginn einer neuen Spalte auf einer Seite mit mehrspaltigem Layout.</desc>
           <classes mode="replace"/>
           <content>
             <empty/>
@@ -707,6 +713,7 @@
         </elementSpec>
         
         <elementSpec ident="text" module="textstructure" mode="change">
+          <gloss xml:lang="de">Text</gloss>
           <classes mode="replace"/>
           <content>
             <elementRef key="body"/>
@@ -760,17 +767,17 @@
             <attDef ident="part" mode="replace" usage="opt">
               <datatype><dataRef name="NCName"/></datatype>
               <valList type="closed">
+                <valItem ident="I">
+                  <gloss xml:lang="de">Initial</gloss>
+                  <desc xml:lang="de">Erster Teil eines geteilten Textabschnitts.</desc>
+                </valItem>
                 <valItem ident="F">
-                  <gloss xml:lang="de">[Glosse: div/@part = F]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@part = F]</desc>
+                  <gloss xml:lang="de">Final</gloss>
+                  <desc xml:lang="de">Letzter Teil eines geteilten Textabschnitts.</desc>
                 </valItem>
                 <valItem ident="M">
-                  <gloss xml:lang="de">[Glosse: div/@part = M]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@part = M]</desc>
-                </valItem>
-                <valItem ident="I">
-                  <gloss xml:lang="de">[Glosse: div/@part = I]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@part = I]</desc>
+                  <gloss xml:lang="de">Mittig</gloss>
+                  <desc xml:lang="de">Mittlerer Teil eines geteilten Textabschnitts.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -781,32 +788,30 @@
               <datatype><dataRef name="NCName"/></datatype>
               <valList type="open">
                 <valItem ident="add-block">
-                  <gloss xml:lang="de">[Glosse: div/@type = add-block]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@type = add-block]</desc>
+                  <gloss xml:lang="de">Umfangreiche Ergänzung</gloss>
+                  <desc xml:lang="de">Umfangreiche Ergänzung (über Textblock-Grenzen hinweg).</desc>
                 </valItem>
                 <valItem ident="advertisement">
-                  <gloss xml:lang="de">[Glosse: div/@type = advertisement]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@type = advertisement]</desc>
+                  <gloss xml:lang="de">Werbeanzeige</gloss>
                 </valItem>
                 <valItem ident="article">
-                  <gloss xml:lang="de">[Glosse: div/@type = article]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@type = article]</desc>
+                  <gloss xml:lang="de">Artikel (Text)</gloss>
+                  <desc xml:lang="de">Zusammenhängender Text in einer Zeitschrift, einer Zeitung oder einer anderen Publikation.</desc>
                 </valItem>
                 <valItem ident="newspaper-clipping">
-                  <gloss xml:lang="de">[Glosse: div/@type = newspaper-clipping]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@type = newspaper-clipping]</desc>
+                  <gloss xml:lang="de">Zeitungsausschnitt</gloss>
+                  <desc xml:lang="de">Zeitungsausschnitt / Teil einer Zeitungsseite.</desc>
                 </valItem>
                 <valItem ident="notepad-paper">
-                  <gloss xml:lang="de">[Glosse: div/@type = notepad-paper]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@type = notepad-paper]</desc>
+                  <gloss xml:lang="de">Konzeptpapier</gloss>
+                  <desc xml:lang="de">Konzeptpapier (Oktavformat).</desc>
                 </valItem>
                 <valItem ident="print-proof">
-                  <gloss xml:lang="de">[Glosse: div/@type = print-proof]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@type = print-proof]</desc>
+                  <gloss xml:lang="de">Druckfahne</gloss>
+                  <desc xml:lang="de">Fahnenabzug zur Korrektur.</desc>
                 </valItem>
                 <valItem ident="print-publ">
-                  <gloss xml:lang="de">[Glosse: div/@type = print-publ]</gloss>
-                  <desc xml:lang="de">[Beschreibung: div/@type = print-publ]</desc>
+                  <gloss xml:lang="de">Publizierte Textstufe</gloss>
                 </valItem>
               </valList>
             </attDef>
@@ -838,6 +843,8 @@
         </elementSpec>
         
         <elementSpec ident="dateline" module="textstructure" mode="change">
+          <gloss xml:lang="de">Datumszeile</gloss>
+          <desc xml:lang="de">Enthält Datum und ggf. Entstehungsort etwa eines Zeitungsartikels.</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inlineCore"/></alternate>
@@ -859,6 +866,8 @@
         </elementSpec>
         
         <elementSpec ident="g" module="gaiji" mode="change">
+          <gloss xml:lang="de">Glyphe / Zeichen</gloss>
+          <desc xml:lang="de">Repräsentiert eine Glyphe bzw. ein Zeichen außerhalb gängiger Codierungen.</desc>
           <classes mode="replace"/>
           <content>
             <empty/>
@@ -868,24 +877,19 @@
               <datatype><dataRef name="string"/></datatype>
               <valList type="open">
                 <valItem ident="#deleatur">
-                  <gloss xml:lang="de">[Glosse: g/@ref = #deleatur]</gloss>
-                  <desc xml:lang="de">[Beschreibung: g/@ref = #deleatur]</desc>
+                  <gloss xml:lang="de">Deleatur-Zeichen</gloss>
                 </valItem>
                 <valItem ident="#intervention">
-                  <gloss xml:lang="de">[Glosse: g/@ref = #intervention]</gloss>
-                  <desc xml:lang="de">[Beschreibung: g/@ref = #intervention]</desc>
+                  <gloss xml:lang="de">Korrekturzeichen</gloss>
                 </valItem>
                 <valItem ident="#kerning">
-                  <gloss xml:lang="de">[Glosse: g/@ref = #kerning]</gloss>
-                  <desc xml:lang="de">[Beschreibung: g/@ref = #kerning]</desc>
+                  <gloss xml:lang="de">Korrekturzeichen ‚Zeichenabstand verringern‘</gloss>
                 </valItem>
                 <valItem ident="#relocation">
-                  <gloss xml:lang="de">[Glosse: g/@ref = #relocation]</gloss>
-                  <desc xml:lang="de">[Beschreibung: g/@ref = #relocation]</desc>
+                  <gloss xml:lang="de">Korrekturzeichen ‚Verschieben‘</gloss>
                 </valItem>
                 <valItem ident="#transposition">
-                  <gloss xml:lang="de">[Glosse: g/@ref = #transposition]</gloss>
-                  <desc xml:lang="de">[Beschreibung: g/@ref = #transposition]</desc>
+                  <gloss xml:lang="de">Korrekturzeichen ‚Transposition‘</gloss>
                 </valItem>
               </valList>
             </attDef>
@@ -896,6 +900,8 @@
         </elementSpec>
         
         <elementSpec ident="facsimile" module="transcr" mode="change">
+          <gloss xml:lang="de">Faksimile</gloss>
+          <desc xml:lang="de">Visuelle Repräsentation eines Textträgers.</desc>
           <classes mode="replace"/>
           <content>
             <sequence>
@@ -911,6 +917,8 @@
         </elementSpec>
         
         <elementSpec ident="surface" module="transcr" mode="change">
+          <gloss xml:lang="de">Oberfläche</gloss>
+          <desc xml:lang="de">Oberfläche eines Textträgers (meist von einem Faksimile oder Teil eines Faksimiles repräsentiert).</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="0" maxOccurs="unbounded">
@@ -948,6 +956,8 @@
         </elementSpec>
         
         <elementSpec ident="zone" module="transcr" mode="change">
+          <gloss xml:lang="de">Zone</gloss>
+          <desc xml:lang="de">Region innerhalb der Oberfläche eines Textträgers.</desc>
           <classes mode="replace"/>
           <content>
             <elementRef key="zone" minOccurs="0" maxOccurs="unbounded"/>
@@ -965,8 +975,8 @@
         </elementSpec>
         
         <elementSpec ident="delSpan" module="transcr" mode="change">
-          <gloss xml:lang="de">[Glosse: delSpan]</gloss>
-          <desc xml:lang="de">[Beschreibung: delSpan]</desc>
+          <gloss xml:lang="de">Getilgte Textpassage</gloss>
+          <desc xml:lang="de">Markiert den Anfang einer (längeren) getilgten Textpassage.</desc>
           <classes mode="replace"/>
           <content>
             <empty/>
@@ -982,8 +992,8 @@
               <datatype><dataRef name="NCName"/></datatype>
               <valList type="open">
                 <valItem ident="deselection">
-                  <gloss xml:lang="de">[Glosse: delSpan/@type = deselection]</gloss>
-                  <desc xml:lang="de">[Beschreibung: delSpan/@type = deselection]</desc>
+                  <gloss xml:lang="de">Aussonderung</gloss>
+                  <desc xml:lang="de">Aussonderung einer Passage im Selektionsprozess - ‚De-Selektion‘.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -994,8 +1004,8 @@
         </elementSpec>
         
         <elementSpec ident="fw" module="transcr" mode="change">
-          <gloss xml:lang="de">[Glosse: fw]</gloss>
-          <desc xml:lang="de">[Beschreibung: fw]</desc>
+          <gloss xml:lang="de">Beiwerk</gloss>
+            <desc xml:lang="de">Enthält Elemente wie Kolumnentitel (Kopf- oder Fußzeile), Seiten- oder Blattzählung oder andere Nummerierungen, Kustoden, etc.</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
@@ -1012,15 +1022,15 @@
               <valList type="closed">
                 <valItem ident="#kurrent">
                   <gloss xml:lang="de">Kurrent</gloss>
-                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift</desc>
+                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift.</desc>
                 </valItem>
                 <valItem ident="#latin">
                   <gloss xml:lang="de">Lateinschrift</gloss>
-                  <desc xml:lang="de">Handschriftlicher Text in Lateinschrift</desc>
+                  <desc xml:lang="de">Handschriftlicher Text in Lateinschrift.</desc>
                 </valItem>
                 <valItem ident="#black-letter">
                   <gloss xml:lang="de">Fraktur</gloss>
-                  <desc xml:lang="de">In Fraktur gesetzter Drucktext</desc>
+                  <desc xml:lang="de">In Fraktur gesetzter Drucktext.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1029,11 +1039,11 @@
               <valList type="open">
                 <valItem ident="fol">
                   <gloss xml:lang="de">Foliierung</gloss>
-                  <desc xml:lang="de">Nummerierung zur Foliierung des Blattes</desc>
+                  <desc xml:lang="de">Nummerierung zur Foliierung des Blattes.</desc>
                 </valItem>
                 <valItem ident="order">
                   <gloss xml:lang="de">Anordnung</gloss>
-                  <desc xml:lang="de">Nummerierung zur Herstellung einer Ordnung unter den Elementen der Zitatmontage</desc>
+                  <desc xml:lang="de">Nummerierung zur Herstellung einer Ordnung unter den Elementen der Zitatmontage.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1047,6 +1057,8 @@
         </elementSpec>
         
         <elementSpec ident="subst" module="transcr" mode="change">
+          <gloss xml:lang="de">Substitution</gloss>
+          <desc xml:lang="de">Ersetzung, bestehend aus einer oder mehreren Tilgungen und einer oder mehreren Ergänzungen, die als zusammengehörig erachtet werden.</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="0" maxOccurs="unbounded">
@@ -1065,6 +1077,8 @@
         </elementSpec>
         
         <elementSpec ident="listTranspose" module="transcr" mode="change">
+          <gloss xml:lang="de">Liste von Transpositionen</gloss>
+          <desc xml:lang="de">Enthält eine Liste der im Text durchgeführten Transpositionen.</desc>
           <classes mode="replace"/>
           <content>
             <elementRef key="transpose"/>
@@ -1077,6 +1091,8 @@
         </elementSpec>
         
         <elementSpec ident="metamark" module="transcr" mode="change">
+          <gloss xml:lang="de">Markierung</gloss>
+          <desc xml:lang="de">Außerhalb des Textflusses, stellt einen Eingriff im Sinne einer Angabe für die Lektüre oder Verarbeitung des Textes dar.</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
@@ -1093,71 +1109,71 @@
               <valList type="closed">
                 <valItem ident="addition">
                   <gloss xml:lang="de">Ergänzung</gloss>
-                  <desc xml:lang="de">Markierung zur Einfügung von ergänztem Text</desc>
+                  <desc xml:lang="de">Markierung zur Einfügung von ergänztem Text.</desc>
                 </valItem>
                 <valItem ident="deletion">
                   <gloss xml:lang="de">Tilgung</gloss>
-                  <desc xml:lang="de">Markierung, die eine zu tilgende Stelle anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die eine zu tilgende Stelle anzeigt.</desc>
                 </valItem>
                 <valItem ident="font">
                   <gloss xml:lang="de">Drucktype</gloss>
-                  <desc xml:lang="de">Markierung zur Angabe der Drucktype</desc>
+                  <desc xml:lang="de">Markierung zur Angabe der Drucktype.</desc>
                 </valItem>
                 <valItem ident="insertion">
                   <gloss xml:lang="de">Einfügung</gloss>
-                  <desc xml:lang="de">Markierung, die den Ort einer Einfügung anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die den Ort einer Einfügung anzeigt.</desc>
                 </valItem>
                 <valItem ident="intervention">
                   <gloss xml:lang="de">Eingriff</gloss>
-                  <desc xml:lang="de">Markierung, die einen Eingriff anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die einen Eingriff anzeigt.</desc>
                 </valItem>
                 <valItem ident="kerning">
                   <gloss xml:lang="de">Zeichenabstand verringern</gloss>
-                  <desc xml:lang="de">Markierung, die zu großen Zeichenabstand anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die zu großen Zeichenabstand anzeigt.</desc>
                 </valItem>
                 <valItem ident="letter-spacing">
                   <gloss xml:lang="de">Spationierung</gloss>
-                  <desc xml:lang="de">Markierung, die anzubringende Spationierung anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die anzubringende Spationierung anzeigt.</desc>
                 </valItem>
                 <valItem ident="line-spacing">
                   <gloss xml:lang="de">Zeilenabstand</gloss>
-                  <desc xml:lang="de">Markierung, die zu erhöhenden Zeilenabstand anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die zu erhöhenden Zeilenabstand anzeigt.</desc>
                 </valItem>
                 <valItem ident="no-spacing">
                   <gloss xml:lang="de">Spationierung entfernen</gloss>
-                  <desc xml:lang="de">Markierung, die zu entfernende Spationierung anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die zu entfernende Spationierung anzeigt.</desc>
                 </valItem>
                 <valItem ident="paragraph">
                   <gloss xml:lang="de">Absatz</gloss>
-                  <desc xml:lang="de">Markierung, die Beginn eines neuen Absatzes anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die Beginn eines neuen Absatzes anzeigt.</desc>
                 </valItem>
                 <valItem ident="print-instruction">
                   <gloss xml:lang="de">Druckanweisung</gloss>
-                  <desc xml:lang="de">Markierung mit Druckanweisung</desc>
+                  <desc xml:lang="de">Markierung mit Druckanweisung.</desc>
                 </valItem>
                 <valItem ident="relocation">
                   <gloss xml:lang="de">Verschiebung</gloss>
-                  <desc xml:lang="de">Markierung, die das Ziel einer Verschiebung anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die das Ziel einer Verschiebung anzeigt.</desc>
                 </valItem>
                 <valItem ident="selection">
                   <gloss xml:lang="de">Selektion</gloss>
-                  <desc xml:lang="de">Markierung, die ausgewählte Textpassage angibt</desc>
+                  <desc xml:lang="de">Markierung, die ausgewählte Textpassage angibt.</desc>
                 </valItem>
                 <valItem ident="selection-end">
                   <gloss xml:lang="de">Ende der Selektion</gloss>
-                  <desc xml:lang="de">Markierung, die das Ende einer ausgewählten Textpassage anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die das Ende einer ausgewählten Textpassage anzeigt.</desc>
                 </valItem>
                 <valItem ident="selection-start">
                   <gloss xml:lang="de">Beginn der Selektion</gloss>
-                  <desc xml:lang="de">Markierung, die den Beginn einer ausgewählten Textpassage anzeigt</desc>
+                  <desc xml:lang="de">Markierung, die den Beginn einer ausgewählten Textpassage anzeigt.</desc>
                 </valItem>
                 <valItem ident="transposition">
                   <gloss xml:lang="de">Transposition</gloss>
-                  <desc xml:lang="de">Markierung, die die Vertauschung zweier Textpassagen angibt</desc>
+                  <desc xml:lang="de">Markierung, die die Vertauschung zweier Textpassagen angibt.</desc>
                 </valItem>
                 <valItem ident="unknown">
                   <gloss xml:lang="de">Unbekannt</gloss>
-                  <desc xml:lang="de">Markierung mit unbekanntem Zweck</desc>
+                  <desc xml:lang="de">Markierung mit unbekanntem Zweck.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1166,11 +1182,11 @@
               <valList type="closed">
                 <valItem ident="#kurrent">
                   <gloss xml:lang="de">Kurrent</gloss>
-                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift</desc>
+                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift.</desc>
                 </valItem>
                 <valItem ident="#latin">
                   <gloss xml:lang="de">Lateinschrift</gloss>
-                  <desc xml:lang="de">Handschriftlicher Text in Lateinschrift</desc>
+                  <desc xml:lang="de">Handschriftlicher Text in Lateinschrift.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1187,6 +1203,8 @@
         </elementSpec>
         
         <elementSpec ident="mod" module="transcr" mode="change">
+          <gloss xml:lang="de">Änderung</gloss>
+          <desc xml:lang="de">Weist eine zu ändernde Textstelle aus.</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
@@ -1200,7 +1218,7 @@
               <valList type="open">
                 <valItem ident="#underline">
                   <gloss xml:lang="de">Unterstreichung</gloss>
-                  <desc xml:lang="de">Bezeichnung des zu modifizierenden Texts durch Unterstreichung</desc>
+                  <desc xml:lang="de">Bezeichnung des zu modifizierenden Texts durch Unterstreichung.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1211,6 +1229,8 @@
         </elementSpec>
         
         <elementSpec ident="retrace" module="transcr" mode="change">
+          <gloss xml:lang="de">Nachgezogener Text</gloss>
+          <desc xml:lang="de">Text, der in einem weiteren Überarbeitungsschritt zum Zweck etwa der Verdeutlichung nachgezogen wurde.</desc>
           <classes mode="replace"/>
           <content>
             <alternate minOccurs="1" maxOccurs="unbounded"><macroRef key="hdr.inline"/></alternate>
@@ -1224,7 +1244,7 @@
               <valList type="open">
                 <valItem ident="#kurrent">
                   <gloss xml:lang="de">Kurrent</gloss>
-                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift</desc>
+                  <desc xml:lang="de">Handschriftlicher Text in Kurrentschrift.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1235,6 +1255,8 @@
         </elementSpec>
         
         <elementSpec ident="transpose" module="transcr" mode="change">
+          <gloss xml:lang="de">Transposition</gloss>
+          <desc xml:lang="de">Enthält die Angaben zur intendierten neuen Reihenfolge von transponierten Textteilen.</desc>
           <classes mode="replace"/>
           <content>
             <sequence>
@@ -1250,6 +1272,8 @@
         </elementSpec>
         
         <elementSpec ident="undo" module="transcr" mode="change">
+          <gloss xml:lang="de">Rücknahme eines Eingriffs</gloss>
+          <desc xml:lang="de">Weist in irgendeiner Form (Streichung einer Markierung, gepunktete Unterstreichung einer Tilgung) die Rücknahme eines oder mehrere Eingriffe in den Text aus.</desc>
           <classes mode="replace"/>
           <content>
             <empty/>
@@ -1263,15 +1287,15 @@
               <valList type="open">
                 <valItem ident="#dotted-underline">
                   <gloss xml:lang="de">Gepunktete Unterstreichung</gloss>
-                  <desc xml:lang="de">Rücknahme eines Eingriffs durch gepunktete Unterstreichung der Passage</desc>
+                  <desc xml:lang="de">Rücknahme eines Eingriffs durch gepunktete Unterstreichung der Passage.</desc>
                 </valItem>
                 <valItem ident="#strike-out">
                   <gloss xml:lang="de">Durchstreichung</gloss>
-                  <desc xml:lang="de">Rücknahme eines Eingriffs durch Durchstreichung der Markierung</desc>
+                  <desc xml:lang="de">Rücknahme eines Eingriffs durch Durchstreichung der Markierung.</desc>
                 </valItem>
                 <valItem ident="#wavy-line">
                   <gloss xml:lang="de">Gewellte Unterstreichung</gloss>
-                  <desc xml:lang="de">Rücknahme eines Eingriffs durch gewellte Unterstreichung der Passage</desc>
+                  <desc xml:lang="de">Rücknahme eines Eingriffs durch gewellte Unterstreichung der Passage.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1301,11 +1325,11 @@
               <valList type="open">
                 <valItem ident="deselection">
                   <gloss xml:lang="de">Ende der Aussonderung</gloss>
-                  <desc xml:lang="de">Ende einer ausgesonderten Passage</desc>
+                  <desc xml:lang="de">Ende einer ausgesonderten Passage.</desc>
                 </valItem>
                 <valItem ident="undo">
                   <gloss xml:lang="de">Ende der Rücknahme</gloss>
-                  <desc xml:lang="de">Ende einer von einem zurückgenommenen Eingriff betroffenen Textpassage</desc>
+                  <desc xml:lang="de">Ende einer von einem zurückgenommenen Eingriff betroffenen Textpassage.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1329,7 +1353,7 @@
               <valList type="open">
                 <valItem ident="#encircled">
                   <gloss xml:lang="de">Umrandet</gloss>
-                  <desc xml:lang="de">Markierung eines Textsegments durch Umrandung</desc>
+                  <desc xml:lang="de">Markierung eines Textsegments durch Umrandung.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1347,7 +1371,7 @@
                 </valItem>
                 <valItem ident="#crosshead">
                   <gloss xml:lang="de">Zwischentitel</gloss>
-                  <desc xml:lang="de">Titel, der keinen eigenen Textblock darstellt, sondern in den Fließtext integriert ist</desc>
+                  <desc xml:lang="de">Titel, der keinen eigenen Textblock darstellt, sondern in den Fließtext integriert ist.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -1374,7 +1398,7 @@
               <valList type="open">
                 <valItem ident="weak">
                   <gloss xml:lang="de">‚Schwacher‘ Trennstrich</gloss>
-                  <desc xml:lang="de">Trennstrich, der nicht der Worttrennung am Zeilenende, sondern der Trennung bei zusammengesetzten Nomen dient</desc>
+                  <desc xml:lang="de">Trennstrich, der nicht der Worttrennung am Zeilenende, sondern der Trennung bei zusammengesetzten Nomen dient.</desc>
                 </valItem>
               </valList>
             </attDef>
