@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <!-- titel des jew. Faksimiles -->
+            <title level="a" type="main" xml:lang="de">Transkription {sub_dossier_group_de}, {Blattnr. + v/r}</title>
+            <title level="a" type="main" xml:lang="en">Transcription {sub_dossier_group_en}, {Blattnr. + v/r}</title>
+            
+            <!-- Titel Projekt / Edition insgesamt – oder in ein seriesStmt? -->
+            <title level="m" type="main" xml:lang="en">Karl Kraus: Der Hort der Republik – Digital Genetic
+                Edition</title>
+            <title level="m" type="main" xml:lang="de">Karl Kraus: Der Hort der Republik – Digitale
+                Genetische Edition</title>
+            
+            <!-- hier alle resps nennen plus nochmal diejenigen, die am konkreten Textträger gearbeitet 
+                haben, oder nur letztere? -->
+            <respStmt>
+                <resp xml:lang="de">Transkription, Codierung</resp>
+                <resp xml:lang="en">Transcription, Encoding</resp>
+                <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</persName>
+                <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
+            </respStmt>
+            <respStmt>
+                <resp xml:lang="de">Team – Entwickler:innen</resp>
+                <resp xml:lang="en">Team – Developers</resp>
+                <persName key="https://orcid.org/0000-0002-9575-9372">Peter Andorfer</persName>
+                <persName key="">Barbara Krautgartner</persName>
+                <persName key="https://orcid.org/0009-0009-4161-9532">Kinga Sramó</persName>
+            </respStmt>
+            <respStmt>
+                <resp xml:lang="de">Team – Editor:innen</resp>
+                <resp xml:lang="en">Team – Editors</resp>
+                <persName key="https://orcid.org/0000-0002-5049-0779">Isabel Langkabel</persName>
+                <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</persName>
+                <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
+            </respStmt>
+            <principal key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</principal>
+            <funder>
+                <name xml:lang="de">Österreichischer Wissenschaftsfonds FWF</name>
+                <name xml:lang="en">Austrian Science Fund FWF</name>
+                <address>
+                    <street>Georg-Coch-Platz 2</street>
+                    <postCode>1010 Wien</postCode>
+                    <placeName>
+                        <country>A</country>
+                        <settlement>Wien</settlement>
+                    </placeName>
+                </address>
+            </funder>
+        </titleStmt>
+        <publicationStmt>
+            <publisher key="https://explore.gnd.network/gnd/1228367132">
+                <name>Ludwig Boltzmann Institute for Digital History</name>
+                <address>
+                    <street>Hofburg, Batthianystiege</street>
+                    <postCode>1010</postCode>
+                    <settlement>Wien</settlement>
+                    <country>Österreich</country>
+                </address>
+                <ref target="https://geschichte.lbg.ac.at">https://geschichte.lbg.ac.at</ref>
+            </publisher>
+            <publisher key="https://explore.gnd.network/gnd/1123037736">
+                <name>Austrian Centre for Digital Humanities,
+                    Österreichische Akademie der Wissenschaften </name>
+                <address>
+                    <street>Bäckerstraße 13</street>
+                    <postCode>1010</postCode>
+                    <settlement>Wien</settlement>
+                    <country>Österreich</country>
+                </address>
+                <ref target="https://acdh.oeaw.ac.at">https://acdh.oeaw.ac.at</ref>
+            </publisher>
+            <availability>
+                <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+            <date>2027/2029</date><!-- tbd -->
+            
+            <idno type="ID" subtype="hdr">{baserow: facs/hdr_id}</idno>
+            <idno type="filename" subtype="hdr">{xml file name, includes id}</idno>
+            <idno type="URL" subtype="hdr">{hdr url of archival view, includes filename}</idno>
+            <idno type="ID" subtype="transkribus">{tbd}</idno>
+            <!-- eventually more IDs, like ARCHE -->
+        </publicationStmt>
+
+        
+        <notesStmt>
+            <!-- Genetische Infos – Relationen zu anderen Trägern -->
+            <note type="sub-dossier">
+                <label xml:lang="en">Part of sub-dossier:</label>
+                <label xml:lang="de">Teil des Subkonvoluts:</label>
+                <ref type="sub-dossier" target="{tbd}"></ref>
+            </note>
+            <note type="carrier-next">
+                <label xml:lang="en">Next carrier:</label>
+                <label xml:lang="de">Nächster Textträger:</label>
+                <ref type="carrier-next" target="{tbd}"></ref>
+            </note>
+            <note type="carrier-later">
+                <label xml:lang="en">Later carrier (genetic order):</label>
+                <label xml:lang="de">Späterer Textträger (genetische Reihenfolge):</label>
+                <ref type="carrier-later" target="{tbd}"></ref>
+            </note>
+            <note type="archive-folder">
+                <label xml:lang="en">Part of archive folder:</label>
+                <label xml:lang="de">Teil der Archivmappe:</label>
+                <ref type="archive-folder" target="{tbd}"></ref>
+            </note>
+            <!-- Genetische Infos – Relationen zu anderen Facsimiles; 
+                Grundlage des Blätterns in der Archiv-Ansicht -->
+            <note type="facs-next">
+                <label xml:lang="en">Next facsimile:</label>
+                <label xml:lang="de">Nächstes Faksimile:</label>
+                <ref type="carrier-next" target="{tbd}"></ref>
+            </note>
+            <note type="facs-later">
+                <label xml:lang="en">Later facsimile (genetic order):</label>
+                <label xml:lang="de">Späteres Faksimile (genetische Reihenfolge):</label>
+                <ref type="facs-later" target="{tbd}"></ref>
+            </note>
+        </notesStmt>
+
+        <sourceDesc>
+            <msDesc>
+                <msIdentifier>
+                    <country>Österreich</country>
+                    <settlement>Wien</settlement>
+                    <repository>Österreichische Nationalbibliothek</repository>
+                    <collection>Literaturarchiv</collection>
+                    <idno type="shelfmark">Cod. Ser. n. 30530–30533</idno>
+                    <idno type="fol" xml:lang="en">leaf {Blattnummer}</idno><!-- Redundanz zu title oben -->
+                    <idno type="fol" xml:lang="de">Blatt {Blattnummer}</idno><!-- Redundanz zu title oben -->
+                </msIdentifier>
+                <msContents>
+                    <msItem>
+                        <ab xml:lang="en">{work} – {sub-dossiers description_en}</ab><!-- zB Karl Kraus: Der Hort der Republik – first continuous text set, manuscript, onb -->
+                        <ab xml:lang="de">{work} – {sub-dossiers description_de}</ab>
+                    </msItem>
+                </msContents>
+                <physDesc>
+                    <objectDesc>
+                        <supportDesc>
+                            <support>{carrier-class}</support>
+                            <extent>
+                                <dimensions type="leaf" unit="mm">
+                                    <height>{Höhe}</height>
+                                    <width>{Breite}</width>
+                                </dimensions>
+                            </extent>
+                            <condition>
+                                {sub_dossier_condition}
+                            </condition>
+                        </supportDesc>
+                    </objectDesc>
+                </physDesc>
+                <additional>
+                    <surrogates>
+                        <bibl>
+                            <note type="facsimile">Faksimile erstellt von der Österreichischen
+                                Nationalbibliothek (ÖNB)</note>
+                            <ref target="{Bild-URL / IIIF-Manifest}"/>
+                        </bibl>
+                    </surrogates>
+                </additional>
+            </msDesc>
+        </sourceDesc>
+
+    </fileDesc>
+
+    <profileDesc>
+        <creation>
+            <listChange>
+                <change xml:id="fp-pencil-1">[tbd]</change>
+                <change xml:id="kk-ink-1">[tbd]</change>
+                <change xml:id="kk-ink-2">[tbd]</change>
+            </listChange>
+        </creation>
+    </profileDesc>
+</teiHeader>
+    <text>
+        <body><ab></ab></body>
+    </text>
+</TEI>
