@@ -224,7 +224,7 @@
                     <desc xml:lang="de">Formal/visuell und semantisch abgesetzter
                         Textabschnitt.</desc>
                     <content>
-                        <macroRef key="hdr.inlineCore"/>
+                        <macroRef key="hdr.inline"/>
                     </content>
                     <constraintSpec ident="p-attribute-im-text" scheme="schematron">
                         <desc xml:lang="de">p braucht @change, @facs und @rendition nur innerhalb
