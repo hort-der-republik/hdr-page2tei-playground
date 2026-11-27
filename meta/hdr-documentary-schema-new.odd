@@ -1,0 +1,1545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>hdr-documentary-schema: Schema für die diplomatische TEI-Ausgabe von
+                    pagexml-to-tei.xsl</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Aus diesem ODD wird meta/hdr-documentary-schema.rng erzeugt.</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital; Anpassung von TEI P5 (tei:current).</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <head>hdr-documentary-schema</head>
+            <p> Eng geführtes Dokumentations-Schema: Es lässt nur zu, was das Stylesheet erzeugt.
+                Jedes Element ist eine Einschränkung des entsprechenden TEI-Elements, die erlaubte
+                Sprache ist damit eine Teilmenge von TEI-All. </p>
+            <schemaSpec ident="hdr-documentary-schema" start="TEI" docLang="de" targetLang="de">
+                <moduleRef key="core"
+                    include="p head author title add cb choice corr del gap graphic hi l lb lg ptr quote sic unclear"/>
+                <moduleRef key="tei"/>
+                <moduleRef key="header"
+                    include="teiHeader fileDesc titleStmt publicationStmt sourceDesc profileDesc creation change listChange"/>
+                <moduleRef key="textstructure" include="TEI text body div byline dateline"/>
+                <moduleRef key="linking" include="anchor seg"/>
+                <moduleRef key="analysis" include="pc"/>
+                <moduleRef key="gaiji" include="g"/>
+                <moduleRef key="transcr"
+                    include="facsimile surface zone delSpan fw subst listTranspose metamark mod retrace transpose undo"/>
+                <!-- only include the attributes and attribute classes we need -->
+                <classSpec ident="att.global" mode="change" module="tei" type="atts">
+                    <attList>
+                        <attDef ident="xml:space" mode="delete"/>
+                        <attDef ident="xml:base" mode="delete"/>
+                    </attList>
+                </classSpec>
+                <classRef key="att.global.rendition" include="rendition"/>
+                <classRef key="att.dimensions" include="extent"/>
+                <classRef key="att.media" include="width height"/>
+                <classRef key="att.pointing" include="target"/>
+                <classRef key="att.coordinated" include="lrx lry points"/>
+                <classRef key="att.global.linking" include="corresp next prev"/>
+                <!-- delete attribute classes not needed at all -->
+                <classSpec ident="att.ascribed" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.cReferencing" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.cmc" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.datcat" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.declarable" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.declaring" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.docStatus" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.editLike" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.edition" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.internetMedia" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.notated" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.ranging" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.sortable" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.written" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.datable" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.naming" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.transcriptional" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.timed" mode="delete" module="tei" type="atts"/>
+                <classSpec ident="att.linguistic" mode="delete" module="analysis" type="atts"/>
+                <classSpec ident="att.global.analytic" mode="delete" module="analysis" type="atts"/>
+                <classSpec ident="att.fragmentable" mode="change" type="atts">
+                    <attList>
+                        <attDef ident="part" mode="change">
+                            <defaultVal mode="delete"/>
+                            <valList type="closed">
+                                <valItem ident="I">
+                                    <gloss xml:lang="de">Initial</gloss>
+                                    <desc xml:lang="de"> Erster Teil eines geteilten
+                                        Absatzes/Textabschnitts. </desc>
+                                </valItem>
+                                <valItem ident="F">
+                                    <gloss xml:lang="de">Final</gloss>
+                                    <desc xml:lang="de"> Letzter Teil eines geteilten
+                                        Absatzes/Textabschnitts. </desc>
+                                </valItem>
+                                <valItem ident="M">
+                                    <gloss xml:lang="de">Mittig</gloss>
+                                    <desc xml:lang="de"> Mittlerer Abschnitt eines geteilten
+                                        Absatzes/Textabschnitts. </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </classSpec>
+                <macroSpec ident="hdr.inlineCore" mode="add" module="tei">
+                    <desc xml:lang="de" versionDate="2026-11-13"> Phrasen-Inhalt ohne quote (für
+                        byline, dateline und als Bestandteil von hdr.inline). </desc>
+                    <content>
+                        <alternate minOccurs="1" maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="add"/>
+                            <elementRef key="anchor"/>
+                            <elementRef key="del"/>
+                            <elementRef key="delSpan"/>
+                            <elementRef key="gap"/>
+                            <elementRef key="hi"/>
+                            <elementRef key="lb"/>
+                            <elementRef key="metamark"/>
+                            <elementRef key="mod"/>
+                            <elementRef key="pc"/>
+                            <elementRef key="subst"/>
+                            <elementRef key="choice"/>
+                            <elementRef key="seg"/>
+                            <elementRef key="undo"/>
+                            <elementRef key="g"/>
+                            <elementRef key="retrace"/>
+                            <elementRef key="unclear"/>
+                            <elementRef key="listTranspose"/>
+                        </alternate>
+                    </content>
+                </macroSpec>
+                <macroSpec ident="hdr.inline" mode="add" module="tei">
+                    <desc xml:lang="de" versionDate="2026-11-13"> Gemeinsamer Inline-Inhalt von p,
+                        hi, mod, del, seg, add, metamark, fw, head, l, retrace und unclear. </desc>
+                    <content>
+                        <alternate minOccurs="1">
+                            <macroRef key="hdr.inlineCore"/>
+                            <elementRef key="quote"/>
+                        </alternate>
+                    </content>
+                </macroSpec>
+                <elementSpec ident="teiHeader" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.global" mode="delete"/>
+                    </classes>
+                    <content>
+                        <sequence>
+                            <elementRef key="fileDesc"/>
+                            <elementRef key="profileDesc"/>
+                        </sequence>
+                    </content>
+                </elementSpec>
+                <elementSpec ident="fileDesc" module="header" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.global" mode="delete"/>
+                    </classes>
+                    <content>
+                        <sequence>
+                            <elementRef key="titleStmt"/>
+                            <elementRef key="publicationStmt"/>
+                            <elementRef key="sourceDesc"/>
+                        </sequence>
+                    </content>
+                </elementSpec>
+                <elementSpec ident="titleStmt" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.global" mode="delete"/>
+                    </classes>
+                </elementSpec>
+                <elementSpec ident="publicationStmt" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.global" mode="delete"/>
+                    </classes>
+                </elementSpec>
+                <elementSpec ident="sourceDesc" mode="change" module="header">
+                    <classes mode="change">
+                        <memberOf key="att.global" mode="delete"/>
+                    </classes>
+                </elementSpec>
+                <elementSpec ident="profileDesc" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.global" mode="delete"/>
+                    </classes>
+                    <content>
+                        <elementRef key="creation"/>
+                    </content>
+                </elementSpec>
+                <elementSpec ident="creation" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.global" mode="delete"/>
+                    </classes>
+                    <content>
+                        <elementRef key="listChange"/>
+                    </content>
+                </elementSpec>
+                <elementSpec ident="listChange" mode="change">
+                    <gloss xml:lang="de">Liste von Überarbeitungsschritten</gloss>
+                    <desc xml:lang="de"> Enthält die am Quelldokument oder an dessen digitaler
+                        Repräsentation durchgeführten Überarbeitungsschritte. </desc>
+                    <classes mode="change">
+                        <memberOf key="att.global" mode="delete"/>
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <content>
+                        <elementRef key="change" minOccurs="1" maxOccurs="unbounded"/>
+                    </content>
+                    <attList>
+                        <attDef ident="ordered" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="change" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.datable" mode="delete"/>
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="target" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="p" module="core" mode="change">
+                    <gloss xml:lang="de">Absatz</gloss>
+                    <desc xml:lang="de">Formal/visuell und semantisch abgesetzter
+                        Textabschnitt.</desc>
+                    <content>
+                        <macroRef key="hdr.inlineCore"/>
+                    </content>
+                    <constraintSpec ident="p-attribute-im-text" scheme="schematron">
+                        <desc xml:lang="de">p braucht @change, @facs und @rendition nur innerhalb
+                            von text (nicht im teiHeader).</desc>
+                        <constraint>
+                            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                                context="tei:text//tei:p">
+                                <sch:assert test="@change and @facs and @rendition">p innerhalb von
+                                    text braucht @change, @facs und @rendition.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="rendition" mode="change">
+                            <valList type="closed" mode="replace">
+                                <valItem ident="#antiqua">
+                                    <gloss xml:lang="de">Antiqua</gloss>
+                                    <desc xml:lang="de">In Antiqua gesetzter Drucktext.</desc>
+                                </valItem>
+                                <valItem ident="#black-letter">
+                                    <gloss xml:lang="de">Fraktur</gloss>
+                                    <desc xml:lang="de">In Fraktur gesetzter Drucktext.</desc>
+                                </valItem>
+                                <valItem ident="#bold">
+                                    <gloss xml:lang="de">Fettdruck</gloss>
+                                    <desc xml:lang="de">In Fettdruck gesetzter Drucktext.</desc>
+                                </valItem>
+                                <valItem ident="#center">
+                                    <gloss xml:lang="de">Zentriert</gloss>
+                                    <desc xml:lang="de">Zentriert gesetzter Text.</desc>
+                                </valItem>
+                                <valItem ident="#handwritten">
+                                    <gloss xml:lang="de">Handgeschrieben</gloss>
+                                    <desc xml:lang="de">Handgeschriebener Text.</desc>
+                                    <!-- Streichkandidat -->
+                                </valItem>
+                                <valItem ident="#indent">
+                                    <gloss xml:lang="de">Einzug der ersten Zeile</gloss>
+                                    <desc xml:lang="de">Absatz mit Einzug der ersten Zeile.</desc>
+                                </valItem>
+                                <valItem ident="#kurrent">
+                                    <gloss xml:lang="de">Kurrent</gloss>
+                                    <desc xml:lang="de">Handschriftlicher Text in
+                                        Kurrentschrift.</desc>
+                                </valItem>
+                                <valItem ident="#latin">
+                                    <gloss xml:lang="de">Lateinschrift</gloss>
+                                    <desc xml:lang="de">Handschriftlicher Text in
+                                        Lateinschrift.</desc>
+                                </valItem>
+                                <valItem ident="#left">
+                                    <gloss xml:lang="de">Abstand links</gloss>
+                                    <desc xml:lang="de">Absatz mit erhöhtem Randabstand
+                                        links.</desc>
+                                </valItem>
+                                <valItem ident="#undefined">
+                                    <gloss xml:lang="de">undefiniert</gloss>
+                                    <desc xml:lang="de">undefiniert.</desc>
+                                </valItem>
+                                <!-- add more values -->
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="hi" module="core" mode="change">
+                    <gloss xml:lang="de">Hervorhebung</gloss>
+                    <desc xml:lang="de">Hervorgehobene oder visuell unterschiedene Passage.</desc>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="rendition" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="#bold">
+                                    <gloss xml:lang="de">Fettdruck</gloss>
+                                    <desc xml:lang="de">Hervorhebung durch Fettdruck.</desc>
+                                </valItem>
+                                <valItem ident="#latin">
+                                    <gloss xml:lang="de">Lateinschrift</gloss>
+                                    <desc xml:lang="de"> Passage in Lateinschrift (im Kontext von z.
+                                        B. kurrent). </desc>
+                                </valItem>
+                                <valItem ident="#letter-spacing">
+                                    <gloss xml:lang="de">Spationierung</gloss>
+                                    <desc xml:lang="de">Hervorhebung durch erhöhten
+                                        Zeichenabstand.</desc>
+                                </valItem>
+                                <valItem ident="#underline">
+                                    <gloss xml:lang="de">Unterstreichung</gloss>
+                                    <desc xml:lang="de"> Hervorhebung / Markierung durch
+                                        Unterstreichung. </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="quote" module="core" mode="change">
+                    <gloss xml:lang="de">Zitat</gloss>
+                    <desc xml:lang="de">Textblock bzw. Textpassage, die zitierten Text
+                        enthält.</desc>
+                    <classes mode="change">
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <content>
+                        <alternate>
+                            <elementRef key="lg" minOccurs="1" maxOccurs="unbounded"/>
+                            <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="sic" module="core" mode="change">
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="corr" module="core" mode="change">
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="subtype" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="type" mode="change" usage="req">
+                            <valList type="closed" mode="replace">
+                                <valItem ident="emen">
+                                    <gloss xml:lang="de">Emendation</gloss>
+                                    <desc xml:lang="de">Korrigierender Eingriff des
+                                        Editionsteams.</desc>
+                                </valItem>
+                                <valItem ident="norm">
+                                    <gloss xml:lang="de">Normierung</gloss>
+                                    <desc xml:lang="de">Normierender Eingriff des
+                                        Editionsteams.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="choice" module="core" mode="change">
+                    <content>
+                        <sequence>
+                            <elementRef key="sic"/>
+                            <elementRef key="corr"/>
+                        </sequence>
+                    </content>
+                    <attList>
+                        <attDef ident="resp" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="#edHdR">
+                                    <gloss xml:lang="de">Editionsteam Der Hort der Republik</gloss>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="gap" module="core" mode="change">
+                    <content>
+                        <empty/>
+                    </content>
+                    <attList>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="reason" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="cut">
+                                    <gloss xml:lang="de">Schnitt</gloss>
+                                    <desc xml:lang="de">Lacuna auf Grund von Beschneidung des
+                                        Trägers.</desc>
+                                </valItem>
+                                <valItem ident="illegible">
+                                    <gloss xml:lang="de">Unleserlich</gloss>
+                                    <desc xml:lang="de">Lacuna auf Grund von Unleserlichkeit.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="add" module="core" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.dimensions" mode="delete"/>
+                        <memberOf key="att.typed" mode="delete"/>
+                        <memberOf key="att.placement"/>
+                    </classes>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="place" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="above">
+                                    <gloss xml:lang="de">darüber</gloss>
+                                </valItem>
+                                <valItem ident="below">
+                                    <gloss xml:lang="de">darunter</gloss>
+                                </valItem>
+                                <valItem ident="inline">
+                                    <gloss xml:lang="de">in der Zeile</gloss>
+                                </valItem>
+                                <valItem ident="overwritten">
+                                    <gloss xml:lang="de">überschreibend</gloss>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="rendition" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="#antiqua">
+                                    <gloss xml:lang="de">Antiqua</gloss>
+                                    <desc xml:lang="de">In Antiqua gesetzter Drucktext.</desc>
+                                </valItem>
+                                <valItem ident="#kurrent">
+                                    <gloss xml:lang="de">Kurrent</gloss>
+                                    <desc xml:lang="de">Handschriftlicher Text in
+                                        Kurrentschrift.</desc>
+                                </valItem>
+                                <valItem ident="#latin">
+                                    <gloss xml:lang="de">Lateinschrift</gloss>
+                                    <desc xml:lang="de">Handschriftlicher Text in
+                                        Lateinschrift.</desc>
+                                </valItem>
+                                <valItem ident="#rotate270">
+                                    <gloss xml:lang="de">Rotation nach links</gloss>
+                                    <desc xml:lang="de">Rotation um 270° im Uhrzeigersinn.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="del" module="core" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.dimensions" mode="delete"/>
+                    </classes>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="type" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="deselection">
+                                    <gloss xml:lang="de">Aussonderung</gloss>
+                                    <desc xml:lang="de"> Aussonderung einer Passage im
+                                        Selektionsprozess - ‚De-Selektion‘. </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="subtype" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="implicit">
+                                    <gloss xml:lang="de">implizit</gloss>
+                                    <desc xml:lang="de"> Streichung, die z. B. grammatikalisch nötig
+                                        ist, aber nicht durchgeführt wurde (womöglich aufgrund einer
+                                        Konvention/Gewohnheit). </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="unclear" module="core" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.dimensions" mode="delete"/>
+                    </classes>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="reason" mode="change" usage="req"/>
+                        <attDef ident="cert" mode="change" usage="req"/>
+                        <attDef ident="resp" mode="change" usage="req"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="ptr" module="core" mode="change">
+                    <gloss xml:lang="de">Pointer</gloss>
+                    <desc xml:lang="de">Enthält einen Verweis auf eine andere Stelle.</desc>
+                    <classes mode="change">
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <attList>
+                        <attDef ident="target" mode="change" usage="req"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="head" module="core" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.placement" mode="delete"/>
+                    </classes>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="change" mode="change" usage="req"/>
+                        <attDef ident="facs" mode="change" usage="req"/>
+                        <attDef ident="rendition" mode="change" usage="req">
+                            <valList type="closed">
+                                <valItem ident="#black-letter">
+                                    <gloss xml:lang="de">Fraktur</gloss>
+                                    <desc xml:lang="de">In Fraktur gesetzter Drucktext.</desc>
+                                </valItem>
+                                <valItem ident="#bold">
+                                    <gloss xml:lang="de">Fettdruck</gloss>
+                                    <desc xml:lang="de">In Fettdruck gesetzter Titel.</desc>
+                                </valItem>
+                                <valItem ident="#center">
+                                    <gloss xml:lang="de">Zentriert</gloss>
+                                    <desc xml:lang="de">Zentriert gesetzter Titel.</desc>
+                                </valItem>
+                                <valItem ident="#large">
+                                    <gloss xml:lang="de">Schriftgröße erhöht</gloss>
+                                    <desc xml:lang="de">In größerer Type gesetzter Titel.</desc>
+                                </valItem>
+                                <!-- add more values -->
+                            </valList>
+                        </attDef>
+                        <attDef ident="type" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="main">
+                                    <gloss xml:lang="de">Hauptüberschrift</gloss>
+                                    <desc xml:lang="de"> Hauptsächliche Überschrift eines Texts im
+                                        Gegensatz zu Unterüberschriften oder Zwischenüberschriften.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="sub">
+                                    <gloss xml:lang="de">Unterüberschrift</gloss>
+                                    <desc xml:lang="de">[Beschreibung: head/@type = sub].</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="subtype" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="graphic" module="core" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <content>
+                        <empty/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="height" mode="change" usage="req"/>
+                        <attDef ident="width" mode="change" usage="req"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="lb" module="core" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.spanning" mode="delete"/>
+                    </classes>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="break" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="no">
+                                    <gloss xml:lang="de">Zeilenumbruch ohne Worttrennung</gloss>
+                                    <desc xml:lang="de"> Meist durch Trennstrich angezeigte
+                                        Worttrennung am Zeilenende. </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="facs" mode="change" usage="req"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="cb" module="core" mode="change">
+                    <gloss xml:lang="de">Spaltenbeginn</gloss>
+                    <desc xml:lang="de"> Markiert den Beginn einer neuen Spalte auf einer Seite mit
+                        mehrspaltigem Layout. </desc>
+                    <attList>
+                        <attDef ident="facs" mode="change" usage="req"/>
+                        <attDef ident="n" mode="change" usage="req"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="title" mode="change" module="core">
+                    <classes mode="change">
+                        <memberOf key="att.canonical" mode="delete"/>
+                        <memberOf key="att.global" mode="delete"/>
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                </elementSpec>
+                <elementSpec ident="l" module="core" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.fragmentable" mode="delete"/>
+                    </classes>
+                    <attList>
+                        <attDef ident="facs" mode="change" usage="req"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="lg" module="core" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.typed" mode="delete"/>
+                        <memberOf key="att.divLike" mode="delete"/>
+                    </classes>
+                    <content>
+                        <elementRef key="l" minOccurs="1" maxOccurs="unbounded"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="facs" mode="change" usage="req"/>
+                        <attDef ident="rendition" mode="change" usage="req"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="TEI" module="textstructure" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <content>
+                        <sequence>
+                            <elementRef key="teiHeader"/>
+                            <elementRef key="facsimile"/>
+                            <elementRef key="text"/>
+                        </sequence>
+                    </content>
+                    <attList>
+                        <attDef ident="xml:lang" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="de"/>
+                            </valList>
+                        </attDef>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="select" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="text" module="textstructure" mode="change">
+                    <gloss xml:lang="de">Text</gloss>
+                    <classes mode="change">
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <content>
+                        <elementRef key="body"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="body" module="textstructure" mode="change">
+                    <content>
+                        <elementRef key="div"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="div" module="textstructure" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.divLike" mode="delete"/>
+                        <memberOf key="att.placement" mode="delete"/>
+                    </classes>
+                    <content>
+                        <alternate minOccurs="0" maxOccurs="unbounded">
+                            <elementRef key="div"/>
+                            <elementRef key="metamark"/>
+                            <elementRef key="p"/>
+                            <elementRef key="byline"/>
+                            <elementRef key="cb"/>
+                            <elementRef key="dateline"/>
+                            <elementRef key="fw"/>
+                            <elementRef key="head"/>
+                            <elementRef key="anchor"/>
+                            <elementRef key="gap"/>
+                            <elementRef key="quote"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="subtype" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="type" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="add-block">
+                                    <gloss xml:lang="de">Umfangreiche Ergänzung</gloss>
+                                    <desc xml:lang="de"> Umfangreiche Ergänzung (über
+                                        Textblock-Grenzen hinweg). </desc>
+                                </valItem>
+                                <valItem ident="advertisement">
+                                    <gloss xml:lang="de">Werbeanzeige</gloss>
+                                </valItem>
+                                <valItem ident="article">
+                                    <gloss xml:lang="de">Artikel (Text)</gloss>
+                                    <desc xml:lang="de"> Zusammenhängender Text in einer
+                                        Zeitschrift, einer Zeitung oder einer anderen Publikation.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="newspaper-clipping">
+                                    <gloss xml:lang="de">Zeitungsausschnitt</gloss>
+                                    <desc xml:lang="de">Zeitungsausschnitt / Teil einer
+                                        Zeitungsseite.</desc>
+                                </valItem>
+                                <valItem ident="notepad-paper">
+                                    <gloss xml:lang="de">Konzeptpapier</gloss>
+                                    <desc xml:lang="de">Konzeptpapier (Oktavformat).</desc>
+                                </valItem>
+                                <valItem ident="print-proof">
+                                    <gloss xml:lang="de">Druckfahne</gloss>
+                                    <desc xml:lang="de">Fahnenabzug zur Korrektur.</desc>
+                                </valItem>
+                                <valItem ident="print-publ">
+                                    <gloss xml:lang="de">Publizierte Textstufe</gloss>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="byline" module="textstructure" mode="change">
+                    <content>
+                        <macroRef key="hdr.inlineCore"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="dateline" module="textstructure" mode="change">
+                    <gloss xml:lang="de">Datumszeile</gloss>
+                    <desc xml:lang="de"> Enthält Datum und ggf. Entstehungsort etwa eines
+                        Zeitungsartikels. </desc>
+                    <content>
+                        <macroRef key="hdr.inlineCore"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="g" module="gaiji" mode="change">
+                    <gloss xml:lang="de">Glyphe / Zeichen</gloss>
+                    <desc xml:lang="de"> Repräsentiert eine Glyphe bzw. ein Zeichen außerhalb
+                        gängiger Codierungen. </desc>
+                    <classes mode="change">
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <content>
+                        <empty/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="ref" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="#deleatur">
+                                    <gloss xml:lang="de">Deleatur-Zeichen</gloss>
+                                </valItem>
+                                <valItem ident="#intervention">
+                                    <gloss xml:lang="de">Korrekturzeichen</gloss>
+                                </valItem>
+                                <valItem ident="#kerning">
+                                    <gloss xml:lang="de">Korrekturzeichen ‚Zeichenabstand
+                                        verringern‘</gloss>
+                                </valItem>
+                                <valItem ident="#relocation">
+                                    <gloss xml:lang="de">Korrekturzeichen ‚Verschieben‘</gloss>
+                                </valItem>
+                                <valItem ident="#transposition">
+                                    <gloss xml:lang="de">Korrekturzeichen ‚Transposition‘</gloss>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="facsimile" module="transcr" mode="change">
+                    <gloss xml:lang="de">Faksimile</gloss>
+                    <desc xml:lang="de">Visuelle Repräsentation eines Textträgers.</desc>
+                    <content>
+                        <sequence>
+                            <elementRef key="graphic"/>
+                            <elementRef key="surface"/>
+                        </sequence>
+                    </content>
+                    <attList>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="surface" module="transcr" mode="change">
+                    <gloss xml:lang="de">Oberfläche</gloss>
+                    <desc xml:lang="de"> Oberfläche eines Textträgers (meist von einem Faksimile
+                        oder Teil eines Faksimiles repräsentiert). </desc>
+                    <content>
+                        <alternate minOccurs="0" maxOccurs="unbounded">
+                            <elementRef key="surface"/>
+                            <elementRef key="zone"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="attachment" mode="delete"/>
+                        <attDef ident="flipping" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="subtype" mode="delete"/>
+                        <attDef ident="type" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="newspaper-clipping"/>
+                                <valItem ident="notepad-paper"/>
+                                <valItem ident="print-proof"/>
+                                <valItem ident="print-publ"/>
+                                <valItem ident="other"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="zone" module="transcr" mode="change">
+                    <gloss xml:lang="de">Zone</gloss>
+                    <desc xml:lang="de">Region innerhalb der Oberfläche eines Textträgers.</desc>
+                    <content>
+                        <elementRef key="zone" minOccurs="0" maxOccurs="unbounded"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="lrx" mode="delete"/>
+                        <attDef ident="lry" mode="delete"/>
+                        <attDef ident="subtype" mode="delete"/>
+                        <attDef ident="points" mode="change" usage="req"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="delSpan" module="transcr" mode="change">
+                    <gloss xml:lang="de">Getilgte Textpassage</gloss>
+                    <desc xml:lang="de"> Markiert den Anfang einer (längeren) getilgten Textpassage. </desc>
+                    <classes mode="change">
+                        <memberOf key="att.dimensions" mode="delete"/>
+                    </classes>
+                    <attList>
+                        <attDef ident="type" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="deselection">
+                                    <gloss xml:lang="de">Aussonderung</gloss>
+                                    <desc xml:lang="de"> Aussonderung einer Passage im
+                                        Selektionsprozess - ‚De-Selektion‘. </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="subtype" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="fw" module="transcr" mode="change">
+                    <gloss xml:lang="de">Beiwerk</gloss>
+                    <desc xml:lang="de"> Enthält Elemente wie Kolumnentitel (Kopf- oder Fußzeile),
+                        Seiten- oder Blattzählung oder andere Nummerierungen, Kustoden, etc. </desc>
+                    <classes mode="change">
+                        <memberOf key="att.placement" mode="delete"/>
+                    </classes>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="facs" mode="change" usage="req"/>
+                        <attDef ident="rendition" mode="change">
+                            <valList type="closed">
+                                <valItem ident="#kurrent">
+                                    <gloss xml:lang="de">Kurrent</gloss>
+                                    <desc xml:lang="de">Handschriftlicher Text in
+                                        Kurrentschrift.</desc>
+                                </valItem>
+                                <valItem ident="#latin">
+                                    <gloss xml:lang="de">Lateinschrift</gloss>
+                                    <desc xml:lang="de">Handschriftlicher Text in
+                                        Lateinschrift.</desc>
+                                </valItem>
+                                <valItem ident="#black-letter">
+                                    <gloss xml:lang="de">Fraktur</gloss>
+                                    <desc xml:lang="de">In Fraktur gesetzter Drucktext.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="type" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="fol">
+                                    <gloss xml:lang="de">Foliierung</gloss>
+                                    <desc xml:lang="de">Nummerierung zur Foliierung des
+                                        Blattes.</desc>
+                                </valItem>
+                                <valItem ident="order">
+                                    <gloss xml:lang="de">Anordnung</gloss>
+                                    <desc xml:lang="de"> Nummerierung zur Herstellung einer Ordnung
+                                        unter den Elementen der Zitatmontage. </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="subtype" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="subst" module="transcr" mode="change">
+                    <gloss xml:lang="de">Substitution</gloss>
+                    <desc xml:lang="de"> Ersetzung, bestehend aus einer oder mehreren Tilgungen und
+                        einer oder mehreren Ergänzungen, die als zusammengehörig erachtet werden. </desc>
+                    <classes mode="change">
+                        <memberOf key="att.dimensions" mode="delete"/>
+                    </classes>
+                    <content>
+                        <alternate minOccurs="1" maxOccurs="unbounded">
+                            <elementRef key="add"/>
+                            <elementRef key="del"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="listTranspose" module="transcr" mode="change">
+                    <gloss xml:lang="de">Liste von Transpositionen</gloss>
+                    <desc xml:lang="de"> Enthält eine Liste der im Text durchgeführten
+                        Transpositionen. </desc>
+                    <content>
+                        <elementRef key="transpose" minOccurs="1" maxOccurs="unbounded"/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="metamark" module="transcr" mode="change">
+                    <gloss xml:lang="de">Markierung</gloss>
+                    <desc xml:lang="de"> Außerhalb des Textflusses, stellt einen Eingriff im Sinne
+                        einer Angabe für die Lektüre oder Verarbeitung des Textes dar. </desc>
+                    <classes mode="change">
+                        <memberOf key="att.placement" mode="delete"/>
+                        <memberOf key="att.spanning" mode="delete"/>
+                    </classes>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="function" mode="change">
+                            <valList type="closed" mode="replace">
+                                <valItem ident="addition">
+                                    <gloss xml:lang="de">Ergänzung</gloss>
+                                    <desc xml:lang="de">Markierung zur Einfügung von ergänztem
+                                        Text.</desc>
+                                </valItem>
+                                <valItem ident="deletion">
+                                    <gloss xml:lang="de">Tilgung</gloss>
+                                    <desc xml:lang="de"> Markierung, die eine zu tilgende Stelle
+                                        anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="font">
+                                    <gloss xml:lang="de">Drucktype</gloss>
+                                    <desc xml:lang="de">Markierung zur Angabe der Drucktype.</desc>
+                                </valItem>
+                                <valItem ident="insertion">
+                                    <gloss xml:lang="de">Einfügung</gloss>
+                                    <desc xml:lang="de"> Markierung, die den Ort einer Einfügung
+                                        anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="intervention">
+                                    <gloss xml:lang="de">Eingriff</gloss>
+                                    <desc xml:lang="de">Markierung, die einen Eingriff
+                                        anzeigt.</desc>
+                                </valItem>
+                                <valItem ident="kerning">
+                                    <gloss xml:lang="de">Zeichenabstand verringern</gloss>
+                                    <desc xml:lang="de"> Markierung, die zu großen Zeichenabstand
+                                        anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="letter-spacing">
+                                    <gloss xml:lang="de">Spationierung</gloss>
+                                    <desc xml:lang="de"> Markierung, die anzubringende Spationierung
+                                        anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="line-spacing">
+                                    <gloss xml:lang="de">Zeilenabstand</gloss>
+                                    <desc xml:lang="de"> Markierung, die zu erhöhenden Zeilenabstand
+                                        anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="no-spacing">
+                                    <gloss xml:lang="de">Spationierung entfernen</gloss>
+                                    <desc xml:lang="de"> Markierung, die zu entfernende
+                                        Spationierung anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="paragraph">
+                                    <gloss xml:lang="de">Absatz</gloss>
+                                    <desc xml:lang="de"> Markierung, die Beginn eines neuen Absatzes
+                                        anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="print-instruction">
+                                    <gloss xml:lang="de">Druckanweisung</gloss>
+                                    <desc xml:lang="de">Markierung mit Druckanweisung.</desc>
+                                </valItem>
+                                <valItem ident="relocation">
+                                    <gloss xml:lang="de">Verschiebung</gloss>
+                                    <desc xml:lang="de"> Markierung, die das Ziel einer Verschiebung
+                                        anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="selection">
+                                    <gloss xml:lang="de">Selektion</gloss>
+                                    <desc xml:lang="de"> Markierung, die ausgewählte Textpassage
+                                        angibt. </desc>
+                                </valItem>
+                                <valItem ident="selection-end">
+                                    <gloss xml:lang="de">Ende der Selektion</gloss>
+                                    <desc xml:lang="de"> Markierung, die das Ende einer ausgewählten
+                                        Textpassage anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="selection-start">
+                                    <gloss xml:lang="de">Beginn der Selektion</gloss>
+                                    <desc xml:lang="de"> Markierung, die den Beginn einer
+                                        ausgewählten Textpassage anzeigt. </desc>
+                                </valItem>
+                                <valItem ident="transposition">
+                                    <gloss xml:lang="de">Transposition</gloss>
+                                    <desc xml:lang="de"> Markierung, die die Vertauschung zweier
+                                        Textpassagen angibt. </desc>
+                                </valItem>
+                                <valItem ident="unknown">
+                                    <gloss xml:lang="de">Unbekannt</gloss>
+                                    <desc xml:lang="de">Markierung mit unbekanntem Zweck.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="rendition" mode="change">
+                            <valList type="closed" mode="replace">
+                                <valItem ident="#kurrent">
+                                    <gloss xml:lang="de">Kurrent</gloss>
+                                    <desc xml:lang="de">Handschriftlicher Text in
+                                        Kurrentschrift.</desc>
+                                </valItem>
+                                <valItem ident="#latin">
+                                    <gloss xml:lang="de">Lateinschrift</gloss>
+                                    <desc xml:lang="de">Handschriftlicher Text in
+                                        Lateinschrift.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="mod" module="transcr" mode="change">
+                    <gloss xml:lang="de">Änderung</gloss>
+                    <desc xml:lang="de">Weist eine zu ändernde Textstelle aus.</desc>
+                    <classes mode="change">
+                        <memberOf key="att.dimensions" mode="delete"/>
+                        <memberOf key="att.spanning" mode="delete"/>
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="rendition" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="#underline">
+                                    <gloss xml:lang="de">Unterstreichung</gloss>
+                                    <desc xml:lang="de"> Bezeichnung des zu modifizierenden Texts
+                                        durch Unterstreichung. </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="retrace" module="transcr" mode="change">
+                    <gloss xml:lang="de">Nachgezogener Text</gloss>
+                    <desc xml:lang="de"> Text, der in einem weiteren Überarbeitungsschritt zum Zweck
+                        etwa der Verdeutlichung nachgezogen wurde. </desc>
+                    <classes mode="change">
+                        <memberOf key="att.dimensions" mode="delete"/>
+                        <memberOf key="att.spanning" mode="delete"/>
+                    </classes>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="rendition" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="#kurrent">
+                                    <gloss xml:lang="de">Kurrent</gloss>
+                                    <desc xml:lang="de">Handschriftlicher Text in
+                                        Kurrentschrift.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="transpose" module="transcr" mode="change">
+                    <gloss xml:lang="de">Transposition</gloss>
+                    <desc xml:lang="de"> Enthält die Angaben zur intendierten neuen Reihenfolge von
+                        transponierten Textteilen. </desc>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="undo" module="transcr" mode="change">
+                    <gloss xml:lang="de">Rücknahme eines Eingriffs</gloss>
+                    <desc xml:lang="de"> Weist in irgendeiner Form (Streichung einer Markierung,
+                        gepunktete Unterstreichung einer Tilgung) die Rücknahme eines oder mehrere
+                        Eingriffe in den Text aus. </desc>
+                    <classes mode="change">
+                        <memberOf key="att.dimensions" mode="delete"/>
+                    </classes>
+                    <attList>
+                        <attDef ident="rendition" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="#dotted-underline">
+                                    <gloss xml:lang="de">Gepunktete Unterstreichung</gloss>
+                                    <desc xml:lang="de"> Rücknahme eines Eingriffs durch gepunktete
+                                        Unterstreichung der Passage. </desc>
+                                </valItem>
+                                <valItem ident="#strike-out">
+                                    <gloss xml:lang="de">Durchstreichung</gloss>
+                                    <desc xml:lang="de"> Rücknahme eines Eingriffs durch
+                                        Durchstreichung der Markierung. </desc>
+                                </valItem>
+                                <valItem ident="#wavy-line">
+                                    <gloss xml:lang="de">Gewellte Unterstreichung</gloss>
+                                    <desc xml:lang="de"> Rücknahme eines Eingriffs durch gewellte
+                                        Unterstreichung der Passage. </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="spanTo" mode="change" usage="req"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="anchor" module="linking" mode="change">
+                    <attList>
+                        <attDef ident="type" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="deselection">
+                                    <gloss xml:lang="de">Ende der Aussonderung</gloss>
+                                    <desc xml:lang="de">Ende einer ausgesonderten Passage.</desc>
+                                </valItem>
+                                <valItem ident="undo">
+                                    <gloss xml:lang="de">Ende der Rücknahme</gloss>
+                                    <desc xml:lang="de"> Ende einer von einem zurückgenommenen
+                                        Eingriff betroffenen Textpassage. </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="xml:id" mode="change" usage="req"/>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="subtype" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="seg" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.segLike" mode="delete"/>
+                    </classes>
+                    <content>
+                        <macroRef key="hdr.inline"/>
+                    </content>
+                    <attList>
+                        <attDef ident="rendition" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="#encircled">
+                                    <gloss xml:lang="de">Umrandet</gloss>
+                                    <desc xml:lang="de">Markierung eines Textsegments durch
+                                        Umrandung.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="type" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="relocation">
+                                    <gloss xml:lang="de">Zu verschiebendes Textsegment</gloss>
+                                </valItem>
+                                <valItem ident="#crosshead">
+                                    <gloss xml:lang="de">Zwischentitel</gloss>
+                                    <desc xml:lang="de">Titel, der keinen eigenen Textblock
+                                        darstellt, sondern in den Fließtext integriert ist.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="pc" module="analysis" mode="change">
+                    <classes mode="change">
+                        <memberOf key="att.segLike" mode="delete"/>
+                        <memberOf key="att.typed" mode="delete"/>
+                    </classes>
+                    <content>
+                        <textNode/>
+                    </content>
+                    <attList>
+                        <attDef ident="n" mode="delete"/>
+                        <attDef ident="xml:lang" mode="delete"/>
+                        <attDef ident="change" mode="delete"/>
+                        <attDef ident="facs" mode="delete"/>
+                        <attDef ident="corresp" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                        <attDef ident="source" mode="delete"/>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="force" mode="change" usage="req">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="weak">
+                                    <gloss xml:lang="de">‚Schwacher‘ Trennstrich</gloss>
+                                    <desc xml:lang="de">Trennstrich, der nicht der Worttrennung am
+                                        Zeilenende, sondern der Trennung bei zusammengesetzten Nomen
+                                        dient.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+            </schemaSpec>
+        </body>
+    </text>
+</TEI>
